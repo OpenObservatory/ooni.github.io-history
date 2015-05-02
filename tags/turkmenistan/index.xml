@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Turkmenistan on OONI: Open Observatory of Network Interference</title>
-    <link>http://localhost:1313/tags/turkmenistan/</link>
+    <link>/tags/turkmenistan/</link>
     <description>Recent content in Turkmenistan on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 May 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/turkmenistan/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/turkmenistan/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</title>
-      <link>http://localhost:1313/post/tab-tab-come-in/</link>
+      <link>/post/tab-tab-come-in/</link>
       <pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/tab-tab-come-in/</guid>
+      <guid>/post/tab-tab-come-in/</guid>
       <description>
 
 &lt;h1 id=&#34;motivation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Motivation&lt;/h1&gt;

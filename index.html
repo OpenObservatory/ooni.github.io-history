@@ -4,11 +4,11 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
   <title></title>
-	<link rel="stylesheet" href="/css/master.css"/>
-	<link rel="stylesheet" href="/css/fonts.css"/>
-  <link rel="stylesheet" href="/css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="/images/favicon.png"/>
-  <script src="/js/highlight.min.js"></script>
+	<link rel="stylesheet" href="css/master.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
+  <link rel="stylesheet" href="css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="images/favicon.png"/>
+  <script src="js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
@@ -21,9 +21,9 @@
     <nav>
       <div class="col-1"></div>
       <div class="col-2">
-        <a href="https://ooni.torproject.org/docs/">Docs</a>
+        <a href="docs/">Docs</a>
 <a href="https://gitweb.torproject.org/ooni-probe.git">Code</a>
-<a href="https://ooni.torproject.org/reports/0.1/">Reports</a>
+<a href="https://ooni.torproject.org/reports/">Reports</a>
 <a href="https://github.com/thetorproject/ooni-probe#installation">Install</a>
 
       </div>
@@ -31,9 +31,9 @@
 
     <header>
       <div class="row">
-        <img class="col-1" src="http://localhost:1313//images/ooni-header-mascot.svg" width="200" height="200"/>
+        <img class="col-1" class="logo" src="/images/ooni-header-mascot.svg" width="200" height="200"/>
         <div class="col-2">
-          <h1>OONI</h1>
+          <img class="wordmark" src="/images/wordmark.svg" alt="OONI"/>
           <h2>Open Observatory of Network Interference</h2>
           <p>A free software, global observation network for detecting censorship,
             surveillance and traffic manipulation on the internet</p>
@@ -51,7 +51,7 @@
           </div>
           <div class="col-2"></div>
         </div>
-        <img class="col-3" src="http://localhost:1313//images/how-ooni-works.svg" width="680" height="280" />
+        <img class="col-3" src="/images/how-ooni-works.svg" width="680" height="280" />
       </div>
     </div>
     <div class="container">
@@ -72,85 +72,7 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-1">
-          <h2>Recent Measurements</h2>
-        </div>
-        <div class="col-2"></div>
-      </div>
-      <div class="row measurements">
-        <table class="col-3">
-          <tr>
-            <td class="tcol-1"></td>
-            <td>NZ</td>
-            <td>AU</td>
-            <td>US</td>
-            <td>CN</td>
-            <td>NL</td>
-            <td>BR</td>
-            <td>CA</td>
-            <td>CH</td>
-            <td>DE</td>
-          </tr>
-
-          <tr>
-            <td class="tcol-1">DNS spoofing</td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="10"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="25"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="3"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="12"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="22"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="12"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="6"/></td>
-          </tr>
-
-          <tr>
-            <td class="tcol-1">HTTP injection</td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="7"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="10"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="17"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="3"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="1"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="4"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="0"/></td>
-          </tr>
-
-          <tr>
-            <td class="tcol-1">HTTP blocking</td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="1"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="4"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="25"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="5"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="13"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="11"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="14"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="20"/></td>
-          </tr>
-
-          <tr>
-            <td class="tcol-1">Tor blocking</td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="10"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="7"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="24"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="9"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="6"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="1"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="2"/></td>
-            <td><img src="http://localhost:1313//images/dot.svg" width="3"/></td>
-          </tr>
-
-        </table>
-      </div>
-      <div class="row pad-below">
-        <div class="col-1"></div>
-        <div class="col-2 table-caption">Large circles indicate consistent, widespread traffic manipulation</div>
-      </div>
+      
 
       <div class="row pad-below">
         <div class="col-1">
@@ -158,20 +80,20 @@
         </div>
         <div class="col-2 blog-summary">
           <a href="post/zambia">
-            <div class="blog-img"></div>
-            <p>Zambia, a country under Deep Packet Inspection</p>
+            <p class="title">Zambia, a country under Deep Packet Inspection</p>
+            <p class="byline">15 Jul 2013</p>
           </a>
           <a href="post/tab-tab-come-in">
-            <img class="blog-img" src="http://localhost:1313//post/tab-tab-come-in.svg"/>
-            <p>Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</p>
+            <p class="title">Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</p>
+            <p class="byline">14 May 2013</p>
           </a>
           <a href="post/hadara-palestine">
-            <div class="blog-img"></div>
-            <p>Hadara Palestine</p>
+            <p class="title">Hadara Palestine</p>
+            <p class="byline">23 Apr 2012</p>
           </a>
           <a href="post/t-mobile-usa-web-guard">
-            <img class="blog-img" src="http://localhost:1313//post/t-mobile-web-guard.svg"/>
-            <p>T-Mobile USA Web Guard</p>
+            <p class="title">T-Mobile USA Web Guard</p>
+            <p class="byline">21 Mar 2012</p>
           </a>
         </div>
       </div>
@@ -199,29 +121,26 @@
         <h2>Friends and Sponsors</h2>
         <div class="row sponsors">
           <a href="https://www.openrightsgroup.org">
-            <img src="http://localhost:1313//sponsors/open-rights-group-logo.png" alt="Open Rights Group" width="154" height="57"/>
+            <img src="/sponsors/open-rights-group-logo.png" alt="Open Rights Group" width="154" height="57"/>
           </a>
           <a href="https://greenhost.net">
-            <img src="http://localhost:1313//sponsors/greenhost-logo.png" alt="Greenhost" width="183" height="57"/>
+            <img src="/sponsors/greenhost-logo.png" alt="Greenhost" width="183" height="57"/>
           </a>
           <a href="https://www.bytemark.co.uk">
-            <img src="http://localhost:1313//sponsors/bytemark-logo.png" alt="Bytemark" class="bytemark" width="240" height="30"/>
+            <img src="/sponsors/bytemark-logo.png" alt="Bytemark" class="bytemark" width="240" height="30"/>
           </a>
         </div>
         <div class="row sponsors">
           <a href="https://www.measurementlab.net/">
-            <img src="http://localhost:1313//sponsors/mlab-logo.png" alt="MLAB" class="mlab" width="183" height="63"/>
+            <img src="/sponsors/mlab-logo.png" alt="MLAB" class="mlab" width="183" height="63"/>
           </a>
           <a href="https://www.google.com/">
-            <img src="http://localhost:1313//sponsors/google-logo.png" alt="Google" class="google" width="183" height="63"/>
+            <img src="/sponsors/google-logo.png" alt="Google" class="google" width="183" height="63"/>
           </a>
         </div>
       </div>
     </div>
   </footer>
 
-<script>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+</body>
 </html>

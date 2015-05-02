@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Palestine on OONI: Open Observatory of Network Interference</title>
-    <link>http://localhost:1313/tags/palestine/</link>
+    <link>/tags/palestine/</link>
     <description>Recent content in Palestine on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 23 Apr 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/palestine/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/palestine/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hadara Palestine</title>
-      <link>http://localhost:1313/post/hadara-palestine/</link>
+      <link>/post/hadara-palestine/</link>
       <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hadara-palestine/</guid>
+      <guid>/post/hadara-palestine/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -32,8 +32,8 @@
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This is the technical report on the politically motivated censorship going on
@@ -188,7 +188,7 @@ software being used is Squid.&lt;/p&gt;
 
 &lt;p&gt;We scanned more than 1 million hostnames and only detected censorship on 8 of
 these.
-The full scan results are available in an unredacted from &lt;a href=&#34;http://localhost:1313/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+The full scan results are available in an unredacted from &lt;a href=&#34;/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;At a certain point we decided to go for a high level of parallelism and not
 care about timeout errors. This is because the transparent HTTP proxy is
@@ -223,37 +223,37 @@ using a mix between squid transparent HTTP proxy censorship and other.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;milad.ps&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pal-home.net&#34;&gt;http://pal-home.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://milad.ps&#34;&gt;http://milad.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://karamapress.com&#34;&gt;http://karamapress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://inlightpress.com&#34;&gt;http://inlightpress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fpnp.net&#34;&gt;http://fpnp.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fateh-voice.ps&#34;&gt;http://fateh-voice.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://amad.ps&#34;&gt;http://amad.ps&lt;/a&gt;&lt;/p&gt;
