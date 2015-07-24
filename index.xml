@@ -205,6 +205,202 @@ friendly event for all.&lt;/p&gt;
     </item>
     
     <item>
+      <title>ADINA15: A Dive Into Network Anomalies</title>
+      <link>http://ooni.io/event/adina15-it/</link>
+      <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ooni.io/event/adina15-it/</guid>
+      <description>
+
+&lt;h1 id=&#34;ooni-hackathon:c802604ea1220451aa753efce4e7b0e1&#34;&gt;OONI Hackathon&lt;/h1&gt;
+
+&lt;h2 id=&#34;adina15:c802604ea1220451aa753efce4e7b0e1&#34;&gt;#ADINA15&lt;/h2&gt;
+
+&lt;p&gt;Ti piace lavorare sugli Open Data e svilupparne la grafica?&lt;/p&gt;
+
+&lt;p&gt;Vorresti trascorrere qualche giorno presso la Camera dei Deputati lavorando sulle
+&lt;a href=&#34;http://api.ooni.io/&#34;&gt;misure di censura su internet&lt;/a&gt; raccolte dal progetto
+&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;Allora partecipa alla OONI Open Data Hackfest che si terra&amp;rsquo;
+l&amp;rsquo;1 e il 2 Ottobre 2015!&lt;/p&gt;
+
+&lt;p&gt;Sarai il benvenuto!&lt;/p&gt;
+
+&lt;h1 id=&#34;che-cos-e-ooni:c802604ea1220451aa753efce4e7b0e1&#34;&gt;CHE COS&amp;rsquo;E&amp;rsquo; OONI?&lt;/h1&gt;
+
+&lt;p&gt;OONI (Open Observatory of Network Interference) e&amp;rsquo; una piattaforma costruita per
+eseguire e pubblicare misurazioni utili ai fini di studiare il fenomeno della censura
+e della sorveglianza su internet. Essa si compone di un software open source multipiattaforma,
+che pubblica in formato aperto le misurazioni raccolte, e di un archivio di oltre 150000 misurazioni
+eseguite in circa 70 stati.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;cosa:c802604ea1220451aa753efce4e7b0e1&#34;&gt;COSA&lt;/h1&gt;
+
+&lt;p&gt;Due giorni di hacking collaborativo per lavorare su visualizzazioni e
+strumenti che utilizzino i dati di censura su Internet raccolti da OONI in
+una hackfest ospitata dalla &lt;a href=&#34;http://www.camera.it&#34;&gt;Camera dei Deputati&lt;/a&gt; ed
+organizzata dal progetto OONI in collaborazione con il &lt;a href=&#34;http://nexa.polito.it/&#34;&gt;Centro Nexa su
+Internet &amp;amp; Societa&amp;rsquo; del Politecnico di Torino&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La hackathon sara&amp;rsquo; strutturata in forma di &lt;em&gt;code-a-thon&lt;/em&gt;: i partecipanti saranno suddivisi in gruppi, ciascuno dei quali lavorerà su di uno specifico progetto; al termine dell&amp;rsquo;evento, i risultati prodotti da ciascun gruppo saranno valutati da una giuria.
+Ai partecipanti si raccomanda di scegliere in anticipo lo specifico tipo di
+progetto cui vorrebbero lavorare nel corso dell&amp;rsquo;evento. Noi forniremo
+una lista di progetti di esempio, anche
+per dare un&amp;rsquo;idea delle possibilità di sfruttamento offerte dai dati raccolti, ma incoraggiamo
+i partecipanti a proporre progetti propri.&lt;/p&gt;
+
+&lt;p&gt;Un premio simbolico verra&amp;rsquo; consegnato ai primi tre team classificati.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;perche:c802604ea1220451aa753efce4e7b0e1&#34;&gt;PERCHE&amp;rsquo;&lt;/h1&gt;
+
+&lt;p&gt;Il progetto OONI sviluppa strumenti utili a studiare la censura su internet. Il tuo
+contributo in questa hackathon ci aiuterà a comprendere meglio i
+dati di OONI, nonché a renderli piu&amp;rsquo; accessibili.&lt;/p&gt;
+
+&lt;p&gt;Hai un&amp;rsquo;idea? Vuoi lavorarci su? Vogliamo fare hacking con te!&lt;/p&gt;
+
+&lt;p&gt;Rendere i dati di misurazione della censura (e, più in generale, i dati di misurazione della rete)
+piu&amp;rsquo; facili da comprendere e da studiare e&amp;rsquo; un passo cruciale per stimolare un dibattito
+informato e democratico sulla governance di internet. Le societa&amp;rsquo; democratiche necessitano talvolta di limitare l&amp;rsquo;accesso a certi contenuti al fine di
+salvaguardare il pubblico interesse; questa specifica esigenza ci porta a formulare
+interessanti domande di ricerca e di policy. Per esempio, e&amp;rsquo; possibile chiedersi come
+implementare in modo trasparente queste politiche di bloccaggio di contenuti, o come accertarsi che soltanto i contenuti che dovrebbero essere bloccati lo siano.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;chi:c802604ea1220451aa753efce4e7b0e1&#34;&gt;CHI&lt;/h1&gt;
+
+&lt;p&gt;Sono invitati a partecipare tutti coloro che abbiano conoscenze di design e, in
+particolare, coloro che si occupino di &lt;em&gt;information design&lt;/em&gt; e/o di visualizzazione
+di dati. Avere un robusto background tecnico non e&amp;rsquo; strettamente necessario, ma
+e&amp;rsquo; certamente utile. Gli sviluppatori &lt;em&gt;core&lt;/em&gt; di OONI parteciperanno all&amp;rsquo;evento e
+forniranno assistenza tecnica ai team di partecipanti, dando loro una mano con
+il codice.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;quando:c802604ea1220451aa753efce4e7b0e1&#34;&gt;QUANDO&lt;/h1&gt;
+
+&lt;p&gt;La hackathon si terra&amp;rsquo; l&amp;rsquo;1 e il 2 Ottobre 2015.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-ottobre:c802604ea1220451aa753efce4e7b0e1&#34;&gt;1 Ottobre&lt;/h3&gt;
+
+&lt;p&gt;Giorno 1&lt;/p&gt;
+
+&lt;p&gt;09:00 Accoglienza dei partecipanti (gli organizzatori dovranno presentarsi alle 8:00)&lt;/p&gt;
+
+&lt;p&gt;10:00 Introduzione&lt;/p&gt;
+
+&lt;p&gt;11:00 Si comincia con l&amp;rsquo;hacking&lt;/p&gt;
+
+&lt;p&gt;13:00 Pranzo a buffet&lt;/p&gt;
+
+&lt;p&gt;20:00 Conclusione del primo giorno di hacking: potete ancora sviluppare, ma altrove&lt;/p&gt;
+
+&lt;h3 id=&#34;2-ottobre:c802604ea1220451aa753efce4e7b0e1&#34;&gt;2 Ottobre&lt;/h3&gt;
+
+&lt;p&gt;Giorno 2&lt;/p&gt;
+
+&lt;p&gt;09:00 Apertura della Camera&lt;/p&gt;
+
+&lt;p&gt;11:00 Si comincia con l&amp;rsquo;hacking&lt;/p&gt;
+
+&lt;p&gt;13:00 Pranzo a buffet&lt;/p&gt;
+
+&lt;p&gt;16:00 Deadline per la consegna dei progetti&lt;/p&gt;
+
+&lt;p&gt;19:00 Cerimonia di premiazione&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;dove:c802604ea1220451aa753efce4e7b0e1&#34;&gt;DOVE&lt;/h1&gt;
+
+&lt;p&gt;La hackathon si terra&amp;rsquo; presso la Camera dei Deputati del Parlamento Italiano.&lt;/p&gt;
+
+&lt;p&gt;Questo e&amp;rsquo; l&amp;rsquo;indirizzo della sala che ci ospitera&amp;rsquo;:&lt;/p&gt;
+
+&lt;p&gt;Nuova Sala dei Gruppi,
+Camera dei Deputati,
+Via Campo Marzio 78,
+Roma&lt;/p&gt;
+
+&lt;p&gt;Come per tutti gli altri eventi organizzati presso il Parlamento Italiano, si
+applicano le seguenti regole:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;i partecipanti ai convegni e i materiali introdotti nelle sale
+della Camera devono essere sottoposti ai controlli di sicurezza;&lt;/li&gt;
+&lt;li&gt;è vietato fumare durante lo svolgimento delle manifestazioni;&lt;/li&gt;
+&lt;li&gt;non sono ammessi partecipanti di età inferiore ai 14 anni;&lt;/li&gt;
+&lt;li&gt;è richiesto obbligatoriamente l’uso della giacca e comunque
+un abbigliamento consono alla sede;&lt;/li&gt;
+&lt;li&gt;è vietato consumare cibo o bevande all’interno dell’Aula;&lt;/li&gt;
+&lt;li&gt;durante lo svolgimento di iniziative o convegni organizzati presso
+le sedi della Camera non possono aver luogo, in alcuna forma, richieste
+o riscossioni di tickets ovvero di quote d’iscrizione o di
+partecipazione, comunque denominati.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;informazioni-per-chi-viaggia:c802604ea1220451aa753efce4e7b0e1&#34;&gt;Informazioni per chi viaggia&lt;/h2&gt;
+
+&lt;p&gt;Ci sono due aeroporti che servono Roma, FCO (Fiumicino) e CIA (Ciampino).&lt;/p&gt;
+
+&lt;p&gt;Da FCO si puo&amp;rsquo; prendere il treno per la stazione centrale di Termini oppure
+per varie stazioni che si trovano in giro per la citta&amp;rsquo; (Trastevere, Ostiense,
+Tiburtina, Tuscolana).&lt;/p&gt;
+
+&lt;p&gt;Da CIA partono autobus che circolano regolarmente e che collegano l&amp;rsquo;aeroporto con la stazione di Termini.&lt;/p&gt;
+
+&lt;p&gt;La sala che useremo per la hackathon si trova vicina alle fermate Spagna
+e Barberini della Metro A.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;premi:c802604ea1220451aa753efce4e7b0e1&#34;&gt;PREMI&lt;/h1&gt;
+
+&lt;h2 id=&#34;ancora-da-annunciare:c802604ea1220451aa753efce4e7b0e1&#34;&gt;Ancora da annunciare!&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;regole:c802604ea1220451aa753efce4e7b0e1&#34;&gt;REGOLE&lt;/h1&gt;
+
+&lt;p&gt;Mentre lavorerete al vostro progetto dovrete seguire alcune regole:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;i progetti dovranno usare principalmente i dati di OONI nelle
+visualizzazioni che svilupperanno.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;tutti i dati utilizzati dovranno essere pubblicati come open data
+prima che la giuria si riunisca per valutare i progetti.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ci aspettiamo che collaboriate nel contesto del team di cui fate parte.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;i progetti che sottometterete alla valutazione dovranno essere software
+open source, e potrebbero essere menzionati sul sito di OONI.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Una hackfest e&amp;rsquo; uno spazio in cui fare hacking, conoscere nuove persone, essere
+creativi, e passare piacevolmente il tempo. Per garantire che questo evento
+sia piacevole per tutti i partecipanti vi chiediamo di comportarvi in modo cordiale
+l&amp;rsquo;uno con l&amp;rsquo;altro.&lt;/p&gt;
+
+&lt;p&gt;Riuscire a realizzare un progetto funzionante in così poco tempo può essere
+stressante, pertanto vi incoraggiamo anche a fare una pausa di tanto in tanto, a
+rilassarvi e a godervi la vostra partecipazione all&amp;rsquo;evento.&lt;/p&gt;
+
+&lt;p&gt;I partecipanti che violassero le regole e il codice di condotta descritto qua
+sopra potrebbero essere allontanati dalla hackathon, a discrezione degli
+organizzatori. Grazie per contribuire a rendere questo evento piacevole
+e amichevole per tutti.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>EEEP and Greek Internet censorship</title>
       <link>http://ooni.io/post/eeep-greek-censorship/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
