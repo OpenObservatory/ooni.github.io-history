@@ -2,19 +2,207 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Events on OONI: Open Observatory of Network Interference</title>
-    <link>http://ooni.io/event/</link>
+    <link>https://ooni.torproject.org/event/</link>
     <description>Recent content in Events on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://ooni.io/event/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/event/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15-it/</link>
+      <link>https://ooni.torproject.org/event/adina15/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15-it/</guid>
+      <guid>https://ooni.torproject.org/event/adina15/</guid>
+      <description>
+
+&lt;h1 id=&#34;ooni-hackathon:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI Hackathon&lt;/h1&gt;
+
+&lt;h2 id=&#34;adina15:550281d282d64ceb2dd86438c13e2d48&#34;&gt;#ADINA15&lt;/h2&gt;
+
+&lt;p&gt;Do you like playing with open data and producing some good looking graphics
+about them?&lt;/p&gt;
+
+&lt;p&gt;Would you fancy spending some time in the Italian Parliament in Rome hacking on
+internet censorship data and &lt;a href=&#34;http://api.ooni.io/&#34;&gt;reports&lt;/a&gt; gathered by
+&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;Then submit an application to join us from the 1st of October
+to the 2nd of October 2015 at the OONI Open Data Hackfest!&lt;/p&gt;
+
+&lt;p&gt;All humans welcome!&lt;/p&gt;
+
+&lt;h1 id=&#34;ooni:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI?&lt;/h1&gt;
+
+&lt;p&gt;OONI is a platform for conducting and publishing measurements useful to study
+censorship and surveillance on the Internet. It consists of an open data
+format, an open source software implementation for several platforms, and a
+public archive of over 15000 measurements collected from about 70 countries
+worldwide.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;what:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHAT&lt;/h1&gt;
+
+&lt;p&gt;Two days of collaborative hacking on visualizations and tools that utilize the
+OONI dataset to study censorship hosted at the &lt;a href=&#34;http://www.camera.it&#34;&gt;Italian Chamber of Deputies&lt;/a&gt; and
+organized by the OONI project in collaboration with the &lt;a href=&#34;http://nexa.polito.it/&#34;&gt;Nexa Center for
+Internet &amp;amp; Society&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It will be in the format of a code-a-thon, where people work in groups on a
+specific project and at the end of the event the results produced by every team
+will be evaluated by a jury. It will kick off with a short presentation that
+sets the stage for the context of the event. Participants should have chosen
+beforehand the specific type of project they would like to work on during the
+event. We will provide a list of sample projects that people can pick from
+to give an idea of what are the sort of things that are possible, but it is
+encouraged for participants to submit their own idea.&lt;/p&gt;
+
+&lt;p&gt;A symbolic prize will be given to the first three teams.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;why:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHY&lt;/h1&gt;
+
+&lt;p&gt;The OONI project builds tools to study internet censorship. Now your
+contribution is needed to understand OONI data and make them more accessible to
+society.&lt;/p&gt;
+
+&lt;p&gt;Got an idea? Want to build it? We want to hack with you!&lt;/p&gt;
+
+&lt;p&gt;Making internet censorship data (and, more generally, network measurements)
+easier to understand and study is crucial to foster an informed democratic
+debate on the governance of the internet. In fact, measuring content blocking
+is functional to quantify its collateral damage on citizens&amp;rsquo; digital rights and
+this information ultimately helps democratic societies to find the right
+balance between digital sovereignty, on the one hand, and fundamental rights,
+on the other end.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;who:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHO&lt;/h1&gt;
+
+&lt;p&gt;We invite all people that have a background in design and, in particular, in
+information design or in data visualization. A strong technical background is not
+needed though it is useful to have. Members of the core OONI development team
+will also be part of the event and will be iterating over the various
+participating teams to provide technical insight and help out with the needed
+coding tasks.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;when:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHEN&lt;/h1&gt;
+
+&lt;p&gt;The hackathon will run from October 1st to October 2nd 2015.&lt;/p&gt;
+
+&lt;h3 id=&#34;october-1st-day-1:550281d282d64ceb2dd86438c13e2d48&#34;&gt;October 1st (Day 1)&lt;/h3&gt;
+
+&lt;p&gt;09:00 Start of event (&lt;strong&gt;Organizers&lt;/strong&gt; should be there at &lt;strong&gt;08:00&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;10:00 Introduction&lt;/p&gt;
+
+&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
+
+&lt;p&gt;13:00 Buffet lunch[a]&lt;/p&gt;
+
+&lt;p&gt;20:00 Wrap up for the day (you can hack more, but not here)&lt;/p&gt;
+
+&lt;h3 id=&#34;october-2nd-day-2:550281d282d64ceb2dd86438c13e2d48&#34;&gt;October 2nd (Day 2)&lt;/h3&gt;
+
+&lt;p&gt;09:00 Venue opens&lt;/p&gt;
+
+&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
+
+&lt;p&gt;13:00 Buffet lunch&lt;/p&gt;
+
+&lt;p&gt;16:00 Submissions deadline&lt;/p&gt;
+
+&lt;p&gt;19:00 Award ceremony&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;where:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHERE&lt;/h1&gt;
+
+&lt;p&gt;The hackathon will be at the Chamber of Deputies of the Italian Parliament.&lt;/p&gt;
+
+&lt;p&gt;This is the address of the room:&lt;/p&gt;
+
+&lt;p&gt;Nuova Sala dei Gruppi Camera dei Deputati
+Via Campo Marzio 78
+Rome, Italy&lt;/p&gt;
+
+&lt;p&gt;As for each event organized at the Italian Parliament, the following rules apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Participants and their belongings will be subject to security check;&lt;/li&gt;
+&lt;li&gt;Smoking inside is forbidden;&lt;/li&gt;
+&lt;li&gt;Participants must be at least fourteen years old;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Smart casual attire is required (i.e. male bodied humans must &lt;strong&gt;wear a suit
+jacket at all times&lt;/strong&gt;).
+Note: this rule is actually enforced very strictly and if you show up without
+a jacket you may not be able to attend the hackathon;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Food or beverages may not be consumed inside the room;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It is forbidden to request and/or to pay for participation fee within the venue.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;travel-information:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Travel information&lt;/h2&gt;
+
+&lt;p&gt;Rome is served by two airports FCO (Rome Fiumicino) and CIA (Rome Ciampino).&lt;/p&gt;
+
+&lt;p&gt;From FCO it is possible to take the train to either Termini central station or
+to various stations spread around the city (Trastevere, Ostiense, Tiburtina,
+Tuscolana).&lt;/p&gt;
+
+&lt;p&gt;From CIA there are buses that run regularly and connect you to the Termini
+central station.&lt;/p&gt;
+
+&lt;p&gt;The venue itself is close to the Metro A stops called Spagna and Barberini.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;prizes:550281d282d64ceb2dd86438c13e2d48&#34;&gt;PRIZES&lt;/h1&gt;
+
+&lt;h2 id=&#34;to-be-announced:550281d282d64ceb2dd86438c13e2d48&#34;&gt;To be announced!&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;rules:550281d282d64ceb2dd86438c13e2d48&#34;&gt;RULES&lt;/h1&gt;
+
+&lt;p&gt;The following rules must be followed when working on your project:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;projects must use OONI data as the main theme of the visualisation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;all data and source code used in the project should either already be public
+or should be published before judging takes place using an open license&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;collaboration is encouraged and you are expected to work as part of a team&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The hackfest is an environment in which to hack, meet new people, get creative,
+and have a good time. In order to make sure this event is enjoyable for
+everyone involved we ask that you be excellent to each other.&lt;/p&gt;
+
+&lt;p&gt;Getting something meaningful done within such a short amount of time can be
+stressful, but we&amp;rsquo;d like to encourage everyone to take a break every now and
+then to relax and enjoy the event.&lt;/p&gt;
+
+&lt;p&gt;Attendees violating these rules may be asked to leave the hackfest at the sole
+discretion of the organizers. Thank you for helping make this a welcoming,
+friendly event for all.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ADINA15: A Dive Into Network Anomalies</title>
+      <link>https://ooni.torproject.org/event/adina15-it/</link>
+      <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/event/adina15-it/</guid>
       <description>
 
 &lt;h1 id=&#34;ooni-hackathon:c802604ea1220451aa753efce4e7b0e1&#34;&gt;OONI Hackathon&lt;/h1&gt;
@@ -200,194 +388,6 @@ rilassarvi e a godervi la vostra partecipazione all&amp;rsquo;evento.&lt;/p&gt;
 sopra potrebbero essere allontanati dalla hackathon, a discrezione degli
 organizzatori. Grazie per contribuire a rendere questo evento piacevole
 e amichevole per tutti.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15/</link>
-      <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://ooni.io/event/adina15/</guid>
-      <description>
-
-&lt;h1 id=&#34;ooni-hackathon:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI Hackathon&lt;/h1&gt;
-
-&lt;h2 id=&#34;adina15:550281d282d64ceb2dd86438c13e2d48&#34;&gt;#ADINA15&lt;/h2&gt;
-
-&lt;p&gt;Do you like playing with open data and producing some good looking graphics
-about them?&lt;/p&gt;
-
-&lt;p&gt;Would you fancy spending some time in the Italian Parliament in Rome hacking on
-internet censorship data and &lt;a href=&#34;http://api.ooni.io/&#34;&gt;reports&lt;/a&gt; gathered by
-&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;Then submit an application to join us from the 1st of October
-to the 2nd of October 2015 at the OONI Open Data Hackfest!&lt;/p&gt;
-
-&lt;p&gt;All humans welcome!&lt;/p&gt;
-
-&lt;h1 id=&#34;ooni:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI?&lt;/h1&gt;
-
-&lt;p&gt;OONI is a platform for conducting and publishing measurements useful to study
-censorship and surveillance on the Internet. It consists of an open data
-format, an open source software implementation for several platforms, and a
-public archive of over 15000 measurements collected from about 70 countries
-worldwide.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;what:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHAT&lt;/h1&gt;
-
-&lt;p&gt;Two days of collaborative hacking on visualizations and tools that utilize the
-OONI dataset to study censorship hosted at the &lt;a href=&#34;http://www.camera.it&#34;&gt;Italian Chamber of Deputies&lt;/a&gt; and
-organized by the OONI project in collaboration with the &lt;a href=&#34;http://nexa.polito.it/&#34;&gt;Nexa Center for
-Internet &amp;amp; Society&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It will be in the format of a code-a-thon, where people work in groups on a
-specific project and at the end of the event the results produced by every team
-will be evaluated by a jury. It will kick off with a short presentation that
-sets the stage for the context of the event. Participants should have chosen
-beforehand the specific type of project they would like to work on during the
-event. We will provide a list of sample projects that people can pick from
-to give an idea of what are the sort of things that are possible, but it is
-encouraged for participants to submit their own idea.&lt;/p&gt;
-
-&lt;p&gt;A symbolic prize will be given to the first three teams.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;why:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHY&lt;/h1&gt;
-
-&lt;p&gt;The OONI project builds tools to study internet censorship. Now your
-contribution is needed to understand OONI data and make them more accessible to
-society.&lt;/p&gt;
-
-&lt;p&gt;Got an idea? Want to build it? We want to hack with you!&lt;/p&gt;
-
-&lt;p&gt;Making internet censorship data (and, more generally, network measurements)
-easier to understand and study is crucial to foster an informed democratic
-debate on the governance of the internet. In fact, measuring content blocking
-is functional to quantify its collateral damage on citizens&amp;rsquo; digital rights and
-this information ultimately helps democratic societies to find the right
-balance between digital sovereignty, on the one hand, and fundamental rights,
-on the other end.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;who:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHO&lt;/h1&gt;
-
-&lt;p&gt;We invite all people that have a background in design and, in particular, in
-information design or in data visualization. A strong technical background is not
-needed though it is useful to have. Members of the core OONI development team
-will also be part of the event and will be iterating over the various
-participating teams to provide technical insight and help out with the needed
-coding tasks.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;when:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHEN&lt;/h1&gt;
-
-&lt;p&gt;The hackathon will run from October 1st to October 2nd 2015.&lt;/p&gt;
-
-&lt;h3 id=&#34;october-1st-day-1:550281d282d64ceb2dd86438c13e2d48&#34;&gt;October 1st (Day 1)&lt;/h3&gt;
-
-&lt;p&gt;09:00 Start of event (&lt;strong&gt;Organizers&lt;/strong&gt; should be there at &lt;strong&gt;08:00&lt;/strong&gt;)&lt;/p&gt;
-
-&lt;p&gt;10:00 Introduction&lt;/p&gt;
-
-&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
-
-&lt;p&gt;13:00 Buffet lunch[a]&lt;/p&gt;
-
-&lt;p&gt;20:00 Wrap up for the day (you can hack more, but not here)&lt;/p&gt;
-
-&lt;h3 id=&#34;october-2nd-day-2:550281d282d64ceb2dd86438c13e2d48&#34;&gt;October 2nd (Day 2)&lt;/h3&gt;
-
-&lt;p&gt;09:00 Venue opens&lt;/p&gt;
-
-&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
-
-&lt;p&gt;13:00 Buffet lunch&lt;/p&gt;
-
-&lt;p&gt;16:00 Submissions deadline&lt;/p&gt;
-
-&lt;p&gt;19:00 Award ceremony&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;where:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHERE&lt;/h1&gt;
-
-&lt;p&gt;The hackathon will be at the Chamber of Deputies of the Italian Parliament.&lt;/p&gt;
-
-&lt;p&gt;This is the address of the room:&lt;/p&gt;
-
-&lt;p&gt;Nuova Sala dei Gruppi Camera dei Deputati
-Via Campo Marzio 78
-Rome, Italy&lt;/p&gt;
-
-&lt;p&gt;As for each event organized at the Italian Parliament, the following rules apply:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Participants and their belongings will be subject to security check;&lt;/li&gt;
-&lt;li&gt;Smoking inside is forbidden;&lt;/li&gt;
-&lt;li&gt;Participants must be at least fourteen years old;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Smart casual attire is required (i.e. male bodied humans must &lt;strong&gt;wear a suit
-jacket at all times&lt;/strong&gt;).
-Note: this rule is actually enforced very strictly and if you show up without
-a jacket you may not be able to attend the hackathon;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Food or beverages may not be consumed inside the room;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;It is forbidden to request and/or to pay for participation fee within the venue.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;travel-information:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Travel information&lt;/h2&gt;
-
-&lt;p&gt;Rome is served by two airports FCO (Rome Fiumicino) and CIA (Rome Ciampino).&lt;/p&gt;
-
-&lt;p&gt;From FCO it is possible to take the train to either Termini central station or
-to various stations spread around the city (Trastevere, Ostiense, Tiburtina,
-Tuscolana).&lt;/p&gt;
-
-&lt;p&gt;From CIA there are buses that run regularly and connect you to the Termini
-central station.&lt;/p&gt;
-
-&lt;p&gt;The venue itself is close to the Metro A stops called Spagna and Barberini.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;prizes:550281d282d64ceb2dd86438c13e2d48&#34;&gt;PRIZES&lt;/h1&gt;
-
-&lt;h2 id=&#34;to-be-announced:550281d282d64ceb2dd86438c13e2d48&#34;&gt;To be announced!&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;rules:550281d282d64ceb2dd86438c13e2d48&#34;&gt;RULES&lt;/h1&gt;
-
-&lt;p&gt;The following rules must be followed when working on your project:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;projects must use OONI data as the main theme of the visualisation&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;all data and source code used in the project should either already be public
-or should be published before judging takes place using an open license&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;collaboration is encouraged and you are expected to work as part of a team&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The hackfest is an environment in which to hack, meet new people, get creative,
-and have a good time. In order to make sure this event is enjoyable for
-everyone involved we ask that you be excellent to each other.&lt;/p&gt;
-
-&lt;p&gt;Getting something meaningful done within such a short amount of time can be
-stressful, but we&amp;rsquo;d like to encourage everyone to take a break every now and
-then to relax and enjoy the event.&lt;/p&gt;
-
-&lt;p&gt;Attendees violating these rules may be asked to leave the hackfest at the sole
-discretion of the organizers. Thank you for helping make this a welcoming,
-friendly event for all.&lt;/p&gt;
 </description>
     </item>
     
