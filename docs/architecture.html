@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Architecture &mdash; OONI: Open Observatory of Network Interference 1.3.1 documentation</title>
@@ -14,7 +15,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
   
   
@@ -35,7 +35,7 @@
         <link rel="prev" title="Test Templates" href="api/ooni.templates.html"/> 
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -45,11 +45,27 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-          <a href="index.html" class="fa fa-home"> OONI: Open Observatory of Network Interference</a>
-        
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OONI: Open Observatory of Network Interference
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.1
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -57,77 +73,64 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
           
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#writing-a-tcp-port-scanner">Writing a TCP port scanner</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#creating-test">Creating test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#setup">Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#inputs">Inputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#writing-tests">Writing Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#runninng-tests">Runninng Tests</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#reports">Reports</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="writing_tests.html#test-cases">Test Cases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="writing_tests.html#inputs">Inputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="writing_tests.html#setup-and-command-line-passing">Setup and command line passing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="writing_tests.html#test-methods">Test Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="writing_tests.html#test-templates">Test Templates</a></li>
-</ul>
-</li>
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reports.html#report-format-version-changelog">Report format version changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reports.html#version-0-1">version 0.1</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="nettests/modules.html">Implemented NetTests</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nettests/ooni.nettests.blocking.html">ooni.nettests blocking Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nettests/ooni.nettests.examples.html">ooni.nettests examples Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nettests/ooni.nettests.experimental.html">ooni.nettests experimental Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nettests/ooni.nettests.manipulation.html">ooni.nettests manipulation Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nettests/ooni.nettests.scanning.html">ooni.nettests scanning Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nettests/ooni.nettests.third_party.html">ooni.nettests third_party Package</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api/ooni.html">Measurement Developer API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.html#module-ooni.nettest"><code class="docutils literal"><span class="pre">nettest</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.html#module-ooni.settings"><code class="docutils literal"><span class="pre">settings</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.html#module-ooni.oonicli"><code class="docutils literal"><span class="pre">oonicli</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.html#module-ooni.reporter"><code class="docutils literal"><span class="pre">reporter</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.html#subpackages">Subpackages</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api/ooni.templates.html">Test Templates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.httpt"><code class="docutils literal"><span class="pre">ooni.templates.httpt</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.scapyt"><code class="docutils literal"><span class="pre">ooni.templates.scapyt</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.dnst"><code class="docutils literal"><span class="pre">ooni.templates.dnst</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.tcpt"><code class="docutils literal"><span class="pre">ooni.templates.tcpt</span></code> Module</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html#report-format-version-changelog">Report format version changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nettests/modules.html">Implemented NetTests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/ooni.html">Measurement Developer API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/ooni.templates.html">Test Templates</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Architecture</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ooniprobe">ooniprobe</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#oonib">oonib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ooniprobe">ooniprobe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-specification-decoupling">Test specification decoupling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#support-for-high-concurrency">Support for high concurrency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-tor-hidden-services">Why Tor Hidden Services?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#easy-addressing">Easy addressing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#possible-drawbacks">Possible drawbacks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#standardization">Standardization</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#oonib">oonib</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-helpers">Test Helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#report-collector">Report collector</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#an-ooniprobe-run">An ooniprobe run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ooniprobe-api">ooniprobe API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#towards-a-rpc-like-interface">Towards a RPC like interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#draft-api-specification">Draft API specification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#implementation-status">Implementation status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#draft-api-specification">Draft API specification</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#list-tests">List tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-tests">Start tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stop-tests">Stop tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#monitor-test-progress">Monitor test progress</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#implementation-status">Implementation status</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ooniprobe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">oonib</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -142,20 +145,29 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
     <li>Architecture</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="_sources/architecture.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/architecture.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="architecture">
 <h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
@@ -186,7 +198,7 @@ is standard for the type of test that is being run.</p>
 tests what is generated for them by the test template, but, when using Test
 Templates, the report will always be a superset of what is provided by the test
 template.</p>
-<p>For example the a test based on the <a class="reference internal" href="api/ooni.templates.html#ooni.templates.httpt.HTTPTest" title="ooni.templates.httpt.HTTPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code></a> test
+<p>For example the a test based on the <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code> test
 template will always have the list of HTTP requests performed and the responses
 received, but a developer may with to include inside of their report the
 checksum of the of the content as is show in the example in <a class="reference external" href="writing_tests.html">Writing Tests</a>.</p>
@@ -482,15 +494,16 @@ API.</div></blockquote>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="api/ooni.templates.html" class="btn btn-neutral" title="Test Templates"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="api/ooni.templates.html" class="btn btn-neutral" title="Test Templates" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -500,12 +513,13 @@ API.</div></blockquote>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2015, The Tor Project.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-  
 </footer>
+
         </div>
       </div>
 

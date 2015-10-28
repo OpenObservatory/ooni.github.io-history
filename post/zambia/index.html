@@ -1,15 +1,17 @@
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
-  <title>Zambia, a country under Deep Packet Inspection</title>
-	<link rel="stylesheet" href="http://ooni.io//css/master.css"/>
-	<link rel="stylesheet" href="http://ooni.io//css/event.css"/>
-	<link rel="stylesheet" href="http://ooni.io//css/fonts.css"/>
-  <link rel="stylesheet" href="http://ooni.io//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="http://ooni.io//images/favicon.png"/>
-  <script src="http://ooni.io//js/highlight.min.js"></script>
+  <title>OONI - Zambia, a country under Deep Packet Inspection</title>
+	<link rel="stylesheet" href="../../css/master.css"/>
+	<link rel="stylesheet" href="../../css/event.css"/>
+	<link rel="stylesheet" href="../../css/fonts.css"/>
+  <link rel="stylesheet" href="../../css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="../../images/favicon.png"/>
+  <script src="../../js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
@@ -20,16 +22,18 @@
     <nav>
       <div class="col-1">
         <a href="/">
-          <img class="logo" src="http://ooni.io//images/ooni-header-mascot.svg" width="25" height="25"/>
-          <img class="wordmark" src="http://ooni.io//images/wordmark.svg" alt="OONI" height="14" width="53"/>
+          <img class="logo" src="../../images/ooni-header-mascot.svg" width="25" height="25"/>
+          <img class="wordmark" src="../../images/wordmark.svg" alt="OONI" height="14" width="53"/>
         </a>
       </div>
       <div class="col-2">
-        <a href="/docs/">Docs</a>
+        
+<a href="../../docs/">Docs</a>
 <a href="https://gitweb.torproject.org/ooni-probe.git">Code</a>
 <a href="https://ooni.torproject.org/reports/">Reports</a>
 <a href="https://github.com/thetorproject/ooni-probe#installation">Install</a>
-<a href="/event/adina15/">Events</a>
+<a href="../../lepidopter/lepidopter/">Lepidopter</a>
+<a href="../../event/adina15/">Events</a>
 
       </div>
     </nav>
@@ -62,8 +66,7 @@ website.</p>
 <p>On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
 inside Zambia were reporting error messages.</p>
 
-<p><img src="/post/zambia/connection-rst.jpg" alt="Connection RST" />
-</p>
+<p><img src="/post/zambia/connection-rst.jpg" alt="Connection RST" /></p>
 
 <p>As hosting providers of the website, we initially could not see a significant
 drop of active connections and we needed to have a close look into the access
@@ -73,8 +76,7 @@ we needed to examine several gigabytes of data. It is worth mentioning here
 that Zambian Watchdog ranks 8th overall biggest website in Zambia and probably
 the biggest site after the large portals Facebook, Google or Youtube.</p>
 
-<p><img src="/post/zambia/alexa-traffic-ranks.png" alt="Alexa ranks" />
-</p>
+<p><img src="/post/zambia/alexa-traffic-ranks.png" alt="Alexa ranks" /></p>
 
 <p>Our first review of the logs revealed a clear increase of connections reporting
 status code 200 but with zero bytes were transmitted back to the client.</p>
@@ -101,8 +103,7 @@ starting that day.</p>
 concluded that the majority of the connections reporting this problem were from
 operators inside Zambia with the exception of MTN.</p>
 
-<p><img src="/post/zambia/pie-chart.png" alt="Pie chart" />
-</p>
+<p><img src="/post/zambia/pie-chart.png" alt="Pie chart" /></p>
 
 <p>Origin of the dropped connections to the webserver</p>
 
@@ -124,7 +125,6 @@ inside Zambia were experiencing connection drops with the exception of readers
 using MTN mobile network.</p>
 
 <p><img src="/post/zambia/wireshark.png" alt="Wireshark" />
-
 After reviewing dozen of different packet captures we saw a
 distinctive pattern</p>
 
@@ -294,8 +294,7 @@ Inspection gear seems to be monitoring the &ldquo;Server Hello&rdquo; message th
 of the SSL negotiation. This message contains the string zambianwatchdog.com
 before the SSL negotiation is completed.</p>
 
-<p><img src="/post/zambia/SSL-reset.png" alt="SSL Reset" />
-</p>
+<p><img src="/post/zambia/SSL-reset.png" alt="SSL Reset" /></p>
 
 <p>In order to find out if the government is actively making changes, we deployed
 a new mirror server of the site in the domain <a href="http://zwd.cums.in">http://zwd.cums.in</a>. After a few

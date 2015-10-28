@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/image/</link>
+    <description>Recent content in Image on OONI: Open Observatory of Network Interference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ooni.torproject.org/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Lepidopter Installation: Help Guides and Resources</title>
+      <link>https://ooni.torproject.org/lepidopter/lepidopter/</link>
+      <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/lepidopter/lepidopter/</guid>
+      <description>
+
+&lt;h1 id=&#34;lepidopter-quick-start-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
+
+&lt;p&gt;This guide aims to provide documentation about the Lepidopter, a Raspberry Image
+with OONI super powers based on Debian jessie. The code of the image as well as
+the build script can be found in the &lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;git
+repository&lt;/a&gt;.
+Some compact documentation on how to install, build, copy to SD card and run
+Lepidopter in QEMU is described
+&lt;a href=&#34;https://github.com/TheTorProject/lepidopter/blob/master/README.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter Raspberry Pi image is compatible with all types of Raspberry Pi
+(tested: B+, RPi 1 model B, RPi 2 model B). &lt;a href=&#34;XXX&#34;&gt;Lepidopter image download&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;verify-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify Lepidopter Raspberry Pi image&lt;/h2&gt;
+
+&lt;p&gt;XXX: TODO&lt;/p&gt;
+
+&lt;h1 id=&#34;requirements:7565a061641bd1e599d91e306fc304d1&#34;&gt;Requirements&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Raspberry Pi&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SD Card:
+We recommend a 4GB (minimum size) class 4 or higher SD card.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Internet access:
+A standard Ethernet cable (such as a cat 5) attached to a network router or
+switch that could provide Internet connectivity. Typically the &amp;ldquo;device&amp;rdquo; that
+enables you to access the Internet!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Power supply:
+Use a 5V micro USB power supply to power your Raspberry Pi. Be careful that
+whatever power supply you use outputs at least 5V; insufficient power will
+cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-linux:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter Image to SD Card under Linux&lt;/h1&gt;
+
+&lt;h2 id=&#34;using-imagewriter-graphical-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using ImageWriter (graphical interface)&lt;/h2&gt;
+
+&lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use the
+ImageWriter tool (nice graphical user interface) to write the .img file to the
+SD card.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Right click the archive file and select &amp;ldquo;Extract here&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your computer or connect the SD card reader with the
+SD card inside&lt;/li&gt;
+&lt;li&gt;Install the ImageWriter tool from the Ubuntu Software Center&lt;/li&gt;
+&lt;li&gt;Launch the ImageWriter tool (it needs your administrative password)&lt;/li&gt;
+&lt;li&gt;Select the image file (example lepidopter.img) to be written to the SD card
+(note: because you started ImageWriter as administrator the starting point
+when selecting the image file is the administrator&amp;rsquo;s home folder so you need to
+change to your own home folder to select the image file)&lt;/li&gt;
+&lt;li&gt;Select the target device to write the image to (your device will be
+something like &amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdc&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Click the &amp;ldquo;Write to device&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;Wait for the process to finish and then insert the SD card in the Raspberry
+Pi&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;using-the-command-line:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the command line&lt;/h2&gt;
+
+&lt;p&gt;Please note that the use of the &amp;ldquo;dd&amp;rdquo; tool can overwrite any partition of your
+machine. If you specify the wrong device in the instructions below you could
+delete your primary Linux partition. Please be careful.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image, with:
+&lt;code&gt;xz --decompress ~/lepidopter.zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;df -h&lt;/code&gt; to see what devices are currently mounted&lt;/li&gt;
+&lt;li&gt;If your computer has a slot for SD cards, insert the card. If not, insert
+the card into an SD card reader, then connect the reader to your computer.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;df -h&lt;/code&gt; again. The device that wasn&amp;rsquo;t there last time is your SD
+card. The left column gives the device name of your SD card. It will be
+listed as something like &amp;ldquo;/dev/mmcblk0p1&amp;rdquo; or &amp;ldquo;/dev/sdd1&amp;rdquo;. The last part (&amp;ldquo;p1&amp;rdquo;
+or &amp;ldquo;1&amp;rdquo; respectively) is the partition number, but you want to write to the
+whole SD card, not just one partition, so you need to remove that part from the
+name (getting for example &amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdd&amp;rdquo;) as the device for the
+whole SD card. Note that the SD card can show up more than once in the output
+of df: in fact it will if you have previously written a Raspberry Pi image to
+this SD card, because the Raspberry Pi SD images have more than one partition.&lt;/li&gt;
+&lt;li&gt;Now that you&amp;rsquo;ve noted what the device name is, you need to unmount it so
+that files can&amp;rsquo;t be read or written to the SD card while you are copying
+over the SD image. So run the command below, replacing &amp;ldquo;/dev/sdd1&amp;rdquo; with
+whatever your SD card&amp;rsquo;s device name is (including the partition number)
+&lt;code&gt;
+umount /dev/sdd1
+&lt;/code&gt;
+If your SD card shows up more than once in the output of df due to having
+multiple partitions on the SD card, you should unmount all of these partitions.&lt;/li&gt;
+&lt;li&gt;In the terminal write the image to the card with this command, making sure
+you replace the input file if= argument with the path to your .img file, and
+the
+&amp;ldquo;/dev/sdd&amp;rdquo; in the output file of= argument with the right device name (this is
+very important: you will lose all data on the hard drive on your computer if
+you get the wrong device name). Make sure the device name is the name of the
+whole SD card as described above, not just a partition of it (for example, sdd,
+not sdds1 or sddp1, or mmcblk0 not mmcblk0p1)
+&lt;code&gt;
+dd bs=4M if=~/lepidopter.img of=/dev/sdd
+&lt;/code&gt;
+Please note that block size set to 4M will work most of the time, if
+not, please try 1M, although 1M will take considerably longer.
+Note that if you are not logged in as root you will need to prefix this
+with sudo.
+The dd command does not give any information of its progress and so may
+appear to have frozen. It could take more than five minutes to finish writing
+to the card. If your card reader has an LED it may blink during the write
+process. To see the progress of the copy operation you can run &lt;code&gt;pkill -USR1
+-n -x&lt;/code&gt; dd in another terminal (prefixed with sudo if you are not logged in as
+root). The progress will be displayed (perhaps not immediately, due to
+buffering) in the original window, not the window with the pkill command.&lt;/li&gt;
+&lt;li&gt;As root run the command sync or if a normal user run &lt;code&gt;sudo sync&lt;/code&gt; (this
+will ensure the write cache is flushed and that it is safe to unmount your
+SD card).&lt;/li&gt;
+&lt;li&gt;Remove SD card from card reader, insert it in the Raspberry Pi, and have
+fun!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-macos-x:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter Image to SD Card under MacOS X&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: In OS X each disk may have two path references in /dev:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;/dev/disk# is a buffered device, which means any data being sent undergoes
+extra processing.&lt;/li&gt;
+&lt;li&gt;/dev/rdisk# is a raw path, which is much faster, and perfectly OK when using
+the dd program.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On a Class 4 SD card the difference was around 20 times faster using the rdisk
+path.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-an-app-only-with-graphical-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Run an App (Only with graphical interface)&lt;/h2&gt;
+
+&lt;h3 id=&#34;pi-filler:7565a061641bd1e599d91e306fc304d1&#34;&gt;Pi Filler&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Filler&lt;/a&gt; a simple tool for copying a Raspberry
+Pi operating system image file to an SD card, or restoring an SD card backup
+created by &lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Copier&lt;/a&gt;. Version 1.3 is about 5x
+faster than previous versions and can write a full card in 5-7 minutes. Pi
+Filler automatically identifies your SD card (and asks for confirmation to
+prevent any chance of the wrong disk being written to), and shows estimated
+time remaining during the copy. After it&amp;rsquo;s done, if your Raspberry Pi is not
+connected to a display, you can use &lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Finder&lt;/a&gt;
+to locate it on your network and log in from Terminal. These utilities are
+written in AppleScript and Bash, are compatible with OS X 10.6 Snow Leopard
+through 10.10 Yosemite, and include source code.&lt;/p&gt;
+
+&lt;h3 id=&#34;rpi-sd-card-builder:7565a061641bd1e599d91e306fc304d1&#34;&gt;RPi-sd card builder&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://alltheware.wordpress.com/2012/12/11/easiest-way-sd-card-setup/&#34;&gt;RPi-sd
+card&lt;/a&gt;
+builder utility is an application which will walk you through the process of
+installing to SD card. Note: This is a closed source application which requires
+your root password.&lt;/p&gt;
+
+&lt;h3 id=&#34;applepi-baker:7565a061641bd1e599d91e306fc304d1&#34;&gt;ApplePi-Baker&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
+free utility that allows to write an IMG file to SD card, or backup an SD card
+to IMG, with only a few simple clicks. This is also a closed source application
+and also requires your root password to write to SD cards. The application is
+written in Lazarus Pascal and supports Retina.&lt;/p&gt;
+
+&lt;h3 id=&#34;piwriter:7565a061641bd1e599d91e306fc304d1&#34;&gt;PiWriter&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/piwriter/&#34;&gt;PiWriter&lt;/a&gt; a simple wizard made
+using shell scripts, PlatyPus and CocoaDialog. To prevent
+users from making mistakes the wizard auto-detect&amp;rsquo;s the SD card you plan to use
+and prevents you from selecting your system disk. Also there is no need for a
+root password so even less damage can be done. The nextgen PiWriter2 introduces
+a new &amp;lsquo;drag and drop&amp;rsquo; approach and also includes a backup feature. PiWriter
+1.0.4 does not work on Mac OS X Mavericks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Watch the 1.x quick review &lt;a href=&#34;http://vimeo.com/62083666&#34;&gt;video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Watch full OS X HOWTO &lt;a href=&#34;http://www.youtube.com/watch?v=PIvNxprbDhQ&#34;&gt;video&lt;/a&gt;
+using PiWriter 1.x By: Bruce Fulton&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;using-system-tools-mostly-graphical-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using system tools (mostly graphical interface)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image by double clicking on the download file.&lt;/li&gt;
+&lt;li&gt;Connect the SD card reader with the SD card inside; note: must be formatted
+in FAT32!&lt;/li&gt;
+&lt;li&gt;From the Apple menu, choose About This Mac, then click on More info&amp;hellip;; if
+you are using Mac OS X 10.8.x Mountain Lion then click on System report.&lt;/li&gt;
+&lt;li&gt;Click on USB (or Card Reader if using an in-built SD card reader) then
+search for your SD card in the upper right section of the window; click it,
+then search for BSD name in the lower right section: must be something like
+diskn where n is a number (for example, disk4). Note this number.&lt;/li&gt;
+&lt;li&gt;Unmount the partition so that you will be allowed to overwrite the disk by
+opening Disk Utility and unmounting it (do not eject it, or you have to
+reconnect it). Note: On Mac OS X 10.8.x Mountain Lion, &amp;ldquo;Verify Disk&amp;rdquo; (before
+unmounting) will display the BSD name as &amp;ldquo;/dev/disk1s1&amp;rdquo; (or similar), allowing
+you to skip the previous two steps.&lt;/li&gt;
+&lt;li&gt;From the Terminal run:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo dd if=path_of_your_image.img of=/dev/diskn bs=1M&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remember to replace n with the number that you noted before!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Wait a LONG time! (or see the note above about using /dev/rdisk#&amp;hellip;) To see
+the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;re done! Insert it in the Raspberry Pi, and have fun.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-windows:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter Image to SD Card under Windows&lt;/h1&gt;
+
+&lt;h2 id=&#34;using-the-win32diskimager-program:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
+0. Download the
+   &lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; utility.
+1. Assuming that you have downloaded already Lepidopter image if not, you
+   should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;
+2. Extract the image file from the downloaded .xz file, so you now have
+   &amp;ldquo;lepidopter.img&amp;rdquo;.
+3. Insert the SD card into your SD card reader and check what drive letter it
+   was assigned. You can easily see the drive letter (for example G:) by
+looking in the left column of Windows Explorer. You can use the SD Card slot
+(if you have one) or a cheap Adapter in a USB slot.
+4. Download the Win32DiskImager utility (it is also a zip file). You can run
+   this from a USB drive.  Win32DiskImager screen
+5. Extract the executable from the zip file and run the Win32DiskImager
+   utility; you may need to run the utility as Administrator! Right-click on
+the file, and select &amp;lsquo;Run as Administrator&amp;rsquo;
+6. Select the image file you extracted above.
+7. Select the drive letter of the SD card in the device box. &lt;strong&gt;Be careful to
+   select the correct drive&lt;/strong&gt;; if you get the wrong one you can destroy your
+data on the computer&amp;rsquo;s hard disk! If you are using an SD Card slot in your
+computer (if you have one) and can&amp;rsquo;t see the drive in the Win32DiskImager
+window, try using a cheap Adapter in a USB slot.
+8. Click Write and wait for the write to complete.
+9. Exit the imager and eject the SD card.
+10. You are now ready to plug the card into your Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+In Windows, the SD card will appear only to have a fairly small size once
+written - about 55 to 75 MB. This is because most of the card has a partition
+that is formatted for the Linux operating system that the Raspberry Pi uses
+which is not visible in Windows. If you don&amp;rsquo;t see a small directory with files
+such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h2&gt;
+
+&lt;p&gt;You may not be able to choose the device in Win32DiskImager on some notebooks
+so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image file from the downloaded .xz file, so you now have
+&amp;ldquo;lepidopter.img&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your SD card reader and check what drive letter it
+was assigned. You can easily see the drive letter (for example G:) by
+looking in the left column of Windows Explorer. You can use an SD Card slot in
+your computer (if you have one) or a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Download the flashnul &lt;a href=&#34;http://shounen.ru/soft/flashnul/index.html&#34;&gt;software&lt;/a&gt;
+; here is the English &lt;a href=&#34;http://translate.google.com/translate?hl=en&amp;amp;sl=ru&amp;amp;tl=en&amp;amp;u=http%3A%2F%2Fshounen.ru%2Fsoft%2Fflashnul%2Findex.html&#34;&gt;Translated version&lt;/a&gt;
+with a link to instructions (also translated).&lt;/li&gt;
+&lt;li&gt;Download the latest version. At the time of writing it was flashnul-1rc1.&lt;/li&gt;
+&lt;li&gt;Extract the application from the archive.&lt;/li&gt;
+&lt;li&gt;Click Start button &amp;gt; All Programs &amp;gt; Accessories &amp;gt; Command Prompt, right
+click on it and Run as Administrator.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run flashnul with argument &amp;ldquo;-p&amp;rdquo;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe -p&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Flashnul will tell you something like this (it should be different, as it
+depends on the drives on your machine):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Available physical drives:&lt;/li&gt;
+&lt;li&gt;0       size = 250059350016 (232 Gb)&lt;/li&gt;
+&lt;li&gt;1       size = 1990197248 (1898 Mb)&lt;/li&gt;
+&lt;li&gt;Available logical disks:&lt;/li&gt;
+&lt;li&gt;C:\&lt;/li&gt;
+&lt;li&gt;D:\&lt;/li&gt;
+&lt;li&gt;E:\&lt;/li&gt;
+&lt;li&gt;F:\&lt;/li&gt;
+&lt;li&gt;Press ENTER to exit.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the Load option of flashnul to put the image file on the SD Card. Make
+sure that you use the correct drive letter for the SD Card as that drive
+will be overwritten!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe E: -L C:\temp\lepidopter.img&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Where &lt;code&gt;C:\flashnul\flashnul.exe&lt;/code&gt; is the location of the flashnul
+program; E: is the drive you want to overwrite, and C:\temp\lepidopter.img
+is the location of the .img file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Flashnul will give you a device summary and a caution message. Check the
+information to make sure you have selected the correct device, then type
+yes and press enter. If you get an access denied error, make sure to close all
+explorer windows or folders open for the device, then try re-plugging the SD
+card.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;sources:7565a061641bd1e599d91e306fc304d1&#34;&gt;Sources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://elinux.org/RPi_Easy_SD_Card_Setup&#34;&gt;RPi Easy SD Card Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/&#34;&gt;Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

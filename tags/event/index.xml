@@ -2,20 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Event on OONI: Open Observatory of Network Interference</title>
-    <link>http://ooni.io/tags/event/</link>
+    <link>https://ooni.torproject.org/tags/event/</link>
     <description>Recent content in Event on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://ooni.io/tags/event/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/tags/event/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15-it/</link>
+      <link>https://ooni.torproject.org/event/adina15-it/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15-it/</guid>
+      <guid>https://ooni.torproject.org/event/adina15-it/</guid>
       <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15-it.md&#34;&gt;Versione in testo semplice di questa pagina&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;ooni-hackathon:c802604ea1220451aa753efce4e7b0e1&#34;&gt;OONI Hackathon&lt;/h1&gt;
 
@@ -27,8 +29,7 @@
 &lt;a href=&#34;http://api.ooni.io/&#34;&gt;misure di censura su internet&lt;/a&gt; raccolte dal progetto
 &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
 
-&lt;p&gt;Allora partecipa alla OONI Open Data Hackfest che si terra&amp;rsquo;
-l&amp;rsquo;1 e il 2 Ottobre 2015!&lt;/p&gt;
+&lt;p&gt;Allora partecipa alla OONI Open Data Hackfest!&lt;/p&gt;
 
 &lt;p&gt;Sarai il benvenuto!&lt;/p&gt;
 
@@ -93,9 +94,9 @@ il codice.&lt;/p&gt;
 
 &lt;h1 id=&#34;quando:c802604ea1220451aa753efce4e7b0e1&#34;&gt;QUANDO&lt;/h1&gt;
 
-&lt;p&gt;La hackathon si terra&amp;rsquo; l&amp;rsquo;1 e il 2 Ottobre 2015.&lt;/p&gt;
+&lt;p&gt;La hackathon si terra&amp;rsquo; &amp;hellip; da definirsi (l&amp;rsquo;hackathon e&amp;rsquo; stata rinviata)&lt;/p&gt;
 
-&lt;h3 id=&#34;1-ottobre-giorno-1:c802604ea1220451aa753efce4e7b0e1&#34;&gt;1 Ottobre (Giorno 1)&lt;/h3&gt;
+&lt;h3 id=&#34;giorno-1:c802604ea1220451aa753efce4e7b0e1&#34;&gt;Giorno 1&lt;/h3&gt;
 
 &lt;p&gt;09:00 Accoglienza dei partecipanti (gli organizzatori dovranno presentarsi alle 8:00)&lt;/p&gt;
 
@@ -107,7 +108,7 @@ il codice.&lt;/p&gt;
 
 &lt;p&gt;20:00 Conclusione del primo giorno di hacking: potete ancora sviluppare, ma altrove&lt;/p&gt;
 
-&lt;h3 id=&#34;2-ottobre-giorno-2:c802604ea1220451aa753efce4e7b0e1&#34;&gt;2 Ottobre (Giorno 2)&lt;/h3&gt;
+&lt;h3 id=&#34;giorno-2:c802604ea1220451aa753efce4e7b0e1&#34;&gt;Giorno 2&lt;/h3&gt;
 
 &lt;p&gt;09:00 Apertura della Camera&lt;/p&gt;
 
@@ -205,15 +206,21 @@ e amichevole per tutti.&lt;/p&gt;
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15/</link>
+      <link>https://ooni.torproject.org/event/adina15/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15/</guid>
+      <guid>https://ooni.torproject.org/event/adina15/</guid>
       <description>
 
-&lt;h1 id=&#34;ooni-hackathon:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI Hackathon&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15.md&#34;&gt;Raw text version of this page&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;ooni-hackathon-event-postponed:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI Hackathon (event postponed)&lt;/h1&gt;
 
 &lt;h2 id=&#34;adina15:550281d282d64ceb2dd86438c13e2d48&#34;&gt;#ADINA15&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The event has been postponed!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To be announced: new dates&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Do you like playing with open data and producing some good looking graphics
 about them?&lt;/p&gt;
@@ -222,8 +229,8 @@ about them?&lt;/p&gt;
 internet censorship data and &lt;a href=&#34;http://api.ooni.io/&#34;&gt;reports&lt;/a&gt; gathered by
 &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
 
-&lt;p&gt;Then submit an application to join us from the 1st of October
-to the 2nd of October 2015 at the OONI Open Data Hackfest!&lt;/p&gt;
+&lt;p&gt;Then submit an application to join us
+at the OONI Open Data Hackfest!&lt;/p&gt;
 
 &lt;p&gt;All humans welcome!&lt;/p&gt;
 
@@ -288,9 +295,9 @@ coding tasks.&lt;/p&gt;
 
 &lt;h1 id=&#34;when:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHEN&lt;/h1&gt;
 
-&lt;p&gt;The hackathon will run from October 1st to October 2nd 2015.&lt;/p&gt;
+&lt;p&gt;The hackathon will run from &amp;hellip; to be defined (the hackathon was postponed).&lt;/p&gt;
 
-&lt;h3 id=&#34;october-1st-day-1:550281d282d64ceb2dd86438c13e2d48&#34;&gt;October 1st (Day 1)&lt;/h3&gt;
+&lt;h3 id=&#34;day-1:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Day 1&lt;/h3&gt;
 
 &lt;p&gt;09:00 Start of event (&lt;strong&gt;Organizers&lt;/strong&gt; should be there at &lt;strong&gt;08:00&lt;/strong&gt;)&lt;/p&gt;
 
@@ -302,7 +309,7 @@ coding tasks.&lt;/p&gt;
 
 &lt;p&gt;20:00 Wrap up for the day (you can hack more, but not here)&lt;/p&gt;
 
-&lt;h3 id=&#34;october-2nd-day-2:550281d282d64ceb2dd86438c13e2d48&#34;&gt;October 2nd (Day 2)&lt;/h3&gt;
+&lt;h3 id=&#34;day-2:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Day 2&lt;/h3&gt;
 
 &lt;p&gt;09:00 Venue opens&lt;/p&gt;
 
