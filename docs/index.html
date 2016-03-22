@@ -83,6 +83,7 @@
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_test_helpers.html">Writing Test Helpers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reports.html#report-format-version-changelog">Report format version changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nettests/modules.html">Implemented NetTests</a></li>
@@ -136,11 +137,8 @@
             
   <div class="section" id="ooni-open-observatory-of-network-interference">
 <h1>OONI: Open Observatory of Network Interference<a class="headerlink" href="#ooni-open-observatory-of-network-interference" title="Permalink to this headline">¶</a></h1>
-<p>OONI, the Open Observatory of Network Interference, is a global observation
-network which aims is to collect high quality data using open methodologies,
-using Free and Open Source Software (FL/OSS) to share observations and data
-about the various types, methods, and amounts of network tampering in the
-world.</p>
+<p>The Open Observatory of Network Interference (OONI) is a global observation
+network which collects high quality data, using open methodologies and Free and Open Source Software (FL/OSS), to share observations about the various types, methods, and amounts of network tampering in the world.</p>
 <blockquote>
 <div><dl class="docutils">
 <dt>&#8220;The Net interprets censorship as damage and routes around it.&#8221;</dt>
@@ -150,39 +148,32 @@ world.</p>
 </dd>
 </dl>
 </div></blockquote>
+<p>Are you interested in testing your network for signs of surveillance and censorship? Do you want to collect data so that you and others can better understand your network? If so, please read this document and we hope that ooniprobe will help you gather network data that will assist you with your endeavors!</p>
 <div class="section" id="ooniprobe">
 <h2>ooniprobe<a class="headerlink" href="#ooniprobe" title="Permalink to this headline">¶</a></h2>
-<p>ooniprobe is the first program that users run to probe their network and to
-collect data for the OONI project. Are you interested in testing your network
-for signs of surveillance and censorship? Do you want to collect data to share
-with others, so that you and others may better understand your network? If so,
-please read this document and we hope ooniprobe will help you to gather
-network data that will assist you with your endeavors!</p>
-<p>ooniprobe allows the user to select what test should be run and what backend
-should be used for storing the test report and/or assisting them in the running
-of the test.</p>
+<p>ooniprobe is a program that users can run to probe their network and to collect network measurement data. ooniprobe also allows users to choose what test should be run and what backend should be used for storing the test report and for assisting them in running the test.</p>
 <p>ooniprobe tests are divided into two categories: <strong>Traffic Manipulation</strong> and
 <strong>Content Blocking</strong>.</p>
 <p><strong>Traffic Manipulation</strong> tests aim to detect the presence of some sort of
 tampering with the internet traffic between the probe and a remote test helper
 backend. As such they usually require the selection of a oonib backend
 component for running the test.</p>
-<p><strong>Content Blocking</strong> are aimed at enumerating the kind of content that is
-blocked from the probes network point of view. As such they usually require to
-have specified an input list for running the test.</p>
+<p><strong>Content Blocking</strong> tests aim to enumerate the kind of content that is
+blocked from the probes network point of view. As such they usually require the specification of an input list for running the test.</p>
 </div>
 <div class="section" id="read-this-before-running-ooniprobe">
 <h2>Read this before running ooniprobe!<a class="headerlink" href="#read-this-before-running-ooniprobe" title="Permalink to this headline">¶</a></h2>
-<p>Running ooniprobe is a potentially risky activity. This greatly depends on the
-jurisdiction in which you are in and which test you are running. It is
-technically possible for a person observing your internet connection to be
-aware of the fact that you are running ooniprobe. This means that if running
-network measurement tests is something considered to be illegal in your country
-then you could be spotted.</p>
-<p>Futhermore, ooniprobe takes no precautions to protect the install target machine
-from forensics analysis.  If the fact that you have installed or used ooni
-probe is a liability for you, please be aware of this risk.</p>
+<p>Running ooniprobe can potentially be a risky activity. This largely depends on the laws and jurisdiction of the country you are running ooniprobe from, as well as on the type of test you are running. Technically, it is possible for a person observing your internet connection to be aware of the fact that you are running ooniprobe. This means that if running network measurement tests is something that is considered to be illegal in your country then you could be spotted.</p>
+<p>Furthermore, ooniprobe takes no precautions to protect the install target machine from forensics analysis.  If the fact that you have installed or used ooniprobe is a liability for you, please be aware of this risk.</p>
 </div>
+</div>
+<div class="section" id="using-ooniprobe">
+<h1>Using ooniprobe<a class="headerlink" href="#using-ooniprobe" title="Permalink to this headline">¶</a></h1>
+<p><strong>Net test</strong> is a set of measurements to assess what kind of internet censorship is occurring.</p>
+<p><strong>Decks</strong> are collections of ooniprobe nettests with some associated inputs.</p>
+<p><strong>Collector</strong> is a service used to report the results of measurements.</p>
+<p><strong>Test helper</strong> is a service used by a probe for successfully performing its measurements.</p>
+<p><strong>Bouncer</strong> is a service used to discover the addresses of test helpers and collectors.</p>
 </div>
 <div class="section" id="ooni-in-5-minutes">
 <h1>OONI in 5 minutes<a class="headerlink" href="#ooni-in-5-minutes" title="Permalink to this headline">¶</a></h1>
@@ -219,8 +210,7 @@ properly create the ooni home folder and if you run into an error in accessing
 <p>This should generate the home and allow you to run oonideckgen.</p>
 <p>The output from the last command will tell you how to run ooniprobe to perform
 the measurement.</p>
-<p>If you would like to contribute measurements to OONI daily you can also add
-this to your crontab:</p>
+<p>If you would like to contribute measurements to OONI daily you can also add this to your crontab:</p>
 <div class="highlight-python"><div class="highlight"><pre>@daily ooniprobe $THE_OONI_COMMAND
 </pre></div>
 </div>
@@ -319,14 +309,6 @@ vagrant up
 </li>
 </ol>
 </div>
-</div>
-<div class="section" id="using-ooniprobe">
-<h1>Using ooniprobe<a class="headerlink" href="#using-ooniprobe" title="Permalink to this headline">¶</a></h1>
-<p><strong>Net test</strong> is a set of measurements to assess what kind of internet censorship is occurring.</p>
-<p><strong>Decks</strong> are collections of ooniprobe nettests with some associated inputs.</p>
-<p><strong>Collector</strong> is a service used to report the results of measurements.</p>
-<p><strong>Test helper</strong> is a service used by a probe for successfully performing its measurements.</p>
-<p><strong>Bouncer</strong> is a service used to discover the addresses of test helpers and collectors.</p>
 <div class="section" id="configuring-ooniprobe">
 <h2>Configuring ooniprobe<a class="headerlink" href="#configuring-ooniprobe" title="Permalink to this headline">¶</a></h2>
 <p>You may edit the configuration for ooniprobe by editing the configuration file
@@ -341,9 +323,9 @@ test result, nor create a pcap file. This behavior can be personalized.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">ooniresources</span> <span class="o">--</span><span class="n">update</span><span class="o">-</span><span class="n">inputs</span>
 </pre></div>
 </div>
-<p>If you get a permission error, you may have to run the command as root or
+<p>If you get a permission error, you might have to run the command as root or
 change the ooniprobe data directory inside of <cite>ooniprobe.conf</cite>.</p>
-<p>On some platforms, for example debian contrib, you will not get all the geoip
+<p>On some platforms, such as debian contrib, you will not get all the geoip
 related files needed. In that case it is possible to manually download them
 with <code class="docutils literal"><span class="pre">ooniresources</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">ooniresources</span> <span class="o">--</span><span class="n">update</span><span class="o">-</span><span class="n">geoip</span>
@@ -352,15 +334,15 @@ with <code class="docutils literal"><span class="pre">ooniresources</span></code
 </div>
 <div class="section" id="generating-decks">
 <h2>Generating decks<a class="headerlink" href="#generating-decks" title="Permalink to this headline">¶</a></h2>
-<p>You can generate decks for your country thanks to the oonideckgen command.</p>
+<p>You can generate decks for your country with the oonideckgen command.</p>
 <p>If you wish, for example, to generate a deck to be run in the country of Italy,
 you can do so (be sure to have updated the input resources first) by running:</p>
 <div class="highlight-python"><div class="highlight"><pre>oonideckgen --country-code IT --output ~/
 </pre></div>
 </div>
 <p>You will now have in your home a folder called <cite>deck-it</cite>, containing the ooni
-deck (ends with .deck) and the inputs.
-Note: that you should not move the <cite>deck-*</cite> directory once it has been
+deck (ends with .deck) and the inputs.</p>
+<p><strong>Note:</strong> You should not move the <cite>deck-*</cite> directory once it has been
 generated as the paths to the inputs referenced by the test in the deck are
 absolute. If you want your deck to live in another directory you must
 regenerated it.</p>
@@ -427,8 +409,8 @@ ooniprobe.conf), and ooniprobe supports bridges (and obfsproxy bridges, if
 obfsproxy is installed). The tor.bridges option in ooniprobe.conf sets the path
 to a file that should contain a set of &#8220;bridge&#8221; lines (of the same format as
 used in torrc, and as returned by <a class="reference external" href="https://bridges.torproject.org">https://bridges.torproject.org</a>). If obfsproxy
-bridges are to be used, the path to the obfsproxy binary must be configured.
-See option advanced.obfsproxy_binary, in ooniprobe.conf.</p>
+bridges are to be used, the path to the obfsproxy binary must be configured.</p>
+<p>See option advanced.obfsproxy_binary, in ooniprobe.conf.</p>
 <div class="section" id="optional-install-obfsproxy">
 <h2>(Optional) Install obfsproxy<a class="headerlink" href="#optional-install-obfsproxy" title="Permalink to this headline">¶</a></h2>
 <p>Install the latest version of obfsproxy for your platform.</p>
@@ -459,7 +441,7 @@ password &#8220;writecode&#8221;.</p>
 <p>You should then submit patches for review as pull requests to this github repository:</p>
 <p><a class="reference external" href="https://github.com/TheTorProject/ooni-probe">https://github.com/TheTorProject/ooni-probe</a></p>
 <p>Read this article to learn how to create a pull request on github (<a class="reference external" href="https://help.github.com/articles/creating-a-pull-request">https://help.github.com/articles/creating-a-pull-request</a>).</p>
-<p>If you prefer not to use github (or don&#8217;t have an account), you may also submit
+<p>If you prefer not to use github (or don&#8217;t have an account), you can also submit
 patches as attachments to tickets.</p>
 <p>Be sure to format the patch (given that you are working on a feature branch
 that is different from master) with:</p>
@@ -520,7 +502,7 @@ being experimented with.</p>
 <li><a class="reference external" href="https://gitweb.torproject.org/ooni-probe.git/tree/HEAD:/ooni/nettests/scanning">ooni/nettests/scanning</a></li>
 </ul>
 </div></blockquote>
-<p>Tests that involve running third party tools may be found in:</p>
+<p>Tests that involve running third party tools can be found in:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="https://gitweb.torproject.org/ooni-probe.git/tree/HEAD:/ooni/nettests/third_party">ooni/nettests/third_party</a></li>
@@ -530,7 +512,7 @@ being experimented with.</p>
 </div>
 <div class="section" id="ooni-backend">
 <h2>ooni-backend<a class="headerlink" href="#ooni-backend" title="Permalink to this headline">¶</a></h2>
-<p>This is the server side component of ooniprobe. It will store that data
+<p>This is the server side component of ooniprobe. It will store data
 collected from ooniprobes and it will run a series of Test Helpers that assist
 <a class="reference external" href="https://gitweb.torproject.org/ooni-probe.git/tree/HEAD:/ooni/nettests/blocking">Traffic Manipulation Tests</a> in performing their measurements.</p>
 <div class="section" id="test-helpers">
@@ -550,7 +532,7 @@ collected from ooniprobes and it will run a series of Test Helpers that assist
 <h2>Threat Model<a class="headerlink" href="#threat-model" title="Permalink to this headline">¶</a></h2>
 <p>Our adversary is capable of doing country wide network surveillance and
 manipulation of network traffic.</p>
-<p>The goals of our adversary are:</p>
+<p>The goals of our adversary are to:</p>
 <blockquote>
 <div><ul class="simple">
 <li>Restrict access to certain content, while not degrading overall quality of
@@ -565,13 +547,13 @@ real time</li>
 <li>Fool people running such tests into believing that the network is
 unrestricted</li>
 </ol>
-<p><em>Note</em> that while 2) =&gt; 1) it is not true that 1) =&gt; 2) as the identification of
-such actors does not necessarily have to happen in real time.
-While our intention is to minimize the risk of users running OONI probe to be
-identified, this comes with a tradeoff in accuracy. It is therefore necessary in
-certain tests to trade-off fingerprintability in favour of tests accuracy.</p>
-<p>This is why we divide tests based on what risk the user running it can face,
-allowing the user to freely choose what threat model they wish to adere to.</p>
+<p><strong>Note:</strong> While 2) =&gt; 1) it is not true that 1) =&gt; 2) as the identification of
+such actors does not necessarily have to happen in real time.</p>
+<p>While our intention is to minimize the risk of users running OONI probe being
+identified, this comes with a trade-off in accuracy. It is therefore necessary in
+certain tests to trade-off fingerprintability in favour of test accuracy.</p>
+<p>This is why we divide tests based on what risk the users running them can face,
+allowing users to freely choose what threat model they wish to adere to.</p>
 </div>
 <div class="section" id="more-developer-documentation">
 <h2>More developer documentation<a class="headerlink" href="#more-developer-documentation" title="Permalink to this headline">¶</a></h2>
@@ -593,6 +575,14 @@ allowing the user to freely choose what threat model they wish to adere to.</p>
 <li class="toctree-l2"><a class="reference internal" href="writing_tests.html#setup-and-command-line-passing">Setup and command line passing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writing_tests.html#test-methods">Test Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="writing_tests.html#test-templates">Test Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="writing_test_helpers.html">Writing Test Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="writing_test_helpers.html#writing-a-censorship-directionality-test-helper">Writing a Censorship Directionality Test Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing_test_helpers.html#creating-the-test-helper">Creating the test helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing_test_helpers.html#adding-the-helper-to-the-config-file">Adding the helper to the config file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing_test_helpers.html#adding-the-helper-to-the-backend">Adding the helper to the backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing_test_helpers.html#requiring-the-helper-in-a-test">Requiring the helper in a test</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>

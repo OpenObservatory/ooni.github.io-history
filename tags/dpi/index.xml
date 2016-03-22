@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dpi on OONI: Open Observatory of Network Interference</title>
-    <link>http://ooni.io/tags/dpi/</link>
+    <link>https://ooni.torproject.org/tags/dpi/</link>
     <description>Recent content in Dpi on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Jun 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://ooni.io/tags/dpi/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/tags/dpi/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>EEEP and Greek Internet censorship</title>
-      <link>http://ooni.io/post/eeep-greek-censorship/</link>
+      <link>https://ooni.torproject.org/post/eeep-greek-censorship/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/post/eeep-greek-censorship/</guid>
+      <guid>https://ooni.torproject.org/post/eeep-greek-censorship/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Greece&lt;/p&gt;
@@ -160,7 +160,7 @@ that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspect
 
 &lt;h2 id=&#34;per-isp-analysis:d0c495f4479395eff703b25df5d2e963&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;forthnet:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h3&gt;
 
@@ -241,7 +241,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h3&gt;
 
@@ -462,7 +462,7 @@ test_resolvers: [192.168.1.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;cyta:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h2&gt;
 
@@ -630,7 +630,7 @@ m.parentNode.insertBefore(a,\
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 80 entries faulty responded with a 404 HTTP error&lt;/p&gt;
 
@@ -841,7 +841,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -968,7 +968,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;cosmote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h3&gt;
 
@@ -1113,7 +1113,7 @@ href=\&amp;quot;http://www.gamingcommission.gov.gr/index.php/el/\&amp;quot;&amp;
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;vodafone:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h3&gt;
 
@@ -1159,7 +1159,7 @@ requests:
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This ISP uses DNS hijacking for 58 entries that EEEP has published either using
 HTTPS URLs on the blacklist or entries that not prefixed with &amp;lsquo;http://&amp;rsquo; For the
@@ -1372,7 +1372,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 

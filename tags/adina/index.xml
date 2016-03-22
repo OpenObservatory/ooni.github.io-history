@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adina on OONI: Open Observatory of Network Interference</title>
-    <link>http://ooni.io/tags/adina/</link>
+    <link>https://ooni.torproject.org/tags/adina/</link>
     <description>Recent content in Adina on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jul 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://ooni.io/tags/adina/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/tags/adina/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15/</link>
+      <link>https://ooni.torproject.org/event/adina15/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15/</guid>
+      <guid>https://ooni.torproject.org/event/adina15/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15.md&#34;&gt;Raw text version of this page&lt;/a&gt;&lt;/p&gt;
@@ -205,10 +205,10 @@ friendly event for all.&lt;/p&gt;
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15-it/</link>
+      <link>https://ooni.torproject.org/event/adina15-it/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15-it/</guid>
+      <guid>https://ooni.torproject.org/event/adina15-it/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15-it.md&#34;&gt;Versione in testo semplice di questa pagina&lt;/a&gt;&lt;/p&gt;
