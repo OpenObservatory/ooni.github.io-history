@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/</link>
+    <link>http://ooni.io/</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ooni.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Lepidopter Installation: Help Guides and Resources</title>
-      <link>https://ooni.torproject.org/lepidopter/lepidopter/</link>
+      <link>http://ooni.io/lepidopter/lepidopter/</link>
       <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/lepidopter/lepidopter/</guid>
+      <guid>http://ooni.io/lepidopter/lepidopter/</guid>
       <description>
 
 &lt;h1 id=&#34;lepidopter-quick-start-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
@@ -183,7 +183,7 @@ your root password.&lt;/p&gt;
 
 &lt;h3 id=&#34;applepi-baker:7565a061641bd1e599d91e306fc304d1&#34;&gt;ApplePi-Baker&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
 free utility that allows to write an IMG file to SD card, or backup an SD card
@@ -241,7 +241,7 @@ the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
 
 &lt;h2 id=&#34;using-the-win32diskimager-program:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
 0. Download the
    &lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; utility.
 1. Assuming that you have downloaded already Lepidopter image if not, you
@@ -347,204 +347,10 @@ card.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>https://ooni.torproject.org/event/adina15/</link>
+      <link>http://ooni.io/event/adina15-it/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/event/adina15/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15.md&#34;&gt;Raw text version of this page&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;ooni-hackathon-event-postponed:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI Hackathon (event postponed)&lt;/h1&gt;
-
-&lt;h2 id=&#34;adina15:550281d282d64ceb2dd86438c13e2d48&#34;&gt;#ADINA15&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;The event has been postponed!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To be announced: new dates&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Do you like playing with open data and producing some good looking graphics
-about them?&lt;/p&gt;
-
-&lt;p&gt;Would you fancy spending some time in the Italian Parliament in Rome hacking on
-internet censorship data and &lt;a href=&#34;http://api.ooni.io/&#34;&gt;reports&lt;/a&gt; gathered by
-&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;Then submit an application to join us
-at the OONI Open Data Hackfest!&lt;/p&gt;
-
-&lt;p&gt;All humans welcome!&lt;/p&gt;
-
-&lt;h1 id=&#34;ooni:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI?&lt;/h1&gt;
-
-&lt;p&gt;OONI is a platform for conducting and publishing measurements useful to study
-censorship and surveillance on the Internet. It consists of an open data
-format, an open source software implementation for several platforms, and a
-public archive of over 15000 measurements collected from about 70 countries
-worldwide.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;what:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHAT&lt;/h1&gt;
-
-&lt;p&gt;Two days of collaborative hacking on visualizations and tools that utilize the
-OONI dataset to study censorship hosted at the &lt;a href=&#34;http://www.camera.it&#34;&gt;Italian Chamber of Deputies&lt;/a&gt; and
-organized by the OONI project in collaboration with the &lt;a href=&#34;http://nexa.polito.it/&#34;&gt;Nexa Center for
-Internet &amp;amp; Society&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;It will be in the format of a code-a-thon, where people work in groups on a
-specific project and at the end of the event the results produced by every team
-will be evaluated by a jury. It will kick off with a short presentation that
-sets the stage for the context of the event. Participants should have chosen
-beforehand the specific type of project they would like to work on during the
-event. We will provide a list of sample projects that people can pick from
-to give an idea of what are the sort of things that are possible, but it is
-encouraged for participants to submit their own idea.&lt;/p&gt;
-
-&lt;p&gt;A symbolic prize will be given to the first three teams.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;why:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHY&lt;/h1&gt;
-
-&lt;p&gt;The OONI project builds tools to study internet censorship. Now your
-contribution is needed to understand OONI data and make them more accessible to
-society.&lt;/p&gt;
-
-&lt;p&gt;Got an idea? Want to build it? We want to hack with you!&lt;/p&gt;
-
-&lt;p&gt;Making internet censorship data (and, more generally, network measurements)
-easier to understand and study is crucial to foster an informed democratic
-debate on the governance of the internet. In fact, measuring content blocking
-is functional to quantify its collateral damage on citizens&amp;rsquo; digital rights and
-this information ultimately helps democratic societies to find the right
-balance between digital sovereignty, on the one hand, and fundamental rights,
-on the other end.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;who:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHO&lt;/h1&gt;
-
-&lt;p&gt;We invite all people that have a background in design and, in particular, in
-information design or in data visualization. A strong technical background is not
-needed though it is useful to have. Members of the core OONI development team
-will also be part of the event and will be iterating over the various
-participating teams to provide technical insight and help out with the needed
-coding tasks.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;when:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHEN&lt;/h1&gt;
-
-&lt;p&gt;The hackathon will run from &amp;hellip; to be defined (the hackathon was postponed).&lt;/p&gt;
-
-&lt;h3 id=&#34;day-1:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Day 1&lt;/h3&gt;
-
-&lt;p&gt;09:00 Start of event (&lt;strong&gt;Organizers&lt;/strong&gt; should be there at &lt;strong&gt;08:00&lt;/strong&gt;)&lt;/p&gt;
-
-&lt;p&gt;10:00 Introduction&lt;/p&gt;
-
-&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
-
-&lt;p&gt;13:00 Buffet lunch[a]&lt;/p&gt;
-
-&lt;p&gt;20:00 Wrap up for the day (you can hack more, but not here)&lt;/p&gt;
-
-&lt;h3 id=&#34;day-2:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Day 2&lt;/h3&gt;
-
-&lt;p&gt;09:00 Venue opens&lt;/p&gt;
-
-&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
-
-&lt;p&gt;13:00 Buffet lunch&lt;/p&gt;
-
-&lt;p&gt;16:00 Submissions deadline&lt;/p&gt;
-
-&lt;p&gt;19:00 Award ceremony&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;where:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHERE&lt;/h1&gt;
-
-&lt;p&gt;The hackathon will be at the Chamber of Deputies of the Italian Parliament.&lt;/p&gt;
-
-&lt;p&gt;This is the address of the room:&lt;/p&gt;
-
-&lt;p&gt;Nuova Sala dei Gruppi Camera dei Deputati
-Via Campo Marzio 78
-Rome, Italy&lt;/p&gt;
-
-&lt;p&gt;As for each event organized at the Italian Parliament, the following rules apply:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Participants and their belongings will be subject to security check;&lt;/li&gt;
-&lt;li&gt;Smoking inside is forbidden;&lt;/li&gt;
-&lt;li&gt;Participants must be at least fourteen years old;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Smart casual attire is required (i.e. male bodied humans must &lt;strong&gt;wear a suit
-jacket at all times&lt;/strong&gt;).
-Note: this rule is actually enforced very strictly and if you show up without
-a jacket you may not be able to attend the hackathon;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Food or beverages may not be consumed inside the room;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;It is forbidden to request and/or to pay for participation fee within the venue.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;travel-information:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Travel information&lt;/h2&gt;
-
-&lt;p&gt;Rome is served by two airports FCO (Rome Fiumicino) and CIA (Rome Ciampino).&lt;/p&gt;
-
-&lt;p&gt;From FCO it is possible to take the train to either Termini central station or
-to various stations spread around the city (Trastevere, Ostiense, Tiburtina,
-Tuscolana).&lt;/p&gt;
-
-&lt;p&gt;From CIA there are buses that run regularly and connect you to the Termini
-central station.&lt;/p&gt;
-
-&lt;p&gt;The venue itself is close to the Metro A stops called Spagna and Barberini.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;prizes:550281d282d64ceb2dd86438c13e2d48&#34;&gt;PRIZES&lt;/h1&gt;
-
-&lt;h2 id=&#34;to-be-announced:550281d282d64ceb2dd86438c13e2d48&#34;&gt;To be announced!&lt;/h2&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;rules:550281d282d64ceb2dd86438c13e2d48&#34;&gt;RULES&lt;/h1&gt;
-
-&lt;p&gt;The following rules must be followed when working on your project:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;projects must use OONI data as the main theme of the visualisation&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;all data and source code used in the project should either already be public
-or should be published before judging takes place using an open license&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;collaboration is encouraged and you are expected to work as part of a team&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The hackfest is an environment in which to hack, meet new people, get creative,
-and have a good time. In order to make sure this event is enjoyable for
-everyone involved we ask that you be excellent to each other.&lt;/p&gt;
-
-&lt;p&gt;Getting something meaningful done within such a short amount of time can be
-stressful, but we&amp;rsquo;d like to encourage everyone to take a break every now and
-then to relax and enjoy the event.&lt;/p&gt;
-
-&lt;p&gt;Attendees violating these rules may be asked to leave the hackfest at the sole
-discretion of the organizers. Thank you for helping make this a welcoming,
-friendly event for all.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>https://ooni.torproject.org/event/adina15-it/</link>
-      <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/event/adina15-it/</guid>
+      <guid>http://ooni.io/event/adina15-it/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15-it.md&#34;&gt;Versione in testo semplice di questa pagina&lt;/a&gt;&lt;/p&gt;
@@ -735,11 +541,205 @@ e amichevole per tutti.&lt;/p&gt;
     </item>
     
     <item>
+      <title>ADINA15: A Dive Into Network Anomalies</title>
+      <link>http://ooni.io/event/adina15/</link>
+      <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://ooni.io/event/adina15/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15.md&#34;&gt;Raw text version of this page&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;ooni-hackathon-event-postponed:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI Hackathon (event postponed)&lt;/h1&gt;
+
+&lt;h2 id=&#34;adina15:550281d282d64ceb2dd86438c13e2d48&#34;&gt;#ADINA15&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;The event has been postponed!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;To be announced: new dates&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Do you like playing with open data and producing some good looking graphics
+about them?&lt;/p&gt;
+
+&lt;p&gt;Would you fancy spending some time in the Italian Parliament in Rome hacking on
+internet censorship data and &lt;a href=&#34;http://api.ooni.io/&#34;&gt;reports&lt;/a&gt; gathered by
+&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt;?&lt;/p&gt;
+
+&lt;p&gt;Then submit an application to join us
+at the OONI Open Data Hackfest!&lt;/p&gt;
+
+&lt;p&gt;All humans welcome!&lt;/p&gt;
+
+&lt;h1 id=&#34;ooni:550281d282d64ceb2dd86438c13e2d48&#34;&gt;OONI?&lt;/h1&gt;
+
+&lt;p&gt;OONI is a platform for conducting and publishing measurements useful to study
+censorship and surveillance on the Internet. It consists of an open data
+format, an open source software implementation for several platforms, and a
+public archive of over 15000 measurements collected from about 70 countries
+worldwide.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;what:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHAT&lt;/h1&gt;
+
+&lt;p&gt;Two days of collaborative hacking on visualizations and tools that utilize the
+OONI dataset to study censorship hosted at the &lt;a href=&#34;http://www.camera.it&#34;&gt;Italian Chamber of Deputies&lt;/a&gt; and
+organized by the OONI project in collaboration with the &lt;a href=&#34;http://nexa.polito.it/&#34;&gt;Nexa Center for
+Internet &amp;amp; Society&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It will be in the format of a code-a-thon, where people work in groups on a
+specific project and at the end of the event the results produced by every team
+will be evaluated by a jury. It will kick off with a short presentation that
+sets the stage for the context of the event. Participants should have chosen
+beforehand the specific type of project they would like to work on during the
+event. We will provide a list of sample projects that people can pick from
+to give an idea of what are the sort of things that are possible, but it is
+encouraged for participants to submit their own idea.&lt;/p&gt;
+
+&lt;p&gt;A symbolic prize will be given to the first three teams.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;why:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHY&lt;/h1&gt;
+
+&lt;p&gt;The OONI project builds tools to study internet censorship. Now your
+contribution is needed to understand OONI data and make them more accessible to
+society.&lt;/p&gt;
+
+&lt;p&gt;Got an idea? Want to build it? We want to hack with you!&lt;/p&gt;
+
+&lt;p&gt;Making internet censorship data (and, more generally, network measurements)
+easier to understand and study is crucial to foster an informed democratic
+debate on the governance of the internet. In fact, measuring content blocking
+is functional to quantify its collateral damage on citizens&amp;rsquo; digital rights and
+this information ultimately helps democratic societies to find the right
+balance between digital sovereignty, on the one hand, and fundamental rights,
+on the other end.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;who:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHO&lt;/h1&gt;
+
+&lt;p&gt;We invite all people that have a background in design and, in particular, in
+information design or in data visualization. A strong technical background is not
+needed though it is useful to have. Members of the core OONI development team
+will also be part of the event and will be iterating over the various
+participating teams to provide technical insight and help out with the needed
+coding tasks.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;when:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHEN&lt;/h1&gt;
+
+&lt;p&gt;The hackathon will run from &amp;hellip; to be defined (the hackathon was postponed).&lt;/p&gt;
+
+&lt;h3 id=&#34;day-1:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Day 1&lt;/h3&gt;
+
+&lt;p&gt;09:00 Start of event (&lt;strong&gt;Organizers&lt;/strong&gt; should be there at &lt;strong&gt;08:00&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;10:00 Introduction&lt;/p&gt;
+
+&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
+
+&lt;p&gt;13:00 Buffet lunch[a]&lt;/p&gt;
+
+&lt;p&gt;20:00 Wrap up for the day (you can hack more, but not here)&lt;/p&gt;
+
+&lt;h3 id=&#34;day-2:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Day 2&lt;/h3&gt;
+
+&lt;p&gt;09:00 Venue opens&lt;/p&gt;
+
+&lt;p&gt;11:00 The hackathon begins&lt;/p&gt;
+
+&lt;p&gt;13:00 Buffet lunch&lt;/p&gt;
+
+&lt;p&gt;16:00 Submissions deadline&lt;/p&gt;
+
+&lt;p&gt;19:00 Award ceremony&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;where:550281d282d64ceb2dd86438c13e2d48&#34;&gt;WHERE&lt;/h1&gt;
+
+&lt;p&gt;The hackathon will be at the Chamber of Deputies of the Italian Parliament.&lt;/p&gt;
+
+&lt;p&gt;This is the address of the room:&lt;/p&gt;
+
+&lt;p&gt;Nuova Sala dei Gruppi Camera dei Deputati
+Via Campo Marzio 78
+Rome, Italy&lt;/p&gt;
+
+&lt;p&gt;As for each event organized at the Italian Parliament, the following rules apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Participants and their belongings will be subject to security check;&lt;/li&gt;
+&lt;li&gt;Smoking inside is forbidden;&lt;/li&gt;
+&lt;li&gt;Participants must be at least fourteen years old;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Smart casual attire is required (i.e. male bodied humans must &lt;strong&gt;wear a suit
+jacket at all times&lt;/strong&gt;).
+Note: this rule is actually enforced very strictly and if you show up without
+a jacket you may not be able to attend the hackathon;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Food or beverages may not be consumed inside the room;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It is forbidden to request and/or to pay for participation fee within the venue.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;travel-information:550281d282d64ceb2dd86438c13e2d48&#34;&gt;Travel information&lt;/h2&gt;
+
+&lt;p&gt;Rome is served by two airports FCO (Rome Fiumicino) and CIA (Rome Ciampino).&lt;/p&gt;
+
+&lt;p&gt;From FCO it is possible to take the train to either Termini central station or
+to various stations spread around the city (Trastevere, Ostiense, Tiburtina,
+Tuscolana).&lt;/p&gt;
+
+&lt;p&gt;From CIA there are buses that run regularly and connect you to the Termini
+central station.&lt;/p&gt;
+
+&lt;p&gt;The venue itself is close to the Metro A stops called Spagna and Barberini.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;prizes:550281d282d64ceb2dd86438c13e2d48&#34;&gt;PRIZES&lt;/h1&gt;
+
+&lt;h2 id=&#34;to-be-announced:550281d282d64ceb2dd86438c13e2d48&#34;&gt;To be announced!&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;rules:550281d282d64ceb2dd86438c13e2d48&#34;&gt;RULES&lt;/h1&gt;
+
+&lt;p&gt;The following rules must be followed when working on your project:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;projects must use OONI data as the main theme of the visualisation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;all data and source code used in the project should either already be public
+or should be published before judging takes place using an open license&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;collaboration is encouraged and you are expected to work as part of a team&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The hackfest is an environment in which to hack, meet new people, get creative,
+and have a good time. In order to make sure this event is enjoyable for
+everyone involved we ask that you be excellent to each other.&lt;/p&gt;
+
+&lt;p&gt;Getting something meaningful done within such a short amount of time can be
+stressful, but we&amp;rsquo;d like to encourage everyone to take a break every now and
+then to relax and enjoy the event.&lt;/p&gt;
+
+&lt;p&gt;Attendees violating these rules may be asked to leave the hackfest at the sole
+discretion of the organizers. Thank you for helping make this a welcoming,
+friendly event for all.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>EEEP and Greek Internet censorship</title>
-      <link>https://ooni.torproject.org/post/eeep-greek-censorship/</link>
+      <link>http://ooni.io/post/eeep-greek-censorship/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/eeep-greek-censorship/</guid>
+      <guid>http://ooni.io/post/eeep-greek-censorship/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Greece&lt;/p&gt;
@@ -885,7 +885,7 @@ that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspect
 
 &lt;h2 id=&#34;per-isp-analysis:d0c495f4479395eff703b25df5d2e963&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;forthnet:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h3&gt;
 
@@ -966,7 +966,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h3&gt;
 
@@ -1187,7 +1187,7 @@ test_resolvers: [192.168.1.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;cyta:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h2&gt;
 
@@ -1355,7 +1355,7 @@ m.parentNode.insertBefore(a,\
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 80 entries faulty responded with a 404 HTTP error&lt;/p&gt;
 
@@ -1566,7 +1566,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -1693,7 +1693,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;cosmote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h3&gt;
 
@@ -1838,7 +1838,7 @@ href=\&amp;quot;http://www.gamingcommission.gov.gr/index.php/el/\&amp;quot;&amp;
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;vodafone:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h3&gt;
 
@@ -1884,7 +1884,7 @@ requests:
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This ISP uses DNS hijacking for 58 entries that EEEP has published either using
 HTTPS URLs on the blacklist or entries that not prefixed with &amp;lsquo;http://&amp;rsquo; For the
@@ -2097,7 +2097,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -3010,10 +3010,10 @@ of the blocked websites. Communicating with the owner company would be impossibl
     
     <item>
       <title>Zambia, a country under Deep Packet Inspection</title>
-      <link>https://ooni.torproject.org/post/zambia/</link>
+      <link>http://ooni.io/post/zambia/</link>
       <pubDate>Mon, 15 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/zambia/</guid>
+      <guid>http://ooni.io/post/zambia/</guid>
       <description>
 
 &lt;p&gt;&amp;ldquo;I do not have the details of the blocking of Zambianwatchdog.com, but I
@@ -3035,7 +3035,7 @@ website.&lt;/p&gt;
 &lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
 inside Zambia were reporting error messages.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As hosting providers of the website, we initially could not see a significant
 drop of active connections and we needed to have a close look into the access
@@ -3045,7 +3045,7 @@ we needed to examine several gigabytes of data. It is worth mentioning here
 that Zambian Watchdog ranks 8th overall biggest website in Zambia and probably
 the biggest site after the large portals Facebook, Google or Youtube.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Our first review of the logs revealed a clear increase of connections reporting
 status code 200 but with zero bytes were transmitted back to the client.&lt;/p&gt;
@@ -3072,7 +3072,7 @@ starting that day.&lt;/p&gt;
 concluded that the majority of the connections reporting this problem were from
 operators inside Zambia with the exception of MTN.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
 
@@ -3093,7 +3093,7 @@ any special patters that could help us to understand why most of the readers
 inside Zambia were experiencing connection drops with the exception of readers
 using MTN mobile network.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
 After reviewing dozen of different packet captures we saw a
 distinctive pattern&lt;/p&gt;
 
@@ -3263,7 +3263,7 @@ Inspection gear seems to be monitoring the &amp;ldquo;Server Hello&amp;rdquo; me
 of the SSL negotiation. This message contains the string zambianwatchdog.com
 before the SSL negotiation is completed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to find out if the government is actively making changes, we deployed
 a new mirror server of the site in the domain &lt;a href=&#34;http://zwd.cums.in&#34;&gt;http://zwd.cums.in&lt;/a&gt;. After a few
@@ -3287,10 +3287,10 @@ malformed.).&lt;/p&gt;
     
     <item>
       <title>Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</title>
-      <link>https://ooni.torproject.org/post/tab-tab-come-in/</link>
+      <link>http://ooni.io/post/tab-tab-come-in/</link>
       <pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/tab-tab-come-in/</guid>
+      <guid>http://ooni.io/post/tab-tab-come-in/</guid>
       <description>
 
 &lt;h1 id=&#34;motivation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Motivation&lt;/h1&gt;
@@ -3568,10 +3568,10 @@ the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open
     
     <item>
       <title>Hadara Palestine</title>
-      <link>https://ooni.torproject.org/post/hadara-palestine/</link>
+      <link>http://ooni.io/post/hadara-palestine/</link>
       <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/hadara-palestine/</guid>
+      <guid>http://ooni.io/post/hadara-palestine/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -3589,8 +3589,8 @@ the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This is the technical report on the politically motivated censorship going on
@@ -3745,7 +3745,7 @@ software being used is Squid.&lt;/p&gt;
 
 &lt;p&gt;We scanned more than 1 million hostnames and only detected censorship on 8 of
 these.
-The full scan results are available in an unredacted from &lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+The full scan results are available in an unredacted from &lt;a href=&#34;http://ooni.io/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;At a certain point we decided to go for a high level of parallelism and not
 care about timeout errors. This is because the transparent HTTP proxy is
@@ -3780,31 +3780,31 @@ using a mix between squid transparent HTTP proxy censorship and other.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;milad.ps&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pal-home.net&#34;&gt;http://pal-home.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://milad.ps&#34;&gt;http://milad.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://karamapress.com&#34;&gt;http://karamapress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://inlightpress.com&#34;&gt;http://inlightpress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fpnp.net&#34;&gt;http://fpnp.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fateh-voice.ps&#34;&gt;http://fateh-voice.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://amad.ps&#34;&gt;http://amad.ps&lt;/a&gt;&lt;/p&gt;
 
@@ -3815,10 +3815,10 @@ Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
     
     <item>
       <title>T-Mobile USA Web Guard</title>
-      <link>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</link>
+      <link>http://ooni.io/post/t-mobile-usa-web-guard/</link>
       <pubDate>Wed, 21 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</guid>
+      <guid>http://ooni.io/post/t-mobile-usa-web-guard/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -3836,9 +3836,9 @@ Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;T-Mobile USA offers a &amp;ldquo;feature&amp;rdquo; to restrict access to certain
@@ -3874,133 +3874,133 @@ Here is a list of sites that we found to be censored, but that we don&amp;rsquo;
 belong to any of the following categories Alcohol, Mature Content, Violence,
 Drugs, Pornography, Weapons, Gambling, Suicide, Guns, Hate, Tobacco, Ammunition.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://torproject.org&#34;&gt;The Tor Project is dedicated to proving anonymous secure communication&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
   online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://217.175.53.72/&#34;&gt;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
   online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://web.archive.org/&#34;&gt;The internet archive Way Back Machine. The Library of the Internet.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://newgrounds.com&#34;&gt;Newgrounds is an American entertainment and social media website. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wjunction.com/&#34;&gt;Webmaster Hangout&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://logicalmedia.com/&#34;&gt;Logical Media is an Affiliate Network.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://cosmopolitan.com/&#34;&gt;Cosmopolitan is an international magazine for women. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://nullrefer.com/&#34;&gt;Hide Refer hides the visitors HTTP refer from being seen by other websites&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sportscn.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://programme.tv/&#34;&gt;French TV guide website.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://nulled.cc/&#34;&gt;Russian programming forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://ir-tci.org/&#34;&gt;Iranian Forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://zonebourse.com/&#34;&gt;French economics and financial news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackbase.com/&#34;&gt;Chinese computer security website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://whatreallyhappened.com/&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;11&lt;/sub&gt; conspiracy theory news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://p.tl/&#34;&gt;Japanese URL shortening service&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://10minutesaperdre.fr/&#34;&gt;French funny news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://statsie.com/&#34;&gt;Website statistics collection site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://bbcprofit.com/&#34;&gt;Financial advice website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://el-annuaire.com/&#34;&gt;French website index&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://livesports.pl/&#34;&gt;Polish sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://titan007.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://girlpower.it/&#34;&gt;Italian women advice website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://yusukebe.com/&#34;&gt;Japanese blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sougouwiki.com/&#34;&gt;Japanese wiki&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wiki-live.com/&#34;&gt;Online Article directory&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hltv.org/&#34;&gt;Sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://elu24.ee/&#34;&gt;Estonian news portal&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pitsirikos.net/&#34;&gt;Greek political blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://kath.net/&#34;&gt;Religious news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackforums.net/&#34;&gt;Computer security Forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.chartsinfrance.net/&#34;&gt;French pop music hit list&lt;/a&gt;&lt;/p&gt;
 

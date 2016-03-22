@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Image on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/image/</link>
+    <link>http://ooni.io/tags/image/</link>
     <description>Recent content in Image on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ooni.torproject.org/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ooni.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Lepidopter Installation: Help Guides and Resources</title>
-      <link>https://ooni.torproject.org/lepidopter/lepidopter/</link>
+      <link>http://ooni.io/lepidopter/lepidopter/</link>
       <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/lepidopter/lepidopter/</guid>
+      <guid>http://ooni.io/lepidopter/lepidopter/</guid>
       <description>
 
 &lt;h1 id=&#34;lepidopter-quick-start-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
@@ -183,7 +183,7 @@ your root password.&lt;/p&gt;
 
 &lt;h3 id=&#34;applepi-baker:7565a061641bd1e599d91e306fc304d1&#34;&gt;ApplePi-Baker&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
 free utility that allows to write an IMG file to SD card, or backup an SD card
@@ -241,7 +241,7 @@ the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
 
 &lt;h2 id=&#34;using-the-win32diskimager-program:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://ooni.io/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
 0. Download the
    &lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; utility.
 1. Assuming that you have downloaded already Lepidopter image if not, you
