@@ -2,19 +2,356 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>http://ooni.io/</link>
+    <link>https://ooni.torproject.org/</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://ooni.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WhatsApp blocked in Brazil, again</title>
+      <link>https://ooni.torproject.org/post/brazil-whatsapp-block/</link>
+      <pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Brasil&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Tim mobile (AS 26615), Oi landline (AS 7738)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; DNS Hijacking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OONI tests:&lt;/strong&gt; HTTP Requests, DNS Consistency&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; 2016-05-02 - 2016-05-03&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Ever since &lt;a href=&#34;https://www.whatsapp.com/security/&#34;&gt;WhatsApp implemented end-to-end
+encryption&lt;/a&gt; to protect the privacy and
+security of its 1 billion users worldwide, several cases of censorship have
+been ordered by governments who are frustrated with the fact that they can no
+longer access users&amp;rsquo; private communications. Having implemented end-to-end
+encryption with the Signal protocol, WhatsApp cannot decrypt its users&amp;rsquo; data,
+even if it wanted to - which is precisely what makes it secure.&lt;/p&gt;
+
+&lt;p&gt;Last December, a judge in Brazil backfired to WhatsApp&amp;rsquo;s non-compliance in a
+criminal investigation by &lt;a href=&#34;https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook&#34;&gt;ordering the blocking of WhatsApp for 48 hours&lt;/a&gt;.
+Similarly, early this week another Brazilian judge
+&lt;a href=&#34;https://www.theguardian.com/technology/2016/may/02/brazil-whatsapp-block-72-hours&#34;&gt;ordered the blocking of WhatsApp&lt;/a&gt;
+but this time, for 72 hours - as a form of retribution for the company&amp;rsquo;s
+failure to hand over data as part of an ongoing drug trafficking
+investigation. Both orders for censorship were lifted in less than 24 hours
+following a public uproar, since &lt;a href=&#34;http://www.theglobeandmail.com/technology/tech-news/whatsapp-comes-down-how-brazilians-are-coping-without-their-social-mediafixes/article27799710/&#34;&gt;more than 100 million individuals&lt;/a&gt;
+in Brazil (91% of mobile users) depend on WhatsApp for their daily
+communications.&lt;/p&gt;
+
+&lt;p&gt;According to Lucas Teixeira, Chief Technologist at &lt;a href=&#34;https://www.codingrights.org/&#34;&gt;Coding Rights&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;People reacted to the blocking of WhatsApp with a mix of shock, revolt and
+mockery, reflecting the fact that Whatsapp is used by pretty much everyone
+in big and small cities - and even in the countryside - to communicate with
+each other, replacing SMS and phone calls almost 100%. The company&amp;rsquo;s
+zero-rating partnerships with telcos has also helped a lot. Mobile Internet
+plans with data caps but &amp;ldquo;free Whatsapp&amp;rdquo; are common. Marco Civil da
+Internet explicitly forbids violations to net neutrality, but the legality
+or not of zero rating will be set in its ongoing regulation process. As for
+the legality of WhatsApp&amp;rsquo;s blocking, we can&amp;rsquo;t be sure because the
+litigation is secret, but it has been reversed in court.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Following the latest reports of WhatsApp being blocked in Brazil, the
+&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt;
+ran tests locally in Brazil to detect the technical details of how censorship
+was implemented. This blog post includes a publication of our measurements,
+revealing that Brazilian ISPs blocked WhatsApp&amp;rsquo;s website through DNS hijacking.&lt;/p&gt;
+
+&lt;h1 id=&#34;our-findings:c863708e27f97e72f64548dd80c61fef&#34;&gt;Our findings&lt;/h1&gt;
+
+&lt;p&gt;Two types of &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI tests&lt;/a&gt; were run
+in Brazil to identify whether and how WhatsApp was blocked:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/dnsconsistency.rst&#34;&gt;DNS-consistency tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP-request tests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first test is designed to compare the DNS query results from a DNS resolver
+which is considered to be reliable with one that it tested for tampering. The
+second test tries to detect online censorship based on a comparison of HTTP
+requests over &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; and over the network of the
+user. By running these two types of tests on &lt;strong&gt;web.whatsapp.com&lt;/strong&gt; and
+&lt;strong&gt;www.whatsapp.com&lt;/strong&gt;, &lt;strong&gt;DNS hijacking&lt;/strong&gt; was identified as a method for blocking
+WhatsApp, as illustrated below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DNS-consistency tests&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for dns_consistency (0.7.0)
+# Tue May  3 06:20:40 2016
+###########################################
+probe_asn: AS7738
+probe_cc: BR
+test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
+test_name: dns_consistency
+test_start_time: &#39;2016-05-03 04:20:40&#39;
+test_version: 0.7.0
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: dns_lookup_error}
+failures: [192.168.122.1]
+inconsistent: []
+input: www.whatsapp.com
+measurement_start_time: &#39;2016-05-03 04:20:43&#39;
+queries:
+- answers:
+  - {answer_type: A, ipv4: 184.173.147.39}
+  - {answer_type: A, ipv4: 184.173.147.38}
+  - {answer_type: A, ipv4: 192.155.212.203}
+  - {answer_type: A, ipv4: 192.155.212.202}
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: deferred_timeout_error
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 1.2021667957305908
+...
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: dns_lookup_error}
+failures: [192.168.122.1]
+inconsistent: []
+input: web.whatsapp.com
+measurement_start_time: &#39;2016-05-03 04:20:43&#39;
+queries:
+- answers:
+  - {answer_type: CNAME, hostname: mmx-ds.cdn.whatsapp.net}
+  - {answer_type: A, ipv4: 179.60.192.51}
+  failure: null
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: deferred_timeout_error
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 1.223766803741455
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for dns_consistency (0.7.0)
+# Tue May  3 01:39:37 2016
+###########################################
+probe_asn: AS26615
+probe_cc: BR
+software_name: ooniprobe
+software_version: 1.4.2
+test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
+test_name: dns_consistency
+test_start_time: &#39;2016-05-02 23:39:37&#39;
+test_version: 0.7.0
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: no_answer}
+failures: [192.168.122.1]
+input: www.whatsapp.com
+measurement_start_time: &#39;2016-05-02 23:39:40&#39;
+queries:
+- answers:
+  - {answer_type: A, ipv4: 169.44.84.178}
+  - {answer_type: A, ipv4: 184.173.147.39}
+  - {answer_type: A, ipv4: 184.173.147.38}
+  - {answer_type: A, ipv4: 169.44.82.102}
+  - {answer_type: A, ipv4: 192.155.212.202}
+  - {answer_type: A, ipv4: 192.155.212.203}
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 0.47959399223327637
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: no_answer}
+failures: [192.168.122.1]
+input: web.whatsapp.com
+measurement_start_time: &#39;2016-05-02 23:39:40&#39;
+queries:
+- answers:
+  - {answer_type: CNAME, hostname: mmx-ds.cdn.whatsapp.net}
+  - {answer_type: A, ipv4: 179.60.192.51}
+  failure: null
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: null
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 0.03604292869567871
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for dns_consistency (0.7.0)
+# Tue May  3 15:07:07 2016
+###########################################
+---
+annotations: null
+data_format_version: 0.2.0
+input_hashes: [db9176124032c0dd1d974fa52ee194e8304658ba2f32f5f07911abfb03521ff0]
+options: [-f, whatsappurl.list]
+probe_asn: AS7738
+probe_cc: BR
+probe_city: null
+probe_ip: 127.0.0.1
+report_id: null
+software_name: ooniprobe
+software_version: 1.4.2
+test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
+test_name: dns_consistency
+test_start_time: &#39;2016-05-03 13:07:07&#39;
+test_version: 0.7.0
+...
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: dns_lookup_error}
+failures: [192.168.122.1]
+inconsistent: []
+input: www.whatsapp.com
+measurement_start_time: &#39;2016-05-03 13:07:12&#39;
+queries:
+- answers:
+  - {answer_type: A, ipv4: 192.155.212.202}
+  - {answer_type: A, ipv4: 192.155.212.203}
+  - {answer_type: A, ipv4: 184.173.147.38}
+  - {answer_type: A, ipv4: 184.173.147.39}
+  - {answer_type: A, ipv4: 169.44.84.178}
+  - {answer_type: A, ipv4: 169.44.82.102}
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: deferred_timeout_error
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 1.296454906463623
+...
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;HTTP-request test&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for http_requests (0.2.5)
+# Mon May  2 23:17:02 2016
+###########################################
+probe_asn: AS26615
+probe_cc: BR
+software_name: ooniprobe
+software_version: 1.4.2
+test_helpers: {}
+test_name: http_requests
+test_start_time: &#39;2016-05-02 21:17:02&#39;
+test_version: 0.2.5
+...
+agent: agent
+body_length_match: null
+body_proportion: null
+control_cloudflare: null
+control_failure: null
+experiment_failure: dns_lookup_error
+factor: 0.8
+headers_diff: null
+headers_match: null
+input: https://www.whatsapp.com
+measurement_start_time: &#39;2016-05-02 21:17:07&#39;
+requests:
+- failure: dns_lookup_error
+  request:
+    body: null
+    headers: {User-Agent: &#39;Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2)
+        Gecko/20100115 Firefox/3.6&#39;}
+    method: GET
+    tor: {exit_ip: null, exit_name: null, is_tor: false}
+    url: https://www.whatsapp.com
+  response: null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;circumventing-censorship:c863708e27f97e72f64548dd80c61fef&#34;&gt;Circumventing censorship&lt;/h2&gt;
+
+&lt;p&gt;The blocking of WhatsApp&amp;rsquo;s website can be circumvented through the use of
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. In cases of DNS hijacking, users might even
+be able to access blocked websites by merely &lt;a href=&#34;https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses&#34;&gt;changing their DNS resolver&lt;/a&gt;
+(though this is not something that always works).&lt;/p&gt;
+
+&lt;p&gt;If WhatsApp (or other IM applications) is blocked again, Android users in
+Brazil (and elsewhere) can try circumventing censorship by using the
+&lt;a href=&#34;https://www.torproject.org/docs/android.html.en&#34;&gt;&lt;strong&gt;VPN mode of Orbot&lt;/strong&gt;&lt;/a&gt;
+which enables all apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt;. It&amp;rsquo;s important though to note that Orbot&amp;rsquo;s VPN
+feature should &lt;em&gt;not&lt;/em&gt; be used for anonymity, but only for bypassing censorship.&lt;/p&gt;
+
+&lt;h2 id=&#34;limitations-to-our-study:c863708e27f97e72f64548dd80c61fef&#34;&gt;Limitations to our study&lt;/h2&gt;
+
+&lt;p&gt;Currently &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software tests&lt;/a&gt; are
+&lt;em&gt;not&lt;/em&gt; specifically designed to test instant messaging (IM) applications (such
+as WhatsApp), but websites. Our measurements are therefore limited to the
+testing of WhatsApp&amp;rsquo;s &lt;em&gt;website&lt;/em&gt; which was found to be blocked based on DNS
+hijacking, and do not include the testing of the WhatsApp application. Over the
+next year though we plan to develop &lt;em&gt;new&lt;/em&gt; OONI tests which will specifically be
+designed for testing IM applications for censorship.&lt;/p&gt;
+
+&lt;p&gt;Until then, the blocking of WhatsApp&amp;rsquo;s website and web app can be tested
+through the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#installation&#34;&gt;Install ooniprobe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download the &lt;a href=&#34;https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck&#34;&gt;whatsapp deck&lt;/a&gt;
+(eg. &lt;code&gt;wget https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Run test deck &lt;code&gt;ooniprobe -i whatsapp.deck&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Lepidopter Installation: Help Guides and Resources</title>
-      <link>http://ooni.io/lepidopter/lepidopter/</link>
+      <link>https://ooni.torproject.org/lepidopter/lepidopter/</link>
       <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/lepidopter/lepidopter/</guid>
+      <guid>https://ooni.torproject.org/lepidopter/lepidopter/</guid>
       <description>
 
 &lt;h1 id=&#34;lepidopter-quick-start-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
@@ -183,7 +520,7 @@ your root password.&lt;/p&gt;
 
 &lt;h3 id=&#34;applepi-baker:7565a061641bd1e599d91e306fc304d1&#34;&gt;ApplePi-Baker&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
 free utility that allows to write an IMG file to SD card, or backup an SD card
@@ -241,7 +578,7 @@ the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
 
 &lt;h2 id=&#34;using-the-win32diskimager-program:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;
 0. Download the
    &lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; utility.
 1. Assuming that you have downloaded already Lepidopter image if not, you
@@ -347,10 +684,10 @@ card.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15-it/</link>
+      <link>https://ooni.torproject.org/event/adina15-it/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15-it/</guid>
+      <guid>https://ooni.torproject.org/event/adina15-it/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15-it.md&#34;&gt;Versione in testo semplice di questa pagina&lt;/a&gt;&lt;/p&gt;
@@ -542,10 +879,10 @@ e amichevole per tutti.&lt;/p&gt;
     
     <item>
       <title>ADINA15: A Dive Into Network Anomalies</title>
-      <link>http://ooni.io/event/adina15/</link>
+      <link>https://ooni.torproject.org/event/adina15/</link>
       <pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/event/adina15/</guid>
+      <guid>https://ooni.torproject.org/event/adina15/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-web/raw/master/content/event/adina15.md&#34;&gt;Raw text version of this page&lt;/a&gt;&lt;/p&gt;
@@ -736,10 +1073,10 @@ friendly event for all.&lt;/p&gt;
     
     <item>
       <title>EEEP and Greek Internet censorship</title>
-      <link>http://ooni.io/post/eeep-greek-censorship/</link>
+      <link>https://ooni.torproject.org/post/eeep-greek-censorship/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/post/eeep-greek-censorship/</guid>
+      <guid>https://ooni.torproject.org/post/eeep-greek-censorship/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Greece&lt;/p&gt;
@@ -885,7 +1222,7 @@ that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspect
 
 &lt;h2 id=&#34;per-isp-analysis:d0c495f4479395eff703b25df5d2e963&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;forthnet:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h3&gt;
 
@@ -966,7 +1303,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h3&gt;
 
@@ -1187,7 +1524,7 @@ test_resolvers: [192.168.1.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;cyta:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h2&gt;
 
@@ -1355,7 +1692,7 @@ m.parentNode.insertBefore(a,\
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 80 entries faulty responded with a 404 HTTP error&lt;/p&gt;
 
@@ -1566,7 +1903,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -1693,7 +2030,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;cosmote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h3&gt;
 
@@ -1838,7 +2175,7 @@ href=\&amp;quot;http://www.gamingcommission.gov.gr/index.php/el/\&amp;quot;&amp;
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;vodafone:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h3&gt;
 
@@ -1884,7 +2221,7 @@ requests:
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This ISP uses DNS hijacking for 58 entries that EEEP has published either using
 HTTPS URLs on the blacklist or entries that not prefixed with &amp;lsquo;http://&amp;rsquo; For the
@@ -2097,7 +2434,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -3010,10 +3347,10 @@ of the blocked websites. Communicating with the owner company would be impossibl
     
     <item>
       <title>Zambia, a country under Deep Packet Inspection</title>
-      <link>http://ooni.io/post/zambia/</link>
+      <link>https://ooni.torproject.org/post/zambia/</link>
       <pubDate>Mon, 15 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/post/zambia/</guid>
+      <guid>https://ooni.torproject.org/post/zambia/</guid>
       <description>
 
 &lt;p&gt;&amp;ldquo;I do not have the details of the blocking of Zambianwatchdog.com, but I
@@ -3035,7 +3372,7 @@ website.&lt;/p&gt;
 &lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
 inside Zambia were reporting error messages.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As hosting providers of the website, we initially could not see a significant
 drop of active connections and we needed to have a close look into the access
@@ -3045,7 +3382,7 @@ we needed to examine several gigabytes of data. It is worth mentioning here
 that Zambian Watchdog ranks 8th overall biggest website in Zambia and probably
 the biggest site after the large portals Facebook, Google or Youtube.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Our first review of the logs revealed a clear increase of connections reporting
 status code 200 but with zero bytes were transmitted back to the client.&lt;/p&gt;
@@ -3072,7 +3409,7 @@ starting that day.&lt;/p&gt;
 concluded that the majority of the connections reporting this problem were from
 operators inside Zambia with the exception of MTN.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
 
@@ -3093,7 +3430,7 @@ any special patters that could help us to understand why most of the readers
 inside Zambia were experiencing connection drops with the exception of readers
 using MTN mobile network.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
 After reviewing dozen of different packet captures we saw a
 distinctive pattern&lt;/p&gt;
 
@@ -3263,7 +3600,7 @@ Inspection gear seems to be monitoring the &amp;ldquo;Server Hello&amp;rdquo; me
 of the SSL negotiation. This message contains the string zambianwatchdog.com
 before the SSL negotiation is completed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to find out if the government is actively making changes, we deployed
 a new mirror server of the site in the domain &lt;a href=&#34;http://zwd.cums.in&#34;&gt;http://zwd.cums.in&lt;/a&gt;. After a few
@@ -3287,10 +3624,10 @@ malformed.).&lt;/p&gt;
     
     <item>
       <title>Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</title>
-      <link>http://ooni.io/post/tab-tab-come-in/</link>
+      <link>https://ooni.torproject.org/post/tab-tab-come-in/</link>
       <pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/post/tab-tab-come-in/</guid>
+      <guid>https://ooni.torproject.org/post/tab-tab-come-in/</guid>
       <description>
 
 &lt;h1 id=&#34;motivation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Motivation&lt;/h1&gt;
@@ -3568,10 +3905,10 @@ the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open
     
     <item>
       <title>Hadara Palestine</title>
-      <link>http://ooni.io/post/hadara-palestine/</link>
+      <link>https://ooni.torproject.org/post/hadara-palestine/</link>
       <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/post/hadara-palestine/</guid>
+      <guid>https://ooni.torproject.org/post/hadara-palestine/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -3589,8 +3926,8 @@ the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This is the technical report on the politically motivated censorship going on
@@ -3745,7 +4082,7 @@ software being used is Squid.&lt;/p&gt;
 
 &lt;p&gt;We scanned more than 1 million hostnames and only detected censorship on 8 of
 these.
-The full scan results are available in an unredacted from &lt;a href=&#34;http://ooni.io/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+The full scan results are available in an unredacted from &lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;At a certain point we decided to go for a high level of parallelism and not
 care about timeout errors. This is because the transparent HTTP proxy is
@@ -3780,31 +4117,31 @@ using a mix between squid transparent HTTP proxy censorship and other.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;milad.ps&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pal-home.net&#34;&gt;http://pal-home.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://milad.ps&#34;&gt;http://milad.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://karamapress.com&#34;&gt;http://karamapress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://inlightpress.com&#34;&gt;http://inlightpress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fpnp.net&#34;&gt;http://fpnp.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fateh-voice.ps&#34;&gt;http://fateh-voice.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://amad.ps&#34;&gt;http://amad.ps&lt;/a&gt;&lt;/p&gt;
 
@@ -3815,10 +4152,10 @@ Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
     
     <item>
       <title>T-Mobile USA Web Guard</title>
-      <link>http://ooni.io/post/t-mobile-usa-web-guard/</link>
+      <link>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</link>
       <pubDate>Wed, 21 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://ooni.io/post/t-mobile-usa-web-guard/</guid>
+      <guid>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -3836,9 +4173,9 @@ Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ooni.io/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;T-Mobile USA offers a &amp;ldquo;feature&amp;rdquo; to restrict access to certain
@@ -3874,133 +4211,133 @@ Here is a list of sites that we found to be censored, but that we don&amp;rsquo;
 belong to any of the following categories Alcohol, Mature Content, Violence,
 Drugs, Pornography, Weapons, Gambling, Suicide, Guns, Hate, Tobacco, Ammunition.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://torproject.org&#34;&gt;The Tor Project is dedicated to proving anonymous secure communication&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
   online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://217.175.53.72/&#34;&gt;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
   online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://web.archive.org/&#34;&gt;The internet archive Way Back Machine. The Library of the Internet.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://newgrounds.com&#34;&gt;Newgrounds is an American entertainment and social media website. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wjunction.com/&#34;&gt;Webmaster Hangout&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://logicalmedia.com/&#34;&gt;Logical Media is an Affiliate Network.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://cosmopolitan.com/&#34;&gt;Cosmopolitan is an international magazine for women. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://nullrefer.com/&#34;&gt;Hide Refer hides the visitors HTTP refer from being seen by other websites&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sportscn.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://programme.tv/&#34;&gt;French TV guide website.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://nulled.cc/&#34;&gt;Russian programming forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://ir-tci.org/&#34;&gt;Iranian Forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://zonebourse.com/&#34;&gt;French economics and financial news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackbase.com/&#34;&gt;Chinese computer security website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://whatreallyhappened.com/&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;11&lt;/sub&gt; conspiracy theory news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://p.tl/&#34;&gt;Japanese URL shortening service&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://10minutesaperdre.fr/&#34;&gt;French funny news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://statsie.com/&#34;&gt;Website statistics collection site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://bbcprofit.com/&#34;&gt;Financial advice website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://el-annuaire.com/&#34;&gt;French website index&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://livesports.pl/&#34;&gt;Polish sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://titan007.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://girlpower.it/&#34;&gt;Italian women advice website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://yusukebe.com/&#34;&gt;Japanese blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sougouwiki.com/&#34;&gt;Japanese wiki&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wiki-live.com/&#34;&gt;Online Article directory&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hltv.org/&#34;&gt;Sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://elu24.ee/&#34;&gt;Estonian news portal&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pitsirikos.net/&#34;&gt;Greek political blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://kath.net/&#34;&gt;Religious news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackforums.net/&#34;&gt;Computer security Forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://ooni.io/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.chartsinfrance.net/&#34;&gt;French pop music hit list&lt;/a&gt;&lt;/p&gt;
 

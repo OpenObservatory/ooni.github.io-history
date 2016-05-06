@@ -109,15 +109,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#an-ooniprobe-run">An ooniprobe run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ooniprobe-api">ooniprobe API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#towards-a-rpc-like-interface">Towards a RPC like interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#draft-api-specification">Draft API specification</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#list-tests">List tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#start-tests">Start tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#stop-tests">Stop tests</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#monitor-test-progress">Monitor test progress</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#ooniprobe-control-interface">OONIprobe Control Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#implementation-status">Implementation status</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id3">ooniprobe</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">oonib</a></li>
@@ -326,108 +318,11 @@ having a way of reporting to the backend collector</p>
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="ooniprobe-api">
-<h2>ooniprobe API<a class="headerlink" href="#ooniprobe-api" title="Permalink to this headline">¶</a></h2>
-<p>Note: This is currently not under active development, but we are looking for
-people interested in hacking on it!</p>
-<p>The goals of the ooniprobe API is that of allowing applications to interact
-with an ooniprobe.</p>
-<p>Such API will be exposed as an HTTP service that communicates with applications
-thanks to JSON formatted messages.</p>
-<p>When ooniprobe is launched it will start as a daemon. Through the HTTP based
-API it will be possible to <a class="reference internal" href="#start-tests">start tests</a>, <a class="reference internal" href="#stop-tests">stop tests</a> and <a class="reference internal" href="#monitor-test-progress">monitor test
-progress</a>.</p>
-<p>By having it use HTTP it will be possible to decouple the problem of running
-tests from that of controlling them.
-You can think of it as the Tor Control port of ooniprobe.</p>
-<p>The kinds of clients that will be interested in using such API are:</p>
-<blockquote>
-<div><ul class="simple">
-<li>The ooniprobe <em>command line interface</em></li>
-<li>The ooniprobe <em>HTML5/JS web application</em></li>
-<li>Any <em>third party</em> tool that is interested in running ooniprobe tests with
-custom arguments.</li>
-</ul>
-</div></blockquote>
-</div>
-<div class="section" id="towards-a-rpc-like-interface">
-<h2>Towards a RPC like interface<a class="headerlink" href="#towards-a-rpc-like-interface" title="Permalink to this headline">¶</a></h2>
-<p>Such API will allow ooniprobes to expose such API as a Tor Hidden
-Service (if the user wishes to do so). This will allow people running ooniprobe
-to give the .onion address of the probe to a censorship researcher and they
-will then be able to run tests from the network vantage point of the probe.</p>
-</div>
-<div class="section" id="draft-api-specification">
-<h2>Draft API specification<a class="headerlink" href="#draft-api-specification" title="Permalink to this headline">¶</a></h2>
-<p>Through the ooniprobe API it will be possible to <a class="reference internal" href="#start-tests">start tests</a>, <a class="reference internal" href="#stop-tests">stop tests</a> and <a class="reference internal" href="#monitor-test-progress">monitor test
-progress</a>.</p>
-<div class="section" id="list-tests">
-<h3>List tests<a class="headerlink" href="#list-tests" title="Permalink to this headline">¶</a></h3>
-<p><cite>GET /test</cite></p>
-<p>Shall return the list of available tests as an array.</p>
-<p>This is how a response looks like</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">[{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="s">&#39;http_requests&#39;</span><span class="p">,</span>
-  <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;HTTP Requests Test&#39;</span><span class="p">,</span>
-  <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">&#39;This test perform a HTTP GET request for the / resource over the test network and over Tor&#39;</span><span class="p">,</span>
-  <span class="s">&#39;type&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s">&#39;blocking&#39;</span> <span class="p">],</span>
-  <span class="s">&#39;version&#39;</span><span class="p">:</span> <span class="s">&#39;0.1&#39;</span><span class="p">,</span>
-  <span class="s">&#39;arguments&#39;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s">&#39;urllist&#39;</span><span class="p">:</span> <span class="s">&#39;Specify the list of URLs to be used for the test&#39;</span>
-  <span class="p">}</span>
-<span class="p">}]</span>
-</pre></div>
-</div>
-<p><em>type</em> may be either <strong>blocking</strong> or <strong>manipulation</strong>.</p>
-</div>
-<div class="section" id="start-tests">
-<h3>Start tests<a class="headerlink" href="#start-tests" title="Permalink to this headline">¶</a></h3>
-<p><cite>POST /test/&lt;test_id&gt;/start</cite></p>
-<p>Is used to start a test with the specified test_id.</p>
-<p>Inside of the request you will specify the arguments supported by the test</p>
-<p>This is how a request could look like</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-  <span class="s">&#39;urllist&#39;</span><span class="p">:</span>
-    <span class="p">[</span><span class="s">&#39;http://google.com/&#39;</span><span class="p">,</span> <span class="s">&#39;http://torproject.org/&#39;</span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>The server will then respond with the test object</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-  <span class="s">&#39;status&#39;</span><span class="p">:</span> <span class="s">&#39;running&#39;</span><span class="p">,</span>
-  <span class="s">&#39;percentage&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-  <span class="s">&#39;current_input&#39;</span><span class="p">:</span> <span class="s">&#39;http://google.com/&#39;</span><span class="p">,</span>
-  <span class="s">&#39;urllist&#39;</span><span class="p">:</span>
-    <span class="p">[</span><span class="s">&#39;http://google.com/&#39;</span><span class="p">,</span> <span class="s">&#39;http://torproject.org/&#39;</span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="stop-tests">
-<h3>Stop tests<a class="headerlink" href="#stop-tests" title="Permalink to this headline">¶</a></h3>
-<p><cite>POST /test/&lt;test_id&gt;/stop</cite></p>
-<p>This will terminate the execution of the test with the specified test_id.</p>
-<p>The request may optionally contain a reason for stopping the test such as</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-  <span class="s">&#39;reason&#39;</span><span class="p">:</span> <span class="s">&#39;some reason&#39;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="monitor-test-progress">
-<h3>Monitor test progress<a class="headerlink" href="#monitor-test-progress" title="Permalink to this headline">¶</a></h3>
-<p><cite>GET /test/&lt;test_id&gt;</cite></p>
-<p>Will return the status of a test</p>
-<p>Like so for example</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-  <span class="s">&#39;status&#39;</span><span class="p">:</span> <span class="s">&#39;running&#39;</span><span class="p">,</span>
-  <span class="s">&#39;percentage&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-  <span class="s">&#39;current_input&#39;</span><span class="p">:</span> <span class="s">&#39;http://google.com/&#39;</span><span class="p">,</span>
-  <span class="s">&#39;urllist&#39;</span><span class="p">:</span>
-    <span class="p">[</span><span class="s">&#39;http://google.com/&#39;</span><span class="p">,</span> <span class="s">&#39;http://torproject.org/&#39;</span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div>
+<div class="section" id="ooniprobe-control-interface">
+<h2>OONIprobe Control Interface<a class="headerlink" href="#ooniprobe-control-interface" title="Permalink to this headline">¶</a></h2>
+<p>The ooniprobe client provides a rich and simple JSON-based interface for
+control over HTTP. While the implementation of this interface is currently
+a work in progress, the specification may be found <a class="reference external" href="control_interface.rst">here</a>.</p>
 </div>
 <div class="section" id="implementation-status">
 <h2>Implementation status<a class="headerlink" href="#implementation-status" title="Permalink to this headline">¶</a></h2>

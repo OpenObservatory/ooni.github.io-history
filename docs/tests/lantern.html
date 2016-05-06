@@ -146,19 +146,25 @@
 <div class="section" id="description">
 <h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
 <p>This test launches Lantern in &#8211;headless mode, and parses output to determine
-if it has bootstrapped.  After bootstrap, it fetches the URL supplied by the
-&#8211;url option using Lanterns http proxy interface listening on 127.0.0.1.8787.</p>
+if it has bootstrapped.  After bootstrap, it fetches a URL using Lanterns HTTP
+proxy interface listening on 127.0.0.1.8787 and checks to see if the response
+body matches the expected result.
+As a URL for testing we use <a class="reference external" href="http://www.google.com/humans.txt">http://www.google.com/humans.txt</a> and look for the
+string &#8220;Google is built by a large&#8221; in the response body.</p>
 <p>The specific string used to determine bootstrap from Lantern output in version
-&#8220;2.0.10&#8221; is &#8220;client (http) proxy at&#8221; from standard output.</p>
+&#8220;2.0.10&#8221; is &#8220;Successfully dialed via&#8221; from standard output.</p>
 </div>
 <div class="section" id="how-to-run-the-test">
 <h1>How to run the test<a class="headerlink" href="#how-to-run-the-test" title="Permalink to this headline">¶</a></h1>
-<p><cite>ooniprobe nettests/third_party/lantern.py -u http://&lt;url&gt;</cite></p>
+<p><cite>ooniprobe nettests/third_party/lantern.py</cite></p>
+<p>For advanced usages you may also configure a different URL and expected body
+for the response with the <cite>&#8211;url</cite> and <cite>&#8211;expected-body</cite> command line options.</p>
+<p><cite>ooniprobe nettests/third_party/lantern.py &#8211;url http://humanstxt.org/humans.txt &#8211;expected-body &#8216;/* TEAM */&#8217;</cite></p>
 </div>
 <div class="section" id="sample-report">
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
 <p>From running:
-<cite>ooniprobe nettests/third_party/lantern.py -u http://www.google.com</cite></p>
+<cite>ooniprobe nettests/third_party/lantern.py</cite></p>
 <div class="highlight-python"><div class="highlight"><pre>---
 </pre></div>
 </div>
@@ -175,10 +181,9 @@ test_name: lantern_circumvention_tool_test
 test_version: 0.0.1
 ...
 &#8212;
-body: &#8220;&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&#8221;content-type&#8221; content=&#8221;text/html;charset=utf-8&#8221;</p>
-<blockquote>
-<div>&gt;n&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;n&lt;H1&gt;301 Moved&lt;/H1&gt;nThe document has movedn&lt;A HREF=&#8221;<a class="reference external" href="http://www.google.com/">http://www.google.com/</a>&#8220;&gt;here&lt;/A&gt;.rn&lt;/BODY&gt;&lt;/HTML&gt;rn&#8221;</div></blockquote>
-<p>bootstrapped: true
+body: &#8220;Google is built by a large team of engineers, designers, researchers, robots, and others in many different sites across the globe. It is updated continuously, and built with more tools and technologies than we can shake a stick at. If you&#8217;d like to help us out, see google.com/careers.&#8221;
+bootstrapped: true
+default_configuration: true
 input: null
 lantern &#8211;headless: {exit_reason: process_done, stderr: &#8216;&#8217;, stdout: &#8216;&#8217;}
 <a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a></p>

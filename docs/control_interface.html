@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HTTP Control Interface Specification &mdash; OONI: Open Observatory of Network Interference 1.3.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="OONI: Open Observatory of Network Interference 1.3.1 documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OONI: Open Observatory of Network Interference
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_test_helpers.html">Writing Test Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reports.html#report-format-version-changelog">Report format version changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nettests/modules.html">Implemented NetTests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/ooni.html">Measurement Developer API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/ooni.templates.html">Test Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">OONI: Open Observatory of Network Interference</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>HTTP Control Interface Specification</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/control_interface.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="http-control-interface-specification">
+<h1><a class="toc-backref" href="#id1">HTTP Control Interface Specification</a><a class="headerlink" href="#http-control-interface-specification" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">ooniprobe</span></code> client provides a HTTP-based control interface. The goal of
+this interface is to allow applications to interact with ooniprobe in a
+standardized manner. The control interface aims to be a RESTful, stateless
+and simple protocol.</p>
+<p>This control interface will be exposed as an HTTP service that communicates
+using JSON encoded messages. The service shall be provided via the ooniprobe
+daemon, <code class="docutils literal"><span class="pre">oonid</span></code>.</p>
+<p>While the HTTP Control Interface is <strong>currently under development</strong> with
+a HTML/JS WebGUI client in mind, it will also be compatible with other
+clients, such as Ledilopter (ooniprobe on the Raspberry Pi) and 3rd party
+tools.</p>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first"><strong>Table of Contents</strong></p>
+<ul class="simple">
+<li><a class="reference internal" href="#http-control-interface-specification" id="id1">HTTP Control Interface Specification</a><ul>
+<li><a class="reference internal" href="#general-notes" id="id2">General Notes</a></li>
+<li><a class="reference internal" href="#decks" id="id3">Decks</a></li>
+<li><a class="reference internal" href="#net-tests" id="id4">Net Tests</a></li>
+<li><a class="reference internal" href="#results" id="id5">Results</a></li>
+<li><a class="reference internal" href="#resources" id="id6">Resources</a></li>
+<li><a class="reference internal" href="#todo" id="id7">TODO</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="general-notes">
+<h2><a class="toc-backref" href="#id2">General Notes</a><a class="headerlink" href="#general-notes" title="Permalink to this headline">¶</a></h2>
+<p>This document is the working specification for ooniprobe HTTP Control
+Interface version 0.</p>
+<p>All the fields defined in this specification are mandatory, unless explicitly
+marked otherwise.</p>
+<p>All successful client requests should return a 2xx status code, and should
+return return a JSON encoded body if required in the specification below.
+Failed (or deferred) requests will cause a 3xx, 4xx or 5xx status code on
+response. All failure responses must return a JSON encoded body with the
+following format:</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+ &#39;error_code&#39;: &lt;some_integer_error_code&gt;,
+ &#39;error_message&#39;: &lt;some_string_explanation&gt;
+}
+</pre></div>
+</div>
+<p>In particular, should the client make a request to a invalid URI, the service
+shall respond with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">404</span></code> and the reponse body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">404</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Resource Not Found&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the client makes a request with invalid syntax that prevents the service
+from understanding the request, the service shall return <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">400</span></code>
+and the response body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Invalid syntax&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Error handling is the client&#8217;s responsibility.</p>
+<p>All date and time records in this specification shall be encoded according to
+<a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>.</p>
+</div>
+<div class="section" id="decks">
+<h2><a class="toc-backref" href="#id3">Decks</a><a class="headerlink" href="#decks" title="Permalink to this headline">¶</a></h2>
+<p>Testing in OONI is centered around &#8216;decks&#8217;. A deck is defined as a collection
+of network tests and their associated inputs.</p>
+<div class="section" id="list-decks">
+<h3>List decks<a class="headerlink" href="#list-decks" title="Permalink to this headline">¶</a></h3>
+<p>To retrieve an array of all available decks:</p>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/decks</span></code></p>
+<p>The server shall repond with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">200</span></code> and a body format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="s">&#39;deck-it&#39;</span><span class="p">,</span>
+   <span class="s">&#39;name&#39;</span><span class="p">:</span> <span class="s">&#39;Deck for Italy&#39;</span><span class="p">,</span>
+   <span class="s">&#39;description&#39;</span><span class="p">:</span> <span class="s">&#39;blah blah blah&#39;</span><span class="p">,</span>
+   <span class="s">&#39;nettests&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s">&#39;http_invalid_request_line&#39;</span><span class="p">,</span>
+                 <span class="s">&#39;http_header_field_manipulation&#39;</span><span class="p">,</span>
+                 <span class="s">&#39;dns_consistency&#39;</span><span class="p">],</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal"><span class="pre">nettests</span></code> must refer to valid test IDs. The service may return an
+empty list if no tests are found.</p>
+<p>If the service is unable to retrieve the list of decks, it shall return a
+reponse with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">500</span></code> and a body format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Internal Server Error - Could not find directory &quot;decks&quot;&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-decks">
+<h3>Generate decks<a class="headerlink" href="#generate-decks" title="Permalink to this headline">¶</a></h3>
+<p>Decks can either be generated for a specific country, or you can let
+oonideckgen try to automatically detect the country.</p>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/decks</span></code></p>
+<p>Request format:</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+  &#39;country&#39;: &#39;CN&#39; // optional, oonideckgen will autodetect otherwise
+}
+</pre></div>
+</div>
+<p>On success, the service shall respond with <code class="docutils literal"><span class="pre">status</span> <span class="pre">code</span> <span class="pre">200</span></code> and with the
+following body format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&#39;deck_id&#39;</span><span class="p">:</span> <span class="s">&#39;deck-cn&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Deck IDs are not guaranteed to be unique - if the exact same deck has been
+created through an earlier request, the service shall reply with the old
+deck ID.</p>
+<p>If the operation fails the service shall respond with the appropriate status
+code and message.</p>
+<p>In particular, if the client makes invalid deck generation request, the
+service shall reply with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">400</span></code> and body message formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Bad Request - &quot;xy&quot; is not a valid ISO country code&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the server is unable to generate a deck due to an internal error, it shall
+respond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">500</span></code> and a body message formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+ &#39;error_code&#39;: 500,
+ &#39;error_message&#39;: &#39;Internal Error - oonideckgen: couldn&#39;t fetch &quot;http://someurl.com&quot;&#39;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-deck">
+<h3>Start deck<a class="headerlink" href="#start-deck" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/decks/&lt;deck_id&gt;/start</span></code></p>
+<p>To run a deck, the above POST request is sent where <code class="docutils literal"><span class="pre">deck_id</span></code> must be a
+valid deck ID.</p>
+<p>Request format:</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+ &#39;collector&#39;: true,                    // optional, defaults to true
+ &#39;bouncer&#39;: &#39;http://someaddress.onion&#39; // optional, defaults to httpo://XXX
+}
+</pre></div>
+</div>
+<p>On success, the server shall respond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">200</span></code> and with the
+following body format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;current_nettest&#39;</span><span class="p">:</span> <span class="s">&#39;dns_consistency&#39;</span><span class="p">,</span>
+ <span class="s">&#39;time_started&#39;</span><span class="p">:</span> <span class="s">&#39;2014-03-12T13:37:27+00:00&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the service is unable to start the test, it shall respond with the
+appropriate status code and message.</p>
+<p>In particular, if the client attempts to run multiple decks simoultensouly,
+the service shall respond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">503</span></code> and the body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Unable to handle request - another deck is already running&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the service is unable to start the deck due to an interal error (for example, corrupted input files) it shall respond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">500</span></code> and
+the body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Unable to handle request - oonid: unable to find input file &quot;DNE.txt&quot;&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stop-deck">
+<h3>Stop deck<a class="headerlink" href="#stop-deck" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/decks/&lt;deck_id&gt;/stop</span></code></p>
+<p>To stop a deck, the above GET request is sent where <code class="docutils literal"><span class="pre">deck_id</span></code> must be a
+valid deck ID.</p>
+<p>On success, the service shall respond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">204</span> <span class="pre">-</span> <span class="pre">No</span> <span class="pre">Content</span></code>.</p>
+<p>If the requested deck is not running, the service shall repond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">400</span></code>
+and the body formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Invalid Request - Deck is not running&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Should the server be unable to stop the test, it shall repond with
+<code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">500</span></code> and display a reason in the body in the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Unable to handle request - out of RAM&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deck-progress">
+<h3>Deck progress<a class="headerlink" href="#deck-progress" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/decks/&lt;deck_id&gt;</span></code></p>
+<p>Returns the deck progress if the deck is running, or the deck results in
+JSON format if the deck is complete.</p>
+<p>If the deck progress is successfully found, the service shall respond with
+<code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">200</span></code> and a response body formatted as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;status&#39;</span><span class="p">:</span> <span class="s">&#39;running&#39;</span><span class="p">,</span>
+ <span class="s">&#39;percentage&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+ <span class="s">&#39;current_nettest&#39;</span><span class="p">:</span> <span class="s">&#39;http_headers&#39;</span><span class="p">,</span>
+ <span class="s">&#39;results&#39;</span><span class="p">:</span> <span class="n">null</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Another possible response body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;status&#39;</span><span class="p">:</span> <span class="s">&#39;complete&#39;</span><span class="p">,</span>
+ <span class="s">&#39;percentage&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+ <span class="s">&#39;current_nettest&#39;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+ <span class="s">&#39;results&#39;</span><span class="p">:</span> <span class="s">&#39;&lt;result_id&gt;&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">status</span></code> field may be one of: <code class="docutils literal"><span class="pre">stopped</span></code>, <code class="docutils literal"><span class="pre">running</span></code> or <code class="docutils literal"><span class="pre">complete</span></code>.
+<code class="docutils literal"><span class="pre">results</span></code> must be a valid result ID or <code class="docutils literal"><span class="pre">null</span></code> if the test is not yet
+finished.</p>
+<p>Otherwise, if the deck exists but the progress request fails, the service
+shall respond with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">500</span></code> and an explanation in the following
+format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Internal Server Error - could not find deck result ID&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="net-tests">
+<h2><a class="toc-backref" href="#id4">Net Tests</a><a class="headerlink" href="#net-tests" title="Permalink to this headline">¶</a></h2>
+<p>In OONI, a <code class="docutils literal"><span class="pre">nettest</span></code> represents an individual anomaly detection technique.
+To run, nettests also require an input file which specifies on which URIs the
+test is to be performed.</p>
+<p>Usually, several nettests are bundled along with their inputs in a deck, which
+makes it easier for the end user to run. Nonetheless, the control interface
+allows for nettests to be run individually.</p>
+<div class="section" id="list-tests">
+<h3>List tests<a class="headerlink" href="#list-tests" title="Permalink to this headline">¶</a></h3>
+<p>To retrieve an array of all available nettests:</p>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/tests</span></code></p>
+<p>On success, the service shall repond with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">200</span></code> and a body formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre>[
+    {&#39;id&#39;: &#39;dns-consistency&#39;,
+       &#39;name&#39;: &#39;DNS Consistency&#39;,
+       &#39;description&#39;: &#39;Compares the results of two DNS lookups&#39;,
+       &#39;type&#39;: &#39;blocking&#39;,
+       &#39;version&#39;: &#39;0.1&#39;,
+       &#39;arguments&#39;: {
+         &#39;urllist&#39;: &#39;Specify the list of URLs to be used for the test&#39;
+       }, ...
+    }, ...
+]
+</pre></div>
+</div>
+<p>Where <code class="docutils literal"><span class="pre">nettests</span></code> must refer to valid test IDs. The field <code class="docutils literal"><span class="pre">type</span></code> may be
+of value <code class="docutils literal"><span class="pre">blocking</span></code> or <code class="docutils literal"><span class="pre">manipulation</span></code>. If no decks are found, the service
+will still respond with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">200</span></code> and an empty list.</p>
+<p>If the service is unable to retrieve the list of decks, it shall return a
+reponse with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">500</span></code> and a body format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Internal Server Error - Could not find directory &quot;decks&quot;&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="starting-a-test">
+<h3>Starting a Test<a class="headerlink" href="#starting-a-test" title="Permalink to this headline">¶</a></h3>
+<p>To run a given test, the client must send the following request:
+<code class="docutils literal"><span class="pre">POST</span> <span class="pre">/tests/&lt;test_id&gt;/start</span></code></p>
+<p>With the request body:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;urllist&#39;</span><span class="p">:</span>
+  <span class="p">[</span><span class="s">&#39;http://google.com/&#39;</span><span class="p">,</span> <span class="s">&#39;http://torproject.org&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The server shall respond with <code class="docutils literal"><span class="pre">status</span> <span class="pre">code</span> <span class="pre">200</span></code> with the body:</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+ &#39;time_started&#39;: &#39;2014-03-12T13:37:27+00:00&#39;,
+ &#39;percentage&#39;: 55,
+ &#39;current_input&#39;: &#39;http://google.com&#39;,
+ &#39;arguments&#39;: [&lt;list of supplied arguments&gt;]
+}
+</pre></div>
+</div>
+<p>Else, the reponse shall be a error status code and an explanation. In
+particular, the service shall respond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">400</span></code> if the user
+provides an invalid argument or <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">500</span></code> if the server is unable
+to start the test due to an internal reason.</p>
+</div>
+<div class="section" id="stopping-a-test">
+<h3>Stopping a Test<a class="headerlink" href="#stopping-a-test" title="Permalink to this headline">¶</a></h3>
+<p>To terminate a given test, the client sends the following request:
+<code class="docutils literal"><span class="pre">GET</span> <span class="pre">/tests/&lt;test_id&gt;/stop</span></code></p>
+<p>The server shall respond with status code 204 - no content - or with an error
+message if it is unable to stop the test.</p>
+<p>If the requested nettest is not running, the service shall repond with <code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">400</span></code>
+and the body formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Invalid Request - nettest is not running&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Should the server be unable to stop the test, it shall repond with
+<code class="docutils literal"><span class="pre">Status-Code:</span> <span class="pre">503</span></code> and display a reason in the body in the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;error_code&#39;</span><span class="p">:</span> <span class="mi">503</span><span class="p">,</span>
+ <span class="s">&#39;error_message&#39;</span><span class="p">:</span> <span class="s">&#39;Unable to handle request - out of RAM&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-progress">
+<h3>Test progress<a class="headerlink" href="#test-progress" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/tests/&lt;test_id&gt;</span></code></p>
+<p>The service will respond with <code class="docutils literal"><span class="pre">Status-Code</span> <span class="pre">200</span></code> and a body formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+ &#39;status&#39;: &#39;running&#39;,
+ &#39;time_started&#39;: &#39;2014-03-12T13:37:27+00:00&#39;,
+ &#39;percentage&#39;: 55,
+ &#39;current_input&#39;: &#39;http://google.com&#39;,
+ &#39;arguments&#39;: [&lt;list of supplied arguments&gt;],
+ &#39;results&#39;: &lt;result_id&gt;
+}
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">status</span></code> field may be one of: <code class="docutils literal"><span class="pre">stopped</span></code>, <code class="docutils literal"><span class="pre">running</span></code> or <code class="docutils literal"><span class="pre">complete</span></code>.
+<code class="docutils literal"><span class="pre">results</span></code> must be a valid result ID or <code class="docutils literal"><span class="pre">null</span></code> if the test is not yet
+finished.</p>
+<p>Should the service fail to determine the progress of a nettest, it shall return
+<code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">503</span></code> along with a suitable error message.</p>
+</div>
+</div>
+<div class="section" id="results">
+<h2><a class="toc-backref" href="#id5">Results</a><a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/results</span></code></p>
+<p>Returns a list of all stored results of previous runs.</p>
+<p>The service will respond with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">200</span></code> and results formatted:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">[</span>
+ <span class="p">{</span><span class="s">&#39;id&#39;</span><span class="p">:</span> <span class="s">&#39;&lt;result_id&gt;&#39;</span><span class="p">,</span>
+  <span class="s">&#39;type&#39;</span><span class="p">:</span> <span class="s">&#39;deck&#39;</span><span class="p">,</span>
+  <span class="s">&#39;deck&#39;</span><span class="p">:</span> <span class="s">&#39;&lt;deck_id&gt;&#39;</span><span class="p">,</span>
+  <span class="s">&#39;time_started&#39;</span><span class="p">:</span> <span class="s">&#39;2014-03-12T13:37:27+00:00&#39;</span><span class="p">,</span>
+  <span class="s">&#39;time_finished&#39;</span><span class="p">:</span> <span class="s">&#39;2014-03-12T13:37:27+00:00&#39;</span><span class="p">,</span>
+  <span class="s">&#39;collector&#39;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s">&#39;collector-address&#39;</span><span class="p">:</span> <span class="s">&#39;httpo://nkvphnp3p6agi5qq.onion&#39;</span><span class="p">,</span>
+  <span class="s">&#39;nettests&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s">&#39;http_headers&#39;</span><span class="p">,</span> <span class="s">&#39;http_requests&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+ <span class="p">},</span> <span class="o">...</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Where <code class="docutils literal"><span class="pre">type</span></code> shall be either <code class="docutils literal"><span class="pre">deck</span></code> or <code class="docutils literal"><span class="pre">nettest</span></code>. If the result is of
+type <code class="docutils literal"><span class="pre">deck</span></code>, then the fields <code class="docutils literal"><span class="pre">deck_id</span></code> and <code class="docutils literal"><span class="pre">nettests</span></code> are mandatory.
+Likewise, if the result is of type <code class="docutils literal"><span class="pre">nettest</span></code> the field <code class="docutils literal"><span class="pre">test_id</span></code> shall
+be mandatory.</p>
+<p>To get the results of the individual nettests (that are part of a deck)
+in JSON format:</p>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/results/&lt;result_id&gt;/nettest/&lt;nettest_id&gt;</span></code></p>
+<p>Please be warned that this will return the raw output of the test, which may be
+in excess of several tens of megabytes.</p>
+<p>The server should return <code class="docutils literal"><span class="pre">Status-Code</span> <span class="pre">500</span></code> and an explanation should it
+fail to collect the results.</p>
+<div class="section" id="deleting-results">
+<h3>Deleting Results<a class="headerlink" href="#deleting-results" title="Permalink to this headline">¶</a></h3>
+<p>To delete a particular result:</p>
+<p><code class="docutils literal"><span class="pre">GET</span> <span class="pre">/results/&lt;result_id&gt;/delete</span></code></p>
+<p>After deletion, the service shall reply with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">204</span></code> - no content.
+The server shall reply with <code class="docutils literal"><span class="pre">Status-code:</span> <span class="pre">503</span></code> should deletion fail.</p>
+</div>
+</div>
+<div class="section" id="resources">
+<h2><a class="toc-backref" href="#id6">Resources</a><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p>To update ooniprobe&#8217;s geoIP databases or input files, the client may send
+the following request:</p>
+<p><code class="docutils literal"><span class="pre">POST</span> <span class="pre">/resources/update</span></code></p>
+<p>With the body formatted as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&#39;update_geoIP&#39;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+ <span class="s">&#39;update_inputs&#39;</span><span class="p">:</span> <span class="n">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The server shall reply with the <code class="docutils literal"><span class="pre">204</span></code> status code or if the update fails,
+<code class="docutils literal"><span class="pre">503</span></code> status code.</p>
+</div>
+<div class="section" id="todo">
+<h2><a class="toc-backref" href="#id7">TODO</a><a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<p>Open questions include:</p>
+<ul class="simple">
+<li>Authentication. Users probably don&#8217;t want anyone who can access port 80
+on their machines to control ooniprobe.</li>
+<li>Protocol signaling. Ideally we want some way to make clients aware of
+different protocol versions.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, The Tor Project.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.3.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

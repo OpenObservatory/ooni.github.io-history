@@ -145,17 +145,23 @@
 </div>
 <div class="section" id="description">
 <h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
-<p>This test first check that the Psiphon path exists, then launches Psiphon and parses output to determine if it has bootstrapped. After bootstrap, it fetches google.com (or other URL specified by the &#8211;url argument) using Psiphons SOCKS proxy listening on 127.0.0.1:1080 (or otherwise specified by the &#8211;socksproxy argument).</p>
+<p>This test first check that the Psiphon path exists, then launches Psiphon and
+parses output to determine if it has bootstrapped. After bootstrap, it fetches
+<cite>http://www.google.com/humans.txt</cite> using Psiphons SOCKS
+proxy listening on 127.0.0.1:1080 (or otherwise specified by the &#8211;socksproxy
+argument).
+It will then check to see if the response body contains the string: &#8220;Google is built by a large&#8221;</p>
 <p>The specific string used to determine bootstrap from Psiphon output in version
 &#8220;0.0.1&#8221; is &#8220;Press Ctrl-C to terminate.&#8221; from standard output.</p>
 </div>
 <div class="section" id="how-to-run-the-test">
 <h1>How to run the test<a class="headerlink" href="#how-to-run-the-test" title="Permalink to this headline">¶</a></h1>
 <p><cite>ooniprobe third_party/psiphon</cite></p>
-<p>To test Psiphon with a different URL run:</p>
-<p><cite>ooniprobe third_party/psiphon -u http://&lt;url&gt;/</cite></p>
 <p>To test Psiphon when it is installed in a different path other than the user home:</p>
-<p><cite>ooniprobe blocking/http_requests -p &lt;path to Psiphon repository&gt;</cite></p>
+<p><cite>ooniprobe third_party/psiphon -p &lt;path to Psiphon repository&gt;</cite></p>
+<p>For advanced usages you may also configure a different URL and expected body
+for the response with the <cite>&#8211;url</cite> and <cite>&#8211;expected-body</cite> command line options.</p>
+<p><cite>ooniprobe third_party/psiphon &#8211;url http://www.github.com/humans.txt &#8211;expected-body &#8216;/* TEAM */&#8217;</cite></p>
 </div>
 <div class="section" id="how-to-install-psiphon">
 <h1>How to install Psiphon<a class="headerlink" href="#how-to-install-psiphon" title="Permalink to this headline">¶</a></h1>
@@ -167,7 +173,7 @@
 </div>
 <div class="section" id="sample-report">
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
-<p><cite>ooniprobe blocking/http_requests -f example_inputs/url_lists_file.txt</cite></p>
+<p><cite>ooniprobe third_party/psiphon</cite></p>
 <blockquote>
 <div><div class="highlight-python"><div class="highlight"><pre><span class="c">###########################################</span>
 <span class="c"># OONI Probe Report for psiphon_test (0.0.1)</span>
@@ -197,6 +203,7 @@ test_version: 0.0.1
 <p>agent: agent
 input: null
 psiphon_installed: true
+default_configuration: true
 requests:
 - request:</p>
 <blockquote>
@@ -208,11 +215,8 @@ tor: {is_tor: false}
 url: <a class="reference external" href="http://google.com">http://google.com</a></div></blockquote>
 <dl class="docutils">
 <dt>response:</dt>
-<dd><dl class="first docutils">
-<dt>body: &#8220;&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&#8221;content-type&#8221; content=&#8221;text/html;charset=utf-8&#8221;</dt>
-<dd>&gt;n&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;n&lt;H1&gt;301 Moved&lt;/H1&gt;nThe document hasmovedn&lt;A HREF=&#8221;<a class="reference external" href="http://www.google.com/">http://www.google.com/</a>&#8220;&gt;here&lt;/A&gt;.rn&lt;/BODY&gt;&lt;/HTML&gt;rn&#8221;</dd>
-</dl>
-<p>code: 301
+<dd><p class="first">body: &#8220;Google is built by a large team of engineers, designers, researchers, robots, and others in many different sites across the globe. It is updated continuously, and built with more tools and technologies than we can shake a stick at. If you&#8217;d like to help us out, see google.com/careers.&#8221;
+code: 301
 headers:
 - - Content-Length</p>
 <blockquote>
