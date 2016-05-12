@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
-  <title>OONI - OONI Data Reveals How WhatsApp Was Blocked (Again) in Brazil</title>
+  <title>OONI - WhatsApp bloqueado (outra vez) bloqueado no Brasil</title>
 	<link rel="stylesheet" href="../../css/master.css"/>
 	<link rel="stylesheet" href="../../css/event.css"/>
 	<link rel="stylesheet" href="../../css/fonts.css"/>
@@ -39,7 +39,7 @@
     </nav>
 
     <main class="blog-post col-3">
-      <h1 class="article-title">OONI Data Reveals How WhatsApp Was Blocked (Again) in Brazil</h1>
+      <h1 class="article-title">WhatsApp bloqueado (outra vez) bloqueado no Brasil</h1>
       <div class="byline">
         <span class="author">Vasilis Ververis, Maria Xynou, Will Scott</span>
         <span class="date">2016-05-06 00:00:00 &#43;0000 UTC</span>
@@ -47,79 +47,83 @@
 
       
 
-<p><strong>Country:</strong> Brazil</p>
+<p><strong>Pais:</strong> Brasil</p>
 
-<p><strong>Probed ISPs:</strong> Tim mobile (AS 26615), Oi landline (AS 7738)</p>
+<p><strong>ISPs investigados:</strong> Tim mobile (AS 26615), Oi landline (AS 7738)</p>
 
-<p><strong>Censorship method:</strong> DNS Hijacking</p>
+<p><strong>Método de censura:</strong> DNS Hijacking</p>
 
-<p><strong>OONI tests:</strong> HTTP Requests, DNS Consistency</p>
+<p><strong>OONI testes:</strong> HTTP Requests, DNS Consistency</p>
 
-<p><strong>Measurement period:</strong> 2016-05-02 - 2016-05-03</p>
+<p><strong>Periodo da medição:</strong> 2016-05-02 - 2016-05-03</p>
 
-<p><strong><a href="/post/brazil-whatsapp-block-pt">Portoguese Translation</a></strong></p>
+<p><strong>Translation by:</strong> Kornelia Friesch</p>
+
+<p><strong><a href="/post/brazil-whatsapp-block">Post in original language</a></strong></p>
 
 <hr />
 
-<p><strong>19:10 UTC Saturday, 7 May 2016</strong> Update: Add OONI Explorer measurements links</p>
+<p>Desde que o
+<a href="https://www.whatsapp.com/security/">WhatsApp implantou a codificação end-to-end (end-to-end encryption)</a> para proteger a privacidade e segurança
+dos, em nível mundial, um bilhão de usuários, manifestaram-se, alguns casos de
+censura ordenados por governos irritando-se pelo fato de não terem mais acesso
+à comunicação privada dos cidadãos. Com a codificação end-to-end pelo protocolo
+Signal, se torna-se impossível para o WhatsApp decifrar os dados do usuário. Ou
+seja, mesmo se quisesse entregar os dados não podería – sendo isso o que
+precisamente faz a comunicação pelo WhatsApp mais segura. Já em Dezembro do
+ano passado um juiz no Brasil <a href="https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook">ordenou o bloqueio do WhatsApp por 48 horas</a>
+, sancionando desta forma a rejeição de entrega de dados pelo WhatsApp durante
+uma investigação de crimes. No início desta semana aconteceu outro incidente de
+bloqueio por <a href="https://www.theguardian.com/technology/2016/may/02/brazil-whatsapp-block-72-hours">ordem judicial no Brasil</a>
+, desta vez por 72 horas, penalizando novamente desta forma outra vez a
+rejeição da empresa de entregar dados durante uma investigação sobre tráfico de
+drogas. Nos dois casos, a ordem de bloqueio de WhatsApp se efetuou em menos de
+24 horas, gerando um enorme descontenamento na população brasileira, da qual
+<a href="http://www.theglobeandmail.com/technology/tech-news/whatsapp-comes-down-how-brazilians-are-coping-without-their-social-mediafixes/article27799710/">mais de cem milhões de pessoas</a>
+(91% dos usuários de celular) dependem desse serviço na sua comunicação
+cotidiana deles.</p>
 
-<p>Ever since <a href="https://www.whatsapp.com/security/">WhatsApp implemented end-to-end
-encryption</a> to protect the privacy and
-security of its 1 billion users worldwide, several cases of censorship have
-been ordered by governments who are frustrated with the fact that they can no
-longer access users&rsquo; private communications. Having implemented end-to-end
-encryption with the Signal protocol, WhatsApp cannot decrypt its users&rsquo; data,
-even if it wanted to - which is precisely what makes it secure.</p>
-
-<p>Last December, a judge in Brazil backfired to WhatsApp&rsquo;s non-compliance in a
-criminal investigation by <a href="https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook">ordering the blocking of WhatsApp for 48 hours</a>.
-Similarly, early this week another Brazilian judge
-<a href="https://www.theguardian.com/technology/2016/may/02/brazil-whatsapp-block-72-hours">ordered the blocking of WhatsApp</a>
-but this time, for 72 hours - as a form of retribution for the company&rsquo;s
-failure to hand over data as part of an ongoing drug trafficking
-investigation. Both orders for censorship were lifted in less than 24 hours
-following a public uproar, since <a href="http://www.theglobeandmail.com/technology/tech-news/whatsapp-comes-down-how-brazilians-are-coping-without-their-social-mediafixes/article27799710/">more than 100 million individuals</a>
-in Brazil (91% of mobile users) depend on WhatsApp for their daily
-communications.</p>
-
-<p>According to Lucas Teixeira, Chief Technologist at <a href="https://www.codingrights.org/">Coding Rights</a>:</p>
+<p>Segundo Lucas Teixeira, técnico-chefe de <a href="https://www.codingrights.org/">Coding Rights</a>:</p>
 
 <blockquote>
-<p>&ldquo;People reacted to the blocking of WhatsApp with a mix of shock, revolt and
-mockery, reflecting the fact that Whatsapp is used by pretty much everyone
-in big and small cities - and even in the countryside - to communicate with
-each other, replacing SMS and phone calls almost 100%. The company&rsquo;s
-zero-rating partnerships with telcos has also helped a lot. Mobile Internet
-plans with data caps but &ldquo;free Whatsapp&rdquo; are common. Marco Civil da
-Internet explicitly forbids violations to net neutrality, but the legality
-or not of zero rating will be set in its ongoing regulation process. As for
-the legality of WhatsApp&rsquo;s blocking, we can&rsquo;t be sure because the
-litigation is secret, but it has been reversed in court.&rdquo;</p>
+<p>&ldquo;As pessoas reagiram ao bloqueio do Whatsapp com um misto de choque, revolta e
+zoeira, refletindo o fato de que o Whatsapp é usado por quase todas as pessoas
+em cidades pequenas e grandes &ndash; e até mesmo em áreas rurais &ndash; para se
+comunicarem, substituindo o SMS e chamadas telefônicas em quase 100%. As
+parcerias de zero rating da empresa com telecoms também ajudou bastante na
+adoção. Planos de Internet móvel com franquia de dados mas &ldquo;Whatsapp de graça&rdquo;
+são comuns. O Marco Civil da Internet proíbe expressamente violações à
+neutralidade de rede, mas a legalidade do zero rating especificamente vai ser
+definida no seu <a href="http://participacao.mj.gov.br/marcocivil">processo de regulamentação</a>.
+Já sobre a legalidade do bloqueio do Whatsapp, não há certeza pois o processo
+corre sob sigilo, mas ele foi revertido na Justiça.&rdquo;</p>
 </blockquote>
 
-<p>Following the latest reports of WhatsApp being blocked in Brazil, the
+<p>Acompanhando as reportagens recentes sobre o bloqueio de WhatsApp no Brasil, o
 <a href="https://ooni.torproject.org/">Open Observatory of Network Interference (OONI)</a>
-ran tests locally in Brazil to detect the technical details of how censorship
-was implemented. This blog post includes a publication of our measurements,
-revealing that Brazilian ISPs blocked WhatsApp&rsquo;s website through DNS hijacking.</p>
+realizou testes dentro do País para detectar os detalhes técnicos da
+implementação, isto é, o metodo da censura. Esta entrada blog contem a
+publicação dos dados contabilizados, mostrando desta maneira o que o bloqueio
+da página web do WhatsApp pelos provedores de serviço de internet (ISPs)
+brasileiros usando o método de DNS hijacking.</p>
 
-<h1 id="our-findings:c863708e27f97e72f64548dd80c61fef">Our findings</h1>
+<h1 id="os-nossos-resultados:f4a5ee7961e79bed10dfcdc01f1ee8db">Os nossos resultados</h1>
 
-<p>Two types of <a href="https://github.com/TheTorProject/ooni-spec">OONI tests</a> were run
-in Brazil to identify whether and how WhatsApp was blocked:</p>
+<p>Para comprovar o bloqueio do WhatsApp, assim como para identificar o método
+aplicado, dois tipos de <a href="https://github.com/TheTorProject/ooni-spec">testes OONI</a> foram realizados no Brasil:</p>
 
 <ul>
 <li><a href="https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/dnsconsistency.rst">DNS-consistency tests</a></li>
 <li><a href="https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst">HTTP-request tests</a></li>
 </ul>
 
-<p>The first test is designed to compare the DNS query results from a DNS resolver
-which is considered to be reliable with one that it tested for tampering. The
-second test tries to detect online censorship based on a comparison of HTTP
-requests over <a href="https://www.torproject.org/">Tor</a> and over the network of the
-user. By running these two types of tests on <strong>web.whatsapp.com</strong> and
-<strong>www.whatsapp.com</strong>, <strong>DNS hijacking</strong> was identified as a method for blocking
-WhatsApp, as illustrated below:</p>
+<p>O primeiro teste é criado para comparar os resultados da consulta do DNS de um
+DNS reverso confiável com os resultados de um DNS reverso pelo qual
+comprovou-se manipulação. O segundo teste tenta detectar a censura online,
+comparando HTTP pedidos de informação pelo <a href="https://www.torproject.org/">Tor</a> e
+pela rede do usuário. Aplicando estes dois testes a <strong>web.whatsapp.com</strong> e a
+<strong>www.whatsapp.com</strong>, o <strong>DNS hijacking</strong> se revelou como método de bloqueio
+(exemplificado a seguir):</p>
 
 <p><strong>DNS-consistency tests</strong></p>
 
@@ -345,42 +349,42 @@ requests:
   response: null
 </code></pre>
 
-<h2 id="circumventing-censorship:c863708e27f97e72f64548dd80c61fef">Circumventing censorship</h2>
+<h2 id="ultrapassar-censura:f4a5ee7961e79bed10dfcdc01f1ee8db">Ultrapassar censura</h2>
 
-<p>The blocking of WhatsApp&rsquo;s website can be circumvented through the use of
-<a href="https://www.torproject.org/">Tor</a>. In cases of DNS hijacking, users might even
-be able to access blocked websites by merely <a href="https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses">changing their DNS resolver</a>
-(though this is not something that always works).</p>
+<p>Pode-se ultrapassar o bloqueio da página web do WhatsApp’s pelo uso do
+<a href="https://www.torproject.org/">Tor</a>. No caso do DNS hijacking, os usuários podem
+conseguir acesso às páginas bloqueadas apenas <a href="https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses">modificando o DNS reverso</a>
+(embora essa variante não seja sempre eficaz). Em caso de bloquearem o
+WhatsApp (ou outros IM aplicatvos) outra vez, os usários de Android no Brasil
+(e por toda a parte) podem tentar ultrapassar a censura usando o <a href="https://www.torproject.org/docs/android.html"><strong>modo da VPN
+de Orbot</strong></a> o qual autoriza todos
+os applicativos a funcionar pela rede <a href="https://www.torproject.org/">Tor</a>. Não
+obstante, é importante dastacar que o recurso da VPN de Orbot <strong>não</strong> dever ser
+utilizado para anonimato na rede, mas para ultrapassar a censura na rede.</p>
 
-<p>If WhatsApp (or other IM applications) is blocked again, Android users in
-Brazil (and elsewhere) can try circumventing censorship by using the
-<a href="https://www.torproject.org/docs/android.html.en"><strong>VPN mode of Orbot</strong></a>
-which enables all apps on their device to run through the <a href="https://www.torproject.org/">Tor network</a>. It&rsquo;s important though to note that Orbot&rsquo;s VPN
-feature should <em>not</em> be used for anonymity, but only for bypassing censorship.</p>
+<h2 id="limitações-nessa-investigação:f4a5ee7961e79bed10dfcdc01f1ee8db">Limitações nessa investigação</h2>
 
-<h2 id="limitations-to-our-study:c863708e27f97e72f64548dd80c61fef">Limitations to our study</h2>
+<p>No momento, os <a href="https://github.com/TheTorProject/ooni-spec">testes de software do OONI</a> <strong>não</strong> se relacionam
+particularmente aos applicativos de instant messaging (IM) (como p. ex.
+WhatsApp), mas às páginas web. È por isso, que os nossos resultados não
+refletem os testes do applicativo WhatsApp, mas se limitam aos testes a
+respeito da página web de WhatsApp a qual foi bloqueada por DNS hijacking. Ao
+longo desse ano pretendemos desenvolver outros OONI testes que particularmente
+tenham como objetivo testar applicativos de IM a respeito da censura.</p>
 
-<p>Currently <a href="https://github.com/TheTorProject/ooni-spec">OONI software tests</a> are
-<em>not</em> specifically designed to test instant messaging (IM) applications (such
-as WhatsApp), but websites. Our measurements are therefore limited to the
-testing of WhatsApp&rsquo;s <em>website</em> which was found to be blocked based on DNS
-hijacking, and do not include the testing of the WhatsApp application. Over the
-next year though we plan to develop <em>new</em> OONI tests which will specifically be
-designed for testing IM applications for censorship.</p>
-
-<p>Until then, the blocking of WhatsApp&rsquo;s website and web app can be tested
-through the following:</p>
+<p>Até então, o bloqueio da página web de WhatsApp assim como o applicativo web
+podem ser testados da seguinte forma:</p>
 
 <ol>
-<li><a href="https://github.com/TheTorProject/ooni-probe#installation">Install ooniprobe</a></li>
-<li>Download the <a href="https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck">whatsapp deck</a>
+<li><a href="https://github.com/TheTorProject/ooni-probe#installation">Instalar ooniprobe</a></li>
+<li>Baixar o <a href="https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck">whatsapp deck</a>
 (eg. <code>wget https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck</code>)</li>
-<li>Run test deck <code>ooniprobe -i whatsapp.deck</code></li>
+<li>Percorrer o test deck <code>ooniprobe -i whatsapp.deck hr</code></li>
 </ol>
 
-<h1 id="ooni-explorer-report-links:c863708e27f97e72f64548dd80c61fef">OONI Explorer report links</h1>
+<h1 id="ooni-explorer-report-links:f4a5ee7961e79bed10dfcdc01f1ee8db">OONI Explorer report links</h1>
 
-<h2 id="http-requests-measurements:c863708e27f97e72f64548dd80c61fef">HTTP Requests measurements</h2>
+<h2 id="http-requests-measurements:f4a5ee7961e79bed10dfcdc01f1ee8db">HTTP Requests measurements</h2>
 
 <ul>
 <li><a href="https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com">URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615</a></li>
@@ -397,7 +401,7 @@ through the following:</p>
 <li><a href="https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt">URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738</a></li>
 </ul>
 
-<h2 id="dns-consistency-measurements:c863708e27f97e72f64548dd80c61fef">DNS Consistency measurements</h2>
+<h2 id="dns-consistency-measurements:f4a5ee7961e79bed10dfcdc01f1ee8db">DNS Consistency measurements</h2>
 
 <ul>
 <li><a href="https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com">Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615</a></li>
