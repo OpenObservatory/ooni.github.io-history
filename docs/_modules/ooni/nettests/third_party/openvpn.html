@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ooni.nettests.third_party.openvpn &mdash; OONI: Open Observatory of Network Interference 1.3.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="OONI: Open Observatory of Network Interference 1.3.1 documentation" href="../../../../index.html"/>
+        <link rel="up" title="Module code" href="../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> OONI: Open Observatory of Network Interference
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../writing_tests.html">Writing OONI tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../writing_test_helpers.html">Writing Test Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../reports.html#report-format-version-changelog">Report format version changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../nettests/modules.html">Implemented NetTests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/ooni.html">Measurement Developer API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/ooni.templates.html">Test Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+      
+    <li>ooni.nettests.third_party.openvpn</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for ooni.nettests.third_party.openvpn</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">defer</span><span class="p">,</span> <span class="n">reactor</span>
+<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span>
+<span class="kn">from</span> <span class="nn">twisted.web.client</span> <span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">readBody</span>
+<span class="kn">from</span> <span class="nn">ooni.templates.process</span> <span class="kn">import</span> <span class="n">ProcessTest</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.errors</span> <span class="kn">import</span> <span class="n">handleAllFailures</span><span class="p">,</span> <span class="n">failureToString</span>
+
+<span class="kn">import</span> <span class="nn">distutils.spawn</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<div class="viewcode-block" id="UsageOptions"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.UsageOptions">[docs]</a><span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
+    <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s">&#39;url&#39;</span><span class="p">,</span> <span class="s">&#39;u&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;Specify a single URL on the OpenVPN subnet to test.&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s">&#39;openvpn-config&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s">&#39;Specify an OpenVPN configuration file.&#39;</span><span class="p">],</span>
+    <span class="p">]</span>
+
+</div>
+<div class="viewcode-block" id="OpenVPNTest"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest">[docs]</a><span class="k">class</span> <span class="nc">OpenVPNTest</span><span class="p">(</span><span class="n">ProcessTest</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class tests OpenVPN connections.</span>
+
+<span class="sd">    test_openvpn_circumvent</span>
+<span class="sd">      Starts an OpenVPN client on Linux and determines</span>
+<span class="sd">      if it connects successfully to an OpenVPN server.</span>
+<span class="sd">      Then, it make a HTTP request for http://google.com</span>
+<span class="sd">      and records the response body or failure string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;OpenVPN Client Test&quot;</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="s">&quot;Connects to an OpenVPN server and does a HTTP GET for the&quot;</span> \
+                  <span class="s">&quot;specified URL.&quot;</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="s">&quot;srvetus &quot;</span>
+    <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;0.0.2&quot;</span>
+    <span class="n">timeout</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">usageOptions</span> <span class="o">=</span> <span class="n">UsageOptions</span>
+    <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;url&#39;</span><span class="p">,</span> <span class="s">&#39;openvpn-config&#39;</span><span class="p">]</span>
+    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="bp">True</span>
+
+<div class="viewcode-block" id="OpenVPNTest.setUp"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span> <span class="o">=</span> <span class="n">defer</span><span class="o">.</span><span class="n">Deferred</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">command</span> <span class="o">=</span> <span class="p">[</span><span class="n">distutils</span><span class="o">.</span><span class="n">spawn</span><span class="o">.</span><span class="n">find_executable</span><span class="p">(</span><span class="s">&quot;openvpn&quot;</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">exited</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;url&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;openvpn-config&#39;</span><span class="p">):</span>
+            <span class="n">openvpn_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;openvpn-config&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s">&#39;--config&#39;</span><span class="p">,</span> <span class="n">openvpn_config</span><span class="p">])</span>
+</div>
+<div class="viewcode-block" id="OpenVPNTest.stop"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest.stop">[docs]</a>    <span class="k">def</span> <span class="nf">stop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Stop the running OpenVPN process and close the connection&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">exited</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+            <span class="c"># OpenVPN needs to be sent SIGTERM to end cleanly</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">signalProcess</span><span class="p">(</span><span class="s">&#39;TERM&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">exited</span> <span class="o">=</span> <span class="bp">True</span>
+</div>
+<div class="viewcode-block" id="OpenVPNTest.inConnectionLost"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest.inConnectionLost">[docs]</a>    <span class="k">def</span> <span class="nf">inConnectionLost</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Monkeypatch inConnectionLost to log failure if the process ends</span>
+<span class="sd">            unexpectedly before OpenVPN bootstraps.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;inConnectionLost&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">errback</span><span class="p">(</span><span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;openvpn_exited_unexpectedly&quot;</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="OpenVPNTest.processExited"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest.processExited">[docs]</a>    <span class="k">def</span> <span class="nf">processExited</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reason</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Monkeypatch processExited to log failure if the process ends</span>
+<span class="sd">            unexpectedly before OpenVPN bootstraps.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Exited </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">handleAllFailures</span><span class="p">(</span><span class="n">reason</span><span class="p">))</span>
+
+            <span class="c"># Process exited before OpenVPN bootstrapped. Add failure to report</span>
+            <span class="c"># if it is not added already</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">errback</span><span class="p">(</span><span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;openvpn_exited_unexpectedly&quot;</span><span class="p">))</span>
+
+</div>
+<div class="viewcode-block" id="OpenVPNTest.handleRead"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest.handleRead">[docs]</a>    <span class="k">def</span> <span class="nf">handleRead</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;handleRead is called with each chunk of data from stdout and stderr</span>
+
+<span class="sd">        stdout only contains the latest data chunk, self.processDirector.stdout</span>
+<span class="sd">        contains the combined stdout data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c"># Read OpenVPN output until bootstrapping succeeds or fails</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
+
+            <span class="c"># TODO: Determine other OpenVPN messages which indicate connection failure</span>
+            <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">r&#39;connect to .* failed&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">stdout</span><span class="p">):</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;OpenVPN connection failed&quot;</span><span class="p">)</span>
+
+                <span class="c"># Bootstrapping failed</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">errback</span><span class="p">(</span><span class="ne">Exception</span><span class="p">(</span><span class="s">&quot;openvpn_connection_failed&quot;</span><span class="p">))</span>
+
+            <span class="c"># Check if OpenVPN has bootstrapped and connected successfully</span>
+            <span class="k">elif</span> <span class="s">&quot;Initialization Sequence Completed&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">stdout</span><span class="p">:</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;OpenVPN connection successful&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">cancelTimer</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="s">&quot;bootstrapped&quot;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="OpenVPNTest.test_openvpn_circumvent"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.third_party.html#ooni.nettests.third_party.openvpn.OpenVPNTest.test_openvpn_circumvent">[docs]</a>    <span class="k">def</span> <span class="nf">test_openvpn_circumvent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">def</span> <span class="nf">addResultToReport</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;request_successful&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s">&#39;body&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s">&#39;success&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+
+        <span class="k">def</span> <span class="nf">addFailureToReport</span><span class="p">(</span><span class="n">failure</span><span class="p">):</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Failed: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">failureToString</span><span class="p">(</span><span class="n">failure</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s">&#39;failure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">failureToString</span><span class="p">(</span><span class="n">failure</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s">&#39;success&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="k">def</span> <span class="nf">doRequest</span><span class="p">(</span><span class="n">noreason</span><span class="p">):</span>
+            <span class="sd">&quot;&quot;&quot;Make a HTTP request over initialized VPN connection&quot;&quot;&quot;</span>
+            <span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">reactor</span><span class="p">)</span>
+
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Doing HTTP request to the OpenVPN subnet: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">request</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="n">readBody</span><span class="p">)</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="n">addResultToReport</span><span class="p">)</span>
+            <span class="n">request</span><span class="o">.</span><span class="n">addErrback</span><span class="p">(</span><span class="n">addFailureToReport</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">request</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Spawning OpenVPN&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">command</span><span class="p">)</span>
+
+        <span class="c"># Monkeypatch inConnectionLost and processExited to log when OpenVPN exits early</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">inConnectionLost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inConnectionLost</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">processDirector</span><span class="o">.</span><span class="n">processExited</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">processExited</span>
+
+        <span class="c"># Try to make a request when the OpenVPN connection successfully bootstraps</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="n">doRequest</span><span class="p">)</span>
+
+        <span class="c"># Fire failure if OpenVPN connection fails</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">addErrback</span><span class="p">(</span><span class="n">addFailureToReport</span><span class="p">)</span>
+
+        <span class="c"># Close OpenVPN after each successful or failed test</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bootstrapped</span><span class="o">.</span><span class="n">addBoth</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">d</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, The Tor Project.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.3.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>OONI - How Uganda blocked social media, again</title>
+	<link rel="stylesheet" href="../../css/master.css"/>
+	<link rel="stylesheet" href="../../css/event.css"/>
+	<link rel="stylesheet" href="../../css/fonts.css"/>
+  <link rel="stylesheet" href="../../css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="../../images/favicon.png"/>
+  <script src="../../js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+
+<body class="article">
+  <div class="container">
+
+    <nav>
+      <div class="col-1">
+        <a href="/">
+          <img class="logo" src="../../images/ooni-header-mascot.png" width="25" height="25"/>
+          <img class="wordmark" src="../../images/wordmark.png" alt="OONI" height="14" width="53"/>
+        </a>
+      </div>
+      <div class="col-2">
+        
+<a href="../../docs/">Docs</a>
+<a href="https://gitweb.torproject.org/ooni-probe.git">Code</a>
+<a href="https://measurements.ooni.torproject.org/">Measurements</a>
+<a href="https://github.com/thetorproject/ooni-probe#installation">Install</a>
+<a href="../../lepidopter/lepidopter/">Lepidopter</a>
+<a href="https://explorer.ooni.torproject.org/">Explorer</a>
+
+      </div>
+    </nav>
+
+    <main class="blog-post col-3">
+      <h1 class="article-title">How Uganda blocked social media, again</h1>
+      <div class="byline">
+        <span class="author">Maria Xynou, Arturo Filastò</span>
+        <span class="date">2016-05-17 00:00:00 &#43;0000 UTC</span>
+      </div>
+
+      <p><strong>Country:</strong> Uganda</p>
+
+<p><strong>Probed ISPs:</strong> Orange (AS36991), SMILE (AS37122)</p>
+
+<p><strong>Censorship method:</strong> IP blocking</p>
+
+<p><strong>OONI tests:</strong> HTTP Requests</p>
+
+<p><strong>Measurement period:</strong> 2016-05-12</p>
+
+<p>Last Wednesday, the Ugandan Communications Commission (UCC)
+<a href="https://freedomhouse.org/article/uganda-social-media-ordered-blocked-museveni-inauguration">ordered</a>
+ISPs to block access to social media leading up to the (fifth) inauguration of
+President Yoweri Museveni, who has governed the country since 1986. Authorities
+argued that the blocking was ordered for “security purposes”, but the move
+directly harms political opposition, which has <a href="https://advox.globalvoices.org/2016/05/11/social-media-blocked-in-uganda-ahead-of-president-musevenis-inauguration/">relied
+on</a>
+social media to organize a “defiance campaign” of protests.</p>
+
+<p>This is the <em>second</em> time that Uganda has decided to pull the plug on social
+media this year.</p>
+
+<p>Three months ago, Ugandan ISPs were
+<a href="http://www.bbc.com/news/world-africa-35601220">ordered</a> to block access to
+social media during the general elections. Following these reports, <a href="https://github.com/TheTorProject/ooni-spec">OONI
+tests</a> were run in the country and
+results showed that Facebook and Twitter appeared to be blocked in specific
+networks. In similar fashion, OONI tests were run again in Uganda last
+Thursday, in an attempt to not only provide evidence of the blocking, but to
+also determine how censorship was implemented.</p>
+
+<p>Today we are releasing <a href="https://explorer.ooni.torproject.org/country/UG">data</a>
+which indicates that two ISPs in Uganda &ndash; Smile Telecom (Uganda) and Orange &ndash;
+carried out <em>IP blocking</em> to censor access to major social media services.
+Interestingly, OONI&rsquo;s findings illustrate that social media is not consistently
+blocked across networks, and that certain cases of censorship can be easily
+circumvented.</p>
+
+<p><strong>Findings</strong></p>
+
+<p>OONI&rsquo;s <a href="https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst">HTTP request
+test</a>,
+which is designed to examine whether websites are blocked or not based on a
+comparison of HTTP requests over <a href="https://www.torproject.org/">Tor</a> and over
+the network of the user, were run from two different vantage points in Uganda
+last Thursday: Smile Telecom (Uganda) and Orange. As, in some cases, ISPs only
+block the <em>unencrypted HTTP</em> endpoints of websites, tests were also run against
+the <em>encrypted HTTPS</em> endpoints of social media services to examine whether
+those were accessible.</p>
+
+<p>The table below illustrates a comparison of the censorship implemented by Smile
+Telecom (Uganda) and Orange, based on <a href="https://explorer.ooni.torproject.org/country/UG">OONI&rsquo;s
+measurements</a>:</p>
+
+<p><img src="/post/uganda-social-media-blocked/blocked-table.png" alt="Blocked by ISP" /></p>
+
+<p>It&rsquo;s interesting to see that while Smile Telecom (Uganda) blocked access to
+<em>both</em> the HTTP and HTTPS endpoints of Facebook and Twitter, Orange appears to
+have only blocked the unencrypted HTTP endpoints of those sites, enabling its
+users to access them via HTTPS. Furthermore, Smile Telecom (Uganda) appears to
+have blocked the HTTP endpoints of both WhatsApp and Viber, neither of which
+appear to have been blocked by Orange.</p>
+
+<p>Possibly, this difference in censorship indicates that ISPs were not ordered to
+block specific services, but were only given a vague order to “block all social
+media”, leaving each provider the flexibility to choose which services to block
+and how to block them. The ISPs don&rsquo;t appear to be too pleased with the UCC&rsquo;s
+order to block access to social media.  This is evident through the
+<a href="https://twitter.com/mtnug/status/730684160407375872">tweet</a> of the network
+operator MTN Uganda:</p>
+
+<blockquote>
+<p>“Dear Customer, per UCC directive all social media is temporarily blocked,
+our other services are available. We regret any inconvenience caused.”</p>
+</blockquote>
+
+<p><strong>Circumventing censorship</strong></p>
+
+<p>Social media in Uganda was censored both times this year based on <em>IP
+blocking</em>, according to <a href="https://explorer.ooni.torproject.org/country/UG">OONI&rsquo;s
+measurements</a>. This form of
+censorship can be circumvented by accessing a blocked website over <em>HTTPS</em>,
+rather than HTTP (if the HTTPS endpoint of a site is <em>not</em> blocked).  If that
+doesn&rsquo;t work, users can bypass censorship through the use of
+<strong><a href="https://www.torproject.org/">Tor</a></strong>, which is designed to make its users&rsquo;
+traffic appear to come from a different part of the world.</p>
+
+<p>As for circumventing the censorship of mobile applications, like WhatsApp or
+Viber, Android users can try using the <strong><a href="https://www.torproject.org/docs/android.html.en">VPN mode of
+Orbot</a></strong> which enables all
+apps on their device to run through the <a href="https://www.torproject.org/">Tor
+network</a>.</p>
+
+<p><strong>OONI Explorer report links</strong></p>
+
+<p>Orange:</p>
+
+<p>HTTP Twitter (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Ftwitter.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Ftwitter.com</a></p>
+
+<p>HTTPS Twitter (Not blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Ftwitter.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Ftwitter.com</a></p>
+
+<p>HTTP Facebook (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.facebook.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.facebook.com</a></p>
+
+<p>HTTPS Facebook (Not blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Fwww.facebook.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Fwww.facebook.com</a></p>
+
+<p>HTTP Whatsapp (Not blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.whatsapp.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.whatsapp.com</a></p>
+
+<p>HTTP Viber (Not blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.viber.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.viber.com</a></p>
+
+<p>Smile Telecom (Uganda):</p>
+
+<p>HTTPS Twitter (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Ftwitter.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Ftwitter.com</a></p>
+
+<p>HTTP Twitter (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Ftwitter.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Ftwitter.com</a></p>
+
+<p>HTTPS Facebook (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.facebook.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.facebook.com</a></p>
+
+<p>HTTP Facebook (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Fwww.facebook.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Fwww.facebook.com</a></p>
+
+<p>HTTP Whatsapp (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.whatsapp.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.whatsapp.com</a></p>
+
+<p>HTTP Viber (Blocked)
+<a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.viber.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.viber.com</a></p>
+
+    </main>
+  </div>
+
+</body>
+</html>
