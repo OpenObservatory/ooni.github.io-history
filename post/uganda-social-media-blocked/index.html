@@ -45,7 +45,9 @@
         <span class="date">2016-05-17 00:00:00 &#43;0000 UTC</span>
       </div>
 
-      <p><strong>Country:</strong> Uganda</p>
+      
+
+<p><strong>Country:</strong> Uganda</p>
 
 <p><strong>Probed ISPs:</strong> Orange (AS36991), SMILE (AS37122)</p>
 
@@ -83,13 +85,13 @@ Interestingly, OONI&rsquo;s findings illustrate that social media is not consist
 blocked across networks, and that certain cases of censorship can be easily
 circumvented.</p>
 
-<p><strong>Findings</strong></p>
+<h2 id="findings:fa36b5f53ca4a7065c9afa0a248f6f63">Findings</h2>
 
 <p>OONI&rsquo;s <a href="https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst">HTTP request
 test</a>,
 which is designed to examine whether websites are blocked or not based on a
 comparison of HTTP requests over <a href="https://www.torproject.org/">Tor</a> and over
-the network of the user, were run from two different vantage points in Uganda
+the network of the user, was run from two different vantage points in Uganda
 last Thursday: Smile Telecom (Uganda) and Orange. As, in some cases, ISPs only
 block the <em>unencrypted HTTP</em> endpoints of websites, tests were also run against
 the <em>encrypted HTTPS</em> endpoints of social media services to examine whether
@@ -99,7 +101,7 @@ those were accessible.</p>
 Telecom (Uganda) and Orange, based on <a href="https://explorer.ooni.torproject.org/country/UG">OONI&rsquo;s
 measurements</a>:</p>
 
-<p><img src="/post/uganda-social-media-blocked/blocked-table.png" alt="Blocked by ISP" /></p>
+<p><img src="/post/uganda-social-media/table.png" alt="Blocked by ISP" /></p>
 
 <p>It&rsquo;s interesting to see that while Smile Telecom (Uganda) blocked access to
 <em>both</em> the HTTP and HTTPS endpoints of Facebook and Twitter, Orange appears to
@@ -121,7 +123,7 @@ operator MTN Uganda:</p>
 our other services are available. We regret any inconvenience caused.”</p>
 </blockquote>
 
-<p><strong>Circumventing censorship</strong></p>
+<h2 id="circumventing-censorship:fa36b5f53ca4a7065c9afa0a248f6f63">Circumventing censorship</h2>
 
 <p>Social media in Uganda was censored both times this year based on <em>IP
 blocking</em>, according to <a href="https://explorer.ooni.torproject.org/country/UG">OONI&rsquo;s
@@ -138,9 +140,9 @@ Orbot</a></strong> which enables all
 apps on their device to run through the <a href="https://www.torproject.org/">Tor
 network</a>.</p>
 
-<p><strong>OONI Explorer report links</strong></p>
+<h2 id="ooni-explorer-report-links:fa36b5f53ca4a7065c9afa0a248f6f63">OONI Explorer report links</h2>
 
-<p>Orange:</p>
+<p><strong>Orange:</strong></p>
 
 <p>HTTP Twitter (Blocked)
 <a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Ftwitter.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Ftwitter.com</a></p>
@@ -160,7 +162,7 @@ network</a>.</p>
 <p>HTTP Viber (Not blocked)
 <a href="https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.viber.com">https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.viber.com</a></p>
 
-<p>Smile Telecom (Uganda):</p>
+<p><strong>Smile Telecom (Uganda):</strong></p>
 
 <p>HTTPS Twitter (Blocked)
 <a href="https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Ftwitter.com">https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Ftwitter.com</a></p>
