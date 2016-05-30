@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Writing OONI tests &mdash; OONI: Open Observatory of Network Interference 1.3.1 documentation</title>
+  <title>Writing OONI tests &mdash; OONI: Open Observatory of Network Interference 1.5.1.dev0 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 1.3.1 documentation" href="index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 1.5.1.dev0 documentation" href="index.html"/>
         <link rel="next" title="Writing Test Helpers" href="writing_test_helpers.html"/>
         <link rel="prev" title="Tutorial" href="tutorial.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.3.1
+                1.5.1.dev0
               </div>
             
           
@@ -169,64 +169,6 @@
 <h2>Test Cases<a class="headerlink" href="#test-cases" title="Permalink to this headline">¶</a></h2>
 <p>The atom of OONI Testing is called a Test Case. A test case class may contain
 multiple Test Methods.</p>
-<dl class="class">
-<dt>
-<em class="property">class </em><code class="descclassname">ooni.nettest.</code><code class="descname">NetTestCase</code><a class="reference internal" href="_modules/ooni/nettest.html#NetTestCase"><span class="viewcode-link">[source]</span></a></dt>
-<dd><p>This is the base of the OONI nettest universe. When you write a nettest
-you will subclass this object.</p>
-<ul>
-<li><p class="first">inputs: can be set to a static set of inputs. All the tests (the methods
-starting with the &#8220;test&#8221; prefix) will be run once per input. At every
-run the _input_ attribute of the TestCase instance will be set to the
-value of the current iteration over inputs.  Any python iterable object
-can be set to inputs.</p>
-</li>
-<li><p class="first">inputFile: attribute should be set to an array containing the command
-line argument that should be used as the input file. Such array looks
-like this:</p>
-<blockquote>
-<div><p><code class="docutils literal"><span class="pre">[&quot;commandlinearg&quot;,</span> <span class="pre">&quot;c&quot;,</span> <span class="pre">&quot;default</span> <span class="pre">value&quot;</span> <span class="pre">&quot;The</span> <span class="pre">description&quot;]</span></code></p>
-</div></blockquote>
-<p>The second value of such arrray is the shorthand for the command line
-arg. The user will then be able to specify inputs to the test via:</p>
-<blockquote>
-<div><p><code class="docutils literal"><span class="pre">ooniprobe</span> <span class="pre">mytest.py</span> <span class="pre">--commandlinearg</span> <span class="pre">path/to/file.txt</span></code></p>
-</div></blockquote>
-<p>or</p>
-<blockquote>
-<div><p><code class="docutils literal"><span class="pre">ooniprobe</span> <span class="pre">mytest.py</span> <span class="pre">-c</span> <span class="pre">path/to/file.txt</span></code></p>
-</div></blockquote>
-</li>
-<li><p class="first">inputProcessor: should be set to a function that takes as argument a
-filename and it will return the input to be passed to the test
-instance.</p>
-</li>
-<li><p class="first">name: should be set to the name of the test.</p>
-</li>
-<li><p class="first">author: should contain the name and contact details for the test author.
-The format for such string is as follows:</p>
-<blockquote>
-<div><p><code class="docutils literal"><span class="pre">The</span> <span class="pre">Name</span> <span class="pre">&lt;email&#64;example.com&gt;</span></code></p>
-</div></blockquote>
-</li>
-<li><p class="first">version: is the version string of the test.</p>
-</li>
-<li><p class="first">requiresRoot: set to True if the test must be run as root.</p>
-</li>
-<li><dl class="first docutils">
-<dt>usageOptions: a subclass of twisted.python.usage.Options for processing</dt>
-<dd><p class="first last">of command line arguments</p>
-</dd>
-</dl>
-</li>
-<li><p class="first">localOptions: contains the parsed command line arguments.</p>
-</li>
-</ul>
-<p>Quirks:
-Every class that is prefixed with test <em>must</em> return a
-twisted.internet.defer.Deferred.</p>
-</dd></dl>
-
 <p>If the test you plan to write is not listed on the <a class="reference external" href="https://trac.torproject.org/projects/tor/wiki/doc/OONI/Tests">Tor OONI trac page</a>, you should
 add it to the list and then add a description about it following the <a class="reference external" href="https://gitweb.torproject.org/ooni-probe.git/plain/docs/source/tests/template.rst">test
 template</a>.</p>
@@ -242,7 +184,7 @@ will be good.</p>
 <p>Inputs are what is given as input to every iteration of the Test Case.
 If you have 100 inputs, then every test case will be run 100 times.</p>
 <p>To configure a static set of inputs you should define the
-<a class="reference internal" href="api/ooni.html#ooni.nettest.NetTestCase" title="ooni.nettest.NetTestCase"><code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase</span></code></a> attribute <code class="docutils literal"><span class="pre">inputs</span></code>. The test will be
+<code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase</span></code> attribute <code class="docutils literal"><span class="pre">inputs</span></code>. The test will be
 run <code class="docutils literal"><span class="pre">len(inputs)</span></code> times. Any iterable object is a valid <code class="docutils literal"><span class="pre">inputs</span></code>
 attribute.</p>
 <p>If you would like to have inputs be determined from a user specified input
@@ -299,12 +241,12 @@ class attribute localOptions.</p>
 required for the test to run properly.</p>
 <p><cite>inputFile</cite> is a special class attribute that will be used for processing
 of the inputFile. The filename that is read here will be given to the
-<a class="reference internal" href="api/ooni.html#ooni.nettest.NetTestCase.inputProcessor" title="ooni.nettest.NetTestCase.inputProcessor"><code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase.inputProcessor</span></code></a> method that will yield, by
+<code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase.inputProcessor</span></code> method that will yield, by
 default, one line of the file at a time.</p>
 </div>
 <div class="section" id="test-methods">
 <h2>Test Methods<a class="headerlink" href="#test-methods" title="Permalink to this headline">¶</a></h2>
-<p>These shall be defined inside of your <a class="reference internal" href="api/ooni.html#ooni.nettest.NetTestCase" title="ooni.nettest.NetTestCase"><code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase</span></code></a>
+<p>These shall be defined inside of your <code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase</span></code>
 subclass.  These will be class methods.</p>
 <p>All class methods that are prefixed with test_ shall be run. Functions
 that are relevant to your test should be all lowercase separated by
@@ -331,13 +273,13 @@ input.</p>
 common functionality that is useful to running a test of that type. They
 also take care of writing the data they collect that is relevant to the
 test run to the report file.</p>
-<p>Currently implemented test templates are <a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.scapyt" title="ooni.templates.scapyt"><code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.scapyt</span></code></a> for
-tests based on Scapy, <a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.tcpt" title="ooni.templates.tcpt"><code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.tcpt</span></code></a> for tests based on TCP,
-<a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.httpt" title="ooni.templates.httpt"><code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.httpt</span></code></a> for tests based on HTTP, and
-<a class="reference internal" href="api/ooni.templates.html#module-ooni.templates.dnst" title="ooni.templates.dnst"><code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.dnst</span></code></a> for tests based on DNS.</p>
+<p>Currently implemented test templates are <code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.scapyt</span></code> for
+tests based on Scapy, <code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.tcpt</span></code> for tests based on TCP,
+<code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.httpt</span></code> for tests based on HTTP, and
+<code class="xref py py-mod docutils literal"><span class="pre">ooni.templates.dnst</span></code> for tests based on DNS.</p>
 <div class="section" id="scapy-based-tests">
 <h3>Scapy based tests<a class="headerlink" href="#scapy-based-tests" title="Permalink to this headline">¶</a></h3>
-<p>Scapy based tests will be a subclass of <a class="reference internal" href="api/ooni.templates.html#ooni.templates.scapyt.BaseScapyTest" title="ooni.templates.scapyt.BaseScapyTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.scapyt.BaseScapyTest</span></code></a>.</p>
+<p>Scapy based tests will be a subclass of <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.scapyt.BaseScapyTest</span></code>.</p>
 <p>It provides a wrapper around the scapy send and receive function that will
 write the sent and received packets to the report with sanitization of the
 src and destination IP addresses.</p>
@@ -432,7 +374,7 @@ test_started: 1353604843.553605
 </div>
 <div class="section" id="tcp-based-tests">
 <h3>TCP based tests<a class="headerlink" href="#tcp-based-tests" title="Permalink to this headline">¶</a></h3>
-<p>TCP based tests will subclass <a class="reference internal" href="api/ooni.templates.html#ooni.templates.tcpt.TCPTest" title="ooni.templates.tcpt.TCPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code></a>.</p>
+<p>TCP based tests will subclass <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code>.</p>
 <p>This test template facilitates the sending of TCP payloads to the wire and
 recording the response.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="kn">import</span> <span class="n">ConnectionRefusedError</span>
@@ -490,9 +432,9 @@ test_started: 1353604708.705081
 </div>
 <div class="section" id="http-based-tests">
 <h3>HTTP based tests<a class="headerlink" href="#http-based-tests" title="Permalink to this headline">¶</a></h3>
-<p>HTTP based tests will be a subclass of  <a class="reference internal" href="api/ooni.templates.html#ooni.templates.httpt.HTTPTest" title="ooni.templates.httpt.HTTPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code></a>.</p>
-<p>It provides methods <a class="reference internal" href="api/ooni.templates.html#ooni.templates.httpt.HTTPTest.processResponseBody" title="ooni.templates.httpt.HTTPTest.processResponseBody"><code class="xref py py-func docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest.processResponseBody()</span></code></a> and
-<a class="reference internal" href="api/ooni.templates.html#ooni.templates.httpt.HTTPTest.processResponseHeaders" title="ooni.templates.httpt.HTTPTest.processResponseHeaders"><code class="xref py py-func docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest.processResponseHeaders()</span></code></a> for interacting with the
+<p>HTTP based tests will be a subclass of  <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code>.</p>
+<p>It provides methods <code class="xref py py-func docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest.processResponseBody()</span></code> and
+<code class="xref py py-func docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest.processResponseHeaders()</span></code> for interacting with the
 response body and headers respectively.</p>
 <p>For example, to implement a HTTP test that returns the sha256 hash of the
 response body (based on <code class="xref py py-mod docutils literal"><span class="pre">nettests.examples.example_httpt</span></code>):</p>
@@ -597,9 +539,9 @@ test_started: 1354800717.478403
 </div>
 <div class="section" id="dns-based-tests">
 <h3>DNS based tests<a class="headerlink" href="#dns-based-tests" title="Permalink to this headline">¶</a></h3>
-<p>DNS based tests will be a subclass of <a class="reference internal" href="api/ooni.templates.html#ooni.templates.dnst.DNSTest" title="ooni.templates.dnst.DNSTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.dnst.DNSTest</span></code></a>.</p>
-<p>It provides methods <a class="reference internal" href="api/ooni.templates.html#ooni.templates.dnst.DNSTest.performPTRLookup" title="ooni.templates.dnst.DNSTest.performPTRLookup"><code class="xref py py-func docutils literal"><span class="pre">ooni.templates.dnst.DNSTest.performPTRLookup()</span></code></a>
-and <a class="reference internal" href="api/ooni.templates.html#ooni.templates.dnst.DNSTest.performALookup" title="ooni.templates.dnst.DNSTest.performALookup"><code class="xref py py-func docutils literal"><span class="pre">ooni.templates.dnst.DNSTest.performALookup()</span></code></a></p>
+<p>DNS based tests will be a subclass of <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.dnst.DNSTest</span></code>.</p>
+<p>It provides methods <code class="xref py py-func docutils literal"><span class="pre">ooni.templates.dnst.DNSTest.performPTRLookup()</span></code>
+and <code class="xref py py-func docutils literal"><span class="pre">ooni.templates.dnst.DNSTest.performALookup()</span></code></p>
 <p>For example (taken from <code class="xref py py-mod docutils literal"><span class="pre">nettests.examples.example_dnst</span></code>):</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ooni.templates.dnst</span> <span class="kn">import</span> <span class="n">DNSTest</span>
 
@@ -687,7 +629,7 @@ test_started: 1354801371.980114
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, The Tor Project.
+        &copy; Copyright 2016, The Tor Project.
 
     </p>
   </div>
@@ -709,7 +651,7 @@ test_started: 1354801371.980114
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.3.1',
+            VERSION:'1.5.1.dev0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
