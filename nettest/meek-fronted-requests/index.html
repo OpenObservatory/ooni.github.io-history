@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>OONI - </title>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
+  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<body class="article">
+  <div class="container">
+
+    <nav>
+      <div class="col-1">
+        <a href="/">
+          <img class="logo" src="../../images/ooni-header-mascot.png" width="25" height="25"/>
+          <img class="wordmark" src="../../images/wordmark.png" alt="OONI" height="14" width="53"/>
+        </a>
+      </div>
+      <div class="col-2">
+        
+
+
+<a href="https://ooni.torproject.org//about/"
+  
+  >About</a>
+<a href="https://ooni.torproject.org//install/"
+  
+  >Install</a>
+<a href="https://ooni.torproject.org//nettest/"
+  
+  >Net Tests</a>
+<a href="https://ooni.torproject.org//data/"
+  
+  >Data</a>
+<a href="https://ooni.torproject.org//get-involved/"
+  
+  >Get Involved</a>
+<a href="https://ooni.torproject.org//post/"
+  
+   >Blog</a>
+
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-1 toc">
+        
+        
+        <div>
+          
+          <a href="/nettest/dns-consistency/">
+            
+              <span>Dns Consistency</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-header-field-manipulation/">
+            
+              <span>Http Header Field Manipulation</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-requests/">
+            
+              <span>Http Requests</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-invalid-request-line/">
+            
+              <span>Http Invalid Request Line</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-host/">
+            
+              <span>Http Host</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/lantern/">
+            
+              <span>Lantern</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/meek-fronted-requests/">
+            
+              <span class="active">Meek Fronted Requests</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/psiphon/">
+            
+              <span>Psiphon</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/tor-bridge-reachability/">
+            
+              <span>Tor Bridge Reachability</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/web-connectivity/">
+            
+              <span>Web Connectivity</span>
+            
+          </a>
+        </div>
+        
+      </div>
+
+      <div class="col-2">
+        
+
+<h1 id="meek-fronted-requests:a8b91c4b63cc55cc30e4036a69b34c2f">Meek Fronted Requests</h1>
+
+<p>This test examines whether the domains used by Meek (a type of <a href="https://bridges.torproject.org/">Tor
+bridge</a>) work in tested networks.</p>
+
+<p>Meek is a pluggable transport which uses non-blocked domains, such as
+google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com
+(Microsoft azure cloud infrastructure), to proxy its users over
+<a href="https://www.torproject.org/">Tor</a> to blocked websites, while hiding both the
+fact that they are connecting to such websites and how they are connecting to
+them. As such, Meek is useful for not only connecting to websites that are
+blocked, but for also hiding which websites you are connecting to.</p>
+
+<p>Below is a simplified explanation of how this works:</p>
+
+<p>[user] → <a href="https://www.google.com]">https://www.google.com]</a> → Meek hosted on the cloud] → Tor] → blocked-
+[website]</p>
+
+<p>The user will receive a response (access to a blocked website, for example) from
+cloud-fronted domains, such as google.com, through the following way:</p>
+
+<p>[blocked-website] → Tor] → Meek hosted on the cloud] → <a href="https://www.google.com]">https://www.google.com]</a> →
+[user]</p>
+
+<p>In short, this test does an encrypted connection to cloud-fronted domains over
+HTTPS and examines whether it can connect to them or not. As such, this test
+enables users to check whether Meek enables the circumvention of censorship in
+an automated way.</p>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

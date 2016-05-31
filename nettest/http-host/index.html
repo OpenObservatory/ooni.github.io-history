@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>OONI - </title>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
+  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<body class="article">
+  <div class="container">
+
+    <nav>
+      <div class="col-1">
+        <a href="/">
+          <img class="logo" src="../../images/ooni-header-mascot.png" width="25" height="25"/>
+          <img class="wordmark" src="../../images/wordmark.png" alt="OONI" height="14" width="53"/>
+        </a>
+      </div>
+      <div class="col-2">
+        
+
+
+<a href="https://ooni.torproject.org//about/"
+  
+  >About</a>
+<a href="https://ooni.torproject.org//install/"
+  
+  >Install</a>
+<a href="https://ooni.torproject.org//nettest/"
+  
+  >Net Tests</a>
+<a href="https://ooni.torproject.org//data/"
+  
+  >Data</a>
+<a href="https://ooni.torproject.org//get-involved/"
+  
+  >Get Involved</a>
+<a href="https://ooni.torproject.org//post/"
+  
+   >Blog</a>
+
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-1 toc">
+        
+        
+        <div>
+          
+          <a href="/nettest/dns-consistency/">
+            
+              <span>Dns Consistency</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-header-field-manipulation/">
+            
+              <span>Http Header Field Manipulation</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-requests/">
+            
+              <span>Http Requests</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-invalid-request-line/">
+            
+              <span>Http Invalid Request Line</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/http-host/">
+            
+              <span class="active">Http Host</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/lantern/">
+            
+              <span>Lantern</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/meek-fronted-requests/">
+            
+              <span>Meek Fronted Requests</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/psiphon/">
+            
+              <span>Psiphon</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/tor-bridge-reachability/">
+            
+              <span>Tor Bridge Reachability</span>
+            
+          </a>
+        </div>
+        
+        <div>
+          
+          <a href="/nettest/web-connectivity/">
+            
+              <span>Web Connectivity</span>
+            
+          </a>
+        </div>
+        
+      </div>
+
+      <div class="col-2">
+        
+
+<h1 id="http-host:5822b230373cd593e60d21f806e517c6">HTTP Host</h1>
+
+<p>This test attempts to:</p>
+
+<ul>
+<li><p>examine whether the domain names of websites are blocked</p></li>
+
+<li><p>detect the presence of “middle boxes” (software which could be used for
+censorship and/or traffic manipulation) in tested networks</p></li>
+
+<li><p>assess which censorship circumvention techniques are capable of bypassing the
+censorship implemented by the “middle box”</p></li>
+</ul>
+
+<p>HTTP is a protocol which transfers or exchanges data across the internet. It
+does so by handling a client&rsquo;s request to connect to a server, and a server&rsquo;s
+response to a client&rsquo;s request. Every time you connect to a server, you (the
+client) send a request through the HTTP protocol to that server. Such requests
+include “HTTP headers”, some of which (the “Host header”) include information
+about the specific domain that you want to connect to. When you connect to
+torproject.org, for example, the host header of your HTTP request includes
+information which communicates that you want to connect to that domain.</p>
+
+<p>This test implements a series of techniques which help it evade getting detected
+from censors and then uses a list of domain names (such as bbc.co.uk) to connect
+to an OONI backend control server, which sends the host headers of those domain
+names back to us. If a “middle box” is detected between the network path of the
+probe and the OONI backend control server, its fingerprint might be included in
+the JSON data that we receive from the backend control server. Such data also
+informs us if the tested domain names are blocked or not, as well as how the
+censor tried to fingerprint the censorship of those domains. This can sometimes
+lead to the identification of the type of infrastructure being used to implement
+censorship.</p>
+
+<p><strong>Note:</strong> The presence of a middle box is not necessarily indicative of
+censorship and/or traffic manipulation, as they are often used in networks for
+caching purposes.</p>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
