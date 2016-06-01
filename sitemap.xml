@@ -53,7 +53,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/content/</loc>
+    <loc>https://ooni.torproject.org/get-involved/content/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/data/content/</loc>
   </url>
   
   <url>
@@ -61,11 +65,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/get-involved/content/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/data/content/</loc>
+    <loc>https://ooni.torproject.org/about/content/</loc>
   </url>
   
   <url>
@@ -85,11 +85,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
   </url>
   
   <url>
