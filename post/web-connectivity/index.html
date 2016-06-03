@@ -62,15 +62,13 @@
 
     
 
-<h1 id="ooni-releases-new-web-connectivity-test-for-detecting-online-censorship:a4c2e0725252eec2345cb2757944668e">OONI releases new Web Connectivity test for detecting online censorship</h1>
-
 <p>Today the Open Observatory of Network Interference (OONI) is excited to be
 releasing a brand new test, called
 <em><a href="https://ooni.torproject.org/nettest/web-connectivity/">Web Connectivity</a></em>,
 which is designed to detect three different types of censorship: <em>DNS
 tampering</em>, <em>TCP/IP blocking</em> and <em>HTTP blocking</em>.</p>
 
-<h2 id="advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e">Advantages of running web_connectivity</h2>
+<h2 id="advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e">Advantages of running Web Connectivity</h2>
 
 <p>This test allows us to see which websites are blocked and how, more accurately
 than ever before!</p>
@@ -96,7 +94,7 @@ discrimination of exit nodes (by CloudFlare, for example) led to many false
 positives. We now compare collected measurements over a control server which is
 less likely to be discriminated.</p>
 
-<h2 id="how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e">How web_connectivity works</h2>
+<h2 id="how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e">How Web Connectivity works</h2>
 
 <p>This test examines whether websites are blocked by performing the steps below
 <em>both</em> over a control server and over the network of the user. The collected
@@ -112,7 +110,7 @@ Providers (ISPs), amongst others, run DNS resolvers which map host names to IP
 addresses. In some circumstances though, ISPs map the requested host names to
 the wrong IP addresses, which is a form of tampering.</p>
 
-<p>As a first step, the web_connectivity test attempts to identify which DNS
+<p>As a first step, the Web Connectivity test attempts to identify which DNS
 resolver is being used by the user. It does so by performing a DNS query to
 special domains (such as whoami.akamai.com) which will disclose the IP address
 of the resolver. This is an important step because it allows us to see if the
@@ -121,7 +119,7 @@ DNS), or that of a local ISP (which is more likely to perform censorship).</p>
 
 <p><strong>2. DNS lookup</strong></p>
 
-<p>Once the web_connectivity test has identified the DNS resolver of the user, it
+<p>Once the Web Connectivity test has identified the DNS resolver of the user, it
 then attempts to identify which addresses are mapped to the tested host names by
 the resolver. It does so by performing a DNS lookup, which asks the resolver to
 disclose which IP addresses are mapped to the tested host names, as well as
@@ -133,7 +131,7 @@ control server, then there is a clear sign of DNS blocking.</p>
 
 <p><strong>3. TCP connect</strong></p>
 
-<p>The web_connectivity test will then try to connect to the tested websites by
+<p>The Web Connectivity test will then try to connect to the tested websites by
 attempting to establish a TCP session on port 80 (or port 443 for URLs that
 begin with HTTPS) for the list of IP addresses that were identified in the
 previous step (DNS lookup).</p>
@@ -143,7 +141,7 @@ of the user, then those websites are probably blocked.</p>
 
 <p><strong>4. HTTP GET request</strong></p>
 
-<p>As the web_connectivity test connects to tested websites (through the previous
+<p>As the Web Connectivity test connects to tested websites (through the previous
 step), it sends requests through the HTTP protocol to the servers which are
 hosting those websites. A server normally responds to an HTTP GET request with
 the content of the webpage that is requested.</p>
@@ -161,7 +159,7 @@ of the user) differs by some percentage</p></li>
 <li><p>The HTML title tags do not match</p></li>
 </ul>
 
-<h2 id="how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e">How to run web_connectivity</h2>
+<h2 id="how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e">How to run Web Connectivity</h2>
 
 <p>If you&rsquo;ve ever run OONI tests before, then you&rsquo;re probably familiar with
 <code>oonideckgen</code>: OONI&rsquo;s software suite which includes multiple tests. Now

@@ -17,15 +17,13 @@
       <guid>https://ooni.torproject.org/post/web-connectivity/</guid>
       <description>
 
-&lt;h1 id=&#34;ooni-releases-new-web-connectivity-test-for-detecting-online-censorship:a4c2e0725252eec2345cb2757944668e&#34;&gt;OONI releases new Web Connectivity test for detecting online censorship&lt;/h1&gt;
-
 &lt;p&gt;Today the Open Observatory of Network Interference (OONI) is excited to be
 releasing a brand new test, called
 &lt;em&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity&lt;/a&gt;&lt;/em&gt;,
 which is designed to detect three different types of censorship: &lt;em&gt;DNS
 tampering&lt;/em&gt;, &lt;em&gt;TCP/IP blocking&lt;/em&gt; and &lt;em&gt;HTTP blocking&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Advantages of running web_connectivity&lt;/h2&gt;
+&lt;h2 id=&#34;advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
 
 &lt;p&gt;This test allows us to see which websites are blocked and how, more accurately
 than ever before!&lt;/p&gt;
@@ -51,7 +49,7 @@ discrimination of exit nodes (by CloudFlare, for example) led to many false
 positives. We now compare collected measurements over a control server which is
 less likely to be discriminated.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e&#34;&gt;How web_connectivity works&lt;/h2&gt;
+&lt;h2 id=&#34;how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e&#34;&gt;How Web Connectivity works&lt;/h2&gt;
 
 &lt;p&gt;This test examines whether websites are blocked by performing the steps below
 &lt;em&gt;both&lt;/em&gt; over a control server and over the network of the user. The collected
@@ -67,7 +65,7 @@ Providers (ISPs), amongst others, run DNS resolvers which map host names to IP
 addresses. In some circumstances though, ISPs map the requested host names to
 the wrong IP addresses, which is a form of tampering.&lt;/p&gt;
 
-&lt;p&gt;As a first step, the web_connectivity test attempts to identify which DNS
+&lt;p&gt;As a first step, the Web Connectivity test attempts to identify which DNS
 resolver is being used by the user. It does so by performing a DNS query to
 special domains (such as whoami.akamai.com) which will disclose the IP address
 of the resolver. This is an important step because it allows us to see if the
@@ -76,7 +74,7 @@ DNS), or that of a local ISP (which is more likely to perform censorship).&lt;/p
 
 &lt;p&gt;&lt;strong&gt;2. DNS lookup&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Once the web_connectivity test has identified the DNS resolver of the user, it
+&lt;p&gt;Once the Web Connectivity test has identified the DNS resolver of the user, it
 then attempts to identify which addresses are mapped to the tested host names by
 the resolver. It does so by performing a DNS lookup, which asks the resolver to
 disclose which IP addresses are mapped to the tested host names, as well as
@@ -88,7 +86,7 @@ control server, then there is a clear sign of DNS blocking.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;3. TCP connect&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;The web_connectivity test will then try to connect to the tested websites by
+&lt;p&gt;The Web Connectivity test will then try to connect to the tested websites by
 attempting to establish a TCP session on port 80 (or port 443 for URLs that
 begin with HTTPS) for the list of IP addresses that were identified in the
 previous step (DNS lookup).&lt;/p&gt;
@@ -98,7 +96,7 @@ of the user, then those websites are probably blocked.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;4. HTTP GET request&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;As the web_connectivity test connects to tested websites (through the previous
+&lt;p&gt;As the Web Connectivity test connects to tested websites (through the previous
 step), it sends requests through the HTTP protocol to the servers which are
 hosting those websites. A server normally responds to an HTTP GET request with
 the content of the webpage that is requested.&lt;/p&gt;
@@ -116,7 +114,7 @@ of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;How to run web_connectivity&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
 
 &lt;p&gt;If you&amp;rsquo;ve ever run OONI tests before, then you&amp;rsquo;re probably familiar with
 &lt;code&gt;oonideckgen&lt;/code&gt;: OONI&amp;rsquo;s software suite which includes multiple tests. Now

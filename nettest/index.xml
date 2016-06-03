@@ -45,6 +45,52 @@ might arise in OONI measurements.&lt;/p&gt;
     
     <item>
       <title></title>
+      <link>https://ooni.torproject.org/nettest/http-header-field-manipulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
+      <description>
+
+&lt;h1 id=&#34;http-header-field-manipulation:d461e393a173ca45569bbaa90d3ea8de&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
+does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
+response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
+client) send a request through the HTTP protocol to that server. Such requests
+include “HTTP headers”, which transmit various types of information, including
+your device&amp;rsquo;s operating system and the type of browser that it&amp;rsquo;s using. If you
+are using Firefox on Windows, for example, the “user agent header” in your HTTP
+request will tell the server that you&amp;rsquo;re using a Firefox browser on a Windows
+operating system.&lt;/p&gt;
+
+&lt;p&gt;This test emulates an HTTP request towards a server, but sends HTTP headers that
+have variations in capitalization. In other words, this test sends HTTP requests
+which include valid, but non-canonical HTTP headers. Such requests are sent to a
+backend control server which sends back any data it receives. If we receive the
+HTTP headers exactly as we sent them, then we assume that there is no “middle
+box” in the network which could be responsible for censorship, surveillance
+and/or traffic manipulation. If, however, such software is present in the
+network that we are testing, it will likely normalize the invalid headers that
+we are sending or add extra headers.&lt;/p&gt;
+
+&lt;p&gt;Depending on whether the HTTP headers that we send and receive from a backend
+control server are the same or not, we are able to evaluate whether software –
+which could be responsible for traffic manipulation – is present in the network
+that we are testing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
+that ISPs are using highly sophisticated software that is specifically designed
+to not interfere with HTTP headers when it receives them. Furthermore, the
+presence of a middle box is not necessarily indicative of traffic manipulation,
+as they are often used in networks for caching purposes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://ooni.torproject.org/nettest/http-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -88,52 +134,6 @@ censorship.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The presence of a middle box is not necessarily indicative of
 censorship and/or traffic manipulation, as they are often used in networks for
 caching purposes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/http-header-field-manipulation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
-      <description>
-
-&lt;h1 id=&#34;http-header-field-manipulation:d461e393a173ca45569bbaa90d3ea8de&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
-
-&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
-which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
-
-&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
-does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
-response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
-client) send a request through the HTTP protocol to that server. Such requests
-include “HTTP headers”, which transmit various types of information, including
-your device&amp;rsquo;s operating system and the type of browser that it&amp;rsquo;s using. If you
-are using Firefox on Windows, for example, the “user agent header” in your HTTP
-request will tell the server that you&amp;rsquo;re using a Firefox browser on a Windows
-operating system.&lt;/p&gt;
-
-&lt;p&gt;This test emulates an HTTP request towards a server, but sends HTTP headers that
-have variations in capitalization. In other words, this test sends HTTP requests
-which include valid, but non-canonical HTTP headers. Such requests are sent to a
-backend control server which sends back any data it receives. If we receive the
-HTTP headers exactly as we sent them, then we assume that there is no “middle
-box” in the network which could be responsible for censorship, surveillance
-and/or traffic manipulation. If, however, such software is present in the
-network that we are testing, it will likely normalize the invalid headers that
-we are sending or add extra headers.&lt;/p&gt;
-
-&lt;p&gt;Depending on whether the HTTP headers that we send and receive from a backend
-control server are the same or not, we are able to evaluate whether software –
-which could be responsible for traffic manipulation – is present in the network
-that we are testing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
-that ISPs are using highly sophisticated software that is specifically designed
-to not interfere with HTTP headers when it receives them. Furthermore, the
-presence of a middle box is not necessarily indicative of traffic manipulation,
-as they are often used in networks for caching purposes.&lt;/p&gt;
 </description>
     </item>
     
@@ -233,6 +233,32 @@ CAPTCHA page appears.&lt;/p&gt;
     
     <item>
       <title></title>
+      <link>https://ooni.torproject.org/nettest/lantern/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/lantern/</guid>
+      <description>
+
+&lt;h1 id=&#34;lantern:ec656aac078d3167be9cd7e1f567aba8&#34;&gt;Lantern&lt;/h1&gt;
+
+&lt;p&gt;This test provides an automated way of examining whether Lantern works in a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://getlantern.org/&#34;&gt;Lantern&lt;/a&gt; is a centralized and peer-to-peer proxy,
+which is used as a circumvention tool. It detects whether websites are blocked
+and, if so, it allows you to access them via Lantern servers or via the network
+of Lantern users.&lt;/p&gt;
+
+&lt;p&gt;This test runs Lantern and checks to see if it is working. If it&amp;rsquo;s able to
+connect to a Lantern server and reach a control website over it, then we
+consider that Lantern can be used for censorship circumvention within the tested
+network. If however the test is unable to connect to Lantern servers, then it is
+likely the case that they are blocked within the tested network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://ooni.torproject.org/nettest/meek-fronted-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -267,32 +293,6 @@ cloud-fronted domains, such as google.com, through the following way:&lt;/p&gt;
 HTTPS and examines whether it can connect to them or not. As such, this test
 enables users to check whether Meek enables the circumvention of censorship in
 an automated way.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/lantern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/lantern/</guid>
-      <description>
-
-&lt;h1 id=&#34;lantern:ec656aac078d3167be9cd7e1f567aba8&#34;&gt;Lantern&lt;/h1&gt;
-
-&lt;p&gt;This test provides an automated way of examining whether Lantern works in a
-tested network.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://getlantern.org/&#34;&gt;Lantern&lt;/a&gt; is a centralized and peer-to-peer proxy,
-which is used as a circumvention tool. It detects whether websites are blocked
-and, if so, it allows you to access them via Lantern servers or via the network
-of Lantern users.&lt;/p&gt;
-
-&lt;p&gt;This test runs Lantern and checks to see if it is working. If it&amp;rsquo;s able to
-connect to a Lantern server and reach a control website over it, then we
-consider that Lantern can be used for censorship circumvention within the tested
-network. If however the test is unable to connect to Lantern servers, then it is
-likely the case that they are blocked within the tested network.&lt;/p&gt;
 </description>
     </item>
     

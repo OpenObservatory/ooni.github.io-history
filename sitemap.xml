@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</loc>
+    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block/</loc>
+    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/data/content/</loc>
+    <loc>https://ooni.torproject.org/about/content/</loc>
   </url>
   
   <url>
@@ -66,11 +66,15 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/data/content/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/get-involved/content/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/content/</loc>
+    <loc>https://ooni.torproject.org/data-policy/content/</loc>
   </url>
   
   <url>
@@ -78,11 +82,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-header-field-manipulation/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-header-field-manipulation/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
   </url>
   
   <url>
@@ -94,11 +98,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
+    <loc>https://ooni.torproject.org/nettest/lantern/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/lantern/</loc>
+    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
   </url>
   
   <url>
@@ -107,10 +111,6 @@
   
   <url>
     <loc>https://ooni.torproject.org/nettest/tor-bridge-reachability/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/data-policy/content/</loc>
   </url>
   
   <url>
