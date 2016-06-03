@@ -259,6 +259,30 @@ likely the case that they are blocked within the tested network.&lt;/p&gt;
     
     <item>
       <title></title>
+      <link>https://ooni.torproject.org/nettest/psiphon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/psiphon/</guid>
+      <description>
+
+&lt;h1 id=&#34;psiphon:cdc027a63e3a5859bb651eb559ade7c4&#34;&gt;Psiphon&lt;/h1&gt;
+
+&lt;p&gt;This test provides an automated way of examining whether Psiphon works in a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://psiphon.ca/&#34;&gt;Psiphon&lt;/a&gt; is a free and open source tool that utilises SSH,
+VPN and HTTP proxy technology for censorship circumvention.&lt;/p&gt;
+
+&lt;p&gt;This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s able to
+connect to a Psiphon server and reach a website over it, then we consider that
+Psiphon can be used for censorship circumvention within the tested network. If
+however the test is unable to connect to Psiphon servers, then it is likely the
+case that they are blocked within the tested network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://ooni.torproject.org/nettest/meek-fronted-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -293,30 +317,6 @@ cloud-fronted domains, such as google.com, through the following way:&lt;/p&gt;
 HTTPS and examines whether it can connect to them or not. As such, this test
 enables users to check whether Meek enables the circumvention of censorship in
 an automated way.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/psiphon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/psiphon/</guid>
-      <description>
-
-&lt;h1 id=&#34;psiphon:cdc027a63e3a5859bb651eb559ade7c4&#34;&gt;Psiphon&lt;/h1&gt;
-
-&lt;p&gt;This test provides an automated way of examining whether Psiphon works in a
-tested network.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://psiphon.ca/&#34;&gt;Psiphon&lt;/a&gt; is a free and open source tool that utilises SSH,
-VPN and HTTP proxy technology for censorship circumvention.&lt;/p&gt;
-
-&lt;p&gt;This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s able to
-connect to a Psiphon server and reach a website over it, then we consider that
-Psiphon can be used for censorship circumvention within the tested network. If
-however the test is unable to connect to Psiphon servers, then it is likely the
-case that they are blocked within the tested network.&lt;/p&gt;
 </description>
     </item>
     

@@ -18,12 +18,12 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block/</loc>
+    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</loc>
+    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,11 +58,15 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/get-involved/content/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/about/content/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/install/content/</loc>
+    <loc>https://ooni.torproject.org/data-policy/content/</loc>
   </url>
   
   <url>
@@ -70,11 +74,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/get-involved/content/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/data-policy/content/</loc>
+    <loc>https://ooni.torproject.org/install/content/</loc>
   </url>
   
   <url>
@@ -102,11 +102,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
+    <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
+    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
   </url>
   
   <url>
