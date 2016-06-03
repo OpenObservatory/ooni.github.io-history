@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettests third_party Package &mdash; OONI: Open Observatory of Network Interference 1.5.1.dev0 documentation</title>
+  <title>ooni.nettests third_party Package &mdash; OONI: Open Observatory of Network Interference 1.5.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 1.5.1.dev0 documentation" href="../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 1.5.1 documentation" href="../index.html"/>
         <link rel="up" title="Implemented NetTests" href="modules.html"/>
         <link rel="next" title="Measurement Developer API" href="../api/ooni.html"/>
         <link rel="prev" title="ooni.nettests scanning Package" href="ooni.nettests.scanning.html"/> 
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                1.5.1.dev0
+                1.5.1
               </div>
             
           
@@ -95,9 +95,9 @@
 <li class="toctree-l2"><a class="reference internal" href="ooni.nettests.manipulation.html">ooni.nettests manipulation Package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ooni.nettests.scanning.html">ooni.nettests scanning Package</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">ooni.nettests third_party Package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ooni-nettests-third-party-netalyzr-module"><code class="docutils literal"><span class="pre">ooni.nettests.third_party.netalyzr</span></code> Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ooni-nettests-third-party-openvpn-module"><code class="docutils literal"><span class="pre">ooni.nettests.third_party.openvpn</span></code> Module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ooni-nettests-third-party-psiphon-module"><code class="docutils literal"><span class="pre">ooni.nettests.third_party.psiphon</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ooni.nettests.third_party.netalyzr"><code class="docutils literal"><span class="pre">ooni.nettests.third_party.netalyzr</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ooni.nettests.third_party.openvpn"><code class="docutils literal"><span class="pre">ooni.nettests.third_party.openvpn</span></code> Module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ooni.nettests.third_party.psiphon"><code class="docutils literal"><span class="pre">ooni.nettests.third_party.psiphon</span></code> Module</a></li>
 </ul>
 </li>
 </ul>
@@ -154,14 +154,279 @@
             
   <div class="section" id="ooni-nettests-third-party-package">
 <h1>ooni.nettests third_party Package<a class="headerlink" href="#ooni-nettests-third-party-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ooni-nettests-third-party-netalyzr-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">ooni.nettests.third_party.netalyzr</span></code> Module<a class="headerlink" href="#ooni-nettests-third-party-netalyzr-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ooni.nettests.third_party.netalyzr">
+<span id="ooni-nettests-third-party-netalyzr-module"></span><h2><a class="reference internal" href="#module-ooni.nettests.third_party.netalyzr" title="ooni.nettests.third_party.netalyzr"><code class="xref py py-mod docutils literal"><span class="pre">ooni.nettests.third_party.netalyzr</span></code></a> Module<a class="headerlink" href="#module-ooni.nettests.third_party.netalyzr" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="ooni.nettests.third_party.netalyzr.CouldNotFindNetalyzrCli">
+<em class="property">exception </em><code class="descclassname">ooni.nettests.third_party.netalyzr.</code><code class="descname">CouldNotFindNetalyzrCli</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#CouldNotFindNetalyzrCli"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.CouldNotFindNetalyzrCli" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ooni.nettests.third_party.netalyzr.JavaNotInstalled">
+<em class="property">exception </em><code class="descclassname">ooni.nettests.third_party.netalyzr.</code><code class="descname">JavaNotInstalled</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#JavaNotInstalled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.JavaNotInstalled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest">
+<em class="property">class </em><code class="descclassname">ooni.nettests.third_party.netalyzr.</code><code class="descname">NetalyzrWrapperTest</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#NetalyzrWrapperTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.process.ProcessTest</span></code></p>
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.author">
+<code class="descname">author</code><em class="property"> = 'Jacob Appelbaum &lt;jacob&#64;appelbaum.net&gt;'</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.description">
+<code class="descname">description</code><em class="property"> = 'A wrapper around the Netalyzr java command line client.'</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.name">
+<code class="descname">name</code><em class="property"> = 'NetalyzrWrapper'</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requiredOptions">
+<code class="descname">requiredOptions</code><em class="property"> = ['clipath']</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requiredOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requirements">
+<code class="descname">requirements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#NetalyzrWrapperTest.requirements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requirements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requiresRoot">
+<code class="descname">requiresRoot</code><em class="property"> = False</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requiresRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requiresTor">
+<code class="descname">requiresTor</code><em class="property"> = False</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.requiresTor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#NetalyzrWrapperTest.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.test_run_netalyzr">
+<code class="descname">test_run_netalyzr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#NetalyzrWrapperTest.test_run_netalyzr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.test_run_netalyzr" title="Permalink to this definition">¶</a></dt>
+<dd><p>This test simply wraps netalyzr and runs it from command line</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.timeout">
+<code class="descname">timeout</code><em class="property"> = 300</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.usageOptions">
+<code class="descname">usageOptions</code><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.NetalyzrWrapperTest.usageOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#ooni.nettests.third_party.netalyzr.UsageOptions" title="ooni.nettests.third_party.netalyzr.UsageOptions"><code class="xref py py-class docutils literal"><span class="pre">UsageOptions</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.nettests.third_party.netalyzr.UsageOptions">
+<em class="property">class </em><code class="descclassname">ooni.nettests.third_party.netalyzr.</code><code class="descname">UsageOptions</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/netalyzr.html#UsageOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.UsageOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">twisted.python.usage.Options</span></code></p>
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.netalyzr.UsageOptions.optParameters">
+<code class="descname">optParameters</code><em class="property"> = [['clipath', 'p', None, 'Specify the path to NetalyzrCLI.jar (can be downloaded from http://netalyzr.icsi.berkeley.edu/NetalyzrCLI.jar).']]</em><a class="headerlink" href="#ooni.nettests.third_party.netalyzr.UsageOptions.optParameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="ooni-nettests-third-party-openvpn-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">ooni.nettests.third_party.openvpn</span></code> Module<a class="headerlink" href="#ooni-nettests-third-party-openvpn-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ooni.nettests.third_party.openvpn">
+<span id="ooni-nettests-third-party-openvpn-module"></span><h2><a class="reference internal" href="#module-ooni.nettests.third_party.openvpn" title="ooni.nettests.third_party.openvpn"><code class="xref py py-mod docutils literal"><span class="pre">ooni.nettests.third_party.openvpn</span></code></a> Module<a class="headerlink" href="#module-ooni.nettests.third_party.openvpn" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest">
+<em class="property">class </em><code class="descclassname">ooni.nettests.third_party.openvpn.</code><code class="descname">OpenVPNTest</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.process.ProcessTest</span></code></p>
+<p>This class tests OpenVPN connections.</p>
+<dl class="docutils">
+<dt>test_openvpn_circumvent</dt>
+<dd>Starts an OpenVPN client on Linux and determines
+if it connects successfully to an OpenVPN server.
+Then, it make a HTTP request for <a class="reference external" href="http://google.com">http://google.com</a>
+and records the response body or failure string.</dd>
+</dl>
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.author">
+<code class="descname">author</code><em class="property"> = 'srvetus '</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.description">
+<code class="descname">description</code><em class="property"> = 'Connects to an OpenVPN server and does a HTTP GET for thespecified URL.'</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.handleRead">
+<code class="descname">handleRead</code><span class="sig-paren">(</span><em>stdout=None</em>, <em>stderr=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest.handleRead"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.handleRead" title="Permalink to this definition">¶</a></dt>
+<dd><p>handleRead is called with each chunk of data from stdout and stderr</p>
+<p>stdout only contains the latest data chunk, self.processDirector.stdout
+contains the combined stdout data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.inConnectionLost">
+<code class="descname">inConnectionLost</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest.inConnectionLost"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.inConnectionLost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monkeypatch inConnectionLost to log failure if the process ends
+unexpectedly before OpenVPN bootstraps.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.name">
+<code class="descname">name</code><em class="property"> = 'OpenVPN Client Test'</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.processExited">
+<code class="descname">processExited</code><span class="sig-paren">(</span><em>reason</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest.processExited"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.processExited" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monkeypatch processExited to log failure if the process ends
+unexpectedly before OpenVPN bootstraps.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.requiredOptions">
+<code class="descname">requiredOptions</code><em class="property"> = ['url', 'openvpn-config']</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.requiredOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.requiresRoot">
+<code class="descname">requiresRoot</code><em class="property"> = True</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.requiresRoot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><em>reason=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the running OpenVPN process and close the connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.test_openvpn_circumvent">
+<code class="descname">test_openvpn_circumvent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#OpenVPNTest.test_openvpn_circumvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.test_openvpn_circumvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.timeout">
+<code class="descname">timeout</code><em class="property"> = 20</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.usageOptions">
+<code class="descname">usageOptions</code><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.usageOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#ooni.nettests.third_party.openvpn.UsageOptions" title="ooni.nettests.third_party.openvpn.UsageOptions"><code class="xref py py-class docutils literal"><span class="pre">UsageOptions</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.OpenVPNTest.version">
+<code class="descname">version</code><em class="property"> = '0.0.2'</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.OpenVPNTest.version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.nettests.third_party.openvpn.UsageOptions">
+<em class="property">class </em><code class="descclassname">ooni.nettests.third_party.openvpn.</code><code class="descname">UsageOptions</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/openvpn.html#UsageOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.openvpn.UsageOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">twisted.python.usage.Options</span></code></p>
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.openvpn.UsageOptions.optParameters">
+<code class="descname">optParameters</code><em class="property"> = [['url', 'u', None, 'Specify a single URL on the OpenVPN subnet to test.'], ['openvpn-config', 'c', None, 'Specify an OpenVPN configuration file.']]</em><a class="headerlink" href="#ooni.nettests.third_party.openvpn.UsageOptions.optParameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
-<div class="section" id="ooni-nettests-third-party-psiphon-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">ooni.nettests.third_party.psiphon</span></code> Module<a class="headerlink" href="#ooni-nettests-third-party-psiphon-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ooni.nettests.third_party.psiphon">
+<span id="ooni-nettests-third-party-psiphon-module"></span><h2><a class="reference internal" href="#module-ooni.nettests.third_party.psiphon" title="ooni.nettests.third_party.psiphon"><code class="xref py py-mod docutils literal"><span class="pre">ooni.nettests.third_party.psiphon</span></code></a> Module<a class="headerlink" href="#module-ooni.nettests.third_party.psiphon" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest">
+<em class="property">class </em><code class="descclassname">ooni.nettests.third_party.psiphon.</code><code class="descname">PsiphonTest</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/psiphon.html#PsiphonTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../api/ooni.templates.html#ooni.templates.httpt.HTTPTest" title="ooni.templates.httpt.HTTPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.process.ProcessTest</span></code></p>
+<p>This class tests Psiphon python client</p>
+<dl class="docutils">
+<dt>test_psiphon:</dt>
+<dd>Starts a Psiphon, check if it bootstraps successfully
+(print a line in stdout).
+Then, perform an HTTP request using the proxy</dd>
+</dl>
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.author">
+<code class="descname">author</code><em class="property"> = 'juga'</em><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.createCommand">
+<code class="descname">createCommand</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/psiphon.html#PsiphonTest.createCommand"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.createCommand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.description">
+<code class="descname">description</code><em class="property"> = 'Bootstraps Psiphon and does a HTTP GET for the specified URL.'</em><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.handleRead">
+<code class="descname">handleRead</code><span class="sig-paren">(</span><em>stdout</em>, <em>stderr</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/psiphon.html#PsiphonTest.handleRead"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.handleRead" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.name">
+<code class="descname">name</code><em class="property"> = 'Psiphon Test'</em><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/psiphon.html#PsiphonTest.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.test_psiphon">
+<code class="descname">test_psiphon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/third_party/psiphon.html#PsiphonTest.test_psiphon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.test_psiphon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.timeout">
+<code class="descname">timeout</code><em class="property"> = 120</em><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.timeout" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.usageOptions">
+<code class="descname">usageOptions</code><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.usageOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#ooni.nettests.third_party.psiphon.UsageOptions" title="ooni.nettests.third_party.psiphon.UsageOptions"><code class="xref py py-class docutils literal"><span class="pre">UsageOptions</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.PsiphonTest.version">
+<code class="descname">version</code><em class="property"> = '0.1.0'</em><a class="headerlink" href="#ooni.nettests.third_party.psiphon.PsiphonTest.version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.nettests.third_party.psiphon.UsageOptions">
+<em class="property">class </em><code class="descclassname">ooni.nettests.third_party.psiphon.</code><code class="descname">UsageOptions</code><a class="reference internal" href="../_modules/ooni/nettests/third_party/psiphon.html#UsageOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.third_party.psiphon.UsageOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">twisted.python.usage.Options</span></code></p>
+<dl class="attribute">
+<dt id="ooni.nettests.third_party.psiphon.UsageOptions.optParameters">
+<code class="descname">optParameters</code><em class="property"> = [['psiphonpath', 'p', None, 'Specify psiphon python client path.'], ['url', 'u', 'http://www.google.com/humans.txt', 'Specify the URL to fetch over psiphon (default: http://www.google.com/humans.txt).'], ['expected-body', 'e', 'Google is built by a large', 'Specify the beginning of the expected body in the response (default: Google is built by a large).']]</em><a class="headerlink" href="#ooni.nettests.third_party.psiphon.UsageOptions.optParameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -206,7 +471,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'1.5.1.dev0',
+            VERSION:'1.5.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

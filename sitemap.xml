@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://ooni.torproject.org/</loc>
-    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2016-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/post/web-connectivity/</loc>
+    <lastmod>2016-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,10 +58,6 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/get-involved/content/</loc>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/data/content/</loc>
   </url>
   
@@ -65,11 +66,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/content/</loc>
+    <loc>https://ooni.torproject.org/get-involved/content/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/data-policy/content/</loc>
+    <loc>https://ooni.torproject.org/about/content/</loc>
   </url>
   
   <url>
@@ -77,15 +78,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-header-field-manipulation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/nettest/http-requests/</loc>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/http-host/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/http-header-field-manipulation/</loc>
   </url>
   
   <url>
@@ -93,11 +90,15 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/lantern/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-requests/</loc>
   </url>
   
   <url>
     <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/lantern/</loc>
   </url>
   
   <url>
@@ -106,6 +107,10 @@
   
   <url>
     <loc>https://ooni.torproject.org/nettest/tor-bridge-reachability/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/data-policy/content/</loc>
   </url>
   
   <url>
