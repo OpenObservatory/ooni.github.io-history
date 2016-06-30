@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Whatsapp on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/whatsapp/</link>
+    <link>http://localhost:1313/tags/whatsapp/</link>
     <description>Recent content in Whatsapp on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 06 May 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ooni.torproject.org/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OONI Data Reveals How WhatsApp Was Blocked (Again) in Brazil</title>
-      <link>https://ooni.torproject.org/post/brazil-whatsapp-block/</link>
+      <link>http://localhost:1313/post/brazil-whatsapp-block/</link>
       <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block/</guid>
+      <guid>http://localhost:1313/post/brazil-whatsapp-block/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Brazil&lt;/p&gt;
@@ -27,7 +27,7 @@
 
 &lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; 2016-05-02 - 2016-05-03&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/post/brazil-whatsapp-block-pt&#34;&gt;Portoguese Translation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/post/brazil-whatsapp-block-pt&#34;&gt;Portoguese Translation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -380,10 +380,10 @@ through the following:&lt;/p&gt;
     
     <item>
       <title>WhatsApp bloqueado (outra vez) no Brasil</title>
-      <link>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</link>
+      <link>http://localhost:1313/post/brazil-whatsapp-block-pt/</link>
       <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</guid>
+      <guid>http://localhost:1313/post/brazil-whatsapp-block-pt/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Pais:&lt;/strong&gt; Brasil&lt;/p&gt;
@@ -398,7 +398,7 @@ through the following:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Translation by:&lt;/strong&gt; Kornelia Friesch&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/post/brazil-whatsapp-block&#34;&gt;Post in original language&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/post/brazil-whatsapp-block&#34;&gt;Post in original language&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 

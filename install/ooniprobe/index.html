@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>OONI - </title>
+    <link rel="stylesheet" href="/css/master.css"/>
+    <link rel="stylesheet" href="/css/event.css"/>
+    <link rel="stylesheet" href="/css/fonts.css"/>
+  <link rel="stylesheet" href="/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png"/>
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<div class="container">
+  <nav>
+    <div class="col-1">
+      <a href="/">
+        <img src="../../images/ooni-header-mascot.png" width="25" height="25"/>
+        <h1>OONI</h1>
+      </a>
+    </div>
+    <div class="col-2">
+      
+
+
+<a href="/about/"
+  
+  >About</a>
+<a href="/install/"
+  
+  >Install</a>
+<a href="/nettest/"
+  
+  >Net Tests</a>
+<a href="/data/"
+  
+  >Data</a>
+<a href="/get-involved/"
+  
+  >Get Involved</a>
+<a href="/post/"
+  
+   >Blog</a>
+
+    </div>
+  </nav>
+
+  <main class="col-3 content">
+  
+      <h1 class="article-title">ooniprobe: Installation guide</h1>
+  
+
+  
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#risks-of-running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Risks of running ooniprobe</a></li>
+<li><a href="#installing-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Installing ooniprobe</a>
+<ul>
+<li><a href="#mac-os-x:5e0914a11cce8babf729f5927bda6a20">Mac OS X</a></li>
+<li><a href="#linux-debian:5e0914a11cce8babf729f5927bda6a20">Linux: Debian</a></li>
+<li><a href="#linux-ubuntu:5e0914a11cce8babf729f5927bda6a20">Linux: Ubuntu</a></li>
+<li><a href="#unsupported-unix-with-pip:5e0914a11cce8babf729f5927bda6a20">Unsupported UNIX (with pip)</a></li>
+</ul></li>
+<li><a href="#running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe</a></li>
+<li><a href="#opt-out:5e0914a11cce8babf729f5927bda6a20">Opt-out</a></li>
+<li><a href="#choosing-which-ooni-tests-to-run:5e0914a11cce8babf729f5927bda6a20">Choosing which OONI tests to run</a></li>
+<li><a href="#advanced-users:5e0914a11cce8babf729f5927bda6a20">Advanced users</a>
+<ul>
+<li><a href="#running-ooniprobe-from-a-virtual-machine:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a virtual machine</a>
+<ul>
+<li><a href="#setting-capabilities-on-your-virtualenv-python-binary:5e0914a11cce8babf729f5927bda6a20">Setting capabilities on your virtualenv python binary</a></li>
+</ul></li>
+<li><a href="#running-ooniprobe-from-a-development-environment:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a development environment</a></li>
+<li><a href="#running-ooniprobe-with-tor-bridges:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe with Tor bridges</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  
+  
+
+<p>The <strong><a href="https://ooni.torproject.org">Open Observatory of Network Interference
+(OONI)</a></strong> is a <em>free software</em> project under the <a href="https://torproject.org/">Tor
+Project</a> which aims to detect internet censorship,
+traffic manipulation and signs of surveillance around the world through the
+collection and processing of network measurements. Since late 2012, OONI has
+collected millions of network measurements across more than 90 countries around
+the world, shedding light on multiple cases of network interference.</p>
+
+<p>ooniprobe is a program that users can run to probe their network and to collect
+data for the OONI project. Are you interested in testing your network for
+censorship and traffic manipulation? Do you want to collect data to share with
+others, so that you and others can better understand your network? If so, please
+read this document to learn how to install and run ooniprobe.</p>
+
+<h2 id="risks-of-running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Risks of running ooniprobe</h2>
+
+<p><strong>WARNING:</strong> Running ooniprobe might be against the terms of service of your ISP
+or legally questionable in your country. By running ooniprobe you will connect
+to web services which might be banned, and use web censorship circumvention
+methods such as Tor. The OONI project will publish data submitted by probes,
+possibly including your IP address or other identifying information. In
+addition, your use of ooniprobe will be clear to anybody who has access to
+your computer, and to anybody who can monitor your internet connection (such
+as your employer, ISP or government). Please read our relevant
+<strong><a href="https://ooni.torproject.org/about/risks">documentation</a></strong> to learn more about potential risks.</p>
+
+<h2 id="installing-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Installing ooniprobe</h2>
+
+<p>The desktop version of ooniprobe is currently designed for <strong>Linux</strong> and <strong>Mac OS X</strong> systems.</p>
+
+<p>To install ooniprobe follow the steps below:</p>
+
+<h3 id="mac-os-x:5e0914a11cce8babf729f5927bda6a20">Mac OS X</h3>
+
+<p><strong>Step 1.</strong> Install <strong><a href="http://brew.sh">homebrew</a></strong>.</p>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>brew install ooniprobe
+</code></pre>
+
+<p>If you would like to contribute measurements to OONI daily you can also add this to your crontab:</p>
+
+<pre><code>@daily ooniprobe $THE_OONI_COMMAND
+</code></pre>
+
+<p>Run this command to automatically update your crontab:</p>
+
+<pre><code>(crontab -l 2&gt;/dev/null; echo &quot;@daily ooniprobe $THE_OONI_COMMAND&quot;) | crontab -
+</code></pre>
+
+<h3 id="linux-debian:5e0914a11cce8babf729f5927bda6a20">Linux: Debian</h3>
+
+<p><strong>On Debian testing and unstable:</strong></p>
+
+<p><strong>Step 1.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe
+</code></pre>
+
+<p><strong>On Debian stable (jessie):</strong></p>
+
+<p><strong>Step 1.</strong> Configure debian backports by typing the following in your terminal:</p>
+
+<pre><code>echo 'deb http://ftp.debian.org/debian jessie-backports main' | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe
+</code></pre>
+
+<h3 id="linux-ubuntu:5e0914a11cce8babf729f5927bda6a20">Linux: Ubuntu</h3>
+
+<p><strong>On Ubuntu 16.04 (xenial):</strong></p>
+
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
+
+<pre><code>echo 'deb http://deb.torproject.org/torproject.org xenial main' | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe
+</code></pre>
+
+<p><strong>On Ubuntu 15.10 (wily):</strong></p>
+
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
+
+<pre><code>echo 'deb http://deb.torproject.org/torproject.org wily main' | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe
+</code></pre>
+
+<p><strong>On Ubuntu 14.04 (trusty):</strong></p>
+
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
+
+<pre><code>echo 'deb http://deb.torproject.org/torproject.org trusty main' | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe
+</code></pre>
+
+<h3 id="unsupported-unix-with-pip:5e0914a11cce8babf729f5927bda6a20">Unsupported UNIX (with pip)</h3>
+
+<p>On other unix systems ensure that you have installed the following dependencies:</p>
+
+<ul>
+<li><p>build-essential</p></li>
+
+<li><p>python (&gt;=2.7)</p></li>
+
+<li><p>python-dev</p></li>
+
+<li><p>pip</p></li>
+
+<li><p>libgeoip-dev</p></li>
+
+<li><p>libdumbnet-dev</p></li>
+
+<li><p>libpcap-dev</p></li>
+
+<li><p>libssl-dev</p></li>
+
+<li><p>libffi-dev</p></li>
+
+<li><p>tor (&gt;=0.2.5.1 to run all the tor related tests)</p></li>
+
+<li><p>virtualenv</p></li>
+</ul>
+
+<p>Then you can install ooniprobe inside a virtualenvironment with pip by typing
+the following in your terminal:</p>
+
+<pre><code>virtualenv env/
+source env/bin/activate
+</code></pre>
+
+<p>To install the stable version:</p>
+
+<pre><code>pip install ooniprobe
+</code></pre>
+
+<p>To install from master:</p>
+
+<pre><code>pip install https://github.com/TheTorProject/ooni-probe/archive/master.zip
+</code></pre>
+
+<p>If you&rsquo;re using the Debian package, you will be asked when installing
+whether you would like to run ooniprobe daily. On other platforms, if you would
+like to contribute measurements to OONI daily you can also add this to your
+crontab:</p>
+
+<pre><code>@daily ooniprobe $THE_OONI_COMMAND
+</code></pre>
+
+<p>Run this command to automatically update your crontab:</p>
+
+<pre><code>(crontab -l 2&gt;/dev/null; echo &quot;@daily ooniprobe $THE_OONI_COMMAND&quot;) | crontab -
+</code></pre>
+
+<h2 id="running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe</h2>
+
+<p>You can run ooniprobe through the following steps:</p>
+
+<p><strong>Step 1.</strong> Type <code>ooniprobe</code> in your terminal to view all of your options.</p>
+
+<p><strong>Step 2.</strong> Type <code>oonideckgen</code> in your terminal. This will generate an OONI deck
+that includes a set of tests and a global list of URLs, as well as a country-
+specific list of URLs based on your IP address.</p>
+
+<p><strong>Step 3.</strong> Type <code>ooniprobe -i /home/user/deck/default-user.deck</code> in your
+terminal, where &ldquo;user&rdquo; is your system&rsquo;s username.</p>
+
+<p>Now ooniprobe should be running on your computer.</p>
+
+<p><strong>What ooniprobe runs and tests by default</strong></p>
+
+<p>If you follow the steps above, then it will <em>by default</em> do the following:</p>
+
+<ol>
+<li><p>Run the <strong><a href="https://ooni.torproject.org/nettest/web-connectivity/">web_connectivity test</a></strong> which will test the following lists of websites for censorship:</p>
+
+<ul>
+<li><p><strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/global.csv">Global list of websites</a></strong></p></li>
+
+<li><p><strong><a href="https://github.com/citizenlab/test-lists/tree/master/lists">Country-specific list of websites</a></strong> (if it exists for the country that you are running ooniprobe from)</p></li>
+</ul></li>
+
+<li><p>Run the <strong><a href="https://ooni.torproject.org/nettest/http-invalid-request-line/">http-invalid-request-line test</a></strong> to
+examine whether a proxy technology (which could potentially be used for the
+purpose of censorship and surveillance) is present in the network you are
+testing.</p></li>
+
+<li><p>Run the <strong><a href="https://ooni.torproject.org/nettest/http-header-field-manipulation/">http-header-field-manipulation test</a></strong> to
+examine whether a proxy technology (which could potentially be used for the
+purpose of censorship and surveillance) is present in the network you are
+testing.</p></li>
+
+<li><p>Send the measurements to OONI&rsquo;s measurement collector.</p></li>
+
+<li><p>Publish the measurements (once they have been processed by OONI) on <strong><a href="https://explorer.ooni.torproject.org/world/">OONI
+Explorer</a></strong>.</p></li>
+</ol>
+
+<h2 id="opt-out:5e0914a11cce8babf729f5927bda6a20">Opt-out</h2>
+
+<p>If you don&rsquo;t feel comfortable with the above, you have the following choices:</p>
+
+<ol>
+<li><p><strong>Specify which test(s) you want to run:</strong> You can do this by typing
+<code>ooniprobe -s</code> in your terminal to view the different commands for each test.</p></li>
+
+<li><p><strong>Specify which URLs you want to test:</strong> You can do this by creating your own
+list of URLs that you want to test, and by subsequently passing that list with
+the <code>ooniprobe -f</code> command line option. For example: <code>ooniprobe
+blocking/web_connectivity -f mylist.txt</code>.</p></li>
+
+<li><p>Opt-out from sending OONI your (a) country code and/or (b) Autonomous System
+Number (ASN) by <strong><a href="https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe">editing the ooniprobe configuration
+file</a></strong>
+inside of <code>~/.ooni/ooniprobe.conf</code>. This option though is <em>not</em> recommended, as
+we would not be able to attribute measurements to a specific country or network.</p></li>
+
+<li><p>Opt-out from sending OONI any measurements at all (which will prevent them
+from being published), by running ooniprobe with the <code>-n</code> option.</p></li>
+</ol>
+
+<h2 id="choosing-which-ooni-tests-to-run:5e0914a11cce8babf729f5927bda6a20">Choosing which OONI tests to run</h2>
+
+<p>ooniprobe is designed to run the following tests by default:</p>
+
+<ul>
+<li><p><strong><a href="https://ooni.torproject.org/nettest/web-connectivity/">Web-Connectivity</a></strong></p></li>
+
+<li><p><strong><a href="https://ooni.torproject.org/nettest/http-invalid-request-line/">HTTP-invalid-request-line</a></strong></p></li>
+
+<li><p><strong><a href="https://ooni.torproject.org/nettest/http-header-field-manipulation/">HTTP-header-field-manipulation</a></strong></p></li>
+</ul>
+
+<p>If you don&rsquo;t want to run all of these tests or if you would prefer to run
+entirely different OONI tests, you can do so by typing <code>ooniprobe -s</code> in your
+terminal to view which commands to run for each test. This will present you with
+the following that can be run for each test:</p>
+
+<ul>
+<li><p><strong>Web_connectivity:</strong> <code>ooniprobe blocking/web_connectivity</code></p></li>
+
+<li><p><strong>HTTP_invalid-request-line:</strong> <code>ooniprobe manipulation/http_invalid_request_line</code></p></li>
+
+<li><p><strong>TCP_connect:</strong> <code>ooniprobe blocking/tcp_connect</code></p></li>
+
+<li><p><strong>Traceroute:</strong> <code>ooniprobe manipulation/traceroute</code></p></li>
+
+<li><p><strong>DNS_consistency:</strong> <code>ooniprobe blocking/dns_consistency</code></p></li>
+
+<li><p><strong>Bridge_reachability:</strong> <code>ooniprobe blocking/bridge_reachability</code></p></li>
+
+<li><p><strong>HTTP_header_field_manipulation:</strong> <code>ooniprobe manipulation/http_header_field_manipulation</code></p></li>
+
+<li><p><strong>Meek_fronted_requests:</strong> <code>ooniprobe blocking/meek_fronted_requests</code></p></li>
+
+<li><p><strong>HTTP_requests:</strong> <code>ooniprobe blocking/http_requests</code></p></li>
+
+<li><p><strong>Captive_portal:</strong> <code>ooniprobe manipulation/captiveportal</code></p></li>
+
+<li><p><strong>DNS_spoof:</strong> <code>ooniprobe manipulation/dns_spoof</code></p></li>
+
+<li><p><strong>OpenVPN:</strong> <code>ooniprobe third_party/openvpn</code></p></li>
+
+<li><p><strong>HTTP_host:</strong> <code>ooniprobe manipulation/http_host</code></p></li>
+
+<li><p><strong>Lantern:</strong> <code>ooniprobe third_party/lantern</code></p></li>
+
+<li><p><strong>Psiphon:</strong> <code>ooniprobe third_party/psiphon</code></p></li>
+</ul>
+
+<p><strong>Note:</strong> Third party applications (such as the OpenVPN, Lantern and Psiphon
+tests) require the installation of external applications to run properly. For
+example, to run the Lantern test, installing the Lantern software is a
+prerequisite.</p>
+
+<h2 id="advanced-users:5e0914a11cce8babf729f5927bda6a20">Advanced users</h2>
+
+<h3 id="running-ooniprobe-from-a-virtual-machine:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a virtual machine</h3>
+
+<p>You can run ooniprobe from a virtual machine through the following steps:</p>
+
+<p><strong>Step 1.</strong> Install <strong><a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox</a></strong> (which is a prerequisite of Vagrant).</p>
+
+<p><strong>Step 2.</strong> Install <strong><a href="https://www.vagrantup.com/downloads.html">Vagrant</a></strong>.</p>
+
+<p><strong>Step 3.</strong> Depending on your operating system, do the following:</p>
+
+<p><strong>Mac OS X</strong></p>
+
+<p>Install <strong><a href="http://brew.sh/">homebrew</a></strong>:</p>
+
+<pre><code>brew install git
+</code></pre>
+
+<p><strong>Debian/Ubuntu</strong></p>
+
+<pre><code>sudo apt-get install git
+</code></pre>
+
+<p><strong>Step 4.</strong> Run the following from your terminal:</p>
+
+<pre><code>git clone https://github.com/TheTorProject/ooni-probe.git
+git clone https://github.com/TheTorProject/ooni-backend.git
+cd ooni-probe/
+vagrant up
+</code></pre>
+
+<p><strong>Step 5.</strong> Access your virtual machine with:</p>
+
+<pre><code>vagrant ssh probe
+</code></pre>
+
+<p>ooniprobe will be installed in /data/ooni-probe.</p>
+
+<p><strong>Step 6.</strong> You can run ooniprobe with:</p>
+
+<pre><code>oonideckgen
+ooniprobe -i deck/default-user.deck
+</code></pre>
+
+<h4 id="setting-capabilities-on-your-virtualenv-python-binary:5e0914a11cce8babf729f5927bda6a20">Setting capabilities on your virtualenv python binary</h4>
+
+<p>If your distribution supports capabilities you can avoid running ooniprobe as
+root through the following:</p>
+
+<pre><code>setcap cap_net_admin,cap_net_raw+eip /path/to/your/virtualenv's/python2
+</code></pre>
+
+<h3 id="running-ooniprobe-from-a-development-environment:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a development environment</h3>
+
+<p>On Debian based systems a development environment can be setup as follows:</p>
+
+<p><strong>Step 1.</strong> Install all of the dependencies:</p>
+
+<ul>
+<li><p>build-essential</p></li>
+
+<li><p>python (&gt;=2.7)</p></li>
+
+<li><p>python-dev</p></li>
+
+<li><p>pip</p></li>
+
+<li><p>libgeoip-dev</p></li>
+
+<li><p>libdumbnet-dev</p></li>
+
+<li><p>libpcap-dev</p></li>
+
+<li><p>libssl-dev</p></li>
+
+<li><p>libffi-dev</p></li>
+
+<li><p>tor (&gt;=0.2.5.1 to run all the tor related tests)</p></li>
+</ul>
+
+<p><strong>Step 2.</strong> Install ooniprobe in a virtual environment through the following:</p>
+
+<pre><code>git clone https://github.com/TheTorProject/ooni-probe
+cd ooni-probe
+virtualenv env
+</code></pre>
+
+<p>virtualenv venv will create a folder in the current directory which will contain
+the Python executable files, and a copy of the pip library which you can use to
+install other packages.</p>
+
+<p><strong>Step 3.</strong> Activate the virtual environment to begin using it, as follows:</p>
+
+<pre><code>source env/bin/activate
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+python setup.py install
+ooniprobe -s # if all went well, lists available tests
+</code></pre>
+
+<h3 id="running-ooniprobe-with-tor-bridges:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe with Tor bridges</h3>
+
+<p>If Tor is blocked in the country that you are trying to run ooniprobe from, you
+can circumvent this censorship through the use of <strong><a href="https://bridges.torproject.org/">Tor
+bridges</a></strong>. ooniprobe will automatically try to
+use the bridges of <strong><a href="https://www.torproject.org/projects/torbrowser.html.en">Tor
+Browser</a></strong> but this
+requires that obfs4proxy is installed. You can do this through the following,
+depending on your operating system:</p>
+
+<p><strong>Mac OS X</strong></p>
+
+<p>Install Tor Browser and it will automatically find obfs4proxy.</p>
+
+<p><strong>Debian/Ubuntu</strong></p>
+
+<p>Install obfs4proxy:</p>
+
+<pre><code>sudo apt-get install obfs4proxy
+</code></pre>
+
+<p>You can also configure ooniprobe to use your own Tor bridges by editing the
+.ooni/ooniprobe.conf file in your home directory. Specifically, add the
+following in the torrc section and adjust them to your bridges:</p>
+
+<pre><code>tor:
+    torrc:
+       Bridge:
+       - &quot;obfs4 198.245.60.50:443 752CF7825B3B9EA6A98C83AC41F7099D67007EA5 cert=xpmQtKUqQ/6v5X7ijgYE/f03+l2/EuQ1dexjyUhh16wQlu/cpXUGalmhDIlhuiQPNEKmKw iat-mode=0&quot;
+       - &quot;obfs4 154.35.22.10:41835 8FB9F4319E89E5C6223052AA525A192AFBC85D55 cert=GGGS1TX4R81m3r0HBl79wKy1OtPPNR2CZUIrHjkRg65Vc2VR8fOyo64f9kmT1UAFG7j0HQ iat-mode=0&quot;
+       ClientTransportPlugin: &quot;obfs4 exec /usr/bin/obfs4proxy&quot;
+</code></pre>
+
+  </main>
+</div>
+
+<footer>
+  <div class="container row">
+    (c) 2016 - The Open Observatory of Network Interference
+    <a href="/data-policy/">
+        OONI Data Policy
+    </a>
+  </div>
+</footer>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+

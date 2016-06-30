@@ -2,19 +2,559 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/about/</link>
+    <link>http://localhost:1313/about/</link>
     <description>Recent content in Abouts on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ooni.torproject.org/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/about/content/</link>
+      <link>http://localhost:1313/about/data-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/about/content/</guid>
-      <description></description>
+      <guid>http://localhost:1313/about/data-policy/</guid>
+      <description>
+
+&lt;h1 id=&#34;ooni-data-policy:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;OONI Data Policy&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; 2016-05-05&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt; 1.0.0&lt;/p&gt;
+
+&lt;p&gt;This Data Policy explains what data is collected, processed, stored and
+published by the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference
+(OONI)&lt;/a&gt; project, as well as how users can opt-out
+from sending OONI their network measurements.&lt;/p&gt;
+
+&lt;p&gt;The use of OONI&amp;rsquo;s software and website constitutes an acceptance of the policies
+outlined in this Data Policy.&lt;/p&gt;
+
+&lt;h2 id=&#34;website-visitors:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Website Visitors&lt;/h2&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; use tracking cookies, analytics or any other tracking
+technologies through its &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;website&lt;/a&gt; and does &lt;em&gt;not&lt;/em&gt;
+collect any information about its website visitors.&lt;/p&gt;
+
+&lt;p&gt;Access logs, which only include the date of the requested page, can be stored
+for up to 2 weeks and do &lt;em&gt;not&lt;/em&gt; include the IP addresses of website visitors nor
+the time of access.&lt;/p&gt;
+
+&lt;p&gt;If this changes in the future, users will be notified through this Data Policy.&lt;/p&gt;
+
+&lt;h2 id=&#34;software-users:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Software Users&lt;/h2&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect user privacy, but is developed by
+people who &lt;em&gt;care&lt;/em&gt; about user privacy. While OONI developers take measures to
+protect users&amp;rsquo; privacy by &lt;em&gt;not&lt;/em&gt; deliberately collecting their IP addresses,
+users might still potentially face risks as a result of OONI&amp;rsquo;s data collection,
+processing, storing and publishing methods, as explained below.&lt;/p&gt;
+
+&lt;p&gt;To mitigate such potential risks, users can choose to &lt;em&gt;opt-out&lt;/em&gt; from certain or
+all types of data collection by OONI, though this would limit OONI&amp;rsquo;s research.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-collects:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Collects&lt;/h3&gt;
+
+&lt;p&gt;When a user runs &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software
+tests&lt;/a&gt;, the OONI project can
+collect the following types of data:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the code which corresponds to the country from which
+the user is running OONI tests from, by automatically searching for it based on
+the user&amp;rsquo;s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;MaxMind GeoIP
+database&lt;/a&gt;. The collection of country codes is
+an important part of OONI&amp;rsquo;s research, as it enables OONI to map out global
+network measurements and to identify where network interferences take place.
+This information could potentially be useful to local researchers, journalists
+and advocates who aim to discover network interferences (such as censorship and
+traffic manipulation) in a country.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of country codes
+by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the Autonomous System Number (ASN) which corresponds
+to the network that a user is running OONI tests from. The collection of the ASN
+is useful to OONI&amp;rsquo;s research because it reveals the specific network provider
+(such as Vodafone) of a user. Such information can increase transparency in
+regards to which network providers are implementing censorship or other forms of
+network interference.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of their
+network&amp;rsquo;s ASN by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+configuration&lt;/a&gt;
+file inside of  &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the time and date of when tests were run. This
+information helps OONI evaluate when network interferences occur and to compare
+them across time. Users &lt;em&gt;cannot&lt;/em&gt; opt-out from this type of data collection, as
+it is a core component of OONI&amp;rsquo;s research.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users&amp;rsquo; IP addresses. In fact, OONI
+takes measures to remove users&amp;rsquo; IP addresses from the collected measurements, to
+protect its users from potential risks.&lt;/p&gt;
+
+&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users&amp;rsquo; IP addresses and other
+potentially personally-identifiable information, if such information is included
+in the HTTP headers or other metadata of measurements. This, for example, can
+occur if the tested websites include tracking technologies or custom content
+based on a user&amp;rsquo;s network location.&lt;/p&gt;
+
+&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but they can choose to
+&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The types of network measurements that OONI collects depend on the types of
+tests that are run. Specifications about each OONI test can be viewed
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;here&lt;/a&gt;, and
+details about what collected network measurements entail can be viewed through
+&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; or through OONI&amp;rsquo;s
+&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;public list of measurements&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements
+by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-processes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Processes&lt;/h3&gt;
+
+&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;data pipeline&lt;/a&gt;,
+OONI processes all of the network measurements that it collects, which include
+the aforementioned types of data. OONI processes data with the aim of deriving
+meaning from the collected measurements and, specifically, in an attempt to
+answer the following types of questions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What types of network interferences occurred?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To answer such questions, OONI&amp;rsquo;s pipeline is designed to process data which is
+automatically sent to OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
+
+&lt;p&gt;Users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements by running
+ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-stores:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Stores&lt;/h3&gt;
+
+&lt;p&gt;OONI stores all of the aforementioned data that it collects and processes,
+including users&amp;rsquo; IP addresses and other potentially personally-identifiable
+information which &lt;em&gt;might unintentionally&lt;/em&gt; be collected and therefore stored,
+despite OONI&amp;rsquo;s efforts to prevent this from happening.&lt;/p&gt;
+
+&lt;p&gt;Users can &lt;em&gt;opt-out&lt;/em&gt; from sending specific types of data to OONI&amp;rsquo;s measurement
+collector as described in previous sections of this Data Policy, or they can
+&lt;em&gt;opt-out&lt;/em&gt; from sending OONI any of their measurements by running ooniprobe with
+the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-publishes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Publishes&lt;/h3&gt;
+
+&lt;p&gt;OONI publishes all of the network measurement data that it collects and
+processes because open data allows third parties to conduct independent studies,
+to verify OONI findings and/or to answer other research questions.&lt;/p&gt;
+
+&lt;p&gt;Currently, OONI publishes all collected measurements on its website
+through:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Both resources include the same measurements; the only difference is that OONI
+Explorer is an interactive visualization of the measurements.&lt;/p&gt;
+
+&lt;p&gt;If users&amp;rsquo; IP addresses and/or other potentially personally-identifiable
+information are included in the HTTP headers or other metadata of collected
+measurements, then such information &lt;em&gt;might&lt;/em&gt; be publicly available through the
+above resources.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to note that the publication of network measurements might raise
+various types of &lt;em&gt;risks&lt;/em&gt; for OONI users. Information about such risks can be
+found &lt;a href=&#34;INCLUDE LINK&#34;&gt;here&lt;/a&gt;. Users can also consider opting-out from submitting
+some or all of their measurements to OONI through the following opt-out section
+of this Data Policy.&lt;/p&gt;
+
+&lt;h3 id=&#34;opt-out:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Opt-out&lt;/h3&gt;
+
+&lt;p&gt;OONI software users can &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector
+specific types of data by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+ file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. Through this file, users can opt-out
+from sending OONI the following types of information:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but users can choose to
+&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) through the above configuration
+file.&lt;/p&gt;
+
+&lt;p&gt;Users can also choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector any
+data at all, by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option. This option
+is quite often chosen by users who prefer to &lt;em&gt;not&lt;/em&gt; have their measurements
+published, due to potential risks that could emerge as a result of such
+publication.&lt;/p&gt;
+
+&lt;h2 id=&#34;data-policy-changes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data Policy Changes&lt;/h2&gt;
+
+&lt;p&gt;Although most changes are likely to be minor, OONI may change its Data Policy
+from time to time, and in OONI&amp;rsquo;s sole discretion.&lt;/p&gt;
+
+&lt;p&gt;OONI encourages its website visitors and software users to frequently check this
+page for any changes to its Data Policy. The continued use of OONI&amp;rsquo;s website and
+software after any change in this Data Policy will constitute acceptance of such
+change.&lt;/p&gt;
+
+&lt;p&gt;Thoughts or questions about this Data Policy? Please send an email to
+&lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Key ID:
+    0CB177B7
+Fingerprint:
+4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/risks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/about/risks/</guid>
+      <description>
+
+&lt;h1 id=&#34;risks-things-you-should-know-before-using-ooni:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: Things you should know before using OONI&lt;/h1&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s software tests are designed to test networks for symptoms of censorship,
+surveillance and traffic manipulation and, in some countries around the world,
+this could potentially raise &lt;strong&gt;legal&lt;/strong&gt; and/or &lt;strong&gt;extra-legal risks&lt;/strong&gt;. We
+therefore strongly urge you to consult with lawyers &lt;em&gt;prior&lt;/em&gt; to downloading,
+installing and running OONI, and to carefully read the documentation below.&lt;/p&gt;
+
+&lt;h2 id=&#34;legal-and-extra-legal-risks:8972da30de206641cfcd8ebb5103328e&#34;&gt;Legal and extra-legal risks&lt;/h2&gt;
+
+&lt;p&gt;The legal risks of downloading, installing and running OONI can vary from
+country to country, which is why we advise you to consult with local lawyers. In
+extreme cases, any form of active network measurement could be illegal, or even
+considered a form of espionage.&lt;/p&gt;
+
+&lt;p&gt;Some questions worth asking lawyers relating to the use of OONI can include
+the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Does country X have laws in force that restrict or prohibit the use of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;network measurement software&lt;/strong&gt;?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;censorship detection software&lt;/strong&gt;?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;censorship circumvention software&lt;/strong&gt;?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Does country X have laws in force that restrict or prohibit certain types
+of &lt;strong&gt;internet access&lt;/strong&gt;? (for example, is it illegal to access certain
+websites?)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Does country X have laws in force or ISP License Agreements that require
+Internet Service Providers (ISPs) to track users&amp;rsquo; online activities and to
+retain such records?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Have laws or rules in country X ever been used to criminalize groups or
+individuals based on their internet activity? (this does not necessarily need
+to be specific to network measurements)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While most countries don&amp;rsquo;t have laws which specifically prohibit the use of
+network measurement software, it&amp;rsquo;s important to note that the use of OONI can
+&lt;em&gt;still&lt;/em&gt; potentially be criminalized in certain countries under other, broader
+laws if, for example, its use is viewed as an illegal or anti-government
+activity. OONI users might also face the risk of being criminalized on the
+grounds of &lt;em&gt;national security&lt;/em&gt; if the data obtained and published by running
+OONI is viewed as &amp;ldquo;jeopardizing&amp;rdquo; the country&amp;rsquo;s external or internal security.&lt;/p&gt;
+
+&lt;p&gt;Many countries have a lengthy history of subjecting digital rights activists to
+various forms of abuse that could make it dangerous for individuals in these
+countries to run OONI. The use of OONI might therefore subject users to severe
+civil, criminal, or extra-judicial penalties, and such sanctions can potentially
+include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Imprisonment&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Physical assaults&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Large fines&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Receiving threats&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Being placed on government watchlists&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Targeted for surveillance&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In view of such legal and extra-legal threats, we strongly encourage you to
+consult with lawyers and understand legal risks &lt;em&gt;prior&lt;/em&gt; to using OONI.&lt;/p&gt;
+
+&lt;h2 id=&#34;risks-detection-of-ooni-usage:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: Detection of OONI usage&lt;/h2&gt;
+
+&lt;p&gt;Various legal and extra-legal risks (as explained in the previous section) might
+potentially emerge if third parties (such as governments and ISPs) who view the
+use of OONI as an illegal or generally &amp;ldquo;suspicious&amp;rdquo; activity detect an OONI
+user.&lt;/p&gt;
+
+&lt;p&gt;The use of OONI can potentially be detected by third parties through the
+following:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Surveillance&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Third parties (such as your government, ISP and/or employer) monitoring your
+internet activity will be able to see all web traffic generated by OONI,
+including your IP address, and might be able to link it to you personally.&lt;/p&gt;
+
+&lt;p&gt;Many countries employ sophisticated surveillance measures that allow governments
+to track individuals&amp;rsquo; online activities – even if they are using a VPN or a
+proxy server to protect their privacy. In such countries, governments might be
+able to identify you as a OONI user regardless of what measures you take to
+protect your online privacy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tested services&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Services connected to by OONI will be able to see your IP address and might be
+able to detect that you are using OONI. You can view which services OONI tests
+&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Physical or remote access to a user&amp;rsquo;s device&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As with any other software, the usage of ooniprobe can leave traces. As such,
+anybody with physical or remote access to your computer might be able to see
+that you have downloaded, installed or run OONI.&lt;/p&gt;
+
+&lt;p&gt;To remove traces of ooniprobe usage, you can re-install your operating system or
+wipe your computer and remove everything (operating system, programs and files)
+from your hard drive.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Publication of measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The public (including third parties who view the usage of OONI as illegal or
+&amp;ldquo;suspicious&amp;rdquo;) will be able to see the information collected by OONI once it&amp;rsquo;s
+published through:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unless users &lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master
+/informed-consent/data-policy.md#opt-out&#34;&gt;opt-out&lt;/a&gt;&lt;/strong&gt;, all measurements that are generated
+through OONI tests are by default sent to OONI&amp;rsquo;s measurement collector and
+automatically published through the above resources.&lt;/p&gt;
+
+&lt;p&gt;Published data will include your approximate location, the network (ASN) you are
+connecting from, and when you ran ooniprobe. Other identifying information, such
+as your IP address, is &lt;em&gt;not&lt;/em&gt; deliberately collected, but might be included in
+HTTP headers or other metadata. The full page content downloaded by OONI could
+potentially include further information if, for example, a website includes
+tracking codes or custom content based on your network location. Such
+information could potentially aid third parties in detecting you as an OONI
+user.&lt;/p&gt;
+
+&lt;h2 id=&#34;risks-ooni-tests:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: OONI tests&lt;/h2&gt;
+
+&lt;p&gt;OONI has developed multiple software tests, each one of which is designed to
+perform a different function and can therefore potentially entail different
+types of legal and/or extra-legal risks.&lt;/p&gt;
+
+&lt;p&gt;In summary, OONI tests are designed to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Detect whether websites are blocked&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Detect the presence of systems which might be responsible for censorship,
+surveillance and traffic manipulation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Examine whether censorship circumvention tools, such as &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
+bridges&lt;/a&gt;, &lt;a href=&#34;https://psiphon.ca/&#34;&gt;Psiphon&lt;/a&gt;,
+&lt;a href=&#34;https://getlantern.org/&#34;&gt;Lantern&lt;/a&gt; and &lt;a href=&#34;https://openvpn.net/&#34;&gt;OpenVPN&lt;/a&gt;, are
+blocked&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We urge you to review the
+&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;specifications&lt;/a&gt;&lt;/strong&gt;
+for each OONI test carefully, prior to running them.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Legality of tested websites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When running either oonideckgen (which includes the web-connectivity test) or
+OONI&amp;rsquo;s
+&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-003-http-requests.md&#34;&gt;HTTP- request&lt;/a&gt;&lt;/strong&gt;
+test, you will connect to and download data from various websites which are
+included in the following two lists:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Country-specific test list:&lt;/strong&gt; &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;https://github.com/citizenlab/test-lists/tree/master/lists&lt;/a&gt;
+(search for your country&amp;rsquo;s test list based on its country code)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Global test list:&lt;/strong&gt; &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&lt;/a&gt;
+(including a list of globally accessed websites)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Many websites included in the above lists will likely be controversial and can
+include pornography or hate speech, which might be illegal to access in your
+country. We therefore recommend that you examine carefully whether you are
+willing to take the risk of accessing and downloading data from such websites
+through OONI tests, especially if this could potentially lead to various forms
+of retribution.&lt;/p&gt;
+
+&lt;p&gt;If you are uncertain of the potential implications of connecting to and
+downloading data from the websites listed in the above lists, you can pass your
+&lt;em&gt;own&lt;/em&gt; test list with the ooniprobe &lt;code&gt;-f&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Legality of OONI software tests&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;While network measurements or the use of censorship detection software might not
+be illegal per se, some network tests that OONI does might be against the &lt;em&gt;terms
+of service of your Internet Service Provider (ISP)&lt;/em&gt; or legally questionable in
+your country.&lt;/p&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s
+&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-007-http-invalid-request-line.md&#34;&gt;HTTP-invalid-request-line&lt;/a&gt;&lt;/strong&gt;
+test (which is included in oonideckgen) probably presents the &lt;em&gt;highest risk&lt;/em&gt; as
+its use &lt;em&gt;might&lt;/em&gt; trigger the suspicion of your ISP (and possibly, of your
+government) and lead to prosecution under &lt;strong&gt;computer misuse laws&lt;/strong&gt; (or other
+laws) if detected.&lt;/p&gt;
+
+&lt;p&gt;Specifically, OONI&amp;rsquo;s &lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni- spec/blob/master/test-specs/ts-007-http-invalid-request-line.md&#34;&gt;HTTP-invalid-request-
+line&lt;/a&gt;&lt;/strong&gt;
+test is designed to send &amp;ldquo;out-of-spec messages&amp;rdquo;, which are protocol messages
+that are &lt;em&gt;not&lt;/em&gt; valid according to the relevant protocol speficiation. Such
+messages are part of an invalid HTTP request line, containing an invalid HTTP
+version number, an invalid field count and a huge request method. This test
+sends &amp;ldquo;out-of-spec&amp;rdquo; messages to an echo service, which is designed to simply
+send back to the originating source any data that it receives. If a network
+component (which could potentially include censorship and/or surveillance
+software) is present in the network between the user and an echo service, it
+will intercept the invalid HTTP request line (&amp;ldquo;out- of-spec message&amp;rdquo;) and
+trigger an error, which will be sent back to the user. Such errors indicate the
+presence of network components (some of which may or may not responsible for
+censorship and traffic manipulation) and, in some cases, the vendors of such
+technologies are identified (like in the case of BlueCoat, for example).&lt;/p&gt;
+
+&lt;p&gt;However, it&amp;rsquo;s important to note that running this test can potentially be very
+&lt;strong&gt;risky&lt;/strong&gt;, as &lt;strong&gt;the operators of network components affected by out-of-spec
+messages might view them as attacks&lt;/strong&gt;. There have been
+&lt;a href=&#34;http://www.theregister.co.uk/2005/10/11/tsunami_hacker_followup/&#34;&gt;cases&lt;/a&gt;
+(though unrelated to OONI) where people were convicted under &lt;strong&gt;computer misuse
+laws&lt;/strong&gt; for sending out-of-spec messages (or messages that were perceived to be
+out-of-spec), even when there is considerable doubt that they intended to
+perform an attack. Such risks have been documented in Western democracies, and
+are likely to be even worse in countries where the rule of law is less
+consistently applied.&lt;/p&gt;
+
+&lt;p&gt;By running oonideckgen, you &lt;em&gt;by default&lt;/em&gt; run OONI&amp;rsquo;s HTTP-invalid-request-line
+test (in addition to the web-connectivity and HTTP header field
+manipulation tests). You can &lt;em&gt;opt-out&lt;/em&gt; from running this test by specifying the
+test(s) that you want to run and by running it/them manually. You can view how
+to run each OONI test through the ooniprobe &lt;code&gt;-s&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;p&gt;You can run each test included in oonideckgen separately through the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Web connectivity test:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/web_connectivity&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP header field manipulation test:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_header_field_manipulation&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP invalid request line test:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_invalid_request_line&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Legality of anonymity software&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The installation of &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; software, which is
+designed for online anonymity, is a &lt;em&gt;prerequisite&lt;/em&gt; for using OONI due to the
+following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-003-http-requests.md&#34;&gt;HTTP-request
+test&lt;/a&gt;
+is designed to compare HTTP requests over the network of the user and over
+Tor&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Unless users
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/informed-consent/data-policy.md#opt-out&#34;&gt;opt-out&lt;/a&gt;,
+all measurements are by default sent to OONI over Tor&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Furthermore, OONI&amp;rsquo;s
+&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-
+specs/ts-011-bridge-reachability.md&#34;&gt;bridge-reachability&lt;/a&gt;&lt;/strong&gt; test is designed to check whether &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
+bridges&lt;/a&gt; are blocked or not.&lt;/p&gt;
+
+&lt;p&gt;Similarly, the following OONI tests require the installation of circumvention
+software:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-015-psiphon.md&#34;&gt;Psiphon&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-013-lantern.md&#34;&gt;Lantern&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-016-openvpn.md&#34;&gt;OpenVPN&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We therefore encourage you to consult with a lawyer on the legality of anonymity
+software (such as Tor, a VPN or a proxy) &lt;em&gt;prior&lt;/em&gt; to using OONI.&lt;/p&gt;
+
+&lt;h2 id=&#34;legal-advice:8972da30de206641cfcd8ebb5103328e&#34;&gt;Legal advice&lt;/h2&gt;
+
+&lt;p&gt;In addition to consulting with laywers, you can also reach out to us with
+specific inquiries at &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;. Please note though that we
+are &lt;em&gt;not&lt;/em&gt; lawyers, but we might be able to seek legal advice for you or to put
+you in touch with lawyers who could address your questions and/or concerns.&lt;/p&gt;
+
+&lt;p&gt;Some relevant resources include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.eff.org/torchallenge/faq.html&#34;&gt;Tor Legal FAQ&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.eff.org/issues/know-your-rights&#34;&gt;EFF Know Your Rights&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The use of OONI is at your &lt;em&gt;own risk&lt;/em&gt; in accordance to OONI&amp;rsquo;s software
+&lt;a href=&#34;https://github.com/TheTorProject/ooni- probe/blob/master/LICENSE&#34;&gt;license&lt;/a&gt; and
+neither the OONI project nor its parent organization, the Tor Project, can be
+held liable.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

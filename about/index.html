@@ -7,12 +7,12 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
   <title>OONI - Abouts</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
+    <link rel="stylesheet" href="http://localhost:1313//css/master.css"/>
+    <link rel="stylesheet" href="http://localhost:1313//css/event.css"/>
+    <link rel="stylesheet" href="http://localhost:1313//css/fonts.css"/>
+  <link rel="stylesheet" href="http://localhost:1313//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="http://localhost:1313//images/favicon.png"/>
+  <script src="http://localhost:1313//js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
@@ -31,24 +31,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="http://localhost:1313//about/"
   
    class="active"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="http://localhost:1313//install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="http://localhost:1313//nettest/"
   
   >Net Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="http://localhost:1313//data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="http://localhost:1313//get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="http://localhost:1313//post/"
   
    >Blog</a>
 
@@ -57,17 +57,29 @@
 
   <main class="about col-3">
     <h2>What is OONI?</h2>
-    <p>
-    The <a href="https://ooni.torproject.org/">Open Observatory of Network Interference (OONI)</a>
-    is a free software project under the <a href="https://torproject.org">Tor
-      Project</a> which collects and processes network measurements with the aim
-    of detecting network anomalies, such as censorship, surveillance and traffic
-    manipulation. Since late 2012, OONI has collected millions of measurements
-    across more than 90 countries around the world.
+    <p>The <strong><a href="https://ooni.torproject.org">Open Observatory of Network Interference (OONI)</a></strong>
+    is a <i>free software</i> project under the <a href="https://torproject.org">Tor Project</a>
+    which aims to detect internet censorship, traffic manipulation and signs of
+    surveillance around the world through the collection and processing of
+    network measurements. Since late 2012, OONI has collected millions of
+    network measurements across more than 90 countries around the world,
+    shedding light on multiple cases of network interference.</p>
+
+    <p>OONI is based on various free software tests which are designed to measure the following:</p>
+    <ul>
+      <li>Blocking of websites</li>
+      <li>Detection of systems responsible for censorship, surveillance and manipulation</li>
+      <li>Reachability of Tor, proxies, VPNs, and sensitive domains</li>
+    </ul>
+
+    <p>Prior to running OONI's software, please read our
+    <strong><a href="/about/data-policy">Data Policy</a></strong> and
+    <strong><a href="/about/risks/">documentation about potential risks</a></strong>.
     </p>
+
     <h2>Contact</h2>
     <p>
-    To contact the OONI team send an email to contact [AT] ooni.io. Encrypted
+    To contact the OONI team send an email to contact@openobservatory.org. Encrypted
     emails can be sent using the following PGP key:
 
     <pre>
@@ -145,12 +157,16 @@ sub   4096R/374399AB 2016-03-23 [expires: 2017-03-23]
 
 <footer>
   <div class="container row">
+    (c) 2016 - The Open Observatory of Network Interference
     <a href="/data-policy/">
         OONI Data Policy
     </a>
   </div>
 </footer>
 
-</body>
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 

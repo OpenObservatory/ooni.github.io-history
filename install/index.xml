@@ -2,19 +2,846 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Installs on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/install/</link>
+    <link>http://localhost:1313/install/</link>
     <description>Recent content in Installs on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ooni.torproject.org/install/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/install/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
-      <link>https://ooni.torproject.org/install/content/</link>
+      <title>Lepidopter Installation: Help Guides and Resources</title>
+      <link>http://localhost:1313/install/lepidopter/</link>
+      <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/install/lepidopter/</guid>
+      <description>
+
+&lt;h1 id=&#34;lepidopter-quick-start-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
+
+&lt;p&gt;This guide aims to provide documentation about the Lepidopter, a Raspberry Image
+with OONI super powers based on Debian jessie. The code of the image as well as
+the build script can be found in the &lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;git
+repository&lt;/a&gt;.
+Some compact documentation on how to install, build, copy to SD card and run
+Lepidopter in QEMU is described
+&lt;a href=&#34;https://github.com/TheTorProject/lepidopter/blob/master/README.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter Raspberry Pi image is compatible with all types of Raspberry Pi
+(tested: B+, RPi 1 model B, RPi 2 model B).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Consider downloading the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;
+for a significantly reduced file size (ca. 114M smaller) compared to the zip
+archive. Note that this will require an extra program to be installed depending
+on your OS.&lt;/p&gt;
+
+&lt;h2 id=&#34;verify-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify Lepidopter Raspberry Pi image&lt;/h2&gt;
+
+&lt;h3 id=&#34;importing-lepidopter-signing-key:7565a061641bd1e599d91e306fc304d1&#34;&gt;Importing Lepidopter Signing key&lt;/h3&gt;
+
+&lt;p&gt;From OONI web server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --fetch-keys https://get.ooni.torproject.org/lepidopter/lepidopter-signing-key.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From a keyserver:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --keyserver pool.sks-keyservers.net --recv-keys 0xBA56AC5A53E9C7A4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From additional security the fingeprint of Lepidopter Team (signing key) is
+published her:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pub   4096R/0xBA56AC5A53E9C7A4 2016-05-22
+      Key fingerprint = 6255 1196 8E24 0F24 F6CF  D0B6 BA56 AC5A 53E9 C7A4
+uid   Lepidopter Team (signing key)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;verify-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify Lepidopter image&lt;/h3&gt;
+
+&lt;p&gt;Verifying the compressed image &lt;code&gt;lepidopter-alpha-armel.img.zip&lt;/code&gt; matches its
+signature &lt;code&gt;lepidopter-alpha-armel.img.zip.asc&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg -v --verify lepidopter-alpha-armel.img.zip.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should look for the message &lt;code&gt;Good signature from &amp;quot;Lepidopter Team (signing
+key)&amp;quot;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg: assuming signed data in `lepidopter-alpha-armel.img.zip&#39;
+gpg: Signature made Sun 22 May 2016
+gpg:                using RSA key 0xBA56AC5A53E9C7A4
+gpg: using PGP trust model
+gpg: Good signature from &amp;quot;Lepidopter Team (signing key)&amp;quot;
+gpg: binary signature, digest algorithm SHA512
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want to learn more about digital signatures and key verification read
+the excellent &lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;documentation&lt;/a&gt; from Qubes OS.&lt;/p&gt;
+
+&lt;h1 id=&#34;requirements:7565a061641bd1e599d91e306fc304d1&#34;&gt;Requirements&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Raspberry Pi&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SD Card:
+We recommend a 4GB (minimum size) class 4 or higher SD card.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Internet access:
+A standard Ethernet cable (such as a cat 5) attached to a network router or
+switch that could provide Internet connectivity. Typically the &amp;ldquo;device&amp;rdquo; that
+enables you to access the Internet!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Power supply:
+Use a 5V micro USB power supply to power your Raspberry Pi. Be careful that
+whatever power supply you use outputs at least 5V; insufficient power will
+cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-linux:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter Image to SD Card under Linux&lt;/h1&gt;
+
+&lt;h2 id=&#34;using-imagewriter-graphical-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using ImageWriter (graphical interface)&lt;/h2&gt;
+
+&lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use the
+ImageWriter tool (nice graphical user interface) to write the .img file to the
+SD card.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Right click the archive file and select &amp;ldquo;Extract here&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your computer or connect the SD card reader with the
+SD card inside&lt;/li&gt;
+&lt;li&gt;Install the ImageWriter tool from the Ubuntu Software Center&lt;/li&gt;
+&lt;li&gt;Launch the ImageWriter tool (it needs your administrative password)&lt;/li&gt;
+&lt;li&gt;Select the image file (example lepidopter-alpha-armel.img) to be written to the SD card
+(note: because you started ImageWriter as administrator the starting point
+when selecting the image file is the administrator&amp;rsquo;s home folder so you need to
+change to your own home folder to select the image file)&lt;/li&gt;
+&lt;li&gt;Select the target device to write the image to (your device will be
+something like &amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdc&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Click the &amp;ldquo;Write to device&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;Wait for the process to finish and then insert the SD card in the Raspberry
+Pi&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;using-the-command-line:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the command line&lt;/h2&gt;
+
+&lt;p&gt;Please note that the use of the &amp;ldquo;dd&amp;rdquo; tool can overwrite any partition of your
+machine. If you specify the wrong device in the instructions below you could
+delete your primary Linux partition. Please be careful.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image, with:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;unzip lepidopter-alpha-armel.img.zip&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have downloaded the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xz --decompress --verbose --no-sparse lepidopter-alpha-armel.img.zip&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;df -h&lt;/code&gt; to see what devices are currently mounted&lt;/li&gt;
+&lt;li&gt;If your computer has a slot for SD cards, insert the card. If not, insert
+the card into an SD card reader, then connect the reader to your computer.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;df -h&lt;/code&gt; again. The device that wasn&amp;rsquo;t there last time is your SD
+card. The left column gives the device name of your SD card. It will be
+listed as something like &amp;ldquo;/dev/mmcblk0p1&amp;rdquo; or &amp;ldquo;/dev/sdd1&amp;rdquo;. The last part (&amp;ldquo;p1&amp;rdquo;
+or &amp;ldquo;1&amp;rdquo; respectively) is the partition number, but you want to write to the
+whole SD card, not just one partition, so you need to remove that part from the
+name (getting for example &amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdd&amp;rdquo;) as the device for the
+whole SD card. Note that the SD card can show up more than once in the output
+of df: in fact it will if you have previously written a Raspberry Pi image to
+this SD card, because the Raspberry Pi SD images have more than one partition.&lt;/li&gt;
+&lt;li&gt;Now that you&amp;rsquo;ve noted what the device name is, you need to unmount it so
+that files can&amp;rsquo;t be read or written to the SD card while you are copying
+over the SD image. So run the command below, replacing &amp;ldquo;/dev/sdd1&amp;rdquo; with
+whatever your SD card&amp;rsquo;s device name is (including the partition number)
+&lt;code&gt;
+umount /dev/sdd1
+&lt;/code&gt;
+If your SD card shows up more than once in the output of df due to having
+multiple partitions on the SD card, you should unmount all of these partitions.&lt;/li&gt;
+&lt;li&gt;In the terminal write the image to the card with this command, making sure
+you replace the input file if= argument with the path to your .img file, and
+the
+&amp;ldquo;/dev/sdd&amp;rdquo; in the output file of= argument with the right device name (this is
+very important: you will lose all data on the hard drive on your computer if
+you get the wrong device name). Make sure the device name is the name of the
+whole SD card as described above, not just a partition of it (for example, sdd,
+not sdds1 or sddp1, or mmcblk0 not mmcblk0p1)
+&lt;code&gt;
+dd bs=4M if=~/lepidopter-alpha-armel.img of=/dev/sdd
+&lt;/code&gt;
+Please note that block size set to 4M will work most of the time, if
+not, please try 1M, although 1M will take considerably longer.
+Note that if you are not logged in as root you will need to prefix this
+with sudo.
+The dd command does not give any information of its progress and so may
+appear to have frozen. It could take more than five minutes to finish writing
+to the card. If your card reader has an LED it may blink during the write
+process. To see the progress of the copy operation you can run &lt;code&gt;pkill -USR1
+-n -x&lt;/code&gt; dd in another terminal (prefixed with sudo if you are not logged in as
+root). The progress will be displayed (perhaps not immediately, due to
+buffering) in the original window, not the window with the pkill command.&lt;/li&gt;
+&lt;li&gt;As root run the command sync or if a normal user run &lt;code&gt;sudo sync&lt;/code&gt; (this
+will ensure the write cache is flushed and that it is safe to unmount your
+SD card).&lt;/li&gt;
+&lt;li&gt;Remove SD card from card reader, insert it in the Raspberry Pi, and have
+fun!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-macos-x:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter Image to SD Card under MacOS X&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: In OS X each disk may have two path references in /dev:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;/dev/disk# is a buffered device, which means any data being sent undergoes
+extra processing.&lt;/li&gt;
+&lt;li&gt;/dev/rdisk# is a raw path, which is much faster, and perfectly OK when using
+the dd program.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On a Class 4 SD card the difference was around 20 times faster using the rdisk
+path.&lt;/p&gt;
+
+&lt;h2 id=&#34;run-an-app-only-with-graphical-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Run an App (Only with graphical interface)&lt;/h2&gt;
+
+&lt;h3 id=&#34;pi-filler:7565a061641bd1e599d91e306fc304d1&#34;&gt;Pi Filler&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Filler&lt;/a&gt; a simple tool for copying a Raspberry
+Pi operating system image file to an SD card, or restoring an SD card backup
+created by &lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Copier&lt;/a&gt;. Version 1.3 is about 5x
+faster than previous versions and can write a full card in 5-7 minutes. Pi
+Filler automatically identifies your SD card (and asks for confirmation to
+prevent any chance of the wrong disk being written to), and shows estimated
+time remaining during the copy. After it&amp;rsquo;s done, if your Raspberry Pi is not
+connected to a display, you can use &lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Finder&lt;/a&gt;
+to locate it on your network and log in from Terminal. These utilities are
+written in AppleScript and Bash, are compatible with OS X 10.6 Snow Leopard
+through 10.10 Yosemite, and include source code.&lt;/p&gt;
+
+&lt;h3 id=&#34;rpi-sd-card-builder:7565a061641bd1e599d91e306fc304d1&#34;&gt;RPi-sd card builder&lt;/h3&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://alltheware.wordpress.com/2012/12/11/easiest-way-sd-card-setup/&#34;&gt;RPi-sd
+card&lt;/a&gt;
+builder utility is an application which will walk you through the process of
+installing to SD card. Note: This is a closed source application which requires
+your root password.&lt;/p&gt;
+
+&lt;h3 id=&#34;applepi-baker:7565a061641bd1e599d91e306fc304d1&#34;&gt;ApplePi-Baker&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
+free utility that allows to write an IMG file to SD card, or backup an SD card
+to IMG, with only a few simple clicks. This is also a closed source application
+and also requires your root password to write to SD cards. The application is
+written in Lazarus Pascal and supports Retina.&lt;/p&gt;
+
+&lt;h3 id=&#34;piwriter:7565a061641bd1e599d91e306fc304d1&#34;&gt;PiWriter&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/piwriter/&#34;&gt;PiWriter&lt;/a&gt; a simple wizard made
+using shell scripts, PlatyPus and CocoaDialog. To prevent
+users from making mistakes the wizard auto-detect&amp;rsquo;s the SD card you plan to use
+and prevents you from selecting your system disk. Also there is no need for a
+root password so even less damage can be done. The nextgen PiWriter2 introduces
+a new &amp;lsquo;drag and drop&amp;rsquo; approach and also includes a backup feature. PiWriter
+1.0.4 does not work on Mac OS X Mavericks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Watch the 1.x quick review &lt;a href=&#34;http://vimeo.com/62083666&#34;&gt;video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Watch full OS X HOWTO &lt;a href=&#34;http://www.youtube.com/watch?v=PIvNxprbDhQ&#34;&gt;video&lt;/a&gt;
+using PiWriter 1.x By: Bruce Fulton&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;using-system-tools-mostly-graphical-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using system tools (mostly graphical interface)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image by double clicking on the download file.&lt;/li&gt;
+&lt;li&gt;Connect the SD card reader with the SD card inside; note: must be formatted
+in FAT32!&lt;/li&gt;
+&lt;li&gt;From the Apple menu, choose About This Mac, then click on More info&amp;hellip;; if
+you are using Mac OS X 10.8.x Mountain Lion then click on System report.&lt;/li&gt;
+&lt;li&gt;Click on USB (or Card Reader if using an in-built SD card reader) then
+search for your SD card in the upper right section of the window; click it,
+then search for BSD name in the lower right section: must be something like
+diskn where n is a number (for example, disk4). Note this number.&lt;/li&gt;
+&lt;li&gt;Unmount the partition so that you will be allowed to overwrite the disk by
+opening Disk Utility and unmounting it (do not eject it, or you have to
+reconnect it). Note: On Mac OS X 10.8.x Mountain Lion, &amp;ldquo;Verify Disk&amp;rdquo; (before
+unmounting) will display the BSD name as &amp;ldquo;/dev/disk1s1&amp;rdquo; (or similar), allowing
+you to skip the previous two steps.&lt;/li&gt;
+&lt;li&gt;From the Terminal run:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo dd if=path_of_your_image.img of=/dev/diskn bs=1M&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remember to replace n with the number that you noted before!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Wait a LONG time! (or see the note above about using /dev/rdisk#&amp;hellip;) To see
+the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;re done! Insert it in the Raspberry Pi, and have fun.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-windows:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter Image to SD Card under Windows&lt;/h1&gt;
+
+&lt;h2 id=&#34;using-the-win32diskimager-program:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Download the
+&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; utility.&lt;/li&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image file from the downloaded .xz file, so you now have
+&amp;ldquo;lepidopter-alpha-armel.img&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your SD card reader and check what drive letter it
+was assigned. You can easily see the drive letter (for example G:) by
+looking in the left column of Windows Explorer. You can use the SD Card slot
+(if you have one) or a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Download the Win32DiskImager utility (it is a zip file). You can run
+this from a USB drive.  Win32DiskImager screen&lt;/li&gt;
+&lt;li&gt;Extract the executable from the zip file and run the Win32DiskImager
+utility; you may need to run the utility as Administrator! Right-click on
+the file, and select &amp;lsquo;Run as Administrator&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Select the image file you extracted above.&lt;/li&gt;
+&lt;li&gt;Select the drive letter of the SD card in the device box. &lt;strong&gt;Be careful to
+select the correct drive&lt;/strong&gt;; if you get the wrong one you can destroy your
+data on the computer&amp;rsquo;s hard disk! If you are using an SD Card slot in your
+computer (if you have one) and can&amp;rsquo;t see the drive in the Win32DiskImager
+window, try using a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Click Write and wait for the write to complete.&lt;/li&gt;
+&lt;li&gt;Exit the imager and eject the SD card.&lt;/li&gt;
+&lt;li&gt;You are now ready to plug the card into your Raspberry Pi.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+In Windows, the SD card will appear only to have a fairly small size once
+written - about 55 to 75 MB. This is because most of the card has a partition
+that is formatted for the Linux operating system that the Raspberry Pi uses
+which is not visible in Windows. If you don&amp;rsquo;t see a small directory with files
+such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
+
+&lt;h2 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h2&gt;
+
+&lt;p&gt;You may not be able to choose the device in Win32DiskImager on some notebooks
+so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image file from the downloaded .xz file, so you now have
+&amp;ldquo;lepidopter-alpha-armel.img&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your SD card reader and check what drive letter it
+was assigned. You can easily see the drive letter (for example G:) by
+looking in the left column of Windows Explorer. You can use an SD Card slot in
+your computer (if you have one) or a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Download the flashnul &lt;a href=&#34;http://shounen.ru/soft/flashnul/index.html&#34;&gt;software&lt;/a&gt;
+; here is the English &lt;a href=&#34;http://translate.google.com/translate?hl=en&amp;amp;sl=ru&amp;amp;tl=en&amp;amp;u=http%3A%2F%2Fshounen.ru%2Fsoft%2Fflashnul%2Findex.html&#34;&gt;Translated version&lt;/a&gt;
+with a link to instructions (also translated).&lt;/li&gt;
+&lt;li&gt;Download the latest version. At the time of writing it was flashnul-1rc1.&lt;/li&gt;
+&lt;li&gt;Extract the application from the archive.&lt;/li&gt;
+&lt;li&gt;Click Start button &amp;gt; All Programs &amp;gt; Accessories &amp;gt; Command Prompt, right
+click on it and Run as Administrator.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run flashnul with argument &amp;ldquo;-p&amp;rdquo;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe -p&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Flashnul will tell you something like this (it should be different, as it
+depends on the drives on your machine):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Available physical drives:&lt;/li&gt;
+&lt;li&gt;0       size = 250059350016 (232 Gb)&lt;/li&gt;
+&lt;li&gt;1       size = 1990197248 (1898 Mb)&lt;/li&gt;
+&lt;li&gt;Available logical disks:&lt;/li&gt;
+&lt;li&gt;C:\&lt;/li&gt;
+&lt;li&gt;D:\&lt;/li&gt;
+&lt;li&gt;E:\&lt;/li&gt;
+&lt;li&gt;F:\&lt;/li&gt;
+&lt;li&gt;Press ENTER to exit.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Use the Load option of flashnul to put the image file on the SD Card. Make
+sure that you use the correct drive letter for the SD Card as that drive
+will be overwritten!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe E: -L C:\temp\lepidopter-alpha-armel.img&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Where &lt;code&gt;C:\flashnul\flashnul.exe&lt;/code&gt; is the location of the flashnul
+program; E: is the drive you want to overwrite, and C:\temp\lepidopter-alpha-armel.img
+is the location of the .img file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Flashnul will give you a device summary and a caution message. Check the
+information to make sure you have selected the correct device, then type
+yes and press enter. If you get an access denied error, make sure to close all
+explorer windows or folders open for the device, then try re-plugging the SD
+card.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;sources:7565a061641bd1e599d91e306fc304d1&#34;&gt;Sources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://elinux.org/RPi_Easy_SD_Card_Setup&#34;&gt;RPi Easy SD Card Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/&#34;&gt;Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;On Digital Signatures and Key Verification&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ooniprobe: Installation guide</title>
+      <link>http://localhost:1313/install/ooniprobe/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/install/content/</guid>
-      <description></description>
+      <guid>http://localhost:1313/install/ooniprobe/</guid>
+      <description>
+
+&lt;p&gt;The &lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org&#34;&gt;Open Observatory of Network Interference
+(OONI)&lt;/a&gt;&lt;/strong&gt; is a &lt;em&gt;free software&lt;/em&gt; project under the &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor
+Project&lt;/a&gt; which aims to detect internet censorship,
+traffic manipulation and signs of surveillance around the world through the
+collection and processing of network measurements. Since late 2012, OONI has
+collected millions of network measurements across more than 90 countries around
+the world, shedding light on multiple cases of network interference.&lt;/p&gt;
+
+&lt;p&gt;ooniprobe is a program that users can run to probe their network and to collect
+data for the OONI project. Are you interested in testing your network for
+censorship and traffic manipulation? Do you want to collect data to share with
+others, so that you and others can better understand your network? If so, please
+read this document to learn how to install and run ooniprobe.&lt;/p&gt;
+
+&lt;h2 id=&#34;risks-of-running-ooniprobe:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Risks of running ooniprobe&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Running ooniprobe might be against the terms of service of your ISP
+or legally questionable in your country. By running ooniprobe you will connect
+to web services which might be banned, and use web censorship circumvention
+methods such as Tor. The OONI project will publish data submitted by probes,
+possibly including your IP address or other identifying information. In
+addition, your use of ooniprobe will be clear to anybody who has access to
+your computer, and to anybody who can monitor your internet connection (such
+as your employer, ISP or government). Please read our relevant
+&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/about/risks&#34;&gt;documentation&lt;/a&gt;&lt;/strong&gt; to learn more about potential risks.&lt;/p&gt;
+
+&lt;h2 id=&#34;installing-ooniprobe:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Installing ooniprobe&lt;/h2&gt;
+
+&lt;p&gt;The desktop version of ooniprobe is currently designed for &lt;strong&gt;Linux&lt;/strong&gt; and &lt;strong&gt;Mac OS X&lt;/strong&gt; systems.&lt;/p&gt;
+
+&lt;p&gt;To install ooniprobe follow the steps below:&lt;/p&gt;
+
+&lt;h3 id=&#34;mac-os-x:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Mac OS X&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Install &lt;strong&gt;&lt;a href=&#34;http://brew.sh&#34;&gt;homebrew&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Type the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you would like to contribute measurements to OONI daily you can also add this to your crontab:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@daily ooniprobe $THE_OONI_COMMAND
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run this command to automatically update your crontab:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(crontab -l 2&amp;gt;/dev/null; echo &amp;quot;@daily ooniprobe $THE_OONI_COMMAND&amp;quot;) | crontab -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;linux-debian:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Linux: Debian&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;On Debian testing and unstable:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Type the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;On Debian stable (jessie):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure debian backports by typing the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://ftp.debian.org/debian jessie-backports main&#39; | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Type the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;linux-ubuntu:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Linux: Ubuntu&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;On Ubuntu 16.04 (xenial):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure the torproject repository by typing the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://deb.torproject.org/torproject.org xenial main&#39; | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Type the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;On Ubuntu 15.10 (wily):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure the torproject repository by typing the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://deb.torproject.org/torproject.org wily main&#39; | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Type the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;On Ubuntu 14.04 (trusty):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure the torproject repository by typing the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://deb.torproject.org/torproject.org trusty main&#39; | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Type the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;unsupported-unix-with-pip:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Unsupported UNIX (with pip)&lt;/h3&gt;
+
+&lt;p&gt;On other unix systems ensure that you have installed the following dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;build-essential&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;python (&amp;gt;=2.7)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;python-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;pip&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libgeoip-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libdumbnet-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libpcap-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libssl-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libffi-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;tor (&amp;gt;=0.2.5.1 to run all the tor related tests)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;virtualenv&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then you can install ooniprobe inside a virtualenvironment with pip by typing
+the following in your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;virtualenv env/
+source env/bin/activate
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To install the stable version:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To install from master:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install https://github.com/TheTorProject/ooni-probe/archive/master.zip
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you&amp;rsquo;re using the Debian package, you will be asked when installing
+whether you would like to run ooniprobe daily. On other platforms, if you would
+like to contribute measurements to OONI daily you can also add this to your
+crontab:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@daily ooniprobe $THE_OONI_COMMAND
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run this command to automatically update your crontab:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(crontab -l 2&amp;gt;/dev/null; echo &amp;quot;@daily ooniprobe $THE_OONI_COMMAND&amp;quot;) | crontab -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;running-ooniprobe:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Running ooniprobe&lt;/h2&gt;
+
+&lt;p&gt;You can run ooniprobe through the following steps:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Type &lt;code&gt;ooniprobe&lt;/code&gt; in your terminal to view all of your options.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Type &lt;code&gt;oonideckgen&lt;/code&gt; in your terminal. This will generate an OONI deck
+that includes a set of tests and a global list of URLs, as well as a country-
+specific list of URLs based on your IP address.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Type &lt;code&gt;ooniprobe -i /home/user/deck/default-user.deck&lt;/code&gt; in your
+terminal, where &amp;ldquo;user&amp;rdquo; is your system&amp;rsquo;s username.&lt;/p&gt;
+
+&lt;p&gt;Now ooniprobe should be running on your computer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What ooniprobe runs and tests by default&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you follow the steps above, then it will &lt;em&gt;by default&lt;/em&gt; do the following:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Run the &lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;web_connectivity test&lt;/a&gt;&lt;/strong&gt; which will test the following lists of websites for censorship:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global list of websites&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific list of websites&lt;/a&gt;&lt;/strong&gt; (if it exists for the country that you are running ooniprobe from)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run the &lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;http-invalid-request-line test&lt;/a&gt;&lt;/strong&gt; to
+examine whether a proxy technology (which could potentially be used for the
+purpose of censorship and surveillance) is present in the network you are
+testing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run the &lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;http-header-field-manipulation test&lt;/a&gt;&lt;/strong&gt; to
+examine whether a proxy technology (which could potentially be used for the
+purpose of censorship and surveillance) is present in the network you are
+testing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Send the measurements to OONI&amp;rsquo;s measurement collector.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Publish the measurements (once they have been processed by OONI) on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
+Explorer&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;opt-out:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Opt-out&lt;/h2&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t feel comfortable with the above, you have the following choices:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Specify which test(s) you want to run:&lt;/strong&gt; You can do this by typing
+&lt;code&gt;ooniprobe -s&lt;/code&gt; in your terminal to view the different commands for each test.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Specify which URLs you want to test:&lt;/strong&gt; You can do this by creating your own
+list of URLs that you want to test, and by subsequently passing that list with
+the &lt;code&gt;ooniprobe -f&lt;/code&gt; command line option. For example: &lt;code&gt;ooniprobe
+blocking/web_connectivity -f mylist.txt&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Opt-out from sending OONI your (a) country code and/or (b) Autonomous System
+Number (ASN) by &lt;strong&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe configuration
+file&lt;/a&gt;&lt;/strong&gt;
+inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. This option though is &lt;em&gt;not&lt;/em&gt; recommended, as
+we would not be able to attribute measurements to a specific country or network.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Opt-out from sending OONI any measurements at all (which will prevent them
+from being published), by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; option.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;choosing-which-ooni-tests-to-run:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Choosing which OONI tests to run&lt;/h2&gt;
+
+&lt;p&gt;ooniprobe is designed to run the following tests by default:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web-Connectivity&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP-invalid-request-line&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP-header-field-manipulation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t want to run all of these tests or if you would prefer to run
+entirely different OONI tests, you can do so by typing &lt;code&gt;ooniprobe -s&lt;/code&gt; in your
+terminal to view which commands to run for each test. This will present you with
+the following that can be run for each test:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Web_connectivity:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/web_connectivity&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_invalid-request-line:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_invalid_request_line&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;TCP_connect:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/tcp_connect&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Traceroute:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/traceroute&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DNS_consistency:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/dns_consistency&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bridge_reachability:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/bridge_reachability&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_header_field_manipulation:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_header_field_manipulation&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Meek_fronted_requests:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/meek_fronted_requests&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_requests:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/http_requests&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Captive_portal:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/captiveportal&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DNS_spoof:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/dns_spoof&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;OpenVPN:&lt;/strong&gt; &lt;code&gt;ooniprobe third_party/openvpn&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_host:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_host&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Lantern:&lt;/strong&gt; &lt;code&gt;ooniprobe third_party/lantern&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Psiphon:&lt;/strong&gt; &lt;code&gt;ooniprobe third_party/psiphon&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Third party applications (such as the OpenVPN, Lantern and Psiphon
+tests) require the installation of external applications to run properly. For
+example, to run the Lantern test, installing the Lantern software is a
+prerequisite.&lt;/p&gt;
+
+&lt;h2 id=&#34;advanced-users:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Advanced users&lt;/h2&gt;
+
+&lt;h3 id=&#34;running-ooniprobe-from-a-virtual-machine:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Running ooniprobe from a virtual machine&lt;/h3&gt;
+
+&lt;p&gt;You can run ooniprobe from a virtual machine through the following steps:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Install &lt;strong&gt;&lt;a href=&#34;https://www.virtualbox.org/wiki/Downloads&#34;&gt;Virtualbox&lt;/a&gt;&lt;/strong&gt; (which is a prerequisite of Vagrant).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Install &lt;strong&gt;&lt;a href=&#34;https://www.vagrantup.com/downloads.html&#34;&gt;Vagrant&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Depending on your operating system, do the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Install &lt;strong&gt;&lt;a href=&#34;http://brew.sh/&#34;&gt;homebrew&lt;/a&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian/Ubuntu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Run the following from your terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/TheTorProject/ooni-probe.git
+git clone https://github.com/TheTorProject/ooni-backend.git
+cd ooni-probe/
+vagrant up
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Access your virtual machine with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;vagrant ssh probe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ooniprobe will be installed in /data/ooni-probe.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; You can run ooniprobe with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;oonideckgen
+ooniprobe -i deck/default-user.deck
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;setting-capabilities-on-your-virtualenv-python-binary:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Setting capabilities on your virtualenv python binary&lt;/h4&gt;
+
+&lt;p&gt;If your distribution supports capabilities you can avoid running ooniprobe as
+root through the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;setcap cap_net_admin,cap_net_raw+eip /path/to/your/virtualenv&#39;s/python2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;running-ooniprobe-from-a-development-environment:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Running ooniprobe from a development environment&lt;/h3&gt;
+
+&lt;p&gt;On Debian based systems a development environment can be setup as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Install all of the dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;build-essential&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;python (&amp;gt;=2.7)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;python-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;pip&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libgeoip-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libdumbnet-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libpcap-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libssl-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;libffi-dev&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;tor (&amp;gt;=0.2.5.1 to run all the tor related tests)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Install ooniprobe in a virtual environment through the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/TheTorProject/ooni-probe
+cd ooni-probe
+virtualenv env
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;virtualenv venv will create a folder in the current directory which will contain
+the Python executable files, and a copy of the pip library which you can use to
+install other packages.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Activate the virtual environment to begin using it, as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;source env/bin/activate
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+python setup.py install
+ooniprobe -s # if all went well, lists available tests
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;running-ooniprobe-with-tor-bridges:5e0914a11cce8babf729f5927bda6a20&#34;&gt;Running ooniprobe with Tor bridges&lt;/h3&gt;
+
+&lt;p&gt;If Tor is blocked in the country that you are trying to run ooniprobe from, you
+can circumvent this censorship through the use of &lt;strong&gt;&lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
+bridges&lt;/a&gt;&lt;/strong&gt;. ooniprobe will automatically try to
+use the bridges of &lt;strong&gt;&lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34;&gt;Tor
+Browser&lt;/a&gt;&lt;/strong&gt; but this
+requires that obfs4proxy is installed. You can do this through the following,
+depending on your operating system:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Mac OS X&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Install Tor Browser and it will automatically find obfs4proxy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian/Ubuntu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Install obfs4proxy:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install obfs4proxy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also configure ooniprobe to use your own Tor bridges by editing the
+.ooni/ooniprobe.conf file in your home directory. Specifically, add the
+following in the torrc section and adjust them to your bridges:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tor:
+    torrc:
+       Bridge:
+       - &amp;quot;obfs4 198.245.60.50:443 752CF7825B3B9EA6A98C83AC41F7099D67007EA5 cert=xpmQtKUqQ/6v5X7ijgYE/f03+l2/EuQ1dexjyUhh16wQlu/cpXUGalmhDIlhuiQPNEKmKw iat-mode=0&amp;quot;
+       - &amp;quot;obfs4 154.35.22.10:41835 8FB9F4319E89E5C6223052AA525A192AFBC85D55 cert=GGGS1TX4R81m3r0HBl79wKy1OtPPNR2CZUIrHjkRg65Vc2VR8fOyo64f9kmT1UAFG7j0HQ iat-mode=0&amp;quot;
+       ClientTransportPlugin: &amp;quot;obfs4 exec /usr/bin/obfs4proxy&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
   </channel>

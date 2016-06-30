@@ -2,53 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nettests on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/nettest/</link>
+    <link>http://localhost:1313/nettest/</link>
     <description>Recent content in Nettests on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ooni.torproject.org/nettest/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/nettest/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/dns-consistency/</link>
+      <link>http://localhost:1313/nettest/http-header-field-manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
-      <description>
-
-&lt;h1 id=&#34;dns-consistency:8cd092f4d968324448a1b104fce68bce&#34;&gt;DNS consistency&lt;/h1&gt;
-
-&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
-to be reliable with one that is tested for tampering.&lt;/p&gt;
-
-&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
-(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
-others, run DNS resolvers which map IP addresses to host names. In certain
-circumstances though, ISPs map the wrong IP addresses to the wrong host names.
-This is a form of tampering, which OONI can detect by running its DNS
-consistency test.&lt;/p&gt;
-
-&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
-DNS resolver (which we assume to not be tampered with) with the IP address
-mapped to that website by a provider. If the two IP addresses of the same
-website are different, then there is a sign of network interference. When ISPs
-tamper with DNS answers, users are redirected to other websites or fail to
-connect to their intended websites.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
-with IP addresses that are closest to them geographically. Often this is not
-done with the intent of network tampering, but merely for the purpose of
-providing users faster access to websites. As a result, some false positives
-might arise in OONI measurements.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/http-header-field-manipulation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
+      <guid>http://localhost:1313/nettest/http-header-field-manipulation/</guid>
       <description>
 
 &lt;h1 id=&#34;http-header-field-manipulation:d461e393a173ca45569bbaa90d3ea8de&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
@@ -91,10 +56,10 @@ as they are often used in networks for caching purposes.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/http-host/</link>
+      <link>http://localhost:1313/nettest/http-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/http-host/</guid>
+      <guid>http://localhost:1313/nettest/http-host/</guid>
       <description>
 
 &lt;h1 id=&#34;http-host:5822b230373cd593e60d21f806e517c6&#34;&gt;HTTP Host&lt;/h1&gt;
@@ -139,10 +104,45 @@ caching purposes.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/http-invalid-request-line/</link>
+      <link>http://localhost:1313/nettest/dns-consistency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
+      <guid>http://localhost:1313/nettest/dns-consistency/</guid>
+      <description>
+
+&lt;h1 id=&#34;dns-consistency:8cd092f4d968324448a1b104fce68bce&#34;&gt;DNS consistency&lt;/h1&gt;
+
+&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
+to be reliable with one that is tested for tampering.&lt;/p&gt;
+
+&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
+(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
+others, run DNS resolvers which map IP addresses to host names. In certain
+circumstances though, ISPs map the wrong IP addresses to the wrong host names.
+This is a form of tampering, which OONI can detect by running its DNS
+consistency test.&lt;/p&gt;
+
+&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
+DNS resolver (which we assume to not be tampered with) with the IP address
+mapped to that website by a provider. If the two IP addresses of the same
+website are different, then there is a sign of network interference. When ISPs
+tamper with DNS answers, users are redirected to other websites or fail to
+connect to their intended websites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
+with IP addresses that are closest to them geographically. Often this is not
+done with the intent of network tampering, but merely for the purpose of
+providing users faster access to websites. As a result, some false positives
+might arise in OONI measurements.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/nettest/http-invalid-request-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/nettest/http-invalid-request-line/</guid>
       <description>
 
 &lt;h1 id=&#34;http-invalid-request-line:14e025d5555dc3e219f17d2edbd56544&#34;&gt;HTTP invalid request line&lt;/h1&gt;
@@ -184,10 +184,10 @@ used in networks for caching purposes.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/http-requests/</link>
+      <link>http://localhost:1313/nettest/http-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/http-requests/</guid>
+      <guid>http://localhost:1313/nettest/http-requests/</guid>
       <description>
 
 &lt;h1 id=&#34;http-requests:3e10bba86bba527f8a3085687d504fe5&#34;&gt;HTTP Requests&lt;/h1&gt;
@@ -233,10 +233,10 @@ CAPTCHA page appears.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/lantern/</link>
+      <link>http://localhost:1313/nettest/lantern/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/lantern/</guid>
+      <guid>http://localhost:1313/nettest/lantern/</guid>
       <description>
 
 &lt;h1 id=&#34;lantern:ec656aac078d3167be9cd7e1f567aba8&#34;&gt;Lantern&lt;/h1&gt;
@@ -259,34 +259,10 @@ likely the case that they are blocked within the tested network.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/psiphon/</link>
+      <link>http://localhost:1313/nettest/meek-fronted-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/psiphon/</guid>
-      <description>
-
-&lt;h1 id=&#34;psiphon:cdc027a63e3a5859bb651eb559ade7c4&#34;&gt;Psiphon&lt;/h1&gt;
-
-&lt;p&gt;This test provides an automated way of examining whether Psiphon works in a
-tested network.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://psiphon.ca/&#34;&gt;Psiphon&lt;/a&gt; is a free and open source tool that utilises SSH,
-VPN and HTTP proxy technology for censorship circumvention.&lt;/p&gt;
-
-&lt;p&gt;This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s able to
-connect to a Psiphon server and reach a website over it, then we consider that
-Psiphon can be used for censorship circumvention within the tested network. If
-however the test is unable to connect to Psiphon servers, then it is likely the
-case that they are blocked within the tested network.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/meek-fronted-requests/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/meek-fronted-requests/</guid>
+      <guid>http://localhost:1313/nettest/meek-fronted-requests/</guid>
       <description>
 
 &lt;h1 id=&#34;meek-fronted-requests:a8b91c4b63cc55cc30e4036a69b34c2f&#34;&gt;Meek Fronted Requests&lt;/h1&gt;
@@ -322,10 +298,34 @@ an automated way.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/tor-bridge-reachability/</link>
+      <link>http://localhost:1313/nettest/psiphon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/tor-bridge-reachability/</guid>
+      <guid>http://localhost:1313/nettest/psiphon/</guid>
+      <description>
+
+&lt;h1 id=&#34;psiphon:cdc027a63e3a5859bb651eb559ade7c4&#34;&gt;Psiphon&lt;/h1&gt;
+
+&lt;p&gt;This test provides an automated way of examining whether Psiphon works in a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://psiphon.ca/&#34;&gt;Psiphon&lt;/a&gt; is a free and open source tool that utilises SSH,
+VPN and HTTP proxy technology for censorship circumvention.&lt;/p&gt;
+
+&lt;p&gt;This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s able to
+connect to a Psiphon server and reach a website over it, then we consider that
+Psiphon can be used for censorship circumvention within the tested network. If
+however the test is unable to connect to Psiphon servers, then it is likely the
+case that they are blocked within the tested network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/nettest/tor-bridge-reachability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/nettest/tor-bridge-reachability/</guid>
       <description>
 
 &lt;h1 id=&#34;tor-bridge-reachability:b50c859fd62eea4d38648380574073e9&#34;&gt;Tor Bridge Reachability&lt;/h1&gt;
@@ -351,10 +351,10 @@ bridges are either offline or blocked.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/web-connectivity/</link>
+      <link>http://localhost:1313/nettest/web-connectivity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/web-connectivity/</guid>
+      <guid>http://localhost:1313/nettest/web-connectivity/</guid>
       <description>
 
 &lt;h1 id=&#34;web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Web connectivity&lt;/h1&gt;

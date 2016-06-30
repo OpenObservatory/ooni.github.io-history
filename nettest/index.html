@@ -7,12 +7,12 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
   <title>OONI - Nettests</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
+    <link rel="stylesheet" href="http://localhost:1313//css/master.css"/>
+    <link rel="stylesheet" href="http://localhost:1313//css/event.css"/>
+    <link rel="stylesheet" href="http://localhost:1313//css/fonts.css"/>
+  <link rel="stylesheet" href="http://localhost:1313//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="http://localhost:1313//images/favicon.png"/>
+  <script src="http://localhost:1313//js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
@@ -31,24 +31,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="http://localhost:1313//about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="http://localhost:1313//install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="http://localhost:1313//nettest/"
   
    class="active"
   
   >Net Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="http://localhost:1313//data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="http://localhost:1313//get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="http://localhost:1313//post/"
   
    >Blog</a>
 
@@ -56,21 +56,6 @@
   </nav>
 
   <main class="col-3">
-      
-      
-      <div>
-        <a href="/nettest/dns-consistency/">
-          <h2>
-            Dns Consistency
-          </h2>
-        </a>
-        <p>
-        DNS consistency This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering. The domain name system (DNS) is what is responsible for transforming a host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst others, run DNS resolvers which map IP addresses to host names. In certain circumstances though, ISPs map the wrong IP addresses to the wrong host names.
-        <a href="/nettest/dns-consistency/">
-          Read more...
-        </a>
-        </p>
-      </div>
       
       
       <div>
@@ -97,6 +82,21 @@
         <p>
         HTTP Host This test attempts to: examine whether the domain names of websites are blocked detect the presence of “middle boxes” (software which could be used for censorship and/or traffic manipulation) in tested networks assess which censorship circumvention techniques are capable of bypassing the censorship implemented by the “middle box” HTTP is a protocol which transfers or exchanges data across the internet. It does so by handling a client&rsquo;s request to connect to a server, and a server&rsquo;s response to a client&rsquo;s request.
         <a href="/nettest/http-host/">
+          Read more...
+        </a>
+        </p>
+      </div>
+      
+      
+      <div>
+        <a href="/nettest/dns-consistency/">
+          <h2>
+            Dns Consistency
+          </h2>
+        </a>
+        <p>
+        DNS consistency This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering. The domain name system (DNS) is what is responsible for transforming a host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst others, run DNS resolvers which map IP addresses to host names. In certain circumstances though, ISPs map the wrong IP addresses to the wrong host names.
+        <a href="/nettest/dns-consistency/">
           Read more...
         </a>
         </p>
@@ -149,21 +149,6 @@
       
       
       <div>
-        <a href="/nettest/psiphon/">
-          <h2>
-            Psiphon
-          </h2>
-        </a>
-        <p>
-        Psiphon This test provides an automated way of examining whether Psiphon works in a tested network. Psiphon is a free and open source tool that utilises SSH, VPN and HTTP proxy technology for censorship circumvention. This test runs Psiphon and checks to see if it is working. If it&rsquo;s able to connect to a Psiphon server and reach a website over it, then we consider that Psiphon can be used for censorship circumvention within the tested network.
-        <a href="/nettest/psiphon/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
         <a href="/nettest/meek-fronted-requests/">
           <h2>
             Meek Fronted Requests
@@ -172,6 +157,21 @@
         <p>
         Meek Fronted Requests This test examines whether the domains used by Meek (a type of Tor bridge) work in tested networks. Meek is a pluggable transport which uses non-blocked domains, such as google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com (Microsoft azure cloud infrastructure), to proxy its users over Tor to blocked websites, while hiding both the fact that they are connecting to such websites and how they are connecting to them.
         <a href="/nettest/meek-fronted-requests/">
+          Read more...
+        </a>
+        </p>
+      </div>
+      
+      
+      <div>
+        <a href="/nettest/psiphon/">
+          <h2>
+            Psiphon
+          </h2>
+        </a>
+        <p>
+        Psiphon This test provides an automated way of examining whether Psiphon works in a tested network. Psiphon is a free and open source tool that utilises SSH, VPN and HTTP proxy technology for censorship circumvention. This test runs Psiphon and checks to see if it is working. If it&rsquo;s able to connect to a Psiphon server and reach a website over it, then we consider that Psiphon can be used for censorship circumvention within the tested network.
+        <a href="/nettest/psiphon/">
           Read more...
         </a>
         </p>
@@ -213,12 +213,16 @@
 
 <footer>
   <div class="container row">
+    (c) 2016 - The Open Observatory of Network Interference
     <a href="/data-policy/">
         OONI Data Policy
     </a>
   </div>
 </footer>
 
-</body>
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>
 

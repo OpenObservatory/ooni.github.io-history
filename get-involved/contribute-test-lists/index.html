@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  <title>OONI - </title>
+    <link rel="stylesheet" href="/css/master.css"/>
+    <link rel="stylesheet" href="/css/event.css"/>
+    <link rel="stylesheet" href="/css/fonts.css"/>
+  <link rel="stylesheet" href="/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png"/>
+  <script src="/js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+
+
+<div class="container">
+  <nav>
+    <div class="col-1">
+      <a href="/">
+        <img src="../../images/ooni-header-mascot.png" width="25" height="25"/>
+        <h1>OONI</h1>
+      </a>
+    </div>
+    <div class="col-2">
+      
+
+
+<a href="/about/"
+  
+  >About</a>
+<a href="/install/"
+  
+  >Install</a>
+<a href="/nettest/"
+  
+  >Net Tests</a>
+<a href="/data/"
+  
+  >Data</a>
+<a href="/get-involved/"
+  
+  >Get Involved</a>
+<a href="/post/"
+  
+   >Blog</a>
+
+    </div>
+  </nav>
+
+  <main class="col-3 content">
+  
+
+  
+  
+
+<p>OONI tests specific websites to see if they are blocked, and such websites are
+included in what we call &ldquo;test lists&rdquo;. Each test list contains multiple
+categorized URLs which are tested for online censorship and they include the
+following:</p>
+
+<ul>
+<li><p><a href="https://github.com/citizenlab/test-lists/blob/master/lists/global.csv">Global test list</a></p></li>
+
+<li><p><a href="https://github.com/citizenlab/test-lists/tree/master/lists">Country-specific test lists</a></p></li>
+</ul>
+
+<p>The global list includes a wide range of internationally relevant websites (most
+of which are in English), while each country-specific test list includes
+websites that are relevant and commonly accessed within that country (many of
+which are in local languages). The URLs included in these lists fall under <strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">30
+categories</a></strong>, ranging from news media, file sharing and
+culture, to provocative or objectionable categories, like pornography, political
+criticism and hate speech.</p>
+
+<p>When running ooniprobe, you will connect to and download data from the websites
+included in the global test list and in the test list which is specific to the
+country that you are running ooniprobe from. We therefore encourage you to
+review all of the URLs included in these lists carefully, prior to running
+ooniprobe, as connecting to some of these websites might be legally questionable
+(or illegal) in some jurisdictions around the world.</p>
+
+<p>If you are uncertain of the potential implications of connecting to and
+downloading data from the websites listed in the test lists, you can pass your
+<em>own</em> test list with the following type of command line option:</p>
+
+<p><code>ooniprobe &lt;test-name&gt; -f &lt;your-test-list&gt;</code></p>
+
+<h2 id="contributing-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3">Contributing to test lists</h2>
+
+<p>The <a href="https://citizenlab.org/">Citizen Lab</a> has supported OONI in the creation,
+maintenance and development of test lists and many volunteers around the world
+have contributed to their country&rsquo;s test lists over the last years. You can also
+contribute to the review or creation of your country&rsquo;s test list (if it doesn&rsquo;t
+already exist), as explained below.</p>
+
+<h3 id="reviewing-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3">Reviewing test lists</h3>
+
+<p>All test lists that ooniprobe is designed to test for censorship are hosted in
+the <a href="https://github.com/citizenlab/test-lists">Citizen Lab&rsquo;s test-list repository on github</a>.</p>
+
+<p>To review country-specific test lists, please follow the steps below:</p>
+
+<p><strong>Step 1.</strong> Find the <em>csv</em> file which is specific to the country that you want
+to run ooniprobe from (based on that country&rsquo;s code)
+<strong><a href="https://github.com/citizenlab/test-lists/tree/master/lists">here</a></strong>.</p>
+
+<p>If you don&rsquo;t find a csv file for your country, that&rsquo;s probably because it
+doesn&rsquo;t exist yet. In this case, please refer to the next section on <em>&ldquo;Creating
+test lists&rdquo;</em>.</p>
+
+<p><strong>Step 2.</strong> Add <em>new</em> URLs to the csv file under the &ldquo;url&rdquo; column.</p>
+
+<p>Some criteria for adding new URLs can include the following:</p>
+
+<ul>
+<li><p>The URLs cover topics of socio-political interest within the country</p></li>
+
+<li><p>The URLs are likely to be blocked because they include sensitive content (for
+example, they touch upon sensitive issues or express political criticism)</p></li>
+
+<li><p>The URLs have been blocked in the past</p></li>
+
+<li><p>You have faced difficulty connecting to those URLs</p></li>
+</ul>
+
+<p>For further criteria, please view the URL categories
+<strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">here</a></strong>.</p>
+
+<p>Please try to add URLs which fall under as many (if not all) of these categories
+as possible.</p>
+
+<p><strong>Step 3.</strong> Every time you add a URL, please add the following in the csv file for
+  each new URL:</p>
+
+<ul>
+<li><p><strong>Category code:</strong> Add the code of the category that each URL falls under.
+This can be added under the &ldquo;category_code&rdquo; column of the csv file. The
+category codes can be found <strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">here</a></strong>.</p></li>
+
+<li><p><strong>Category description:</strong> Add the description of the category that each URL
+falls under. This can be added under the &ldquo;category_description&rdquo; column of
+the csv file. The category descriptions can be found
+<strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">here</a></strong>.</p></li>
+
+<li><p><strong>Date:</strong> Add the date of when you added each URL. This can be added under the
+&ldquo;date_added&rdquo; column of the csv file.</p></li>
+
+<li><p><strong>Contributor:</strong> <em>Optional:</em> Add the name of the organization that you are
+affiliated with, in terms of contributing to the test list. This can be
+added under the &ldquo;source&rdquo; column of the csv file.</p></li>
+
+<li><p><strong>Notes:</strong> <em>Optional:</em> Here you can add notes for each URL under the &ldquo;notes&rdquo;
+column of the csv file.</p></li>
+</ul>
+
+<p><strong>Step 4.</strong> Change the category codes and descriptions for URLs (included under
+the &ldquo;category_code&rdquo; and &ldquo;category_description&rdquo; columns of the csv file) <em>only
+if</em> you think that those URLs have been allocated to wrong category codes and
+descriptions. In this case, please replace the category codes and descriptions
+with ones (from the <a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">recommended categories</a> that you think are more
+suitable. We would also appreciate a comment on
+<a href="https://github.com/citizenlab/test-lists">github</a> or via email explaining the
+proposed changes.</p>
+
+<p><strong>Step 5.</strong> Once you have reviewed a test list based on the above, please submit
+ your changes to us. If you&rsquo;re a github user, you can do so through a pull
+ request. If you&rsquo;re <em>not</em> a github user, please send us a <em>spreadsheet</em>
+ (including the same format as github csv files) by dropping us an email at
+ contact@openobservatory.org (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD
+ 3309 6B29 43F0 0CB1 77B7).</p>
+
+<h3 id="creating-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3">Creating test lists</h3>
+
+<p>If you can&rsquo;t find a test list specific to your country
+<a href="https://github.com/citizenlab/test-lists/tree/master/lists">here</a>, then it
+probably does not exist yet. Please help us create a test list for your country
+through the steps below:</p>
+
+<p><strong>Step 1.</strong> Create a csv file and name it based on an ISO-3166 two-letter country
+code which is specific to the country that URLs are being added for. You can
+find a reference for international standards for country codes
+<strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-country_codes.csv">here</a></strong>. An example would include a csv file created for Andora, named <em>ad.csv</em>.</p>
+
+<p><strong>Step 2.</strong> Include the following columns in the newly created csv file:</p>
+
+<ul>
+<li><p>url</p></li>
+
+<li><p>category_code</p></li>
+
+<li><p>category_description</p></li>
+
+<li><p>date_added</p></li>
+
+<li><p>source</p></li>
+
+<li><p>notes</p></li>
+</ul>
+
+<p><strong>Step 3.</strong> Add URLs under the &ldquo;url&rdquo; column of the csv file.</p>
+
+<p>Some criteria for adding new URLs can include the following:</p>
+
+<ul>
+<li><p>The URLs cover topics of socio-political interest within the country</p></li>
+
+<li><p>The URLs are likely to be blocked because they include sensitive content (for
+example, they touch upon sensitive issues or express political criticism)</p></li>
+
+<li><p>The URLs have been blocked in the past</p></li>
+
+<li><p>You have faced difficulty connecting to those URLs</p></li>
+</ul>
+
+<p>For further criteria, please view URL categories
+<strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">here</a></strong>.</p>
+
+<p><strong>Step 4.</strong> Every time you add a URL, please add the following in the csv file for
+ each new URL:</p>
+
+<ul>
+<li><p><strong>Category code:</strong> Add the code of the category that each URL falls under.
+This can be added under the &ldquo;category_code&rdquo; column of the csv file. The
+category codes can be found <strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">here</a></strong>.</p></li>
+
+<li><p><strong>Category description:</strong> Add the description of the category that each URL
+falls under. This can be added under the &ldquo;category_description&rdquo; column of
+the csv file. The category descriptions can be found
+<strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv">here</a></strong>.</p></li>
+
+<li><p><strong>Date:</strong> Add the date of when you added each URL. This can be added under the
+&ldquo;date_added&rdquo; column of the csv file.</p></li>
+
+<li><p><strong>Contributor:</strong> <em>Optional:</em> Add the name of the organization that you are
+affiliated with, in terms of contributing to the test list. This can be
+added under the &ldquo;source&rdquo; column of the csv file.</p></li>
+
+<li><p><strong>Notes:</strong> <em>Optional:</em> Here you can add notes for each URL under the &ldquo;notes&rdquo;
+column of the csv file.</p></li>
+</ul>
+
+<p><strong>Step 5.</strong> Once you have created a new test list based on the above, please
+ submit your csv file to us. If you&rsquo;re a github user, you can do so through a
+ pull request. If you&rsquo;re <em>not</em> a github user, please send us your csv file by
+ dropping us an email at contact@openobservatory.org (PGP Key Fingerprint: 4C15
+ DDA9 96C6 C0CF 48BD  3309 6B29 43F0 0CB1 77B7).</p>
+
+  </main>
+</div>
+
+<footer>
+  <div class="container row">
+    (c) 2016 - The Open Observatory of Network Interference
+    <a href="/data-policy/">
+        OONI Data Policy
+    </a>
+  </div>
+</footer>
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>
+
