@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>http://localhost:1313/</link>
+    <link>https://ooni.torproject.org/</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OONI releases new Web Connectivity test for detecting online censorship</title>
-      <link>http://localhost:1313/post/web-connectivity/</link>
+      <link>https://ooni.torproject.org/post/web-connectivity/</link>
       <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/web-connectivity/</guid>
+      <guid>https://ooni.torproject.org/post/web-connectivity/</guid>
       <description>
 
 &lt;p&gt;Today the Open Observatory of Network Interference (OONI) is excited to be
@@ -143,10 +143,10 @@ running the following command with a file containing a list of URLs to test
     
     <item>
       <title>How Uganda blocked social media, again</title>
-      <link>http://localhost:1313/post/uganda-social-media-blocked/</link>
+      <link>https://ooni.torproject.org/post/uganda-social-media-blocked/</link>
       <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/uganda-social-media-blocked/</guid>
+      <guid>https://ooni.torproject.org/post/uganda-social-media-blocked/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Uganda&lt;/p&gt;
@@ -203,7 +203,7 @@ those were accessible.&lt;/p&gt;
 Telecom (Uganda) and Orange, based on &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
 measurements&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/uganda-social-media/table.png&#34; alt=&#34;Blocked by ISP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/uganda-social-media/table.png&#34; alt=&#34;Blocked by ISP&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s interesting to see that while Smile Telecom (Uganda) blocked access to
 &lt;em&gt;both&lt;/em&gt; the HTTP and HTTPS endpoints of Facebook and Twitter, Orange appears to
@@ -288,10 +288,10 @@ network&lt;/a&gt;.&lt;/p&gt;
     
     <item>
       <title>WhatsApp bloqueado (outra vez) no Brasil</title>
-      <link>http://localhost:1313/post/brazil-whatsapp-block-pt/</link>
+      <link>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</link>
       <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/brazil-whatsapp-block-pt/</guid>
+      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Pais:&lt;/strong&gt; Brasil&lt;/p&gt;
@@ -306,7 +306,7 @@ network&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Translation by:&lt;/strong&gt; Kornelia Friesch&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/post/brazil-whatsapp-block&#34;&gt;Post in original language&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/post/brazil-whatsapp-block&#34;&gt;Post in original language&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -661,10 +661,10 @@ podem ser testados da seguinte forma:&lt;/p&gt;
     
     <item>
       <title>OONI Data Reveals How WhatsApp Was Blocked (Again) in Brazil</title>
-      <link>http://localhost:1313/post/brazil-whatsapp-block/</link>
+      <link>https://ooni.torproject.org/post/brazil-whatsapp-block/</link>
       <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/brazil-whatsapp-block/</guid>
+      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Brazil&lt;/p&gt;
@@ -677,7 +677,7 @@ podem ser testados da seguinte forma:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; 2016-05-02 - 2016-05-03&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost:1313/post/brazil-whatsapp-block-pt&#34;&gt;Portoguese Translation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/post/brazil-whatsapp-block-pt&#34;&gt;Portoguese Translation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -1030,10 +1030,10 @@ through the following:&lt;/p&gt;
     
     <item>
       <title>Lepidopter Installation: Help Guides and Resources</title>
-      <link>http://localhost:1313/install/lepidopter/</link>
+      <link>https://ooni.torproject.org/install/lepidopter/</link>
       <pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/install/lepidopter/</guid>
+      <guid>https://ooni.torproject.org/install/lepidopter/</guid>
       <description>
 
 &lt;h1 id=&#34;lepidopter-quick-start-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
@@ -1260,7 +1260,7 @@ your root password.&lt;/p&gt;
 
 &lt;h3 id=&#34;applepi-baker:7565a061641bd1e599d91e306fc304d1&#34;&gt;ApplePi-Baker&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
 free utility that allows to write an IMG file to SD card, or backup an SD card
@@ -1318,7 +1318,7 @@ the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
 
 &lt;h2 id=&#34;using-the-win32diskimager-program:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Download the
@@ -1428,10 +1428,10 @@ card.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>EEEP and Greek Internet censorship</title>
-      <link>http://localhost:1313/post/eeep-greek-censorship/</link>
+      <link>https://ooni.torproject.org/post/eeep-greek-censorship/</link>
       <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/eeep-greek-censorship/</guid>
+      <guid>https://ooni.torproject.org/post/eeep-greek-censorship/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Greece&lt;/p&gt;
@@ -1577,7 +1577,7 @@ that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspect
 
 &lt;h2 id=&#34;per-isp-analysis:d0c495f4479395eff703b25df5d2e963&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;forthnet:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h3&gt;
 
@@ -1658,7 +1658,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;ote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h3&gt;
 
@@ -1879,7 +1879,7 @@ test_resolvers: [192.168.1.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;cyta:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h2&gt;
 
@@ -2047,7 +2047,7 @@ m.parentNode.insertBefore(a,\
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cyta_gr.png&#34; alt=&#34;Cyta EEEP Blocked website screenshot&#34; title=&#34;Cyta EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 80 entries faulty responded with a 404 HTTP error&lt;/p&gt;
 
@@ -2258,7 +2258,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind EEEP Blocked website screenshot&#34; title=&#34;Wind EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -2385,7 +2385,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;cosmote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h3&gt;
 
@@ -2530,7 +2530,7 @@ href=\&amp;quot;http://www.gamingcommission.gov.gr/index.php/el/\&amp;quot;&amp;
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;vodafone:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h3&gt;
 
@@ -2576,7 +2576,7 @@ requests:
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_vodafone_gr.png&#34; alt=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; title=&#34;Vodafone mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This ISP uses DNS hijacking for 58 entries that EEEP has published either using
 HTTPS URLs on the blacklist or entries that not prefixed with &amp;lsquo;http://&amp;rsquo; For the
@@ -2789,7 +2789,7 @@ target=&#39;_new&#39;&amp;gt;http://www.gamingcommission.gov.gr/index.php/el/&am
 
 &lt;p&gt;A screenshot from the blocked website:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_wind_gr.png&#34; alt=&#34;Wind mobile EEEP Blocked website screenshot&#34; title=&#34;Wind mobile EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least 65 entries falsely responded with a 404 HTTP error.&lt;/p&gt;
 
@@ -3702,10 +3702,10 @@ of the blocked websites. Communicating with the owner company would be impossibl
     
     <item>
       <title>Zambia, a country under Deep Packet Inspection</title>
-      <link>http://localhost:1313/post/zambia/</link>
+      <link>https://ooni.torproject.org/post/zambia/</link>
       <pubDate>Mon, 15 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/zambia/</guid>
+      <guid>https://ooni.torproject.org/post/zambia/</guid>
       <description>
 
 &lt;p&gt;&amp;ldquo;I do not have the details of the blocking of Zambianwatchdog.com, but I
@@ -3727,7 +3727,7 @@ website.&lt;/p&gt;
 &lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
 inside Zambia were reporting error messages.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As hosting providers of the website, we initially could not see a significant
 drop of active connections and we needed to have a close look into the access
@@ -3737,7 +3737,7 @@ we needed to examine several gigabytes of data. It is worth mentioning here
 that Zambian Watchdog ranks 8th overall biggest website in Zambia and probably
 the biggest site after the large portals Facebook, Google or Youtube.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Our first review of the logs revealed a clear increase of connections reporting
 status code 200 but with zero bytes were transmitted back to the client.&lt;/p&gt;
@@ -3764,7 +3764,7 @@ starting that day.&lt;/p&gt;
 concluded that the majority of the connections reporting this problem were from
 operators inside Zambia with the exception of MTN.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
 
@@ -3785,7 +3785,7 @@ any special patters that could help us to understand why most of the readers
 inside Zambia were experiencing connection drops with the exception of readers
 using MTN mobile network.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
 After reviewing dozen of different packet captures we saw a
 distinctive pattern&lt;/p&gt;
 
@@ -3955,7 +3955,7 @@ Inspection gear seems to be monitoring the &amp;ldquo;Server Hello&amp;rdquo; me
 of the SSL negotiation. This message contains the string zambianwatchdog.com
 before the SSL negotiation is completed.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In order to find out if the government is actively making changes, we deployed
 a new mirror server of the site in the domain &lt;a href=&#34;http://zwd.cums.in&#34;&gt;http://zwd.cums.in&lt;/a&gt;. After a few
@@ -3979,10 +3979,10 @@ malformed.).&lt;/p&gt;
     
     <item>
       <title>Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</title>
-      <link>http://localhost:1313/post/tab-tab-come-in/</link>
+      <link>https://ooni.torproject.org/post/tab-tab-come-in/</link>
       <pubDate>Tue, 14 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/tab-tab-come-in/</guid>
+      <guid>https://ooni.torproject.org/post/tab-tab-come-in/</guid>
       <description>
 
 &lt;h1 id=&#34;motivation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Motivation&lt;/h1&gt;
@@ -4260,10 +4260,10 @@ the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open
     
     <item>
       <title>Hadara Palestine</title>
-      <link>http://localhost:1313/post/hadara-palestine/</link>
+      <link>https://ooni.torproject.org/post/hadara-palestine/</link>
       <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/hadara-palestine/</guid>
+      <guid>https://ooni.torproject.org/post/hadara-palestine/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -4281,8 +4281,8 @@ the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This is the technical report on the politically motivated censorship going on
@@ -4437,7 +4437,7 @@ software being used is Squid.&lt;/p&gt;
 
 &lt;p&gt;We scanned more than 1 million hostnames and only detected censorship on 8 of
 these.
-The full scan results are available in an unredacted from &lt;a href=&#34;http://localhost:1313/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+The full scan results are available in an unredacted from &lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;At a certain point we decided to go for a high level of parallelism and not
 care about timeout errors. This is because the transparent HTTP proxy is
@@ -4472,31 +4472,31 @@ using a mix between squid transparent HTTP proxy censorship and other.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;milad.ps&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pal-home.net&#34;&gt;http://pal-home.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://milad.ps&#34;&gt;http://milad.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://karamapress.com&#34;&gt;http://karamapress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://inlightpress.com&#34;&gt;http://inlightpress.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fpnp.net&#34;&gt;http://fpnp.net&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://fateh-voice.ps&#34;&gt;http://fateh-voice.ps&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://amad.ps&#34;&gt;http://amad.ps&lt;/a&gt;&lt;/p&gt;
 
@@ -4507,10 +4507,10 @@ Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
     
     <item>
       <title>T-Mobile USA Web Guard</title>
-      <link>http://localhost:1313/post/t-mobile-usa-web-guard/</link>
+      <link>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</link>
       <pubDate>Wed, 21 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/t-mobile-usa-web-guard/</guid>
+      <guid>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
@@ -4528,9 +4528,9 @@ Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;T-Mobile USA offers a &amp;ldquo;feature&amp;rdquo; to restrict access to certain
@@ -4566,133 +4566,133 @@ Here is a list of sites that we found to be censored, but that we don&amp;rsquo;
 belong to any of the following categories Alcohol, Mature Content, Violence,
 Drugs, Pornography, Weapons, Gambling, Suicide, Guns, Hate, Tobacco, Ammunition.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://torproject.org&#34;&gt;The Tor Project is dedicated to proving anonymous secure communication&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
   online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://217.175.53.72/&#34;&gt;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
   online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://web.archive.org/&#34;&gt;The internet archive Way Back Machine. The Library of the Internet.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://newgrounds.com&#34;&gt;Newgrounds is an American entertainment and social media website. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wjunction.com/&#34;&gt;Webmaster Hangout&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://logicalmedia.com/&#34;&gt;Logical Media is an Affiliate Network.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://cosmopolitan.com/&#34;&gt;Cosmopolitan is an international magazine for women. &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://nullrefer.com/&#34;&gt;Hide Refer hides the visitors HTTP refer from being seen by other websites&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sportscn.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://programme.tv/&#34;&gt;French TV guide website.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://nulled.cc/&#34;&gt;Russian programming forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://ir-tci.org/&#34;&gt;Iranian Forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://zonebourse.com/&#34;&gt;French economics and financial news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackbase.com/&#34;&gt;Chinese computer security website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://whatreallyhappened.com/&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;11&lt;/sub&gt; conspiracy theory news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://p.tl/&#34;&gt;Japanese URL shortening service&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://10minutesaperdre.fr/&#34;&gt;French funny news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://statsie.com/&#34;&gt;Website statistics collection site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://bbcprofit.com/&#34;&gt;Financial advice website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://el-annuaire.com/&#34;&gt;French website index&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://livesports.pl/&#34;&gt;Polish sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://titan007.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://girlpower.it/&#34;&gt;Italian women advice website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://yusukebe.com/&#34;&gt;Japanese blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://sougouwiki.com/&#34;&gt;Japanese wiki&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wiki-live.com/&#34;&gt;Online Article directory&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hltv.org/&#34;&gt;Sports news website&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://elu24.ee/&#34;&gt;Estonian news portal&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://pitsirikos.net/&#34;&gt;Greek political blog&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://kath.net/&#34;&gt;Religious news site&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://hackforums.net/&#34;&gt;Computer security Forum&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.chartsinfrance.net/&#34;&gt;French pop music hit list&lt;/a&gt;&lt;/p&gt;
 
@@ -4754,10 +4754,19 @@ what my child should watch and should not.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://localhost:1313/about/data-policy/</link>
+      <link>https://ooni.torproject.org/data/content/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/data-policy/</guid>
+      <guid>https://ooni.torproject.org/data/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ooni.torproject.org/about/data-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/about/data-policy/</guid>
       <description>
 
 &lt;h1 id=&#34;ooni-data-policy:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;OONI Data Policy&lt;/h1&gt;
@@ -4992,10 +5001,10 @@ Fingerprint:
     
     <item>
       <title>OONI Partnership Program</title>
-      <link>http://localhost:1313/get-involved/partnership-program/</link>
+      <link>https://ooni.torproject.org/get-involved/partnership-program/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/get-involved/partnership-program/</guid>
+      <guid>https://ooni.torproject.org/get-involved/partnership-program/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Uncovering Evidence of Online Censorship Around the World&lt;/strong&gt;&lt;/p&gt;
@@ -5232,10 +5241,10 @@ can be evaluated on a case by case basis.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://localhost:1313/about/risks/</link>
+      <link>https://ooni.torproject.org/about/risks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/risks/</guid>
+      <guid>https://ooni.torproject.org/about/risks/</guid>
       <description>
 
 &lt;h1 id=&#34;risks-things-you-should-know-before-using-ooni:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: Things you should know before using OONI&lt;/h1&gt;
@@ -5543,212 +5552,36 @@ held liable.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>http://localhost:1313/data/content/</link>
+      <link>https://ooni.torproject.org/nettest/dns-consistency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/data/content/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://localhost:1313/get-involved/contribute-test-lists/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/get-involved/contribute-test-lists/</guid>
+      <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
       <description>
 
-&lt;p&gt;OONI tests specific websites to see if they are blocked, and such websites are
-included in what we call &amp;ldquo;test lists&amp;rdquo;. Each test list contains multiple
-categorized URLs which are tested for online censorship and they include the
-following:&lt;/p&gt;
+&lt;h1 id=&#34;dns-consistency:8cd092f4d968324448a1b104fce68bce&#34;&gt;DNS consistency&lt;/h1&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
+to be reliable with one that is tested for tampering.&lt;/p&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
+(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
+others, run DNS resolvers which map IP addresses to host names. In certain
+circumstances though, ISPs map the wrong IP addresses to the wrong host names.
+This is a form of tampering, which OONI can detect by running its DNS
+consistency test.&lt;/p&gt;
 
-&lt;p&gt;The global list includes a wide range of internationally relevant websites (most
-of which are in English), while each country-specific test list includes
-websites that are relevant and commonly accessed within that country (many of
-which are in local languages). The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30
-categories&lt;/a&gt;&lt;/strong&gt;, ranging from news media, file sharing and
-culture, to provocative or objectionable categories, like pornography, political
-criticism and hate speech.&lt;/p&gt;
+&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
+DNS resolver (which we assume to not be tampered with) with the IP address
+mapped to that website by a provider. If the two IP addresses of the same
+website are different, then there is a sign of network interference. When ISPs
+tamper with DNS answers, users are redirected to other websites or fail to
+connect to their intended websites.&lt;/p&gt;
 
-&lt;p&gt;When running ooniprobe, you will connect to and download data from the websites
-included in the global test list and in the test list which is specific to the
-country that you are running ooniprobe from. We therefore encourage you to
-review all of the URLs included in these lists carefully, prior to running
-ooniprobe, as connecting to some of these websites might be legally questionable
-(or illegal) in some jurisdictions around the world.&lt;/p&gt;
-
-&lt;p&gt;If you are uncertain of the potential implications of connecting to and
-downloading data from the websites listed in the test lists, you can pass your
-&lt;em&gt;own&lt;/em&gt; test list with the following type of command line option:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe &amp;lt;test-name&amp;gt; -f &amp;lt;your-test-list&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;contributing-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Contributing to test lists&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt; has supported OONI in the creation,
-maintenance and development of test lists and many volunteers around the world
-have contributed to their country&amp;rsquo;s test lists over the last years. You can also
-contribute to the review or creation of your country&amp;rsquo;s test list (if it doesn&amp;rsquo;t
-already exist), as explained below.&lt;/p&gt;
-
-&lt;h3 id=&#34;reviewing-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Reviewing test lists&lt;/h3&gt;
-
-&lt;p&gt;All test lists that ooniprobe is designed to test for censorship are hosted in
-the &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;Citizen Lab&amp;rsquo;s test-list repository on github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To review country-specific test lists, please follow the steps below:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Find the &lt;em&gt;csv&lt;/em&gt; file which is specific to the country that you want
-to run ooniprobe from (based on that country&amp;rsquo;s code)
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you don&amp;rsquo;t find a csv file for your country, that&amp;rsquo;s probably because it
-doesn&amp;rsquo;t exist yet. In this case, please refer to the next section on &lt;em&gt;&amp;ldquo;Creating
-test lists&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Add &lt;em&gt;new&lt;/em&gt; URLs to the csv file under the &amp;ldquo;url&amp;rdquo; column.&lt;/p&gt;
-
-&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
-example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For further criteria, please view the URL categories
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Please try to add URLs which fall under as many (if not all) of these categories
-as possible.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
-  each new URL:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
-This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
-category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
-falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
-the csv file. The category descriptions can be found
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
-&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
-affiliated with, in terms of contributing to the test list. This can be
-added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
-column of the csv file.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Change the category codes and descriptions for URLs (included under
-the &amp;ldquo;category_code&amp;rdquo; and &amp;ldquo;category_description&amp;rdquo; columns of the csv file) &lt;em&gt;only
-if&lt;/em&gt; you think that those URLs have been allocated to wrong category codes and
-descriptions. In this case, please replace the category codes and descriptions
-with ones (from the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;recommended categories&lt;/a&gt; that you think are more
-suitable. We would also appreciate a comment on
-&lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;github&lt;/a&gt; or via email explaining the
-proposed changes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have reviewed a test list based on the above, please submit
- your changes to us. If you&amp;rsquo;re a github user, you can do so through a pull
- request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us a &lt;em&gt;spreadsheet&lt;/em&gt;
- (including the same format as github csv files) by dropping us an email at
- contact@openobservatory.org (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD
- 3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
-
-&lt;h3 id=&#34;creating-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Creating test lists&lt;/h3&gt;
-
-&lt;p&gt;If you can&amp;rsquo;t find a test list specific to your country
-&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;, then it
-probably does not exist yet. Please help us create a test list for your country
-through the steps below:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Create a csv file and name it based on an ISO-3166 two-letter country
-code which is specific to the country that URLs are being added for. You can
-find a reference for international standards for country codes
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-country_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;. An example would include a csv file created for Andora, named &lt;em&gt;ad.csv&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Include the following columns in the newly created csv file:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;url&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;category_code&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;category_description&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;date_added&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;source&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;notes&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Add URLs under the &amp;ldquo;url&amp;rdquo; column of the csv file.&lt;/p&gt;
-
-&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
-example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For further criteria, please view URL categories
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
- each new URL:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
-This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
-category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
-falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
-the csv file. The category descriptions can be found
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
-&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
-affiliated with, in terms of contributing to the test list. This can be
-added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
-column of the csv file.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have created a new test list based on the above, please
- submit your csv file to us. If you&amp;rsquo;re a github user, you can do so through a
- pull request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us your csv file by
- dropping us an email at contact@openobservatory.org (PGP Key Fingerprint: 4C15
- DDA9 96C6 C0CF 48BD  3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
+with IP addresses that are closest to them geographically. Often this is not
+done with the intent of network tampering, but merely for the purpose of
+providing users faster access to websites. As a result, some false positives
+might arise in OONI measurements.&lt;/p&gt;
 </description>
     </item>
     

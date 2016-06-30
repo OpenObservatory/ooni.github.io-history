@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socialmedia on OONI: Open Observatory of Network Interference</title>
-    <link>http://localhost:1313/tags/socialmedia/</link>
+    <link>https://ooni.torproject.org/tags/socialmedia/</link>
     <description>Recent content in Socialmedia on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 May 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/socialmedia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/tags/socialmedia/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How Uganda blocked social media, again</title>
-      <link>http://localhost:1313/post/uganda-social-media-blocked/</link>
+      <link>https://ooni.torproject.org/post/uganda-social-media-blocked/</link>
       <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/uganda-social-media-blocked/</guid>
+      <guid>https://ooni.torproject.org/post/uganda-social-media-blocked/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Uganda&lt;/p&gt;
@@ -71,7 +71,7 @@ those were accessible.&lt;/p&gt;
 Telecom (Uganda) and Orange, based on &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
 measurements&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/post/uganda-social-media/table.png&#34; alt=&#34;Blocked by ISP&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/uganda-social-media/table.png&#34; alt=&#34;Blocked by ISP&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s interesting to see that while Smile Telecom (Uganda) blocked access to
 &lt;em&gt;both&lt;/em&gt; the HTTP and HTTPS endpoints of Facebook and Twitter, Orange appears to

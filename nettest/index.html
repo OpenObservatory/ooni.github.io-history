@@ -7,12 +7,12 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
   <title>OONI - Nettests</title>
-    <link rel="stylesheet" href="http://localhost:1313//css/master.css"/>
-    <link rel="stylesheet" href="http://localhost:1313//css/event.css"/>
-    <link rel="stylesheet" href="http://localhost:1313//css/fonts.css"/>
-  <link rel="stylesheet" href="http://localhost:1313//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="http://localhost:1313//images/favicon.png"/>
-  <script src="http://localhost:1313//js/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
+  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
@@ -31,24 +31,24 @@
       
 
 
-<a href="http://localhost:1313//about/"
+<a href="https://ooni.torproject.org//about/"
   
   >About</a>
-<a href="http://localhost:1313//install/"
+<a href="https://ooni.torproject.org//install/"
   
   >Install</a>
-<a href="http://localhost:1313//nettest/"
+<a href="https://ooni.torproject.org//nettest/"
   
    class="active"
   
   >Net Tests</a>
-<a href="http://localhost:1313//data/"
+<a href="https://ooni.torproject.org//data/"
   
   >Data</a>
-<a href="http://localhost:1313//get-involved/"
+<a href="https://ooni.torproject.org//get-involved/"
   
   >Get Involved</a>
-<a href="http://localhost:1313//post/"
+<a href="https://ooni.torproject.org//post/"
   
    >Blog</a>
 
@@ -56,6 +56,21 @@
   </nav>
 
   <main class="col-3">
+      
+      
+      <div>
+        <a href="/nettest/dns-consistency/">
+          <h2>
+            Dns Consistency
+          </h2>
+        </a>
+        <p>
+        DNS consistency This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering. The domain name system (DNS) is what is responsible for transforming a host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst others, run DNS resolvers which map IP addresses to host names. In certain circumstances though, ISPs map the wrong IP addresses to the wrong host names.
+        <a href="/nettest/dns-consistency/">
+          Read more...
+        </a>
+        </p>
+      </div>
       
       
       <div>
@@ -82,21 +97,6 @@
         <p>
         HTTP Host This test attempts to: examine whether the domain names of websites are blocked detect the presence of “middle boxes” (software which could be used for censorship and/or traffic manipulation) in tested networks assess which censorship circumvention techniques are capable of bypassing the censorship implemented by the “middle box” HTTP is a protocol which transfers or exchanges data across the internet. It does so by handling a client&rsquo;s request to connect to a server, and a server&rsquo;s response to a client&rsquo;s request.
         <a href="/nettest/http-host/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/dns-consistency/">
-          <h2>
-            Dns Consistency
-          </h2>
-        </a>
-        <p>
-        DNS consistency This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering. The domain name system (DNS) is what is responsible for transforming a host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst others, run DNS resolvers which map IP addresses to host names. In certain circumstances though, ISPs map the wrong IP addresses to the wrong host names.
-        <a href="/nettest/dns-consistency/">
           Read more...
         </a>
         </p>
@@ -220,9 +220,6 @@
   </div>
 </footer>
 
-<script data-no-instant>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+</body>
 </html>
 

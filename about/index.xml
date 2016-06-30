@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on OONI: Open Observatory of Network Interference</title>
-    <link>http://localhost:1313/about/</link>
+    <link>https://ooni.torproject.org/about/</link>
     <description>Recent content in Abouts on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://localhost:1313/about/data-policy/</link>
+      <link>https://ooni.torproject.org/about/data-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/data-policy/</guid>
+      <guid>https://ooni.torproject.org/about/data-policy/</guid>
       <description>
 
 &lt;h1 id=&#34;ooni-data-policy:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;OONI Data Policy&lt;/h1&gt;
@@ -248,10 +248,10 @@ Fingerprint:
     
     <item>
       <title></title>
-      <link>http://localhost:1313/about/risks/</link>
+      <link>https://ooni.torproject.org/about/risks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/about/risks/</guid>
+      <guid>https://ooni.torproject.org/about/risks/</guid>
       <description>
 
 &lt;h1 id=&#34;risks-things-you-should-know-before-using-ooni:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: Things you should know before using OONI&lt;/h1&gt;

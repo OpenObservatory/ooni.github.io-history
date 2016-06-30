@@ -2,123 +2,123 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://ooni.torproject.org/</loc>
     <lastmod>2016-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/web-connectivity/</loc>
+    <loc>https://ooni.torproject.org/post/web-connectivity/</loc>
     <lastmod>2016-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/uganda-social-media-blocked/</loc>
+    <loc>https://ooni.torproject.org/post/uganda-social-media-blocked/</loc>
     <lastmod>2016-05-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/brazil-whatsapp-block-pt/</loc>
+    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/brazil-whatsapp-block/</loc>
+    <loc>https://ooni.torproject.org/post/brazil-whatsapp-block/</loc>
     <lastmod>2016-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/install/lepidopter/</loc>
+    <loc>https://ooni.torproject.org/install/lepidopter/</loc>
     <lastmod>2015-09-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/eeep-greek-censorship/</loc>
+    <loc>https://ooni.torproject.org/post/eeep-greek-censorship/</loc>
     <lastmod>2015-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/zambia/</loc>
+    <loc>https://ooni.torproject.org/post/zambia/</loc>
     <lastmod>2013-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/tab-tab-come-in/</loc>
+    <loc>https://ooni.torproject.org/post/tab-tab-come-in/</loc>
     <lastmod>2013-05-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/hadara-palestine/</loc>
+    <loc>https://ooni.torproject.org/post/hadara-palestine/</loc>
     <lastmod>2012-04-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/t-mobile-usa-web-guard/</loc>
+    <loc>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</loc>
     <lastmod>2012-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/data-policy/</loc>
+    <loc>https://ooni.torproject.org/data/content/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/get-involved/partnership-program/</loc>
+    <loc>https://ooni.torproject.org/about/data-policy/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/risks/</loc>
+    <loc>https://ooni.torproject.org/get-involved/partnership-program/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/data/content/</loc>
+    <loc>https://ooni.torproject.org/about/risks/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/get-involved/contribute-test-lists/</loc>
+    <loc>https://ooni.torproject.org/nettest/dns-consistency/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/install/ooniprobe/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-header-field-manipulation/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/http-header-field-manipulation/</loc>
+    <loc>https://ooni.torproject.org/install/ooniprobe/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/http-host/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/dns-consistency/</loc>
+    <loc>https://ooni.torproject.org/get-involved/contribute-test-lists/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/http-invalid-request-line/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/http-requests/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-requests/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/lantern/</loc>
+    <loc>https://ooni.torproject.org/nettest/lantern/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/meek-fronted-requests/</loc>
+    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/psiphon/</loc>
+    <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/tor-bridge-reachability/</loc>
+    <loc>https://ooni.torproject.org/nettest/tor-bridge-reachability/</loc>
   </url>
   
   <url>
-    <loc>http://localhost:1313/nettest/web-connectivity/</loc>
+    <loc>https://ooni.torproject.org/nettest/web-connectivity/</loc>
   </url>
   
 </urlset>
