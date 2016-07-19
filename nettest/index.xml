@@ -91,6 +91,51 @@ as they are often used in networks for caching purposes.&lt;/p&gt;
     
     <item>
       <title></title>
+      <link>https://ooni.torproject.org/nettest/http-invalid-request-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
+      <description>
+
+&lt;h1 id=&#34;http-invalid-request-line:14e025d5555dc3e219f17d2edbd56544&#34;&gt;HTTP invalid request line&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;Instead of sending a normal HTTP request, this test sends an invalid HTTP
+request line - containing an invalid HTTP version number, an invalid field count
+and a huge request method – to an echo service listening on the standard HTTP
+port. An echo service is a very useful debugging and measurement tool, which
+simply sends back to the originating source any data it receives. If a middle
+box is not present in the network between the user and an echo service, then the
+echo service will send the invalid HTTP request line back to the user, exactly
+as it received it. In such cases, we assume that there is no visible traffic
+manipulation in the tested network.&lt;/p&gt;
+
+&lt;p&gt;If, however, a middle box is present in the tested network, the invalid HTTP
+request line will be intercepted by the middle box and this may trigger an error
+and that will subsequently be sent back to OONI. Such errors indicate that
+software for traffic manipulation is likely placed in the tested network, though
+it&amp;rsquo;s not always clear what that software is. In some cases though, we are able
+to identify censorship and/or surveillance vendors through the error messages in
+the received HTTP response.&lt;/p&gt;
+
+&lt;p&gt;So far, based on this technique we have
+&lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;detected&lt;/a&gt; the use of
+&lt;strong&gt;BlueCoat&lt;/strong&gt;, &lt;strong&gt;Squid&lt;/strong&gt; and &lt;strong&gt;Privoxy&lt;/strong&gt; in networks across 11 countries around
+the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
+that ISPs are using highly sophisticated censorship and/or surveillance software
+that is specifically designed to not trigger errors when receiving invalid HTTP
+request lines like the ones of this test. Furthermore, the presence of a middle
+box is not necessarily indicative of traffic manipulation, as they are often
+used in networks for caching purposes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://ooni.torproject.org/nettest/http-host/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -134,51 +179,6 @@ censorship.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The presence of a middle box is not necessarily indicative of
 censorship and/or traffic manipulation, as they are often used in networks for
 caching purposes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/http-invalid-request-line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
-      <description>
-
-&lt;h1 id=&#34;http-invalid-request-line:14e025d5555dc3e219f17d2edbd56544&#34;&gt;HTTP invalid request line&lt;/h1&gt;
-
-&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
-which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
-
-&lt;p&gt;Instead of sending a normal HTTP request, this test sends an invalid HTTP
-request line - containing an invalid HTTP version number, an invalid field count
-and a huge request method – to an echo service listening on the standard HTTP
-port. An echo service is a very useful debugging and measurement tool, which
-simply sends back to the originating source any data it receives. If a middle
-box is not present in the network between the user and an echo service, then the
-echo service will send the invalid HTTP request line back to the user, exactly
-as it received it. In such cases, we assume that there is no visible traffic
-manipulation in the tested network.&lt;/p&gt;
-
-&lt;p&gt;If, however, a middle box is present in the tested network, the invalid HTTP
-request line will be intercepted by the middle box and this may trigger an error
-and that will subsequently be sent back to OONI. Such errors indicate that
-software for traffic manipulation is likely placed in the tested network, though
-it&amp;rsquo;s not always clear what that software is. In some cases though, we are able
-to identify censorship and/or surveillance vendors through the error messages in
-the received HTTP response.&lt;/p&gt;
-
-&lt;p&gt;So far, based on this technique we have
-&lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;detected&lt;/a&gt; the use of
-&lt;strong&gt;BlueCoat&lt;/strong&gt;, &lt;strong&gt;Squid&lt;/strong&gt; and &lt;strong&gt;Privoxy&lt;/strong&gt; in networks across 11 countries around
-the world.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
-that ISPs are using highly sophisticated censorship and/or surveillance software
-that is specifically designed to not trigger errors when receiving invalid HTTP
-request lines like the ones of this test. Furthermore, the presence of a middle
-box is not necessarily indicative of traffic manipulation, as they are often
-used in networks for caching purposes.&lt;/p&gt;
 </description>
     </item>
     
@@ -259,45 +259,6 @@ likely the case that they are blocked within the tested network.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/meek-fronted-requests/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/meek-fronted-requests/</guid>
-      <description>
-
-&lt;h1 id=&#34;meek-fronted-requests:a8b91c4b63cc55cc30e4036a69b34c2f&#34;&gt;Meek Fronted Requests&lt;/h1&gt;
-
-&lt;p&gt;This test examines whether the domains used by Meek (a type of &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
-bridge&lt;/a&gt;) work in tested networks.&lt;/p&gt;
-
-&lt;p&gt;Meek is a pluggable transport which uses non-blocked domains, such as
-google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com
-(Microsoft azure cloud infrastructure), to proxy its users over
-&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; to blocked websites, while hiding both the
-fact that they are connecting to such websites and how they are connecting to
-them. As such, Meek is useful for not only connecting to websites that are
-blocked, but for also hiding which websites you are connecting to.&lt;/p&gt;
-
-&lt;p&gt;Below is a simplified explanation of how this works:&lt;/p&gt;
-
-&lt;p&gt;[user] → &lt;a href=&#34;https://www.google.com]&#34;&gt;https://www.google.com]&lt;/a&gt; → Meek hosted on the cloud] → Tor] → blocked-
-[website]&lt;/p&gt;
-
-&lt;p&gt;The user will receive a response (access to a blocked website, for example) from
-cloud-fronted domains, such as google.com, through the following way:&lt;/p&gt;
-
-&lt;p&gt;[blocked-website] → Tor] → Meek hosted on the cloud] → &lt;a href=&#34;https://www.google.com]&#34;&gt;https://www.google.com]&lt;/a&gt; →
-[user]&lt;/p&gt;
-
-&lt;p&gt;In short, this test does an encrypted connection to cloud-fronted domains over
-HTTPS and examines whether it can connect to them or not. As such, this test
-enables users to check whether Meek enables the circumvention of censorship in
-an automated way.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://ooni.torproject.org/nettest/psiphon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -346,6 +307,45 @@ the Tor network in countries where such access is blocked.&lt;/p&gt;
 successfully, we consider that Tor bridges are not blocked in the tested
 network. If the test, however, is unable to bootstrap a connection, then the Tor
 bridges are either offline or blocked.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ooni.torproject.org/nettest/meek-fronted-requests/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/meek-fronted-requests/</guid>
+      <description>
+
+&lt;h1 id=&#34;meek-fronted-requests:a8b91c4b63cc55cc30e4036a69b34c2f&#34;&gt;Meek Fronted Requests&lt;/h1&gt;
+
+&lt;p&gt;This test examines whether the domains used by Meek (a type of &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
+bridge&lt;/a&gt;) work in tested networks.&lt;/p&gt;
+
+&lt;p&gt;Meek is a pluggable transport which uses non-blocked domains, such as
+google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com
+(Microsoft azure cloud infrastructure), to proxy its users over
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; to blocked websites, while hiding both the
+fact that they are connecting to such websites and how they are connecting to
+them. As such, Meek is useful for not only connecting to websites that are
+blocked, but for also hiding which websites you are connecting to.&lt;/p&gt;
+
+&lt;p&gt;Below is a simplified explanation of how this works:&lt;/p&gt;
+
+&lt;p&gt;[user] → &lt;a href=&#34;https://www.google.com]&#34;&gt;https://www.google.com]&lt;/a&gt; → Meek hosted on the cloud] → Tor] → blocked-
+[website]&lt;/p&gt;
+
+&lt;p&gt;The user will receive a response (access to a blocked website, for example) from
+cloud-fronted domains, such as google.com, through the following way:&lt;/p&gt;
+
+&lt;p&gt;[blocked-website] → Tor] → Meek hosted on the cloud] → &lt;a href=&#34;https://www.google.com]&#34;&gt;https://www.google.com]&lt;/a&gt; →
+[user]&lt;/p&gt;
+
+&lt;p&gt;In short, this test does an encrypted connection to cloud-fronted domains over
+HTTPS and examines whether it can connect to them or not. As such, this test
+enables users to check whether Meek enables the circumvention of censorship in
+an automated way.&lt;/p&gt;
 </description>
     </item>
     

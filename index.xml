@@ -6,8 +6,80 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jul 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Internet Access Disruption in Turkey - July 2016</title>
+      <link>https://ooni.torproject.org/post/turkey-internet-access-disruption/</link>
+      <pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/turkey-internet-access-disruption/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;With the attempted coup in Turkey, reports went out about social media being throttled and/or blocked. We analysed data about this that we collected with RIPE Atlas and the Open Observatory of Network Interference (OONI).&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;On 15 July, a coup was attempted in Turkey. We heard about social media being throttled and/or blocked, but much was unclear about what was actually going on. Here we present measurement data from various platforms that shared their data publicly.&lt;/p&gt;
+
+&lt;h2 id=&#34;ripe-atlas:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;RIPE Atlas&lt;/h2&gt;
+
+&lt;p&gt;Looking at the &lt;a href=&#34;https://atlas.ripe.net/&#34;&gt;RIPE Atlas&lt;/a&gt; data, we didn&amp;rsquo;t find anything consistent and/or structural in the latency data from 15 July that pointed towards changes in connectivity for our RIPE Atlas measurement points (called &amp;ldquo;probes&amp;rdquo;). That said, an &lt;a href=&#34;https://labs.ripe.net/Members/cristel_pelsser/pinpointing-delay-and-forwarding-anomalies-in-ripe-atlas-built-in-measurements&#34;&gt;anomaly detector for RIPE Atlas traceroutes&lt;/a&gt; is actively being worked on, which we can potentially use to look at events like this in the near future.&lt;/p&gt;
+
+&lt;p&gt;When we looked into the data for SSL certificate fetches from probes, though, we did find something interesting. For a general SSL certificate fetch measurement from Turkish RIPE Atlas probes that ran continuously on 15 July and the days before and after, no anomalies were detected for RIPE Atlas probes in Turkey. However, when we looked at specific measurements that were started by our users to measure SSL certificate fetches from Turkey for Twitter and Facebook, you can see anomalies.&lt;/p&gt;
+
+&lt;p&gt;The Twitter measurement started around 21:30 UTC and &lt;a href=&#34;https://labs.ripe.net/Members/massimo_candela/new-ripe-atlas-tool-latencymon&#34;&gt;LatencyMON&lt;/a&gt; results for it can be seen in Figure 1 below. What can be seen here is that, for multiple networks in Turkey, Twitter SSL fetches failed when this measurement started at 21:30 UTC. This measurement does not distinguish between blocking and severe throttling; the SSL measurement times out after five seconds, which could be the result of either. Networks where the fetch continued to work are not shown in this picture.&lt;/p&gt;
+
+&lt;p&gt;For the incumbent telco, the fetches started working again at around 22:00 UTC (which is midnight in Turkey), but for other networks, the time periods when the fetches failed are not aligned. If our measurements indeed captured Twitter censoring in Turkey, this suggests that networks were implementing the blocking independent from each other. In other words, &lt;strong&gt;we see no evidence that there is a mechanism in place that allows the Turkish government to automatically and widely block specific services&lt;/strong&gt;. And while the incumbent telco owns a large part of the market, both in facilitating Internet access to end users as well as providing transit services to other ISPs, if an order goes out to block certain specific services, it seems it&amp;rsquo;s up to each individual network to actually make this happen.&lt;/p&gt;
+
+&lt;p&gt;A Facebook SSL measurement was started about an hour later, at which point the main telco didn&amp;rsquo;t block anymore, but the patterns for the other networks were similar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/turkey-internet-access-disruption/Ripe-atlas-data.png&#34; alt=&#34;Ripe Atlas Data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figure 1: Twitter SSL certificate fetches from RIPE Atlas probes in Turkey on July 15. Red indicates a failed SSL certificate fetch.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The SSL measurement towards Twitter, Facebook and YouTube also contains hostname lookups for twitter.com, facebook.com and youtube.com. Normally these DNS lookups point to address space that used by the corresponding company, but for all three domains we found the lookups being directed towards address space used by the incumbent telco. We found 17 cases of this DNS hijacking between 22:13 UTC and 23:17 UTC, from two different probes in two different networks, where both networks used the incumbent telco as their upstream network.&lt;/p&gt;
+
+&lt;p&gt;For networks where we do not have multiple probes in each network, it&amp;rsquo;s worth noting that we cannot isolate any probe-specific effects that might exist in the measurements.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooni:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;OONI&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; is a free software project under the &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor Project&lt;/a&gt; that aims to detect Internet censorship, traffic manipulation and signs of surveillance around the world through the collection and processing of network measurements.&lt;/p&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s HTTP request test was run in Turkey at 4:30 UTC on 15th July to test a set of URLs - including twitter.com, facebook.com and youtube.com - for censorship. This test is designed to examine whether URLs are blocked based on a comparison of HTTP requests over Tor vs. the user&amp;rsquo;s network. &lt;a href=&#34;https://explorer.ooni.torproject.org/country/TR&#34;&gt;OONI&amp;rsquo;s measurement data&lt;/a&gt; indicates that twitter.com, facebook.com and youtube.com did not appear to be blocked on the morning of 15th July leading up to the attempted military coup. However, it&amp;rsquo;s worth noting that these measurements were only conducted from one network vantage point within Turkey, and that OONI tests were not run during or following the attempted coup.&lt;/p&gt;
+
+&lt;h2 id=&#34;tor-use:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Tor use&lt;/h2&gt;
+
+&lt;p&gt;With specific social networks being blocked, or at risk of being blocked, it is to be expected that users wanting to access these networks will try to circumvent blocking. One way of doing that is to use Tor. Figure 2 is taken from the telemetry that Tor puts online about the number of users per country. It shows that the day after 15 July, the number of Tor users in Turkey increased significantly, from 15,000 to 20,000.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/turkey-internet-access-disruption/tor-turkey.png&#34; alt=&#34;Tor turkey&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figure 2: Tor users connecting from Turkey. Data taken from &lt;a href=&#34;https://metrics.torproject.org/&#34;&gt;https://metrics.torproject.org/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, an increased use of Tor bridges, designed to circumvent the blocking of access to the Tor network, occurred during the same period, as illustrated in Figure 3 below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/turkey-internet-access-disruption/tor-bridges-turkey.png&#34; alt=&#34;Tor bridge turkey&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figure 3: Usage of Tor bridges in Turkey from 1-16 July 2016. Data taken from &lt;a href=&#34;https://metrics.torproject.org&#34;&gt;https://metrics.torproject.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;traffic-volumes:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Traffic volumes&lt;/h2&gt;
+
+&lt;p&gt;Except for IXPs sharing it publicly, we don&amp;rsquo;t have much public data about traffic volume on the Internet. For this information we are at the mercy of people willing to share it. Luckily, Cloudflare shared their traffic levels for 15 July, which showed a significant drop in traffic volume from Turkey, with the traffic volume from France as a reference (Figure 4).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/turkey-internet-access-disruption/traffic-volumes.jpeg&#34; alt=&#34;Traffic volumes&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Figure 4: Cloudflare traffic levels from Turkey and France on 15 July. &lt;a href=&#34;https://twitter.com/eastdakota/status/754073339543433216&#34;&gt;Data from a tweet by @eastdakota&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;In recent years, Turkey has had a history of selectively blocking Internet access. With operators sharing information, and using measurements from RIPE Atlas and OONI, monitoring the Internet access situation has become more transparent and open and we can better understand and share what&amp;rsquo;s actually going on, to the extent that we don&amp;rsquo;t cause harm for any of our users or the network operators involved. With OONI, users are specifically and explicitly measuring censorship, which is outside the scope of what RIPE Atlas can do; as such, we feel our network measurement infrastructures are complementary.&lt;/p&gt;
+
+&lt;p&gt;If users want to help detect censorship, they can help - after &lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;carefully assessing the risks involved&lt;/a&gt; - by &lt;a href=&#34;https://ooni.torproject.org/install/&#34;&gt;installing ooniprobe&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The situation in Turkey is a bit special, because diametrically opposed to the practice of Internet blocking is the United Nations Human Rights Council&amp;rsquo;s &lt;a href=&#34;http://www.article19.org/data/files/Internet_Statement_Adopted.pdf&#34;&gt;resolution on the promotion, protection and enjoyment of human rights on the Internet&lt;/a&gt;, which condemns countries that intentionally disrupt citizens&amp;rsquo; Internet access. Turkey was one of the six countries that took the initiative on the resolution.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This post was originally published by RIPE Atlas &lt;strong&gt;&lt;a href=&#34;https://labs.ripe.net/Members/emileaben/internet-access-disruption-in-turkey&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>OONI releases new Web Connectivity test for detecting online censorship</title>
@@ -4763,484 +4835,6 @@ what my child should watch and should not.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/about/data-policy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/about/data-policy/</guid>
-      <description>
-
-&lt;h1 id=&#34;ooni-data-policy:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;OONI Data Policy&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; 2016-05-05&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt; 1.0.0&lt;/p&gt;
-
-&lt;p&gt;This Data Policy explains what data is collected, processed, stored and
-published by the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference
-(OONI)&lt;/a&gt; project, as well as how users can opt-out
-from sending OONI their network measurements.&lt;/p&gt;
-
-&lt;p&gt;The use of OONI&amp;rsquo;s software and website constitutes an acceptance of the policies
-outlined in this Data Policy.&lt;/p&gt;
-
-&lt;h2 id=&#34;website-visitors:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Website Visitors&lt;/h2&gt;
-
-&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; use tracking cookies, analytics or any other tracking
-technologies through its &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;website&lt;/a&gt; and does &lt;em&gt;not&lt;/em&gt;
-collect any information about its website visitors.&lt;/p&gt;
-
-&lt;p&gt;Access logs, which only include the date of the requested page, can be stored
-for up to 2 weeks and do &lt;em&gt;not&lt;/em&gt; include the IP addresses of website visitors nor
-the time of access.&lt;/p&gt;
-
-&lt;p&gt;If this changes in the future, users will be notified through this Data Policy.&lt;/p&gt;
-
-&lt;h2 id=&#34;software-users:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Software Users&lt;/h2&gt;
-
-&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect user privacy, but is developed by
-people who &lt;em&gt;care&lt;/em&gt; about user privacy. While OONI developers take measures to
-protect users&amp;rsquo; privacy by &lt;em&gt;not&lt;/em&gt; deliberately collecting their IP addresses,
-users might still potentially face risks as a result of OONI&amp;rsquo;s data collection,
-processing, storing and publishing methods, as explained below.&lt;/p&gt;
-
-&lt;p&gt;To mitigate such potential risks, users can choose to &lt;em&gt;opt-out&lt;/em&gt; from certain or
-all types of data collection by OONI, though this would limit OONI&amp;rsquo;s research.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-collects:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Collects&lt;/h3&gt;
-
-&lt;p&gt;When a user runs &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software
-tests&lt;/a&gt;, the OONI project can
-collect the following types of data:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the code which corresponds to the country from which
-the user is running OONI tests from, by automatically searching for it based on
-the user&amp;rsquo;s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;MaxMind GeoIP
-database&lt;/a&gt;. The collection of country codes is
-an important part of OONI&amp;rsquo;s research, as it enables OONI to map out global
-network measurements and to identify where network interferences take place.
-This information could potentially be useful to local researchers, journalists
-and advocates who aim to discover network interferences (such as censorship and
-traffic manipulation) in a country.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of country codes
-by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
-file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the Autonomous System Number (ASN) which corresponds
-to the network that a user is running OONI tests from. The collection of the ASN
-is useful to OONI&amp;rsquo;s research because it reveals the specific network provider
-(such as Vodafone) of a user. Such information can increase transparency in
-regards to which network providers are implementing censorship or other forms of
-network interference.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of their
-network&amp;rsquo;s ASN by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
-configuration&lt;/a&gt;
-file inside of  &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the time and date of when tests were run. This
-information helps OONI evaluate when network interferences occur and to compare
-them across time. Users &lt;em&gt;cannot&lt;/em&gt; opt-out from this type of data collection, as
-it is a core component of OONI&amp;rsquo;s research.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users&amp;rsquo; IP addresses. In fact, OONI
-takes measures to remove users&amp;rsquo; IP addresses from the collected measurements, to
-protect its users from potential risks.&lt;/p&gt;
-
-&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users&amp;rsquo; IP addresses and other
-potentially personally-identifiable information, if such information is included
-in the HTTP headers or other metadata of measurements. This, for example, can
-occur if the tested websites include tracking technologies or custom content
-based on a user&amp;rsquo;s network location.&lt;/p&gt;
-
-&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but they can choose to
-&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
-file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The types of network measurements that OONI collects depend on the types of
-tests that are run. Specifications about each OONI test can be viewed
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;here&lt;/a&gt;, and
-details about what collected network measurements entail can be viewed through
-&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; or through OONI&amp;rsquo;s
-&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;public list of measurements&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements
-by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-processes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Processes&lt;/h3&gt;
-
-&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;data pipeline&lt;/a&gt;,
-OONI processes all of the network measurements that it collects, which include
-the aforementioned types of data. OONI processes data with the aim of deriving
-meaning from the collected measurements and, specifically, in an attempt to
-answer the following types of questions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What types of network interferences occurred?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which countries did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which networks did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;How did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To answer such questions, OONI&amp;rsquo;s pipeline is designed to process data which is
-automatically sent to OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
-
-&lt;p&gt;Users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements by running
-ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-stores:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Stores&lt;/h3&gt;
-
-&lt;p&gt;OONI stores all of the aforementioned data that it collects and processes,
-including users&amp;rsquo; IP addresses and other potentially personally-identifiable
-information which &lt;em&gt;might unintentionally&lt;/em&gt; be collected and therefore stored,
-despite OONI&amp;rsquo;s efforts to prevent this from happening.&lt;/p&gt;
-
-&lt;p&gt;Users can &lt;em&gt;opt-out&lt;/em&gt; from sending specific types of data to OONI&amp;rsquo;s measurement
-collector as described in previous sections of this Data Policy, or they can
-&lt;em&gt;opt-out&lt;/em&gt; from sending OONI any of their measurements by running ooniprobe with
-the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-publishes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Publishes&lt;/h3&gt;
-
-&lt;p&gt;OONI publishes all of the network measurement data that it collects and
-processes because open data allows third parties to conduct independent studies,
-to verify OONI findings and/or to answer other research questions.&lt;/p&gt;
-
-&lt;p&gt;Currently, OONI publishes all collected measurements on its website
-through:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Both resources include the same measurements; the only difference is that OONI
-Explorer is an interactive visualization of the measurements.&lt;/p&gt;
-
-&lt;p&gt;If users&amp;rsquo; IP addresses and/or other potentially personally-identifiable
-information are included in the HTTP headers or other metadata of collected
-measurements, then such information &lt;em&gt;might&lt;/em&gt; be publicly available through the
-above resources.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s important to note that the publication of network measurements might raise
-various types of &lt;em&gt;risks&lt;/em&gt; for OONI users. Information about such risks can be
-found &lt;a href=&#34;INCLUDE LINK&#34;&gt;here&lt;/a&gt;. Users can also consider opting-out from submitting
-some or all of their measurements to OONI through the following opt-out section
-of this Data Policy.&lt;/p&gt;
-
-&lt;h3 id=&#34;opt-out:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Opt-out&lt;/h3&gt;
-
-&lt;p&gt;OONI software users can &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector
-specific types of data by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
- file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. Through this file, users can opt-out
-from sending OONI the following types of information:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but users can choose to
-&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) through the above configuration
-file.&lt;/p&gt;
-
-&lt;p&gt;Users can also choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector any
-data at all, by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option. This option
-is quite often chosen by users who prefer to &lt;em&gt;not&lt;/em&gt; have their measurements
-published, due to potential risks that could emerge as a result of such
-publication.&lt;/p&gt;
-
-&lt;h2 id=&#34;data-policy-changes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data Policy Changes&lt;/h2&gt;
-
-&lt;p&gt;Although most changes are likely to be minor, OONI may change its Data Policy
-from time to time, and in OONI&amp;rsquo;s sole discretion.&lt;/p&gt;
-
-&lt;p&gt;OONI encourages its website visitors and software users to frequently check this
-page for any changes to its Data Policy. The continued use of OONI&amp;rsquo;s website and
-software after any change in this Data Policy will constitute acceptance of such
-change.&lt;/p&gt;
-
-&lt;p&gt;Thoughts or questions about this Data Policy? Please send an email to
-&lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Key ID:
-    0CB177B7
-Fingerprint:
-4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OONI Partnership Program</title>
-      <link>https://ooni.torproject.org/get-involved/partnership-program/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/get-involved/partnership-program/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Uncovering Evidence of Online Censorship Around the World&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Hundreds of volunteers around the world have made the OONI project possible over
-the last years by contributing to the collection of millions of network
-measurements across more than 95 countries. These measurements have discovered
-online censorship and traffic manipulation around the world, and have brought
-transparency to covert surveillance through proxies and traffic monitoring.&lt;/p&gt;
-
-&lt;p&gt;Now we aim to take OONI a step further by studying network anomalies more
-systematically and within local context, through OONI&amp;rsquo;s Partnership Program.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What is the OONI Partnership Program?&lt;/h2&gt;
-
-&lt;p&gt;The OONI Partnership Program is a collaboration between the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of
-Network Interference (OONI)&lt;/a&gt; and groups or
-organizations around the world on the study of network interferences, such as
-online censorship. Such groups/organizations can include NGOs, hackerspaces,
-media organizations, legal associations and research groups.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-the-aim-of-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What is the aim of the OONI Partnership Program?&lt;/h2&gt;
-
-&lt;p&gt;Through the Partnership Program, we aim to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;increase transparency and public awareness about online censorship and other
-network interferences&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;increase the continuous collection of measurements across time&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;improve the quality of collected measurements&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;provide context to collected measurements&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;directly support partner organizations in terms of using ooniprobe and
-reporting on the results&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Input from partners is essential in terms of understanding:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;the local network landscape and how ISPs are structured&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;which URLs and apps would be interesting to test for censorship&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;the governmental landscape and how to publicize results effectively&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;what-does-the-ooni-partnership-program-entail:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What does the OONI Partnership Program entail?&lt;/h2&gt;
-
-&lt;p&gt;The OONI Partnership Program was developed in an attempt to study online
-censorship and other network interferences more strategically and within local
-context through partnerships. To this end, depending on the role of each partner
-organization, the partnerships can include (but are not necessarily limited to)
-the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Lepidopter: Running ooniprobe from a Raspberry Pi&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Creation/Review of lists of URLs to test for online censorship&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Story-telling: Reports, blogs and data visualizations&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;lepidopter-running-ooniprobe-from-a-raspberry-pi:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Lepidopter: Running ooniprobe from a Raspberry Pi&lt;/h3&gt;
-
-&lt;p&gt;We want to work with partners to deploy plug-and-play, cheap devices that keep
-tabs on censorship.&lt;/p&gt;
-
-&lt;p&gt;Over the last years, the collection of measurements based on OONI&amp;rsquo;s &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;free
-software tests&lt;/a&gt; was mostly dependent
-on volunteers running ooniprobe (OONI&amp;rsquo;s network measurement software) from their
-terminal. This by default limited tests to those who were tech-savvy enough to
-run them, and to those who didn&amp;rsquo;t mind running tests directly from their
-computer. The data collection was also limited by users&amp;rsquo; ability to keep their
-devices on and continuously connected to the internet while running tests (some
-of which might even last for hours at a time). As a result, systematically
-collecting and comparing measurements across time, and consistently monitoring
-networks during important local events (such as elections) has been quite a
-challenge.&lt;/p&gt;
-
-&lt;p&gt;In an attempt to address such limitations, we have developed &lt;strong&gt;Lepidopter&lt;/strong&gt;: a
-distribution of ooniprobe for Raspberry Pi platforms. This enables users to
-contribute to the collection of network measurements consistently across time,
-without having to manually run ooniprobe from their computers and regardless of
-their technical skills. This distribution is configured in such a way that, when
-inserted into a Raspberry Pi and connected to a network, it will by default run
-ooniprobe once a day and send collected measurements directly to OONI&amp;rsquo;s
-measurement collector. It is also designed to automatically get updated to the
-newest version of ooniprobe. All measurements collected by Lepidopter are
-published on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The main advantages of collecting measurements through Raspberry Pis include the
-following:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Stable and continuous daily measurements across extended periods of time&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Through the use of Lepidopter by partners, we aim to create stable vantage
-points which will allow for the continuous collection of daily measurements.
-This can enable us to compare results across time and to better detect and
-evaluate network interferences. Lepidopter is also particularly useful because
-it allows for the provision of new URLs to be tested, since it is meant to
-constantly be connected to a network.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;More types of data collection&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Partners can run &lt;em&gt;more&lt;/em&gt; tests through the use of a Raspberry Pi (in comparison
-to the desktop version of ooniprobe) and contribute to vaster types of data
-collection. While ooniprobe could, in theory, run all tests on Linux, that would
-not only be complicated to set up properly, but it would also require to grant
-the running process capabilities that could expose users to security risks,
-should the code be vulnerable. All tests, on the other hand, can be run through
-Raspberry Pis, thus increasing the amount of types of data collection. Running
-tests on separate hardware devices also has the advantage that they are not
-directly connected to a user&amp;rsquo;s computer.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;More accurate measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The various security products, such as personal firewalls, that users might have
-installed on their devices can impact the accuracy of measurements. As Raspberry
-Pis running ooniprobe would be independent from such products, the accuracy of
-such measurements would be greater.&lt;/p&gt;
-
-&lt;p&gt;Through the measurements we have collected over the last years (which can be
-viewed on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;), we have
-observed that censorship is not always carried out countrywide, nor always
-implemented in the same way across networks. As such, hosting Lepidopter within
-various &lt;em&gt;different&lt;/em&gt; networks in each country is an important component of OONI&amp;rsquo;s
-study and a core objective of the Partnership Program.&lt;/p&gt;
-
-&lt;h3 id=&#34;creation-review-of-lists-of-urls-to-test-for-online-censorship:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Creation/Review of lists of URLs to test for online censorship&lt;/h3&gt;
-
-&lt;p&gt;The Citizen Lab has supported OONI over the last years through the creation of
-lists of URLs to test for online censorship. These lists include the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/strong&gt; (including a list of globally accessed websites)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Through the OONI Partnership Program, we aim to collaborate with groups and
-organizations that are interested in reviewing the test lists that are specific
-to their country, or by creating new test lists for their countries if they
-don&amp;rsquo;t already exist. This collaborative process would help include more URLs
-which are relevant to the country&amp;rsquo;s local context and which are potentially
-interesting to test for censorship. Furthermore, through partnerships we would
-also work towards the risk assessment of tested URLs and their associated
-categories.&lt;/p&gt;
-
-&lt;h3 id=&#34;story-telling-reports-blogs-and-data-visualizations:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Story-telling: Reports, blogs and data visualizations&lt;/h3&gt;
-
-&lt;p&gt;OONI is a free software project and as such, our role is primarily that of a
-&lt;em&gt;technical&lt;/em&gt; partner. That said, we are &lt;em&gt;also&lt;/em&gt; willing to support our partners in
-terms of data analysis and story-telling based on the collected measurements.&lt;/p&gt;
-
-&lt;p&gt;We aim to increase transparency and public awareness about online censorship and
-other forms of network interference by communicating the main findings through
-reports, blogs and data visualizations. In collaboration with partners, we would
-like to provide local context to the findings. Through consultation with legal
-partners, for example, we would like to shed light on how and whether cases of
-online censorship are legally justified within their country. We would also like
-to collaborate with partners in terms of understanding the socio-political
-context of their country and reporting on internet censorship within that
-context.&lt;/p&gt;
-
-&lt;h2 id=&#34;who-can-join-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Who can join the OONI Partnership Program?&lt;/h2&gt;
-
-&lt;p&gt;Groups and organizations interested in increasing transparency about online
-censorship and other forms of network interference are encouraged to join the
-OONI Partnership Program. This can include (but not necessarily limited to):&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;NGOs&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;hackerspaces&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;legal associations&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;media organizations&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;research groups&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ideally, we would like to foster collaboration between various different types
-of groups/organizations, each of which could contribute to the study of network
-interferences from a different lens and which would also allow for the
-distribution of efforts amongst different groups.&lt;/p&gt;
-
-&lt;p&gt;Various hackerspaces, for example, could contribute to the data collection by
-running ooniprobe (through Raspberry Pis) within different networks. Legal
-organizations could provide consultation in regards to (potential) local legal
-risks of running ooniprobe and/or provide legal analysis of collected
-measurements. Media organizations could report on the findings, NGOs could
-provide further analysis within the context of digital rights and research
-groups could use the collected data to explore questions of their own. Through
-this collaborative approach between groups and organizations, we aim to improve
-the study and reporting of network interferences.&lt;/p&gt;
-
-&lt;p&gt;If you&amp;rsquo;re interested in joining the OONI Partnership Program, please drop us an
-email at &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt; (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD 3309
-6B29 43F0 0CB1 77B7).&lt;/p&gt;
-
-&lt;h2 id=&#34;how-can-ooni-support-its-partners:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;How can OONI support its partners?&lt;/h2&gt;
-
-&lt;p&gt;If you&amp;rsquo;re interested in examining online censorship within your country, OONI
-can support you in the following ways:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technical support:&lt;/strong&gt; We can guide you through the entire process of using
-OONI&amp;rsquo;s software, whether that involves running ooniprobe from your computer
-or setting up a Raspberry Pi to run ooniprobe. We can also supply some of
-our partners with Raspberry Pis and SD cards, which are already set-up with
-ooniprobe and ready to be used for testing. Throughout the duration of the
-partnership, you can rely on us for technical support in regards to the use
-of OONI&amp;rsquo;s software.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Creating/Reviewing lists of URLs to test for online censorship:&lt;/strong&gt; We will
-support you in terms of creating and/or reviewing a list of URLs specific to
-your country for testing online censorship throughout the duration of the
-partnership.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Communicating main findings:&lt;/strong&gt; We will support you in terms of communicating
-the main findings from the collected measurements to the public. Such
-support can include the writing of reports and blogs and, in some cases, the
-creation of data visualizations.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We might also be able to support partners in other additional ways, though this
-can be evaluated on a case by case basis.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://ooni.torproject.org/about/risks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -5552,36 +5146,441 @@ held liable.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/nettest/dns-consistency/</link>
+      <link>https://ooni.torproject.org/get-involved/contribute-test-lists/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
+      <guid>https://ooni.torproject.org/get-involved/contribute-test-lists/</guid>
       <description>
 
-&lt;h1 id=&#34;dns-consistency:8cd092f4d968324448a1b104fce68bce&#34;&gt;DNS consistency&lt;/h1&gt;
+&lt;p&gt;OONI tests specific websites to see if they are blocked, and such websites are
+included in what we call &amp;ldquo;test lists&amp;rdquo;. Each test list contains multiple
+categorized URLs which are tested for online censorship and they include the
+following:&lt;/p&gt;
 
-&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
-to be reliable with one that is tested for tampering.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
-(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
-others, run DNS resolvers which map IP addresses to host names. In certain
-circumstances though, ISPs map the wrong IP addresses to the wrong host names.
-This is a form of tampering, which OONI can detect by running its DNS
-consistency test.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
-DNS resolver (which we assume to not be tampered with) with the IP address
-mapped to that website by a provider. If the two IP addresses of the same
-website are different, then there is a sign of network interference. When ISPs
-tamper with DNS answers, users are redirected to other websites or fail to
-connect to their intended websites.&lt;/p&gt;
+&lt;p&gt;The global list includes a wide range of internationally relevant websites (most
+of which are in English), while each country-specific test list includes
+websites that are relevant and commonly accessed within that country (many of
+which are in local languages). The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30
+categories&lt;/a&gt;&lt;/strong&gt;, ranging from news media, file sharing and
+culture, to provocative or objectionable categories, like pornography, political
+criticism and hate speech.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
-with IP addresses that are closest to them geographically. Often this is not
-done with the intent of network tampering, but merely for the purpose of
-providing users faster access to websites. As a result, some false positives
-might arise in OONI measurements.&lt;/p&gt;
+&lt;p&gt;When running ooniprobe, you will connect to and download data from the websites
+included in the global test list and in the test list which is specific to the
+country that you are running ooniprobe from. We therefore encourage you to
+review all of the URLs included in these lists carefully, prior to running
+ooniprobe, as connecting to some of these websites might be legally questionable
+(or illegal) in some jurisdictions around the world.&lt;/p&gt;
+
+&lt;p&gt;If you are uncertain of the potential implications of connecting to and
+downloading data from the websites listed in the test lists, you can pass your
+&lt;em&gt;own&lt;/em&gt; test list with the following type of command line option:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ooniprobe &amp;lt;test-name&amp;gt; -f &amp;lt;your-test-list&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contributing-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Contributing to test lists&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt; has supported OONI in the creation,
+maintenance and development of test lists and many volunteers around the world
+have contributed to their country&amp;rsquo;s test lists over the last years. You can also
+contribute to the review or creation of your country&amp;rsquo;s test list (if it doesn&amp;rsquo;t
+already exist), as explained below.&lt;/p&gt;
+
+&lt;h3 id=&#34;reviewing-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Reviewing test lists&lt;/h3&gt;
+
+&lt;p&gt;All test lists that ooniprobe is designed to test for censorship are hosted in
+the &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;Citizen Lab&amp;rsquo;s test-list repository on github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To review country-specific test lists, please follow the steps below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Find the &lt;em&gt;csv&lt;/em&gt; file which is specific to the country that you want
+to run ooniprobe from (based on that country&amp;rsquo;s code)
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t find a csv file for your country, that&amp;rsquo;s probably because it
+doesn&amp;rsquo;t exist yet. In this case, please refer to the next section on &lt;em&gt;&amp;ldquo;Creating
+test lists&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Add &lt;em&gt;new&lt;/em&gt; URLs to the csv file under the &amp;ldquo;url&amp;rdquo; column.&lt;/p&gt;
+
+&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
+example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For further criteria, please view the URL categories
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please try to add URLs which fall under as many (if not all) of these categories
+as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
+  each new URL:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
+This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
+category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
+falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
+the csv file. The category descriptions can be found
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
+&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
+affiliated with, in terms of contributing to the test list. This can be
+added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
+column of the csv file.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Change the category codes and descriptions for URLs (included under
+the &amp;ldquo;category_code&amp;rdquo; and &amp;ldquo;category_description&amp;rdquo; columns of the csv file) &lt;em&gt;only
+if&lt;/em&gt; you think that those URLs have been allocated to wrong category codes and
+descriptions. In this case, please replace the category codes and descriptions
+with ones (from the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;recommended categories&lt;/a&gt; that you think are more
+suitable. We would also appreciate a comment on
+&lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;github&lt;/a&gt; or via email explaining the
+proposed changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have reviewed a test list based on the above, please submit
+ your changes to us. If you&amp;rsquo;re a github user, you can do so through a pull
+ request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us a &lt;em&gt;spreadsheet&lt;/em&gt;
+ (including the same format as github csv files) by dropping us an email at
+ contact@openobservatory.org (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD
+ 3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+
+&lt;h3 id=&#34;creating-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Creating test lists&lt;/h3&gt;
+
+&lt;p&gt;If you can&amp;rsquo;t find a test list specific to your country
+&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;, then it
+probably does not exist yet. Please help us create a test list for your country
+through the steps below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Create a csv file and name it based on an ISO-3166 two-letter country
+code which is specific to the country that URLs are being added for. You can
+find a reference for international standards for country codes
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-country_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;. An example would include a csv file created for Andora, named &lt;em&gt;ad.csv&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Include the following columns in the newly created csv file:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;url&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;category_code&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;category_description&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;date_added&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;source&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;notes&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Add URLs under the &amp;ldquo;url&amp;rdquo; column of the csv file.&lt;/p&gt;
+
+&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
+example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For further criteria, please view URL categories
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
+ each new URL:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
+This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
+category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
+falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
+the csv file. The category descriptions can be found
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
+&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
+affiliated with, in terms of contributing to the test list. This can be
+added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
+column of the csv file.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have created a new test list based on the above, please
+ submit your csv file to us. If you&amp;rsquo;re a github user, you can do so through a
+ pull request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us your csv file by
+ dropping us an email at contact@openobservatory.org (PGP Key Fingerprint: 4C15
+ DDA9 96C6 C0CF 48BD  3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ooni.torproject.org/about/data-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/about/data-policy/</guid>
+      <description>
+
+&lt;h1 id=&#34;ooni-data-policy:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;OONI Data Policy&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; 2016-05-05&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt; 1.0.0&lt;/p&gt;
+
+&lt;p&gt;This Data Policy explains what data is collected, processed, stored and
+published by the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference
+(OONI)&lt;/a&gt; project, as well as how users can opt-out
+from sending OONI their network measurements.&lt;/p&gt;
+
+&lt;p&gt;The use of OONI&amp;rsquo;s software and website constitutes an acceptance of the policies
+outlined in this Data Policy.&lt;/p&gt;
+
+&lt;h2 id=&#34;website-visitors:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Website Visitors&lt;/h2&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; use tracking cookies, analytics or any other tracking
+technologies through its &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;website&lt;/a&gt; and does &lt;em&gt;not&lt;/em&gt;
+collect any information about its website visitors.&lt;/p&gt;
+
+&lt;p&gt;Access logs, which only include the date of the requested page, can be stored
+for up to 2 weeks and do &lt;em&gt;not&lt;/em&gt; include the IP addresses of website visitors nor
+the time of access.&lt;/p&gt;
+
+&lt;p&gt;If this changes in the future, users will be notified through this Data Policy.&lt;/p&gt;
+
+&lt;h2 id=&#34;software-users:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Software Users&lt;/h2&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect user privacy, but is developed by
+people who &lt;em&gt;care&lt;/em&gt; about user privacy. While OONI developers take measures to
+protect users&amp;rsquo; privacy by &lt;em&gt;not&lt;/em&gt; deliberately collecting their IP addresses,
+users might still potentially face risks as a result of OONI&amp;rsquo;s data collection,
+processing, storing and publishing methods, as explained below.&lt;/p&gt;
+
+&lt;p&gt;To mitigate such potential risks, users can choose to &lt;em&gt;opt-out&lt;/em&gt; from certain or
+all types of data collection by OONI, though this would limit OONI&amp;rsquo;s research.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-collects:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Collects&lt;/h3&gt;
+
+&lt;p&gt;When a user runs &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software
+tests&lt;/a&gt;, the OONI project can
+collect the following types of data:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the code which corresponds to the country from which
+the user is running OONI tests from, by automatically searching for it based on
+the user&amp;rsquo;s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;MaxMind GeoIP
+database&lt;/a&gt;. The collection of country codes is
+an important part of OONI&amp;rsquo;s research, as it enables OONI to map out global
+network measurements and to identify where network interferences take place.
+This information could potentially be useful to local researchers, journalists
+and advocates who aim to discover network interferences (such as censorship and
+traffic manipulation) in a country.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of country codes
+by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the Autonomous System Number (ASN) which corresponds
+to the network that a user is running OONI tests from. The collection of the ASN
+is useful to OONI&amp;rsquo;s research because it reveals the specific network provider
+(such as Vodafone) of a user. Such information can increase transparency in
+regards to which network providers are implementing censorship or other forms of
+network interference.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of their
+network&amp;rsquo;s ASN by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+configuration&lt;/a&gt;
+file inside of  &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the time and date of when tests were run. This
+information helps OONI evaluate when network interferences occur and to compare
+them across time. Users &lt;em&gt;cannot&lt;/em&gt; opt-out from this type of data collection, as
+it is a core component of OONI&amp;rsquo;s research.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users&amp;rsquo; IP addresses. In fact, OONI
+takes measures to remove users&amp;rsquo; IP addresses from the collected measurements, to
+protect its users from potential risks.&lt;/p&gt;
+
+&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users&amp;rsquo; IP addresses and other
+potentially personally-identifiable information, if such information is included
+in the HTTP headers or other metadata of measurements. This, for example, can
+occur if the tested websites include tracking technologies or custom content
+based on a user&amp;rsquo;s network location.&lt;/p&gt;
+
+&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but they can choose to
+&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The types of network measurements that OONI collects depend on the types of
+tests that are run. Specifications about each OONI test can be viewed
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;here&lt;/a&gt;, and
+details about what collected network measurements entail can be viewed through
+&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; or through OONI&amp;rsquo;s
+&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;public list of measurements&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements
+by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-processes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Processes&lt;/h3&gt;
+
+&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;data pipeline&lt;/a&gt;,
+OONI processes all of the network measurements that it collects, which include
+the aforementioned types of data. OONI processes data with the aim of deriving
+meaning from the collected measurements and, specifically, in an attempt to
+answer the following types of questions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What types of network interferences occurred?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To answer such questions, OONI&amp;rsquo;s pipeline is designed to process data which is
+automatically sent to OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
+
+&lt;p&gt;Users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements by running
+ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-stores:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Stores&lt;/h3&gt;
+
+&lt;p&gt;OONI stores all of the aforementioned data that it collects and processes,
+including users&amp;rsquo; IP addresses and other potentially personally-identifiable
+information which &lt;em&gt;might unintentionally&lt;/em&gt; be collected and therefore stored,
+despite OONI&amp;rsquo;s efforts to prevent this from happening.&lt;/p&gt;
+
+&lt;p&gt;Users can &lt;em&gt;opt-out&lt;/em&gt; from sending specific types of data to OONI&amp;rsquo;s measurement
+collector as described in previous sections of this Data Policy, or they can
+&lt;em&gt;opt-out&lt;/em&gt; from sending OONI any of their measurements by running ooniprobe with
+the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-publishes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Publishes&lt;/h3&gt;
+
+&lt;p&gt;OONI publishes all of the network measurement data that it collects and
+processes because open data allows third parties to conduct independent studies,
+to verify OONI findings and/or to answer other research questions.&lt;/p&gt;
+
+&lt;p&gt;Currently, OONI publishes all collected measurements on its website
+through:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Both resources include the same measurements; the only difference is that OONI
+Explorer is an interactive visualization of the measurements.&lt;/p&gt;
+
+&lt;p&gt;If users&amp;rsquo; IP addresses and/or other potentially personally-identifiable
+information are included in the HTTP headers or other metadata of collected
+measurements, then such information &lt;em&gt;might&lt;/em&gt; be publicly available through the
+above resources.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s important to note that the publication of network measurements might raise
+various types of &lt;em&gt;risks&lt;/em&gt; for OONI users. Information about such risks can be
+found &lt;a href=&#34;INCLUDE LINK&#34;&gt;here&lt;/a&gt;. Users can also consider opting-out from submitting
+some or all of their measurements to OONI through the following opt-out section
+of this Data Policy.&lt;/p&gt;
+
+&lt;h3 id=&#34;opt-out:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Opt-out&lt;/h3&gt;
+
+&lt;p&gt;OONI software users can &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector
+specific types of data by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+ file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. Through this file, users can opt-out
+from sending OONI the following types of information:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but users can choose to
+&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) through the above configuration
+file.&lt;/p&gt;
+
+&lt;p&gt;Users can also choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector any
+data at all, by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option. This option
+is quite often chosen by users who prefer to &lt;em&gt;not&lt;/em&gt; have their measurements
+published, due to potential risks that could emerge as a result of such
+publication.&lt;/p&gt;
+
+&lt;h2 id=&#34;data-policy-changes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data Policy Changes&lt;/h2&gt;
+
+&lt;p&gt;Although most changes are likely to be minor, OONI may change its Data Policy
+from time to time, and in OONI&amp;rsquo;s sole discretion.&lt;/p&gt;
+
+&lt;p&gt;OONI encourages its website visitors and software users to frequently check this
+page for any changes to its Data Policy. The continued use of OONI&amp;rsquo;s website and
+software after any change in this Data Policy will constitute acceptance of such
+change.&lt;/p&gt;
+
+&lt;p&gt;Thoughts or questions about this Data Policy? Please send an email to
+&lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Key ID:
+    0CB177B7
+Fingerprint:
+4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

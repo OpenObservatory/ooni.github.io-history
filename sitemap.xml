@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://ooni.torproject.org/</loc>
-    <lastmod>2016-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/post/turkey-internet-access-disruption/</loc>
+    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -62,15 +67,23 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/about/risks/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/get-involved/contribute-test-lists/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/about/data-policy/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/get-involved/partnership-program/</loc>
+    <loc>https://ooni.torproject.org/install/ooniprobe/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/risks/</loc>
+    <loc>https://ooni.torproject.org/get-involved/partnership-program/</loc>
   </url>
   
   <url>
@@ -82,19 +95,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/install/ooniprobe/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
   </url>
   
   <url>
     <loc>https://ooni.torproject.org/nettest/http-host/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/get-involved/contribute-test-lists/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
   </url>
   
   <url>
@@ -106,15 +111,15 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
   </url>
   
   <url>
     <loc>https://ooni.torproject.org/nettest/tor-bridge-reachability/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
   </url>
   
   <url>
