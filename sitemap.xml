@@ -67,19 +67,15 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/risks/</loc>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/get-involved/contribute-test-lists/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/data-policy/</loc>
+    <loc>https://ooni.torproject.org/about/risks/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/install/ooniprobe/</loc>
+    <loc>https://ooni.torproject.org/about/data-policy/</loc>
   </url>
   
   <url>
@@ -95,11 +91,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
+    <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
   </url>
   
   <url>
@@ -111,15 +107,19 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/install/ooniprobe/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
   </url>
   
   <url>
     <loc>https://ooni.torproject.org/nettest/tor-bridge-reachability/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
   </url>
   
   <url>

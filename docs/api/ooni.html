@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 1.6.0 documentation</title>
+  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.0.0a1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 1.6.0 documentation" href="../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0a1 documentation" href="../index.html"/>
         <link rel="next" title="Test Templates" href="ooni.templates.html"/>
         <link rel="prev" title="ooni.nettests third_party Package" href="../nettests/ooni.nettests.third_party.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                1.6.0
+                2.0.0a1
               </div>
             
           
@@ -90,7 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../nettests/modules.html">Implemented NetTests</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Measurement Developer API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#nettest-module"><code class="docutils literal"><span class="pre">nettest</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#settings-module"><code class="docutils literal"><span class="pre">settings</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ooni.settings"><code class="docutils literal"><span class="pre">settings</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oonicli-module"><code class="docutils literal"><span class="pre">oonicli</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reporter-module"><code class="docutils literal"><span class="pre">reporter</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
@@ -151,8 +151,88 @@
 <div class="section" id="nettest-module">
 <h2><code class="xref py py-mod docutils literal"><span class="pre">nettest</span></code> Module<a class="headerlink" href="#nettest-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="settings-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">settings</span></code> Module<a class="headerlink" href="#settings-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ooni.settings">
+<span id="settings-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">settings</span></code> Module<a class="headerlink" href="#module-ooni.settings" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ooni.settings.OConfig">
+<em class="property">class </em><code class="descclassname">ooni.settings.</code><code class="descname">OConfig</code><a class="reference internal" href="../_modules/ooni/settings.html#OConfig"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ooni.settings.OConfig.check_incoherences">
+<code class="descname">check_incoherences</code><span class="sig-paren">(</span><em>configuration</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.check_incoherences"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.check_incoherences" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.check_tor">
+<code class="descname">check_tor</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.check_tor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.check_tor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called only when we must start tor by director.start</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.create_config_file">
+<code class="descname">create_config_file</code><span class="sig-paren">(</span><em>include_ip=False</em>, <em>include_asn=True</em>, <em>include_country=True</em>, <em>should_upload=True</em>, <em>preferred_backend='onion'</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.create_config_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.create_config_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.settings.OConfig.data_directory">
+<code class="descname">data_directory</code><a class="headerlink" href="#ooni.settings.OConfig.data_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.settings.OConfig.data_directory_candidates">
+<code class="descname">data_directory_candidates</code><a class="headerlink" href="#ooni.settings.OConfig.data_directory_candidates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.get_data_file_path">
+<code class="descname">get_data_file_path</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.get_data_file_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.get_data_file_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.initialize_ooni_home">
+<code class="descname">initialize_ooni_home</code><span class="sig-paren">(</span><em>custom_home=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.initialize_ooni_home"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.initialize_ooni_home" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.is_initialized">
+<code class="descname">is_initialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.is_initialized"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.is_initialized" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.log_incoherences">
+<code class="descname">log_incoherences</code><span class="sig-paren">(</span><em>incoherences</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.log_incoherences"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.log_incoherences" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.settings.OConfig.ooni_home">
+<code class="descname">ooni_home</code><a class="headerlink" href="#ooni.settings.OConfig.ooni_home" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.read_config_file">
+<code class="descname">read_config_file</code><span class="sig-paren">(</span><em>check_incoherences=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.read_config_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.read_config_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.settings.OConfig.running_path">
+<code class="descname">running_path</code><a class="headerlink" href="#ooni.settings.OConfig.running_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the directory used to store state application data.
+It defaults to /var/lib/ooni, but if that is not writeable we will
+use the ooni_home.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.set_initialized">
+<code class="descname">set_initialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.set_initialized"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.set_initialized" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.settings.OConfig.set_paths">
+<code class="descname">set_paths</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.set_paths"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.set_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="oonicli-module">
 <h2><code class="xref py py-mod docutils literal"><span class="pre">oonicli</span></code> Module<a class="headerlink" href="#oonicli-module" title="Permalink to this headline">¶</a></h2>
@@ -217,7 +297,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'1.6.0',
+            VERSION:'2.0.0a1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
