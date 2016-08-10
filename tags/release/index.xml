@@ -23,7 +23,7 @@ releasing a brand new test, called
 which is designed to detect three different types of censorship: &lt;em&gt;DNS
 tampering&lt;/em&gt;, &lt;em&gt;TCP/IP blocking&lt;/em&gt; and &lt;em&gt;HTTP blocking&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
+&lt;h2 id=&#34;advantages-of-running-web-connectivity&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
 
 &lt;p&gt;This test allows us to see which websites are blocked and how, more accurately
 than ever before!&lt;/p&gt;
@@ -49,7 +49,7 @@ discrimination of exit nodes (by CloudFlare, for example) led to many false
 positives. We now compare collected measurements over a control server which is
 less likely to be discriminated.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e&#34;&gt;How Web Connectivity works&lt;/h2&gt;
+&lt;h2 id=&#34;how-web-connectivity-works&#34;&gt;How Web Connectivity works&lt;/h2&gt;
 
 &lt;p&gt;This test examines whether websites are blocked by performing the steps below
 &lt;em&gt;both&lt;/em&gt; over a control server and over the network of the user. The collected
@@ -114,7 +114,7 @@ of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-run-web-connectivity&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
 
 &lt;p&gt;If you&amp;rsquo;ve ever run OONI tests before, then you&amp;rsquo;re probably familiar with
 &lt;code&gt;oonideckgen&lt;/code&gt;: OONI&amp;rsquo;s software suite which includes multiple tests. Now

@@ -17,7 +17,7 @@
       <guid>https://ooni.torproject.org/install/lepidopter/</guid>
       <description>
 
-&lt;h1 id=&#34;lepidopter-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter guide&lt;/h1&gt;
+&lt;h1 id=&#34;lepidopter-guide&#34;&gt;Lepidopter guide&lt;/h1&gt;
 
 &lt;p&gt;This guide explains step-by-step how to run OONI tests from a Raspberry Pi.&lt;/p&gt;
 
@@ -28,7 +28,7 @@ repository&lt;/a&gt;.&lt;/p&gt;
 Lepidopter in QEMU is described
 &lt;a href=&#34;https://github.com/TheTorProject/lepidopter/blob/master/README.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;about-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;About Lepidopter&lt;/h2&gt;
+&lt;h2 id=&#34;about-lepidopter&#34;&gt;About Lepidopter&lt;/h2&gt;
 
 &lt;p&gt;Lepidopter is an &lt;em&gt;ooniprobe distribution&lt;/em&gt; for Raspberry Pis.&lt;/p&gt;
 
@@ -64,7 +64,7 @@ Designed to examine whether URLs are blocked or not (and if so, how)&lt;/p&gt;&l
 &lt;li&gt;&lt;p&gt;More accurate measurements&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;requirements:7565a061641bd1e599d91e306fc304d1&#34;&gt;Requirements&lt;/h2&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;p&gt;The following include a list of requirements to get started:&lt;/p&gt;
 
@@ -85,9 +85,9 @@ power will cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;If your laptop does not have an SD card slot, please ensure that you have an SD card reader.&lt;/p&gt;
 
-&lt;h1 id=&#34;downloading-and-verifying-the-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Downloading and verifying the Lepidopter Raspberry Pi image&lt;/h1&gt;
+&lt;h1 id=&#34;downloading-and-verifying-the-lepidopter-raspberry-pi-image&#34;&gt;Downloading and verifying the Lepidopter Raspberry Pi image&lt;/h1&gt;
 
-&lt;h2 id=&#34;download-the-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
+&lt;h2 id=&#34;download-the-lepidopter-image&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;&lt;/li&gt;
@@ -98,12 +98,12 @@ for a significantly reduced file size (ca. 114M smaller) compared to the zip
 archive. Note that this will require an extra program to be installed depending
 on your OS.&lt;/p&gt;
 
-&lt;h2 id=&#34;verify-the-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify the Lepidopter image&lt;/h2&gt;
+&lt;h2 id=&#34;verify-the-lepidopter-image&#34;&gt;Verify the Lepidopter image&lt;/h2&gt;
 
 &lt;p&gt;To verify that the Lepidopter image is the right one, you will need to compare
 it with the key that has been signed by us.&lt;/p&gt;
 
-&lt;h3 id=&#34;import-the-lepidopter-signing-key:7565a061641bd1e599d91e306fc304d1&#34;&gt;Import the Lepidopter signing key&lt;/h3&gt;
+&lt;h3 id=&#34;import-the-lepidopter-signing-key&#34;&gt;Import the Lepidopter signing key&lt;/h3&gt;
 
 &lt;p&gt;From OONI web server:&lt;/p&gt;
 
@@ -123,7 +123,7 @@ published here:&lt;/p&gt;
 uid   Lepidopter Team (signing key)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;verify-the-lepidopter-image-1:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
+&lt;h3 id=&#34;verify-the-lepidopter-image-1&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
 
 &lt;p&gt;Verify that the compressed image &lt;code&gt;lepidopter-alpha-armel.img.zip&lt;/code&gt; matches its
 signature &lt;code&gt;lepidopter-alpha-armel.img.zip.asc&lt;/code&gt; by running:&lt;/p&gt;
@@ -146,13 +146,13 @@ gpg: binary signature, digest algorithm SHA512
 &lt;p&gt;If you want to learn more about digital signatures and key verification read
 the &lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;documentation&lt;/a&gt; from Qubes OS.&lt;/p&gt;
 
-&lt;h1 id=&#34;setting-up-your-raspberry-pi-with-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;Setting up your Raspberry Pi with Lepidopter&lt;/h1&gt;
+&lt;h1 id=&#34;setting-up-your-raspberry-pi-with-lepidopter&#34;&gt;Setting up your Raspberry Pi with Lepidopter&lt;/h1&gt;
 
 &lt;p&gt;Depending on whether you are a Windows, Linux or Mac OS X user, please refer to
 the relevant section of the guide below on how to set up your Raspberry Pi with
 Lepidopter.&lt;/p&gt;
 
-&lt;h2 id=&#34;linux-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Linux users&lt;/h2&gt;
+&lt;h2 id=&#34;linux-users&#34;&gt;Linux users&lt;/h2&gt;
 
 &lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use &lt;strong&gt;Disk
 Image Writer&lt;/strong&gt; (graphical interface) to copy the Lepidopter image to an SD card.
@@ -161,7 +161,7 @@ Alternatively, you can do this through your terminal.&lt;/p&gt;
 &lt;p&gt;Below we provide steps on how to copy the Lepidopter image to an SD card via
 Disk Image Writer or a terminal.&lt;/p&gt;
 
-&lt;h3 id=&#34;disk-image-writer:7565a061641bd1e599d91e306fc304d1&#34;&gt;Disk Image Writer&lt;/h3&gt;
+&lt;h3 id=&#34;disk-image-writer&#34;&gt;Disk Image Writer&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -221,7 +221,7 @@ where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;http
 Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
 hours.&lt;/p&gt;
 
-&lt;h3 id=&#34;terminal:7565a061641bd1e599d91e306fc304d1&#34;&gt;Terminal&lt;/h3&gt;
+&lt;h3 id=&#34;terminal&#34;&gt;Terminal&lt;/h3&gt;
 
 &lt;p&gt;Please note that the use of the &amp;ldquo;dd&amp;rdquo; tool can overwrite any partition of your
 machine. If you specify the wrong device in the instructions below you could
@@ -299,7 +299,7 @@ your SD card).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Remove the SD card from your card reader, insert it in the Raspberry
 Pi, and have fun!&lt;/p&gt;
 
-&lt;h2 id=&#34;mac-os-x-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Mac OS X users&lt;/h2&gt;
+&lt;h2 id=&#34;mac-os-x-users&#34;&gt;Mac OS X users&lt;/h2&gt;
 
 &lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
 
@@ -346,7 +346,7 @@ where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;http
 Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
 hours.&lt;/p&gt;
 
-&lt;h3 id=&#34;optimization:7565a061641bd1e599d91e306fc304d1&#34;&gt;Optimization&lt;/h3&gt;
+&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
 
 &lt;p&gt;In OS X each disk may have two path references in /dev:&lt;/p&gt;
 
@@ -361,7 +361,7 @@ the dd program.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;On a Class 4 SD card the difference was around 20 times faster using the rdisk
 path.&lt;/p&gt;
 
-&lt;h2 id=&#34;windows-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Windows users&lt;/h2&gt;
+&lt;h2 id=&#34;windows-users&#34;&gt;Windows users&lt;/h2&gt;
 
 &lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
 
@@ -415,7 +415,7 @@ that is formatted for the Linux operating system that the Raspberry Pi uses
 which is not visible in Windows. If you don&amp;rsquo;t see a small directory with files
 such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
 
-&lt;h3 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h3&gt;
+&lt;h3 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h3&gt;
 
 &lt;p&gt;You might not be able to choose the device in Win32DiskImager on some notebooks,
 so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
@@ -454,11 +454,12 @@ right click on it and Run as Administrator.&lt;/p&gt;
 &lt;li&gt;0       size = 250059350016 (232 Gb)&lt;/li&gt;
 &lt;li&gt;1       size = 1990197248 (1898 Mb)&lt;/li&gt;
 &lt;li&gt;Available logical disks:&lt;/li&gt;
-&lt;li&gt;C:\&lt;/li&gt;
-&lt;li&gt;D:\&lt;/li&gt;
-&lt;li&gt;E:\&lt;/li&gt;
-&lt;li&gt;F:\&lt;/li&gt;
-&lt;li&gt;Press ENTER to exit.&lt;/li&gt;
+&lt;li&gt;C:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;D:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;E:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;F:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Press ENTER to exit.
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Use the Load option of flashnul to put the image file on the SD Card.
@@ -480,7 +481,7 @@ yes and press enter.&lt;/p&gt;
 &lt;p&gt;If you get an access denied error, make sure to close all explorer windows or
 folders open for the device, then try re-plugging the SD card.&lt;/p&gt;
 
-&lt;h1 id=&#34;sources:7565a061641bd1e599d91e306fc304d1&#34;&gt;Sources&lt;/h1&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://elinux.org/RPi_Easy_SD_Card_Setup&#34;&gt;RPi Easy SD Card Setup&lt;/a&gt;&lt;/li&gt;

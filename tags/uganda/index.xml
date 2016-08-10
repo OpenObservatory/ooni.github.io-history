@@ -55,7 +55,7 @@ Interestingly, OONI&amp;rsquo;s findings illustrate that social media is not con
 blocked across networks, and that certain cases of censorship can be easily
 circumvented.&lt;/p&gt;
 
-&lt;h2 id=&#34;findings:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;Findings&lt;/h2&gt;
+&lt;h2 id=&#34;findings&#34;&gt;Findings&lt;/h2&gt;
 
 &lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP request
 test&lt;/a&gt;,
@@ -93,7 +93,7 @@ operator MTN Uganda:&lt;/p&gt;
 our other services are available. We regret any inconvenience caused.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;circumventing-censorship:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;Circumventing censorship&lt;/h2&gt;
+&lt;h2 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h2&gt;
 
 &lt;p&gt;Social media in Uganda was censored both times this year based on &lt;em&gt;IP
 blocking&lt;/em&gt;, according to &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
@@ -110,7 +110,7 @@ Orbot&lt;/a&gt;&lt;/strong&gt; which enables all
 apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor
 network&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;ooni-explorer-report-links:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;OONI Explorer report links&lt;/h2&gt;
+&lt;h2 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Orange:&lt;/strong&gt;&lt;/p&gt;
 

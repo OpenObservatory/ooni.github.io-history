@@ -73,7 +73,7 @@ ran tests locally in Brazil to detect the technical details of how censorship
 was implemented. This blog post includes a publication of our measurements,
 revealing that Brazilian ISPs blocked WhatsApp&amp;rsquo;s website through DNS hijacking.&lt;/p&gt;
 
-&lt;h1 id=&#34;our-findings:c863708e27f97e72f64548dd80c61fef&#34;&gt;Our findings&lt;/h1&gt;
+&lt;h1 id=&#34;our-findings&#34;&gt;Our findings&lt;/h1&gt;
 
 &lt;p&gt;Two types of &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI tests&lt;/a&gt; were run
 in Brazil to identify whether and how WhatsApp was blocked:&lt;/p&gt;
@@ -315,7 +315,7 @@ requests:
   response: null
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;circumventing-censorship:c863708e27f97e72f64548dd80c61fef&#34;&gt;Circumventing censorship&lt;/h2&gt;
+&lt;h2 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h2&gt;
 
 &lt;p&gt;The blocking of WhatsApp&amp;rsquo;s website can be circumvented through the use of
 &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. In cases of DNS hijacking, users might even
@@ -328,7 +328,7 @@ Brazil (and elsewhere) can try circumventing censorship by using the
 which enables all apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt;. It&amp;rsquo;s important though to note that Orbot&amp;rsquo;s VPN
 feature should &lt;em&gt;not&lt;/em&gt; be used for anonymity, but only for bypassing censorship.&lt;/p&gt;
 
-&lt;h2 id=&#34;limitations-to-our-study:c863708e27f97e72f64548dd80c61fef&#34;&gt;Limitations to our study&lt;/h2&gt;
+&lt;h2 id=&#34;limitations-to-our-study&#34;&gt;Limitations to our study&lt;/h2&gt;
 
 &lt;p&gt;Currently &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software tests&lt;/a&gt; are
 &lt;em&gt;not&lt;/em&gt; specifically designed to test instant messaging (IM) applications (such
@@ -348,9 +348,9 @@ through the following:&lt;/p&gt;
 &lt;li&gt;Run test deck &lt;code&gt;ooniprobe -i whatsapp.deck&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;ooni-explorer-report-links:c863708e27f97e72f64548dd80c61fef&#34;&gt;OONI Explorer report links&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h1&gt;
 
-&lt;h2 id=&#34;http-requests-measurements:c863708e27f97e72f64548dd80c61fef&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
+&lt;h2 id=&#34;http-requests-measurements&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
@@ -367,7 +367,7 @@ through the following:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;dns-consistency-measurements:c863708e27f97e72f64548dd80c61fef&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
+&lt;h2 id=&#34;dns-consistency-measurements&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
@@ -446,7 +446,7 @@ publicação dos dados contabilizados, mostrando desta maneira o que o bloqueio
 da página web do WhatsApp pelos provedores de serviço de internet (ISPs)
 brasileiros usando o método de DNS hijacking.&lt;/p&gt;
 
-&lt;h1 id=&#34;os-nossos-resultados:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;Os nossos resultados&lt;/h1&gt;
+&lt;h1 id=&#34;os-nossos-resultados&#34;&gt;Os nossos resultados&lt;/h1&gt;
 
 &lt;p&gt;Para comprovar o bloqueio do WhatsApp, assim como para identificar o método
 aplicado, dois tipos de &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;testes OONI&lt;/a&gt; foram realizados no Brasil:&lt;/p&gt;
@@ -688,7 +688,7 @@ requests:
   response: null
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;ultrapassar-censura:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;Ultrapassar censura&lt;/h2&gt;
+&lt;h2 id=&#34;ultrapassar-censura&#34;&gt;Ultrapassar censura&lt;/h2&gt;
 
 &lt;p&gt;Pode-se ultrapassar o bloqueio da página web do WhatsApp’s pelo uso do
 &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. No caso do DNS hijacking, os usuários podem
@@ -701,7 +701,7 @@ os applicativos a funcionar pela rede &lt;a href=&#34;https://www.torproject.org
 obstante, é importante dastacar que o recurso da VPN de Orbot &lt;strong&gt;não&lt;/strong&gt; dever ser
 utilizado para anonimato na rede, mas para ultrapassar a censura na rede.&lt;/p&gt;
 
-&lt;h2 id=&#34;limitações-nessa-investigação:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;Limitações nessa investigação&lt;/h2&gt;
+&lt;h2 id=&#34;limitações-nessa-investigação&#34;&gt;Limitações nessa investigação&lt;/h2&gt;
 
 &lt;p&gt;No momento, os &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;testes de software do OONI&lt;/a&gt; &lt;strong&gt;não&lt;/strong&gt; se relacionam
 particularmente aos applicativos de instant messaging (IM) (como p. ex.
@@ -721,9 +721,9 @@ podem ser testados da seguinte forma:&lt;/p&gt;
 &lt;li&gt;Percorrer o test deck &lt;code&gt;ooniprobe -i whatsapp.deck hr&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;ooni-explorer-report-links:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;OONI Explorer report links&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h1&gt;
 
-&lt;h2 id=&#34;http-requests-measurements:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
+&lt;h2 id=&#34;http-requests-measurements&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
@@ -740,7 +740,7 @@ podem ser testados da seguinte forma:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;dns-consistency-measurements:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
+&lt;h2 id=&#34;dns-consistency-measurements&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;

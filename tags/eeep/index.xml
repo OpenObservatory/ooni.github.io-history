@@ -47,7 +47,7 @@ the reports took place during June and July 2014.&lt;/p&gt;
 
 &lt;p&gt;The main test specifications used to probe the blacklist are:&lt;/p&gt;
 
-&lt;h2 id=&#34;http-requests-test:d0c495f4479395eff703b25df5d2e963&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/http_requests.py&#34;&gt;HTTP Requests test&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;http-requests-test&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/http_requests.py&#34;&gt;HTTP Requests test&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;This test performs an HTTP GET request from a specified URL list of potential blocked
 websites over the test network (censored network) and over Tor. It then compares
@@ -80,7 +80,7 @@ the control request and the experiment request.&lt;/p&gt;
 Browser?&amp;rdquo;&lt;/a&gt; paper as the
 browser user agents with largest anonymity set.&lt;/p&gt;
 
-&lt;h2 id=&#34;dns-consistency-test:d0c495f4479395eff703b25df5d2e963&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/dns_consistency.py&#34;&gt;DNS consistency test&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;dns-consistency-test&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/dns_consistency.py&#34;&gt;DNS consistency test&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;This test performs an A DNS query (via UDP) to the control resolver. The answer
 to such query is called the control answer. For each DNS resolver to be tested
@@ -97,14 +97,14 @@ hostname), then censorship is probably not happening (tampering:
 
 &lt;p&gt;In any other case the result is marked as: &lt;code&gt;tampering: True&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;probed-isps:d0c495f4479395eff703b25df5d2e963&#34;&gt;Probed ISPs&lt;/h1&gt;
+&lt;h1 id=&#34;probed-isps&#34;&gt;Probed ISPs&lt;/h1&gt;
 
 &lt;p&gt;Probed ISPs: &lt;code&gt;Forthnet, Ote, Cyta, Wind, Vodafone, Cosmote, Wind mobile&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;All of the tested ISPs employed &lt;a href=&#34;https://en.wikipedia.org/wiki/DNS_hijacking&#34;&gt;DNS hijacking&lt;/a&gt; with the exception of Vodafone
 that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;Deep Packet Inspection&lt;/a&gt; to block the resources of the blacklist.&lt;/p&gt;
 
-&lt;h2 id=&#34;probed-isp-ooni-reports:d0c495f4479395eff703b25df5d2e963&#34;&gt;Probed ISP OONI reports&lt;/h2&gt;
+&lt;h2 id=&#34;probed-isp-ooni-reports&#34;&gt;Probed ISP OONI reports&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Forthnet:
@@ -158,11 +158,11 @@ that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspect
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;per-isp-analysis:d0c495f4479395eff703b25df5d2e963&#34;&gt;Per ISP analysis&lt;/h2&gt;
+&lt;h2 id=&#34;per-isp-analysis&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;forthnet:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h3&gt;
+&lt;h3 id=&#34;forthnet&#34;&gt;Forthnet&lt;/h3&gt;
 
 &lt;p&gt;This ISP has blocked 96 entries (21.91%) of the published &lt;a href=&#34;http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf&#34;&gt;blacklist&lt;/a&gt;.&lt;/p&gt;
 
@@ -243,7 +243,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;ote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h3&gt;
+&lt;h3 id=&#34;ote&#34;&gt;Ote&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -464,7 +464,7 @@ test_resolvers: [192.168.1.1]
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cyta:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h2&gt;
+&lt;h2 id=&#34;cyta&#34;&gt;Cyta&lt;/h2&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -691,7 +691,7 @@ webpage&lt;/a&gt;. It is worth mentioning that
 Cyta uses a different user agent (UA) tag for user tracking purposes than on
 their &lt;a href=&#34;http://www.cyta.gr&#34;&gt;main website&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;wind:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind&lt;/h3&gt;
+&lt;h3 id=&#34;wind&#34;&gt;Wind&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -902,7 +902,7 @@ request.&amp;lt;/p&amp;gt;
 
 &lt;p&gt;This ISP uses Etag for tracking users which try to visit the blocked content.&lt;/p&gt;
 
-&lt;h3 id=&#34;hol:d0c495f4479395eff703b25df5d2e963&#34;&gt;HOL&lt;/h3&gt;
+&lt;h3 id=&#34;hol&#34;&gt;HOL&lt;/h3&gt;
 
 &lt;p&gt;This ISP has blocked 438 entries (100%) of the published &lt;a href=&#34;http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf&#34;&gt;blacklist&lt;/a&gt;.&lt;/p&gt;
 
@@ -970,7 +970,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;cosmote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h3&gt;
+&lt;h3 id=&#34;cosmote&#34;&gt;Cosmote&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -1115,7 +1115,7 @@ href=\&amp;quot;http://www.gamingcommission.gov.gr/index.php/el/\&amp;quot;&amp;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;vodafone:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h3&gt;
+&lt;h3 id=&#34;vodafone&#34;&gt;Vodafone&lt;/h3&gt;
 
 &lt;p&gt;This ISP has blocked 425 entries (97.03%) of the published &lt;a href=&#34;http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf&#34;&gt;blacklist&lt;/a&gt;.&lt;/p&gt;
 
@@ -1222,7 +1222,7 @@ Location: http://1.2.3.50/ups/no_access_gambling.htm
 Connection: keep-alive
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;wind-mobile:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind mobile&lt;/h3&gt;
+&lt;h3 id=&#34;wind-mobile&#34;&gt;Wind mobile&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -1927,7 +1927,7 @@ width=\&amp;quot;9%\&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/td&amp;gt;\r\
 
 &lt;p&gt;This ISP uses Etag for tracking users which try to visit the blocked content.&lt;/p&gt;
 
-&lt;h2 id=&#34;failure-on-mail-delivery:d0c495f4479395eff703b25df5d2e963&#34;&gt;Failure on mail delivery&lt;/h2&gt;
+&lt;h2 id=&#34;failure-on-mail-delivery&#34;&gt;Failure on mail delivery&lt;/h2&gt;
 
 &lt;p&gt;Most ISPs have hijacked the DNS mail
 exchanger record(s) of the domain name of the EEEP blacklist. A MX record
@@ -1949,7 +1949,7 @@ restricting fair markets and business regulations, i.e a user trying to
 communicate with any business (all of the censored websites are businesses)
 would find himself not being able to perform an email delivery.&lt;/p&gt;
 
-&lt;h3 id=&#34;dns-mx-records-responses:d0c495f4479395eff703b25df5d2e963&#34;&gt;DNS MX records responses:&lt;/h3&gt;
+&lt;h3 id=&#34;dns-mx-records-responses&#34;&gt;DNS MX records responses:&lt;/h3&gt;
 
 &lt;p&gt;The correct MX records of the censored domain names in example:&lt;/p&gt;
 
@@ -1986,7 +1986,7 @@ would find himself not being able to perform an email delivery.&lt;/p&gt;
 
 &lt;p&gt;The spoofed MX record responses of the ISPs.&lt;/p&gt;
 
-&lt;h4 id=&#34;forthnet-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h4&gt;
+&lt;h4 id=&#34;forthnet-1&#34;&gt;Forthnet&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -1997,7 +1997,7 @@ would find himself not being able to perform an email delivery.&lt;/p&gt;
 ;770.com.                       IN      MX
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ote-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h4&gt;
+&lt;h4 id=&#34;ote-1&#34;&gt;Ote&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -2012,7 +2012,7 @@ would find himself not being able to perform an email delivery.&lt;/p&gt;
 hostmaster.localhost. 2014030701 10800 3600 1814400 86400
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;vodafone-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h4&gt;
+&lt;h4 id=&#34;vodafone-1&#34;&gt;Vodafone&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 888.com
 ;; Got answer:
@@ -2029,7 +2029,7 @@ hostmaster.localhost. 2014030701 10800 3600 1814400 86400
 root.iapetos.panafonet.gr. 2014180301 28800 7200 1209600 600
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;cosmote-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h4&gt;
+&lt;h4 id=&#34;cosmote-1&#34;&gt;Cosmote&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -2046,7 +2046,7 @@ root.iapetos.panafonet.gr. 2014180301 28800 7200 1209600 600
 please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;cyta-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h4&gt;
+&lt;h4 id=&#34;cyta-1&#34;&gt;Cyta&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -2063,7 +2063,7 @@ please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 900 604800 86400
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;wind-mobile-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind mobile&lt;/h4&gt;
+&lt;h4 id=&#34;wind-mobile-1&#34;&gt;Wind mobile&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -2078,7 +2078,7 @@ please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 2013091901 14400 7200 604800 86400
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;dns-a-records-resposnes:d0c495f4479395eff703b25df5d2e963&#34;&gt;DNS A records resposnes&lt;/h3&gt;
+&lt;h3 id=&#34;dns-a-records-resposnes&#34;&gt;DNS A records resposnes&lt;/h3&gt;
 
 &lt;p&gt;The correct A records of the censored domain names in example:&lt;/p&gt;
 
@@ -2123,7 +2123,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 
 &lt;p&gt;The spoofed A records entries of the ISPs:&lt;/p&gt;
 
-&lt;h4 id=&#34;forthnet-2:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h4&gt;
+&lt;h4 id=&#34;forthnet-2&#34;&gt;Forthnet&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; A 770.com
 ;; global options: +cmd
@@ -2138,7 +2138,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 770.com.                3600    IN      A       62.1.46.55
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ote-2:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h4&gt;
+&lt;h4 id=&#34;ote-2&#34;&gt;Ote&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; A box24casino.com
 ;; global options: +cmd
@@ -2153,7 +2153,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 box24casino.com.        86191   IN      A       83.235.64.20
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;cyta-2:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h4&gt;
+&lt;h4 id=&#34;cyta-2&#34;&gt;Cyta&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; global options: +cmd
@@ -2171,7 +2171,7 @@ box24casino.com.        86191   IN      A       83.235.64.20
 770.com.                86400   IN      A       78.87.2.91
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;wind-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind&lt;/h4&gt;
+&lt;h4 id=&#34;wind-1&#34;&gt;Wind&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; A acelivecasino.com
 ;; global options: +cmd
@@ -2186,7 +2186,7 @@ box24casino.com.        86191   IN      A       83.235.64.20
 acelivecasino.com.      85963   IN      A       62.169.194.8
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;corollary:d0c495f4479395eff703b25df5d2e963&#34;&gt;Corollary&lt;/h1&gt;
+&lt;h1 id=&#34;corollary&#34;&gt;Corollary&lt;/h1&gt;
 
 &lt;p&gt;Throughout our technical report we highlighted flaws in the implementation of
 betting websites&amp;rsquo; censorship. Nevertheless, we do not seek for a properly
@@ -2206,7 +2206,7 @@ a blocking-at-will strategy. Internet destinations may be accessible or not,
 while users have no reasoning about it. That would lead to deliberate abuse of
 citizens&amp;rsquo; accessibility and view of the internet.&lt;/p&gt;
 
-&lt;h2 id=&#34;censorship-as-a-social-control-method:d0c495f4479395eff703b25df5d2e963&#34;&gt;Censorship as a social control method.&lt;/h2&gt;
+&lt;h2 id=&#34;censorship-as-a-social-control-method&#34;&gt;Censorship as a social control method.&lt;/h2&gt;
 
 &lt;p&gt;Censorship is introduced as a top-down method to solve pathogenic social
 behaviours or phenomena. For example a state that censors a blog containing
@@ -2241,7 +2241,7 @@ globalized market of the internet.&lt;/p&gt;
 users&amp;rsquo; choices, manipulation of the market and suggests corruption is part of the
 public governance.&lt;/p&gt;
 
-&lt;h2 id=&#34;censorship-as-status-quo:d0c495f4479395eff703b25df5d2e963&#34;&gt;Censorship as status quo&lt;/h2&gt;
+&lt;h2 id=&#34;censorship-as-status-quo&#34;&gt;Censorship as status quo&lt;/h2&gt;
 
 &lt;p&gt;If online censorship is widespread and accepted with little opposition as a way
 to implement a broad range of public policy issues, it becomes far harder to
@@ -2263,7 +2263,7 @@ societies and are a point of conflict in many countries worldwide.&lt;/p&gt;
 to censorship tends to grow. More and more censorship will be used as a method to
 resolve problems or rather to enforce a certain type of approach to the problem.&lt;/p&gt;
 
-&lt;h2 id=&#34;censorship-s-side-effects:d0c495f4479395eff703b25df5d2e963&#34;&gt;Censorship&amp;rsquo;s side-effects&lt;/h2&gt;
+&lt;h2 id=&#34;censorship-s-side-effects&#34;&gt;Censorship&amp;rsquo;s side-effects&lt;/h2&gt;
 
 &lt;p&gt;Censorship of some betting sites in Greece was implemented as a way to forbid
 residents of Greece to bet on websites that do not intend to pay taxes i.e. the

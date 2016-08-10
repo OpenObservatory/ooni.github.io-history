@@ -31,7 +31,7 @@ technical evidence of the unlawful presence of Deep Packet Inspection in the
 country to monitor the Internet communications and stop users from browsing the
 website.&lt;/p&gt;
 
-&lt;h1 id=&#34;the-connection-was-reset:35837baaac9f2cd7270d225e40661177&#34;&gt;The connection was reset&lt;/h1&gt;
+&lt;h1 id=&#34;the-connection-was-reset&#34;&gt;The connection was reset&lt;/h1&gt;
 
 &lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
 inside Zambia were reporting error messages.&lt;/p&gt;
@@ -77,7 +77,7 @@ operators inside Zambia with the exception of MTN.&lt;/p&gt;
 
 &lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
 
-&lt;h1 id=&#34;who-is-breaking-the-connections:35837baaac9f2cd7270d225e40661177&#34;&gt;Who is breaking the connections?&lt;/h1&gt;
+&lt;h1 id=&#34;who-is-breaking-the-connections&#34;&gt;Who is breaking the connections?&lt;/h1&gt;
 
 &lt;p&gt;Four hours after we received the first reports of service outage inside Zambia
 we could narrow down the problem to what it was perceived in the server side as
@@ -138,7 +138,7 @@ X-Nokia-MusicShop-Version: 08.0825.9
 X-Nokia-MusicShop-Bearer: GPRS/3G
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;dpi-or-not-dpi:35837baaac9f2cd7270d225e40661177&#34;&gt;DPI or not DPI?&lt;/h1&gt;
+&lt;h1 id=&#34;dpi-or-not-dpi&#34;&gt;DPI or not DPI?&lt;/h1&gt;
 
 &lt;p&gt;What it was left to determine if the filtering was looking into other aspects
 of the connection. In order to find out we run a few extra tests, requesting
@@ -166,7 +166,7 @@ blocking we adviced to the website owners to inform to the general public that
 such active interference was talking place and that the blocking was clearly
 targeted against the website.&lt;/p&gt;
 
-&lt;h1 id=&#34;getting-the-website-back-online:35837baaac9f2cd7270d225e40661177&#34;&gt;Getting the website back online&lt;/h1&gt;
+&lt;h1 id=&#34;getting-the-website-back-online&#34;&gt;Getting the website back online&lt;/h1&gt;
 
 &lt;p&gt;To ensure the public visibility of the website inside Zambia and in order to
 look for a quick solution to put the website online, we tested the availability
@@ -186,7 +186,7 @@ tweaks so the full content was delivered encrypted to the readers.&lt;/p&gt;
 HTTPS will keep doing it so without the need to specify HTTPS in their future
 requests.&lt;/p&gt;
 
-&lt;h1 id=&#34;ooni-testing:35837baaac9f2cd7270d225e40661177&#34;&gt;OONI Testing&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-testing&#34;&gt;OONI Testing&lt;/h1&gt;
 
 &lt;p&gt;Inspired by the work of our colleges of the Open Observatory of Network
 Interferece (OONI) we conducted another run of tests to determine if any of
@@ -194,7 +194,7 @@ Interferece (OONI) we conducted another run of tests to determine if any of
 could not find any other website blocked with the exception of the Zambian
 Watchdog.&lt;/p&gt;
 
-&lt;h1 id=&#34;blocking-status:35837baaac9f2cd7270d225e40661177&#34;&gt;Blocking status&lt;/h1&gt;
+&lt;h1 id=&#34;blocking-status&#34;&gt;Blocking status&lt;/h1&gt;
 
 &lt;p&gt;Three weeks after we initially detected and fingerprinted the blocking, the
 filtering is still active. Unencrypted requests to the domain
@@ -223,7 +223,7 @@ Location: https://&#39;&#39;&#39;zambianwatchdog.com/&#39;&#39;&#39;
 Strict-Transport-Security: max-age=10886401; includeSubDomains 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;courage-is-contagious:35837baaac9f2cd7270d225e40661177&#34;&gt;Courage is contagious&lt;/h1&gt;
+&lt;h1 id=&#34;courage-is-contagious&#34;&gt;Courage is contagious&lt;/h1&gt;
 
 &lt;p&gt;After we unveiled the blocking and network monitoring, Zambian Watchdog has
 received information from whistle blowers of the presence of such
@@ -255,7 +255,7 @@ based at Lamya and this has given OP (3) access to all the ISP in Zambia.&amp;rd
 
 &lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/journalist-zyambo-out-of-jail-police-though-he-had-obituary-of-sata/&#34;&gt;Journalist zyambo out of jail police though he had obituary of sata&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;update-17th-july-2013-and-ssl-got-blocked:35837baaac9f2cd7270d225e40661177&#34;&gt;Update (17th July 2013): And SSL got blocked&amp;hellip;&lt;/h1&gt;
+&lt;h1 id=&#34;update-17th-july-2013-and-ssl-got-blocked&#34;&gt;Update (17th July 2013): And SSL got blocked&amp;hellip;&lt;/h1&gt;
 
 &lt;p&gt;On Tuesday 16th of July 2013 (14:43 GMT) just a few hours after this article
 was released, the government has moved forward in their determination of

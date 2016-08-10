@@ -17,7 +17,7 @@
       <guid>https://ooni.torproject.org/post/tab-tab-come-in/</guid>
       <description>
 
-&lt;h1 id=&#34;motivation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Motivation&lt;/h1&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
 
 &lt;p&gt;During the past two years, we have been following the technical developments in
 Internet filtering in Uzbekistan and Turkmenistan. Internet users were
@@ -36,7 +36,7 @@ allows to discover mechanisms to bypass it and fingerprint and ultimately
 expose the companies that provide technology and know-how to governments that
 want to surpress the free flow of information in the Net.&lt;/p&gt;
 
-&lt;h1 id=&#34;our-findings:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Our findings&lt;/h1&gt;
+&lt;h1 id=&#34;our-findings&#34;&gt;Our findings&lt;/h1&gt;
 
 &lt;p&gt;The general Internet blocking architecture in Turkmenistan and Uzbekistan takes
 places in two basic stages. The first stage is responsible to identify which
@@ -46,7 +46,7 @@ that is blacklisted. Once the positive matching has taken place, the blocking
 or filtering is implemented. We will refer to the first stage as &amp;ldquo;matching&amp;rdquo; and
 the second as &amp;ldquo;blocking&amp;rdquo;.&lt;/p&gt;
 
-&lt;h2 id=&#34;matching:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Matching&lt;/h2&gt;
+&lt;h2 id=&#34;matching&#34;&gt;Matching&lt;/h2&gt;
 
 &lt;p&gt;During our technical investigation we found out that a key element in the
 matching stage is the &amp;ldquo;Host header&amp;rdquo; in a HTTP session. Once the initial
@@ -78,13 +78,13 @@ sessions.&lt;/p&gt;
 of webservers or websites to force users to use the correct domain name when
 requesting resources from the server.&lt;/p&gt;
 
-&lt;h2 id=&#34;filtering:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Filtering&lt;/h2&gt;
+&lt;h2 id=&#34;filtering&#34;&gt;Filtering&lt;/h2&gt;
 
 &lt;p&gt;Once the matching is positive, blocking can take place if desired. We have
 identified three basic methods used to block a session. Reset, Proxying and
 Active Redirection.&lt;/p&gt;
 
-&lt;h3 id=&#34;reset:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Reset&lt;/h3&gt;
+&lt;h3 id=&#34;reset&#34;&gt;Reset&lt;/h3&gt;
 
 &lt;p&gt;In the reset method, two RST packets will be send to both ends of the
 communication. By injecting these two packets between the communicating
@@ -120,7 +120,7 @@ to youtube.com will respond with a redirection to google.com. The user might
 believe that the redirection is implemented by the filtering infrastructure
 when in fact is a collateral results of the RST traffic.&lt;/p&gt;
 
-&lt;h3 id=&#34;proxying:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Proxying&lt;/h3&gt;
+&lt;h3 id=&#34;proxying&#34;&gt;Proxying&lt;/h3&gt;
 
 &lt;p&gt;The second mechanism to block the websites is by means of semi or fully
 transparent proxies. In both cases the HTTP proxy is placed between the users
@@ -149,7 +149,7 @@ web requests in the infrastructure.&lt;/p&gt;
 &lt;p&gt;This blocking method is present in Uzbekistan and Turkmenistan where we
 could effectively identify proxy headers when requesting blocked websites.&lt;/p&gt;
 
-&lt;h3 id=&#34;active-redirection:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Active redirection&lt;/h3&gt;
+&lt;h3 id=&#34;active-redirection&#34;&gt;Active redirection&lt;/h3&gt;
 
 &lt;p&gt;In  the same way that a RST packets can be injected in the datastream to
 teardown a connection, we have seen another type of injected traffic towards
@@ -182,7 +182,7 @@ href=&#39;http://www.msn.com/&#39;&amp;gt;here&amp;lt;/a&amp;gt;.&amp;lt;/h2&amp
 &lt;p&gt;This redirection method is highly scalable and users are aware that blocking
 is talking place.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-we-manage-to-bypass-the-blocking:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;How we manage to bypass the blocking?&lt;/h2&gt;
+&lt;h2 id=&#34;how-we-manage-to-bypass-the-blocking&#34;&gt;How we manage to bypass the blocking?&lt;/h2&gt;
 
 &lt;p&gt;During our investigation we discovered that it is possible to bypass the
 filtering by tampering the Host header so the matching stage is not
@@ -201,7 +201,7 @@ www.youtube.com\t\n&lt;/code&gt;.&lt;/p&gt;
 pre-pending a linefeed to the GET header. So instead of sending &lt;code&gt;GET /
 HTTP/1.1&lt;/code&gt;, our requests look like &lt;code&gt;\nGET / HTTP/1.1&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;ooni-testing:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;OONI Testing&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-testing&#34;&gt;OONI Testing&lt;/h1&gt;
 
 &lt;p&gt;We ran from inside of TM and UZ a set of ooniprobe tests to collect some data
 on how the filtering was happening and confirm our hypothesis of censorship
@@ -209,7 +209,7 @@ bypassing strategies.&lt;/p&gt;
 
 &lt;p&gt;Inside of Uzbekistan we ran the following tests:&lt;/p&gt;
 
-&lt;h3 id=&#34;http-header-field-manipulation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
+&lt;h3 id=&#34;http-header-field-manipulation&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/TM/http_header_field_manipulation-2013-01-28T195727Z-AS20661.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/TM/http_header_field_manipulation-2013-01-28T195727Z-AS20661.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -217,7 +217,7 @@ bypassing strategies.&lt;/p&gt;
 being appended to our outgoing requests. As we can see the response body
 contains the same headers that have been sent by the client.&lt;/p&gt;
 
-&lt;h3 id=&#34;http-invalid-request-line-test:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
+&lt;h3 id=&#34;http-invalid-request-line-test&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/TM/http_invalid_request_line-2013-01-30T214938Z-AS20661.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/TM/http_invalid_request_line-2013-01-30T214938Z-AS20661.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -228,7 +228,7 @@ crash on &amp;lsquo;test_random_invalid_version_number&amp;rsquo; and
 &amp;lsquo;test_random_invalid_field_count&amp;rsquo; as is shown in the measurements done in
 Myanmar (&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/MM/http_invalid_request_line-2012-12-06T162217Z-AS18399.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/MM/http_invalid_request_line-2012-12-06T162217Z-AS18399.yamloo&lt;/a&gt;).&lt;/p&gt;
 
-&lt;h3 id=&#34;http-host-test:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Host test&lt;/h3&gt;
+&lt;h3 id=&#34;http-host-test&#34;&gt;HTTP Host test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/TM/http_host-2013-01-30T224041Z-AS20661.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/TM/http_host-2013-01-30T224041Z-AS20661.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -242,15 +242,15 @@ is due to a TCP RST.&lt;/p&gt;
 
 &lt;p&gt;Inside of Turkmenistan we ran the same tests and obtained very similar results:&lt;/p&gt;
 
-&lt;h3 id=&#34;http-header-field-manipulation-1:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
+&lt;h3 id=&#34;http-header-field-manipulation-1&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/UZ/http_header_field_manipulation-2013-01-29T222932Z-AS31203.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/UZ/http_header_field_manipulation-2013-01-29T222932Z-AS31203.yamloo&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;http-invalid-request-line-test-1:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
+&lt;h3 id=&#34;http-invalid-request-line-test-1&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/UZ/http_invalid_request_line-2013-02-02T183110Z-AS31203.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/UZ/http_invalid_request_line-2013-02-02T183110Z-AS31203.yamloo&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;http-host-test-1:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Host test&lt;/h3&gt;
+&lt;h3 id=&#34;http-host-test-1&#34;&gt;HTTP Host test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/UZ/http_host-2013-02-02T183406Z-AS31203.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/UZ/http_host-2013-02-02T183406Z-AS31203.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -269,7 +269,7 @@ cause a bluecoat device to output an error message. The same thing happens to
 bluecoat, though with a different error message, when sending an invalid number
 of parts in the HTTP request line.&lt;/p&gt;
 
-&lt;h1 id=&#34;lessons-learned:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Lessons learned&lt;/h1&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons learned&lt;/h1&gt;
 
 &lt;p&gt;We learned that censorship software is not perfect and that sometimes it can be
 trivially bypassed. The fact that it can be bypassed is not of interest to who

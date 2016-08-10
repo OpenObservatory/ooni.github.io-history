@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Get-Involveds on OONI: Open Observatory of Network Interference</title>
+    <title>Get-involveds on OONI: Open Observatory of Network Interference</title>
     <link>https://ooni.torproject.org/get-involved/</link>
-    <description>Recent content in Get-Involveds on OONI: Open Observatory of Network Interference</description>
+    <description>Recent content in Get-involveds on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <atom:link href="https://ooni.torproject.org/get-involved/index.xml" rel="self" type="application/rss+xml" />
@@ -48,7 +48,7 @@ downloading data from the websites listed in the test lists, you can pass your
 
 &lt;p&gt;&lt;code&gt;ooniprobe &amp;lt;test-name&amp;gt; -f &amp;lt;your-test-list&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;contributing-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Contributing to test lists&lt;/h2&gt;
+&lt;h2 id=&#34;contributing-to-test-lists&#34;&gt;Contributing to test lists&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt; has supported OONI in the creation,
 maintenance and development of test lists and many volunteers around the world
@@ -56,7 +56,7 @@ have contributed to their country&amp;rsquo;s test lists over the last years. Yo
 contribute to the review or creation of your country&amp;rsquo;s test list (if it doesn&amp;rsquo;t
 already exist), as explained below.&lt;/p&gt;
 
-&lt;h3 id=&#34;reviewing-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Reviewing test lists&lt;/h3&gt;
+&lt;h3 id=&#34;reviewing-test-lists&#34;&gt;Reviewing test lists&lt;/h3&gt;
 
 &lt;p&gt;All test lists that ooniprobe is designed to test for censorship are hosted in
 the &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;Citizen Lab&amp;rsquo;s test-list repository on github&lt;/a&gt;.&lt;/p&gt;
@@ -132,7 +132,7 @@ proposed changes.&lt;/p&gt;
  contact@openobservatory.org (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD
  3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
 
-&lt;h3 id=&#34;creating-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Creating test lists&lt;/h3&gt;
+&lt;h3 id=&#34;creating-test-lists&#34;&gt;Creating test lists&lt;/h3&gt;
 
 &lt;p&gt;If you can&amp;rsquo;t find a test list specific to your country
 &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;, then it
@@ -229,7 +229,7 @@ transparency to covert surveillance through proxies and traffic monitoring.&lt;/
 &lt;p&gt;Now we aim to take OONI a step further by studying network anomalies more
 systematically and within local context, through OONI&amp;rsquo;s Partnership Program.&lt;/p&gt;
 
-&lt;h2 id=&#34;what-is-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What is the OONI Partnership Program?&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-the-ooni-partnership-program&#34;&gt;What is the OONI Partnership Program?&lt;/h2&gt;
 
 &lt;p&gt;The OONI Partnership Program is a collaboration between the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of
 Network Interference (OONI)&lt;/a&gt; and groups or
@@ -237,7 +237,7 @@ organizations around the world on the study of network interferences, such as
 online censorship. Such groups/organizations can include NGOs, hackerspaces,
 media organizations, legal associations and research groups.&lt;/p&gt;
 
-&lt;h2 id=&#34;what-is-the-aim-of-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What is the aim of the OONI Partnership Program?&lt;/h2&gt;
+&lt;h2 id=&#34;what-is-the-aim-of-the-ooni-partnership-program&#34;&gt;What is the aim of the OONI Partnership Program?&lt;/h2&gt;
 
 &lt;p&gt;Through the Partnership Program, we aim to:&lt;/p&gt;
 
@@ -265,7 +265,7 @@ reporting on the results&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;the governmental landscape and how to publicize results effectively&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;what-does-the-ooni-partnership-program-entail:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What does the OONI Partnership Program entail?&lt;/h2&gt;
+&lt;h2 id=&#34;what-does-the-ooni-partnership-program-entail&#34;&gt;What does the OONI Partnership Program entail?&lt;/h2&gt;
 
 &lt;p&gt;The OONI Partnership Program was developed in an attempt to study online
 censorship and other network interferences more strategically and within local
@@ -281,7 +281,7 @@ the following:&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Story-telling: Reports, blogs and data visualizations&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;lepidopter-running-ooniprobe-from-a-raspberry-pi:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Lepidopter: Running ooniprobe from a Raspberry Pi&lt;/h3&gt;
+&lt;h3 id=&#34;lepidopter-running-ooniprobe-from-a-raspberry-pi&#34;&gt;Lepidopter: Running ooniprobe from a Raspberry Pi&lt;/h3&gt;
 
 &lt;p&gt;We want to work with partners to deploy plug-and-play, cheap devices that keep
 tabs on censorship.&lt;/p&gt;
@@ -347,7 +347,7 @@ implemented in the same way across networks. As such, hosting Lepidopter within
 various &lt;em&gt;different&lt;/em&gt; networks in each country is an important component of OONI&amp;rsquo;s
 study and a core objective of the Partnership Program.&lt;/p&gt;
 
-&lt;h3 id=&#34;creation-review-of-lists-of-urls-to-test-for-online-censorship:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Creation/Review of lists of URLs to test for online censorship&lt;/h3&gt;
+&lt;h3 id=&#34;creation-review-of-lists-of-urls-to-test-for-online-censorship&#34;&gt;Creation/Review of lists of URLs to test for online censorship&lt;/h3&gt;
 
 &lt;p&gt;The Citizen Lab has supported OONI over the last years through the creation of
 lists of URLs to test for online censorship. These lists include the following:&lt;/p&gt;
@@ -367,7 +367,7 @@ interesting to test for censorship. Furthermore, through partnerships we would
 also work towards the risk assessment of tested URLs and their associated
 categories.&lt;/p&gt;
 
-&lt;h3 id=&#34;story-telling-reports-blogs-and-data-visualizations:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Story-telling: Reports, blogs and data visualizations&lt;/h3&gt;
+&lt;h3 id=&#34;story-telling-reports-blogs-and-data-visualizations&#34;&gt;Story-telling: Reports, blogs and data visualizations&lt;/h3&gt;
 
 &lt;p&gt;OONI is a free software project and as such, our role is primarily that of a
 &lt;em&gt;technical&lt;/em&gt; partner. That said, we are &lt;em&gt;also&lt;/em&gt; willing to support our partners in
@@ -383,7 +383,7 @@ to collaborate with partners in terms of understanding the socio-political
 context of their country and reporting on internet censorship within that
 context.&lt;/p&gt;
 
-&lt;h2 id=&#34;who-can-join-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Who can join the OONI Partnership Program?&lt;/h2&gt;
+&lt;h2 id=&#34;who-can-join-the-ooni-partnership-program&#34;&gt;Who can join the OONI Partnership Program?&lt;/h2&gt;
 
 &lt;p&gt;Groups and organizations interested in increasing transparency about online
 censorship and other forms of network interference are encouraged to join the
@@ -420,7 +420,7 @@ the study and reporting of network interferences.&lt;/p&gt;
 email at &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt; (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD 3309
 6B29 43F0 0CB1 77B7).&lt;/p&gt;
 
-&lt;h2 id=&#34;how-can-ooni-support-its-partners:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;How can OONI support its partners?&lt;/h2&gt;
+&lt;h2 id=&#34;how-can-ooni-support-its-partners&#34;&gt;How can OONI support its partners?&lt;/h2&gt;
 
 &lt;p&gt;If you&amp;rsquo;re interested in examining online censorship within your country, OONI
 can support you in the following ways:&lt;/p&gt;

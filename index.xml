@@ -6,8 +6,173 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Aug 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ethiopia: Internet Shutdown Amidst Recent Protests?</title>
+      <link>https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/</link>
+      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/</guid>
+      <description>
+
+&lt;p&gt;Nearly 100 deaths and thousands of arrests have been
+&lt;a href=&#34;http://www.bbc.com/news/world-africa-37015055&#34;&gt;reported&lt;/a&gt; in Ethiopia over the
+last days, as part of protests against the marginalization and persecution of
+the Oromos and Amharas, Ethiopia’s two largest ethnic groups. But the attacks
+and arrests may not have been the only forms of retribution carried out by the
+Ethiopian government in its crackdown against protesters.&lt;/p&gt;
+
+&lt;p&gt;Last weekend, the internet was
+&lt;a href=&#34;http://www.bbc.com/news/world-africa-36940906&#34;&gt;reportedly&lt;/a&gt; shut down in the
+country.&lt;/p&gt;
+
+&lt;p&gt;In an attempt to understand whether the internet was in fact shut down, we
+looked at some public sources of data that contain information about internet
+traffic. Such data provides strong indicators that the internet was most likely
+shut down during the Ethiopian protests last weekend, though it remains unclear
+if this occurred in all regions and/or on all types of networks across the
+country.&lt;/p&gt;
+
+&lt;h2 id=&#34;ethiopian-protests&#34;&gt;Ethiopian protests&lt;/h2&gt;
+
+&lt;p&gt;Ongoing
+&lt;a href=&#34;http://africanarguments.org/2016/08/06/ethiopias-unprecedented-nationwide-oromo-protests-who-what-why/&#34;&gt;protests&lt;/a&gt;
+have been carried out by Ethiopia’s Oromo people since November 2015, marking
+one of the most significant political developments in Ethiopia in recent years.
+These protests were sparked by the introduction of the &lt;a href=&#34;https://www.bloomberg.com/news/articles/2015-12-14/ethiopia-oromo-protests-trigger-fatal-ethnic-clashes-group-says&#34;&gt;Addis Ababa City
+Integrated Master
+Plan&lt;/a&gt;,
+which aims to expand the territorial limits of the country’s capital into
+neighbouring Oromo towns, threatening to displace millions of Oromo farmers and
+bring the Oromo-dominated region under Tigray-led federal government.&lt;/p&gt;
+
+&lt;p&gt;The unprecedented wave of protests has resulted in more than 400 deaths over
+the last months, according to a recent &lt;a href=&#34;https://www.hrw.org/report/2016/06/16/such-brutal-crackdown/killings-and-arrests-response-ethiopias-oromo-protests&#34;&gt;Human Rights Watch
+report&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;More &lt;a href=&#34;http://africanarguments.org/2016/08/06/ethiopias-unprecedented-nationwide-oromo-protests-who-what-why/&#34;&gt;protests sprung up in the Amhara regional
+state&lt;/a&gt;,
+with protesters requesting for political reforms and specifically, the Welkait
+community demanding that ancestral land currently administered by the Tigray
+regional state be moved into the neighbouring Amhara region.&lt;/p&gt;
+
+&lt;p&gt;The new-found unity between the two historically antagonistic communities of
+the Oromo and Amharas against a common adversary, the TPLF-led government,
+seems to have raised the tension in the country. The security forces response
+has been extreme, with observers
+&lt;a href=&#34;http://www.sudantribune.com/spip.php?article57643&#34;&gt;comparing&lt;/a&gt; it to the 2005
+post-election violence where nearly 200 people were killed. This time though,
+at least &lt;a href=&#34;https://www.amnesty.org/en/latest/news/2016/08/ethiopia-dozens-killed-as-police-use-excessive-force-against-peaceful-protesters/?utm_source=twitter&amp;amp;utm_medium=quote&amp;amp;utm_term=The+security+forces%25u2019+response+was+heavy-handed%2c+but+unsurprising.+Ethiopian+forces+have+systematically+used+excessive+force+in+their+mistaken+attempts+to+silence+dissenting+voices&amp;amp;utm_campaign=social&#34;&gt;30 people were reportedly
+killed&lt;/a&gt;
+in the Amhara region in one day alone.&lt;/p&gt;
+
+&lt;h2 id=&#34;internet-shutdown&#34;&gt;Internet shutdown&lt;/h2&gt;
+
+&lt;p&gt;Protesters relied on the internet to plan, mobilize and coordinate with each
+other and this may have &lt;a href=&#34;http://www.bbc.com/news/world-africa-36940906&#34;&gt;prompted the Ethiopian
+government&lt;/a&gt; to pull the plug on
+the internet even before the planned protests started.&lt;/p&gt;
+
+&lt;p&gt;But this is not the first time that the Ethiopian government appears to be
+restricting access to the internet this year.&lt;/p&gt;
+
+&lt;p&gt;Last month, the government
+&lt;a href=&#34;http://www.bbc.com/news/world-africa-36763572&#34;&gt;reportedly&lt;/a&gt; blocked social
+media sites across the country after &lt;a href=&#34;https://www.facebook.com/photo.php?fbid=10102310909934763&amp;amp;set=pb.215693.-2207520000.1470776183.&amp;amp;type=3&amp;amp;theater&#34;&gt;University entrance exams were leaked on
+Facebook&lt;/a&gt;
+by an Oromo activist, as a form of protest against the government.&lt;/p&gt;
+
+&lt;p&gt;Public data from last weekend indicates that the internet was shut down in
+Ethiopia during the heat of the protests, but it remains unclear if this
+occurred nationwide.&lt;/p&gt;
+
+&lt;p&gt;The graphs below illustrate that while internet traffic appeared to be
+originating from Ethiopia up until August 5th, such traffic was suddenly
+terminated until August 8th, indicating that the internet was probably shut
+down.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-google-traffic.png&#34; alt=&#34;Ethiopia google traffic&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-youtube-traffic.png&#34; alt=&#34;Ethiopia youtube traffic&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-gmail-traffic.png&#34; alt=&#34;Ethiopia gmail traffic&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Google products traffic for users from Ethiopia from July 22nd to August 8th&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-ndt-measurements.png&#34; alt=&#34;Ethiopia NDT Measurements&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NDT measurements started by users from July 20th to August 8th&lt;/p&gt;
+
+&lt;p&gt;The following graph, which we created based on tweets geotagged in Ethiopia
+from 3rd-9th August, also illustrates a decrease of Twitter activity.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tweets.png&#34; alt=&#34;Ethiopia Tweets&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, &lt;a href=&#34;https://metrics.torproject.org/&#34;&gt;Tor metrics data&lt;/a&gt; below
+illustrates that there was a decrease in the usage of
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; last weekend, which could be viewed as an
+indicator of the internet being restricted or shut down in certain types of
+networks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tor-metrics.png&#34; alt=&#34;Ethiopia tor metrics&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tor-metrics-2.png&#34; alt=&#34;Ethiopia tor metrics&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tor metrics data for direct connecting users&lt;/p&gt;
+
+&lt;p&gt;The data included in the graphs above shows that while the internet was likely
+shut down in certain regions and/or types of networks, it probably wasn’t shut
+down completely across Ethiopia. It might also have been the case that access
+to certain websites was restricted in regions and/or networks where the
+internet was accessible, though we unfortunately don’t have any recent &lt;a href=&#34;https://explorer.ooni.torproject.org/country/ET&#34;&gt;OONI
+measurements&lt;/a&gt; from Ethiopia to
+verify this.&lt;/p&gt;
+
+&lt;h2 id=&#34;keepiton-campaign&#34;&gt;#KeepItOn campaign&lt;/h2&gt;
+
+&lt;p&gt;Internet shutdowns effectively pose restrictions on demonstrations and on human
+rights generally.&lt;/p&gt;
+
+&lt;p&gt;In the recent case of Ethiopia, shutting down the internet in the middle of
+intense protests likely not only had an effect on the mobilization and
+coordination of protesters, but also on the communication between families and
+friends of victims. This also likely had an effect on journalists reporting on
+the protests in real-time on the ground, if they were using networks that were
+blocked.&lt;/p&gt;
+
+&lt;p&gt;An Al Jazeera reporter in Addis Ababa cited difficulties to connect to the
+internet and restricted travel to protest zones as a cause for limited coverage
+of the protests.&lt;/p&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It works abit differently with TV. We must verify reports we get. We however covered Addis protests on sat. &lt;a href=&#34;https://t.co/qHGw9Vdy1u&#34;&gt;https://t.co/qHGw9Vdy1u&lt;/a&gt;&lt;/p&gt;&amp;mdash; Catherine Soi (@C_SOI) &lt;a href=&#34;https://twitter.com/C_SOI/status/762388008666591232&#34;&gt;August 7, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Internet back after 48 hours of total blackout across the whole &lt;a href=&#34;https://twitter.com/hashtag/Ethiopia?src=hash&#34;&gt;#Ethiopia&lt;/a&gt;. However, it&amp;#39;s still blocked in Amhara &amp;amp; oromia region.&lt;/p&gt;&amp;mdash; Ethiopian Press (@abenezer_a) &lt;a href=&#34;https://twitter.com/abenezer_a/status/762569928205533184&#34;&gt;August 8, 2016&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;But Ethiopia is not the only country restricting access to the internet during
+political events.&lt;/p&gt;
+
+&lt;p&gt;At least &lt;a href=&#34;https://www.accessnow.org/keepiton/#resources&#34;&gt;20 cases of internet
+shutdowns&lt;/a&gt; have been documented
+worldwide over the last six months alone. In response to this, &lt;a href=&#34;https://www.accessnow.org/&#34;&gt;Access
+Now&lt;/a&gt; is leading a campaign in collaboration with
+organizations around the world called #KeepItOn.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.accessnow.org/keepiton/&#34;&gt;#KeepItOn&lt;/a&gt; campaign aims to document
+and raise awareness about internet shutdowns around the world. We support this
+campaign, and we hope you will too.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;This article was drafted as part of a collaboration between
+&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; and the &lt;a href=&#34;https://www.cipit.org/&#34;&gt;Centre for Intellectual Property
+and Information Technology Law (CIPIT)&lt;/a&gt; department of
+Strathmore University.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Internet Access Disruption in Turkey - July 2016</title>
@@ -21,7 +186,7 @@
 
 &lt;p&gt;On 15 July, a coup was attempted in Turkey. We heard about social media being throttled and/or blocked, but much was unclear about what was actually going on. Here we present measurement data from various platforms that shared their data publicly.&lt;/p&gt;
 
-&lt;h2 id=&#34;ripe-atlas:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;RIPE Atlas&lt;/h2&gt;
+&lt;h2 id=&#34;ripe-atlas&#34;&gt;RIPE Atlas&lt;/h2&gt;
 
 &lt;p&gt;Looking at the &lt;a href=&#34;https://atlas.ripe.net/&#34;&gt;RIPE Atlas&lt;/a&gt; data, we didn&amp;rsquo;t find anything consistent and/or structural in the latency data from 15 July that pointed towards changes in connectivity for our RIPE Atlas measurement points (called &amp;ldquo;probes&amp;rdquo;). That said, an &lt;a href=&#34;https://labs.ripe.net/Members/cristel_pelsser/pinpointing-delay-and-forwarding-anomalies-in-ripe-atlas-built-in-measurements&#34;&gt;anomaly detector for RIPE Atlas traceroutes&lt;/a&gt; is actively being worked on, which we can potentially use to look at events like this in the near future.&lt;/p&gt;
 
@@ -41,13 +206,13 @@
 
 &lt;p&gt;For networks where we do not have multiple probes in each network, it&amp;rsquo;s worth noting that we cannot isolate any probe-specific effects that might exist in the measurements.&lt;/p&gt;
 
-&lt;h2 id=&#34;ooni:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;OONI&lt;/h2&gt;
+&lt;h2 id=&#34;ooni&#34;&gt;OONI&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; is a free software project under the &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor Project&lt;/a&gt; that aims to detect Internet censorship, traffic manipulation and signs of surveillance around the world through the collection and processing of network measurements.&lt;/p&gt;
 
 &lt;p&gt;OONI&amp;rsquo;s HTTP request test was run in Turkey at 4:30 UTC on 15th July to test a set of URLs - including twitter.com, facebook.com and youtube.com - for censorship. This test is designed to examine whether URLs are blocked based on a comparison of HTTP requests over Tor vs. the user&amp;rsquo;s network. &lt;a href=&#34;https://explorer.ooni.torproject.org/country/TR&#34;&gt;OONI&amp;rsquo;s measurement data&lt;/a&gt; indicates that twitter.com, facebook.com and youtube.com did not appear to be blocked on the morning of 15th July leading up to the attempted military coup. However, it&amp;rsquo;s worth noting that these measurements were only conducted from one network vantage point within Turkey, and that OONI tests were not run during or following the attempted coup.&lt;/p&gt;
 
-&lt;h2 id=&#34;tor-use:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Tor use&lt;/h2&gt;
+&lt;h2 id=&#34;tor-use&#34;&gt;Tor use&lt;/h2&gt;
 
 &lt;p&gt;With specific social networks being blocked, or at risk of being blocked, it is to be expected that users wanting to access these networks will try to circumvent blocking. One way of doing that is to use Tor. Figure 2 is taken from the telemetry that Tor puts online about the number of users per country. It shows that the day after 15 July, the number of Tor users in Turkey increased significantly, from 15,000 to 20,000.&lt;/p&gt;
 
@@ -61,7 +226,7 @@
 
 &lt;p&gt;&lt;em&gt;Figure 3: Usage of Tor bridges in Turkey from 1-16 July 2016. Data taken from &lt;a href=&#34;https://metrics.torproject.org&#34;&gt;https://metrics.torproject.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;traffic-volumes:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Traffic volumes&lt;/h2&gt;
+&lt;h2 id=&#34;traffic-volumes&#34;&gt;Traffic volumes&lt;/h2&gt;
 
 &lt;p&gt;Except for IXPs sharing it publicly, we don&amp;rsquo;t have much public data about traffic volume on the Internet. For this information we are at the mercy of people willing to share it. Luckily, Cloudflare shared their traffic levels for 15 July, which showed a significant drop in traffic volume from Turkey, with the traffic volume from France as a reference (Figure 4).&lt;/p&gt;
 
@@ -69,7 +234,7 @@
 
 &lt;p&gt;&lt;em&gt;Figure 4: Cloudflare traffic levels from Turkey and France on 15 July. &lt;a href=&#34;https://twitter.com/eastdakota/status/754073339543433216&#34;&gt;Data from a tweet by @eastdakota&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;In recent years, Turkey has had a history of selectively blocking Internet access. With operators sharing information, and using measurements from RIPE Atlas and OONI, monitoring the Internet access situation has become more transparent and open and we can better understand and share what&amp;rsquo;s actually going on, to the extent that we don&amp;rsquo;t cause harm for any of our users or the network operators involved. With OONI, users are specifically and explicitly measuring censorship, which is outside the scope of what RIPE Atlas can do; as such, we feel our network measurement infrastructures are complementary.&lt;/p&gt;
 
@@ -77,7 +242,7 @@
 
 &lt;p&gt;The situation in Turkey is a bit special, because diametrically opposed to the practice of Internet blocking is the United Nations Human Rights Council&amp;rsquo;s &lt;a href=&#34;http://www.article19.org/data/files/Internet_Statement_Adopted.pdf&#34;&gt;resolution on the promotion, protection and enjoyment of human rights on the Internet&lt;/a&gt;, which condemns countries that intentionally disrupt citizens&amp;rsquo; Internet access. Turkey was one of the six countries that took the initiative on the resolution.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This post was originally published by RIPE Atlas &lt;strong&gt;&lt;a href=&#34;https://labs.ripe.net/Members/emileaben/internet-access-disruption-in-turkey&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;*This post was originally published by RIPE Atlas &lt;strong&gt;&lt;a href=&#34;https://labs.ripe.net/Members/emileaben/internet-access-disruption-in-turkey&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.*&lt;/p&gt;
 </description>
     </item>
     
@@ -95,7 +260,7 @@ releasing a brand new test, called
 which is designed to detect three different types of censorship: &lt;em&gt;DNS
 tampering&lt;/em&gt;, &lt;em&gt;TCP/IP blocking&lt;/em&gt; and &lt;em&gt;HTTP blocking&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
+&lt;h2 id=&#34;advantages-of-running-web-connectivity&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
 
 &lt;p&gt;This test allows us to see which websites are blocked and how, more accurately
 than ever before!&lt;/p&gt;
@@ -121,7 +286,7 @@ discrimination of exit nodes (by CloudFlare, for example) led to many false
 positives. We now compare collected measurements over a control server which is
 less likely to be discriminated.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e&#34;&gt;How Web Connectivity works&lt;/h2&gt;
+&lt;h2 id=&#34;how-web-connectivity-works&#34;&gt;How Web Connectivity works&lt;/h2&gt;
 
 &lt;p&gt;This test examines whether websites are blocked by performing the steps below
 &lt;em&gt;both&lt;/em&gt; over a control server and over the network of the user. The collected
@@ -186,7 +351,7 @@ of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-run-web-connectivity&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
 
 &lt;p&gt;If you&amp;rsquo;ve ever run OONI tests before, then you&amp;rsquo;re probably familiar with
 &lt;code&gt;oonideckgen&lt;/code&gt;: OONI&amp;rsquo;s software suite which includes multiple tests. Now
@@ -259,7 +424,7 @@ Interestingly, OONI&amp;rsquo;s findings illustrate that social media is not con
 blocked across networks, and that certain cases of censorship can be easily
 circumvented.&lt;/p&gt;
 
-&lt;h2 id=&#34;findings:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;Findings&lt;/h2&gt;
+&lt;h2 id=&#34;findings&#34;&gt;Findings&lt;/h2&gt;
 
 &lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP request
 test&lt;/a&gt;,
@@ -297,7 +462,7 @@ operator MTN Uganda:&lt;/p&gt;
 our other services are available. We regret any inconvenience caused.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;circumventing-censorship:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;Circumventing censorship&lt;/h2&gt;
+&lt;h2 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h2&gt;
 
 &lt;p&gt;Social media in Uganda was censored both times this year based on &lt;em&gt;IP
 blocking&lt;/em&gt;, according to &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
@@ -314,7 +479,7 @@ Orbot&lt;/a&gt;&lt;/strong&gt; which enables all
 apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor
 network&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;ooni-explorer-report-links:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;OONI Explorer report links&lt;/h2&gt;
+&lt;h2 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Orange:&lt;/strong&gt;&lt;/p&gt;
 
@@ -355,379 +520,6 @@ network&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;HTTP Viber (Blocked)
 &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.viber.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.viber.com&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>WhatsApp bloqueado (outra vez) no Brasil</title>
-      <link>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</link>
-      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Pais:&lt;/strong&gt; Brasil&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ISPs investigados:&lt;/strong&gt; Tim mobile (AS 26615), Oi landline (AS 7738)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Método de censura:&lt;/strong&gt; DNS Hijacking&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;OONI testes:&lt;/strong&gt; HTTP Requests, DNS Consistency&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Periodo da medição:&lt;/strong&gt; 2016-05-02 - 2016-05-03&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Translation by:&lt;/strong&gt; Kornelia Friesch&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/post/brazil-whatsapp-block&#34;&gt;Post in original language&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Desde que o
-&lt;a href=&#34;https://www.whatsapp.com/security/&#34;&gt;WhatsApp implantou a codificação end-to-end (end-to-end encryption)&lt;/a&gt; para proteger a privacidade e segurança
-dos, em nível mundial, um bilhão de usuários, manifestaram-se, alguns casos de
-censura ordenados por governos irritando-se pelo fato de não terem mais acesso
-à comunicação privada dos cidadãos. Com a codificação end-to-end pelo protocolo
-Signal, se torna-se impossível para o WhatsApp decifrar os dados do usuário. Ou
-seja, mesmo se quisesse entregar os dados não podería – sendo isso o que
-precisamente faz a comunicação pelo WhatsApp mais segura. Já em Dezembro do
-ano passado um juiz no Brasil &lt;a href=&#34;https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook&#34;&gt;ordenou o bloqueio do WhatsApp por 48 horas&lt;/a&gt;
-, sancionando desta forma a rejeição de entrega de dados pelo WhatsApp durante
-uma investigação de crimes. No início desta semana aconteceu outro incidente de
-bloqueio por &lt;a href=&#34;https://www.theguardian.com/technology/2016/may/02/brazil-whatsapp-block-72-hours&#34;&gt;ordem judicial no Brasil&lt;/a&gt;
-, desta vez por 72 horas, penalizando novamente desta forma outra vez a
-rejeição da empresa de entregar dados durante uma investigação sobre tráfico de
-drogas. Nos dois casos, a ordem de bloqueio de WhatsApp se efetuou em menos de
-24 horas, gerando um enorme descontenamento na população brasileira, da qual
-&lt;a href=&#34;http://www.theglobeandmail.com/technology/tech-news/whatsapp-comes-down-how-brazilians-are-coping-without-their-social-mediafixes/article27799710/&#34;&gt;mais de cem milhões de pessoas&lt;/a&gt;
-(91% dos usuários de celular) dependem desse serviço na sua comunicação
-cotidiana deles.&lt;/p&gt;
-
-&lt;p&gt;Segundo Lucas Teixeira, técnico-chefe de &lt;a href=&#34;https://www.codingrights.org/&#34;&gt;Coding Rights&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;As pessoas reagiram ao bloqueio do Whatsapp com um misto de choque, revolta e
-zoeira, refletindo o fato de que o Whatsapp é usado por quase todas as pessoas
-em cidades pequenas e grandes &amp;ndash; e até mesmo em áreas rurais &amp;ndash; para se
-comunicarem, substituindo o SMS e chamadas telefônicas em quase 100%. As
-parcerias de zero rating da empresa com telecoms também ajudou bastante na
-adoção. Planos de Internet móvel com franquia de dados mas &amp;ldquo;Whatsapp de graça&amp;rdquo;
-são comuns. O Marco Civil da Internet proíbe expressamente violações à
-neutralidade de rede, mas a legalidade do zero rating especificamente vai ser
-definida no seu &lt;a href=&#34;http://participacao.mj.gov.br/marcocivil&#34;&gt;processo de regulamentação&lt;/a&gt;.
-Já sobre a legalidade do bloqueio do Whatsapp, não há certeza pois o processo
-corre sob sigilo, mas ele foi revertido na Justiça.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Acompanhando as reportagens recentes sobre o bloqueio de WhatsApp no Brasil, o
-&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt;
-realizou testes dentro do País para detectar os detalhes técnicos da
-implementação, isto é, o metodo da censura. Esta entrada blog contem a
-publicação dos dados contabilizados, mostrando desta maneira o que o bloqueio
-da página web do WhatsApp pelos provedores de serviço de internet (ISPs)
-brasileiros usando o método de DNS hijacking.&lt;/p&gt;
-
-&lt;h1 id=&#34;os-nossos-resultados:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;Os nossos resultados&lt;/h1&gt;
-
-&lt;p&gt;Para comprovar o bloqueio do WhatsApp, assim como para identificar o método
-aplicado, dois tipos de &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;testes OONI&lt;/a&gt; foram realizados no Brasil:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/dnsconsistency.rst&#34;&gt;DNS-consistency tests&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP-request tests&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;O primeiro teste é criado para comparar os resultados da consulta do DNS de um
-DNS reverso confiável com os resultados de um DNS reverso pelo qual
-comprovou-se manipulação. O segundo teste tenta detectar a censura online,
-comparando HTTP pedidos de informação pelo &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; e
-pela rede do usuário. Aplicando estes dois testes a &lt;strong&gt;web.whatsapp.com&lt;/strong&gt; e a
-&lt;strong&gt;www.whatsapp.com&lt;/strong&gt;, o &lt;strong&gt;DNS hijacking&lt;/strong&gt; se revelou como método de bloqueio
-(exemplificado a seguir):&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;DNS-consistency tests&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;###########################################
-# OONI Probe Report for dns_consistency (0.7.0)
-# Tue May  3 06:20:40 2016
-###########################################
-probe_asn: AS7738
-probe_cc: BR
-test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
-test_name: dns_consistency
-test_start_time: &#39;2016-05-03 04:20:40&#39;
-test_version: 0.7.0
----
-control_resolver: 213.138.109.232:57004
-errors: {192.168.122.1: dns_lookup_error}
-failures: [192.168.122.1]
-inconsistent: []
-input: www.whatsapp.com
-measurement_start_time: &#39;2016-05-03 04:20:43&#39;
-queries:
-- answers:
-  - {answer_type: A, ipv4: 184.173.147.39}
-  - {answer_type: A, ipv4: 184.173.147.38}
-  - {answer_type: A, ipv4: 192.155.212.203}
-  - {answer_type: A, ipv4: 192.155.212.202}
-  failure: null
-  hostname: www.whatsapp.com
-  query_type: A
-  resolver_hostname: 213.138.109.232
-  resolver_port: 57004
-- answers: []
-  failure: deferred_timeout_error
-  hostname: www.whatsapp.com
-  query_type: A
-  resolver_hostname: 192.168.122.1
-  resolver_port: 53
-successful: []
-test_resolvers: [192.168.122.1]
-test_runtime: 1.2021667957305908
-...
-control_resolver: 213.138.109.232:57004
-errors: {192.168.122.1: dns_lookup_error}
-failures: [192.168.122.1]
-inconsistent: []
-input: web.whatsapp.com
-measurement_start_time: &#39;2016-05-03 04:20:43&#39;
-queries:
-- answers:
-  - {answer_type: CNAME, hostname: mmx-ds.cdn.whatsapp.net}
-  - {answer_type: A, ipv4: 179.60.192.51}
-  failure: null
-  hostname: web.whatsapp.com
-  query_type: A
-  resolver_hostname: 213.138.109.232
-  resolver_port: 57004
-- answers: []
-  failure: deferred_timeout_error
-  hostname: web.whatsapp.com
-  query_type: A
-  resolver_hostname: 192.168.122.1
-  resolver_port: 53
-successful: []
-test_resolvers: [192.168.122.1]
-test_runtime: 1.223766803741455
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;###########################################
-# OONI Probe Report for dns_consistency (0.7.0)
-# Tue May  3 01:39:37 2016
-###########################################
-probe_asn: AS26615
-probe_cc: BR
-software_name: ooniprobe
-software_version: 1.4.2
-test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
-test_name: dns_consistency
-test_start_time: &#39;2016-05-02 23:39:37&#39;
-test_version: 0.7.0
----
-control_resolver: 213.138.109.232:57004
-errors: {192.168.122.1: no_answer}
-failures: [192.168.122.1]
-input: www.whatsapp.com
-measurement_start_time: &#39;2016-05-02 23:39:40&#39;
-queries:
-- answers:
-  - {answer_type: A, ipv4: 169.44.84.178}
-  - {answer_type: A, ipv4: 184.173.147.39}
-  - {answer_type: A, ipv4: 184.173.147.38}
-  - {answer_type: A, ipv4: 169.44.82.102}
-  - {answer_type: A, ipv4: 192.155.212.202}
-  - {answer_type: A, ipv4: 192.155.212.203}
-  failure: null
-  hostname: www.whatsapp.com
-  query_type: A
-  resolver_hostname: 213.138.109.232
-  resolver_port: 57004
-- answers: []
-  failure: null
-  hostname: www.whatsapp.com
-  query_type: A
-  resolver_hostname: 192.168.122.1
-  resolver_port: 53
-successful: []
-test_resolvers: [192.168.122.1]
-test_runtime: 0.47959399223327637
----
-control_resolver: 213.138.109.232:57004
-errors: {192.168.122.1: no_answer}
-failures: [192.168.122.1]
-input: web.whatsapp.com
-measurement_start_time: &#39;2016-05-02 23:39:40&#39;
-queries:
-- answers:
-  - {answer_type: CNAME, hostname: mmx-ds.cdn.whatsapp.net}
-  - {answer_type: A, ipv4: 179.60.192.51}
-  failure: null
-  hostname: web.whatsapp.com
-  query_type: A
-  resolver_hostname: 213.138.109.232
-  resolver_port: 57004
-- answers: []
-  failure: null
-  hostname: web.whatsapp.com
-  query_type: A
-  resolver_hostname: 192.168.122.1
-  resolver_port: 53
-successful: []
-test_resolvers: [192.168.122.1]
-test_runtime: 0.03604292869567871
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;###########################################
-# OONI Probe Report for dns_consistency (0.7.0)
-# Tue May  3 15:07:07 2016
-###########################################
----
-annotations: null
-data_format_version: 0.2.0
-input_hashes: [db9176124032c0dd1d974fa52ee194e8304658ba2f32f5f07911abfb03521ff0]
-options: [-f, whatsappurl.list]
-probe_asn: AS7738
-probe_cc: BR
-probe_city: null
-probe_ip: 127.0.0.1
-report_id: null
-software_name: ooniprobe
-software_version: 1.4.2
-test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
-test_name: dns_consistency
-test_start_time: &#39;2016-05-03 13:07:07&#39;
-test_version: 0.7.0
-...
----
-control_resolver: 213.138.109.232:57004
-errors: {192.168.122.1: dns_lookup_error}
-failures: [192.168.122.1]
-inconsistent: []
-input: www.whatsapp.com
-measurement_start_time: &#39;2016-05-03 13:07:12&#39;
-queries:
-- answers:
-  - {answer_type: A, ipv4: 192.155.212.202}
-  - {answer_type: A, ipv4: 192.155.212.203}
-  - {answer_type: A, ipv4: 184.173.147.38}
-  - {answer_type: A, ipv4: 184.173.147.39}
-  - {answer_type: A, ipv4: 169.44.84.178}
-  - {answer_type: A, ipv4: 169.44.82.102}
-  failure: null
-  hostname: www.whatsapp.com
-  query_type: A
-  resolver_hostname: 213.138.109.232
-  resolver_port: 57004
-- answers: []
-  failure: deferred_timeout_error
-  hostname: www.whatsapp.com
-  query_type: A
-  resolver_hostname: 192.168.122.1
-  resolver_port: 53
-successful: []
-test_resolvers: [192.168.122.1]
-test_runtime: 1.296454906463623
-...
----
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;HTTP-request test&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;###########################################
-# OONI Probe Report for http_requests (0.2.5)
-# Mon May  2 23:17:02 2016
-###########################################
-probe_asn: AS26615
-probe_cc: BR
-software_name: ooniprobe
-software_version: 1.4.2
-test_helpers: {}
-test_name: http_requests
-test_start_time: &#39;2016-05-02 21:17:02&#39;
-test_version: 0.2.5
-...
-agent: agent
-body_length_match: null
-body_proportion: null
-control_cloudflare: null
-control_failure: null
-experiment_failure: dns_lookup_error
-factor: 0.8
-headers_diff: null
-headers_match: null
-input: https://www.whatsapp.com
-measurement_start_time: &#39;2016-05-02 21:17:07&#39;
-requests:
-- failure: dns_lookup_error
-  request:
-    body: null
-    headers: {User-Agent: &#39;Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2)
-        Gecko/20100115 Firefox/3.6&#39;}
-    method: GET
-    tor: {exit_ip: null, exit_name: null, is_tor: false}
-    url: https://www.whatsapp.com
-  response: null
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;ultrapassar-censura:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;Ultrapassar censura&lt;/h2&gt;
-
-&lt;p&gt;Pode-se ultrapassar o bloqueio da página web do WhatsApp’s pelo uso do
-&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. No caso do DNS hijacking, os usuários podem
-conseguir acesso às páginas bloqueadas apenas &lt;a href=&#34;https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses&#34;&gt;modificando o DNS reverso&lt;/a&gt;
-(embora essa variante não seja sempre eficaz). Em caso de bloquearem o
-WhatsApp (ou outros IM aplicatvos) outra vez, os usários de Android no Brasil
-(e por toda a parte) podem tentar ultrapassar a censura usando o &lt;a href=&#34;https://www.torproject.org/docs/android.html&#34;&gt;&lt;strong&gt;modo da VPN
-de Orbot&lt;/strong&gt;&lt;/a&gt; o qual autoriza todos
-os applicativos a funcionar pela rede &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. Não
-obstante, é importante dastacar que o recurso da VPN de Orbot &lt;strong&gt;não&lt;/strong&gt; dever ser
-utilizado para anonimato na rede, mas para ultrapassar a censura na rede.&lt;/p&gt;
-
-&lt;h2 id=&#34;limitações-nessa-investigação:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;Limitações nessa investigação&lt;/h2&gt;
-
-&lt;p&gt;No momento, os &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;testes de software do OONI&lt;/a&gt; &lt;strong&gt;não&lt;/strong&gt; se relacionam
-particularmente aos applicativos de instant messaging (IM) (como p. ex.
-WhatsApp), mas às páginas web. È por isso, que os nossos resultados não
-refletem os testes do applicativo WhatsApp, mas se limitam aos testes a
-respeito da página web de WhatsApp a qual foi bloqueada por DNS hijacking. Ao
-longo desse ano pretendemos desenvolver outros OONI testes que particularmente
-tenham como objetivo testar applicativos de IM a respeito da censura.&lt;/p&gt;
-
-&lt;p&gt;Até então, o bloqueio da página web de WhatsApp assim como o applicativo web
-podem ser testados da seguinte forma:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#installation&#34;&gt;Instalar ooniprobe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Baixar o &lt;a href=&#34;https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck&#34;&gt;whatsapp deck&lt;/a&gt;
-(eg. &lt;code&gt;wget https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;Percorrer o test deck &lt;code&gt;ooniprobe -i whatsapp.deck hr&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;ooni-explorer-report-links:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;OONI Explorer report links&lt;/h1&gt;
-
-&lt;h2 id=&#34;http-requests-measurements:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=https:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fwww.whatsapp.com&#34;&gt;URL: http://www.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=https:%2F%2Fwww.whatsapp.com&#34;&gt;URL: https://www.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214210Z_AS26615_LzBigYkP8oN1aAnI1mnFFDwZPAbUcTu2ZN6uSwosZuW8HVm7br?input=http:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: http://www.whatsapp.com/cidr.txt May 2, 2016 11:39:18 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=https:%2F%2Fweb.whatsapp.com&#34;&gt;URL: https://web.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=http:%2F%2Fwww.whatsapp.com&#34;&gt;URL: http://www.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=https:%2F%2Fwww.whatsapp.com&#34;&gt;URL: https://www.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=http:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: http://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;dns-consistency-measurements:f4a5ee7961e79bed10dfcdc01f1ee8db&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=www.whatsapp.com&#34;&gt;Website: www.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214811Z_AS7738_G7r7jVDGUQffeea959x5m7Fr0e4EsM5ppD3vl9fWhuM3uqkyIA?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 3, 2016 1:07:07 PM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T042017Z_AS7738_OZ89SZlnKKhSFhXOGMmsFzcZ9ctLL8NZgJeEg6llwDV92JKIf8?input=www.whatsapp.com&#34;&gt;Website: www.whatsapp.com May 3, 2016 4:20:40 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     
@@ -795,7 +587,7 @@ ran tests locally in Brazil to detect the technical details of how censorship
 was implemented. This blog post includes a publication of our measurements,
 revealing that Brazilian ISPs blocked WhatsApp&amp;rsquo;s website through DNS hijacking.&lt;/p&gt;
 
-&lt;h1 id=&#34;our-findings:c863708e27f97e72f64548dd80c61fef&#34;&gt;Our findings&lt;/h1&gt;
+&lt;h1 id=&#34;our-findings&#34;&gt;Our findings&lt;/h1&gt;
 
 &lt;p&gt;Two types of &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI tests&lt;/a&gt; were run
 in Brazil to identify whether and how WhatsApp was blocked:&lt;/p&gt;
@@ -1037,7 +829,7 @@ requests:
   response: null
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;circumventing-censorship:c863708e27f97e72f64548dd80c61fef&#34;&gt;Circumventing censorship&lt;/h2&gt;
+&lt;h2 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h2&gt;
 
 &lt;p&gt;The blocking of WhatsApp&amp;rsquo;s website can be circumvented through the use of
 &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. In cases of DNS hijacking, users might even
@@ -1050,7 +842,7 @@ Brazil (and elsewhere) can try circumventing censorship by using the
 which enables all apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt;. It&amp;rsquo;s important though to note that Orbot&amp;rsquo;s VPN
 feature should &lt;em&gt;not&lt;/em&gt; be used for anonymity, but only for bypassing censorship.&lt;/p&gt;
 
-&lt;h2 id=&#34;limitations-to-our-study:c863708e27f97e72f64548dd80c61fef&#34;&gt;Limitations to our study&lt;/h2&gt;
+&lt;h2 id=&#34;limitations-to-our-study&#34;&gt;Limitations to our study&lt;/h2&gt;
 
 &lt;p&gt;Currently &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software tests&lt;/a&gt; are
 &lt;em&gt;not&lt;/em&gt; specifically designed to test instant messaging (IM) applications (such
@@ -1070,9 +862,9 @@ through the following:&lt;/p&gt;
 &lt;li&gt;Run test deck &lt;code&gt;ooniprobe -i whatsapp.deck&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;ooni-explorer-report-links:c863708e27f97e72f64548dd80c61fef&#34;&gt;OONI Explorer report links&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h1&gt;
 
-&lt;h2 id=&#34;http-requests-measurements:c863708e27f97e72f64548dd80c61fef&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
+&lt;h2 id=&#34;http-requests-measurements&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
@@ -1089,7 +881,380 @@ through the following:&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;dns-consistency-measurements:c863708e27f97e72f64548dd80c61fef&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
+&lt;h2 id=&#34;dns-consistency-measurements&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=www.whatsapp.com&#34;&gt;Website: www.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214811Z_AS7738_G7r7jVDGUQffeea959x5m7Fr0e4EsM5ppD3vl9fWhuM3uqkyIA?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 3, 2016 1:07:07 PM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T042017Z_AS7738_OZ89SZlnKKhSFhXOGMmsFzcZ9ctLL8NZgJeEg6llwDV92JKIf8?input=www.whatsapp.com&#34;&gt;Website: www.whatsapp.com May 3, 2016 4:20:40 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WhatsApp bloqueado (outra vez) no Brasil</title>
+      <link>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</link>
+      <pubDate>Fri, 06 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/brazil-whatsapp-block-pt/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Pais:&lt;/strong&gt; Brasil&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ISPs investigados:&lt;/strong&gt; Tim mobile (AS 26615), Oi landline (AS 7738)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Método de censura:&lt;/strong&gt; DNS Hijacking&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OONI testes:&lt;/strong&gt; HTTP Requests, DNS Consistency&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Periodo da medição:&lt;/strong&gt; 2016-05-02 - 2016-05-03&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Translation by:&lt;/strong&gt; Kornelia Friesch&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/post/brazil-whatsapp-block&#34;&gt;Post in original language&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Desde que o
+&lt;a href=&#34;https://www.whatsapp.com/security/&#34;&gt;WhatsApp implantou a codificação end-to-end (end-to-end encryption)&lt;/a&gt; para proteger a privacidade e segurança
+dos, em nível mundial, um bilhão de usuários, manifestaram-se, alguns casos de
+censura ordenados por governos irritando-se pelo fato de não terem mais acesso
+à comunicação privada dos cidadãos. Com a codificação end-to-end pelo protocolo
+Signal, se torna-se impossível para o WhatsApp decifrar os dados do usuário. Ou
+seja, mesmo se quisesse entregar os dados não podería – sendo isso o que
+precisamente faz a comunicação pelo WhatsApp mais segura. Já em Dezembro do
+ano passado um juiz no Brasil &lt;a href=&#34;https://www.theguardian.com/technology/2015/dec/17/whatsapp-blocked-brazil-48-hours-facebook&#34;&gt;ordenou o bloqueio do WhatsApp por 48 horas&lt;/a&gt;
+, sancionando desta forma a rejeição de entrega de dados pelo WhatsApp durante
+uma investigação de crimes. No início desta semana aconteceu outro incidente de
+bloqueio por &lt;a href=&#34;https://www.theguardian.com/technology/2016/may/02/brazil-whatsapp-block-72-hours&#34;&gt;ordem judicial no Brasil&lt;/a&gt;
+, desta vez por 72 horas, penalizando novamente desta forma outra vez a
+rejeição da empresa de entregar dados durante uma investigação sobre tráfico de
+drogas. Nos dois casos, a ordem de bloqueio de WhatsApp se efetuou em menos de
+24 horas, gerando um enorme descontenamento na população brasileira, da qual
+&lt;a href=&#34;http://www.theglobeandmail.com/technology/tech-news/whatsapp-comes-down-how-brazilians-are-coping-without-their-social-mediafixes/article27799710/&#34;&gt;mais de cem milhões de pessoas&lt;/a&gt;
+(91% dos usuários de celular) dependem desse serviço na sua comunicação
+cotidiana deles.&lt;/p&gt;
+
+&lt;p&gt;Segundo Lucas Teixeira, técnico-chefe de &lt;a href=&#34;https://www.codingrights.org/&#34;&gt;Coding Rights&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;As pessoas reagiram ao bloqueio do Whatsapp com um misto de choque, revolta e
+zoeira, refletindo o fato de que o Whatsapp é usado por quase todas as pessoas
+em cidades pequenas e grandes &amp;ndash; e até mesmo em áreas rurais &amp;ndash; para se
+comunicarem, substituindo o SMS e chamadas telefônicas em quase 100%. As
+parcerias de zero rating da empresa com telecoms também ajudou bastante na
+adoção. Planos de Internet móvel com franquia de dados mas &amp;ldquo;Whatsapp de graça&amp;rdquo;
+são comuns. O Marco Civil da Internet proíbe expressamente violações à
+neutralidade de rede, mas a legalidade do zero rating especificamente vai ser
+definida no seu &lt;a href=&#34;http://participacao.mj.gov.br/marcocivil&#34;&gt;processo de regulamentação&lt;/a&gt;.
+Já sobre a legalidade do bloqueio do Whatsapp, não há certeza pois o processo
+corre sob sigilo, mas ele foi revertido na Justiça.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Acompanhando as reportagens recentes sobre o bloqueio de WhatsApp no Brasil, o
+&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt;
+realizou testes dentro do País para detectar os detalhes técnicos da
+implementação, isto é, o metodo da censura. Esta entrada blog contem a
+publicação dos dados contabilizados, mostrando desta maneira o que o bloqueio
+da página web do WhatsApp pelos provedores de serviço de internet (ISPs)
+brasileiros usando o método de DNS hijacking.&lt;/p&gt;
+
+&lt;h1 id=&#34;os-nossos-resultados&#34;&gt;Os nossos resultados&lt;/h1&gt;
+
+&lt;p&gt;Para comprovar o bloqueio do WhatsApp, assim como para identificar o método
+aplicado, dois tipos de &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;testes OONI&lt;/a&gt; foram realizados no Brasil:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/dnsconsistency.rst&#34;&gt;DNS-consistency tests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP-request tests&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;O primeiro teste é criado para comparar os resultados da consulta do DNS de um
+DNS reverso confiável com os resultados de um DNS reverso pelo qual
+comprovou-se manipulação. O segundo teste tenta detectar a censura online,
+comparando HTTP pedidos de informação pelo &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; e
+pela rede do usuário. Aplicando estes dois testes a &lt;strong&gt;web.whatsapp.com&lt;/strong&gt; e a
+&lt;strong&gt;www.whatsapp.com&lt;/strong&gt;, o &lt;strong&gt;DNS hijacking&lt;/strong&gt; se revelou como método de bloqueio
+(exemplificado a seguir):&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DNS-consistency tests&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for dns_consistency (0.7.0)
+# Tue May  3 06:20:40 2016
+###########################################
+probe_asn: AS7738
+probe_cc: BR
+test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
+test_name: dns_consistency
+test_start_time: &#39;2016-05-03 04:20:40&#39;
+test_version: 0.7.0
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: dns_lookup_error}
+failures: [192.168.122.1]
+inconsistent: []
+input: www.whatsapp.com
+measurement_start_time: &#39;2016-05-03 04:20:43&#39;
+queries:
+- answers:
+  - {answer_type: A, ipv4: 184.173.147.39}
+  - {answer_type: A, ipv4: 184.173.147.38}
+  - {answer_type: A, ipv4: 192.155.212.203}
+  - {answer_type: A, ipv4: 192.155.212.202}
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: deferred_timeout_error
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 1.2021667957305908
+...
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: dns_lookup_error}
+failures: [192.168.122.1]
+inconsistent: []
+input: web.whatsapp.com
+measurement_start_time: &#39;2016-05-03 04:20:43&#39;
+queries:
+- answers:
+  - {answer_type: CNAME, hostname: mmx-ds.cdn.whatsapp.net}
+  - {answer_type: A, ipv4: 179.60.192.51}
+  failure: null
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: deferred_timeout_error
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 1.223766803741455
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for dns_consistency (0.7.0)
+# Tue May  3 01:39:37 2016
+###########################################
+probe_asn: AS26615
+probe_cc: BR
+software_name: ooniprobe
+software_version: 1.4.2
+test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
+test_name: dns_consistency
+test_start_time: &#39;2016-05-02 23:39:37&#39;
+test_version: 0.7.0
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: no_answer}
+failures: [192.168.122.1]
+input: www.whatsapp.com
+measurement_start_time: &#39;2016-05-02 23:39:40&#39;
+queries:
+- answers:
+  - {answer_type: A, ipv4: 169.44.84.178}
+  - {answer_type: A, ipv4: 184.173.147.39}
+  - {answer_type: A, ipv4: 184.173.147.38}
+  - {answer_type: A, ipv4: 169.44.82.102}
+  - {answer_type: A, ipv4: 192.155.212.202}
+  - {answer_type: A, ipv4: 192.155.212.203}
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 0.47959399223327637
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: no_answer}
+failures: [192.168.122.1]
+input: web.whatsapp.com
+measurement_start_time: &#39;2016-05-02 23:39:40&#39;
+queries:
+- answers:
+  - {answer_type: CNAME, hostname: mmx-ds.cdn.whatsapp.net}
+  - {answer_type: A, ipv4: 179.60.192.51}
+  failure: null
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: null
+  hostname: web.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 0.03604292869567871
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for dns_consistency (0.7.0)
+# Tue May  3 15:07:07 2016
+###########################################
+---
+annotations: null
+data_format_version: 0.2.0
+input_hashes: [db9176124032c0dd1d974fa52ee194e8304658ba2f32f5f07911abfb03521ff0]
+options: [-f, whatsappurl.list]
+probe_asn: AS7738
+probe_cc: BR
+probe_city: null
+probe_ip: 127.0.0.1
+report_id: null
+software_name: ooniprobe
+software_version: 1.4.2
+test_helpers: {backend: &#39;213.138.109.232:57004&#39;}
+test_name: dns_consistency
+test_start_time: &#39;2016-05-03 13:07:07&#39;
+test_version: 0.7.0
+...
+---
+control_resolver: 213.138.109.232:57004
+errors: {192.168.122.1: dns_lookup_error}
+failures: [192.168.122.1]
+inconsistent: []
+input: www.whatsapp.com
+measurement_start_time: &#39;2016-05-03 13:07:12&#39;
+queries:
+- answers:
+  - {answer_type: A, ipv4: 192.155.212.202}
+  - {answer_type: A, ipv4: 192.155.212.203}
+  - {answer_type: A, ipv4: 184.173.147.38}
+  - {answer_type: A, ipv4: 184.173.147.39}
+  - {answer_type: A, ipv4: 169.44.84.178}
+  - {answer_type: A, ipv4: 169.44.82.102}
+  failure: null
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 213.138.109.232
+  resolver_port: 57004
+- answers: []
+  failure: deferred_timeout_error
+  hostname: www.whatsapp.com
+  query_type: A
+  resolver_hostname: 192.168.122.1
+  resolver_port: 53
+successful: []
+test_resolvers: [192.168.122.1]
+test_runtime: 1.296454906463623
+...
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;HTTP-request test&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;###########################################
+# OONI Probe Report for http_requests (0.2.5)
+# Mon May  2 23:17:02 2016
+###########################################
+probe_asn: AS26615
+probe_cc: BR
+software_name: ooniprobe
+software_version: 1.4.2
+test_helpers: {}
+test_name: http_requests
+test_start_time: &#39;2016-05-02 21:17:02&#39;
+test_version: 0.2.5
+...
+agent: agent
+body_length_match: null
+body_proportion: null
+control_cloudflare: null
+control_failure: null
+experiment_failure: dns_lookup_error
+factor: 0.8
+headers_diff: null
+headers_match: null
+input: https://www.whatsapp.com
+measurement_start_time: &#39;2016-05-02 21:17:07&#39;
+requests:
+- failure: dns_lookup_error
+  request:
+    body: null
+    headers: {User-Agent: &#39;Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2)
+        Gecko/20100115 Firefox/3.6&#39;}
+    method: GET
+    tor: {exit_ip: null, exit_name: null, is_tor: false}
+    url: https://www.whatsapp.com
+  response: null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ultrapassar-censura&#34;&gt;Ultrapassar censura&lt;/h2&gt;
+
+&lt;p&gt;Pode-se ultrapassar o bloqueio da página web do WhatsApp’s pelo uso do
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. No caso do DNS hijacking, os usuários podem
+conseguir acesso às páginas bloqueadas apenas &lt;a href=&#34;https://developers.google.com/speed/public-dns/docs/using#google_public_dns_ip_addresses&#34;&gt;modificando o DNS reverso&lt;/a&gt;
+(embora essa variante não seja sempre eficaz). Em caso de bloquearem o
+WhatsApp (ou outros IM aplicatvos) outra vez, os usários de Android no Brasil
+(e por toda a parte) podem tentar ultrapassar a censura usando o &lt;a href=&#34;https://www.torproject.org/docs/android.html&#34;&gt;&lt;strong&gt;modo da VPN
+de Orbot&lt;/strong&gt;&lt;/a&gt; o qual autoriza todos
+os applicativos a funcionar pela rede &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;. Não
+obstante, é importante dastacar que o recurso da VPN de Orbot &lt;strong&gt;não&lt;/strong&gt; dever ser
+utilizado para anonimato na rede, mas para ultrapassar a censura na rede.&lt;/p&gt;
+
+&lt;h2 id=&#34;limitações-nessa-investigação&#34;&gt;Limitações nessa investigação&lt;/h2&gt;
+
+&lt;p&gt;No momento, os &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;testes de software do OONI&lt;/a&gt; &lt;strong&gt;não&lt;/strong&gt; se relacionam
+particularmente aos applicativos de instant messaging (IM) (como p. ex.
+WhatsApp), mas às páginas web. È por isso, que os nossos resultados não
+refletem os testes do applicativo WhatsApp, mas se limitam aos testes a
+respeito da página web de WhatsApp a qual foi bloqueada por DNS hijacking. Ao
+longo desse ano pretendemos desenvolver outros OONI testes que particularmente
+tenham como objetivo testar applicativos de IM a respeito da censura.&lt;/p&gt;
+
+&lt;p&gt;Até então, o bloqueio da página web de WhatsApp assim como o applicativo web
+podem ser testados da seguinte forma:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#installation&#34;&gt;Instalar ooniprobe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Baixar o &lt;a href=&#34;https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck&#34;&gt;whatsapp deck&lt;/a&gt;
+(eg. &lt;code&gt;wget https://raw.githubusercontent.com/TheTorProject/ooni-probe/0b4cea0ad99696f664cd3083df929d93f88fda43/data/decks/whatsapp.deck&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Percorrer o test deck &lt;code&gt;ooniprobe -i whatsapp.deck hr&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h1&gt;
+
+&lt;h2 id=&#34;http-requests-measurements&#34;&gt;HTTP Requests measurements&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=https:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fwww.whatsapp.com&#34;&gt;URL: http://www.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=https:%2F%2Fwww.whatsapp.com&#34;&gt;URL: https://www.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214210Z_AS26615_LzBigYkP8oN1aAnI1mnFFDwZPAbUcTu2ZN6uSwosZuW8HVm7br?input=http:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: http://www.whatsapp.com/cidr.txt May 2, 2016 11:39:18 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 2, 2016 9:17:02 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=http:%2F%2Fweb.whatsapp.com&#34;&gt;URL: http://web.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=https:%2F%2Fweb.whatsapp.com&#34;&gt;URL: https://web.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=http:%2F%2Fwww.whatsapp.com&#34;&gt;URL: http://www.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160504T214555Z_AS7738_bCjuASU2Bx2qP7XWIarsRXUTHCRUO7AYaWgDOQowqyUgF8hEGA?input=https:%2F%2Fwww.whatsapp.com&#34;&gt;URL: https://www.whatsapp.com May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=http:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: http://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt&#34;&gt;URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;dns-consistency-measurements&#34;&gt;DNS Consistency measurements&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com&#34;&gt;Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615&lt;/a&gt;&lt;/li&gt;
@@ -1108,7 +1273,7 @@ through the following:&lt;/p&gt;
       <guid>https://ooni.torproject.org/install/lepidopter/</guid>
       <description>
 
-&lt;h1 id=&#34;lepidopter-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter guide&lt;/h1&gt;
+&lt;h1 id=&#34;lepidopter-guide&#34;&gt;Lepidopter guide&lt;/h1&gt;
 
 &lt;p&gt;This guide explains step-by-step how to run OONI tests from a Raspberry Pi.&lt;/p&gt;
 
@@ -1119,7 +1284,7 @@ repository&lt;/a&gt;.&lt;/p&gt;
 Lepidopter in QEMU is described
 &lt;a href=&#34;https://github.com/TheTorProject/lepidopter/blob/master/README.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;about-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;About Lepidopter&lt;/h2&gt;
+&lt;h2 id=&#34;about-lepidopter&#34;&gt;About Lepidopter&lt;/h2&gt;
 
 &lt;p&gt;Lepidopter is an &lt;em&gt;ooniprobe distribution&lt;/em&gt; for Raspberry Pis.&lt;/p&gt;
 
@@ -1155,7 +1320,7 @@ Designed to examine whether URLs are blocked or not (and if so, how)&lt;/p&gt;&l
 &lt;li&gt;&lt;p&gt;More accurate measurements&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;requirements:7565a061641bd1e599d91e306fc304d1&#34;&gt;Requirements&lt;/h2&gt;
+&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
 
 &lt;p&gt;The following include a list of requirements to get started:&lt;/p&gt;
 
@@ -1176,9 +1341,9 @@ power will cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;If your laptop does not have an SD card slot, please ensure that you have an SD card reader.&lt;/p&gt;
 
-&lt;h1 id=&#34;downloading-and-verifying-the-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Downloading and verifying the Lepidopter Raspberry Pi image&lt;/h1&gt;
+&lt;h1 id=&#34;downloading-and-verifying-the-lepidopter-raspberry-pi-image&#34;&gt;Downloading and verifying the Lepidopter Raspberry Pi image&lt;/h1&gt;
 
-&lt;h2 id=&#34;download-the-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
+&lt;h2 id=&#34;download-the-lepidopter-image&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;&lt;/li&gt;
@@ -1189,12 +1354,12 @@ for a significantly reduced file size (ca. 114M smaller) compared to the zip
 archive. Note that this will require an extra program to be installed depending
 on your OS.&lt;/p&gt;
 
-&lt;h2 id=&#34;verify-the-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify the Lepidopter image&lt;/h2&gt;
+&lt;h2 id=&#34;verify-the-lepidopter-image&#34;&gt;Verify the Lepidopter image&lt;/h2&gt;
 
 &lt;p&gt;To verify that the Lepidopter image is the right one, you will need to compare
 it with the key that has been signed by us.&lt;/p&gt;
 
-&lt;h3 id=&#34;import-the-lepidopter-signing-key:7565a061641bd1e599d91e306fc304d1&#34;&gt;Import the Lepidopter signing key&lt;/h3&gt;
+&lt;h3 id=&#34;import-the-lepidopter-signing-key&#34;&gt;Import the Lepidopter signing key&lt;/h3&gt;
 
 &lt;p&gt;From OONI web server:&lt;/p&gt;
 
@@ -1214,7 +1379,7 @@ published here:&lt;/p&gt;
 uid   Lepidopter Team (signing key)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;verify-the-lepidopter-image-1:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
+&lt;h3 id=&#34;verify-the-lepidopter-image-1&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
 
 &lt;p&gt;Verify that the compressed image &lt;code&gt;lepidopter-alpha-armel.img.zip&lt;/code&gt; matches its
 signature &lt;code&gt;lepidopter-alpha-armel.img.zip.asc&lt;/code&gt; by running:&lt;/p&gt;
@@ -1237,13 +1402,13 @@ gpg: binary signature, digest algorithm SHA512
 &lt;p&gt;If you want to learn more about digital signatures and key verification read
 the &lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;documentation&lt;/a&gt; from Qubes OS.&lt;/p&gt;
 
-&lt;h1 id=&#34;setting-up-your-raspberry-pi-with-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;Setting up your Raspberry Pi with Lepidopter&lt;/h1&gt;
+&lt;h1 id=&#34;setting-up-your-raspberry-pi-with-lepidopter&#34;&gt;Setting up your Raspberry Pi with Lepidopter&lt;/h1&gt;
 
 &lt;p&gt;Depending on whether you are a Windows, Linux or Mac OS X user, please refer to
 the relevant section of the guide below on how to set up your Raspberry Pi with
 Lepidopter.&lt;/p&gt;
 
-&lt;h2 id=&#34;linux-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Linux users&lt;/h2&gt;
+&lt;h2 id=&#34;linux-users&#34;&gt;Linux users&lt;/h2&gt;
 
 &lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use &lt;strong&gt;Disk
 Image Writer&lt;/strong&gt; (graphical interface) to copy the Lepidopter image to an SD card.
@@ -1252,7 +1417,7 @@ Alternatively, you can do this through your terminal.&lt;/p&gt;
 &lt;p&gt;Below we provide steps on how to copy the Lepidopter image to an SD card via
 Disk Image Writer or a terminal.&lt;/p&gt;
 
-&lt;h3 id=&#34;disk-image-writer:7565a061641bd1e599d91e306fc304d1&#34;&gt;Disk Image Writer&lt;/h3&gt;
+&lt;h3 id=&#34;disk-image-writer&#34;&gt;Disk Image Writer&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -1312,7 +1477,7 @@ where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;http
 Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
 hours.&lt;/p&gt;
 
-&lt;h3 id=&#34;terminal:7565a061641bd1e599d91e306fc304d1&#34;&gt;Terminal&lt;/h3&gt;
+&lt;h3 id=&#34;terminal&#34;&gt;Terminal&lt;/h3&gt;
 
 &lt;p&gt;Please note that the use of the &amp;ldquo;dd&amp;rdquo; tool can overwrite any partition of your
 machine. If you specify the wrong device in the instructions below you could
@@ -1390,7 +1555,7 @@ your SD card).&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Remove the SD card from your card reader, insert it in the Raspberry
 Pi, and have fun!&lt;/p&gt;
 
-&lt;h2 id=&#34;mac-os-x-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Mac OS X users&lt;/h2&gt;
+&lt;h2 id=&#34;mac-os-x-users&#34;&gt;Mac OS X users&lt;/h2&gt;
 
 &lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
 
@@ -1437,7 +1602,7 @@ where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;http
 Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
 hours.&lt;/p&gt;
 
-&lt;h3 id=&#34;optimization:7565a061641bd1e599d91e306fc304d1&#34;&gt;Optimization&lt;/h3&gt;
+&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
 
 &lt;p&gt;In OS X each disk may have two path references in /dev:&lt;/p&gt;
 
@@ -1452,7 +1617,7 @@ the dd program.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;On a Class 4 SD card the difference was around 20 times faster using the rdisk
 path.&lt;/p&gt;
 
-&lt;h2 id=&#34;windows-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Windows users&lt;/h2&gt;
+&lt;h2 id=&#34;windows-users&#34;&gt;Windows users&lt;/h2&gt;
 
 &lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
 
@@ -1506,7 +1671,7 @@ that is formatted for the Linux operating system that the Raspberry Pi uses
 which is not visible in Windows. If you don&amp;rsquo;t see a small directory with files
 such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
 
-&lt;h3 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h3&gt;
+&lt;h3 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h3&gt;
 
 &lt;p&gt;You might not be able to choose the device in Win32DiskImager on some notebooks,
 so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
@@ -1545,11 +1710,12 @@ right click on it and Run as Administrator.&lt;/p&gt;
 &lt;li&gt;0       size = 250059350016 (232 Gb)&lt;/li&gt;
 &lt;li&gt;1       size = 1990197248 (1898 Mb)&lt;/li&gt;
 &lt;li&gt;Available logical disks:&lt;/li&gt;
-&lt;li&gt;C:\&lt;/li&gt;
-&lt;li&gt;D:\&lt;/li&gt;
-&lt;li&gt;E:\&lt;/li&gt;
-&lt;li&gt;F:\&lt;/li&gt;
-&lt;li&gt;Press ENTER to exit.&lt;/li&gt;
+&lt;li&gt;C:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;D:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;E:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;F:&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Press ENTER to exit.
+&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Use the Load option of flashnul to put the image file on the SD Card.
@@ -1571,7 +1737,7 @@ yes and press enter.&lt;/p&gt;
 &lt;p&gt;If you get an access denied error, make sure to close all explorer windows or
 folders open for the device, then try re-plugging the SD card.&lt;/p&gt;
 
-&lt;h1 id=&#34;sources:7565a061641bd1e599d91e306fc304d1&#34;&gt;Sources&lt;/h1&gt;
+&lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://elinux.org/RPi_Easy_SD_Card_Setup&#34;&gt;RPi Easy SD Card Setup&lt;/a&gt;&lt;/li&gt;
@@ -1619,7 +1785,7 @@ the reports took place during June and July 2014.&lt;/p&gt;
 
 &lt;p&gt;The main test specifications used to probe the blacklist are:&lt;/p&gt;
 
-&lt;h2 id=&#34;http-requests-test:d0c495f4479395eff703b25df5d2e963&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/http_requests.py&#34;&gt;HTTP Requests test&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;http-requests-test&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/http_requests.py&#34;&gt;HTTP Requests test&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;This test performs an HTTP GET request from a specified URL list of potential blocked
 websites over the test network (censored network) and over Tor. It then compares
@@ -1652,7 +1818,7 @@ the control request and the experiment request.&lt;/p&gt;
 Browser?&amp;rdquo;&lt;/a&gt; paper as the
 browser user agents with largest anonymity set.&lt;/p&gt;
 
-&lt;h2 id=&#34;dns-consistency-test:d0c495f4479395eff703b25df5d2e963&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/dns_consistency.py&#34;&gt;DNS consistency test&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;dns-consistency-test&#34;&gt;&lt;a href=&#34;https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/dns_consistency.py&#34;&gt;DNS consistency test&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;This test performs an A DNS query (via UDP) to the control resolver. The answer
 to such query is called the control answer. For each DNS resolver to be tested
@@ -1669,14 +1835,14 @@ hostname), then censorship is probably not happening (tampering:
 
 &lt;p&gt;In any other case the result is marked as: &lt;code&gt;tampering: True&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;probed-isps:d0c495f4479395eff703b25df5d2e963&#34;&gt;Probed ISPs&lt;/h1&gt;
+&lt;h1 id=&#34;probed-isps&#34;&gt;Probed ISPs&lt;/h1&gt;
 
 &lt;p&gt;Probed ISPs: &lt;code&gt;Forthnet, Ote, Cyta, Wind, Vodafone, Cosmote, Wind mobile&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;All of the tested ISPs employed &lt;a href=&#34;https://en.wikipedia.org/wiki/DNS_hijacking&#34;&gt;DNS hijacking&lt;/a&gt; with the exception of Vodafone
 that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;Deep Packet Inspection&lt;/a&gt; to block the resources of the blacklist.&lt;/p&gt;
 
-&lt;h2 id=&#34;probed-isp-ooni-reports:d0c495f4479395eff703b25df5d2e963&#34;&gt;Probed ISP OONI reports&lt;/h2&gt;
+&lt;h2 id=&#34;probed-isp-ooni-reports&#34;&gt;Probed ISP OONI reports&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Forthnet:
@@ -1730,11 +1896,11 @@ that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspect
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;per-isp-analysis:d0c495f4479395eff703b25df5d2e963&#34;&gt;Per ISP analysis&lt;/h2&gt;
+&lt;h2 id=&#34;per-isp-analysis&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_blocking_per_isp.png&#34; alt=&#34;Blocking per ISP&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;forthnet:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h3&gt;
+&lt;h3 id=&#34;forthnet&#34;&gt;Forthnet&lt;/h3&gt;
 
 &lt;p&gt;This ISP has blocked 96 entries (21.91%) of the published &lt;a href=&#34;http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf&#34;&gt;blacklist&lt;/a&gt;.&lt;/p&gt;
 
@@ -1815,7 +1981,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png&#34; alt=&#34;Forthnet EEEP Blocked website screenshot&#34; title=&#34;Forthnet EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;ote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h3&gt;
+&lt;h3 id=&#34;ote&#34;&gt;Ote&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -2036,7 +2202,7 @@ test_resolvers: [192.168.1.1]
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_otenet_gr.png&#34; alt=&#34;Ote EEEP Blocked website screenshot&#34; title=&#34;Ote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;cyta:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h2&gt;
+&lt;h2 id=&#34;cyta&#34;&gt;Cyta&lt;/h2&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -2263,7 +2429,7 @@ webpage&lt;/a&gt;. It is worth mentioning that
 Cyta uses a different user agent (UA) tag for user tracking purposes than on
 their &lt;a href=&#34;http://www.cyta.gr&#34;&gt;main website&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;wind:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind&lt;/h3&gt;
+&lt;h3 id=&#34;wind&#34;&gt;Wind&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -2474,7 +2640,7 @@ request.&amp;lt;/p&amp;gt;
 
 &lt;p&gt;This ISP uses Etag for tracking users which try to visit the blocked content.&lt;/p&gt;
 
-&lt;h3 id=&#34;hol:d0c495f4479395eff703b25df5d2e963&#34;&gt;HOL&lt;/h3&gt;
+&lt;h3 id=&#34;hol&#34;&gt;HOL&lt;/h3&gt;
 
 &lt;p&gt;This ISP has blocked 438 entries (100%) of the published &lt;a href=&#34;http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf&#34;&gt;blacklist&lt;/a&gt;.&lt;/p&gt;
 
@@ -2542,7 +2708,7 @@ test_resolvers: [192.168.122.1]
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeepnotice_hol_gr.png&#34; alt=&#34;HOL EEEP Blocked website screenshot&#34; title=&#34;HOL EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;cosmote:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h3&gt;
+&lt;h3 id=&#34;cosmote&#34;&gt;Cosmote&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -2687,7 +2853,7 @@ href=\&amp;quot;http://www.gamingcommission.gov.gr/index.php/el/\&amp;quot;&amp;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/eeep-greek-censorship/eeep_cosmote_gr.png&#34; alt=&#34;Cosmote EEEP Blocked website screenshot&#34; title=&#34;Cosmote EEEP Blocked website screenshot&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;vodafone:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h3&gt;
+&lt;h3 id=&#34;vodafone&#34;&gt;Vodafone&lt;/h3&gt;
 
 &lt;p&gt;This ISP has blocked 425 entries (97.03%) of the published &lt;a href=&#34;http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf&#34;&gt;blacklist&lt;/a&gt;.&lt;/p&gt;
 
@@ -2794,7 +2960,7 @@ Location: http://1.2.3.50/ups/no_access_gambling.htm
 Connection: keep-alive
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;wind-mobile:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind mobile&lt;/h3&gt;
+&lt;h3 id=&#34;wind-mobile&#34;&gt;Wind mobile&lt;/h3&gt;
 
 &lt;p&gt;Excerpt from HTTP request test:&lt;/p&gt;
 
@@ -3499,7 +3665,7 @@ width=\&amp;quot;9%\&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;/td&amp;gt;\r\
 
 &lt;p&gt;This ISP uses Etag for tracking users which try to visit the blocked content.&lt;/p&gt;
 
-&lt;h2 id=&#34;failure-on-mail-delivery:d0c495f4479395eff703b25df5d2e963&#34;&gt;Failure on mail delivery&lt;/h2&gt;
+&lt;h2 id=&#34;failure-on-mail-delivery&#34;&gt;Failure on mail delivery&lt;/h2&gt;
 
 &lt;p&gt;Most ISPs have hijacked the DNS mail
 exchanger record(s) of the domain name of the EEEP blacklist. A MX record
@@ -3521,7 +3687,7 @@ restricting fair markets and business regulations, i.e a user trying to
 communicate with any business (all of the censored websites are businesses)
 would find himself not being able to perform an email delivery.&lt;/p&gt;
 
-&lt;h3 id=&#34;dns-mx-records-responses:d0c495f4479395eff703b25df5d2e963&#34;&gt;DNS MX records responses:&lt;/h3&gt;
+&lt;h3 id=&#34;dns-mx-records-responses&#34;&gt;DNS MX records responses:&lt;/h3&gt;
 
 &lt;p&gt;The correct MX records of the censored domain names in example:&lt;/p&gt;
 
@@ -3558,7 +3724,7 @@ would find himself not being able to perform an email delivery.&lt;/p&gt;
 
 &lt;p&gt;The spoofed MX record responses of the ISPs.&lt;/p&gt;
 
-&lt;h4 id=&#34;forthnet-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h4&gt;
+&lt;h4 id=&#34;forthnet-1&#34;&gt;Forthnet&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -3569,7 +3735,7 @@ would find himself not being able to perform an email delivery.&lt;/p&gt;
 ;770.com.                       IN      MX
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ote-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h4&gt;
+&lt;h4 id=&#34;ote-1&#34;&gt;Ote&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -3584,7 +3750,7 @@ would find himself not being able to perform an email delivery.&lt;/p&gt;
 hostmaster.localhost. 2014030701 10800 3600 1814400 86400
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;vodafone-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Vodafone&lt;/h4&gt;
+&lt;h4 id=&#34;vodafone-1&#34;&gt;Vodafone&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 888.com
 ;; Got answer:
@@ -3601,7 +3767,7 @@ hostmaster.localhost. 2014030701 10800 3600 1814400 86400
 root.iapetos.panafonet.gr. 2014180301 28800 7200 1209600 600
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;cosmote-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cosmote&lt;/h4&gt;
+&lt;h4 id=&#34;cosmote-1&#34;&gt;Cosmote&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -3618,7 +3784,7 @@ root.iapetos.panafonet.gr. 2014180301 28800 7200 1209600 600
 please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;cyta-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h4&gt;
+&lt;h4 id=&#34;cyta-1&#34;&gt;Cyta&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -3635,7 +3801,7 @@ please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 900 604800 86400
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;wind-mobile-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind mobile&lt;/h4&gt;
+&lt;h4 id=&#34;wind-mobile-1&#34;&gt;Wind mobile&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; Got answer:
@@ -3650,7 +3816,7 @@ please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 2013091901 14400 7200 604800 86400
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;dns-a-records-resposnes:d0c495f4479395eff703b25df5d2e963&#34;&gt;DNS A records resposnes&lt;/h3&gt;
+&lt;h3 id=&#34;dns-a-records-resposnes&#34;&gt;DNS A records resposnes&lt;/h3&gt;
 
 &lt;p&gt;The correct A records of the censored domain names in example:&lt;/p&gt;
 
@@ -3695,7 +3861,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 
 &lt;p&gt;The spoofed A records entries of the ISPs:&lt;/p&gt;
 
-&lt;h4 id=&#34;forthnet-2:d0c495f4479395eff703b25df5d2e963&#34;&gt;Forthnet&lt;/h4&gt;
+&lt;h4 id=&#34;forthnet-2&#34;&gt;Forthnet&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; A 770.com
 ;; global options: +cmd
@@ -3710,7 +3876,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 770.com.                3600    IN      A       62.1.46.55
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ote-2:d0c495f4479395eff703b25df5d2e963&#34;&gt;Ote&lt;/h4&gt;
+&lt;h4 id=&#34;ote-2&#34;&gt;Ote&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; A box24casino.com
 ;; global options: +cmd
@@ -3725,7 +3891,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 box24casino.com.        86191   IN      A       83.235.64.20
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;cyta-2:d0c495f4479395eff703b25df5d2e963&#34;&gt;Cyta&lt;/h4&gt;
+&lt;h4 id=&#34;cyta-2&#34;&gt;Cyta&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.9.5-4-Debian &amp;lt;&amp;lt;&amp;gt;&amp;gt; 770.com
 ;; global options: +cmd
@@ -3743,7 +3909,7 @@ box24casino.com.        86191   IN      A       83.235.64.20
 770.com.                86400   IN      A       78.87.2.91
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;wind-1:d0c495f4479395eff703b25df5d2e963&#34;&gt;Wind&lt;/h4&gt;
+&lt;h4 id=&#34;wind-1&#34;&gt;Wind&lt;/h4&gt;
 
 &lt;pre&gt;&lt;code&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-rpz2+rl005.12-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; A acelivecasino.com
 ;; global options: +cmd
@@ -3758,7 +3924,7 @@ box24casino.com.        86191   IN      A       83.235.64.20
 acelivecasino.com.      85963   IN      A       62.169.194.8
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;corollary:d0c495f4479395eff703b25df5d2e963&#34;&gt;Corollary&lt;/h1&gt;
+&lt;h1 id=&#34;corollary&#34;&gt;Corollary&lt;/h1&gt;
 
 &lt;p&gt;Throughout our technical report we highlighted flaws in the implementation of
 betting websites&amp;rsquo; censorship. Nevertheless, we do not seek for a properly
@@ -3778,7 +3944,7 @@ a blocking-at-will strategy. Internet destinations may be accessible or not,
 while users have no reasoning about it. That would lead to deliberate abuse of
 citizens&amp;rsquo; accessibility and view of the internet.&lt;/p&gt;
 
-&lt;h2 id=&#34;censorship-as-a-social-control-method:d0c495f4479395eff703b25df5d2e963&#34;&gt;Censorship as a social control method.&lt;/h2&gt;
+&lt;h2 id=&#34;censorship-as-a-social-control-method&#34;&gt;Censorship as a social control method.&lt;/h2&gt;
 
 &lt;p&gt;Censorship is introduced as a top-down method to solve pathogenic social
 behaviours or phenomena. For example a state that censors a blog containing
@@ -3813,7 +3979,7 @@ globalized market of the internet.&lt;/p&gt;
 users&amp;rsquo; choices, manipulation of the market and suggests corruption is part of the
 public governance.&lt;/p&gt;
 
-&lt;h2 id=&#34;censorship-as-status-quo:d0c495f4479395eff703b25df5d2e963&#34;&gt;Censorship as status quo&lt;/h2&gt;
+&lt;h2 id=&#34;censorship-as-status-quo&#34;&gt;Censorship as status quo&lt;/h2&gt;
 
 &lt;p&gt;If online censorship is widespread and accepted with little opposition as a way
 to implement a broad range of public policy issues, it becomes far harder to
@@ -3835,7 +4001,7 @@ societies and are a point of conflict in many countries worldwide.&lt;/p&gt;
 to censorship tends to grow. More and more censorship will be used as a method to
 resolve problems or rather to enforce a certain type of approach to the problem.&lt;/p&gt;
 
-&lt;h2 id=&#34;censorship-s-side-effects:d0c495f4479395eff703b25df5d2e963&#34;&gt;Censorship&amp;rsquo;s side-effects&lt;/h2&gt;
+&lt;h2 id=&#34;censorship-s-side-effects&#34;&gt;Censorship&amp;rsquo;s side-effects&lt;/h2&gt;
 
 &lt;p&gt;Censorship of some betting sites in Greece was implemented as a way to forbid
 residents of Greece to bet on websites that do not intend to pay taxes i.e. the
@@ -3877,7 +4043,7 @@ technical evidence of the unlawful presence of Deep Packet Inspection in the
 country to monitor the Internet communications and stop users from browsing the
 website.&lt;/p&gt;
 
-&lt;h1 id=&#34;the-connection-was-reset:35837baaac9f2cd7270d225e40661177&#34;&gt;The connection was reset&lt;/h1&gt;
+&lt;h1 id=&#34;the-connection-was-reset&#34;&gt;The connection was reset&lt;/h1&gt;
 
 &lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
 inside Zambia were reporting error messages.&lt;/p&gt;
@@ -3923,7 +4089,7 @@ operators inside Zambia with the exception of MTN.&lt;/p&gt;
 
 &lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
 
-&lt;h1 id=&#34;who-is-breaking-the-connections:35837baaac9f2cd7270d225e40661177&#34;&gt;Who is breaking the connections?&lt;/h1&gt;
+&lt;h1 id=&#34;who-is-breaking-the-connections&#34;&gt;Who is breaking the connections?&lt;/h1&gt;
 
 &lt;p&gt;Four hours after we received the first reports of service outage inside Zambia
 we could narrow down the problem to what it was perceived in the server side as
@@ -3984,7 +4150,7 @@ X-Nokia-MusicShop-Version: 08.0825.9
 X-Nokia-MusicShop-Bearer: GPRS/3G
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;dpi-or-not-dpi:35837baaac9f2cd7270d225e40661177&#34;&gt;DPI or not DPI?&lt;/h1&gt;
+&lt;h1 id=&#34;dpi-or-not-dpi&#34;&gt;DPI or not DPI?&lt;/h1&gt;
 
 &lt;p&gt;What it was left to determine if the filtering was looking into other aspects
 of the connection. In order to find out we run a few extra tests, requesting
@@ -4012,7 +4178,7 @@ blocking we adviced to the website owners to inform to the general public that
 such active interference was talking place and that the blocking was clearly
 targeted against the website.&lt;/p&gt;
 
-&lt;h1 id=&#34;getting-the-website-back-online:35837baaac9f2cd7270d225e40661177&#34;&gt;Getting the website back online&lt;/h1&gt;
+&lt;h1 id=&#34;getting-the-website-back-online&#34;&gt;Getting the website back online&lt;/h1&gt;
 
 &lt;p&gt;To ensure the public visibility of the website inside Zambia and in order to
 look for a quick solution to put the website online, we tested the availability
@@ -4032,7 +4198,7 @@ tweaks so the full content was delivered encrypted to the readers.&lt;/p&gt;
 HTTPS will keep doing it so without the need to specify HTTPS in their future
 requests.&lt;/p&gt;
 
-&lt;h1 id=&#34;ooni-testing:35837baaac9f2cd7270d225e40661177&#34;&gt;OONI Testing&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-testing&#34;&gt;OONI Testing&lt;/h1&gt;
 
 &lt;p&gt;Inspired by the work of our colleges of the Open Observatory of Network
 Interferece (OONI) we conducted another run of tests to determine if any of
@@ -4040,7 +4206,7 @@ Interferece (OONI) we conducted another run of tests to determine if any of
 could not find any other website blocked with the exception of the Zambian
 Watchdog.&lt;/p&gt;
 
-&lt;h1 id=&#34;blocking-status:35837baaac9f2cd7270d225e40661177&#34;&gt;Blocking status&lt;/h1&gt;
+&lt;h1 id=&#34;blocking-status&#34;&gt;Blocking status&lt;/h1&gt;
 
 &lt;p&gt;Three weeks after we initially detected and fingerprinted the blocking, the
 filtering is still active. Unencrypted requests to the domain
@@ -4069,7 +4235,7 @@ Location: https://&#39;&#39;&#39;zambianwatchdog.com/&#39;&#39;&#39;
 Strict-Transport-Security: max-age=10886401; includeSubDomains 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;courage-is-contagious:35837baaac9f2cd7270d225e40661177&#34;&gt;Courage is contagious&lt;/h1&gt;
+&lt;h1 id=&#34;courage-is-contagious&#34;&gt;Courage is contagious&lt;/h1&gt;
 
 &lt;p&gt;After we unveiled the blocking and network monitoring, Zambian Watchdog has
 received information from whistle blowers of the presence of such
@@ -4101,7 +4267,7 @@ based at Lamya and this has given OP (3) access to all the ISP in Zambia.&amp;rd
 
 &lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/journalist-zyambo-out-of-jail-police-though-he-had-obituary-of-sata/&#34;&gt;Journalist zyambo out of jail police though he had obituary of sata&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;update-17th-july-2013-and-ssl-got-blocked:35837baaac9f2cd7270d225e40661177&#34;&gt;Update (17th July 2013): And SSL got blocked&amp;hellip;&lt;/h1&gt;
+&lt;h1 id=&#34;update-17th-july-2013-and-ssl-got-blocked&#34;&gt;Update (17th July 2013): And SSL got blocked&amp;hellip;&lt;/h1&gt;
 
 &lt;p&gt;On Tuesday 16th of July 2013 (14:43 GMT) just a few hours after this article
 was released, the government has moved forward in their determination of
@@ -4140,7 +4306,7 @@ malformed.).&lt;/p&gt;
       <guid>https://ooni.torproject.org/post/tab-tab-come-in/</guid>
       <description>
 
-&lt;h1 id=&#34;motivation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Motivation&lt;/h1&gt;
+&lt;h1 id=&#34;motivation&#34;&gt;Motivation&lt;/h1&gt;
 
 &lt;p&gt;During the past two years, we have been following the technical developments in
 Internet filtering in Uzbekistan and Turkmenistan. Internet users were
@@ -4159,7 +4325,7 @@ allows to discover mechanisms to bypass it and fingerprint and ultimately
 expose the companies that provide technology and know-how to governments that
 want to surpress the free flow of information in the Net.&lt;/p&gt;
 
-&lt;h1 id=&#34;our-findings:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Our findings&lt;/h1&gt;
+&lt;h1 id=&#34;our-findings&#34;&gt;Our findings&lt;/h1&gt;
 
 &lt;p&gt;The general Internet blocking architecture in Turkmenistan and Uzbekistan takes
 places in two basic stages. The first stage is responsible to identify which
@@ -4169,7 +4335,7 @@ that is blacklisted. Once the positive matching has taken place, the blocking
 or filtering is implemented. We will refer to the first stage as &amp;ldquo;matching&amp;rdquo; and
 the second as &amp;ldquo;blocking&amp;rdquo;.&lt;/p&gt;
 
-&lt;h2 id=&#34;matching:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Matching&lt;/h2&gt;
+&lt;h2 id=&#34;matching&#34;&gt;Matching&lt;/h2&gt;
 
 &lt;p&gt;During our technical investigation we found out that a key element in the
 matching stage is the &amp;ldquo;Host header&amp;rdquo; in a HTTP session. Once the initial
@@ -4201,13 +4367,13 @@ sessions.&lt;/p&gt;
 of webservers or websites to force users to use the correct domain name when
 requesting resources from the server.&lt;/p&gt;
 
-&lt;h2 id=&#34;filtering:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Filtering&lt;/h2&gt;
+&lt;h2 id=&#34;filtering&#34;&gt;Filtering&lt;/h2&gt;
 
 &lt;p&gt;Once the matching is positive, blocking can take place if desired. We have
 identified three basic methods used to block a session. Reset, Proxying and
 Active Redirection.&lt;/p&gt;
 
-&lt;h3 id=&#34;reset:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Reset&lt;/h3&gt;
+&lt;h3 id=&#34;reset&#34;&gt;Reset&lt;/h3&gt;
 
 &lt;p&gt;In the reset method, two RST packets will be send to both ends of the
 communication. By injecting these two packets between the communicating
@@ -4243,7 +4409,7 @@ to youtube.com will respond with a redirection to google.com. The user might
 believe that the redirection is implemented by the filtering infrastructure
 when in fact is a collateral results of the RST traffic.&lt;/p&gt;
 
-&lt;h3 id=&#34;proxying:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Proxying&lt;/h3&gt;
+&lt;h3 id=&#34;proxying&#34;&gt;Proxying&lt;/h3&gt;
 
 &lt;p&gt;The second mechanism to block the websites is by means of semi or fully
 transparent proxies. In both cases the HTTP proxy is placed between the users
@@ -4272,7 +4438,7 @@ web requests in the infrastructure.&lt;/p&gt;
 &lt;p&gt;This blocking method is present in Uzbekistan and Turkmenistan where we
 could effectively identify proxy headers when requesting blocked websites.&lt;/p&gt;
 
-&lt;h3 id=&#34;active-redirection:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Active redirection&lt;/h3&gt;
+&lt;h3 id=&#34;active-redirection&#34;&gt;Active redirection&lt;/h3&gt;
 
 &lt;p&gt;In  the same way that a RST packets can be injected in the datastream to
 teardown a connection, we have seen another type of injected traffic towards
@@ -4305,7 +4471,7 @@ href=&#39;http://www.msn.com/&#39;&amp;gt;here&amp;lt;/a&amp;gt;.&amp;lt;/h2&amp
 &lt;p&gt;This redirection method is highly scalable and users are aware that blocking
 is talking place.&lt;/p&gt;
 
-&lt;h2 id=&#34;how-we-manage-to-bypass-the-blocking:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;How we manage to bypass the blocking?&lt;/h2&gt;
+&lt;h2 id=&#34;how-we-manage-to-bypass-the-blocking&#34;&gt;How we manage to bypass the blocking?&lt;/h2&gt;
 
 &lt;p&gt;During our investigation we discovered that it is possible to bypass the
 filtering by tampering the Host header so the matching stage is not
@@ -4324,7 +4490,7 @@ www.youtube.com\t\n&lt;/code&gt;.&lt;/p&gt;
 pre-pending a linefeed to the GET header. So instead of sending &lt;code&gt;GET /
 HTTP/1.1&lt;/code&gt;, our requests look like &lt;code&gt;\nGET / HTTP/1.1&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h1 id=&#34;ooni-testing:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;OONI Testing&lt;/h1&gt;
+&lt;h1 id=&#34;ooni-testing&#34;&gt;OONI Testing&lt;/h1&gt;
 
 &lt;p&gt;We ran from inside of TM and UZ a set of ooniprobe tests to collect some data
 on how the filtering was happening and confirm our hypothesis of censorship
@@ -4332,7 +4498,7 @@ bypassing strategies.&lt;/p&gt;
 
 &lt;p&gt;Inside of Uzbekistan we ran the following tests:&lt;/p&gt;
 
-&lt;h3 id=&#34;http-header-field-manipulation:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
+&lt;h3 id=&#34;http-header-field-manipulation&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/TM/http_header_field_manipulation-2013-01-28T195727Z-AS20661.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/TM/http_header_field_manipulation-2013-01-28T195727Z-AS20661.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -4340,7 +4506,7 @@ bypassing strategies.&lt;/p&gt;
 being appended to our outgoing requests. As we can see the response body
 contains the same headers that have been sent by the client.&lt;/p&gt;
 
-&lt;h3 id=&#34;http-invalid-request-line-test:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
+&lt;h3 id=&#34;http-invalid-request-line-test&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/TM/http_invalid_request_line-2013-01-30T214938Z-AS20661.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/TM/http_invalid_request_line-2013-01-30T214938Z-AS20661.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -4351,7 +4517,7 @@ crash on &amp;lsquo;test_random_invalid_version_number&amp;rsquo; and
 &amp;lsquo;test_random_invalid_field_count&amp;rsquo; as is shown in the measurements done in
 Myanmar (&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/MM/http_invalid_request_line-2012-12-06T162217Z-AS18399.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/MM/http_invalid_request_line-2012-12-06T162217Z-AS18399.yamloo&lt;/a&gt;).&lt;/p&gt;
 
-&lt;h3 id=&#34;http-host-test:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Host test&lt;/h3&gt;
+&lt;h3 id=&#34;http-host-test&#34;&gt;HTTP Host test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/TM/http_host-2013-01-30T224041Z-AS20661.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/TM/http_host-2013-01-30T224041Z-AS20661.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -4365,15 +4531,15 @@ is due to a TCP RST.&lt;/p&gt;
 
 &lt;p&gt;Inside of Turkmenistan we ran the same tests and obtained very similar results:&lt;/p&gt;
 
-&lt;h3 id=&#34;http-header-field-manipulation-1:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
+&lt;h3 id=&#34;http-header-field-manipulation-1&#34;&gt;HTTP Header Field Manipulation&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/UZ/http_header_field_manipulation-2013-01-29T222932Z-AS31203.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/UZ/http_header_field_manipulation-2013-01-29T222932Z-AS31203.yamloo&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;http-invalid-request-line-test-1:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
+&lt;h3 id=&#34;http-invalid-request-line-test-1&#34;&gt;HTTP Invalid Request Line test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/UZ/http_invalid_request_line-2013-02-02T183110Z-AS31203.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/UZ/http_invalid_request_line-2013-02-02T183110Z-AS31203.yamloo&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;http-host-test-1:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;HTTP Host test&lt;/h3&gt;
+&lt;h3 id=&#34;http-host-test-1&#34;&gt;HTTP Host test&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/reports/0.1/UZ/http_host-2013-02-02T183406Z-AS31203.yamloo&#34;&gt;https://ooni.torproject.org/reports/0.1/UZ/http_host-2013-02-02T183406Z-AS31203.yamloo&lt;/a&gt;&lt;/p&gt;
 
@@ -4392,7 +4558,7 @@ cause a bluecoat device to output an error message. The same thing happens to
 bluecoat, though with a different error message, when sending an invalid number
 of parts in the HTTP request line.&lt;/p&gt;
 
-&lt;h1 id=&#34;lessons-learned:a5b4590d88b489245f39120c3b9f8a5b&#34;&gt;Lessons learned&lt;/h1&gt;
+&lt;h1 id=&#34;lessons-learned&#34;&gt;Lessons learned&lt;/h1&gt;
 
 &lt;p&gt;We learned that censorship software is not perfect and that sometimes it can be
 trivially bypassed. The fact that it can be bypassed is not of interest to who
@@ -4481,7 +4647,7 @@ If the result is the block page then the content is restricted.&lt;/p&gt;
 &lt;p&gt;We have identified two different block pages that were interchanged at a
 certain point during our tests:&lt;/p&gt;
 
-&lt;h3 id=&#34;first-block-page:b0dbb69a6dab18418418d2a3a0b9d948&#34;&gt;First block page&lt;/h3&gt;
+&lt;h3 id=&#34;first-block-page&#34;&gt;First block page&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;HTTP/1.0 403 Forbidden
 Server: squid
@@ -4493,7 +4659,7 @@ Connection: close
 Sorry, Access Denied
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;second-block-page:b0dbb69a6dab18418418d2a3a0b9d948&#34;&gt;Second block page&lt;/h3&gt;
+&lt;h3 id=&#34;second-block-page&#34;&gt;Second block page&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;HTTP/1.0 403 Forbidden
 Server: squid
@@ -4704,7 +4870,7 @@ although it can be disabled by customers who wish to do so
 error page how to do so. This means that T-Mobile USA customers may
 be drawn into the Filternet without knowing how to get out.&lt;/p&gt;
 
-&lt;h3 id=&#34;how-is-the-censorship-performed:5e16e4edcdf1b5c1f1e992db091a3309&#34;&gt;How is the censorship performed?&lt;/h3&gt;
+&lt;h3 id=&#34;how-is-the-censorship-performed&#34;&gt;How is the censorship performed?&lt;/h3&gt;
 
 &lt;p&gt;The technique being used by T-Mobile USA to restrict access to certain content
 involves deploying a transprent HTTP proxy. This proxy intercepts every HTTP
@@ -4713,7 +4879,7 @@ it on the censored list. If the site is to be blocked it injects a fake response
 warning the user of the block. What this means is that the block is only effective
 against unencrypted HTTP traffic, but does not work for encrypted HTTPs traffic.&lt;/p&gt;
 
-&lt;h3 id=&#34;some-sites-should-not-be-censored:5e16e4edcdf1b5c1f1e992db091a3309&#34;&gt;Some sites should not be censored&lt;/h3&gt;
+&lt;h3 id=&#34;some-sites-should-not-be-censored&#34;&gt;Some sites should not be censored&lt;/h3&gt;
 
 &lt;p&gt;While most of the censored sites are legitimately categorized, there are certain
 ones that do not fall under the categories of the block.
@@ -4851,7 +5017,7 @@ Drugs, Pornography, Weapons, Gambling, Suicide, Guns, Hate, Tobacco, Ammunition.
 
 &lt;p&gt;&lt;a href=&#34;http://www.chartsinfrance.net/&#34;&gt;French pop music hit list&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;what-can-we-learn-from-this:5e16e4edcdf1b5c1f1e992db091a3309&#34;&gt;What can we learn from this?&lt;/h3&gt;
+&lt;h3 id=&#34;what-can-we-learn-from-this&#34;&gt;What can we learn from this?&lt;/h3&gt;
 
 &lt;p&gt;That if you are a Chinese sports fan or a French interested in economics under
 18 you will have a hard time going with T-Mobile in the US. There appears to be
@@ -4909,212 +5075,239 @@ what my child should watch and should not.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/data/content/</link>
+      <link>https://ooni.torproject.org/about/data-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/data/content/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/get-involved/contribute-test-lists/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/get-involved/contribute-test-lists/</guid>
+      <guid>https://ooni.torproject.org/about/data-policy/</guid>
       <description>
 
-&lt;p&gt;OONI tests specific websites to see if they are blocked, and such websites are
-included in what we call &amp;ldquo;test lists&amp;rdquo;. Each test list contains multiple
-categorized URLs which are tested for online censorship and they include the
-following:&lt;/p&gt;
+&lt;h1 id=&#34;ooni-data-policy&#34;&gt;OONI Data Policy&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; 2016-05-05&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt; 1.0.0&lt;/p&gt;
+
+&lt;p&gt;This Data Policy explains what data is collected, processed, stored and
+published by the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference
+(OONI)&lt;/a&gt; project, as well as how users can opt-out
+from sending OONI their network measurements.&lt;/p&gt;
+
+&lt;p&gt;The use of OONI&amp;rsquo;s software and website constitutes an acceptance of the policies
+outlined in this Data Policy.&lt;/p&gt;
+
+&lt;h2 id=&#34;website-visitors&#34;&gt;Website Visitors&lt;/h2&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; use tracking cookies, analytics or any other tracking
+technologies through its &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;website&lt;/a&gt; and does &lt;em&gt;not&lt;/em&gt;
+collect any information about its website visitors.&lt;/p&gt;
+
+&lt;p&gt;Access logs, which only include the date of the requested page, can be stored
+for up to 2 weeks and do &lt;em&gt;not&lt;/em&gt; include the IP addresses of website visitors nor
+the time of access.&lt;/p&gt;
+
+&lt;p&gt;If this changes in the future, users will be notified through this Data Policy.&lt;/p&gt;
+
+&lt;h2 id=&#34;software-users&#34;&gt;Software Users&lt;/h2&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect user privacy, but is developed by
+people who &lt;em&gt;care&lt;/em&gt; about user privacy. While OONI developers take measures to
+protect users&amp;rsquo; privacy by &lt;em&gt;not&lt;/em&gt; deliberately collecting their IP addresses,
+users might still potentially face risks as a result of OONI&amp;rsquo;s data collection,
+processing, storing and publishing methods, as explained below.&lt;/p&gt;
+
+&lt;p&gt;To mitigate such potential risks, users can choose to &lt;em&gt;opt-out&lt;/em&gt; from certain or
+all types of data collection by OONI, though this would limit OONI&amp;rsquo;s research.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-collects&#34;&gt;Data OONI Collects&lt;/h3&gt;
+
+&lt;p&gt;When a user runs &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software
+tests&lt;/a&gt;, the OONI project can
+collect the following types of data:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the code which corresponds to the country from which
+the user is running OONI tests from, by automatically searching for it based on
+the user&amp;rsquo;s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;MaxMind GeoIP
+database&lt;/a&gt;. The collection of country codes is
+an important part of OONI&amp;rsquo;s research, as it enables OONI to map out global
+network measurements and to identify where network interferences take place.
+This information could potentially be useful to local researchers, journalists
+and advocates who aim to discover network interferences (such as censorship and
+traffic manipulation) in a country.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of country codes
+by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the Autonomous System Number (ASN) which corresponds
+to the network that a user is running OONI tests from. The collection of the ASN
+is useful to OONI&amp;rsquo;s research because it reveals the specific network provider
+(such as Vodafone) of a user. Such information can increase transparency in
+regards to which network providers are implementing censorship or other forms of
+network interference.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of their
+network&amp;rsquo;s ASN by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+configuration&lt;/a&gt;
+file inside of  &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the time and date of when tests were run. This
+information helps OONI evaluate when network interferences occur and to compare
+them across time. Users &lt;em&gt;cannot&lt;/em&gt; opt-out from this type of data collection, as
+it is a core component of OONI&amp;rsquo;s research.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users&amp;rsquo; IP addresses. In fact, OONI
+takes measures to remove users&amp;rsquo; IP addresses from the collected measurements, to
+protect its users from potential risks.&lt;/p&gt;
+
+&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users&amp;rsquo; IP addresses and other
+potentially personally-identifiable information, if such information is included
+in the HTTP headers or other metadata of measurements. This, for example, can
+occur if the tested websites include tracking technologies or custom content
+based on a user&amp;rsquo;s network location.&lt;/p&gt;
+
+&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but they can choose to
+&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The types of network measurements that OONI collects depend on the types of
+tests that are run. Specifications about each OONI test can be viewed
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;here&lt;/a&gt;, and
+details about what collected network measurements entail can be viewed through
+&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; or through OONI&amp;rsquo;s
+&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;public list of measurements&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements
+by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-ooni-processes&#34;&gt;Data OONI Processes&lt;/h3&gt;
+
+&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;data pipeline&lt;/a&gt;,
+OONI processes all of the network measurements that it collects, which include
+the aforementioned types of data. OONI processes data with the aim of deriving
+meaning from the collected measurements and, specifically, in an attempt to
+answer the following types of questions:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What types of network interferences occurred?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When did network interferences occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How did network interferences occur?&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The global list includes a wide range of internationally relevant websites (most
-of which are in English), while each country-specific test list includes
-websites that are relevant and commonly accessed within that country (many of
-which are in local languages). The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30
-categories&lt;/a&gt;&lt;/strong&gt;, ranging from news media, file sharing and
-culture, to provocative or objectionable categories, like pornography, political
-criticism and hate speech.&lt;/p&gt;
+&lt;p&gt;To answer such questions, OONI&amp;rsquo;s pipeline is designed to process data which is
+automatically sent to OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
 
-&lt;p&gt;When running ooniprobe, you will connect to and download data from the websites
-included in the global test list and in the test list which is specific to the
-country that you are running ooniprobe from. We therefore encourage you to
-review all of the URLs included in these lists carefully, prior to running
-ooniprobe, as connecting to some of these websites might be legally questionable
-(or illegal) in some jurisdictions around the world.&lt;/p&gt;
+&lt;p&gt;Users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements by running
+ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
 
-&lt;p&gt;If you are uncertain of the potential implications of connecting to and
-downloading data from the websites listed in the test lists, you can pass your
-&lt;em&gt;own&lt;/em&gt; test list with the following type of command line option:&lt;/p&gt;
+&lt;h3 id=&#34;data-ooni-stores&#34;&gt;Data OONI Stores&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;ooniprobe &amp;lt;test-name&amp;gt; -f &amp;lt;your-test-list&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;OONI stores all of the aforementioned data that it collects and processes,
+including users&amp;rsquo; IP addresses and other potentially personally-identifiable
+information which &lt;em&gt;might unintentionally&lt;/em&gt; be collected and therefore stored,
+despite OONI&amp;rsquo;s efforts to prevent this from happening.&lt;/p&gt;
 
-&lt;h2 id=&#34;contributing-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Contributing to test lists&lt;/h2&gt;
+&lt;p&gt;Users can &lt;em&gt;opt-out&lt;/em&gt; from sending specific types of data to OONI&amp;rsquo;s measurement
+collector as described in previous sections of this Data Policy, or they can
+&lt;em&gt;opt-out&lt;/em&gt; from sending OONI any of their measurements by running ooniprobe with
+the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt; has supported OONI in the creation,
-maintenance and development of test lists and many volunteers around the world
-have contributed to their country&amp;rsquo;s test lists over the last years. You can also
-contribute to the review or creation of your country&amp;rsquo;s test list (if it doesn&amp;rsquo;t
-already exist), as explained below.&lt;/p&gt;
+&lt;h3 id=&#34;data-ooni-publishes&#34;&gt;Data OONI Publishes&lt;/h3&gt;
 
-&lt;h3 id=&#34;reviewing-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Reviewing test lists&lt;/h3&gt;
+&lt;p&gt;OONI publishes all of the network measurement data that it collects and
+processes because open data allows third parties to conduct independent studies,
+to verify OONI findings and/or to answer other research questions.&lt;/p&gt;
 
-&lt;p&gt;All test lists that ooniprobe is designed to test for censorship are hosted in
-the &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;Citizen Lab&amp;rsquo;s test-list repository on github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;To review country-specific test lists, please follow the steps below:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Find the &lt;em&gt;csv&lt;/em&gt; file which is specific to the country that you want
-to run ooniprobe from (based on that country&amp;rsquo;s code)
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you don&amp;rsquo;t find a csv file for your country, that&amp;rsquo;s probably because it
-doesn&amp;rsquo;t exist yet. In this case, please refer to the next section on &lt;em&gt;&amp;ldquo;Creating
-test lists&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Add &lt;em&gt;new&lt;/em&gt; URLs to the csv file under the &amp;ldquo;url&amp;rdquo; column.&lt;/p&gt;
-
-&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
+&lt;p&gt;Currently, OONI publishes all collected measurements on its website
+through:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
-example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;For further criteria, please view the URL categories
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Both resources include the same measurements; the only difference is that OONI
+Explorer is an interactive visualization of the measurements.&lt;/p&gt;
 
-&lt;p&gt;Please try to add URLs which fall under as many (if not all) of these categories
-as possible.&lt;/p&gt;
+&lt;p&gt;If users&amp;rsquo; IP addresses and/or other potentially personally-identifiable
+information are included in the HTTP headers or other metadata of collected
+measurements, then such information &lt;em&gt;might&lt;/em&gt; be publicly available through the
+above resources.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
-  each new URL:&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s important to note that the publication of network measurements might raise
+various types of &lt;em&gt;risks&lt;/em&gt; for OONI users. Information about such risks can be
+found &lt;a href=&#34;INCLUDE LINK&#34;&gt;here&lt;/a&gt;. Users can also consider opting-out from submitting
+some or all of their measurements to OONI through the following opt-out section
+of this Data Policy.&lt;/p&gt;
+
+&lt;h3 id=&#34;opt-out&#34;&gt;Opt-out&lt;/h3&gt;
+
+&lt;p&gt;OONI software users can &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector
+specific types of data by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
+ configuration&lt;/a&gt;
+ file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. Through this file, users can opt-out
+from sending OONI the following types of information:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
-This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
-category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
-falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
-the csv file. The category descriptions can be found
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
-&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
-affiliated with, in terms of contributing to the test list. This can be
-added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
-column of the csv file.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Change the category codes and descriptions for URLs (included under
-the &amp;ldquo;category_code&amp;rdquo; and &amp;ldquo;category_description&amp;rdquo; columns of the csv file) &lt;em&gt;only
-if&lt;/em&gt; you think that those URLs have been allocated to wrong category codes and
-descriptions. In this case, please replace the category codes and descriptions
-with ones (from the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;recommended categories&lt;/a&gt; that you think are more
-suitable. We would also appreciate a comment on
-&lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;github&lt;/a&gt; or via email explaining the
-proposed changes.&lt;/p&gt;
+&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but users can choose to
+&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) through the above configuration
+file.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have reviewed a test list based on the above, please submit
- your changes to us. If you&amp;rsquo;re a github user, you can do so through a pull
- request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us a &lt;em&gt;spreadsheet&lt;/em&gt;
- (including the same format as github csv files) by dropping us an email at
- contact@openobservatory.org (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD
- 3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+&lt;p&gt;Users can also choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector any
+data at all, by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option. This option
+is quite often chosen by users who prefer to &lt;em&gt;not&lt;/em&gt; have their measurements
+published, due to potential risks that could emerge as a result of such
+publication.&lt;/p&gt;
 
-&lt;h3 id=&#34;creating-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Creating test lists&lt;/h3&gt;
+&lt;h2 id=&#34;data-policy-changes&#34;&gt;Data Policy Changes&lt;/h2&gt;
 
-&lt;p&gt;If you can&amp;rsquo;t find a test list specific to your country
-&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;, then it
-probably does not exist yet. Please help us create a test list for your country
-through the steps below:&lt;/p&gt;
+&lt;p&gt;Although most changes are likely to be minor, OONI may change its Data Policy
+from time to time, and in OONI&amp;rsquo;s sole discretion.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Create a csv file and name it based on an ISO-3166 two-letter country
-code which is specific to the country that URLs are being added for. You can
-find a reference for international standards for country codes
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-country_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;. An example would include a csv file created for Andora, named &lt;em&gt;ad.csv&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;OONI encourages its website visitors and software users to frequently check this
+page for any changes to its Data Policy. The continued use of OONI&amp;rsquo;s website and
+software after any change in this Data Policy will constitute acceptance of such
+change.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Include the following columns in the newly created csv file:&lt;/p&gt;
+&lt;p&gt;Thoughts or questions about this Data Policy? Please send an email to
+&lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;url&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;category_code&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;category_description&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;date_added&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;source&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;notes&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Add URLs under the &amp;ldquo;url&amp;rdquo; column of the csv file.&lt;/p&gt;
-
-&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
-example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For further criteria, please view URL categories
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
- each new URL:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
-This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
-category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
-falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
-the csv file. The category descriptions can be found
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
-&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
-affiliated with, in terms of contributing to the test list. This can be
-added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
-column of the csv file.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have created a new test list based on the above, please
- submit your csv file to us. If you&amp;rsquo;re a github user, you can do so through a
- pull request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us your csv file by
- dropping us an email at contact@openobservatory.org (PGP Key Fingerprint: 4C15
- DDA9 96C6 C0CF 48BD  3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Key ID:
+    0CB177B7
+Fingerprint:
+4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -5126,7 +5319,7 @@ column of the csv file.&lt;/p&gt;&lt;/li&gt;
       <guid>https://ooni.torproject.org/about/risks/</guid>
       <description>
 
-&lt;h1 id=&#34;risks-things-you-should-know-before-using-ooni:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: Things you should know before using OONI&lt;/h1&gt;
+&lt;h1 id=&#34;risks-things-you-should-know-before-using-ooni&#34;&gt;Risks: Things you should know before using OONI&lt;/h1&gt;
 
 &lt;p&gt;OONI&amp;rsquo;s software tests are designed to test networks for symptoms of censorship,
 surveillance and traffic manipulation and, in some countries around the world,
@@ -5134,7 +5327,7 @@ this could potentially raise &lt;strong&gt;legal&lt;/strong&gt; and/or &lt;stron
 therefore strongly urge you to consult with lawyers &lt;em&gt;prior&lt;/em&gt; to downloading,
 installing and running OONI, and to carefully read the documentation below.&lt;/p&gt;
 
-&lt;h2 id=&#34;legal-and-extra-legal-risks:8972da30de206641cfcd8ebb5103328e&#34;&gt;Legal and extra-legal risks&lt;/h2&gt;
+&lt;h2 id=&#34;legal-and-extra-legal-risks&#34;&gt;Legal and extra-legal risks&lt;/h2&gt;
 
 &lt;p&gt;The legal risks of downloading, installing and running OONI can vary from
 country to country, which is why we advise you to consult with local lawyers. In
@@ -5199,7 +5392,7 @@ include:&lt;/p&gt;
 &lt;p&gt;In view of such legal and extra-legal threats, we strongly encourage you to
 consult with lawyers and understand legal risks &lt;em&gt;prior&lt;/em&gt; to using OONI.&lt;/p&gt;
 
-&lt;h2 id=&#34;risks-detection-of-ooni-usage:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: Detection of OONI usage&lt;/h2&gt;
+&lt;h2 id=&#34;risks-detection-of-ooni-usage&#34;&gt;Risks: Detection of OONI usage&lt;/h2&gt;
 
 &lt;p&gt;Various legal and extra-legal risks (as explained in the previous section) might
 potentially emerge if third parties (such as governments and ISPs) who view the
@@ -5263,7 +5456,7 @@ tracking codes or custom content based on your network location. Such
 information could potentially aid third parties in detecting you as an OONI
 user.&lt;/p&gt;
 
-&lt;h2 id=&#34;risks-ooni-tests:8972da30de206641cfcd8ebb5103328e&#34;&gt;Risks: OONI tests&lt;/h2&gt;
+&lt;h2 id=&#34;risks-ooni-tests&#34;&gt;Risks: OONI tests&lt;/h2&gt;
 
 &lt;p&gt;OONI has developed multiple software tests, each one of which is designed to
 perform a different function and can therefore potentially entail different
@@ -5407,7 +5600,7 @@ software:&lt;/p&gt;
 &lt;p&gt;We therefore encourage you to consult with a lawyer on the legality of anonymity
 software (such as Tor, a VPN or a proxy) &lt;em&gt;prior&lt;/em&gt; to using OONI.&lt;/p&gt;
 
-&lt;h2 id=&#34;legal-advice:8972da30de206641cfcd8ebb5103328e&#34;&gt;Legal advice&lt;/h2&gt;
+&lt;h2 id=&#34;legal-advice&#34;&gt;Legal advice&lt;/h2&gt;
 
 &lt;p&gt;In addition to consulting with laywers, you can also reach out to us with
 specific inquiries at &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;. Please note though that we
@@ -5431,240 +5624,11 @@ held liable.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>https://ooni.torproject.org/about/data-policy/</link>
+      <link>https://ooni.torproject.org/data/content/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/about/data-policy/</guid>
-      <description>
-
-&lt;h1 id=&#34;ooni-data-policy:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;OONI Data Policy&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; 2016-05-05&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt; 1.0.0&lt;/p&gt;
-
-&lt;p&gt;This Data Policy explains what data is collected, processed, stored and
-published by the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference
-(OONI)&lt;/a&gt; project, as well as how users can opt-out
-from sending OONI their network measurements.&lt;/p&gt;
-
-&lt;p&gt;The use of OONI&amp;rsquo;s software and website constitutes an acceptance of the policies
-outlined in this Data Policy.&lt;/p&gt;
-
-&lt;h2 id=&#34;website-visitors:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Website Visitors&lt;/h2&gt;
-
-&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; use tracking cookies, analytics or any other tracking
-technologies through its &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;website&lt;/a&gt; and does &lt;em&gt;not&lt;/em&gt;
-collect any information about its website visitors.&lt;/p&gt;
-
-&lt;p&gt;Access logs, which only include the date of the requested page, can be stored
-for up to 2 weeks and do &lt;em&gt;not&lt;/em&gt; include the IP addresses of website visitors nor
-the time of access.&lt;/p&gt;
-
-&lt;p&gt;If this changes in the future, users will be notified through this Data Policy.&lt;/p&gt;
-
-&lt;h2 id=&#34;software-users:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Software Users&lt;/h2&gt;
-
-&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect user privacy, but is developed by
-people who &lt;em&gt;care&lt;/em&gt; about user privacy. While OONI developers take measures to
-protect users&amp;rsquo; privacy by &lt;em&gt;not&lt;/em&gt; deliberately collecting their IP addresses,
-users might still potentially face risks as a result of OONI&amp;rsquo;s data collection,
-processing, storing and publishing methods, as explained below.&lt;/p&gt;
-
-&lt;p&gt;To mitigate such potential risks, users can choose to &lt;em&gt;opt-out&lt;/em&gt; from certain or
-all types of data collection by OONI, though this would limit OONI&amp;rsquo;s research.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-collects:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Collects&lt;/h3&gt;
-
-&lt;p&gt;When a user runs &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software
-tests&lt;/a&gt;, the OONI project can
-collect the following types of data:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the code which corresponds to the country from which
-the user is running OONI tests from, by automatically searching for it based on
-the user&amp;rsquo;s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;MaxMind GeoIP
-database&lt;/a&gt;. The collection of country codes is
-an important part of OONI&amp;rsquo;s research, as it enables OONI to map out global
-network measurements and to identify where network interferences take place.
-This information could potentially be useful to local researchers, journalists
-and advocates who aim to discover network interferences (such as censorship and
-traffic manipulation) in a country.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of country codes
-by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
-file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the Autonomous System Number (ASN) which corresponds
-to the network that a user is running OONI tests from. The collection of the ASN
-is useful to OONI&amp;rsquo;s research because it reveals the specific network provider
-(such as Vodafone) of a user. Such information can increase transparency in
-regards to which network providers are implementing censorship or other forms of
-network interference.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of their
-network&amp;rsquo;s ASN by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
-configuration&lt;/a&gt;
-file inside of  &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the time and date of when tests were run. This
-information helps OONI evaluate when network interferences occur and to compare
-them across time. Users &lt;em&gt;cannot&lt;/em&gt; opt-out from this type of data collection, as
-it is a core component of OONI&amp;rsquo;s research.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users&amp;rsquo; IP addresses. In fact, OONI
-takes measures to remove users&amp;rsquo; IP addresses from the collected measurements, to
-protect its users from potential risks.&lt;/p&gt;
-
-&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users&amp;rsquo; IP addresses and other
-potentially personally-identifiable information, if such information is included
-in the HTTP headers or other metadata of measurements. This, for example, can
-occur if the tested websites include tracking technologies or custom content
-based on a user&amp;rsquo;s network location.&lt;/p&gt;
-
-&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but they can choose to
-&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
-file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The types of network measurements that OONI collects depend on the types of
-tests that are run. Specifications about each OONI test can be viewed
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;here&lt;/a&gt;, and
-details about what collected network measurements entail can be viewed through
-&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; or through OONI&amp;rsquo;s
-&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;public list of measurements&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements
-by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-processes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Processes&lt;/h3&gt;
-
-&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;data pipeline&lt;/a&gt;,
-OONI processes all of the network measurements that it collects, which include
-the aforementioned types of data. OONI processes data with the aim of deriving
-meaning from the collected measurements and, specifically, in an attempt to
-answer the following types of questions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What types of network interferences occurred?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which countries did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which networks did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;How did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To answer such questions, OONI&amp;rsquo;s pipeline is designed to process data which is
-automatically sent to OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
-
-&lt;p&gt;Users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements by running
-ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-stores:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Stores&lt;/h3&gt;
-
-&lt;p&gt;OONI stores all of the aforementioned data that it collects and processes,
-including users&amp;rsquo; IP addresses and other potentially personally-identifiable
-information which &lt;em&gt;might unintentionally&lt;/em&gt; be collected and therefore stored,
-despite OONI&amp;rsquo;s efforts to prevent this from happening.&lt;/p&gt;
-
-&lt;p&gt;Users can &lt;em&gt;opt-out&lt;/em&gt; from sending specific types of data to OONI&amp;rsquo;s measurement
-collector as described in previous sections of this Data Policy, or they can
-&lt;em&gt;opt-out&lt;/em&gt; from sending OONI any of their measurements by running ooniprobe with
-the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-publishes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data OONI Publishes&lt;/h3&gt;
-
-&lt;p&gt;OONI publishes all of the network measurement data that it collects and
-processes because open data allows third parties to conduct independent studies,
-to verify OONI findings and/or to answer other research questions.&lt;/p&gt;
-
-&lt;p&gt;Currently, OONI publishes all collected measurements on its website
-through:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Both resources include the same measurements; the only difference is that OONI
-Explorer is an interactive visualization of the measurements.&lt;/p&gt;
-
-&lt;p&gt;If users&amp;rsquo; IP addresses and/or other potentially personally-identifiable
-information are included in the HTTP headers or other metadata of collected
-measurements, then such information &lt;em&gt;might&lt;/em&gt; be publicly available through the
-above resources.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s important to note that the publication of network measurements might raise
-various types of &lt;em&gt;risks&lt;/em&gt; for OONI users. Information about such risks can be
-found &lt;a href=&#34;INCLUDE LINK&#34;&gt;here&lt;/a&gt;. Users can also consider opting-out from submitting
-some or all of their measurements to OONI through the following opt-out section
-of this Data Policy.&lt;/p&gt;
-
-&lt;h3 id=&#34;opt-out:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Opt-out&lt;/h3&gt;
-
-&lt;p&gt;OONI software users can &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector
-specific types of data by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
- file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. Through this file, users can opt-out
-from sending OONI the following types of information:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but users can choose to
-&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) through the above configuration
-file.&lt;/p&gt;
-
-&lt;p&gt;Users can also choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector any
-data at all, by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option. This option
-is quite often chosen by users who prefer to &lt;em&gt;not&lt;/em&gt; have their measurements
-published, due to potential risks that could emerge as a result of such
-publication.&lt;/p&gt;
-
-&lt;h2 id=&#34;data-policy-changes:250fec7137f1bcb9f2f39ab27d24ced2&#34;&gt;Data Policy Changes&lt;/h2&gt;
-
-&lt;p&gt;Although most changes are likely to be minor, OONI may change its Data Policy
-from time to time, and in OONI&amp;rsquo;s sole discretion.&lt;/p&gt;
-
-&lt;p&gt;OONI encourages its website visitors and software users to frequently check this
-page for any changes to its Data Policy. The continued use of OONI&amp;rsquo;s website and
-software after any change in this Data Policy will constitute acceptance of such
-change.&lt;/p&gt;
-
-&lt;p&gt;Thoughts or questions about this Data Policy? Please send an email to
-&lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Key ID:
-    0CB177B7
-Fingerprint:
-4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <guid>https://ooni.torproject.org/data/content/</guid>
+      <description></description>
     </item>
     
   </channel>

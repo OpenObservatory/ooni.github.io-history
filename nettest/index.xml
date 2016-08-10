@@ -16,7 +16,7 @@
       <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
       <description>
 
-&lt;h1 id=&#34;dns-consistency:8cd092f4d968324448a1b104fce68bce&#34;&gt;DNS consistency&lt;/h1&gt;
+&lt;h1 id=&#34;dns-consistency&#34;&gt;DNS consistency&lt;/h1&gt;
 
 &lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
 to be reliable with one that is tested for tampering.&lt;/p&gt;
@@ -51,7 +51,7 @@ might arise in OONI measurements.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
       <description>
 
-&lt;h1 id=&#34;http-header-field-manipulation:d461e393a173ca45569bbaa90d3ea8de&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
+&lt;h1 id=&#34;http-header-field-manipulation&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
 
 &lt;p&gt;This test tries to detect the presence of network components (“middle box”)
 which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
@@ -97,7 +97,7 @@ as they are often used in networks for caching purposes.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/http-host/</guid>
       <description>
 
-&lt;h1 id=&#34;http-host:5822b230373cd593e60d21f806e517c6&#34;&gt;HTTP Host&lt;/h1&gt;
+&lt;h1 id=&#34;http-host&#34;&gt;HTTP Host&lt;/h1&gt;
 
 &lt;p&gt;This test attempts to:&lt;/p&gt;
 
@@ -145,7 +145,7 @@ caching purposes.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
       <description>
 
-&lt;h1 id=&#34;http-invalid-request-line:14e025d5555dc3e219f17d2edbd56544&#34;&gt;HTTP invalid request line&lt;/h1&gt;
+&lt;h1 id=&#34;http-invalid-request-line&#34;&gt;HTTP invalid request line&lt;/h1&gt;
 
 &lt;p&gt;This test tries to detect the presence of network components (“middle box”)
 which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
@@ -190,7 +190,7 @@ used in networks for caching purposes.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/http-requests/</guid>
       <description>
 
-&lt;h1 id=&#34;http-requests:3e10bba86bba527f8a3085687d504fe5&#34;&gt;HTTP Requests&lt;/h1&gt;
+&lt;h1 id=&#34;http-requests&#34;&gt;HTTP Requests&lt;/h1&gt;
 
 &lt;p&gt;This test tries to detect online censorship based on a comparison of HTTP
 requests over Tor and over the network of the user.&lt;/p&gt;
@@ -239,7 +239,7 @@ CAPTCHA page appears.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/lantern/</guid>
       <description>
 
-&lt;h1 id=&#34;lantern:ec656aac078d3167be9cd7e1f567aba8&#34;&gt;Lantern&lt;/h1&gt;
+&lt;h1 id=&#34;lantern&#34;&gt;Lantern&lt;/h1&gt;
 
 &lt;p&gt;This test provides an automated way of examining whether Lantern works in a
 tested network.&lt;/p&gt;
@@ -265,7 +265,7 @@ likely the case that they are blocked within the tested network.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/meek-fronted-requests/</guid>
       <description>
 
-&lt;h1 id=&#34;meek-fronted-requests:a8b91c4b63cc55cc30e4036a69b34c2f&#34;&gt;Meek Fronted Requests&lt;/h1&gt;
+&lt;h1 id=&#34;meek-fronted-requests&#34;&gt;Meek Fronted Requests&lt;/h1&gt;
 
 &lt;p&gt;This test examines whether the domains used by Meek (a type of &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
 bridge&lt;/a&gt;) work in tested networks.&lt;/p&gt;
@@ -304,7 +304,7 @@ an automated way.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/psiphon/</guid>
       <description>
 
-&lt;h1 id=&#34;psiphon:cdc027a63e3a5859bb651eb559ade7c4&#34;&gt;Psiphon&lt;/h1&gt;
+&lt;h1 id=&#34;psiphon&#34;&gt;Psiphon&lt;/h1&gt;
 
 &lt;p&gt;This test provides an automated way of examining whether Psiphon works in a
 tested network.&lt;/p&gt;
@@ -328,7 +328,7 @@ case that they are blocked within the tested network.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/tor-bridge-reachability/</guid>
       <description>
 
-&lt;h1 id=&#34;tor-bridge-reachability:b50c859fd62eea4d38648380574073e9&#34;&gt;Tor Bridge Reachability&lt;/h1&gt;
+&lt;h1 id=&#34;tor-bridge-reachability&#34;&gt;Tor Bridge Reachability&lt;/h1&gt;
 
 &lt;p&gt;This test examines whether &lt;strong&gt;&lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor bridges&lt;/a&gt;&lt;/strong&gt;
 work in tested networks.&lt;/p&gt;
@@ -357,7 +357,7 @@ bridges are either offline or blocked.&lt;/p&gt;
       <guid>https://ooni.torproject.org/nettest/web-connectivity/</guid>
       <description>
 
-&lt;h1 id=&#34;web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Web connectivity&lt;/h1&gt;
+&lt;h1 id=&#34;web-connectivity&#34;&gt;Web connectivity&lt;/h1&gt;
 
 &lt;p&gt;This test examines whether websites are reachable and if they are not, it
 attempts to determine whether access to them is blocked through DNS tampering,
@@ -384,7 +384,7 @@ the websites that the user is testing are likely censored.&lt;/p&gt;
 &lt;p&gt;Below we provide information about how each step performed under the web
 connectivity test works.&lt;/p&gt;
 
-&lt;h2 id=&#34;1-resolver-identification:a4c2e0725252eec2345cb2757944668e&#34;&gt;1. Resolver identification&lt;/h2&gt;
+&lt;h2 id=&#34;1-resolver-identification&#34;&gt;1. Resolver identification&lt;/h2&gt;
 
 &lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
 (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). Internet Service
@@ -397,7 +397,7 @@ resolver is being used by the user. It does so by performing a DNS query to
 special domains (such as whoami.akamai.com) which will disclose the IP address
 of the resolver.&lt;/p&gt;
 
-&lt;h2 id=&#34;2-dns-lookup:a4c2e0725252eec2345cb2757944668e&#34;&gt;2. DNS lookup&lt;/h2&gt;
+&lt;h2 id=&#34;2-dns-lookup&#34;&gt;2. DNS lookup&lt;/h2&gt;
 
 &lt;p&gt;Once the web connectivity test has identified the DNS resolver of the user, it
 then attempts to identify which addresses and are mapped to the tested host
@@ -406,21 +406,21 @@ resolver to disclose which IP addresses are mapped to the tested host names, as
 well as which other host names are linked to the tested host names under DNS
 queries.&lt;/p&gt;
 
-&lt;h2 id=&#34;3-tcp-connect:a4c2e0725252eec2345cb2757944668e&#34;&gt;3. TCP connect&lt;/h2&gt;
+&lt;h2 id=&#34;3-tcp-connect&#34;&gt;3. TCP connect&lt;/h2&gt;
 
 &lt;p&gt;The web connectivity test will then try to connect to the tested websites by
 attempting to establish a TCP session on port 80 (or port 443 for URLs that
 begin with HTTPS) for the list of IP addresses that were identified in the
 previous step (DNS lookup).&lt;/p&gt;
 
-&lt;h2 id=&#34;4-http-get-request:a4c2e0725252eec2345cb2757944668e&#34;&gt;4. HTTP GET request&lt;/h2&gt;
+&lt;h2 id=&#34;4-http-get-request&#34;&gt;4. HTTP GET request&lt;/h2&gt;
 
 &lt;p&gt;As the web connectivity test connects to tested websites (through the previous
 step), it sends requests through the HTTP protocol to the servers which are
 hosting those websites. A server normally responds to an HTTP GET request with
 the content of the webpage that is requested.&lt;/p&gt;
 
-&lt;h2 id=&#34;comparison-of-results-identifying-censorship:a4c2e0725252eec2345cb2757944668e&#34;&gt;Comparison of results: Identifying censorship&lt;/h2&gt;
+&lt;h2 id=&#34;comparison-of-results-identifying-censorship&#34;&gt;Comparison of results: Identifying censorship&lt;/h2&gt;
 
 &lt;p&gt;Once the above steps of the web connectivity test are performed &lt;em&gt;both&lt;/em&gt; over a
 control server and over the network of the user, the collected results are then

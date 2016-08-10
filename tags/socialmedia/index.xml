@@ -21,7 +21,7 @@
 
 &lt;p&gt;On 15 July, a coup was attempted in Turkey. We heard about social media being throttled and/or blocked, but much was unclear about what was actually going on. Here we present measurement data from various platforms that shared their data publicly.&lt;/p&gt;
 
-&lt;h2 id=&#34;ripe-atlas:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;RIPE Atlas&lt;/h2&gt;
+&lt;h2 id=&#34;ripe-atlas&#34;&gt;RIPE Atlas&lt;/h2&gt;
 
 &lt;p&gt;Looking at the &lt;a href=&#34;https://atlas.ripe.net/&#34;&gt;RIPE Atlas&lt;/a&gt; data, we didn&amp;rsquo;t find anything consistent and/or structural in the latency data from 15 July that pointed towards changes in connectivity for our RIPE Atlas measurement points (called &amp;ldquo;probes&amp;rdquo;). That said, an &lt;a href=&#34;https://labs.ripe.net/Members/cristel_pelsser/pinpointing-delay-and-forwarding-anomalies-in-ripe-atlas-built-in-measurements&#34;&gt;anomaly detector for RIPE Atlas traceroutes&lt;/a&gt; is actively being worked on, which we can potentially use to look at events like this in the near future.&lt;/p&gt;
 
@@ -41,13 +41,13 @@
 
 &lt;p&gt;For networks where we do not have multiple probes in each network, it&amp;rsquo;s worth noting that we cannot isolate any probe-specific effects that might exist in the measurements.&lt;/p&gt;
 
-&lt;h2 id=&#34;ooni:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;OONI&lt;/h2&gt;
+&lt;h2 id=&#34;ooni&#34;&gt;OONI&lt;/h2&gt;
 
 &lt;p&gt;The &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; is a free software project under the &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor Project&lt;/a&gt; that aims to detect Internet censorship, traffic manipulation and signs of surveillance around the world through the collection and processing of network measurements.&lt;/p&gt;
 
 &lt;p&gt;OONI&amp;rsquo;s HTTP request test was run in Turkey at 4:30 UTC on 15th July to test a set of URLs - including twitter.com, facebook.com and youtube.com - for censorship. This test is designed to examine whether URLs are blocked based on a comparison of HTTP requests over Tor vs. the user&amp;rsquo;s network. &lt;a href=&#34;https://explorer.ooni.torproject.org/country/TR&#34;&gt;OONI&amp;rsquo;s measurement data&lt;/a&gt; indicates that twitter.com, facebook.com and youtube.com did not appear to be blocked on the morning of 15th July leading up to the attempted military coup. However, it&amp;rsquo;s worth noting that these measurements were only conducted from one network vantage point within Turkey, and that OONI tests were not run during or following the attempted coup.&lt;/p&gt;
 
-&lt;h2 id=&#34;tor-use:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Tor use&lt;/h2&gt;
+&lt;h2 id=&#34;tor-use&#34;&gt;Tor use&lt;/h2&gt;
 
 &lt;p&gt;With specific social networks being blocked, or at risk of being blocked, it is to be expected that users wanting to access these networks will try to circumvent blocking. One way of doing that is to use Tor. Figure 2 is taken from the telemetry that Tor puts online about the number of users per country. It shows that the day after 15 July, the number of Tor users in Turkey increased significantly, from 15,000 to 20,000.&lt;/p&gt;
 
@@ -61,7 +61,7 @@
 
 &lt;p&gt;&lt;em&gt;Figure 3: Usage of Tor bridges in Turkey from 1-16 July 2016. Data taken from &lt;a href=&#34;https://metrics.torproject.org&#34;&gt;https://metrics.torproject.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;traffic-volumes:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Traffic volumes&lt;/h2&gt;
+&lt;h2 id=&#34;traffic-volumes&#34;&gt;Traffic volumes&lt;/h2&gt;
 
 &lt;p&gt;Except for IXPs sharing it publicly, we don&amp;rsquo;t have much public data about traffic volume on the Internet. For this information we are at the mercy of people willing to share it. Luckily, Cloudflare shared their traffic levels for 15 July, which showed a significant drop in traffic volume from Turkey, with the traffic volume from France as a reference (Figure 4).&lt;/p&gt;
 
@@ -69,7 +69,7 @@
 
 &lt;p&gt;&lt;em&gt;Figure 4: Cloudflare traffic levels from Turkey and France on 15 July. &lt;a href=&#34;https://twitter.com/eastdakota/status/754073339543433216&#34;&gt;Data from a tweet by @eastdakota&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;conclusion:fef204947a11d723c2dae8f1ff48bdf8&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;In recent years, Turkey has had a history of selectively blocking Internet access. With operators sharing information, and using measurements from RIPE Atlas and OONI, monitoring the Internet access situation has become more transparent and open and we can better understand and share what&amp;rsquo;s actually going on, to the extent that we don&amp;rsquo;t cause harm for any of our users or the network operators involved. With OONI, users are specifically and explicitly measuring censorship, which is outside the scope of what RIPE Atlas can do; as such, we feel our network measurement infrastructures are complementary.&lt;/p&gt;
 
@@ -77,7 +77,7 @@
 
 &lt;p&gt;The situation in Turkey is a bit special, because diametrically opposed to the practice of Internet blocking is the United Nations Human Rights Council&amp;rsquo;s &lt;a href=&#34;http://www.article19.org/data/files/Internet_Statement_Adopted.pdf&#34;&gt;resolution on the promotion, protection and enjoyment of human rights on the Internet&lt;/a&gt;, which condemns countries that intentionally disrupt citizens&amp;rsquo; Internet access. Turkey was one of the six countries that took the initiative on the resolution.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;This post was originally published by RIPE Atlas &lt;strong&gt;&lt;a href=&#34;https://labs.ripe.net/Members/emileaben/internet-access-disruption-in-turkey&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;*This post was originally published by RIPE Atlas &lt;strong&gt;&lt;a href=&#34;https://labs.ripe.net/Members/emileaben/internet-access-disruption-in-turkey&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.*&lt;/p&gt;
 </description>
     </item>
     
@@ -127,7 +127,7 @@ Interestingly, OONI&amp;rsquo;s findings illustrate that social media is not con
 blocked across networks, and that certain cases of censorship can be easily
 circumvented.&lt;/p&gt;
 
-&lt;h2 id=&#34;findings:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;Findings&lt;/h2&gt;
+&lt;h2 id=&#34;findings&#34;&gt;Findings&lt;/h2&gt;
 
 &lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP request
 test&lt;/a&gt;,
@@ -165,7 +165,7 @@ operator MTN Uganda:&lt;/p&gt;
 our other services are available. We regret any inconvenience caused.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;circumventing-censorship:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;Circumventing censorship&lt;/h2&gt;
+&lt;h2 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h2&gt;
 
 &lt;p&gt;Social media in Uganda was censored both times this year based on &lt;em&gt;IP
 blocking&lt;/em&gt;, according to &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
@@ -182,7 +182,7 @@ Orbot&lt;/a&gt;&lt;/strong&gt; which enables all
 apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor
 network&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;ooni-explorer-report-links:fa36b5f53ca4a7065c9afa0a248f6f63&#34;&gt;OONI Explorer report links&lt;/h2&gt;
+&lt;h2 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Orange:&lt;/strong&gt;&lt;/p&gt;
 

@@ -77,7 +77,7 @@ If the result is the block page then the content is restricted.&lt;/p&gt;
 &lt;p&gt;We have identified two different block pages that were interchanged at a
 certain point during our tests:&lt;/p&gt;
 
-&lt;h3 id=&#34;first-block-page:b0dbb69a6dab18418418d2a3a0b9d948&#34;&gt;First block page&lt;/h3&gt;
+&lt;h3 id=&#34;first-block-page&#34;&gt;First block page&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;HTTP/1.0 403 Forbidden
 Server: squid
@@ -89,7 +89,7 @@ Connection: close
 Sorry, Access Denied
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;second-block-page:b0dbb69a6dab18418418d2a3a0b9d948&#34;&gt;Second block page&lt;/h3&gt;
+&lt;h3 id=&#34;second-block-page&#34;&gt;Second block page&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;HTTP/1.0 403 Forbidden
 Server: squid
