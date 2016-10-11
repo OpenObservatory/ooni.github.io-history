@@ -6,171 +6,1824 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Aug 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Oct 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Ethiopia: Internet Shutdown Amidst Recent Protests?</title>
-      <link>https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/</link>
-      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
+      <title>Zambia: Internet censorship during the 2016 general elections?</title>
+      <link>https://ooni.torproject.org/post/zambia-election-monitoring/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/</guid>
+      <guid>https://ooni.torproject.org/post/zambia-election-monitoring/</guid>
       <description>
 
-&lt;p&gt;Nearly 100 deaths and thousands of arrests have been
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-37015055&#34;&gt;reported&lt;/a&gt; in Ethiopia over the
-last days, as part of protests against the marginalization and persecution of
-the Oromos and Amharas, Ethiopia’s two largest ethnic groups. But the attacks
-and arrests may not have been the only forms of retribution carried out by the
-Ethiopian government in its crackdown against protesters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia-election-monitoring/zambia-flag.png&#34; alt=&#34;Zambia flag&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Last weekend, the internet was
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-36940906&#34;&gt;reportedly&lt;/a&gt; shut down in the
+&lt;p&gt;A research study by the Open Observatory of Network Interference
+(OONI) and Strathmore University’s Centre for Intellectual Property
+and Information Technology Law (CIPIT).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Table of contents&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#key-findings&#34;&gt;&lt;em&gt;Key Findings&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#introduction&#34;&gt;&lt;em&gt;Introduction&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#background&#34;&gt;&lt;em&gt;Background&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#network-landscape-and-internet-penetration&#34;&gt;&lt;em&gt;Network landscape and internet
+penetration&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#legal-environment&#34;&gt;&lt;em&gt;Legal environment&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#freedom-of-expression&#34;&gt;&lt;em&gt;Freedom of expression&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#press-freedom&#34;&gt;&lt;em&gt;Press freedom&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#access-to-information&#34;&gt;&lt;em&gt;Access to information&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#privacy&#34;&gt;&lt;em&gt;Privacy&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#censorship-and-surveillance&#34;&gt;&lt;em&gt;Censorship and surveillance&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#previous-cases-of-internet-censorship-and-surveillance&#34;&gt;&lt;em&gt;Previous cases of internet censorship and
+surveillance&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#zambia-s-2016-general-elections-and-constitutional-referendum&#34;&gt;&lt;em&gt;Zambia’s 2016 general elections and constitutional
+referendum&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#examining-internet-censorship-during-zambia-s-2016-general-elections&#34;&gt;&lt;em&gt;Examining internet censorship during Zambia’s 2016 general
+elections&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#methodology&#34;&gt;&lt;em&gt;Methodology&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#creation-of-a-zambian-test-list&#34;&gt;&lt;em&gt;Creation of a Zambian test list&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooni-network-measurements&#34;&gt;&lt;em&gt;OONI network measurements&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#web-connectivity&#34;&gt;&lt;em&gt;Web connectivity&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#http-invalid-request-line&#34;&gt;&lt;em&gt;HTTP invalid request line&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#http-header-field-manipulation&#34;&gt;&lt;em&gt;HTTP header field manipulation&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#data-analysis&#34;&gt;&lt;em&gt;Data analysis&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#findings&#34;&gt;&lt;em&gt;Findings&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#acknowledgement-of-limitations&#34;&gt;&lt;em&gt;Acknowledgement of limitations&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#conclusion&#34;&gt;&lt;em&gt;Conclusion&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;key-findings&#34;&gt;Key Findings&lt;/h1&gt;
+
+&lt;p&gt;Out of a total of 1,303 websites that were tested for censorship in
+Zambia during and following its 2016 general election period, only 10 of
+those sites
+&lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;em&gt;presented&lt;/em&gt;&lt;/a&gt; signs of
+DNS, TCP/IP and HTTP interference, while &lt;a href=&#34;https://freedomhouse.org/sites/default/files/resources/FOTN%202015_Zambia.pdf&#34;&gt;&lt;em&gt;previously
+blocked&lt;/em&gt;&lt;/a&gt;
+news outlets appeared to be accessible throughout the duration of the
+testing period.&lt;/p&gt;
+
+&lt;p&gt;No block pages were detected as part of this study that could confirm
+cases of censorship. Yet, the
+&lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;em&gt;findings&lt;/em&gt;&lt;/a&gt; illustrate
+that connections to the websites of the World Economic Forum, the
+Organization of American States (OAS), and an online-dating site
+(pof.com) failed consistently from Zambia’s MTN network across the
+testing period, while failure rates from control vantage points were
+below 1%, indicating that these sites might have been blocked.&lt;/p&gt;
+
+&lt;p&gt;Pornography and sites supporting LGBT dating also appeared to be
+inaccessible throughout the testing period, and such blocking can
+potentially be legally justified under Zambia’s &lt;a href=&#34;http://www.parliament.gov.zm/sites/default/files/documents/acts/Penal%20Code%20Act.pdf&#34;&gt;&lt;em&gt;Penal
+Code&lt;/em&gt;&lt;/a&gt;
+and &lt;a href=&#34;http://www.zambialaws.com/Principal-Legislation/electronic-communications-and-transactions-act.html&#34;&gt;&lt;em&gt;Electronic Communications and Transactions Act
+2009&lt;/em&gt;&lt;/a&gt;.
+However, it remains unclear why connections to other websites, such as
+that of Pinterest, may have been tampered with during Zambia’s 2016
+general elections.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;em&gt;network tests run in Zambia&lt;/em&gt;&lt;/a&gt;
+aimed at identifying &amp;ldquo;middle boxes&amp;rdquo; capable of performing internet censorship,
+did not reveal the presence of censorship equipment.
+However, this does not mean that censorship equipment is not present in the
+country, but just that these particular tests were not able to highlight it&amp;rsquo;s
+presence.&lt;/p&gt;
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Zambia is &lt;a href=&#34;http://www.worldbank.org/en/country/zambia/overview&#34;&gt;&lt;em&gt;known&lt;/em&gt;&lt;/a&gt;
+for its relative political stability, having avoided conflict and
+maintained a multi-party democratic presidential system since 1991. As
+part of its
+&lt;a href=&#34;http://www.csprzambia.org/images/Constitution_of_Zambia__Amendment_2016-Act_No._2_0.pdf&#34;&gt;&lt;em&gt;Constitution&lt;/em&gt;&lt;/a&gt;,
+Zambia guarantees press freedom and various human rights, including
+freedom of expression and the right to access information, which are
+enshrined in its &lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;Bill of
+Rights&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Several cases of censorship however have been reported over the last
+decades, including the
+&lt;a href=&#34;https://www.hrw.org/reports/1996/Zambia.htm&#34;&gt;&lt;em&gt;ban&lt;/em&gt;&lt;/a&gt; of &lt;em&gt;The Post&lt;/em&gt;, one
+of Zambia’s few independent newspapers, leading up to the country’s 1996
+and 2016 general elections. Other cases of censorship were
+&lt;a href=&#34;https://freedomhouse.org/sites/default/files/resources/FOTN%202015_Zambia.pdf&#34;&gt;&lt;em&gt;reported&lt;/em&gt;&lt;/a&gt;
+between 2013 and 2014, when four independent online news outlets -
+&lt;a href=&#34;http://www.zambiawatchdog.com/&#34;&gt;&lt;em&gt;Zambian Watchdog&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;http://zambiareports.com/&#34;&gt;&lt;em&gt;Zambia
+Reports&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;http://barotselandpost.com/&#34;&gt;&lt;em&gt;Barotse
+Post&lt;/em&gt;&lt;/a&gt;, and &lt;a href=&#34;http://www.radiobarotseland.com/index.php/en/&#34;&gt;&lt;em&gt;Radio
+Barotse&lt;/em&gt;&lt;/a&gt; - were blocked
+for their critical coverage of the ruling party. OONI
+&lt;a href=&#34;https://ooni.torproject.org/post/zambia/&#34;&gt;&lt;em&gt;revealed&lt;/em&gt;&lt;/a&gt; at the time that
+Deep Packet Inspection (DPI) filtering tactics were used to block
+Zambian Watchdog’s website.&lt;/p&gt;
+
+&lt;p&gt;In light of Zambia’s 2016 general elections, the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;&lt;em&gt;Open Observatory of
+Network Interference (OONI)&lt;/em&gt;&lt;/a&gt;, in
+collaboration with &lt;a href=&#34;https://www.cipit.org/&#34;&gt;&lt;em&gt;Strathmore University’s Centre for Intellectual
+Property and Information Technology Law
+(CIPIT)&lt;/em&gt;&lt;/a&gt;, conducted a study to examine whether
+internet censorship events occurred during the election period. This
+study was carried out through the collection of network measurements
+from a local vantage point in Zambia, based on a set of &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;&lt;em&gt;OONI software
+tests&lt;/em&gt;&lt;/a&gt; designed to examine
+whether a set of websites were blocked, and whether systems that could
+be responsible for internet censorship and surveillance were present in
+the tested network (&lt;a href=&#34;https://en.wikipedia.org/wiki/MTN_Group&#34;&gt;MTN Zambia&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The aim of this study is to increase transparency about potential
+internet controls in Zambia which might have interfered with the
+democratic process of elections. The following sections of this report
+provide information about Zambia’s network landscape and internet
+penetration levels, its legal environment with respect to freedom of
+expression, access to information and privacy, as well as about cases of
+censorship and surveillance that have previously been reported in the
+country. The remainder of the report documents the methodology and key
+findings of this study.&lt;/p&gt;
+
+&lt;h1 id=&#34;background&#34;&gt;Background&lt;/h1&gt;
+
+&lt;p&gt;Zambia is a landlocked country in Southern Africa, bordering with
+Tanzania, Zimbabwe, the Democratic Republic of the Congo, Angola,
+Malawi, Mozambique, Botswana and Namibia. Unlike most of its neighbors,
+Zambia is &lt;a href=&#34;http://www.worldbank.org/en/country/zambia/overview&#34;&gt;&lt;em&gt;known&lt;/em&gt;&lt;/a&gt;
+for its political stability.&lt;/p&gt;
+
+&lt;p&gt;Following the country’s independence from the United Kingdom in 1964,
+the &lt;a href=&#34;http://africanelections.tripod.com/zm.html&#34;&gt;&lt;em&gt;United National Independence Party (UNIP) ruled Zambia for 18
+years&lt;/em&gt;&lt;/a&gt; under a one-party
+state with the motto “&lt;a href=&#34;https://politicalmatter.org/2016/04/19/one-zambia-one-nation-the-legacy-of-kenneth-kaunda-by-derrick-m-muwina/&#34;&gt;&lt;em&gt;One Zambia, One
+Nation&lt;/em&gt;&lt;/a&gt;”.
+Deadly &lt;a href=&#34;http://www.bbc.com/news/world-africa-14113084&#34;&gt;&lt;em&gt;riots&lt;/em&gt;&lt;/a&gt;,
+however, and an &lt;a href=&#34;http://www.nytimes.com/1990/07/01/world/failed-zambia-coup-weakens-leader.html&#34;&gt;&lt;em&gt;attempted
+coup&lt;/em&gt;&lt;/a&gt;
+appear to include some of the factors that led to Zambia’s transition to
+a multi-party democracy and presidential system in 1991. Zambia has
+since held a number of general elections within this new framework.
+This, however, was almost disrupted by another &lt;a href=&#34;http://www.bbc.com/news/world-africa-14113084&#34;&gt;&lt;em&gt;failed coup attempt in
+1997&lt;/em&gt;&lt;/a&gt;, resulting in the
+death sentence of 103 soldiers. Zambia’s last general elections were
+held on 11th August 2016 which
+&lt;a href=&#34;https://www.elections.org.zm/general_election_2016.php&#34;&gt;&lt;em&gt;resulted&lt;/em&gt;&lt;/a&gt; in
+a victory for the Patriotic Front (PF), whose candidate Edgar Lungu was
+elected President for a five-year term.&lt;/p&gt;
+
+&lt;p&gt;Zambia was &lt;a href=&#34;https://www.cia.gov/library/publications/the-world-factbook/geos/za.html&#34;&gt;&lt;em&gt;one of the world’s fastest growing
+economies&lt;/em&gt;&lt;/a&gt;
+over the last decade, but the falling copper prices, exports and foreign
+direct investment have
+&lt;a href=&#34;http://www.worldbank.org/en/country/zambia/overview&#34;&gt;&lt;em&gt;weakened&lt;/em&gt;&lt;/a&gt; the
+economy in recent years, while the &lt;a href=&#34;https://www.cia.gov/library/publications/the-world-factbook/geos/za.html&#34;&gt;&lt;em&gt;rate of
+inflation&lt;/em&gt;&lt;/a&gt;
+has increased. Corruption also appears to remain
+&lt;a href=&#34;http://www.transparency.org/cpi2015&#34;&gt;&lt;em&gt;pervasive&lt;/em&gt;&lt;/a&gt; in the country
+despite &lt;a href=&#34;http://www.transparency.org/whatwedo/answer/overview_of_corruption_and_anti_corruption_in_zambia&#34;&gt;&lt;em&gt;anti-corruption
+efforts&lt;/em&gt;&lt;/a&gt;,
+such as the strengthening of legal and institutional frameworks.&lt;/p&gt;
+
+&lt;p&gt;Multiple &lt;a href=&#34;http://minorityrights.org/country/zambia/&#34;&gt;&lt;em&gt;ethnic
+minorities&lt;/em&gt;&lt;/a&gt; live in Zambia,
+the Bembe people being the largest ethnic group. The majority of the
+population is
+&lt;a href=&#34;https://www.cia.gov/library/publications/the-world-factbook/geos/za.html&#34;&gt;&lt;em&gt;Protestant&lt;/em&gt;&lt;/a&gt;,
+while &lt;a href=&#34;https://www.cia.gov/library/publications/the-world-factbook/geos/za.html&#34;&gt;&lt;em&gt;smaller
+percentages&lt;/em&gt;&lt;/a&gt;
+of the population are Roman Catholic, Muslim, Buddhist, Hindu and Bahá&amp;rsquo;í.
+Despite the presence of diverse ethnic and religious groups, civil war
+has been prevented in the country. Xenophobic violence however has been
+an issue, recently resulting in the &lt;a href=&#34;http://www.bbc.com/news/world-africa-36092917&#34;&gt;&lt;em&gt;death of
+Rwandans&lt;/em&gt;&lt;/a&gt; who were
+accused of engaging in ritual killings in Lusaka.&lt;/p&gt;
+
+&lt;p&gt;Food shortages and HIV/AIDS are some of the main issues that have
+affected Zambia in recent decades. Around 70% of the population is
+&lt;a href=&#34;http://minorityrights.org/country/zambia/&#34;&gt;&lt;em&gt;estimated&lt;/em&gt;&lt;/a&gt; to live on less
+than US\$1 per day. A national disaster due to droughts was
+&lt;a href=&#34;http://news.bbc.co.uk/2/hi/africa/4457814.stm&#34;&gt;&lt;em&gt;declared&lt;/em&gt;&lt;/a&gt; in 2005,
+when the President appealed for food aid. While Zambia consists of a
+population of around &lt;a href=&#34;https://esa.un.org/unpd/wpp/Publications/Files/Key_Findings_WPP_2015.pdf&#34;&gt;&lt;em&gt;16
+million&lt;/em&gt;&lt;/a&gt;,
+&lt;a href=&#34;http://www.unaids.org/en/regionscountries/countries/zambia&#34;&gt;&lt;em&gt;more than 1
+million&lt;/em&gt;&lt;/a&gt;
+people are estimated to be living with HIV/AIDS.&lt;/p&gt;
+
+&lt;h1 id=&#34;network-landscape-and-internet-penetration&#34;&gt;Network landscape and internet penetration&lt;/h1&gt;
+
+&lt;p&gt;Zambia was one of the first countries in Sub-Saharan Africa to adopt the
+internet, when satellite and dial-up technology were installed at the
+University of Zambia in the early 1990s. Today, three operators provide
+Zambia’s national fiber backbone: &lt;a href=&#34;http://www.zamtel.zm/&#34;&gt;&lt;em&gt;Zambia Telecommunications Ltd
+(Zamtel)&lt;/em&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.zesco.co.zm/&#34;&gt;&lt;em&gt;Zambia Electricity Supply
+Corporation Ltd (ZESCO)&lt;/em&gt;&lt;/a&gt; - both of which are
+state-owned - as well as &lt;a href=&#34;http://cecinvestor.com/&#34;&gt;&lt;em&gt;Copperbelt Energy Corporation
+(CEC)&lt;/em&gt;&lt;/a&gt;, which is privately-owned.&lt;/p&gt;
+
+&lt;p&gt;All internet and mobile service providers in Zambia are privately-owned,
+with the exception of Zamtel, which is state-owned. Overall, Zambia has
+16 different Internet Service Providers (ISPs), and 3 mobile operators:
+Airtel, MTN and Zamtel.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;2010&lt;/th&gt;
+&lt;th&gt;2011&lt;/th&gt;
+&lt;th&gt;2012&lt;/th&gt;
+&lt;th&gt;2013&lt;/th&gt;
+&lt;th&gt;2014&lt;/th&gt;
+&lt;th&gt;2015&lt;/th&gt;
+&lt;th&gt;2016 Q1-2&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Population-CSO Estimate&lt;/td&gt;
+&lt;td&gt;13,092,666&lt;/td&gt;
+&lt;td&gt;13,721,498&lt;/td&gt;
+&lt;td&gt;14,156,468&lt;/td&gt;
+&lt;td&gt;14,605,555&lt;/td&gt;
+&lt;td&gt;15,068,792&lt;/td&gt;
+&lt;td&gt;15,545,778&lt;/td&gt;
+&lt;td&gt;16,037,474&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Number of Mobile Operators&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Number of PSTN Operators&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Number of Active ISPs&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Source: &lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html&#34;&gt;Zambia Information and Communications Technology Authority&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Zamtel has the largest share of internet subscriptions, but the smallest
+share in the mobile phone market, where &lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html&#34;&gt;&lt;em&gt;Airtel and MTN have the
+largest
+shares&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Network Coverage&lt;/th&gt;
+&lt;th&gt;2010&lt;/th&gt;
+&lt;th&gt;2011&lt;/th&gt;
+&lt;th&gt;2012&lt;/th&gt;
+&lt;th&gt;2013&lt;/th&gt;
+&lt;th&gt;2014&lt;/th&gt;
+&lt;th&gt;2015&lt;/th&gt;
+&lt;th&gt;2016 Q1&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Internet Points of Presence (Districts)&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;99&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;PSTN Area Coverage (%)&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;National Network Geographical Coverage&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Airtel Zambia&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;42.7%&lt;/td&gt;
+&lt;td&gt;42.7%&lt;/td&gt;
+&lt;td&gt;42.7%&lt;/td&gt;
+&lt;td&gt;42.7%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;MTN Zambia&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;36.6%&lt;/td&gt;
+&lt;td&gt;37.5%&lt;/td&gt;
+&lt;td&gt;39.4%&lt;/td&gt;
+&lt;td&gt;31.7%&lt;/td&gt;
+&lt;td&gt;45.4%&lt;/td&gt;
+&lt;td&gt;43.5%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Zamtel&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;td&gt;75.0%&lt;/td&gt;
+&lt;td&gt;75.0%&lt;/td&gt;
+&lt;td&gt;29.7%&lt;/td&gt;
+&lt;td&gt;27.0%&lt;/td&gt;
+&lt;td&gt;27.0%&lt;/td&gt;
+&lt;td&gt;27.0%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Source: &lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/ICT%20Indicators.html&#34;&gt;Zambia Information and Communications Technology Authority&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Internet penetration in Zambia is currently limited to about
+&lt;a href=&#34;http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx&#34;&gt;&lt;em&gt;21%&lt;/em&gt;&lt;/a&gt;
+of the population, according to the &lt;a href=&#34;http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx&#34;&gt;&lt;em&gt;International Telecommunication
+Union
+(ITU)&lt;/em&gt;&lt;/a&gt;,
+the &lt;a href=&#34;https://www.cia.gov/library/publications/the-world-factbook/geos/za.html&#34;&gt;&lt;em&gt;World
+Factbook&lt;/em&gt;&lt;/a&gt;,
+and &lt;a href=&#34;http://www.internetworldstats.com/africa.htm#zm&#34;&gt;&lt;em&gt;Internet World
+Stats&lt;/em&gt;&lt;/a&gt;. The limited
+amount of internet users in Zambia is due to a number of reasons,
+including high costs of hardware, software and access to the internet,
+poor network coverage, erratic and expensive electricity, and high
+levels of illiteracy and poverty
+(&lt;a href=&#34;http://www.worldbank.org/en/country/zambia/overview&#34;&gt;&lt;em&gt;60%&lt;/em&gt;&lt;/a&gt; of the
+population is estimated to live below the poverty line, and
+&lt;a href=&#34;http://www.worldbank.org/en/country/zambia/overview&#34;&gt;&lt;em&gt;42%&lt;/em&gt;&lt;/a&gt; are
+considered to live in extreme poverty). Nonetheless, access to
+information and communication technologies (ICTs) has been increasing
+steadily over the last few years, growing from a &lt;a href=&#34;http://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx&#34;&gt;&lt;em&gt;penetration rate of
+10% in 2010 to about 21% in
+2016&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The vast majority of Zambian ICT users access the internet via &lt;em&gt;mobile
+phones&lt;/em&gt;, as &lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/&#34;&gt;&lt;em&gt;70.5%&lt;/em&gt;&lt;/a&gt; of
+the population is estimated to have mobile phone subscriptions, while
+&lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/&#34;&gt;&lt;em&gt;less than 1%&lt;/em&gt;&lt;/a&gt; of
+Zambians access the internet from their homes via fixed line
+subscriptions. As of 2013, &lt;a href=&#34;https://advox.globalvoices.org/2013/12/21/zambia-register-your-sim-card-or-lose-your-service/&#34;&gt;&lt;em&gt;SIM card
+registration&lt;/em&gt;&lt;/a&gt;
+with an original and valid identity card is required for mobile phone
+subscriptions.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.zicta.zm/&#34;&gt;&lt;em&gt;Zambia’s Information and Communications Technology Authority
+(ZICTA)&lt;/em&gt;&lt;/a&gt; estimates that
+&lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/&#34;&gt;&lt;em&gt;35.6%&lt;/em&gt;&lt;/a&gt; of Zambia’s
+mobile phone subscribers use the internet in 2016, as illustrated below:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Indicator&lt;/th&gt;
+&lt;th&gt;Number&lt;/th&gt;
+&lt;th&gt;Penetration Rate&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Mobile Subscription&lt;/td&gt;
+&lt;td&gt;11,309,494&lt;/td&gt;
+&lt;td&gt;70.50%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Fixed Line Subscription&lt;/td&gt;
+&lt;td&gt;115,423&lt;/td&gt;
+&lt;td&gt;0.72%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Mobile Internet Users&lt;/td&gt;
+&lt;td&gt;5,715,493&lt;/td&gt;
+&lt;td&gt;35.60%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Fixed Internet Subscription&lt;/td&gt;
+&lt;td&gt;35,960&lt;/td&gt;
+&lt;td&gt;0.22%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Source: &lt;a href=&#34;http://onlinesystems.zicta.zm:8585/statsfinal/&#34;&gt;Zambia Information and Communications Technology Authority&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://freedomhouse.org/sites/default/files/resources/FOTN%202015_Zambia.pdf&#34;&gt;&lt;em&gt;Blackberry devices appear to be used the most&lt;/em&gt;&lt;/a&gt;
+due to their cheap subscription fees, while the increasing number of
+mobile internet users and &lt;a href=&#34;https://www.lusakatimes.com/2012/02/24/government-clamp-illegal-internet-cafs-zambia/&#34;&gt;&lt;em&gt;government cybercafe
+regulations&lt;/em&gt;&lt;/a&gt;
+appear to be some of the reasons leading to the decreased popularity of
+cybercafes in recent years.&lt;/p&gt;
+
+&lt;h1 id=&#34;legal-environment&#34;&gt;Legal environment&lt;/h1&gt;
+
+&lt;p&gt;Zambia’s ICT sector is regulated by &lt;a href=&#34;http://www.zicta.zm/&#34;&gt;&lt;em&gt;ZICTA&lt;/em&gt;&lt;/a&gt;,
+which was established under the &lt;a href=&#34;http://www.zambialaws.com/Principal-Legislation/information-and-communication-technologies-act.html&#34;&gt;&lt;em&gt;2009 Information and Communications
+Technologies
+Act&lt;/em&gt;&lt;/a&gt;.
+As part of its mandate, ZICTA manages the registration for the .zm
+country code top-level domains, according to provisions under the &lt;a href=&#34;http://www.parliament.gov.zm/node/3581&#34;&gt;&lt;em&gt;2009
+Electronic Communications and Transaction
+Act&lt;/em&gt;&lt;/a&gt;. The &lt;a href=&#34;http://www.iba.org.zm/&#34;&gt;&lt;em&gt;Independent
+Broadcasting Authority&lt;/em&gt;&lt;/a&gt; is also responsible for
+regulating some internet content.&lt;/p&gt;
+
+&lt;h2 id=&#34;freedom-of-expression&#34;&gt;Freedom of expression&lt;/h2&gt;
+
+&lt;p&gt;Freedom of expression is enshrined in the &lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;Bill of
+Rights&lt;/em&gt;&lt;/a&gt;
+which is included in Part III of Zambia’s Constitution. According to
+Article 21 of the Bill of Rights:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;(1) A person has the right to freedom of expression which includes &amp;ndash;&lt;/p&gt;
+
+&lt;p&gt;(a) freedom to hold an opinion;&lt;/p&gt;
+
+&lt;p&gt;(b) freedom to receive or impart information or ideas;&lt;/p&gt;
+
+&lt;p&gt;&amp;copy; freedom of artistic creativity;&lt;/p&gt;
+
+&lt;p&gt;(d) academic freedom; and&lt;/p&gt;
+
+&lt;p&gt;(e) freedom of scientific and technological research, as prescribed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Clause 2 of Article 21 of the Bill of Rights specifies the conditions
+under which freedom of expression is restricted:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;(2) Clause (1) does not extend to &amp;ndash;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;(a) conduct or statements which incite war, genocide, crimes against&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;humanity or other forms of violence; or&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(b) &lt;em&gt;statements which &amp;ndash;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;(i) vilify or disparage others; or&lt;/p&gt;
+
+&lt;p&gt;(ii) incite hatred.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;While freedom of expression is guaranteed under Zambia’s Constitution,
+in practice this right can be limited by broad interpretations of laws
+that restrict expression in the interest of national security, public
+order and safety.&lt;/p&gt;
+
+&lt;h2 id=&#34;press-freedom&#34;&gt;Press freedom&lt;/h2&gt;
+
+&lt;p&gt;Zambia’s Constitution was recently
+&lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;amended&lt;/em&gt;&lt;/a&gt;
+to include significant protections for press freedom.&lt;/p&gt;
+
+&lt;p&gt;Freedom of the media (electronic, broadcasting, print, and other forms)
+is guaranteed under &lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;Article 23 of the Bill of
+Rights&lt;/em&gt;&lt;/a&gt;,
+though “&lt;em&gt;the State may license broadcasting and electronic media where
+it is necessary to regulate signals and signal distribution&lt;/em&gt;.”&lt;/p&gt;
+
+&lt;p&gt;Clause 2 of Article 23 explicitly prohibits the State from exercising
+control or interfering with the production or circulation of
+publications, or with the dissemination of information through any
+media.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, clause 4 of Article 23 guarantees the independence of the
+public media to determine the editorial content of their broadcasts and
+communications, as well as the right to present divergent views and
+dissenting opinions.&lt;/p&gt;
+
+&lt;p&gt;In practice, however, press freedom can potentially be limited by
+various statutes. Zambia’s &lt;a href=&#34;http://www.parliament.gov.zm/sites/default/files/documents/acts/Penal%20Code%20Act.pdf&#34;&gt;&lt;em&gt;Penal
+Code&lt;/em&gt;&lt;/a&gt;,
+for example, includes clauses that criminalize the defamation of the
+president and allow the president to ban publications that are
+considered to be “contrary to the public interest”.&lt;/p&gt;
+
+&lt;h2 id=&#34;access-to-information&#34;&gt;Access to information&lt;/h2&gt;
+
+&lt;p&gt;Article 22 of the &lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;Bill of
+Rights&lt;/em&gt;&lt;/a&gt;
+guarantees the right to access information. Specifically, clause 1 of
+Article 22 states that individuals have the right to access information
+held by the State or another person which is lawfully required for the
+exercise or protection of a right or freedom.&lt;/p&gt;
+
+&lt;p&gt;While the process of drafting Zambia’s Access to Information (ATI) Bill
+started in 2002, the Bill has still &lt;em&gt;not&lt;/em&gt; been enacted into law, thus
+limiting the right to access information from being exercised in
+practice.&lt;/p&gt;
+
+&lt;p&gt;Various non-profit organizations, including
+&lt;a href=&#34;https://www.ifex.org/zambia/2015/05/21/access_information/&#34;&gt;&lt;em&gt;IFEX&lt;/em&gt;&lt;/a&gt; and
+the &lt;a href=&#34;http://www.osisa.org/media-and-ict/zambia/freedom-information-bill-zambia&#34;&gt;&lt;em&gt;Open Society Initiative for Southern
+Africa&lt;/em&gt;&lt;/a&gt;,
+have criticised the delay and have encouraged the Zambian government to
+create a timeline for enacting the Access to Information (ATI) Bill into
+law.&lt;/p&gt;
+
+&lt;h2 id=&#34;privacy&#34;&gt;Privacy&lt;/h2&gt;
+
+&lt;p&gt;The right to privacy is enshrined in Article 19 of Zambia’s &lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;Bill of
+Rights&lt;/em&gt;&lt;/a&gt;,
+which extends to the protection of a person’s &lt;em&gt;communications&lt;/em&gt; privacy
+from infringement.&lt;/p&gt;
+
+&lt;p&gt;Data protection is included in Part VII (“Protection of Personal
+Information”) of the &lt;a href=&#34;http://www.zambialaws.com/Principal-Legislation/electronic-communications-and-transactions-act.html&#34;&gt;&lt;em&gt;2009 Electronic Communications and Transactions
+Act&lt;/em&gt;&lt;/a&gt;,
+and Article 42 of the Act specifies the principles for the electronic
+collection of personal information.&lt;/p&gt;
+
+&lt;p&gt;While most of these principles include important provisions for data
+protection, it is noteworthy that principle 9 enables data controllers
+to “use any personal information to compile profiles for statistical
+purposes and may freely trade with such profiles and statistical data,
+as long as the profiles or statistical data cannot be linked to any
+specific data subject by a third party”. This principle raises concerns,
+as &lt;a href=&#34;https://myshadow.org/false-promises-data-anonymisation&#34;&gt;&lt;em&gt;research&lt;/em&gt;&lt;/a&gt;
+has shown that “anonymized datasets” can be de-anonymized by third
+parties.&lt;/p&gt;
+
+&lt;h2 id=&#34;censorship-and-surveillance&#34;&gt;Censorship and surveillance&lt;/h2&gt;
+
+&lt;p&gt;Zambia’s &lt;a href=&#34;http://www.zambialaws.com/Principal-Legislation/electronic-communications-and-transactions-act.html&#34;&gt;&lt;em&gt;Electronic Communications and Transactions Act
+2009&lt;/em&gt;&lt;/a&gt;
+(Part XI, “Interception of Communication”) includes details about how
+lawful interception is carried out, generally requiring a court order
+(Article 66).&lt;/p&gt;
+
+&lt;p&gt;Article 65 of the Act establishes the Central Monitoring and
+Coordination Centre, which manages and aggregates all authorised
+interceptions of communications, and which is operated by the department
+responsible for Government communications. According to Article 77,
+service providers are required to install hardware and software
+facilities and devices that enable the “real-time” and “full-time”
+interception of communications upon request by law enforcement agencies.
+Service providers are also required to provide interfaces for
+transmitting all intercepted communications directly to the Central
+Monitoring and Coordination Centre.&lt;/p&gt;
+
+&lt;p&gt;Part XIV (“Cyber Inspectors”) of the Act details the appointment and
+powers of cyber inspectors. According to Article 94, a cyber inspector
+may “monitor and inspect any website or activity on an information
+system in the public domain and report any unlawful activity to the
+appropriate authority”.&lt;/p&gt;
+
+&lt;p&gt;Pornography is prohibited under Article 102 of Part XV (“Cyber crime”)
+of the Act, according to which a fine and/or imprisonment can be imposed
+on any person that “procures any pornography through a computer system
+for oneself or for another person”, or “possesses any pornography in a
+computer system or on a computer data storage medium”.&lt;/p&gt;
+
+&lt;h1 id=&#34;previous-cases-of-internet-censorship-and-surveillance&#34;&gt;Previous cases of internet censorship and surveillance&lt;/h1&gt;
+
+&lt;p&gt;Africa’s first known case of internet censorship occurred in Zambia
+twenty years ago.&lt;/p&gt;
+
+&lt;p&gt;Leading up to the 1996 general elections, the government of Zambia
+&lt;a href=&#34;https://www.hrw.org/reports/1996/Zambia.htm&#34;&gt;&lt;em&gt;banned edition 401&lt;/em&gt;&lt;/a&gt; of
+&lt;a href=&#34;http://www.postzambia.com/&#34;&gt;&lt;strong&gt;The Post&lt;/strong&gt;&lt;/a&gt;, one of Zambia’s three
+primary newspapers, and ordered its removal from the newspaper’s
+website. This incidence of censorship
+&lt;a href=&#34;https://www.hrw.org/reports/1996/Zambia.htm&#34;&gt;&lt;em&gt;reportedly&lt;/em&gt;&lt;/a&gt; occurred
+because edition 401 stated that the government was secretly planning to
+hold a referendum on the constitution without providing the public with
+much prior notice.&lt;/p&gt;
+
+&lt;p&gt;In addition to censoring the online version and distribution of &lt;em&gt;The
+Post’s&lt;/em&gt; 401 edition, the government also
+&lt;a href=&#34;https://freedomhouse.org/sites/default/files/resources/FOTN%202015_Zambia.pdf&#34;&gt;&lt;em&gt;threatened&lt;/em&gt;&lt;/a&gt;
+to hold the site’s Internet Service Provider (ISP), Zamnet, criminally
+liable for the content, and three of the edition’s editors were
+&lt;a href=&#34;https://www.hrw.org/reports/1996/Zambia.htm&#34;&gt;&lt;em&gt;arrested&lt;/em&gt;&lt;/a&gt; under the
+Official Secrets Act on charges for receiving and publishing “classified
+information”.&lt;/p&gt;
+
+&lt;p&gt;No other incidents of internet censorship were reported in Zambia for
+more than a decade.&lt;/p&gt;
+
+&lt;p&gt;The first new censorship attempt started in late 2012 when Zambia’s
+registrar of societies
+&lt;a href=&#34;https://freedomhouse.org/report/freedom-press/2013/zambia&#34;&gt;&lt;em&gt;threatened&lt;/em&gt;&lt;/a&gt;
+to deregister the &lt;a href=&#34;http://www.zambiawatchdog.com/&#34;&gt;&lt;strong&gt;Zambian
+Watchdog&lt;/strong&gt;&lt;/a&gt;, an investigative online
+media that focuses on corruption and other major crimes, for allegedly
+failing to pay required fees and submit a postal address. While this
+attempt was unsuccessful, the news website was blocked during the
+following year.&lt;/p&gt;
+
+&lt;p&gt;Four independent online news outlets - &lt;a href=&#34;http://www.zambiawatchdog.com/&#34;&gt;&lt;em&gt;Zambian
+Watchdog&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;http://zambiareports.com/&#34;&gt;&lt;em&gt;Zambia
+Reports&lt;/em&gt;&lt;/a&gt;, &lt;a href=&#34;http://barotselandpost.com/&#34;&gt;&lt;em&gt;Barotse
+Post&lt;/em&gt;&lt;/a&gt;, and &lt;a href=&#34;http://www.radiobarotseland.com/index.php/en/&#34;&gt;&lt;em&gt;Radio
+Barotse&lt;/em&gt;&lt;/a&gt; - were
+&lt;a href=&#34;https://freedomhouse.org/sites/default/files/resources/FOTN%202015_Zambia.pdf&#34;&gt;&lt;em&gt;reportedly
+censored&lt;/em&gt;&lt;/a&gt;
+for about nine months, from July 2013 until April 2014, for their
+critical coverage of the ruling party under President Sata.&lt;/p&gt;
+
+&lt;p&gt;OONI &lt;a href=&#34;https://ooni.torproject.org/post/zambia/&#34;&gt;&lt;em&gt;revealed&lt;/em&gt;&lt;/a&gt; at the time
+that Deep Packet Inspection (DPI) filtering tactics were used to block
+Zambian Watchdog’s website. According to the collected data, “reset”
+packets were being injected by DPI device to terminate connections to
+&lt;a href=&#34;http://www.zambiawatchdog.com&#34;&gt;&lt;em&gt;www.zambiawatchdog.com&lt;/em&gt;&lt;/a&gt;, leading to
+the site being inaccessible.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia-election-monitoring/old-report-data.png&#34; alt=&#34;Zambia report data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Source: Open Observatory of Network Interference (OONI), &lt;a href=&#34;https://ooni.torproject.org/post/zambia/&#34;&gt;“Zambia, a
+country under Deep Packet Inspection”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Initially, only unencrypted connections to Zambian Watchdog’s website
+were found to be blocked, but further
+&lt;a href=&#34;https://ooni.torproject.org/post/zambia/#update-17th-july-2013-and-ssl-got-blocked&#34;&gt;&lt;em&gt;testing&lt;/em&gt;&lt;/a&gt;
+also revealed the blocking of encrypted SSL connections to the website.&lt;/p&gt;
+
+&lt;p&gt;The Zambian government did not officially claim any responsibility in
+relation to this censorship, but Vice President Guy Scott &lt;a href=&#34;https://cpj.org/2013/07/zambia-blocks-another-website-re-arrests-reporter.php&#34;&gt;&lt;em&gt;reportedly
+stated&lt;/em&gt;&lt;/a&gt;
+that the Zambian Watchdog’s website deserved to be blocked because it
+was “promoting hate speech” and its reporting was “malicious, vicious
+and fictitious”.&lt;/p&gt;
+
+&lt;p&gt;During this period, several journalists suspected of working for the
+Zambian Watchdog were
+&lt;a href=&#34;https://advox.globalvoices.org/2013/07/19/another-journalist-arrested-in-zambia/&#34;&gt;&lt;em&gt;arrested&lt;/em&gt;&lt;/a&gt;
+on charges that included the “possession of obscene material”. Two years
+later, one of those journalists was acquitted after a court
+&lt;a href=&#34;https://www.lusakatimes.com/2015/08/11/clayson-hamasaka-acquittedevidence-was-planted/&#34;&gt;&lt;em&gt;ruled&lt;/em&gt;&lt;/a&gt;
+that evidence used against him had been planted.&lt;/p&gt;
+
+&lt;p&gt;In an &lt;a href=&#34;http://zambiareports.com/2013/07/25/zambian-government-requested-to-stop-blocking-access-to-news-websites/&#34;&gt;&lt;em&gt;open
+letter&lt;/em&gt;&lt;/a&gt;,
+news outlet Zambia Reports claimed that access to its website was also
+blocked completely, and that it had received no prior notification or
+explanation from the government in regards to why its website was being
+blocked. Zambia Reports also revealed that it had filed a complaint
+regarding the blocking of their IP address to ZICTA.&lt;/p&gt;
+
+&lt;p&gt;Censorship in Zambia is
+&lt;a href=&#34;http://www.zambiawatchdog.com/authoritarian-regimes-band-together-zambia-in/&#34;&gt;&lt;em&gt;reportedly&lt;/em&gt;&lt;/a&gt;
+enabled through collaboration with Chinese companies, such as
+&lt;a href=&#34;http://www.huawei.com/&#34;&gt;&lt;em&gt;Huawei&lt;/em&gt;&lt;/a&gt; and &lt;a href=&#34;http://www.zte.com.cn/&#34;&gt;&lt;em&gt;ZTE&lt;/em&gt;&lt;/a&gt;,
+that equip Zambian ISPs with DPI technology that can be used for the
+purpose of blocking social media and “unfriendly” websites. The Zambian
+government has
+&lt;a href=&#34;https://advox.globalvoices.org/2013/02/23/zambia-chinese-experts-to-monitor-internet/&#34;&gt;&lt;em&gt;allegedly&lt;/em&gt;&lt;/a&gt;
+spent about USD 1.8 million on its partnership with Chinese companies,
+involving the installation of an internet monitoring facility and
+possibly the development of backdoors within networks.&lt;/p&gt;
+
+&lt;p&gt;Zambian authorities &lt;em&gt;might&lt;/em&gt; have also acquired sophisticated spyware,
+known as &lt;a href=&#34;https://wikileaks.org/spyfiles/files/0/31_200810-ISS-PRG-HACKINGTEAM.pdf&#34;&gt;&lt;em&gt;Remote Control System
+(RCS)&lt;/em&gt;&lt;/a&gt;,
+by an Italian surveillance company called &lt;a href=&#34;http://www.hackingteam.it/&#34;&gt;&lt;em&gt;Hacking
+Team&lt;/em&gt;&lt;/a&gt;. According to one of Hacking Team’s
+&lt;a href=&#34;https://wikileaks.org/spyfiles/files/0/31_200810-ISS-PRG-HACKINGTEAM.pdf&#34;&gt;&lt;em&gt;brochures&lt;/em&gt;&lt;/a&gt;,
+RCS spyware can remotely monitor and log activity on computers and
+smartphones, while being undetected by anti-virus, anti-spyware and
+anti-keylogging software. After &lt;a href=&#34;http://arstechnica.com/security/2016/04/how-hacking-team-got-hacked-phineas-phisher/&#34;&gt;&lt;em&gt;Hacking Team got
+hacked&lt;/em&gt;&lt;/a&gt;
+last year, &lt;a href=&#34;https://wikileaks.org/hackingteam/emails/&#34;&gt;&lt;em&gt;leaked emails&lt;/em&gt;&lt;/a&gt;
+revealed that the Zambian government intended to acquire spyware for
+monitoring and intercepting communications. This, though, has &lt;em&gt;not&lt;/em&gt; been
+confirmed to date, and it remains unclear if the Zambian government is
+indeed using such technologies.&lt;/p&gt;
+
+&lt;p&gt;In 2013 Citizen Lab researchers
+&lt;a href=&#34;https://citizenlab.org/storage/bluecoat/CitLab-PlanetBlueCoatRedux-FINAL.pdf&#34;&gt;&lt;em&gt;detected&lt;/em&gt;&lt;/a&gt;
+the presence of a Blue Coat PacketShaper device in Zambia. Blue Coat
+Inc. is a California-based company which is known for developing,
+marketing, and exporting technologies that can be used to monitor
+internet traffic, block websites, and track users’ online activities and
+communications.&lt;/p&gt;
+
+&lt;p&gt;As part of its
+&lt;a href=&#34;https://citizenlab.org/storage/bluecoat/CitLab-PlanetBlueCoatRedux-FINAL.pdf&#34;&gt;&lt;em&gt;study&lt;/em&gt;&lt;/a&gt;,
+the Citizen Lab used a combination of network measurement and scanning
+methods and tools to identify instances of Blue Coat ProxySG and
+PacketShaper devices around the world. The research findings show the
+presence of Blue Coat PacketShaper in Zambia, as illustrated below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia-election-monitoring/blue-coat.png&#34; alt=&#34;BlueCoat&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Source: Citizen Lab, &lt;a href=&#34;https://citizenlab.org/storage/bluecoat/CitLab-PlanetBlueCoatRedux-FINAL.pdf&#34;&gt;“Some Devices Wander By Mistake: PLANET BLUE COAT
+REDUX”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Numerous
+&lt;a href=&#34;http://techpresident.com/news/wegov/24434/zambian-president-admits-spying-fellow-officials&#34;&gt;&lt;em&gt;reports&lt;/em&gt;&lt;/a&gt;
+surfaced over the last years accusing the Zambian government of
+extensive surveillance activities, some of which may have even
+&lt;a href=&#34;http://zambiareports.com/2013/10/09/sata-is-listening-to-your-conversation/&#34;&gt;&lt;em&gt;targeted cabinet
+officials&lt;/em&gt;&lt;/a&gt;,
+such as the foreign minister, and local leaders. Similarly, members of
+the opposition have
+&lt;a href=&#34;http://zambiareports.com/2014/01/23/sata-tapping-phones-says-fr-bwalya/&#34;&gt;&lt;em&gt;accused&lt;/em&gt;&lt;/a&gt;
+the Zambian government of eavesdropping on their phone conversations.
+Last year, two journalists
+&lt;a href=&#34;http://www.africametro.com/headline/airtel-zambia-facing-phone-tapping-allegations&#34;&gt;&lt;em&gt;petitioned&lt;/em&gt;&lt;/a&gt;
+the High Court of Zambia to inquire into allegations of phone tapping by
+Airtel - Zambia’s largest mobile service provider - under the previous
+government.&lt;/p&gt;
+
+&lt;h1 id=&#34;zambia-s-2016-general-elections-and-constitutional-referendum&#34;&gt;Zambia’s 2016 general elections and constitutional referendum&lt;/h1&gt;
+
+&lt;p&gt;Zambia has a &lt;a href=&#34;http://www.bbc.com/news/world-africa-14112449&#34;&gt;&lt;em&gt;reputation for political
+stability&lt;/em&gt;&lt;/a&gt;, especially
+in comparison to its neighbours, being governed by a unitary presidential
+republic.&lt;/p&gt;
+
+&lt;p&gt;The 2011 elections
+&lt;a href=&#34;https://www.elections.org.zm/2011_elections.php&#34;&gt;&lt;em&gt;resulted&lt;/em&gt;&lt;/a&gt; in a
+victory for the Patriotic Front (PF), whose candidate Michael Sata was
+elected President for a five-year term. However, following the death of
+President Sata in October 2014, &lt;a href=&#34;https://www.elections.org.zm/results/2015_presidential_election&#34;&gt;&lt;em&gt;early presidential
+elections&lt;/em&gt;&lt;/a&gt;
+were held last year to elect a successor to complete the remainder of
+his term. This resulted in the election of PF candidate Edgar Lungu, who
+beat Hakainde Hichilema of the United Party for National Development
+(UPND) by a very narrow margin. The UPND did &lt;a href=&#34;http://www.usnews.com/news/world/articles/2015/01/25/zambia-ruling-party-candidate-wins-presidential-election&#34;&gt;&lt;em&gt;not
+accept&lt;/em&gt;&lt;/a&gt;
+the credibility of the 2015 election.&lt;/p&gt;
+
+&lt;p&gt;On 11th August 2016, Zambia held its &lt;a href=&#34;https://www.elections.org.zm/general_election_2016.php&#34;&gt;&lt;em&gt;general
+elections&lt;/em&gt;&lt;/a&gt; to
+elect the President and National Assembly. Leading up to the elections,
+violent outbreaks occurred in Lusaka after the government
+&lt;a href=&#34;https://freedomhouse.org/article/zambia-government-suspends-election-campaigns&#34;&gt;&lt;em&gt;banned&lt;/em&gt;&lt;/a&gt;
+&lt;em&gt;The Post&lt;/em&gt;, one of Zambia’s few independent newspapers, on 10th June.
+Due to the violence, the Electoral Commission suspended campaigning
+activities in Lusaka and Namwala for ten days. During this period, the
+government also took
+&lt;a href=&#34;http://www.telegraph.co.uk/news/2016/06/28/zambia-accused-of-attacking-press-freedom-as-newspaper-is-closed/&#34;&gt;&lt;em&gt;action&lt;/em&gt;&lt;/a&gt;
+against &lt;em&gt;The Post&lt;/em&gt; on the ground of unpaid taxes of around USD 6
+million. The ban on the newspaper was eventually
+&lt;a href=&#34;http://www.africareview.com/news/Zambia-electoral-body-lifts-campaign-ban/979180-3301036-120v6rb/index.html&#34;&gt;&lt;em&gt;lifted&lt;/em&gt;&lt;/a&gt;
+more than a month later.&lt;/p&gt;
+
+&lt;p&gt;This is &lt;em&gt;not&lt;/em&gt; the first time that &lt;em&gt;The Post&lt;/em&gt; was banned. This
+&lt;a href=&#34;https://www.hrw.org/reports/1996/Zambia.htm&#34;&gt;&lt;em&gt;previously occurred&lt;/em&gt;&lt;/a&gt; in
+1996, leading up to the country’s general elections.&lt;/p&gt;
+
+&lt;p&gt;Members of the UPND, Zambia’s main opposition party, were
+&lt;a href=&#34;http://www.dw.com/en/zambian-opposition-leaders-jailed-as-elections-near/a-19132564&#34;&gt;&lt;em&gt;arrested&lt;/em&gt;&lt;/a&gt;
+a few weeks before the 2016 general elections on the grounds that they
+were trying to start a private militia. The police started off by
+&lt;a href=&#34;https://www.lusakatimes.com/2016/07/01/police-raid-upnd-offices-pick-10-cadres/&#34;&gt;&lt;em&gt;raiding the UPND Head
+Office&lt;/em&gt;&lt;/a&gt;
+and questioning staff members and volunteers of the party. According to
+the UPND, this was part of the PF government’s persecution and abuse
+towards them. The police subsequently &lt;a href=&#34;http://www.africanews.com/2016/07/20/police-raid-zambian-opposition-leader-s-house-arresting-28-people/&#34;&gt;&lt;em&gt;raided the house of the UPND’s
+Vice
+President&lt;/em&gt;&lt;/a&gt;,
+and a total of 28 people were arrested as part of the raid.&lt;/p&gt;
+
+&lt;p&gt;Further
+&lt;a href=&#34;http://www.voanews.com/a/zambia-opposition-having-ballots-printed-dubai-could-undermine-vote/3429490.html&#34;&gt;&lt;em&gt;controversy&lt;/em&gt;&lt;/a&gt;
+emerged in the printing of the ballot papers, which had previously been
+printed in South Africa. This time, the Electoral Commission of Zambia
+awarded the contract to &lt;a href=&#34;http://www.alghurairprinting.com/&#34;&gt;&lt;em&gt;Al Ghurair Printing &amp;amp;
+Publishing&lt;/em&gt;&lt;/a&gt;, a Dubai-based firm,
+which prepared the ballot papers used for Zambia’s 2016 elections.
+Opposition members and civil society groups
+&lt;a href=&#34;http://www.voanews.com/a/printing-zambia-ballot-papers-on-course-commission-says/3409989.html&#34;&gt;&lt;em&gt;criticised&lt;/em&gt;&lt;/a&gt;
+this move on the grounds that the contract with the Dubai firm was
+significantly more expensive than previous contracts, and that it
+increased the possibility of electoral fraud. Similar concerns were also
+raised in regards to the transport and distribution of the ballot
+papers.&lt;/p&gt;
+
+&lt;p&gt;The 2016 elections presented a “large turnout” and were
+&lt;a href=&#34;http://www.aljazeera.com/news/2016/08/zambia-elections-polls-open-test-ruling-party-160811060636301.html&#34;&gt;&lt;em&gt;characterized&lt;/em&gt;&lt;/a&gt;
+as “calm and peaceful”, while including a tight competition between the
+PF and the UPND. A total of nine candidates registered to run for the
+presidency, as illustrated below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia-election-monitoring/election-results.png&#34; alt=&#34;Zambia elections&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Source: &lt;a href=&#34;https://www.elections.org.zm/general_election_2016.php&#34;&gt;Electoral Commission of Zambia, General Election of 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Edgar Lungu of the PF won the 2016 elections and was re-elected for a
+five-year term, beating the UPND again with a very close margin. The
+chart below illustrates that the PF and UPND acquired the vast majority
+of votes within Zambia:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia-election-monitoring/election-graph.png&#34; alt=&#34;Zambia elections graph&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Source: &lt;a href=&#34;https://www.elections.org.zm/general_election_2016.php&#34;&gt;Electoral Commission of Zambia, General Election 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;While the PF and UPND each acquired a similar share of the total votes
+in the presidential elections, the PF
+&lt;a href=&#34;https://www.elections.org.zm/results/2016_national_assembly_elections&#34;&gt;&lt;em&gt;won&lt;/em&gt;&lt;/a&gt;
+a majority in the National Assembly, winning 80 of the 156 elected
+seats. In spite of the pre-election violence, the 2016 elections were
+generally
+&lt;a href=&#34;http://www.dw.com/en/election-observers-in-zambia-report-media-biased-in-vote/a-19473207&#34;&gt;&lt;em&gt;characterized&lt;/em&gt;&lt;/a&gt;
+as “peaceful”. However, election observers in Zambia
+&lt;a href=&#34;http://www.dw.com/en/election-observers-in-zambia-report-media-biased-in-vote/a-19473207&#34;&gt;&lt;em&gt;reported&lt;/em&gt;&lt;/a&gt;
+that the media &lt;em&gt;biased&lt;/em&gt; the vote in favour of the ruling party.&lt;/p&gt;
+
+&lt;p&gt;Following the elections, the UPND
+&lt;a href=&#34;http://www.timeslive.co.za/world/2016/08/14/Zambia-opposition-leader-angered-by-vote-results-delay&#34;&gt;&lt;em&gt;accused&lt;/em&gt;&lt;/a&gt;
+the Electoral Commission of Zambia for participating in fraud due to its
+significant delay in announcing the results and
+&lt;a href=&#34;http://www.aljazeera.com/news/2016/08/zambia-arrests-133-protesters-contested-election-160816080236912.html&#34;&gt;&lt;em&gt;stated&lt;/em&gt;&lt;/a&gt;
+that the vote was rigged. The US-based Carter Center also &lt;a href=&#34;http://www.bloomberg.com/news/articles/2016-08-13/zambia-presidential-rivals-neck-and-neck-as-results-trickle-in&#34;&gt;&lt;em&gt;expressed
+concern&lt;/em&gt;&lt;/a&gt;
+in regards to the delay of the announcement of the results, and stated
+that the elections were characterized by significant inter-party
+tensions and polarization.&lt;/p&gt;
+
+&lt;p&gt;Protests sprung against the reelection of President Lungu, resulting in
+the &lt;a href=&#34;http://www.aljazeera.com/news/2016/08/zambia-arrests-133-protesters-contested-election-160816080236912.html&#34;&gt;&lt;em&gt;arrest of 133
+protesters&lt;/em&gt;&lt;/a&gt;.
+About a week after the elections, subscribers on MTN Zambia, Airtel
+Zambia, and Vodafone’s 4G service &lt;a href=&#34;http://www.techzim.co.zw/2016/08/zambian-government-suspected-causing-internet-slowdown-shutdown-following-outage-opposition-strongholds/&#34;&gt;&lt;em&gt;expressed
+complaints&lt;/em&gt;&lt;/a&gt;
+regarding an internet shutdown, some attributing this to state sponsored
+censorship in an attempt to stifle opposing views towards the election
+outcomes. MTN and Airtel acknowledged the disruptions, but it remains
+&lt;a href=&#34;https://twitter.com/Mose_Karanja/status/766684089613185025&#34;&gt;&lt;em&gt;unclear&lt;/em&gt;&lt;/a&gt;
+if the outage was ordered by the government or not.&lt;/p&gt;
+
+&lt;p&gt;Alongside the elections, a &lt;a href=&#34;https://www.elections.org.zm/referendum_question.php&#34;&gt;&lt;strong&gt;constitutional
+referendum&lt;/strong&gt;&lt;/a&gt; was
+also held in Zambia on 11th August 2016. Voters were asked to answer the
+following question:&lt;/p&gt;
+
+&lt;p&gt;“&lt;em&gt;Do you agree to the amendment to the Constitution to enhance the Bill
+of rights contained in Part III of the Constitution of Zambia and to
+repeal and replace Article 79 of the Constitution of Zambia?”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The referendum sought to enhance and amend Zambia’s &lt;a href=&#34;https://www.elections.org.zm/media/the-referendum-question-mobileversion.pdf&#34;&gt;&lt;em&gt;Bill of
+Rights&lt;/em&gt;&lt;/a&gt;
+- a declaration of individual rights and freedoms, as issued by the
+national government - by repealing and replacing Article 79, which
+dictates the process of future amendments. Specifically, the
+&lt;a href=&#34;https://www.elections.org.zm/referendum_question.php&#34;&gt;&lt;em&gt;changes&lt;/em&gt;&lt;/a&gt; to the
+Bill of Rights would include amendments to the “Civil and Political
+Rights” section, and the addition of the “Economic, Social, Cultural and
+Environmental Rights” and “Further and Special Rights” sections. For the
+referendum to pass, a majority ‘yes’ vote was required, along with a
+turnout of &lt;em&gt;at least&lt;/em&gt; 50% eligible voters.&lt;/p&gt;
+
+&lt;p&gt;The referendum was criticised in advance by media organizations, who
+&lt;a href=&#34;http://allafrica.com/stories/201602110658.html&#34;&gt;&lt;em&gt;questioned&lt;/em&gt;&lt;/a&gt; whether
+the majority of Zambia’s voters understand the Bill of Rights and what
+they were asked to answer through the referendum. The PF government was
+also
+&lt;a href=&#34;https://www.lusakatimes.com/2016/06/01/delayed-release-proposed-bill-rights-ploy-pf/&#34;&gt;&lt;em&gt;criticised&lt;/em&gt;&lt;/a&gt;
+for its delay in releasing the Bill of Rights, preventing voters from
+reading in advance the contents that they were asked to vote for or
+against. This was
+&lt;a href=&#34;https://www.lusakatimes.com/2016/06/01/delayed-release-proposed-bill-rights-ploy-pf/&#34;&gt;&lt;em&gt;characterized&lt;/em&gt;&lt;/a&gt;
+as a ploy to deprive the people of Zambia from the opportunity to make
+informed decisions in regards to the country’s constitution. Similarly,
+the decision to combine the 2016 general election with a referendum was
+&lt;a href=&#34;https://www.lusakatimes.com/2016/05/31/referendum-issue-president-dissolved-cabinet-got-wrong/&#34;&gt;&lt;em&gt;characterized&lt;/em&gt;&lt;/a&gt;
+as an undemocratic ploy by the PF government to acquire votes.&lt;/p&gt;
+
+&lt;p&gt;While the majority vote (71%) of Zambia’s 2016 constitutional referendum
+was in favour, the turnout was &lt;a href=&#34;https://www.lusakatimes.com/2016/08/19/referendum-vote-flopsfails-meet-threshold/&#34;&gt;&lt;strong&gt;below&lt;/strong&gt; &lt;em&gt;the 50%
+threshold&lt;/em&gt;&lt;/a&gt;,
+preventing the validation of the result.&lt;/p&gt;
+
+&lt;h1 id=&#34;examining-internet-censorship-during-zambia-s-2016-general-elections&#34;&gt;Examining internet censorship during Zambia’s 2016 general elections&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;&lt;em&gt;Open Observatory of Network Interference
+(OONI)&lt;/em&gt;&lt;/a&gt;, in collaboration with Strathmore
+University’s &lt;a href=&#34;https://www.cipit.org/&#34;&gt;&lt;em&gt;Centre for Intellectual Property and Information
+Technology Law (CIPIT)&lt;/em&gt;&lt;/a&gt;, performed a study of
+internet censorship in Zambia during its 2016 general elections.&lt;/p&gt;
+
+&lt;p&gt;The aim of this study was to understand whether and to what extent
+censorship events occurred during the election period, limiting voters’
+rights to access and disseminate information.&lt;/p&gt;
+
+&lt;p&gt;The sections below document the methodology and key findings of this
+study.&lt;/p&gt;
+
+&lt;h2 id=&#34;methodology&#34;&gt;Methodology&lt;/h2&gt;
+
+&lt;p&gt;The methodology of this study, in an attempt to identify potential
+censorship events in Zambia during its 2016 election period, included
+the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Creation of a Zambian test list&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;OONI network measurements&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Data analysis&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/zm.csv&#34;&gt;&lt;em&gt;list of
+URLs&lt;/em&gt;&lt;/a&gt;
+that are relevant and commonly accessed in Zambia was created, and such
+URLs - along with &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;&lt;em&gt;other
+URLs&lt;/em&gt;&lt;/a&gt;
+that are commonly accessed around the world - were tested for blocking
+based on OONI’s free software tests. Such tests were run from a local
+vantage point (the ISP MTN) in Zambia (AS 36962), and they also examined whether
+systems that are responsible for censorship, surveillance and traffic
+manipulation were present in the tested network. Once network
+measurement data was collected from these tests, the data was
+subsequently processed and analyzed based on a set of heuristics for
+detecting internet censorship and traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;The testing period started on 11th August 2016 - the day of Zambia’s
+general elections - and concluded on 24th August 2016. During this
+period, network measurements were collected every day through the use of
+OONI’s &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;&lt;em&gt;software distribution for Raspberry
+Pis&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;creation-of-a-zambian-test-list&#34;&gt;Creation of a Zambian test list&lt;/h3&gt;
+
+&lt;p&gt;An important part of identifying censorship is determining &lt;em&gt;which&lt;/em&gt;
+websites to examine for blocking.&lt;/p&gt;
+
+&lt;p&gt;OONI’s &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;&lt;em&gt;software&lt;/em&gt;&lt;/a&gt; (called
+&lt;em&gt;ooniprobe&lt;/em&gt;) is designed to examine URLs contained in specific lists
+(“test lists”) for censorship. By default, ooniprobe examines the
+“&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;&lt;em&gt;global test
+list&lt;/em&gt;&lt;/a&gt;”,
+which includes a wide range of internationally relevant websites, most
+of which are in English. These websites fall under &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;&lt;em&gt;30
+categories&lt;/em&gt;&lt;/a&gt;,
+ranging from news media, file sharing and culture, to provocative or
+objectionable categories, like pornography, political criticism, and
+hate speech.&lt;/p&gt;
+
+&lt;p&gt;These categories help ensure that a wide range of different types of
+websites are tested, and they enable the examination of the impact of
+censorship events (for example, if the majority of the websites found to
+be blocked in a country fall under the “human rights” category, that may
+have a bigger impact than other types of websites being blocked
+elsewhere). The main reason why objectionable categories (such as
+“pornography” and “hate speech”) are included for testing is because
+they are more likely to be blocked due to their nature, enabling the
+development of heuristics for detecting censorship elsewhere within a
 country.&lt;/p&gt;
 
-&lt;p&gt;In an attempt to understand whether the internet was in fact shut down, we
-looked at some public sources of data that contain information about internet
-traffic. Such data provides strong indicators that the internet was most likely
-shut down during the Ethiopian protests last weekend, though it remains unclear
-if this occurred in all regions and/or on all types of networks across the
-country.&lt;/p&gt;
+&lt;p&gt;In addition to testing the URLs included in the global test list,
+ooniprobe is also designed to examine a test list which is specifically
+created for the country that the user is running ooniprobe from, if such
+a list exists. Unlike the global test list, &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;&lt;em&gt;country-specific test
+lists&lt;/em&gt;&lt;/a&gt;
+include websites that are relevant and commonly accessed within specific
+countries, and such websites are often in local languages. Similarly to
+the global test list, country-specific test lists include websites that
+fall under the same set of &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;&lt;em&gt;30
+categories&lt;/em&gt;&lt;/a&gt;,
+as explained previously.&lt;/p&gt;
 
-&lt;h2 id=&#34;ethiopian-protests&#34;&gt;Ethiopian protests&lt;/h2&gt;
+&lt;p&gt;All test lists are hosted by the &lt;a href=&#34;https://citizenlab.org/&#34;&gt;&lt;em&gt;Citizen
+Lab&lt;/em&gt;&lt;/a&gt; on
+&lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;&lt;em&gt;GitHub&lt;/em&gt;&lt;/a&gt;, supporting OONI
+and other network measurement projects in the creation and maintenance
+of lists of URLs to test for censorship. Some criteria for adding URLs
+to test lists include the following:&lt;/p&gt;
 
-&lt;p&gt;Ongoing
-&lt;a href=&#34;http://africanarguments.org/2016/08/06/ethiopias-unprecedented-nationwide-oromo-protests-who-what-why/&#34;&gt;protests&lt;/a&gt;
-have been carried out by Ethiopia’s Oromo people since November 2015, marking
-one of the most significant political developments in Ethiopia in recent years.
-These protests were sparked by the introduction of the &lt;a href=&#34;https://www.bloomberg.com/news/articles/2015-12-14/ethiopia-oromo-protests-trigger-fatal-ethnic-clashes-group-says&#34;&gt;Addis Ababa City
-Integrated Master
-Plan&lt;/a&gt;,
-which aims to expand the territorial limits of the country’s capital into
-neighbouring Oromo towns, threatening to displace millions of Oromo farmers and
-bring the Oromo-dominated region under Tigray-led federal government.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;The unprecedented wave of protests has resulted in more than 400 deaths over
-the last months, according to a recent &lt;a href=&#34;https://www.hrw.org/report/2016/06/16/such-brutal-crackdown/killings-and-arrests-response-ethiopias-oromo-protests&#34;&gt;Human Rights Watch
-report&lt;/a&gt;.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive
+content (i.e. they touch upon sensitive issues or express
+political criticism)&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;More &lt;a href=&#34;http://africanarguments.org/2016/08/06/ethiopias-unprecedented-nationwide-oromo-protests-who-what-why/&#34;&gt;protests sprung up in the Amhara regional
-state&lt;/a&gt;,
-with protesters requesting for political reforms and specifically, the Welkait
-community demanding that ancestral land currently administered by the Tigray
-regional state be moved into the neighbouring Amhara region.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;The new-found unity between the two historically antagonistic communities of
-the Oromo and Amharas against a common adversary, the TPLF-led government,
-seems to have raised the tension in the country. The security forces response
-has been extreme, with observers
-&lt;a href=&#34;http://www.sudantribune.com/spip.php?article57643&#34;&gt;comparing&lt;/a&gt; it to the 2005
-post-election violence where nearly 200 people were killed. This time though,
-at least &lt;a href=&#34;https://www.amnesty.org/en/latest/news/2016/08/ethiopia-dozens-killed-as-police-use-excessive-force-against-peaceful-protesters/?utm_source=twitter&amp;amp;utm_medium=quote&amp;amp;utm_term=The+security+forces%25u2019+response+was+heavy-handed%2c+but+unsurprising.+Ethiopian+forces+have+systematically+used+excessive+force+in+their+mistaken+attempts+to+silence+dissenting+voices&amp;amp;utm_campaign=social&#34;&gt;30 people were reportedly
-killed&lt;/a&gt;
-in the Amhara region in one day alone.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Users have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&#34;internet-shutdown&#34;&gt;Internet shutdown&lt;/h2&gt;
+&lt;p&gt;The above criteria indicate that such URLs are more likely to be
+blocked, enabling the development of heuristics for detecting censorship
+within a country. Furthermore, other criteria for adding URLs are
+reflected in the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;&lt;em&gt;30
+categories&lt;/em&gt;&lt;/a&gt;
+that URLs can fall under. Such categories, for example, can include
+file-sharing, human rights, and news media, under which the websites of
+file-sharing projects, human rights NGOs and media organizations can be
+added.&lt;/p&gt;
 
-&lt;p&gt;Protesters relied on the internet to plan, mobilize and coordinate with each
-other and this may have &lt;a href=&#34;http://www.bbc.com/news/world-africa-36940906&#34;&gt;prompted the Ethiopian
-government&lt;/a&gt; to pull the plug on
-the internet even before the planned protests started.&lt;/p&gt;
+&lt;p&gt;As part of the study on whether censorship events occurred during the
+2016 election period in Zambia, OONI and CIPIT created a
+&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/zm.csv&#34;&gt;&lt;em&gt;country-specific test list for
+Zambia&lt;/em&gt;&lt;/a&gt;,
+containing URLs to be tested for blocking. The added URLs are specific
+to the Zambian context, and include a number of websites that express
+political criticism towards the PF party and report on human rights
+violations. Overall, &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/zm.csv&#34;&gt;&lt;em&gt;90 different
+websites&lt;/em&gt;&lt;/a&gt;,
+mostly grouped under the “political criticism” and “human rights”
+categories, are included in the Zambian test list, and were tested for
+censorship.&lt;/p&gt;
 
-&lt;p&gt;But this is not the first time that the Ethiopian government appears to be
-restricting access to the internet this year.&lt;/p&gt;
+&lt;p&gt;A core limitation to the study is the &lt;em&gt;bias&lt;/em&gt; in terms of the URLs that
+were selected for testing. As the testing period covered Zambia’s 2016
+general elections, the URL selection criteria included the following:&lt;/p&gt;
 
-&lt;p&gt;Last month, the government
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-36763572&#34;&gt;reportedly&lt;/a&gt; blocked social
-media sites across the country after &lt;a href=&#34;https://www.facebook.com/photo.php?fbid=10102310909934763&amp;amp;set=pb.215693.-2207520000.1470776183.&amp;amp;type=3&amp;amp;theater&#34;&gt;University entrance exams were leaked on
-Facebook&lt;/a&gt;
-by an Oromo activist, as a form of protest against the government.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Websites that were more likely to be blocked, because their content
+ expressed political criticism towards the ruling PF party.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;Public data from last weekend indicates that the internet was shut down in
-Ethiopia during the heat of the protests, but it remains unclear if this
-occurred nationwide.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Websites of organizations that were known to have previously been
+ blocked (such as zambiawatchdog.com) and were thus likely to be
+ blocked again.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;The graphs below illustrate that while internet traffic appeared to be
-originating from Ethiopia up until August 5th, such traffic was suddenly
-terminated until August 8th, indicating that the internet was probably shut
-down.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Websites reporting on human rights restrictions and violations,
+ reflecting criticism towards the ruling PF party.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-google-traffic.png&#34; alt=&#34;Ethiopia google traffic&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The above criteria reflect bias in terms of which URLs were selected for
+testing, as one of the core aims of this study was to examine whether
+and to what extent websites reflecting criticism towards the ruling
+party were blocked during the election period, limiting open dialogue
+and access to information across the country. As a result of this bias,
+it is important to acknowledge that the findings of this study are only
+limited to the websites that were tested, and do not provide a complete
+view of other censorship events that may have taken place during the
+2016 election period.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-youtube-traffic.png&#34; alt=&#34;Ethiopia youtube traffic&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ooni-network-measurements&#34;&gt;OONI network measurements&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-gmail-traffic.png&#34; alt=&#34;Ethiopia gmail traffic&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;&lt;em&gt;Open Observatory of Network Interference
+(OONI)&lt;/em&gt;&lt;/a&gt; is a &lt;em&gt;free software&lt;/em&gt; project that
+aims to increase transparency about internet censorship and traffic
+manipulation around the world. Since 2011, OONI has developed multiple
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;&lt;strong&gt;free and open source software
+tests&lt;/strong&gt;&lt;/a&gt; designed to
+examine the following:&lt;/p&gt;
 
-&lt;p&gt;Google products traffic for users from Ethiopia from July 22nd to August 8th&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Blocking of websites.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-ndt-measurements.png&#34; alt=&#34;Ethiopia NDT Measurements&#34; /&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Detection of systems responsible for censorship and
+ traffic manipulation.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;NDT measurements started by users from July 20th to August 8th&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Reachability of circumvention tools (such as Tor, Psiphon,
+ and Lantern) and sensitive domains.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;The following graph, which we created based on tweets geotagged in Ethiopia
-from 3rd-9th August, also illustrates a decrease of Twitter activity.&lt;/p&gt;
+&lt;p&gt;As part of this study, OONI’s &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;&lt;em&gt;distribution for embedded
+devices&lt;/em&gt;&lt;/a&gt; (called
+&lt;em&gt;Lepidopter&lt;/em&gt;) was run from a local vantage point in Zambia, including
+the following software tests:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tweets.png&#34; alt=&#34;Ethiopia Tweets&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;&lt;em&gt;Web connectivity&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;Similarly, &lt;a href=&#34;https://metrics.torproject.org/&#34;&gt;Tor metrics data&lt;/a&gt; below
-illustrates that there was a decrease in the usage of
-&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; last weekend, which could be viewed as an
-indicator of the internet being restricted or shut down in certain types of
-networks.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;&lt;em&gt;HTTP invalid request line&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tor-metrics.png&#34; alt=&#34;Ethiopia tor metrics&#34; /&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;&lt;em&gt;HTTP header field manipulation&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tor-metrics-2.png&#34; alt=&#34;Ethiopia tor metrics&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The web connectivity test was run with the aim of examining whether a
+set of URLs (included in both the “&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;&lt;em&gt;global test
+list&lt;/em&gt;&lt;/a&gt;”,
+and the recently updated “&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/zm.csv&#34;&gt;&lt;em&gt;Zambian test
+list&lt;/em&gt;&lt;/a&gt;”)
+were blocked during the testing period and if so, how.&lt;/p&gt;
 
-&lt;p&gt;Tor metrics data for direct connecting users&lt;/p&gt;
+&lt;p&gt;As the presence of Blue Coat filtering technology had previously been
+&lt;a href=&#34;https://citizenlab.org/storage/bluecoat/CitLab-PlanetBlueCoatRedux-FINAL.pdf&#34;&gt;&lt;em&gt;detected&lt;/em&gt;&lt;/a&gt;
+by the Citizen Lab in Zambia (see section on “Cases of internet
+censorship and surveillance”), the &lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;&lt;em&gt;HTTP invalid request
+line&lt;/em&gt;&lt;/a&gt;
+and &lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;&lt;em&gt;HTTP header field
+manipulation&lt;/em&gt;&lt;/a&gt;
+tests were run for the purpose of examining whether such systems were
+present in the tested network during the testing period.&lt;/p&gt;
 
-&lt;p&gt;The data included in the graphs above shows that while the internet was likely
-shut down in certain regions and/or types of networks, it probably wasn’t shut
-down completely across Ethiopia. It might also have been the case that access
-to certain websites was restricted in regions and/or networks where the
-internet was accessible, though we unfortunately don’t have any recent &lt;a href=&#34;https://explorer.ooni.torproject.org/country/ET&#34;&gt;OONI
-measurements&lt;/a&gt; from Ethiopia to
-verify this.&lt;/p&gt;
+&lt;p&gt;The sections below document how each of these tests are designed for the
+purpose of detecting cases of internet censorship and traffic
+manipulation.&lt;/p&gt;
 
-&lt;h2 id=&#34;keepiton-campaign&#34;&gt;#KeepItOn campaign&lt;/h2&gt;
+&lt;h4 id=&#34;web-connectivity&#34;&gt;Web connectivity&lt;/h4&gt;
 
-&lt;p&gt;Internet shutdowns effectively pose restrictions on demonstrations and on human
-rights generally.&lt;/p&gt;
+&lt;p&gt;This test
+&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;&lt;em&gt;examines&lt;/em&gt;&lt;/a&gt;
+whether websites are reachable and if they are not, it attempts to
+determine whether access to them is blocked through DNS tampering, TCP
+connection RST/IP blocking or by a transparent HTTP proxy. Specifically,
+this test is designed to perform the following:&lt;/p&gt;
 
-&lt;p&gt;In the recent case of Ethiopia, shutting down the internet in the middle of
-intense protests likely not only had an effect on the mobilization and
-coordination of protesters, but also on the communication between families and
-friends of victims. This also likely had an effect on journalists reporting on
-the protests in real-time on the ground, if they were using networks that were
-blocked.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Resolver identification&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;An Al Jazeera reporter in Addis Ababa cited difficulties to connect to the
-internet and restricted travel to protest zones as a cause for limited coverage
-of the protests.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;DNS lookup&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It works abit differently with TV. We must verify reports we get. We however covered Addis protests on sat. &lt;a href=&#34;https://t.co/qHGw9Vdy1u&#34;&gt;https://t.co/qHGw9Vdy1u&lt;/a&gt;&lt;/p&gt;&amp;mdash; Catherine Soi (@C_SOI) &lt;a href=&#34;https://twitter.com/C_SOI/status/762388008666591232&#34;&gt;August 7, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;li&gt;&lt;p&gt;TCP connect&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Internet back after 48 hours of total blackout across the whole &lt;a href=&#34;https://twitter.com/hashtag/Ethiopia?src=hash&#34;&gt;#Ethiopia&lt;/a&gt;. However, it&amp;#39;s still blocked in Amhara &amp;amp; oromia region.&lt;/p&gt;&amp;mdash; Ethiopian Press (@abenezer_a) &lt;a href=&#34;https://twitter.com/abenezer_a/status/762569928205533184&#34;&gt;August 8, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;li&gt;&lt;p&gt;HTTP GET request&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;But Ethiopia is not the only country restricting access to the internet during
-political events.&lt;/p&gt;
+&lt;p&gt;By default, this test performs the above (excluding the first step,
+which is performed only over the network of the user) both over a
+control server and over the network of the user. If the results from
+both networks match, then there is no clear sign of network
+interference; but if the results are different, the websites that the
+user is testing are likely censored.&lt;/p&gt;
 
-&lt;p&gt;At least &lt;a href=&#34;https://www.accessnow.org/keepiton/#resources&#34;&gt;20 cases of internet
-shutdowns&lt;/a&gt; have been documented
-worldwide over the last six months alone. In response to this, &lt;a href=&#34;https://www.accessnow.org/&#34;&gt;Access
-Now&lt;/a&gt; is leading a campaign in collaboration with
-organizations around the world called #KeepItOn.&lt;/p&gt;
+&lt;p&gt;Further information is provided below, explaining how each step
+performed under the web connectivity test works.&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&#34;https://www.accessnow.org/keepiton/&#34;&gt;#KeepItOn&lt;/a&gt; campaign aims to document
-and raise awareness about internet shutdowns around the world. We support this
-campaign, and we hope you will too.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Resolver identification&lt;/strong&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a
+host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16).
+Internet Service Providers (ISPs), amongst others, run DNS resolvers
+which map IP addresses to hostnames. In some circumstances though, ISPs
+map the requested host names to the wrong IP addresses, which is a form
+of tampering.&lt;/p&gt;
 
-&lt;p&gt;This article was drafted as part of a collaboration between
-&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; and the &lt;a href=&#34;https://www.cipit.org/&#34;&gt;Centre for Intellectual Property
-and Information Technology Law (CIPIT)&lt;/a&gt; department of
-Strathmore University.&lt;/p&gt;
+&lt;p&gt;As a first step, the web connectivity test attempts to identify which
+DNS resolver is being used by the user. It does so by performing a DNS
+query to special domains (such as whoami.akamai.com) which will disclose
+the IP address of the resolver.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. DNS lookup&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-017-web-connectivity.md&#34;&gt;&lt;em&gt;web connectivity
+test&lt;/em&gt;&lt;/a&gt;
+has identified the DNS resolver of the user, it then attempts to
+identify which addresses are mapped to the tested host names by the
+resolver. It does so by performing a DNS lookup, which asks the resolver
+to disclose which IP addresses are mapped to the tested host names, as
+well as which other host names are linked to the tested host names under
+DNS queries.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. TCP connect&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The web connectivity test will then try to connect to the tested
+websites by attempting to establish a TCP session on port 80 (or port
+443 for URLs that begin with HTTPS) for the list of IP addresses that
+were identified in the previous step (DNS lookup).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. HTTP GET request&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As the &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/test-specs/ts-017-web-connectivity.md&#34;&gt;&lt;em&gt;web connectivity
+test&lt;/em&gt;&lt;/a&gt;
+connects to tested websites (through the previous step), it sends
+requests through the HTTP protocol to the servers which are hosting
+those websites. A server normally responds to an HTTP GET request with
+the content of the webpage that is requested.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Comparison of results: Identifying censorship&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Once the above steps of the web connectivity test are performed &lt;em&gt;both&lt;/em&gt;
+over a control server and over the network of the user, the collected
+results are then compared with the aim of identifying whether and how
+tested websites are tampered with. If the compared results do &lt;em&gt;not&lt;/em&gt;
+match, then there is a sign of network interference.&lt;/p&gt;
+
+&lt;p&gt;Below are the conditions under which the following types of blocking are
+identified:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DNS blocking:&lt;/strong&gt; If the DNS responses (such as the IP addresses
+ mapped to host names) do &lt;em&gt;not&lt;/em&gt; match.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;TCP/IP blocking:&lt;/strong&gt; If a TCP session to connect to websites was
+ &lt;em&gt;not&lt;/em&gt; established over the network of the user.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP blocking:&lt;/strong&gt; If the HTTP request over the user’s network
+ failed, or the HTTP status codes don’t match, or all of the
+ following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The body length of compared websites (over the control server
+and the network of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The HTTP headers names do not match&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It’s important to note, however, that DNS resolvers, such as Google or a
+local ISP, often provide users with IP addresses that are closest to
+them geographically. Often this is &lt;em&gt;not&lt;/em&gt; done with the intent of network
+tampering, but merely for the purpose of providing users with localized
+content or faster access to websites. As a result, some false positives
+might arise in OONI measurements. Other false positives might occur when
+tested websites serve different content depending on the country that
+the user is connecting from, or in the cases when websites return
+failures even though they are not tampered with.&lt;/p&gt;
+
+&lt;h4 id=&#34;http-invalid-request-line&#34;&gt;HTTP invalid request line&lt;/h4&gt;
+
+&lt;p&gt;This
+&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;&lt;em&gt;test&lt;/em&gt;&lt;/a&gt;
+tries to detect the presence of network components (“middle box”) which
+could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;Instead of sending a normal HTTP request, this test sends an invalid
+HTTP request line - containing an invalid HTTP version number, an
+invalid field count and a huge request method – to an echo service
+listening on the standard HTTP port. An echo service is a very useful
+debugging and measurement tool, which simply sends back to the
+originating source any data it receives. If a middle box is not present
+in the network between the user and an echo service, then the echo
+service will send the invalid HTTP request line back to the user,
+exactly as it received it. In such cases, there is no visible traffic
+manipulation in the tested network.&lt;/p&gt;
+
+&lt;p&gt;If, however, a middle box is present in the tested network, the invalid
+HTTP request line will be intercepted by the middle box and this may
+trigger an error and that will subsequently be sent back to OONI’s
+server. Such errors indicate that software for traffic manipulation is
+likely placed in the tested network, though it’s not always clear what
+that software is. In some cases though, censorship and/or surveillance
+vendors can be identified through the error messages in the received
+HTTP response. Based on this technique, OONI has previously
+&lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;&lt;em&gt;detected&lt;/em&gt;&lt;/a&gt; the use
+of BlueCoat, Squid and Privoxy proxy technologies in networks across
+multiple countries around the world.&lt;/p&gt;
+
+&lt;p&gt;It’s important though to note that a false negative could potentially
+occur in the hypothetical instance that ISPs are using highly
+sophisticated censorship and/or surveillance software that is
+specifically designed to not trigger errors when receiving invalid HTTP
+request lines like the ones of this test. Furthermore, the presence of a
+middle box is not necessarily indicative of traffic manipulation, as
+they are often used in networks for caching purposes.&lt;/p&gt;
+
+&lt;h4 id=&#34;http-header-field-manipulation&#34;&gt;HTTP header field manipulation&lt;/h4&gt;
+
+&lt;p&gt;This
+&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;&lt;em&gt;test&lt;/em&gt;&lt;/a&gt;
+also tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the
+internet. It does so by handling a client’s request to connect to a
+server, and a server’s response to a client’s request. Every time a user
+connects to a server, the user (client) sends a request through the HTTP
+protocol to that server. Such requests include “HTTP headers”, which
+transmit various types of information, including the user’s device
+operating system and the type of browser that is being used. If Firefox
+is used on Windows, for example, the “user agent header” in the HTTP
+request will tell the server that a Firefox browser is being used on a
+Windows operating system.&lt;/p&gt;
+
+&lt;p&gt;This test emulates an HTTP request towards a server, but sends HTTP
+headers that have variations in capitalization. In other words, this
+test sends HTTP requests which include valid, but non-canonical HTTP
+headers. Such requests are sent to a backend control server which sends
+back any data it receives. If OONI receives the HTTP headers exactly as
+they were sent, then there is no visible presence of a “middle box” in
+the network that could be responsible for censorship, surveillance
+and/or traffic manipulation. If, however, such software is present in
+the tested network, it will likely normalize the invalid headers that
+are sent or add extra headers.&lt;/p&gt;
+
+&lt;p&gt;Depending on whether the HTTP headers that are sent and received from a
+backend control server are the same or not, OONI is able to evaluate
+whether software – which could be responsible for traffic manipulation –
+is present in the tested network.&lt;/p&gt;
+
+&lt;p&gt;False negatives, however, could potentially occur in the hypothetical
+instance that ISPs are using highly sophisticated software that is
+specifically designed to not interfere with HTTP headers when it
+receives them. Furthermore, the presence of a middle box is not
+necessarily indicative of traffic manipulation, as they are often used
+in networks for caching purposes.&lt;/p&gt;
+
+&lt;h3 id=&#34;data-analysis&#34;&gt;Data analysis&lt;/h3&gt;
+
+&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;&lt;em&gt;data
+pipeline&lt;/em&gt;&lt;/a&gt;, OONI
+processes all network measurements that it collects, including the
+following types of data:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI by default collects the code which corresponds to the country from
+which the user is running ooniprobe tests from, by automatically
+searching for it based on the user’s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;&lt;em&gt;MaxMind
+GeoIP database&lt;/em&gt;&lt;/a&gt;. The collection of
+country codes is an important part of OONI’s research, as it enables
+OONI to map out global network measurements and to identify where
+network interferences take place.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI by default collects the Autonomous System Number (ASN) which
+corresponds to the network that a user is running ooniprobe tests from.
+The collection of the ASN is useful to OONI’s research because it
+reveals the specific network provider (such as Vodafone) of a user. Such
+information can increase transparency in regards to which network
+providers are implementing censorship or other forms of network
+interference.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI by default collects the time and date of when tests were run. This
+information helps OONI evaluate when network interferences occur and to
+compare them across time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users’ IP addresses. In
+fact, OONI takes measures to remove users’ IP addresses from the
+collected measurements, to protect its users from &lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;&lt;em&gt;potential
+risks&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users’ IP addresses and
+other potentially personally-identifiable information, if such
+information is included in the HTTP headers or other metadata of
+measurements. This, for example, can occur if the tested websites
+include tracking technologies or custom content based on a user’s
+network location.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The types of network measurements that OONI collects depend on the types
+of tests that are run. Specifications about each OONI test can be viewed
+through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;&lt;em&gt;git
+repository&lt;/em&gt;&lt;/a&gt;,
+and details about what collected network measurements entail can be
+viewed through &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;&lt;em&gt;OONI
+Explorer&lt;/em&gt;&lt;/a&gt; or through
+OONI’s &lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;&lt;em&gt;public list of
+measurements&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The OONI pipeline processes the above types of data with the aim of deriving
+meaning from the collected measurements and, specifically, in an attempt to
+answer the following types of questions:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;What types of network interference occurred?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which countries did network interference occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In which networks did network interference occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When did network interference occur?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;How did network interference occur?&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To answer such questions, OONI’s pipeline is designed to process data
+which is automatically sent to OONI’s measurement collector by default.
+The initial processing of network measurements enables the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Attributing measurements to a specific country.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Attributing measurements to a specific network within a country.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Distinguishing measurements based on the specific tests that were
+ run for their collection.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Distinguishing between “normal” and “anomalous” measurements (the
+ latter indicating that a form of network tampering is
+ likely present).&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Identifying the type of network interference based on a set of
+ heuristics for DNS tampering, TCP/IP blocking, and HTTP blocking.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Identifying block pages based on a set of heuristics for
+ HTTP blocking.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Identifying the presence of “middle boxes” (such as Blue Coat)
+ within tested networks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, false positives and false negatives emerge within the processed
+data due to a number of reasons. As explained previously (section on
+“&lt;a href=&#34;#ooni-network-measurements&#34;&gt;&lt;em&gt;OONI network measurements&lt;/em&gt;&lt;/a&gt;”), DNS
+resolvers (operated by Google or a local ISP) often provide users with
+IP addresses that are closest to them geographically. While this may
+appear to be a case of DNS tampering, it is actually done with the
+intention of providing users with faster access to websites. Similarly,
+false positives may emerge when tested websites serve different content
+depending on the country that the user is connecting from, or in the
+cases when websites return failures even though they are not tampered
+with.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, measurements indicating HTTP or TCP/IP blocking might
+actually be due to temporary HTTP or TCP/IP failures, and may not
+conclusively be a sign of network interference. It is therefore
+important to test the same sets of websites across time and to
+cross-correlate data, prior to reaching a conclusion on whether websites
+are in fact being blocked.&lt;/p&gt;
+
+&lt;p&gt;Since block pages differ from country to country and sometimes even from
+network to network, it is quite challenging to accurately identify them.
+OONI uses a series of heuristics to try to guess if the page in question
+differs from the expected control, but these heuristics can often result
+in false positives. For this reason OONI only says that there is a
+confirmed instance of blocking when we have manually added a known
+blocking page to the list of blockpages we support.&lt;/p&gt;
+
+&lt;p&gt;However, this means that when a block page is not presented by the
+censor we are not able to confirm with absolute certainty that blocking
+is occurring. For the purpose of this study we have extended our
+methodology to also take into account unusual failures that could be
+triggered by the censor. In particular, we have looked at sites that
+appear to fail consistently (that is in the same way) and constantly
+over the testing period, therefore most likely &lt;em&gt;not&lt;/em&gt; due to transient
+networking errors.&lt;/p&gt;
+
+&lt;p&gt;OONI’s methodology for detecting the presence of “middle boxes” -
+systems that could be responsible for censorship, surveillance and
+traffic manipulation - can also present false negatives, if ISPs are
+using highly sophisticated software that is specifically designed to
+&lt;em&gt;not&lt;/em&gt; interfere with HTTP headers when it receives them, or to &lt;em&gt;not&lt;/em&gt;
+trigger error messages when receiving invalid HTTP request lines. It
+remains unclear though if such software is being used. Moreover, it’s
+important to note that the presence of a middle box is not necessarily
+indicative of censorship or traffic manipulation, as such systems are
+often used in networks for caching purposes.&lt;/p&gt;
+
+&lt;p&gt;Upon collection of more network measurements, OONI continues to develop
+its data analysis heuristics, based on which it attempts to accurately
+identify censorship events.&lt;/p&gt;
+
+&lt;h2 id=&#34;findings&#34;&gt;Findings&lt;/h2&gt;
+
+&lt;p&gt;As part of this study, &lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;em&gt;38,598 network
+measurements&lt;/em&gt;&lt;/a&gt; were
+collected on a daily basis from a local vantage point (MTN) in Zambia,
+starting on the day of the general elections (11th August 2016) and
+concluding twelve days later. Such network measurements were collected
+via &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;&lt;em&gt;OONI’s software distribution for Raspberry
+Pis&lt;/em&gt;&lt;/a&gt;, which is
+designed to examine whether a set of URLs are blocked (and if so, how),
+and whether systems (“middle boxes”) that could be responsible for
+censorship, surveillance and traffic manipulation are used within a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;Upon analysis of the collected data, the
+&lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;em&gt;findings&lt;/em&gt;&lt;/a&gt; illustrate
+that 10 different websites were consistently inaccessible during the
+testing period based on DNS tampering, TCP/IP blocking, and various
+forms of HTTP blocking. These findings are summarized in the table
+below:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;Tested site&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;DNS&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;HTTP-diff&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;HTTP-failure&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;TCP/IP blocking&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;CTRL failure rate&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;drugs-forum.com&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.0%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;wzo.org.il&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.0%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;wzo.org.il&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.0%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;cidh.org&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.06%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pof.com&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.36%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;gayromeo.com&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;11.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;2.9%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pinterest.com&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;7.12%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;weforum.org&lt;/td&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;11.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;7.11%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;pornhub.com&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;13.9%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;online-dating.org&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;17.57%&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;proxyweb.net&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;0.0&lt;/td&gt;
+&lt;td&gt;12.0&lt;/td&gt;
+&lt;td&gt;65.3%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The failure rate column in the table above shows the percentage of
+failed requests to the sites in question from OONI’s control vantage
+point from 2016-07-01 to 2016-09-01. Since no block pages were found in
+testing the accessibility of sites in Zambia, OONI extended its
+methodology to take into account the failure rate of sites during the
+testing period compared to the overall failure rate from control vantage
+points. In short, OONI considers a website to be blocked if connections
+to it consistently fail across the testing period and if it exhibits a
+low overall failure rate from control vantage points.&lt;/p&gt;
+
+&lt;p&gt;Based on this methodology, sites with low failure rates (from control
+vantage points) - such as drugs-forum.com, cidh.org, and pof.com - are
+more likely to have been blocked during the testing period than other
+sites, such as proxyweb.net, which present higher failure rates.&lt;/p&gt;
+
+&lt;p&gt;The
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160824T063105Z_AS36962_xgPga384HayLGE1UZO4nqEFOGyDRgbSDcAIHlRSVg2NKArocym?input=http:%2F%2Fgayromeo.com&#34;&gt;&lt;em&gt;inaccessibility&lt;/em&gt;&lt;/a&gt;
+of gayromeo.com, an online dating website for Lesbian, Gay, Bisexual,
+and Transgender (LGBT) communities around the world, might potentially
+be attributed to the prohibition of same-sex activity in Zambia.
+Sections 155 through 157 of Zambia’s &lt;a href=&#34;http://www.parliament.gov.zm/sites/default/files/documents/acts/Penal%20Code%20Act.pdf&#34;&gt;&lt;em&gt;Penal
+Code&lt;/em&gt;&lt;/a&gt;
+prohibit homosexual activity and impose a penalty of up to fourteen
+years of imprisonment. Similarly, both online-dating.org and pof.com
+may have been blocked for supporting homosexual dating, though
+online-dating.org also presents a high level of global failures.&lt;/p&gt;
+
+&lt;p&gt;Pornography is
+&lt;a href=&#34;http://www.zambialaws.com/Principal-Legislation/electronic-communications-and-transactions-act.html&#34;&gt;&lt;em&gt;prohibited&lt;/em&gt;&lt;/a&gt;
+in Zambia under Article 102 of Part XV (“Cyber crime”) of the Electronic
+Communications and Transactions Act 2009, which might explain why
+pornhub.com was
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160824T063105Z_AS36962_xgPga384HayLGE1UZO4nqEFOGyDRgbSDcAIHlRSVg2NKArocym?input=http:%2F%2Fpornhub.com&#34;&gt;&lt;em&gt;found&lt;/em&gt;&lt;/a&gt;
+to be inaccessible throughout the testing period. It’s worth pointing
+out, however, that other pornographic websites were found accessible
+during the same testing period.&lt;/p&gt;
+
+&lt;p&gt;The inaccessibility of other websites appears to be less justifiable.
+The World Economic Forum’s &lt;a href=&#34;http://www.weforum.org&#34;&gt;&lt;em&gt;website&lt;/em&gt;&lt;/a&gt;, for
+example, was
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160824T063105Z_AS36962_xgPga384HayLGE1UZO4nqEFOGyDRgbSDcAIHlRSVg2NKArocym?input=http:%2F%2Fwww.weforum.org&#34;&gt;&lt;em&gt;found&lt;/em&gt;&lt;/a&gt;
+to be consistently inaccessible based on DNS tampering and HTTP
+failures, but the motivation or legal justification behind this remains
+unclear. Quite similarly, it also remains unclear why the
+&lt;a href=&#34;http://www.cidh.org&#34;&gt;&lt;em&gt;website&lt;/em&gt;&lt;/a&gt; of the Organization of American States
+(OAS), which is responsible for the promotion and protection of human
+rights in America, was found to be
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160824T063105Z_AS36962_xgPga384HayLGE1UZO4nqEFOGyDRgbSDcAIHlRSVg2NKArocym?input=http:%2F%2Fwww.cidh.org&#34;&gt;&lt;em&gt;inaccessible&lt;/em&gt;&lt;/a&gt;
+in Zambia during the 2016 election period. While the website of the
+World Economic Forum also presented a failure rate of about 7%
+(indicating that it might not actually have been blocked by Zambian
+ISPs), the website of the OAS presented a failure rate of less than 1%,
+indicating that it might have been blocked.&lt;/p&gt;
+
+&lt;p&gt;Other websites that raise questions include the
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160824T063105Z_AS36962_xgPga384HayLGE1UZO4nqEFOGyDRgbSDcAIHlRSVg2NKArocym?input=http:%2F%2Fwww.wzo.org.il&#34;&gt;&lt;em&gt;website&lt;/em&gt;&lt;/a&gt;
+of the World Zionist Organization, which aims at establishing a legally
+assured home in Palestine for the Jewish people. Interestingly enough,
+this website presented 0% failure rates from control vantage points, but
+connections to it failed consistently throughout the testing period.
+It’s unclear though if this is due to TCP/IP blocking implemented by
+Zambia’s MTN, or if the website itself rejected connections coming from
+Zambia. Photo-sharing platform &lt;a href=&#34;https://pinterest.com&#34;&gt;&lt;em&gt;Pinterest&lt;/em&gt;&lt;/a&gt; also
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160824T063105Z_AS36962_xgPga384HayLGE1UZO4nqEFOGyDRgbSDcAIHlRSVg2NKArocym?input=https:%2F%2Fpinterest.com&#34;&gt;&lt;em&gt;appeared&lt;/em&gt;&lt;/a&gt;
+to be inaccessible, presenting HTTP failures consistently across the
+testing period, but the website’s failure rates (around 7%) indicate
+that this might not actually be a case of censorship.&lt;/p&gt;
+
+&lt;p&gt;Multiple other websites, beyond the ones included in the above table,
+also presented signs of network interference. However, upon examining
+these websites across the testing period, connections to them appeared
+to be successful in most cases, indicating that many of the cases of
+network interference were likely false positives due to transient
+failures.&lt;/p&gt;
+
+&lt;p&gt;On a positive note, the websites of Zambia’s opposition members and the
+news outlets (such as zambiawatchdog.com/) that were previously censored
+between 2013 and 2014 were &lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;strong&gt;not&lt;/strong&gt;
+&lt;em&gt;found&lt;/em&gt;&lt;/a&gt; to be blocked
+during this testing period. Out of a total of 1,303 websites that were
+tested for censorship in Zambia, only 10 of those websites presented
+signs of network interference.&lt;/p&gt;
+
+&lt;p&gt;The above cases, as detected through the use of &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;&lt;em&gt;OONI’s
+software&lt;/em&gt;&lt;/a&gt;, indicate the
+presence of censorship equipment within the tested network. However,
+OONI’s &lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;&lt;em&gt;HTTP invalid request
+line&lt;/em&gt;&lt;/a&gt;
+and &lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;&lt;em&gt;HTTP header field
+manipulation&lt;/em&gt;&lt;/a&gt;
+tests did &lt;em&gt;not&lt;/em&gt; detect the fingerprints of such equipment, preventing
+the identification of the specific types of equipment being used.&lt;/p&gt;
+
+&lt;h3 id=&#34;acknowledgement-of-limitations&#34;&gt;Acknowledgement of limitations&lt;/h3&gt;
+
+&lt;p&gt;The findings of this study present various limitations, and do &lt;em&gt;not&lt;/em&gt;
+necessarily reflect a comprehensive view of internet censorship in
+Zambia during the 2016 general election period. The first limitation is
+associated with the testing period, which started on the day of the
+general elections (11th August 2016) and concluded only twelve days
+later, without covering the pre-election period when other censorship
+events might have occurred. This limitation is associated with safety
+concerns and challenges in regards to probe deployment.&lt;/p&gt;
+
+&lt;p&gt;Another limitation to this study is the amount and type of URLs that
+were tested for censorship. As mentioned in the methodology section of
+this report (“Creating a Zambian test list”), the criteria for selecting
+URLs that are relevant to Zambia were biased. This URL selection bias
+was influenced by the core objective of this study, which sought to
+examine whether websites reflecting criticism towards the ruling party
+were blocked. Furthermore, while a total of 1,303 different URLs were
+tested for censorship as part of this study, not all the URLs on the
+internet were tested, indicating the possibility that other websites not
+included in test lists might have been blocked.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, this study was limited to one local network vantage point
+(MTN Zambia) and therefore does not include measurements from other
+networks, where more and/or other censorship events might have occurred.
+This limitation is associated to safety concerns and challenges in terms
+of engaging volunteers in Zambia to run tests.&lt;/p&gt;
+
+&lt;p&gt;Finally, the heuristics used as part of OONI’s methodology present
+limitations. This is due to the fact that many false positives and false
+negatives occur within collected data (as explained in the methodology
+section of this report), limiting OONI’s ability to confirm cases of
+censorship with confidence in many cases. Moreover, OONI’s heuristics
+are limited to a sample of censorship equipment fingerprints, limiting
+the ability to identify other types of equipment that may have been used
+within tested networks.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;This study highlights the &lt;em&gt;possibility&lt;/em&gt; of DNS, TCP/IP and HTTP
+&lt;a href=&#34;https://explorer.ooni.torproject.org/country/ZM&#34;&gt;&lt;em&gt;blocking&lt;/em&gt;&lt;/a&gt; of 10
+different websites during Zambia’s 2016 general election period. As no
+block pages were detected, none of these cases can be confirmed with
+confidence.&lt;/p&gt;
+
+&lt;p&gt;Sites that support LGBT dating and pornography were found to be
+inaccessible throughout the testing period. Under the provisions of
+Zambia’s &lt;a href=&#34;http://www.parliament.gov.zm/sites/default/files/documents/acts/Penal%20Code%20Act.pdf&#34;&gt;&lt;em&gt;Penal
+Code&lt;/em&gt;&lt;/a&gt;
+and &lt;a href=&#34;http://www.zambialaws.com/Principal-Legislation/electronic-communications-and-transactions-act.html&#34;&gt;&lt;em&gt;Electronic Communications and Transactions Act
+2009&lt;/em&gt;&lt;/a&gt;,
+the blocking of such sites can potentially be legally justified.&lt;/p&gt;
+
+&lt;p&gt;Pinterest was also
+&lt;a href=&#34;http://explorer.ooni.torproject.org/measurement/20160813T063121Z_AS36962_mM85nQxBrOZgZd6A5Y0nP1WlglXJXt56GxnGsbDd0AicF56tpO?input=https:%2F%2Fpinterest.com&#34;&gt;&lt;em&gt;found&lt;/em&gt;&lt;/a&gt;
+to be inaccessible, as well as the websites of the World Economic Forum, the
+Organization of American States (OAS) and the World Zionist Organization.
+However, the motivation and legal justification behind these possible
+censorship events remains unclear. On a positive note, the websites of Zambia’s
+opposition members and the news outlets that were previously censored between
+2013 and 2014 were &lt;em&gt;not&lt;/em&gt; found to be blocked during this testing period.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; and the &lt;a href=&#34;https://www.cipit.org/&#34;&gt;CIPIT&lt;/a&gt;
+encourage transparency around internet controls, particularly during election
+periods, to help enhance the safeguard of human rights and democratic
+processes.&lt;/p&gt;
 </description>
     </item>
     
@@ -1273,77 +2926,20 @@ podem ser testados da seguinte forma:&lt;/p&gt;
       <guid>https://ooni.torproject.org/install/lepidopter/</guid>
       <description>
 
-&lt;h1 id=&#34;lepidopter-guide&#34;&gt;Lepidopter guide&lt;/h1&gt;
+&lt;h1 id=&#34;lepidopter-quick-start-guide&#34;&gt;Lepidopter quick start guide&lt;/h1&gt;
 
-&lt;p&gt;This guide explains step-by-step how to run OONI tests from a Raspberry Pi.&lt;/p&gt;
-
-&lt;p&gt;The code of the image as well as the build script can be found in the &lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;git
-repository&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Some compact documentation on how to install, build, copy to an SD card and run
+&lt;p&gt;This guide aims to provide documentation about the Lepidopter, a Raspberry Image
+with OONI super powers based on Debian jessie. The code of the image as well as
+the build script can be found in the &lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;git
+repository&lt;/a&gt;.
+Some compact documentation on how to install, build, copy to SD card and run
 Lepidopter in QEMU is described
 &lt;a href=&#34;https://github.com/TheTorProject/lepidopter/blob/master/README.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;about-lepidopter&#34;&gt;About Lepidopter&lt;/h2&gt;
+&lt;h2 id=&#34;download-lepidopter-raspberry-pi-image&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/h2&gt;
 
-&lt;p&gt;Lepidopter is an &lt;em&gt;ooniprobe distribution&lt;/em&gt; for Raspberry Pis.&lt;/p&gt;
-
-&lt;p&gt;This enables users to contribute to the collection of network measurements
-consistently across time, without having to manually run ooniprobe from their
-computers and regardless of their technical skills. This distribution is
-configured in such a way that, when inserted into a Raspberry Pi and connected
-to a network, it will by default run ooniprobe once a day and send collected
-measurements directly to OONI’s measurement collector. It is also designed to
-automatically get updated to the newest version of ooniprobe.&lt;/p&gt;
-
-&lt;p&gt;All measurements collected by Lepidopter are published on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
-Explorer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;By using Lepidopter, you will be running the following OONI software tests via your Raspberry Pi:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web connectivity&lt;/a&gt;:&lt;/strong&gt;
-Designed to examine whether URLs are blocked or not (and if so, how)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt;:&lt;/strong&gt; Designed to detect the presence of systems which could potentially be responsible for censorship, surveillance and traffic manipulation&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt;:&lt;/strong&gt; Similar to the previous test (HTTP invalid request line)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The main advantages of collecting measurements through Raspberry Pis include the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Stable and continuous daily measurements across extended periods of time&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;More types of data collection&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;More accurate measurements&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;
-
-&lt;p&gt;The following include a list of requirements to get started:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Raspberry Pi:&lt;/strong&gt; The Lepidopter Raspberry Pi image is compatible with all
-types of Raspberry Pis (tested: B+, RPi 1 model B, RPi 2 model B).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;SD Card:&lt;/strong&gt; We recommend a 4GB (minimum size) class 4 or higher SD card.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Internet access:&lt;/strong&gt; A standard Ethernet cable (such as a cat 5) attached to a
-network router or switch that could provide internet connectivity. Typically the
-&amp;ldquo;device&amp;rdquo; that enables you to access the internet!&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Power supply:&lt;/strong&gt; Use a 5V micro USB power supply to power your Raspberry Pi.
-Be careful that whatever power supply you use outputs at least 5V; insufficient
-power will cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If your laptop does not have an SD card slot, please ensure that you have an SD card reader.&lt;/p&gt;
-
-&lt;h1 id=&#34;downloading-and-verifying-the-lepidopter-raspberry-pi-image&#34;&gt;Downloading and verifying the Lepidopter Raspberry Pi image&lt;/h1&gt;
-
-&lt;h2 id=&#34;download-the-lepidopter-image&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
+&lt;p&gt;Lepidopter Raspberry Pi image is compatible with all types of Raspberry Pi
+(tested: B+, RPi 1 model B, RPi 2 model B).&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;&lt;/li&gt;
@@ -1354,12 +2950,9 @@ for a significantly reduced file size (ca. 114M smaller) compared to the zip
 archive. Note that this will require an extra program to be installed depending
 on your OS.&lt;/p&gt;
 
-&lt;h2 id=&#34;verify-the-lepidopter-image&#34;&gt;Verify the Lepidopter image&lt;/h2&gt;
+&lt;h2 id=&#34;verify-lepidopter-raspberry-pi-image&#34;&gt;Verify Lepidopter Raspberry Pi image&lt;/h2&gt;
 
-&lt;p&gt;To verify that the Lepidopter image is the right one, you will need to compare
-it with the key that has been signed by us.&lt;/p&gt;
-
-&lt;h3 id=&#34;import-the-lepidopter-signing-key&#34;&gt;Import the Lepidopter signing key&lt;/h3&gt;
+&lt;h3 id=&#34;importing-lepidopter-signing-key&#34;&gt;Importing Lepidopter Signing key&lt;/h3&gt;
 
 &lt;p&gt;From OONI web server:&lt;/p&gt;
 
@@ -1371,18 +2964,18 @@ it with the key that has been signed by us.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;gpg --keyserver pool.sks-keyservers.net --recv-keys 0xBA56AC5A53E9C7A4
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;For additional security the fingerprint of the Lepidopter Team (signing key) is
-published here:&lt;/p&gt;
+&lt;p&gt;From additional security the fingeprint of Lepidopter Team (signing key) is
+published her:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;pub   4096R/0xBA56AC5A53E9C7A4 2016-05-22
       Key fingerprint = 6255 1196 8E24 0F24 F6CF  D0B6 BA56 AC5A 53E9 C7A4
 uid   Lepidopter Team (signing key)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;verify-the-lepidopter-image-1&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
+&lt;h3 id=&#34;verify-lepidopter-image&#34;&gt;Verify Lepidopter image&lt;/h3&gt;
 
-&lt;p&gt;Verify that the compressed image &lt;code&gt;lepidopter-alpha-armel.img.zip&lt;/code&gt; matches its
-signature &lt;code&gt;lepidopter-alpha-armel.img.zip.asc&lt;/code&gt; by running:&lt;/p&gt;
+&lt;p&gt;Verifying the compressed image &lt;code&gt;lepidopter-alpha-armel.img.zip&lt;/code&gt; matches its
+signature &lt;code&gt;lepidopter-alpha-armel.img.zip.asc&lt;/code&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;gpg -v --verify lepidopter-alpha-armel.img.zip.asc
 &lt;/code&gt;&lt;/pre&gt;
@@ -1400,93 +2993,65 @@ gpg: binary signature, digest algorithm SHA512
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you want to learn more about digital signatures and key verification read
-the &lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;documentation&lt;/a&gt; from Qubes OS.&lt;/p&gt;
+the excellent &lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;documentation&lt;/a&gt; from Qubes OS.&lt;/p&gt;
 
-&lt;h1 id=&#34;setting-up-your-raspberry-pi-with-lepidopter&#34;&gt;Setting up your Raspberry Pi with Lepidopter&lt;/h1&gt;
+&lt;h1 id=&#34;requirements&#34;&gt;Requirements&lt;/h1&gt;
 
-&lt;p&gt;Depending on whether you are a Windows, Linux or Mac OS X user, please refer to
-the relevant section of the guide below on how to set up your Raspberry Pi with
-Lepidopter.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Raspberry Pi&lt;/p&gt;&lt;/li&gt;
 
-&lt;h2 id=&#34;linux-users&#34;&gt;Linux users&lt;/h2&gt;
+&lt;li&gt;&lt;p&gt;SD Card:
+We recommend a 4GB (minimum size) class 4 or higher SD card.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use &lt;strong&gt;Disk
-Image Writer&lt;/strong&gt; (graphical interface) to copy the Lepidopter image to an SD card.
-Alternatively, you can do this through your terminal.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Internet access:
+A standard Ethernet cable (such as a cat 5) attached to a network router or
+switch that could provide Internet connectivity. Typically the &amp;ldquo;device&amp;rdquo; that
+enables you to access the Internet!&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;Below we provide steps on how to copy the Lepidopter image to an SD card via
-Disk Image Writer or a terminal.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Power supply:
+Use a 5V micro USB power supply to power your Raspberry Pi. Be careful that
+whatever power supply you use outputs at least 5V; insufficient power will
+cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&#34;disk-image-writer&#34;&gt;Disk Image Writer&lt;/h3&gt;
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-linux&#34;&gt;Lepidopter Image to SD Card under Linux&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
-image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;using-imagewriter-graphical-interface&#34;&gt;Using ImageWriter (graphical interface)&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Right-click on the downloaded Lepidopter image and select &lt;strong&gt;[Extract
-here]&lt;/strong&gt; to extract the image.&lt;/p&gt;
+&lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use the
+ImageWriter tool (nice graphical user interface) to write the .img file to the
+SD card.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-001.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Right click the archive file and select &amp;ldquo;Extract here&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your computer or connect the SD card reader with the
+SD card inside&lt;/li&gt;
+&lt;li&gt;Install the ImageWriter tool from the Ubuntu Software Center&lt;/li&gt;
+&lt;li&gt;Launch the ImageWriter tool (it needs your administrative password)&lt;/li&gt;
+&lt;li&gt;Select the image file (example lepidopter-alpha-armel.img) to be written to the SD card
+(note: because you started ImageWriter as administrator the starting point
+when selecting the image file is the administrator&amp;rsquo;s home folder so you need to
+change to your own home folder to select the image file)&lt;/li&gt;
+&lt;li&gt;Select the target device to write the image to (your device will be
+something like &amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdc&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;Click the &amp;ldquo;Write to device&amp;rdquo; button&lt;/li&gt;
+&lt;li&gt;Wait for the process to finish and then insert the SD card in the Raspberry
+Pi&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-002.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Install &lt;strong&gt;Disk Image Writer&lt;/strong&gt; from the Ubuntu Software Center.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert your SD card into your SD card reader, and subsequently connect
-your SD card reader to your laptop/desktop.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Right-click on the extracted Lepidopter image and open it with Disk Image Writer.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-003.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Select your SD card reader within the drop-down menu.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-005.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Ensure you&amp;rsquo;re selecting your SD card reader, as (accidentally)
-selecting your hard drive could result in its corruption.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Click &lt;strong&gt;[Start Restoring&amp;hellip;]&lt;/strong&gt;. This will copy the Lepidopter image to your SD card.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-006.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Click &lt;strong&gt;[Restore]&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-007.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Type in your system password to authenticate this.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-008.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Wait for the Lepidopter image to get copied to your SD card&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-010.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Eject when it&amp;rsquo;s done.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-011.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now your SD card contains OONI&amp;rsquo;s software!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Insert your SD card into the &lt;strong&gt;[MICRO SD CARD]&lt;/strong&gt; slot of your Raspberry Pi.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 12.&lt;/strong&gt; Connect your Raspberry Pi to power and to the internet (with an Ethernet cable).&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s all! From now on, your Raspberry Pi will automatically &lt;strong&gt;run ooniprobe
-every day at 6am UTC&lt;/strong&gt;. The measurements will be sent directly to OONI&amp;rsquo;s server,
-where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
-Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
-hours.&lt;/p&gt;
-
-&lt;h3 id=&#34;terminal&#34;&gt;Terminal&lt;/h3&gt;
+&lt;h2 id=&#34;using-the-command-line&#34;&gt;Using the command line&lt;/h2&gt;
 
 &lt;p&gt;Please note that the use of the &amp;ldquo;dd&amp;rdquo; tool can overwrite any partition of your
 machine. If you specify the wrong device in the instructions below you could
 delete your primary Linux partition. Please be careful.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
-image&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image, with:&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;code&gt;unzip lepidopter-alpha-armel.img.zip&lt;/code&gt;&lt;/p&gt;
 
@@ -1494,216 +3059,221 @@ image&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;xz --decompress --verbose --no-sparse lepidopter-alpha-armel.img.zip&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Run &lt;code&gt;df -h&lt;/code&gt; to see which devices are currently mounted.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; If your computer has a slot for SD cards, insert the card. If not,
-insert the card into an SD card reader, then connect the reader to your
-computer.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Run &lt;code&gt;df -h&lt;/code&gt; again.&lt;/p&gt;
-
-&lt;p&gt;The device that wasn&amp;rsquo;t there last time is your SD card. The left column gives
-the device name of your SD card. It will be listed as something like
-&amp;ldquo;/dev/mmcblk0p1&amp;rdquo; or &amp;ldquo;/dev/sdd1&amp;rdquo;. The last part (&amp;ldquo;p1&amp;rdquo; or &amp;ldquo;1&amp;rdquo; respectively) is the
-partition number, but you want to write to the whole SD card, not just one
-partition, so you need to remove that part from the name (getting for example
-&amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdd&amp;rdquo;) as the device for the whole SD card.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The SD card can show up more than once in the output of df: in fact it
-will if you have previously written a Raspberry Pi image to this SD card,
-because the Raspberry Pi SD images have more than one partition.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Now that you&amp;rsquo;ve noted what the device name is, you need to unmount
-it so that files can&amp;rsquo;t be read or written to the SD card while you are copying
-over the SD image. So run the command below, replacing &amp;ldquo;/dev/sdd1&amp;rdquo; with whatever
-your SD card&amp;rsquo;s device name is (including the partition number):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;umount /dev/sdd1     
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If your SD card shows up more than once in the output of df due to having
-multiple partitions on the SD card, you should unmount all of these partitions.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; In the terminal copy the image to the card with this command,
-making sure you replace the input file if= argument with the path to your .img
-file, and the &amp;ldquo;/dev/sdd&amp;rdquo; in the output file of= argument with the right device
-name (this is very &lt;strong&gt;important:&lt;/strong&gt; you will lose all data on the hard drive on
-your computer if you get the wrong device name). Make sure the device name is
-the name of the whole SD card as described above, not just a partition of it
-(for example, sdd, not sdds1 or sddp1, or mmcblk0 not mmcblk0p1).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;dd bs=4M if=~/lepidopter-alpha-armel.img of=/dev/sdd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Please note that block size set to 4M will work most of the time. If not, please try
-1M, although 1M will take considerably longer.&lt;/p&gt;
-
-&lt;p&gt;Note that if you are not logged in as root you will need to prefix this with sudo.&lt;/p&gt;
-
-&lt;p&gt;The dd command does not give any information of its progress and so may
-appear to have frozen. It could take more than five minutes to finish copying
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;df -h&lt;/code&gt; to see what devices are currently mounted&lt;/li&gt;
+&lt;li&gt;If your computer has a slot for SD cards, insert the card. If not, insert
+the card into an SD card reader, then connect the reader to your computer.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;df -h&lt;/code&gt; again. The device that wasn&amp;rsquo;t there last time is your SD
+card. The left column gives the device name of your SD card. It will be
+listed as something like &amp;ldquo;/dev/mmcblk0p1&amp;rdquo; or &amp;ldquo;/dev/sdd1&amp;rdquo;. The last part (&amp;ldquo;p1&amp;rdquo;
+or &amp;ldquo;1&amp;rdquo; respectively) is the partition number, but you want to write to the
+whole SD card, not just one partition, so you need to remove that part from the
+name (getting for example &amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdd&amp;rdquo;) as the device for the
+whole SD card. Note that the SD card can show up more than once in the output
+of df: in fact it will if you have previously written a Raspberry Pi image to
+this SD card, because the Raspberry Pi SD images have more than one partition.&lt;/li&gt;
+&lt;li&gt;Now that you&amp;rsquo;ve noted what the device name is, you need to unmount it so
+that files can&amp;rsquo;t be read or written to the SD card while you are copying
+over the SD image. So run the command below, replacing &amp;ldquo;/dev/sdd1&amp;rdquo; with
+whatever your SD card&amp;rsquo;s device name is (including the partition number)
+&lt;code&gt;
+umount /dev/sdd1
+&lt;/code&gt;
+If your SD card shows up more than once in the output of df due to having
+multiple partitions on the SD card, you should unmount all of these partitions.&lt;/li&gt;
+&lt;li&gt;In the terminal write the image to the card with this command, making sure
+you replace the input file if= argument with the path to your .img file, and
+the
+&amp;ldquo;/dev/sdd&amp;rdquo; in the output file of= argument with the right device name (this is
+very important: you will lose all data on the hard drive on your computer if
+you get the wrong device name). Make sure the device name is the name of the
+whole SD card as described above, not just a partition of it (for example, sdd,
+not sdds1 or sddp1, or mmcblk0 not mmcblk0p1)
+&lt;code&gt;
+dd bs=4M if=~/lepidopter-alpha-armel.img of=/dev/sdd
+&lt;/code&gt;
+Please note that block size set to 4M will work most of the time, if
+not, please try 1M, although 1M will take considerably longer.
+Note that if you are not logged in as root you will need to prefix this
+with sudo.
+The dd command does not give any information of its progress and so may
+appear to have frozen. It could take more than five minutes to finish writing
 to the card. If your card reader has an LED it may blink during the write
 process. To see the progress of the copy operation you can run &lt;code&gt;pkill -USR1
 -n -x&lt;/code&gt; dd in another terminal (prefixed with sudo if you are not logged in as
 root). The progress will be displayed (perhaps not immediately, due to
-buffering) in the original window, not the window with the pkill command.&lt;/p&gt;
+buffering) in the original window, not the window with the pkill command.&lt;/li&gt;
+&lt;li&gt;As root run the command sync or if a normal user run &lt;code&gt;sudo sync&lt;/code&gt; (this
+will ensure the write cache is flushed and that it is safe to unmount your
+SD card).&lt;/li&gt;
+&lt;li&gt;Remove SD card from card reader, insert it in the Raspberry Pi, and have
+fun!&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; As root run the command sync or if a normal user run &lt;code&gt;sudo sync&lt;/code&gt;
-(this will ensure the write cache is flushed and that it is safe to unmount
-your SD card).&lt;/p&gt;
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-macos-x&#34;&gt;Lepidopter Image to SD Card under MacOS X&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Remove the SD card from your card reader, insert it in the Raspberry
-Pi, and have fun!&lt;/p&gt;
-
-&lt;h2 id=&#34;mac-os-x-users&#34;&gt;Mac OS X users&lt;/h2&gt;
-
-&lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
-image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Double-click on the downloaded Lepidopter image to extract it.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download &lt;strong&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ApplePi-Baker is a free utility that allows you to copy an IMG file to an SD
-card with only a few simple clicks.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert your SD card into your SD card reader, and subsequently connect
-your SD card reader to your laptop/desktop.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Start ApplePi-Baker.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Select the Lepidopter IMG file in the Restore Backup section.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Select your SD card reader (in the Pi-Crust section) as a location to
-copy the Lepidopter image to.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Ensure you&amp;rsquo;re selecting your SD card reader, as (accidentally)
-selecting your hard drive could result in its corruption.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Click &lt;strong&gt;[Restore Backup]&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Wait for the Lepidopter image to get copied to your SD card&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Type in your system password to authenticate this.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Eject when it&amp;rsquo;s done.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Insert your SD card into the &lt;strong&gt;[MICRO SD CARD]&lt;/strong&gt; slot of your Raspberry Pi.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 12.&lt;/strong&gt; Connect your Raspberry Pi to power and to the internet (with an Ethernet cable).&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s all! From now on, your Raspberry Pi will automatically &lt;strong&gt;run ooniprobe
-every day at 6am UTC&lt;/strong&gt;. The measurements will be sent directly to OONI&amp;rsquo;s server,
-where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
-Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
-hours.&lt;/p&gt;
-
-&lt;h3 id=&#34;optimization&#34;&gt;Optimization&lt;/h3&gt;
-
-&lt;p&gt;In OS X each disk may have two path references in /dev:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: In OS X each disk may have two path references in /dev:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;/dev/disk# is a buffered device, which means any data being sent undergoes
-extra processing.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;/dev/rdisk# is a raw path, which is much faster, and perfectly OK when using
-the dd program.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;/dev/disk# is a buffered device, which means any data being sent undergoes
+extra processing.&lt;/li&gt;
+&lt;li&gt;/dev/rdisk# is a raw path, which is much faster, and perfectly OK when using
+the dd program.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;On a Class 4 SD card the difference was around 20 times faster using the rdisk
 path.&lt;/p&gt;
 
-&lt;h2 id=&#34;windows-users&#34;&gt;Windows users&lt;/h2&gt;
+&lt;h2 id=&#34;run-an-app-only-with-graphical-interface&#34;&gt;Run an App (Only with graphical interface)&lt;/h2&gt;
 
-&lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
+&lt;h3 id=&#34;pi-filler&#34;&gt;Pi Filler&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
-image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Filler&lt;/a&gt; a simple tool for copying a Raspberry
+Pi operating system image file to an SD card, or restoring an SD card backup
+created by &lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Copier&lt;/a&gt;. Version 1.3 is about 5x
+faster than previous versions and can write a full card in 5-7 minutes. Pi
+Filler automatically identifies your SD card (and asks for confirmation to
+prevent any chance of the wrong disk being written to), and shows estimated
+time remaining during the copy. After it&amp;rsquo;s done, if your Raspberry Pi is not
+connected to a display, you can use &lt;a href=&#34;http://ivanx.com/raspberrypi&#34;&gt;Pi Finder&lt;/a&gt;
+to locate it on your network and log in from Terminal. These utilities are
+written in AppleScript and Bash, are compatible with OS X 10.6 Snow Leopard
+through 10.10 Yosemite, and include source code.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image file from the downloaded .xz file, so you now have
-&amp;ldquo;lepidopter-alpha-armel.img&amp;rdquo;.&lt;/p&gt;
+&lt;h3 id=&#34;rpi-sd-card-builder&#34;&gt;RPi-sd card builder&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download
-&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; and
-extract the file.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://alltheware.wordpress.com/2012/12/11/easiest-way-sd-card-setup/&#34;&gt;RPi-sd
+card&lt;/a&gt;
+builder utility is an application which will walk you through the process of
+installing to SD card. Note: This is a closed source application which requires
+your root password.&lt;/p&gt;
+
+&lt;h3 id=&#34;applepi-baker&#34;&gt;ApplePi-Baker&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt; A
+free utility that allows to write an IMG file to SD card, or backup an SD card
+to IMG, with only a few simple clicks. This is also a closed source application
+and also requires your root password to write to SD cards. The application is
+written in Lazarus Pascal and supports Retina.&lt;/p&gt;
+
+&lt;h3 id=&#34;piwriter&#34;&gt;PiWriter&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://sourceforge.net/projects/piwriter/&#34;&gt;PiWriter&lt;/a&gt; a simple wizard made
+using shell scripts, PlatyPus and CocoaDialog. To prevent
+users from making mistakes the wizard auto-detect&amp;rsquo;s the SD card you plan to use
+and prevents you from selecting your system disk. Also there is no need for a
+root password so even less damage can be done. The nextgen PiWriter2 introduces
+a new &amp;lsquo;drag and drop&amp;rsquo; approach and also includes a backup feature. PiWriter
+1.0.4 does not work on Mac OS X Mavericks.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Watch the 1.x quick review &lt;a href=&#34;http://vimeo.com/62083666&#34;&gt;video&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Watch full OS X HOWTO &lt;a href=&#34;http://www.youtube.com/watch?v=PIvNxprbDhQ&#34;&gt;video&lt;/a&gt;
+using PiWriter 1.x By: Bruce Fulton&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;using-system-tools-mostly-graphical-interface&#34;&gt;Using system tools (mostly graphical interface)&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image by double clicking on the download file.&lt;/li&gt;
+&lt;li&gt;Connect the SD card reader with the SD card inside; note: must be formatted
+in FAT32!&lt;/li&gt;
+&lt;li&gt;From the Apple menu, choose About This Mac, then click on More info&amp;hellip;; if
+you are using Mac OS X 10.8.x Mountain Lion then click on System report.&lt;/li&gt;
+&lt;li&gt;Click on USB (or Card Reader if using an in-built SD card reader) then
+search for your SD card in the upper right section of the window; click it,
+then search for BSD name in the lower right section: must be something like
+diskn where n is a number (for example, disk4). Note this number.&lt;/li&gt;
+&lt;li&gt;Unmount the partition so that you will be allowed to overwrite the disk by
+opening Disk Utility and unmounting it (do not eject it, or you have to
+reconnect it). Note: On Mac OS X 10.8.x Mountain Lion, &amp;ldquo;Verify Disk&amp;rdquo; (before
+unmounting) will display the BSD name as &amp;ldquo;/dev/disk1s1&amp;rdquo; (or similar), allowing
+you to skip the previous two steps.&lt;/li&gt;
+&lt;li&gt;From the Terminal run:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sudo dd if=path_of_your_image.img of=/dev/diskn bs=1M&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Remember to replace n with the number that you noted before!&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Wait a LONG time! (or see the note above about using /dev/rdisk#&amp;hellip;) To see
+the current status, send SIGINFO signal by pressing Ctrl+T.&lt;/li&gt;
+&lt;li&gt;You&amp;rsquo;re done! Insert it in the Raspberry Pi, and have fun.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;lepidopter-image-to-sd-card-under-windows&#34;&gt;Lepidopter Image to SD Card under Windows&lt;/h1&gt;
+
+&lt;h2 id=&#34;using-the-win32diskimager-program&#34;&gt;Using the Win32DiskImager program&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert the SD card into your SD card reader and check what drive
-letter it was assigned. You can easily see the drive letter (for example G:)
-by looking in the left column of Windows Explorer.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Download the
+&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; utility.&lt;/li&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image file from the downloaded .xz file, so you now have
+&amp;ldquo;lepidopter-alpha-armel.img&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your SD card reader and check what drive letter it
+was assigned. You can easily see the drive letter (for example G:) by
+looking in the left column of Windows Explorer. You can use the SD Card slot
+(if you have one) or a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Download the Win32DiskImager utility (it is a zip file). You can run
+this from a USB drive.  Win32DiskImager screen&lt;/li&gt;
+&lt;li&gt;Extract the executable from the zip file and run the Win32DiskImager
+utility; you may need to run the utility as Administrator! Right-click on
+the file, and select &amp;lsquo;Run as Administrator&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;Select the image file you extracted above.&lt;/li&gt;
+&lt;li&gt;Select the drive letter of the SD card in the device box. &lt;strong&gt;Be careful to
+select the correct drive&lt;/strong&gt;; if you get the wrong one you can destroy your
+data on the computer&amp;rsquo;s hard disk! If you are using an SD Card slot in your
+computer (if you have one) and can&amp;rsquo;t see the drive in the Win32DiskImager
+window, try using a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Click Write and wait for the write to complete.&lt;/li&gt;
+&lt;li&gt;Exit the imager and eject the SD card.&lt;/li&gt;
+&lt;li&gt;You are now ready to plug the card into your Raspberry Pi.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Run Win32DiskImager.&lt;/p&gt;
-
-&lt;p&gt;You might need to run Win32DiskImager as Administrator. In this case, right-
-click on the file, and select &amp;lsquo;Run as Administrator&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Select the Lepidopter image file that you extracted above.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Select the drive letter of the SD card in the device box.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Ensure you&amp;rsquo;re selecting your SD card reader, as (accidentally)
-selecting your hard drive could result in its corruption.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Click &lt;strong&gt;[Write]&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Wait for the Lepidopter image to get copied to your SD card&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Exit the imager and eject the SD card.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Insert your SD card into the &lt;strong&gt;[MICRO SD CARD]&lt;/strong&gt; slot of your Raspberry Pi.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Connect your Raspberry Pi to power and to the internet (with an Ethernet cable).&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s all! From now on, your Raspberry Pi will automatically &lt;strong&gt;run ooniprobe
-every day at 6am UTC&lt;/strong&gt;. The measurements will be sent directly to OONI&amp;rsquo;s server,
-where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
-Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
-hours.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; In Windows, the SD card will appear to only have a fairly small size once
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:
+In Windows, the SD card will appear only to have a fairly small size once
 written - about 55 to 75 MB. This is because most of the card has a partition
 that is formatted for the Linux operating system that the Raspberry Pi uses
 which is not visible in Windows. If you don&amp;rsquo;t see a small directory with files
 such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
 
-&lt;h3 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h3&gt;
+&lt;h2 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h2&gt;
 
-&lt;p&gt;You might not be able to choose the device in Win32DiskImager on some notebooks,
+&lt;p&gt;You may not be able to choose the device in Win32DiskImager on some notebooks
 so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-alpha-armel.img.zip&#34;&gt;Lepidopter
-image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Assuming that you have downloaded already Lepidopter image if not, you
+should first &lt;a href=&#34;#download-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download Lepidopter Raspberry Pi image&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the image file from the downloaded .xz file, so you now have
+&amp;ldquo;lepidopter-alpha-armel.img&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into your SD card reader and check what drive letter it
+was assigned. You can easily see the drive letter (for example G:) by
+looking in the left column of Windows Explorer. You can use an SD Card slot in
+your computer (if you have one) or a cheap Adapter in a USB slot.&lt;/li&gt;
+&lt;li&gt;Download the flashnul &lt;a href=&#34;http://shounen.ru/soft/flashnul/index.html&#34;&gt;software&lt;/a&gt;
+; here is the English &lt;a href=&#34;http://translate.google.com/translate?hl=en&amp;amp;sl=ru&amp;amp;tl=en&amp;amp;u=http%3A%2F%2Fshounen.ru%2Fsoft%2Fflashnul%2Findex.html&#34;&gt;Translated version&lt;/a&gt;
+with a link to instructions (also translated).&lt;/li&gt;
+&lt;li&gt;Download the latest version. At the time of writing it was flashnul-1rc1.&lt;/li&gt;
+&lt;li&gt;Extract the application from the archive.&lt;/li&gt;
+&lt;li&gt;Click Start button &amp;gt; All Programs &amp;gt; Accessories &amp;gt; Command Prompt, right
+click on it and Run as Administrator.&lt;/li&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image file from the downloaded .xz file, so you now have
-&amp;ldquo;lepidopter-alpha-armel.img&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download &lt;a href=&#34;http://shounen.ru/soft/flashnul/index.html&#34;&gt;flashnul&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The English translated version can be found &lt;a href=&#34;http://translate.google.com/translate?hl=en&amp;amp;sl=ru&amp;amp;tl=en&amp;amp;u=http%3A%2F%2Fshounen.ru%2Fsoft%2Fflashnul%2Findex.html&#34;&gt;here&lt;/a&gt;
-with a link to instructions (also translated).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert the SD card into your SD card reader and check what drive
-letter it was assigned. You can easily see the drive letter (for example G:)
-by looking in the left column of Windows Explorer.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Extract the application from the archive.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Click Start button &amp;gt; All Programs &amp;gt; Accessories &amp;gt; Command Prompt,
-right click on it and Run as Administrator.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Run flashnul with argument &amp;ldquo;-p&amp;rdquo;:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Run flashnul with argument &amp;ldquo;-p&amp;rdquo;:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe -p&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Flashnul will tell you something like this (it should be different, as it
-   depends on the drives on your machine):&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Flashnul will tell you something like this (it should be different, as it
+depends on the drives on your machine):&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Available physical drives:&lt;/li&gt;
@@ -1716,26 +3286,26 @@ right click on it and Run as Administrator.&lt;/p&gt;
 &lt;li&gt;F:&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;Press ENTER to exit.
 &lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Use the Load option of flashnul to put the image file on the SD Card.
-Make sure that you use the correct drive letter for the SD Card as that drive
+&lt;li&gt;&lt;p&gt;Use the Load option of flashnul to put the image file on the SD Card. Make
+sure that you use the correct drive letter for the SD Card as that drive
 will be overwritten!&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe E: -L C:\temp\lepidopter-alpha-armel.img&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Where &lt;code&gt;C:\flashnul\flashnul.exe&lt;/code&gt; is the location of the flashnul
-program; E: is the drive you want to overwrite, and C:\temp\lepidopter-alpha-
-armel.img is the location of the .img file.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Where &lt;code&gt;C:\flashnul\flashnul.exe&lt;/code&gt; is the location of the flashnul
+program; E: is the drive you want to overwrite, and C:\temp\lepidopter-alpha-armel.img
+is the location of the .img file.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Flashnul will give you a device summary and a caution message. Check
-the information to make sure you have selected the correct device, then type
-yes and press enter.&lt;/p&gt;
-
-&lt;p&gt;If you get an access denied error, make sure to close all explorer windows or
-folders open for the device, then try re-plugging the SD card.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Flashnul will give you a device summary and a caution message. Check the
+information to make sure you have selected the correct device, then type
+yes and press enter. If you get an access denied error, make sure to close all
+explorer windows or folders open for the device, then try re-plugging the SD
+card.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h1 id=&#34;sources&#34;&gt;Sources&lt;/h1&gt;
 
@@ -5628,7 +7198,18 @@ held liable.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/data/content/</guid>
-      <description></description>
+      <description>
+
+&lt;h2 id=&#34;this-url-is-old&#34;&gt;This URL is old&lt;/h2&gt;
+
+&lt;p&gt;Raw ooniprobe measurements now live at:
+&lt;a href=&#34;https://measurement.ooni.torproject.org&#34;&gt;https://measurement.ooni.torproject.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also explore the collected measurements via the &lt;a href=&#34;https://explorer.ooni.torproject.org/&#34;&gt;OONI
+Explorer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You should update your bookmarks and links accordingly.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
