@@ -25,6 +25,9 @@
 
 &lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; June - July 2014&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;19:40 UTC Saturday, 17 June 2016&lt;/strong&gt; Update: Add AS numbers of the ISPs, update
+raw measurement data URLs.&lt;/p&gt;
+
 &lt;p&gt;The newly formed Independent Administrative Authority&amp;rsquo;s Hellenic Gaming
 Commission acts as the public body responsible for the control and supervision
 of gambling services in Greece and published a blacklist of websites that are
@@ -99,64 +102,11 @@ hostname), then censorship is probably not happening (tampering:
 
 &lt;h1 id=&#34;probed-isps&#34;&gt;Probed ISPs&lt;/h1&gt;
 
-&lt;p&gt;Probed ISPs: &lt;code&gt;Forthnet, Ote, Cyta, Wind, Vodafone, Cosmote, Wind mobile&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Probed ISPs: &lt;code&gt;Forthnet (AS 1241), Ote (AS 6799), Cyta (AS 6866), Wind (AS
+25472), Vodafone (AS 12361), Cosmote (AS 29247), Wind mobile (AS 15617)&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;All of the tested ISPs employed &lt;a href=&#34;https://en.wikipedia.org/wiki/DNS_hijacking&#34;&gt;DNS hijacking&lt;/a&gt; with the exception of Vodafone
 that uses also &lt;a href=&#34;https://en.wikipedia.org/wiki/Deep_packet_inspection&#34;&gt;Deep Packet Inspection&lt;/a&gt; to block the resources of the blacklist.&lt;/p&gt;
-
-&lt;h2 id=&#34;probed-isp-ooni-reports&#34;&gt;Probed ISP OONI reports&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Forthnet:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-30/20140730T221712Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-30/20140730T221712Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-23/20140623T125708Z-AS1241-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-23/20140623T125708Z-AS1241-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-25/20140625T222008Z-AS1241-dns_consistency-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-25/20140625T222008Z-AS1241-dns_consistency-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Ote:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-26/20140626T105437Z-AS6799-dns_consistency-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-26/20140626T105437Z-AS6799-dns_consistency-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-26/20140626T130619Z-AS6799-dns_consistency-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-26/20140626T130619Z-AS6799-dns_consistency-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-25/20140625T210158Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-25/20140625T210158Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-25/20140625T211147Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-25/20140625T211147Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cyta:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-06-23/20140623T165118Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-06-23/20140623T165118Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-30/20140730T224459Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-30/20140730T224459Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Wind:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;ooni_reports/wind-ooni-reports.tar.bz2&#34;&gt;Reports archive&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Hol:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-24/20140724T164440Z-AS3329-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-24/20140724T164440Z-AS3329-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-24/20140724T160923Z-AS3329-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-24/20140724T160923Z-AS3329-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-24/20140724T161705Z-AS3329-dns_consistency-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-24/20140724T161705Z-AS3329-dns_consistency-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Cosmote:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-03/20140703T161600Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-03/20140703T161600Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Vodafone:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;ooni_reports/vodafone-ooni-reports.tar.bz2&#34;&gt;Reports archive&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Wind mobile:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-04/20140704T025958Z-AS0-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-04/20140704T025958Z-AS0-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://api.ooni.io/reportFiles/2014-07-30/20140730T200818Z-AS15617-http_requests-v1-probe.yaml.gz&#34;&gt;http://api.ooni.io/reportFiles/2014-07-30/20140730T200818Z-AS15617-http_requests-v1-probe.yaml.gz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;h2 id=&#34;per-isp-analysis&#34;&gt;Per ISP analysis&lt;/h2&gt;
 
@@ -2278,6 +2228,57 @@ user&amp;rsquo;s experience and communication.&lt;/p&gt;
 &lt;p&gt;Disrupting users&amp;rsquo; communication with a certain entity can have various social implications
 or economic impact. Suppose a Greek resident would like to work as web developer to one
 of the blocked websites. Communicating with the owner company would be impossible.&lt;/p&gt;
+
+&lt;h1 id=&#34;ooni-data-per-isp&#34;&gt;OONI data per ISP&lt;/h1&gt;
+
+&lt;h2 id=&#34;raw-measurement-data-per-isp&#34;&gt;Raw measurement data per ISP&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Forthnet:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-30/20140730T221712Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-23/20140623T125708Z-GR-AS1241-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-25/20140625T222008Z-GR-AS1241-dns_consistency-no_report_id-0.1.0-probe.json&#34;&gt;DNS Consistency test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Ote:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-26/20140626T105437Z-GR-AS6799-dns_consistency-no_report_id-0.1.0-probe.json&#34;&gt;DNS Consistency test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-26/20140626T130619Z-GR-AS6799-dns_consistency-no_report_id-0.1.0-probe.json&#34;&gt;DNS Consistency test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-25/20140625T210158Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-25/20140625T211147Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Cyta:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-06-23/20140623T165118Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-30/20140730T224459Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Hol:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-24/20140724T164440Z-GR-AS3329-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-24/20140724T160923Z-GR-AS3329-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-24/20140724T161705Z-GR-AS3329-dns_consistency-no_report_id-0.1.0-probe.json&#34;&gt;DNS Consistency test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Cosmote:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-03/20140703T161600Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Vodafone:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-03/20140703T083044Z-ZZ-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Wind mobile:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-04/20140704T025958Z-GR-AS0-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/2014-07-30/20140730T200818Z-GR-AS15617-http_requests-no_report_id-0.1.0-probe.json&#34;&gt;HTTP Requests test report&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;!-- # References --&gt;
 </description>
