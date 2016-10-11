@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.3 documentation</title>
+  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.3 documentation" href="../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../index.html"/>
         <link rel="next" title="Test Templates" href="ooni.templates.html"/>
         <link rel="prev" title="ooni.nettests third_party Package" href="../nettests/ooni.nettests.third_party.html"/> 
 
@@ -60,7 +60,7 @@
             
             
               <div class="version">
-                2.0.0-rc.3
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -178,6 +178,8 @@ reached the done state.</p>
 <code class="descname">generateMeasurements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTest.generateMeasurements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTest.generateMeasurements" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a generator that yields measurements and registers the
 callbacks for when a measurement is successful or has failed.</p>
+<p>FIXME: If this generator throws exception TaskManager scheduler is
+irreversibly damaged.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1064,7 +1066,7 @@ XXX fully debug this problem</p>
 
 <dl class="attribute">
 <dt id="ooni.reporter.OSafeRepresenter.yaml_representers">
-<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1226,7 +1228,7 @@ summary and the raw packet.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.0-rc.3',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

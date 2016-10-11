@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.3 documentation</title>
+  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.3 documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                2.0.0-rc.3
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -144,7 +144,7 @@
 <span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">defer</span>
 <span class="kn">from</span> <span class="nn">twisted.python.filepath</span> <span class="kn">import</span> <span class="n">FilePath</span>
 <span class="kn">from</span> <span class="nn">twisted.trial.runner</span> <span class="kn">import</span> <span class="n">filenameToModule</span>
-<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span><span class="p">,</span> <span class="n">reflect</span>
+<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">failure</span><span class="p">,</span> <span class="n">usage</span><span class="p">,</span> <span class="n">reflect</span>
 
 <span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">__version__</span> <span class="k">as</span> <span class="n">ooniprobe_version</span><span class="p">,</span> <span class="n">errors</span>
 <span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">otime</span>
@@ -716,6 +716,9 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is a generator that yields measurements and registers the</span>
 <span class="sd">        callbacks for when a measurement is successful or has failed.</span>
+
+<span class="sd">        FIXME: If this generator throws exception TaskManager scheduler is</span>
+<span class="sd">        irreversibly damaged.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_methods</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
@@ -729,11 +732,16 @@
                 <span class="n">test_instance</span><span class="o">.</span><span class="n">_setUp</span><span class="p">()</span>
                 <span class="n">test_instance</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span>
                 <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">test_methods</span><span class="p">:</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">measurement</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">makeMeasurement</span><span class="p">(</span>
+                            <span class="n">test_instance</span><span class="p">,</span>
+                            <span class="n">method</span><span class="p">,</span>
+                            <span class="n">test_input</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                        <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">failure</span><span class="o">.</span><span class="n">Failure</span><span class="p">())</span>
+                        <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s">&#39;Failed to run </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">test_instance</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">test_input</span><span class="p">))</span>
+                        <span class="k">continue</span> <span class="c"># it&#39;s better to skip single measurement...</span>
                     <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;Running </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">test_instance</span><span class="p">,</span> <span class="n">method</span><span class="p">))</span>
-                    <span class="n">measurement</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">makeMeasurement</span><span class="p">(</span>
-                        <span class="n">test_instance</span><span class="p">,</span>
-                        <span class="n">method</span><span class="p">,</span>
-                        <span class="n">test_input</span><span class="p">)</span>
                     <span class="n">measurements</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">measurement</span><span class="o">.</span><span class="n">done</span><span class="p">)</span>
                     <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">taskCreated</span><span class="p">()</span>
                     <span class="k">yield</span> <span class="n">measurement</span>
@@ -1050,7 +1058,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.0.0-rc.3',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
