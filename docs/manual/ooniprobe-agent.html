@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ooniprobe-agent &mdash; OONI: Open Observatory of Network Interference 2.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0 documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> OONI: Open Observatory of Network Interference
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports.html">Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reports.html#report-format-version-changelog">Report format version changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nettests/modules.html">Implemented NetTests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/ooni.html">Measurement Developer API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/ooni.templates.html">Test Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>ooniprobe-agent</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/manual/ooniprobe-agent.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ooniprobe-agent">
+<h1>ooniprobe-agent<a class="headerlink" href="#ooniprobe-agent" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p><strong>ooniprobe-agent</strong> start | stop | run | status</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p><strong class="program">ooniprobe-agent</strong>, is a system daemon responsible for automatically
+running OONI measurements and exposing a web user interface. The web user
+interface is accessible by default on <a class="reference external" href="http://127.0.0.1:8842/">http://127.0.0.1:8842/</a></p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">--help</span></kbd></td>
+<td>Display help and exit.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--version</span></kbd></td>
+<td>Display the ooniprobe version and exit.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<p><strong>start</strong>
+Start the ooniprobe-agent in the background</p>
+<p><strong>stop</strong>
+Stop the ooniprobe-agent</p>
+<p><strong>status</strong>
+Show status of the ooniprobe-agent</p>
+<p><strong>run</strong>
+Run the ooniprobe-agent in the foreground</p>
+</div>
+<div class="section" id="ooniprobe">
+<h2>ooniprobe<a class="headerlink" href="#ooniprobe" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="read-this-before-running-ooniprobe">
+<h3>Read this before running ooniprobe!<a class="headerlink" href="#read-this-before-running-ooniprobe" title="Permalink to this headline">¶</a></h3>
+<p>Running ooniprobe is a potentially risky activity. This greatly depends on the
+jurisdiction in which you are in and which test you are running. It is
+technically possible for a person observing your internet connection to be
+aware of the fact that you are running ooniprobe. This means that if running
+network measurement tests is something considered to be illegal in your country
+then you could be spotted.</p>
+<p>Furthermore, ooniprobe takes no precautions to protect the install target machine
+from forensics analysis.  If the fact that you have installed or used ooni
+probe is a liability for you, please be aware of this risk.</p>
+</div>
+<div class="section" id="what-is-this">
+<h3>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h3>
+<p>ooniprobe is the command line tool that volunteers and researches interested in
+contributing data to the project should be running.</p>
+<p>If you are interested in using ooniprobe from a graphical user interface
+refer to <strong class="program">ooniprobe-agent</strong> and see how to run that.</p>
+<p>ooniprobe allows the user to select what test should be run and what backend
+should be used for storing the test report and/or assisting them in the running
+of the test.</p>
+<p>ooniprobe tests are divided into two categories: <strong>Traffic Manipulation</strong> and
+<strong>Content Blocking</strong>.</p>
+<p><strong>Traffic Manipulation</strong> tests aim to detect the presence of some sort of
+tampering with the internet traffic between the probe and a remote test helper
+backend. As such they usually require the selection of a oonib backend
+component for running the test.</p>
+<p><strong>Content Blocking</strong> are aimed at enumerating the kind of content that is
+blocked from the probes network point of view. As such they usually require to
+have specified an input list for running the test.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Run the web_connectivity test on <a class="reference external" href="http://torproject.org">http://torproject.org</a>:</p>
+<blockquote>
+<div><strong class="program">ooniprobe web_connectivity --url http://torproject.org/</strong></div></blockquote>
+<p>Run the http_invalid_request_line test to detect middleboxes:</p>
+<blockquote>
+<div><strong class="program">ooniprobe http_invalid_request_line</strong></div></blockquote>
+<p>Run the http_header_field_manipulation test to detect middleboxes:</p>
+<blockquote>
+<div><strong class="program">ooniprobe http_header_field_manipulation</strong></div></blockquote>
+<p>List all the available tests:</p>
+<blockquote>
+<div><strong class="program">ooniprobe -s</strong></div></blockquote>
+<p>Start the web user interface:</p>
+<blockquote>
+<div><strong class="program">ooniprobe -w</strong></div></blockquote>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, The Tor Project.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
