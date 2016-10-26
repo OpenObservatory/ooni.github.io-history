@@ -6,8 +6,1467 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Investigating media censorship, network interference and targeted malware/ads content injections in Egypt</title>
+      <link>https://ooni.torproject.org/post/egypt-post/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/egypt-post/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Egypt&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Noor (AS 20928), TE Data (AS 8452), Vodafone (AS 24835)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; IP blocking, network throttling, TCP injections&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OONI tests:&lt;/strong&gt; HTTP Requests, Web Connectivity&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; 2016-08-01 - 2016-10-25&lt;/p&gt;
+
+&lt;p&gt;We recently noticed network anomalies in Egypt and performed a study in an attempt to understand the situation.&lt;/p&gt;
+
+&lt;p&gt;Our findings indicate that HTTPS connections to DigitalOcean&amp;rsquo;s Frankfurt data centre were throttled in Egypt, while access to porn sites appeared to be interfered with via in-band TCP packet injections of advertisement and malware content. We also found that the blocking of &lt;a href=&#34;https://www.alaraby.co.uk&#34;&gt;The New Arab&lt;/a&gt; website led to the IP blocking of other sites that are hosted on the same Content Distribution Network (CDN).&lt;/p&gt;
+
+&lt;p&gt;Below we present our findings based on network measurement tests performed over the last two months.&lt;/p&gt;
+
+&lt;h1 id=&#34;media-censorship&#34;&gt;Media censorship&lt;/h1&gt;
+
+&lt;p&gt;The New Arab website &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T230118Z_AS36935_N4hRIq4Ya5raRq0yRrW7dRu9yxeg8m7fgbyNrOd9ugt07uQGK0?input=http:%2F%2Fwww.alaraby.co.uk&#34;&gt;www.alaraby.co.uk&lt;/a&gt;
+and the mirror website [www.alarabyaljadeed.co.uk](
+has been blocked in Egypt since 2016-01-05 according to the &lt;a href=&#34;https://www.theguardian.com/media/2016/jan/05/saudi-arabia-uae-egypt-block-access-qatari-news-website&#34;&gt;Guardian&lt;/a&gt;
+news outlet. Similarly the domain &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T231508Z_AS36935_Cvza90GziUHIFTeK7F5rBLFVIa5nkFKi3X9i3gZ2dpNymzbn69?input=http:%2F%2Fwww.alarabyaljadeed.co.uk&#34;&gt;www.alarabyaljadeed.co.uk&lt;/a&gt; pointing to the same website (www.alaraby.co.uk) has also been blocked.
+The ISPs have not redirected the visitors to any block page or any
+resource that explains the reason of the block. Instead, they appear to have used a Deep Packet Inspection (DPI)
+to censor the content of the website. Requesting the HTTP version of the websites (&lt;a href=&#34;http://www.alaraby.co.uk&#34;&gt;http://www.alaraby.co.uk&lt;/a&gt;, &lt;a href=&#34;http://www.alarabyaljadeed.co.uk&#34;&gt;http://www.alarabyaljadeed.co.uk&lt;/a&gt;)
+returned a response with anything but the root HTML tag elements:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;HTML&amp;gt;&amp;lt;/HTML&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;[Insert links to the OONI report and maybe just say that you get a response from the middlebox instead of a response from the real website - Art.].&lt;/p&gt;
+
+&lt;p&gt;The request for the HTTPS version of the websites (&lt;a href=&#34;https://www.alaraby.co.uk&#34;&gt;https://www.alaraby.co.uk&lt;/a&gt;, &lt;a href=&#34;https://www.alarabyaljadeed.co.uk&#34;&gt;https://www.alarabyaljadeed.co.uk&lt;/a&gt;)
+times out and there is no response received. Below the relevant OONI data of our findings:&lt;/p&gt;
+
+&lt;p&gt;Web Connectivity test measurements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T220457Z_AS36935_PqOJazEa6I8BzYZ3NrFVEILGKUaVq6fQ4pM9asTMWaQ3MWzqSz?input=http:%2F%2Fwww.alaraby.co.uk&#34;&gt;http://www.alaraby.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T231508Z_AS36935_Cvza90GziUHIFTeK7F5rBLFVIa5nkFKi3X9i3gZ2dpNymzbn69?input=http:%2F%2Fwww.alarabyaljadeed.co.uk&#34;&gt;http://www.alarabyaljadeed.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161022T193239Z_AS36935_rzWVOU2CraHDEHog5qQ9d6e3iy8Btu5FkdYl9XLyr6pTHnbCiO?input=https:%2F%2Fwww.alaraby.co.uk&#34;&gt;https://www.alaraby.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T230445Z_AS36935_dI3mQJXgLjhYTQIonpH9CYtoVE30fS32RUbH35CSOEHbrpouA4?input=https:%2F%2Fwww.alarabyaljadeed.co.uk&#34;&gt;https://www.alarabyaljadeed.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTTP Requests test measurements:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T230118Z_AS36935_N4hRIq4Ya5raRq0yRrW7dRu9yxeg8m7fgbyNrOd9ugt07uQGK0?input=http:%2F%2Fwww.alaraby.co.uk&#34;&gt;http://www.alaraby.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T225008Z_AS36935_3RV6eZcQFuo4GncFinLXtrb1jlMfTSXZPG8xpWOCgWCPf9DreU?input=https:%2F%2Fwww.alaraby.co.uk&#34;&gt;https://www.alaraby.co.uk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition to the censorship of the media website The New
+Arab, this blocking has caused some collateral damage to other websites hosted on the same Content Delivery Network
+(CDN), as discussed in the following section.&lt;/p&gt;
+
+&lt;p&gt;[Looking at the measurement above there is actually NO indication of IP blocking happening. As a matter of fact it seems like there was a bug in running the http requests that have lead to no measurements being collected, but for sure the TCP Connection tests are working - Art.]
+[Also looking at the &amp;ldquo;null&amp;rdquo; measurmeent (&lt;a href=&#34;http://measurements.ooni.torproject.org/2016-10-21/20161020T200833Z-EG-AS36935-web_connectivity-no_report_id-0.2.0-probe.json&#34;&gt;http://measurements.ooni.torproject.org/2016-10-21/20161020T200833Z-EG-AS36935-web_connectivity-no_report_id-0.2.0-probe.json&lt;/a&gt;) I see no evidence of censorship]&lt;/p&gt;
+
+&lt;p&gt;[In fact, TCP connections don&amp;rsquo;t work. The HTTP requests were cross-verified using cURL. Ping requests are dropped as well. Curl verification made on 25/10/2016, 11:36 PM. Another ooniprobe measurement submitted at around the same time]&lt;/p&gt;
+
+&lt;p&gt;[from what @darkk said on IRC it seems like TCP connection do work in the sense that they are ACKed by the TCP PEP box. - Art.]&lt;/p&gt;
+
+&lt;p&gt;XXX add information explaining why we see connections to IP:443 being ACKed, but send and recv timing out. We notice that all TCP connection on port 443 and 80 are being intercepted by a proxy, but when they are towards a destination that is in the blocklist they are not forwarded onto the destination bla bla.&lt;/p&gt;
+
+&lt;h2 id=&#34;collateral-damage&#34;&gt;Collateral damage&lt;/h2&gt;
+
+&lt;p&gt;Due to IP-based blocking of the CDN IP address where The New Arab website is
+hosted, a number of other websites were affected, including ADI e-shop, megapixl
+and viagogo.&lt;/p&gt;
+
+&lt;p&gt;The screenshots below illustrate how these websites appeared from an Egyptian vantage point (right-side) and when accessed via Tor Browser (left-side):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/egypt/viagogo-2016-10-21.png&#34; alt=&#34;http://www.viagogo.com&#34; /&gt;
+&lt;img src=&#34;https://ooni.torproject.org/post/egypt/megapixl-2016-10-21.png&#34; alt=&#34;https://www.megapixl.com&#34; /&gt;
+&lt;img src=&#34;https://ooni.torproject.org/post/egypt/adiglobal-2016-10-21.png&#34; alt=&#34;https://uk-eshop.adiglobal.com/Pages/default.aspx&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;2016-10-20-cdn-block-because-of-www-alaraby-co-uk-pcaps-or-anything-apart-from-the-ooni-report&#34;&gt;2016-10-20 CDN block because of www.alaraby.co.uk &amp;lt;&amp;ndash; PCAPs or anything apart from the OONI report&lt;/h1&gt;
+
+&lt;p&gt;to show evidence of blocking?
+IP-based block, confirmed by Vodafone (AS36935)
+and LINK (ASAS24863). &amp;lt;&amp;ndash; any OONI report about this? &amp;ndash; darkk@ no OONI reports, alaraby is not in the citizenlab list :-(
+Since 2016-01-05 according to &lt;a href=&#34;https://www.theguardian.com/media/2016/jan/05/saudi-arabia-uae-egypt-block-access-qatari-news-website&#34;&gt;https://www.theguardian.com/media/2016/jan/05/saudi-arabia-uae-egypt-block-access-qatari-news-website&lt;/a&gt;
+Due to IP-based block of CDN there is some collateral damage: &lt;a href=&#34;https://share.riseup.net/#EnJwOjhU2hgF1AXLCIIv_Q&#34;&gt;https://share.riseup.net/#EnJwOjhU2hgF1AXLCIIv_Q&lt;/a&gt; &lt;a href=&#34;https://share.riseup.net/#U55824ul59NOuo9lL54Z1g&#34;&gt;https://share.riseup.net/#U55824ul59NOuo9lL54Z1g&lt;/a&gt; &lt;a href=&#34;https://share.riseup.net/#gOafyZQJrnwRcdNU4sLqWw&#34;&gt;https://share.riseup.net/#gOafyZQJrnwRcdNU4sLqWw&lt;/a&gt;
+Alt text for images: 1) Tor Browser! Your ticket to Rodger Waters&amp;rsquo; gig 2) Tor Browser. No daily limit! 3) Tor browser! Find it fast, Get it fast!&lt;/p&gt;
+
+&lt;h1 id=&#34;https-throttling&#34;&gt;HTTPS throttling&lt;/h1&gt;
+
+&lt;p&gt;Throughout August 2016 we noticed that HTTPS connections to a number of services using DigitalOcean&amp;rsquo;s Frankfurt data centre appeared to be presenting network connectivity issues from two Egyptian vantage points: Noor ADSL (&lt;a href=&#34;https://stat.ripe.net/AS20928&#34;&gt;AS20928&lt;/a&gt;) and Vodafone Egypt ((ex-RAYA Telecom,&lt;a href=&#34;https://stat.ripe.net/AS24835&#34;&gt;AS24835&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;As part of our research we found that one way to consistently reproduce a network interference is by sending HTTPS requests
+to the network sub-nets belonging to DigitalOcean&amp;rsquo;s Frankfurt data center
+(including, but not limited to &lt;code&gt;46.101.128.0/24&lt;/code&gt;, &lt;code&gt;46.101.172.0/24&lt;/code&gt;,
+&lt;code&gt;46.101.179.0/24&lt;/code&gt; — &lt;a href=&#34;https://stat.ripe.net/AS201229&#34;&gt;AS201229&lt;/a&gt;.
+Our experiment showed consistent and heavy throttling of HTTPS services located
+in the network: only 3% of TCP connection attempts succeeded.&lt;/p&gt;
+
+&lt;p&gt;[ If I understand this correctly this means that the in only 3% of the cases you
+got back a SYN-ACK when attempting a connection to port 443. Is this correct? If
+so doesn&amp;rsquo;t this mean that it&amp;rsquo;s not protocol based blocking? - Art.]
+&amp;ndash; darkk@ true, it&amp;rsquo;s port-based divertion to some sort of DPI/proxy device&lt;/p&gt;
+
+&lt;p&gt;Our latency analysis suggests that all the packets that the client was receiving were
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Timeout_based_retransmission&#34;&gt;timeout-based TCP re-transmissions&lt;/a&gt;
+and that a network device was consistently dropping the first occurrence of
+each TCP packet.&lt;/p&gt;
+
+&lt;p&gt;Non-encrypted protocols on the other hand, like plain HTTP, which hosted services in the same sub-nets
+were not affected. This indicates that only HTTPS connections were throttled, while insecure HTTP connections to DigitalOcean&amp;rsquo;s Frankfurt data centre were successful. This was also reported by DigitalOcean&amp;rsquo;s &lt;a href=&#34;https://www.digitalocean.com/community/questions/ssh_exchange_identification-read-operation-timed-out&#34;&gt;community forum&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Based on our tests, the last sample of throttling that we observed occurred on 2016-09-01 12:30 UTC.&lt;/p&gt;
+
+&lt;p&gt;The complete and detailed technical analysis can be found in the &lt;a href=&#34;#eg-vs-digitalocean&#34;&gt;appendix section&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;technical-analysis&#34;&gt;Technical analysis&lt;/h2&gt;
+
+&lt;p&gt;Static html: &lt;a href=&#34;http://darkk.net.ru/garbage/2016-ooni-egypt/delay.html?v2&#34;&gt;http://darkk.net.ru/garbage/2016-ooni-egypt/delay.html?v2&lt;/a&gt;
+Static .md with images (may render badly): &lt;a href=&#34;http://darkk.net.ru/garbage/2016-ooni-egypt/delay.zip?v2&#34;&gt;http://darkk.net.ru/garbage/2016-ooni-egypt/delay.zip?v2&lt;/a&gt;
+Source (without pcap): &lt;a href=&#34;http://darkk.net.ru/garbage/2016-ooni-egypt/delay.ipynb?v2&#34;&gt;http://darkk.net.ru/garbage/2016-ooni-egypt/delay.ipynb?v2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[ Maybe it&amp;rsquo;s worthwhile explaining how the analysis of timings lead to the refuting
+of the bufferbloat hypothesis? If not I would drop this entirely from here and not
+mention it at all. Edit: Maybe it&amp;rsquo;s enough to link to the &amp;ldquo;Detailed analysis of
+HTTPS network throttling&amp;rdquo; though some extra text would be useful too. - Art.]
+&amp;ndash; darkk@ low variance of the &lt;code&gt;fiterr&lt;/code&gt; means that delay (not RTT) on the server-&amp;gt;client path is stable within 5-10ms (depending on confidence interval you belive and server&amp;rsquo;s HZ defining TCP clock resolution) and it&amp;rsquo;s not usually true for Bufferbloat case, bufferbloat usually has much higher variance.&lt;/p&gt;
+
+&lt;h2 id=&#34;inaccessible-urls&#34;&gt;Inaccessible URLs&lt;/h2&gt;
+
+&lt;p&gt;The HTTPS throttling of services hosted by DigitalOcean&amp;rsquo;s Frankfurt data centre led to the inaccessibility of various URLs. These include the following (links point to the relevant
+OONI measurements):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160829T135335Z_AS20928_j3cqNiI8kwkJxby5R3LyH2PnTPgnBJ0rZ3Qx2RClxkQWc9WmOg?input=https:%2F%2F050media.nl&#34;&gt;https://050media.nl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160829T134302Z_AS20928_I5cYSYTKoHbYLyKtnogYNPLNcdF7T5PkcmxVs4cfR46ifNiq7z?input=https:%2F%2F33-km.ru&#34;&gt;https://33-km.ru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160821T211424Z_AS8452_cZllOWSUFhF2WYmiz0KSH54J1mzkeDIqC5hrClLQ593FGGE3M1?input=https:%2F%2Flaracasts.com&#34;&gt;https://laracasts.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160829T135335Z_AS20928_j3cqNiI8kwkJxby5R3LyH2PnTPgnBJ0rZ3Qx2RClxkQWc9WmOg?input=https:%2F%2F050media.nl&#34;&gt;https://050media.nl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://antoniomarques.eu&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://akombakom.net&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://anadoluefessk.org&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://alexmerkel.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://alexmerkel.me&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://alexmerkel.xyz&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above list however is &lt;em&gt;not&lt;/em&gt; exhaustive and more websites may have been affected which are not listed here.&lt;/p&gt;
+
+&lt;p&gt;XXX: Add list of blockes HTTPS websites
+&amp;ndash; darkk@ backdated list of websites in these subnets is irrelevant, here are the websites we tested in DO-FRA AS201229
+&amp;ndash; * &lt;a href=&#34;https://alexmerkel.com&#34;&gt;https://alexmerkel.com&lt;/a&gt; &lt;a href=&#34;https://alexmerkel.me&#34;&gt;https://alexmerkel.me&lt;/a&gt; &lt;a href=&#34;https://alexmerkel.xyz&#34;&gt;https://alexmerkel.xyz&lt;/a&gt; &amp;ndash; it gave us stats on retransmissions
+&amp;ndash; * &lt;a href=&#34;https://akombakom.net&#34;&gt;https://akombakom.net&lt;/a&gt;
+&amp;ndash; * &lt;a href=&#34;https://33-km.ru&#34;&gt;https://33-km.ru&lt;/a&gt;
+&amp;ndash; * &lt;a href=&#34;https://46.101.128.4&#34;&gt;https://46.101.128.4&lt;/a&gt;
+&amp;ndash; There were some other https websites marked down in OONI data in other digitalocean regions:
+&amp;ndash; * &lt;a href=&#34;https://laracasts.com&#34;&gt;https://laracasts.com&lt;/a&gt; &amp;ndash; NY, AS393406
+&amp;ndash; * &lt;a href=&#34;https://antoniomarques.eu&#34;&gt;https://antoniomarques.eu&lt;/a&gt; &amp;ndash; AMS, AS202018
+&amp;ndash; * &lt;a href=&#34;https://050media.nl&#34;&gt;https://050media.nl&lt;/a&gt; &amp;ndash; AMS, AS202018
+&amp;ndash; * &lt;a href=&#34;https://anadoluefessk.org&#34;&gt;https://anadoluefessk.org&lt;/a&gt; &amp;ndash; AMS, AS200130&lt;/p&gt;
+
+&lt;h1 id=&#34;tor-blocked&#34;&gt;Tor blocked?&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor&lt;/a&gt; anonymity network might have been inaccessible in Egypt on 2nd October 2016. Some
+users reported that they couldn&amp;rsquo;t connect directly to Tor and had to use bridges to access it.&lt;/p&gt;
+
+&lt;p&gt;Tor Metrics statistics illustrate that &lt;a href=&#34;https://metrics.torproject.org/userstats-relay-country.html?start=2016-09-08&amp;amp;end=2016-10-08&amp;amp;country=eg&amp;amp;events=points&#34;&gt;direct connections&lt;/a&gt; to Tor were reduced on this day, while the use of &lt;a href=&#34;https://metrics.torproject.org/userstats-bridge-country.html?start=2016-09-08&amp;amp;end=2016-10-08&amp;amp;country=eg&#34;&gt;bridges&lt;/a&gt; increased, indicating that Tor might have been blocked. It&amp;rsquo;s probably worth noting though that only around 30% of Tor users appear to have used bridges to circumvent potential censorship.&lt;/p&gt;
+
+&lt;p&gt;While Tor Metrics data indicates that Tor might have been censored, we do not have any data that can &lt;em&gt;prove&lt;/em&gt; whether access to the Tor network was in fact blocked in Egypt.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/egypt/userstats-relay-country-eg-2016-09-08-2016-10-08-points.png&#34; alt=&#34;Directly connecting users from Egypt&#34; /&gt;
+&lt;img src=&#34;https://ooni.torproject.org/post/egypt/userstats-bridge-country-eg-2016-09-08-2016-10-08.png&#34; alt=&#34;Bridge users from Egypt&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;[Could it be that there is a big downward spike in tor usage in those dates since a LOT of Tor relays run on digitalocean (since they offer unmetered free bandwidth) and if digitalocean is blocked so will Tor be blocked (or at least not working for some set of relays?) - Art.]&lt;/p&gt;
+
+&lt;h1 id=&#34;advertisement-and-malware-injection&#34;&gt;Advertisement and malware injection&lt;/h1&gt;
+
+&lt;p&gt;Through our research we found false content
+deliberately injected by at least one ISP in Egypt: &lt;a href=&#34;https://en.wikipedia.org/wiki/TE_Data&#34;&gt;TE Data&lt;/a&gt;. This ISP accounts for 65% of the (market share)
+(&lt;a href=&#34;https://www.igmena.org/Indicators-of-Internet-Penetration-in-Egypt]&#34;&gt;https://www.igmena.org/Indicators-of-Internet-Penetration-in-Egypt]&lt;/a&gt;) and controls over 70% of the Egyptian internet bandwidth
+TE Data appears to be using DPI or similar network equipment to conduct a man-in-the-middle
+attack and transparently inject content for gaining profit (affiliate
+advertising) or malicious purposes (serving malware).&lt;/p&gt;
+
+&lt;p&gt;Our experiment showed that there was a 10% probability that mobile device users connected via Wi-Fi to TE Data
+ADSL would get redirected when visiting some porn
+websites. The redirection injected the URL
+&lt;code&gt;http://marketing-sv.com/mads.html&lt;/code&gt;, which serves at least two different
+static web-pages redirecting to &lt;code&gt;http://go.ad2upapp.com/afu.php?id=788146&lt;/code&gt;
+either directly or via static pages from &lt;code&gt;utextads.com&lt;/code&gt; subdomains. This
+PopUp/PopUnder advertisement network is known to be used by malware authors to
+gain revenue.&lt;/p&gt;
+
+&lt;p&gt;During our October 2016 investigation
+the injector was mostly targeting mobile &lt;a href=&#34;https://en.wikipedia.org/wiki/User_agent&#34;&gt;User-Agents&lt;/a&gt;. It was not limited to iPhone and
+Android platforms, but also targeted BlackBerry and Symbian devices. In August
+2016 ooniprobe also &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160827T153815Z_AS8452_gAU19jWom21aUc0hwieYQymbvcuTTTYULW8k1W1UXOlEYmhDPq?input=http:%2F%2Fxnxx.com&#34;&gt;captured a similar injection&lt;/a&gt;
+in the TE Data network. The injection was redirecting the user to
+&lt;code&gt;http://go.ad2upapp.com/afu.php?id=723454&lt;/code&gt; that further redirects to
+&lt;code&gt;http://go.deliverymodo.com/afu.php?id=723454&lt;/code&gt;, a different advertising website
+but with the same affiliate ID (723454). We also received user complains about
+similar injections in transit traffic of Vodafone 3G
+(&lt;a href=&#34;https://stat.ripe.net/AS36935&#34;&gt;AS36935&lt;/a&gt;) and Noor ADSL
+(&lt;a href=&#34;https://stat.ripe.net/AS20928&#34;&gt;AS20928&lt;/a&gt;) pointing to the &lt;code&gt;http://adf.ly/1cqbTY&lt;/code&gt;,
+&lt;code&gt;marketing-sv.com&lt;/code&gt; and &lt;code&gt;infinitiads.com&lt;/code&gt; domains.&lt;/p&gt;
+
+&lt;p&gt;We also discovered at least one &lt;a href=&#34;https://virustotal.com/en/file/988f3b1079b7badb27442bd1439f1b7b51c9f812a27fbab7e4d60a37c97f3d64/analysis/&#34;&gt;malware sample&lt;/a&gt;
+served by the chain of web redirects starting with the aforementioned link during
+our research. Our IP TTL and network packet latency analysis confirms that
+the injection is done in-band using a DPI or similar network equipment to
+conduct a man-in-the-middle attack. The analysis refutes the hypothesis of an
+&amp;ldquo;infected&amp;rdquo; website serving advertisements instead of content. The statistics
+suggest that the injector is located within the TE Data network (not further than
+that and not as close as end-user LAN) and transparently injects content for
+gaining profit via affiliate advertising.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Client &amp;lt;--(forged packet)-- ISP&#39;s middle box &amp;lt;--(valid packet)-- Web server&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash; darkk@: do we have some sort of clipart picture for that?&lt;/p&gt;
+
+&lt;p&gt;XXX: do we want to consistently make ad links non-clickable or not? IMHO that&amp;rsquo;s good &amp;ndash; darkk@&lt;/p&gt;
+
+&lt;h2 id=&#34;third-party-tools-curl-showing-injected-content&#34;&gt;Third party tools (curl) showing injected content&lt;/h2&gt;
+
+&lt;p&gt;The curl output excerpts below illustrate how TE Data and Noor ISP redirected users&amp;rsquo; connections to porn websites through the injection of ads. It&amp;rsquo;s important though to note that the DNS query answers of the requested domains are legitimate, and there appears to be no sign of DNS tampering.&lt;/p&gt;
+
+&lt;p&gt;TE Data ISP redirected the user visiting &lt;code&gt;http://xnxx.com/&lt;/code&gt; (34th most visited
+website in Egypt according to Alexa statistics) to
+&lt;code&gt;http://go.ad2upapp.com/afu.php?id=723454&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;HTTP headers curl output &lt;code&gt;http://xnxx.com/&lt;/code&gt; in Noor ISP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Rebuilt URL to: http://xnxx.com/
+* Hostname was NOT found in DNS cache
+*   Trying 141.0.174.38...
+* Connected to xnxx.com (141.0.174.38) port 80 (#0)
+&amp;gt; HEAD / HTTP/1.1
+&amp;gt; User-Agent: curl/7.35.0
+&amp;gt; Host: xnxx.com
+&amp;gt; Accept: */*
+&amp;gt;
+&amp;lt; HTTP/1.1 307 Temporary Redirect
+&amp;lt; Location: http://go.ad2upapp.com/afu.php?id=723454
+&amp;lt; Connection: close
+&amp;lt;
+* Closing connection 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Noor ISP redirected the user visiting &lt;code&gt;http://xhamster.com/&lt;/code&gt; (53th most visited
+website in Egypt according to Alexa statistics) to &lt;code&gt;http://adf.ly/1cqbTY&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;HTTP headers curl output of &lt;code&gt;http://xhamster.com/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*   Trying 88.208.18.30...
+* Connected to xhamster.com (88.208.18.30) port 80 (#0)
+&amp;gt; HEAD / HTTP/1.1
+&amp;gt; Host: xhamster.com
+&amp;gt; User-Agent: curl/7.47.0
+&amp;gt; Accept: */*
+&amp;gt;
+&amp;lt; HTTP/1.1 307 Temporary Redirect
+&amp;lt; Location: http://adf.ly/1cqbTY
+&amp;lt; Connection: close
+&amp;lt;
+* Closing connection 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;XXX: do we want to stress that similarity of the technical implementation of the redirection suggests that TE Data is actually injecting ADs in IP Transit traffic of other ISPs? OTOH, we have no strong evidence besides similarity.&lt;/p&gt;
+
+&lt;h2 id=&#34;technical-analysis-1&#34;&gt;Technical analysis&lt;/h2&gt;
+
+&lt;p&gt;The complete and detailed technical analysis of the injected malware and advertisemensts in TCP connections can be found in the &lt;a href=&#34;#eg-serving-malware-instead-of-porn&#34;&gt;appendix section&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;[Detailed analysis of (&lt;a href=&#34;https://gist.github.com/darkk/34380edb0066d616314c6159b4c1f3d0&#34;&gt;https://gist.github.com/darkk/34380edb0066d616314c6159b4c1f3d0&lt;/a&gt;)
+in specific (mobile) user agents.
+XXX: Can we add this gist to the ooni-web repo as is?
+&amp;ndash; darkk@ why not? Here is the notebook &lt;a href=&#34;http://darkk.net.ru/garbage/2016-ooni-egypt/mads.ipynb&#34;&gt;http://darkk.net.ru/garbage/2016-ooni-egypt/mads.ipynb&lt;/a&gt;
+as .md with images: &lt;a href=&#34;http://darkk.net.ru/garbage/2016-ooni-egypt/mads.zip&#34;&gt;http://darkk.net.ru/garbage/2016-ooni-egypt/mads.zip&lt;/a&gt;
+converted to static HTML: &lt;a href=&#34;http://darkk.net.ru/garbage/2016-ooni-egypt/mads.html&#34;&gt;http://darkk.net.ru/garbage/2016-ooni-egypt/mads.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h1&gt;
+
+&lt;p&gt;OONI findings in Egypt revealed censorship of a media website, blocking of
+services and malicious TCP injections of advertisements and malware content.
+ISPs in Egypt are using DPI, TCP injections and network throttling to block
+resources, censor websites and serve advertisements and malware to internet
+users. You can bypass the censorship and blocking through the use of
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; and the &lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34;&gt;Tor Browser&lt;/a&gt;. Users in mobile
+networks can use &lt;a href=&#34;https://www.torproject.org/docs/android.html.en&#34;&gt;Orbot&lt;/a&gt; (Tor
+on Android) to access the web or other mobile applications by using the VPN
+mode of Orbot which enables all apps on the device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor
+network&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
+
+&lt;p&gt;OONI would like to thank anonymous contributors that reported and shared
+evidence to document these incidents including but not limited to the cypherpunk
+who asked to be identified by the following hashsum: &amp;lsquo;AAAAA4A2AAAAA3AAAAAAAAAAAAAAAA2AAA253AAA2A37AAA5A3A5AAAAAA5AAAAAAAA6A4A6AA46AAAAAAAA5AAAAA5AAAAAAAAAAAA=&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash; darkk@ we&amp;rsquo;ll know exact hashsum as soon as we&amp;rsquo;ll have the publication dated as the date is part of &amp;ldquo;certificate&amp;rdquo;&lt;/p&gt;
+
+&lt;h1 id=&#34;appendix&#34;&gt;Appendix&lt;/h1&gt;
+
+&lt;h1 id=&#34;eg-vs-digitalocean&#34;&gt;EG vs. DigitalOcean&lt;/h1&gt;
+
+&lt;p&gt;In August 2016 we&amp;rsquo;ve seen claims that encrypted connection from Egypt to DigitalOcean hosts are heavily throttled.&lt;/p&gt;
+
+&lt;p&gt;Based on our testing, the &lt;code&gt;digitalocean.pcap&lt;/code&gt; file contains the record of several thousand attempts to establish HTTPS connection to &lt;a href=&#34;https://alexmerkel.com&#34;&gt;alexmerkel.com&lt;/a&gt; from an Egyptian ISP.&lt;/p&gt;
+
+&lt;h2 id=&#34;massaging-the-data&#34;&gt;Massaging the data&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;!tshark -r digitalocean.pcap -n -T fields \
+  -e frame.number \
+  -e frame.time_epoch \
+  -e tcp.flags.str \
+  -e tcp.srcport -e tcp.dstport \
+  -e tcp.seq -e tcp.ack \
+  -e tcp.options.timestamp.tsval -e tcp.options.timestamp.tsecr &amp;gt;pcap.tsv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;RST&lt;/code&gt; packets from our host have no &lt;a href=&#34;https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_timestamps&#34;&gt;TCP timestamp&lt;/a&gt; options, so it&amp;rsquo;s easier to filter them out when they don&amp;rsquo;t provide any valuable information.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;!set -o xtrace; awk &#39;!($$5 == 443 &amp;amp;&amp;amp; $$3 == &amp;quot;*********R**&amp;quot;)&#39; pcap.tsv &amp;gt;good.tsv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;+ awk !($5 == 443 &amp;amp;&amp;amp; $3 == &amp;quot;*********R**&amp;quot;) pcap.tsv 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;!wc -l pcap.tsv good.tsv
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;  196941 pcap.tsv 
+  196922 good.tsv 
+  393863 total 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The dump has ~200k packets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+import numpy as np
+import datetime
+import matplotlib
+import matplotlib.pylab as plt
+fromtimestamp = datetime.datetime.fromtimestamp
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;head = &#39;no time_epoch flags srcport dstport seq ack tsval tsecr&#39;.split()
+types =  [np.uint32, np.float64, str, np.uint16, np.uint16, np.uint32, np.uint32, np.uint32, np.uint32]
+d = pd.read_csv(&#39;good.tsv&#39;, delimiter=&#39;\t&#39;,
+            names=head,
+            dtype=dict(zip(head, types)))
+d.time_epoch -= d.time_epoch.min() # to see milliseconds better
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are some TCP packets arriving from the server. It&amp;rsquo;s possible to use TCP timestamps to understand RTT to the server better as server echoes last seen client&amp;rsquo;s TCP timestamp back. PCAPs contain the exact wall clock timestamp corresponding to the client&amp;rsquo;s TCP timestamp which makes it possible to estimate RTT.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;smpl = (54832, 15126214) # just a sample
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;resp = d[d.srcport == 443]
+resp = resp.drop_duplicates([&#39;dstport&#39;, &#39;tsecr&#39;], keep=&#39;first&#39;)
+resp = resp.set_index([&#39;dstport&#39;, &#39;tsecr&#39;], verify_integrity=True)
+resp.index.rename([&#39;port&#39;, &#39;tcpts&#39;], inplace=True)
+rs = resp.loc[smpl]
+rs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;no                   30313
+time_epoch         1723.59
+flags         *******A****
+srcport                443
+seq                      1
+ack                    297
+tsval            241524960
+Name: (54832, 15126214), dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;req = d[d.dstport == 443]
+req[(req.srcport == smpl[0]) &amp;amp; (req.tsval == smpl[1])]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;no&lt;/th&gt;
+      &lt;th&gt;time_epoch&lt;/th&gt;
+      &lt;th&gt;flags&lt;/th&gt;
+      &lt;th&gt;srcport&lt;/th&gt;
+      &lt;th&gt;dstport&lt;/th&gt;
+      &lt;th&gt;seq&lt;/th&gt;
+      &lt;th&gt;ack&lt;/th&gt;
+      &lt;th&gt;tsval&lt;/th&gt;
+      &lt;th&gt;tsecr&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;30289&lt;/th&gt;
+      &lt;td&gt;30294&lt;/td&gt;
+      &lt;td&gt;1722.474151&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;54832&lt;/td&gt;
+      &lt;td&gt;443&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;15126214&lt;/td&gt;
+      &lt;td&gt;241524681&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;30290&lt;/th&gt;
+      &lt;td&gt;30295&lt;/td&gt;
+      &lt;td&gt;1722.475029&lt;/td&gt;
+      &lt;td&gt;*******AP***&lt;/td&gt;
+      &lt;td&gt;54832&lt;/td&gt;
+      &lt;td&gt;443&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;15126214&lt;/td&gt;
+      &lt;td&gt;241524681&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Several TCP packets &lt;em&gt;may&lt;/em&gt; have the same timestamp as the TCP clock resolution is not very high. For example, Linux determines TCP timestamp resolution based on &lt;code&gt;HZ&lt;/code&gt; variable, one of common &lt;code&gt;HZ&lt;/code&gt; values is 250, which leads to &lt;code&gt;4ms&lt;/code&gt; precision of TCP timestamp.&lt;/p&gt;
+
+&lt;p&gt;The following code takes the very first packet in a packet series with the same TCP timestamp and creates a table to calculate RTT.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;req = d[d.dstport == 443]
+req = req.drop_duplicates([&#39;srcport&#39;, &#39;tsval&#39;], keep=&#39;first&#39;)
+req = req.set_index([&#39;srcport&#39;, &#39;tsval&#39;], verify_integrity=True) # cross-verify with `first`
+req.index.rename([&#39;port&#39;, &#39;tcpts&#39;], inplace=True)
+req.loc[smpl]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;no                   30294
+time_epoch         1722.47
+flags         *******A****
+dstport                443
+seq                      1
+ack                      1
+tsecr            241524681
+Name: (54832, 15126214), dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;RTT for every reply is calculated &lt;a href=&#34;https://en.wikipedia.org/wiki/Join_%28SQL%29&#34;&gt;joining&lt;/a&gt; corresponding request to it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prod = resp.join(req, lsuffix=&#39;_resp&#39;, rsuffix=&#39;_req&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;req.shape, resp.shape, prod.shape
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;((187997, 7), (5976, 7), (5976, 14))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Every response gets a corresponding request which is not surprising as tcpdump running at client have not missed any requests. Only 3% of TCP requests got some TCP reply.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;prod.loc[smpl][[&#39;time_epoch_req&#39;, &#39;time_epoch_resp&#39;]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;time_epoch_req     1722.47
+time_epoch_resp    1723.59
+Name: (54832, 15126214), dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So pre-processing is done and actual RTT values can be studied now.&lt;/p&gt;
+
+&lt;h2 id=&#34;tcp-timestamps-give-us-some-clue-regarding-rtt&#34;&gt;TCP Timestamps give us some clue regarding RTT&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;delay = (prod.time_epoch_resp - prod.time_epoch_req)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;delay[delay &amp;lt; 10].hist(bins=50)
+plt.xlabel(&#39;Delay, s&#39;)
+plt.ylabel(&#39;`reply` packets&#39;) ;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_24_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It looks like usual RTT of TCP re-transmissions: the very first re-transmission happens after one second as soon as there is no data to calculate better RTO (re-transmission timeout) at this moment. Another possibility is that it&amp;rsquo;s a real link latency, but this hypothesis is refuted by plain &lt;code&gt;ping&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s look at the histogram with a bit different resolution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fig = plt.figure()
+fig.set_figwidth(15)
+fig.set_figheight(3)
+for i, ndx in enumerate([delay &amp;lt; 1.5, (delay &amp;gt;= 1.5) &amp;amp; (delay &amp;lt; 7.5), delay &amp;gt;= 7.5]):
+    ax = fig.add_subplot(1, 3, i+1)
+    delay[ndx].hist(bins=50, ax=ax)
+    ax.set_xlabel(&#39;Delay, s&#39;)
+    ax.set_ylabel(&#39;&amp;quot;reply&amp;quot; packets&#39;) ;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_26_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;bufferbloat-or-dropped-packet&#34;&gt;Bufferbloat or dropped packet?&lt;/h2&gt;
+
+&lt;p&gt;Another possible explanation of packet delay is the &lt;a href=&#34;https://en.wikipedia.org/wiki/Bufferbloat&#34;&gt;Bufferbloat effect&lt;/a&gt;. In this case there will be a router between the client and the server causing significant latency. It&amp;rsquo;s hard to estimate this latency precisely, but it&amp;rsquo;s possible to estimate the &lt;em&gt;variance&lt;/em&gt; of the latency assuming that the server TCP Timestamp clock is ticking in a linear fashion, and that&amp;rsquo;s true at least for Linux servers.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;resp = d[d.srcport == 443]
+plt.scatter(map(fromtimestamp, resp.time_epoch), resp.tsval, marker=&#39;.&#39;)
+plt.xlim(fromtimestamp(resp.time_epoch.min() - 60), fromtimestamp(resp.time_epoch.max() + 60))
+plt.xlabel(&#39;Client unix clock&#39;)
+plt.ylabel(&#39;Server TCP timestamp&#39;)
+plt.axes().xaxis.set_major_formatter(matplotlib.dates.DateFormatter(&#39;%H:%M&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_29_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, it looks pretty linear. It&amp;rsquo;s possible to estimate tick length &amp;amp; clock offset of TCP timestamps fitting simple linear model to the data.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Whoa! Machine learning!
+slope, inters = np.linalg.lstsq(np.vstack([resp.tsval, np.ones_like(resp.tsval)]).T, resp.time_epoch)[0]
+print &#39;One TCP Timestamp tick is %f ms, HZ ~%d&#39; % (slope, 1 / slope)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;One TCP Timestamp tick is 0.004000 ms, HZ ~250
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fiterr = resp.time_epoch - (resp.tsval * slope + inters)
+
+plt.scatter(map(fromtimestamp, resp.time_epoch), fiterr, marker=&#39;.&#39;)
+plt.xlim(fromtimestamp(resp.time_epoch.min() - 60), fromtimestamp(resp.time_epoch.max() + 60))
+plt.xlabel(&#39;Client unix clock&#39;)
+plt.ylabel(u&#39;Client − Server (prediction), seconds&#39;)
+plt.axes().xaxis.set_major_formatter(matplotlib.dates.DateFormatter(&#39;%H:%M&#39;))
+plt.grid(True)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_32_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;fiterr.describe().apply(lambda x: &#39;%.4f&#39; % x)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;count    6864.0000
+mean       -0.0000
+std         0.0024
+min        -0.0036
+25%        -0.0013
+50%        -0.0003
+75%         0.0007
+max         0.0543
+dtype: object
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.Series(fiterr).hist(bins=100)
+plt.xlabel(u&#39;Client − Server (prediction), seconds&#39;)
+plt.ylabel(&#39;`reply` packets&#39;) ;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_34_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As such, the difference between prediction and the actual wall clock is quite low. Given the assumption that the server TCP Timestamp ticks uniformly with 250 Hz frequency it means that RTT between the client and the server is quite stable, so RTT delay is &lt;em&gt;not&lt;/em&gt; caused by bufferbloat due to RTT peaks at ~2s, ~3s, ~4s. Bufferbloat causing that large delay would produce much larger &lt;code&gt;fiterr&lt;/code&gt; variance. This means that:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;all the packets the client gets are usual TCP retransmissions bypassing the filter&lt;/li&gt;
+&lt;li&gt;no &amp;ldquo;original transmissions&amp;rdquo; bypass the filter&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The above analysis refutes the hypothesis of the throttling
+caused by Bufferbloat.&lt;/p&gt;
+
+&lt;h1 id=&#34;eg-serving-malware-instead-of-porn&#34;&gt;EG serving malware instead of porn&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+import numpy as np
+import functools
+from matplotlib import pylab as plt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;%matplotlib inline
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;data-massage&#34;&gt;Data massage&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;!tshark -2 -r mads-141.0.174.38.pcap -Tfields \
+    -eframe.time_epoch \
+    -eip.id -e ip.ttl -e ip.dst \
+    -etcp.srcport -etcp.dstport -etcp.len -etcp.stream -etcp.seq -etcp.ack -etcp.flags.str -etcp.window_size \
+    -etcp.options.timestamp.tsval -etcp.options.timestamp.tsecr \
+    -etcp.analysis.initial_rtt -etcp.analysis.ack_rtt \
+    -ehttp.host -ehttp.response.code -ehttp.user_agent -ehttp.location \
+    &amp;gt; mads-141.0.174.38.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data = pd.read_csv(&#39;./mads-141.0.174.38.txt&#39;, delimiter=&#39;\t&#39;,
+            names=
+                (&#39;time_epoch id ttl dst srcport dstport len stream seq ack flags window_size &#39;
+                &#39;tsval tsecr initial_rtt ack_rtt host code user_agent location&#39;).split())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data[&#39;intid&#39;] = data.id.apply(functools.partial(int, base=16))
+data.time_epoch -= data.time_epoch.min()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data.sample(1).T
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;2072&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;time_epoch&lt;/th&gt;
+      &lt;td&gt;2351.17&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;id&lt;/th&gt;
+      &lt;td&gt;0x00006818&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ttl&lt;/th&gt;
+      &lt;td&gt;64&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;dst&lt;/th&gt;
+      &lt;td&gt;141.0.174.38&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;srcport&lt;/th&gt;
+      &lt;td&gt;37546&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;dstport&lt;/th&gt;
+      &lt;td&gt;80&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;len&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;stream&lt;/th&gt;
+      &lt;td&gt;211&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;seq&lt;/th&gt;
+      &lt;td&gt;126&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ack&lt;/th&gt;
+      &lt;td&gt;414&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;flags&lt;/th&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;window_size&lt;/th&gt;
+      &lt;td&gt;30336&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;tsval&lt;/th&gt;
+      &lt;td&gt;945408&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;tsecr&lt;/th&gt;
+      &lt;td&gt;3.10169e+09&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;initial_rtt&lt;/th&gt;
+      &lt;td&gt;0.091312&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ack_rtt&lt;/th&gt;
+      &lt;td&gt;2.5e-05&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;host&lt;/th&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;code&lt;/th&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;user_agent&lt;/th&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;location&lt;/th&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;intid&lt;/th&gt;
+      &lt;td&gt;26648&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;len(data.stream.unique())
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;494
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data.host.value_counts()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;xnxx.com        493
+www.xnxx.com      1
+Name: host, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;www.xnxx.com&lt;/code&gt; stream is not really interesting as it&amp;rsquo;s just a single webpage that occasionally hit the dataset.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data.location.value_counts()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.xnxx.com/                 477
+http://marketing-sv.com/mads.html      6
+Name: location, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There are three different sorts of streams in the dataset.
+&lt;em&gt;Good&lt;/em&gt; streams get correct redirect, &lt;em&gt;bad&lt;/em&gt; streams get injection, &lt;em&gt;ugly&lt;/em&gt; streams get no redirect at all.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;s_good = set(data[data.location == &#39;http://www.xnxx.com/&#39;].stream)
+s_bad = set(data[data.location == &#39;http://marketing-sv.com/mads.html&#39;].stream)
+s_ugly = set(data[data.host == &#39;xnxx.com&#39;].stream) - set(data[~data.location.isnull()].stream)
+print &#39;Bad:&#39;, sorted(s_bad)
+print &#39;Ugly:&#39;, sorted(s_ugly)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Bad: [117, 268, 274, 278, 287, 294]
+Ugly: [110, 116, 121, 269, 279, 281, 282, 291, 292, 296]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;rtt-to-http-response-for-good-bad-streams&#34;&gt;RTT to HTTP response for &lt;em&gt;good&lt;/em&gt; &amp;amp; &lt;em&gt;bad&lt;/em&gt; streams&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data[(data.stream.isin(s_good)) &amp;amp; (~data.code.isnull())].ack_rtt.hist(color=&#39;green&#39;, normed=True)
+data[(data.stream.isin(s_bad)) &amp;amp; (~data.code.isnull())].ack_rtt.hist(color=&#39;red&#39;, normed=True)
+plt.xlabel(&#39;RTT, s&#39;); plt.ylabel(&#39;Density&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_15_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are not so much streams outside of 250ms range, so let&amp;rsquo;s look at high-res histograms at that range.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data[(data.stream.isin(s_good)) &amp;amp; (~data.code.isnull())].ack_rtt.hist(bins=np.linspace(0, 0.25, 25), color=&#39;green&#39;)
+plt.xlabel(&#39;RTT, s&#39;); plt.ylabel(&#39;Count&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_17_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data[(data.stream.isin(s_bad)) &amp;amp; (~data.code.isnull())].ack_rtt.hist(bins=np.linspace(0, 0.25, 25), color=&#39;red&#39;)
+plt.xlabel(&#39;RTT, s&#39;); plt.ylabel(&#39;Count&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_18_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We have only six samples of injected redirects, but five of these samples have significantly lower RTT than the usual RTT of http response. The ~45ms RTT corresponds well to the latency of last-mile ADSL link that was used during this analysis, so it is close to latency to get a packet from ISP&amp;rsquo;s network.&lt;/p&gt;
+
+&lt;h2 id=&#34;let-the-good-streams-roll&#34;&gt;Let the good streams roll&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;d_good = data[data.stream.isin(s_good) &amp;amp; (data.srcport == 80)]
+d_good[d_good.tsval.isnull()].shape
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;(0, 21)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, good data from server &lt;strong&gt;always&lt;/strong&gt; has TCP timestamp, there are no rows in the slice.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;d_good.ttl.value_counts()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;54    1447
+Name: ttl, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, good data from server &lt;strong&gt;always&lt;/strong&gt; has &lt;code&gt;TTL=54&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let&amp;rsquo;s look at &lt;a href=&#34;https://en.wikipedia.org/wiki/IPv4#Identification&#34;&gt;IP fragment ID&lt;/a&gt; field:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;dsa = d_good[d_good.flags == &#39;*******A**S*&#39;]
+plt.scatter(dsa.time_epoch, dsa.intid, marker=&#39;.&#39;)
+plt.xlabel(&#39;Time since 1st packet, s&#39;); plt.ylabel(&#39;IP ID&#39;)
+plt.title(&#39;IP ID for SYN-ACK packets from server&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_25_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;dsa = d_good[d_good.flags != &#39;*******A**S*&#39;]
+
+fig = plt.figure(); fig.set_figwidth(15); fig.set_figheight(3)
+
+ax = fig.add_subplot(1, 2, 1)
+ax.scatter(dsa.time_epoch, dsa.intid, marker=&#39;.&#39;)
+ax.set_xlabel(&#39;Time since 1st packet, s&#39;); ax.set_ylabel(&#39;IP frag. ID&#39;)
+ax.set_title(&#39;IP ID for non-SYN-ACK packets from server&#39;);
+
+ax = fig.add_subplot(1, 2, 2)
+dsa.intid.hist(bins=32, ax=ax)
+ax.set_xlim(0, 2**16)
+ax.set_xlabel(&#39;IP frag. ID&#39;); ax.set_ylabel(&#39;Packets&#39;)
+ax.set_title(&#39;IP ID for non-SYN-ACK packets from server&#39;);
+
+print &#39;Min/Max IP ID observed for non-SYN-ACK packets:&#39;, dsa.intid.min(), dsa.intid.max()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Min/Max IP ID observed for non-SYN-ACK packets: 79 65340
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_26_1.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Good server replies with &lt;code&gt;IP-ID=0&lt;/code&gt; in &lt;code&gt;SYN-ACK&lt;/code&gt; and almost never has &lt;code&gt;IP-ID=0&lt;/code&gt; in other packets, IP-ID is rather random for other packets.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;plt.scatter(d_good.time_epoch, d_good.window_size)
+plt.xlabel(&#39;Time since 1st packet, s&#39;); plt.ylabel(&#39;TCP Window, bytes&#39;);
+plt.title(&#39;TCP Window announced by server&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;output_28_0.png&#34; alt=&#34;png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Good server has window size in 25k…31k range (scaling is applied).&lt;/p&gt;
+
+&lt;h2 id=&#34;bisect-bad-streams-one-by-one&#34;&gt;Bisect bad streams one-by-one&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print sorted(s_bad)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;[117, 268, 274, 278, 287, 294]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;d_bad = data[data.stream.isin(s_bad) &amp;amp; (data.srcport == 80)]
+d_bad[&#39;time_epoch stream id ttl len seq ack flags window_size tsval ack_rtt&#39;.split()].sort_values(by=[&#39;stream&#39;, &#39;time_epoch&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;time_epoch&lt;/th&gt;
+      &lt;th&gt;stream&lt;/th&gt;
+      &lt;th&gt;id&lt;/th&gt;
+      &lt;th&gt;ttl&lt;/th&gt;
+      &lt;th&gt;len&lt;/th&gt;
+      &lt;th&gt;seq&lt;/th&gt;
+      &lt;th&gt;ack&lt;/th&gt;
+      &lt;th&gt;flags&lt;/th&gt;
+      &lt;th&gt;window_size&lt;/th&gt;
+      &lt;th&gt;tsval&lt;/th&gt;
+      &lt;th&gt;ack_rtt&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1188&lt;/th&gt;
+      &lt;td&gt;1589.229151&lt;/td&gt;
+      &lt;td&gt;117&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.100932e+09&lt;/td&gt;
+      &lt;td&gt;0.103577&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1191&lt;/th&gt;
+      &lt;td&gt;1589.274511&lt;/td&gt;
+      &lt;td&gt;117&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;213&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.045109&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1193&lt;/th&gt;
+      &lt;td&gt;1589.374932&lt;/td&gt;
+      &lt;td&gt;117&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;214&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.099951&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1226&lt;/th&gt;
+      &lt;td&gt;1709.330761&lt;/td&gt;
+      &lt;td&gt;117&lt;/td&gt;
+      &lt;td&gt;0x00003f9c&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;26000&lt;/td&gt;
+      &lt;td&gt;3.101052e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2583&lt;/th&gt;
+      &lt;td&gt;2705.941551&lt;/td&gt;
+      &lt;td&gt;268&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.102049e+09&lt;/td&gt;
+      &lt;td&gt;0.110307&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2586&lt;/th&gt;
+      &lt;td&gt;2705.987294&lt;/td&gt;
+      &lt;td&gt;268&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;248&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.045296&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2588&lt;/th&gt;
+      &lt;td&gt;2706.086246&lt;/td&gt;
+      &lt;td&gt;268&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;249&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.097518&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2655&lt;/th&gt;
+      &lt;td&gt;2826.044916&lt;/td&gt;
+      &lt;td&gt;268&lt;/td&gt;
+      &lt;td&gt;0x0000ee27&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;26000&lt;/td&gt;
+      &lt;td&gt;3.102169e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2649&lt;/th&gt;
+      &lt;td&gt;2816.015924&lt;/td&gt;
+      &lt;td&gt;274&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.102159e+09&lt;/td&gt;
+      &lt;td&gt;0.103654&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2652&lt;/th&gt;
+      &lt;td&gt;2816.059978&lt;/td&gt;
+      &lt;td&gt;274&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;135&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.043669&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2654&lt;/th&gt;
+      &lt;td&gt;2816.158736&lt;/td&gt;
+      &lt;td&gt;274&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;136&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.097502&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2668&lt;/th&gt;
+      &lt;td&gt;2936.120685&lt;/td&gt;
+      &lt;td&gt;274&lt;/td&gt;
+      &lt;td&gt;0x0000b7b4&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;26000&lt;/td&gt;
+      &lt;td&gt;3.102279e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2689&lt;/th&gt;
+      &lt;td&gt;3010.763798&lt;/td&gt;
+      &lt;td&gt;278&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.102353e+09&lt;/td&gt;
+      &lt;td&gt;0.105807&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2692&lt;/th&gt;
+      &lt;td&gt;3010.808310&lt;/td&gt;
+      &lt;td&gt;278&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;204&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.043931&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2695&lt;/th&gt;
+      &lt;td&gt;3010.907740&lt;/td&gt;
+      &lt;td&gt;278&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;205&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.098339&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2721&lt;/th&gt;
+      &lt;td&gt;3130.868194&lt;/td&gt;
+      &lt;td&gt;278&lt;/td&gt;
+      &lt;td&gt;0x0000635e&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.102473e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2810&lt;/th&gt;
+      &lt;td&gt;3368.165062&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.102711e+09&lt;/td&gt;
+      &lt;td&gt;0.267423&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2813&lt;/th&gt;
+      &lt;td&gt;3368.370601&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;199&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.205282&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2815&lt;/th&gt;
+      &lt;td&gt;3368.389520&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;200&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.018347&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2834&lt;/th&gt;
+      &lt;td&gt;3488.267293&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x0000004f&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;26000&lt;/td&gt;
+      &lt;td&gt;3.102831e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2901&lt;/th&gt;
+      &lt;td&gt;3843.076695&lt;/td&gt;
+      &lt;td&gt;294&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.103186e+09&lt;/td&gt;
+      &lt;td&gt;0.101271&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2904&lt;/th&gt;
+      &lt;td&gt;3843.120540&lt;/td&gt;
+      &lt;td&gt;294&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;216&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.043557&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2907&lt;/th&gt;
+      &lt;td&gt;3843.220894&lt;/td&gt;
+      &lt;td&gt;294&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;217&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.099845&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2964&lt;/th&gt;
+      &lt;td&gt;3963.177494&lt;/td&gt;
+      &lt;td&gt;294&lt;/td&gt;
+      &lt;td&gt;0x00009fdf&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;26000&lt;/td&gt;
+      &lt;td&gt;3.103306e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So, all packets that look-like-injected have:
+- IP-ID=0x3412
+- IP TTL=59
+- no TCP options&lt;/p&gt;
+
+&lt;p&gt;The server also sends &lt;code&gt;408 Request timeout&lt;/code&gt; in 120 seconds. It means, that the server has not seen the request at all, so the injector act as an in-band device.&lt;/p&gt;
+
+&lt;p&gt;Also ACK that is confirming FIN-ACK is looks like injected according to IP ID and TTL, but it has &lt;strong&gt;weird RTT&lt;/strong&gt; (~98ms, but not ~44ms).&lt;/p&gt;
+
+&lt;h3 id=&#34;stream-287&#34;&gt;Stream 287&lt;/h3&gt;
+
+&lt;p&gt;That&amp;rsquo;s injected stream that has ~200ms latency. On the other hand, &lt;em&gt;genuine&lt;/em&gt; SYN-ACK from the server also has larger-than-usual RTT, so it&amp;rsquo;s probably just a temporary Bufferbloat lag.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;d_bad[d_bad.stream == 287][&#39;time_epoch stream id ttl len seq ack flags window_size tsval ack_rtt&#39;.split()]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;time_epoch&lt;/th&gt;
+      &lt;th&gt;stream&lt;/th&gt;
+      &lt;th&gt;id&lt;/th&gt;
+      &lt;th&gt;ttl&lt;/th&gt;
+      &lt;th&gt;len&lt;/th&gt;
+      &lt;th&gt;seq&lt;/th&gt;
+      &lt;th&gt;ack&lt;/th&gt;
+      &lt;th&gt;flags&lt;/th&gt;
+      &lt;th&gt;window_size&lt;/th&gt;
+      &lt;th&gt;tsval&lt;/th&gt;
+      &lt;th&gt;ack_rtt&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2810&lt;/th&gt;
+      &lt;td&gt;3368.165062&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x00000000&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A**S*&lt;/td&gt;
+      &lt;td&gt;28960&lt;/td&gt;
+      &lt;td&gt;3.102711e+09&lt;/td&gt;
+      &lt;td&gt;0.267423&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2813&lt;/th&gt;
+      &lt;td&gt;3368.370601&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;199&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.205282&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2815&lt;/th&gt;
+      &lt;td&gt;3368.389520&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x00003412&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;101&lt;/td&gt;
+      &lt;td&gt;200&lt;/td&gt;
+      &lt;td&gt;*******A****&lt;/td&gt;
+      &lt;td&gt;513920&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;0.018347&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2834&lt;/th&gt;
+      &lt;td&gt;3488.267293&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;0x0000004f&lt;/td&gt;
+      &lt;td&gt;54&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;*******A***F&lt;/td&gt;
+      &lt;td&gt;26000&lt;/td&gt;
+      &lt;td&gt;3.102831e+09&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The interesting thing about this stream is that ACK confirming FIN-ACK has 18ms ACK_RTT, so it actually means that the packet was likely sent &lt;strong&gt;BEFORE&lt;/strong&gt; seeing the FIN from the client as the last-mile RTT is ~38ms according to &lt;code&gt;mtr&lt;/code&gt; measurements.&lt;/p&gt;
+
+&lt;p&gt;If the statement is actually true, then another question arises: why is ACK-confirming-FIN-ACK usually ~98ms delayed? Is it triggered by some packet from original server? Is it sort of latency camouflage? No further research was done yet to clarify these questions.&lt;/p&gt;
+
+&lt;h2 id=&#34;ugly-streams&#34;&gt;Ugly streams&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;d_ugly = data[data.stream.isin(s_ugly) &amp;amp; (data.srcport == 80)]
+d_ugly.groupby(by=&#39;stream tsecr&#39;.split()).time_epoch.agg([&#39;count&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;div&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;count&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;stream&lt;/th&gt;
+      &lt;th&gt;tsecr&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;110&lt;/th&gt;
+      &lt;th&gt;614915.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;614943.0&lt;/th&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;116&lt;/th&gt;
+      &lt;th&gt;747274.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;747297.0&lt;/th&gt;
+      &lt;td&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;121&lt;/th&gt;
+      &lt;th&gt;786823.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;786847.0&lt;/th&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;269&lt;/th&gt;
+      &lt;th&gt;1034918.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1034942.0&lt;/th&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;279&lt;/th&gt;
+      &lt;th&gt;1110335.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1110359.0&lt;/th&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;281&lt;/th&gt;
+      &lt;th&gt;1143649.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1143672.0&lt;/th&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;282&lt;/th&gt;
+      &lt;th&gt;1151512.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1151536.0&lt;/th&gt;
+      &lt;td&gt;10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;291&lt;/th&gt;
+      &lt;th&gt;1239517.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1239540.0&lt;/th&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;292&lt;/th&gt;
+      &lt;th&gt;1279490.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1279514.0&lt;/th&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th rowspan=&#34;2&#34; valign=&#34;top&#34;&gt;296&lt;/th&gt;
+      &lt;th&gt;1318977.0&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1319001.0&lt;/th&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It means, that the remote server has seen &lt;code&gt;SYN&lt;/code&gt; packet and the first &lt;code&gt;ACK&lt;/code&gt; after the &lt;code&gt;SYN&lt;/code&gt;, but the server has never seen the request itself. It suggests that the &lt;em&gt;ugly&lt;/em&gt; streams are just a sort of &lt;em&gt;bad&lt;/em&gt; streams those got no redirection packet for some reason.&lt;/p&gt;
+
+&lt;h2 id=&#34;reunion-of-the-bad-and-the-ugly&#34;&gt;Reunion of the bad and the ugly&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s interesting that only mobile User-agents were redirected to the &lt;code&gt;…/mads.html&lt;/code&gt;. Our test sent ~33% of requests using mobile User-Agent and 67% of requests using desktop User-Agent.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;d_goo = data[data.stream.isin(s_bad | s_ugly)]
+d_goo.user_agent.value_counts()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Mozilla/5.0 (Linux; U; Android 4.0.3; de-de; Galaxy S II Build/GRJ22) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30                                                 2
+Mozilla/5.0 (PlayBook; U; RIM Tablet OS 2.1.0; en-US) AppleWebKit/536.2+ (KHTML like Gecko) Version/7.2.1.0 Safari/536.2+                                                                     1
+Mozilla/5.0 (Linux; U; Android 1.5; en-us; SPH-M900 Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1                                                1
+Mozilla/5.0 (Linux; U; Android 2.2; en-us; Sprint APA9292KT Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1                                                1
+Mozilla/5.0 (Linux; U; Android 2.2; en-ca; GT-P1000M Build/FROYO) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1                                                       1
+Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaE6-00/021.002; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.1.16 Mobile Safari/533.4 3gpp-gba    1
+MOTORIZR-Z8/46.00.00 Mozilla/4.0 (compatible; MSIE 6.0; Symbian OS; 356) Opera 8.65 [it] UP.Link/6.3.0.0.0                                                                                    1
+Mozilla/5.0 (Linux; U; Android 1.5; en-gb; T-Mobile_G2_Touch Build/CUPCAKE) AppleWebKit/528.5  (KHTML, like Gecko) Version/3.1.2 Mobile Safari/525.20.1                                       1
+Mozilla/5.0 (iPod; U; CPU iPhone OS 2_2_1 like Mac OS X; en-us) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5H11a Safari/525.20                                             1
+BlackBerry8320/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/100                                                                                                                     1
+Mozilla/5.0 (SymbianOS/9.1; U; en-us) AppleWebKit/413 (KHTML, like Gecko) Safari/413 es50                                                                                                     1
+BlackBerry8300/4.2.2 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/107 UP.Link/6.2.3.15.0                                                                                                  1
+Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/014.002; Profile/MIDP-2.1 Configuration/CLDC-1.1; en-us) AppleWebKit/525 (KHTML, like Gecko) Version/3.0 BrowserNG/7.2.6.4 3gpp-gba           1
+Mozilla/5.0 (Linux; U; Android 2.1; en-us; Nexus One Build/ERD62) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17                                                     1
+Mozilla/5.0 (Linux; U; Android 4.0.3; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/2.1 Mobile Safari/535.19 Silk-Accelerated=true                                    1
+Name: user_agent, dtype: int64
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It explains why OONI dataset sees no redirection. We&amp;rsquo;ve seen redirections only for mobile &lt;code&gt;User-Agent&lt;/code&gt; so probably the DPI targets mobile users.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print &#39;Redirection happens in %.1f%% cases&#39; % (100.*len(s_bad|s_ugly) / len(set(data.stream)))
+
+print &#39;Redirection happens in %.1f%% of mobile cases&#39; % (100.*len(s_bad|s_ugly) / 
+         len(set(data[data.user_agent.str.match(&#39;.*(?:Android|RIM|Symbian|Series60|iPhone|BlackBerry|MIDP)&#39;, as_indexer=True) == True].stream)))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;Redirection happens in 3.2% cases
+Redirection happens in 9.9% of mobile cases
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>OONI Hackathon: Join us to explore internet censorship!</title>
@@ -118,6 +1577,10 @@ past).&lt;/p&gt;
 might need for your next story!&lt;/p&gt;
 
 &lt;p&gt;Hope to see you all soon!&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Thanks to the &lt;a href=&#34;https://www.fordfound.org/&#34;&gt;Ford Foundation&lt;/a&gt; for supporting the OONI team&amp;rsquo;s travel costs.&lt;/p&gt;
 </description>
     </item>
     
@@ -7015,244 +8478,6 @@ for them, even bypassing their parents.&lt;/p&gt;
 
 &lt;p&gt;If I were a parent I would be mad that T-Mobile US chooses for my
 what my child should watch and should not.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/about/data-policy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/about/data-policy/</guid>
-      <description>
-
-&lt;h1 id=&#34;ooni-data-policy&#34;&gt;OONI Data Policy&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Effective:&lt;/strong&gt; 2016-05-05&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Version:&lt;/strong&gt; 1.0.0&lt;/p&gt;
-
-&lt;p&gt;This Data Policy explains what data is collected, processed, stored and
-published by the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference
-(OONI)&lt;/a&gt; project, as well as how users can opt-out
-from sending OONI their network measurements.&lt;/p&gt;
-
-&lt;p&gt;The use of OONI&amp;rsquo;s software and website constitutes an acceptance of the policies
-outlined in this Data Policy.&lt;/p&gt;
-
-&lt;h2 id=&#34;website-visitors&#34;&gt;Website Visitors&lt;/h2&gt;
-
-&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; use tracking cookies, analytics or any other tracking
-technologies through its &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;website&lt;/a&gt; and does &lt;em&gt;not&lt;/em&gt;
-collect any information about its website visitors.&lt;/p&gt;
-
-&lt;p&gt;Access logs, which only include the date of the requested page, can be stored
-for up to 2 weeks and do &lt;em&gt;not&lt;/em&gt; include the IP addresses of website visitors nor
-the time of access.&lt;/p&gt;
-
-&lt;p&gt;If this changes in the future, users will be notified through this Data Policy.&lt;/p&gt;
-
-&lt;h2 id=&#34;software-users&#34;&gt;Software Users&lt;/h2&gt;
-
-&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect user privacy, but is developed by
-people who &lt;em&gt;care&lt;/em&gt; about user privacy. While OONI developers take measures to
-protect users&amp;rsquo; privacy by &lt;em&gt;not&lt;/em&gt; deliberately collecting their IP addresses,
-users might still potentially face risks as a result of OONI&amp;rsquo;s data collection,
-processing, storing and publishing methods, as explained below.&lt;/p&gt;
-
-&lt;p&gt;To mitigate such potential risks, users can choose to &lt;em&gt;opt-out&lt;/em&gt; from certain or
-all types of data collection by OONI, though this would limit OONI&amp;rsquo;s research.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-collects&#34;&gt;Data OONI Collects&lt;/h3&gt;
-
-&lt;p&gt;When a user runs &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI software
-tests&lt;/a&gt;, the OONI project can
-collect the following types of data:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Country code&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the code which corresponds to the country from which
-the user is running OONI tests from, by automatically searching for it based on
-the user&amp;rsquo;s IP address through the &lt;a href=&#34;https://www.maxmind.com/en/home&#34;&gt;MaxMind GeoIP
-database&lt;/a&gt;. The collection of country codes is
-an important part of OONI&amp;rsquo;s research, as it enables OONI to map out global
-network measurements and to identify where network interferences take place.
-This information could potentially be useful to local researchers, journalists
-and advocates who aim to discover network interferences (such as censorship and
-traffic manipulation) in a country.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of country codes
-by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
-file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Autonomous System Number (ASN)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the Autonomous System Number (ASN) which corresponds
-to the network that a user is running OONI tests from. The collection of the ASN
-is useful to OONI&amp;rsquo;s research because it reveals the specific network provider
-(such as Vodafone) of a user. Such information can increase transparency in
-regards to which network providers are implementing censorship or other forms of
-network interference.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from the collection of their
-network&amp;rsquo;s ASN by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
-configuration&lt;/a&gt;
-file inside of  &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Date and time of measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI &lt;em&gt;by default&lt;/em&gt; collects the time and date of when tests were run. This
-information helps OONI evaluate when network interferences occur and to compare
-them across time. Users &lt;em&gt;cannot&lt;/em&gt; opt-out from this type of data collection, as
-it is a core component of OONI&amp;rsquo;s research.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;IP addresses and other information&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OONI does &lt;em&gt;not&lt;/em&gt; deliberately collect or store users&amp;rsquo; IP addresses. In fact, OONI
-takes measures to remove users&amp;rsquo; IP addresses from the collected measurements, to
-protect its users from potential risks.&lt;/p&gt;
-
-&lt;p&gt;However, OONI might &lt;em&gt;unintentionally&lt;/em&gt; collect users&amp;rsquo; IP addresses and other
-potentially personally-identifiable information, if such information is included
-in the HTTP headers or other metadata of measurements. This, for example, can
-occur if the tested websites include tracking technologies or custom content
-based on a user&amp;rsquo;s network location.&lt;/p&gt;
-
-&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but they can choose to
-&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
-file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Network measurements&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The types of network measurements that OONI collects depend on the types of
-tests that are run. Specifications about each OONI test can be viewed
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;here&lt;/a&gt;, and
-details about what collected network measurements entail can be viewed through
-&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; or through OONI&amp;rsquo;s
-&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;public list of measurements&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;OONI software users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements
-by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-processes&#34;&gt;Data OONI Processes&lt;/h3&gt;
-
-&lt;p&gt;Through its &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;data pipeline&lt;/a&gt;,
-OONI processes all of the network measurements that it collects, which include
-the aforementioned types of data. OONI processes data with the aim of deriving
-meaning from the collected measurements and, specifically, in an attempt to
-answer the following types of questions:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Which types of OONI tests were run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which countries were those tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which networks were those tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When were tests run?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;What types of network interferences occurred?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which countries did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;In which networks did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;When did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;How did network interferences occur?&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To answer such questions, OONI&amp;rsquo;s pipeline is designed to process data which is
-automatically sent to OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
-
-&lt;p&gt;Users can choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI their measurements by running
-ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-stores&#34;&gt;Data OONI Stores&lt;/h3&gt;
-
-&lt;p&gt;OONI stores all of the aforementioned data that it collects and processes,
-including users&amp;rsquo; IP addresses and other potentially personally-identifiable
-information which &lt;em&gt;might unintentionally&lt;/em&gt; be collected and therefore stored,
-despite OONI&amp;rsquo;s efforts to prevent this from happening.&lt;/p&gt;
-
-&lt;p&gt;Users can &lt;em&gt;opt-out&lt;/em&gt; from sending specific types of data to OONI&amp;rsquo;s measurement
-collector as described in previous sections of this Data Policy, or they can
-&lt;em&gt;opt-out&lt;/em&gt; from sending OONI any of their measurements by running ooniprobe with
-the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
-
-&lt;h3 id=&#34;data-ooni-publishes&#34;&gt;Data OONI Publishes&lt;/h3&gt;
-
-&lt;p&gt;OONI publishes all of the network measurement data that it collects and
-processes because open data allows third parties to conduct independent studies,
-to verify OONI findings and/or to answer other research questions.&lt;/p&gt;
-
-&lt;p&gt;Currently, OONI publishes all collected measurements on its website
-through:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI&amp;rsquo;s list of measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Both resources include the same measurements; the only difference is that OONI
-Explorer is an interactive visualization of the measurements.&lt;/p&gt;
-
-&lt;p&gt;If users&amp;rsquo; IP addresses and/or other potentially personally-identifiable
-information are included in the HTTP headers or other metadata of collected
-measurements, then such information &lt;em&gt;might&lt;/em&gt; be publicly available through the
-above resources.&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s important to note that the publication of network measurements might raise
-various types of &lt;em&gt;risks&lt;/em&gt; for OONI users. Information about such risks can be
-found &lt;a href=&#34;INCLUDE LINK&#34;&gt;here&lt;/a&gt;. Users can also consider opting-out from submitting
-some or all of their measurements to OONI through the following opt-out section
-of this Data Policy.&lt;/p&gt;
-
-&lt;h3 id=&#34;opt-out&#34;&gt;Opt-out&lt;/h3&gt;
-
-&lt;p&gt;OONI software users can &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector
-specific types of data by &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;editing the ooniprobe
- configuration&lt;/a&gt;
- file inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;. Through this file, users can opt-out
-from sending OONI the following types of information:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;By default, OONI does &lt;em&gt;not&lt;/em&gt; collect users&amp;rsquo; IP addresses, but users can choose to
-&lt;em&gt;opt-in&lt;/em&gt; (to provide more accurate information) through the above configuration
-file.&lt;/p&gt;
-
-&lt;p&gt;Users can also choose to &lt;em&gt;opt-out&lt;/em&gt; from sending OONI&amp;rsquo;s measurement collector any
-data at all, by running ooniprobe with the &lt;code&gt;-n&lt;/code&gt; command line option. This option
-is quite often chosen by users who prefer to &lt;em&gt;not&lt;/em&gt; have their measurements
-published, due to potential risks that could emerge as a result of such
-publication.&lt;/p&gt;
-
-&lt;h2 id=&#34;data-policy-changes&#34;&gt;Data Policy Changes&lt;/h2&gt;
-
-&lt;p&gt;Although most changes are likely to be minor, OONI may change its Data Policy
-from time to time, and in OONI&amp;rsquo;s sole discretion.&lt;/p&gt;
-
-&lt;p&gt;OONI encourages its website visitors and software users to frequently check this
-page for any changes to its Data Policy. The continued use of OONI&amp;rsquo;s website and
-software after any change in this Data Policy will constitute acceptance of such
-change.&lt;/p&gt;
-
-&lt;p&gt;Thoughts or questions about this Data Policy? Please send an email to
-&lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Key ID:
-    0CB177B7
-Fingerprint:
-4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
