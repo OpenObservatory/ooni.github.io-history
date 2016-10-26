@@ -17,6 +17,8 @@
       <guid>https://ooni.torproject.org/post/berlin-hackathon-2016/</guid>
       <description>
 
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/berlin-hackathon/ooni-berlin-hackathon.png&#34; alt=&#34;HACKOONI16&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Interested in exploring (and exposing) internet censorship? Join the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; hackathon in Berlin!&lt;/p&gt;
 
 &lt;ul&gt;
@@ -36,8 +38,6 @@ particular label, but are curious enough to join! We only have one rule:
 internet censorship around the world. Since 2012, OONI has &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;collected&lt;/a&gt; millions of
 network measurements across more than 100 countries, shedding light on multiple
 cases of censorship and network interference around the world.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/berlin-hackathon/explorer.png&#34; alt=&#34;OONI Explorer&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;But our work is far from done and we need your help! Below you can learn about
 &lt;em&gt;some&lt;/em&gt; of the ways that you can contribute to the fight against internet
