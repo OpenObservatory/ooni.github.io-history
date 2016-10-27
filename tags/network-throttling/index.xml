@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network Throttling on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/network-throttling/</link>
+    <description>Recent content in Network Throttling on OONI: Open Observatory of Network Interference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://ooni.torproject.org/tags/network-throttling/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Egypt: Media censorship, Tor interference, HTTPS throttling and ads injections?</title>
+      <link>https://ooni.torproject.org/post/egypt-network-interference/</link>
+      <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/egypt-network-interference/</guid>
+      <description>
+
+&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Egypt&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Noor (AS 20928), TE Data (AS 8452), Vodafone (AS 24835)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; DPI, network throttling, TCP injections&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OONI tests:&lt;/strong&gt; HTTP Requests, Web Connectivity, Vanilla Tor&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; 2016-08-27 - 2016-10-26&lt;/p&gt;
+
+&lt;p&gt;We recently noticed network anomalies in Egypt and performed a study in an
+attempt to understand the situation.&lt;/p&gt;
+
+&lt;p&gt;Our findings indicate that the Tor anonymity network appeared to be interfered
+with in Egypt, while HTTPS connections to DigitalOcean&amp;rsquo;s Frankfurt data centre
+were throttled. We also found that access to porn sites appeared to be
+interfered with via in-band TCP packet injections of advertisement and malware
+content, and that the blocking of &lt;a href=&#34;https://www.alaraby.co.uk&#34;&gt;The New Arab&lt;/a&gt;
+website led to the blocking of specific content (such as images) of other sites
+that are hosted on the same Content Distribution Network (CDN).&lt;/p&gt;
+
+&lt;p&gt;Below we present our findings based on network measurement tests performed over
+the last two months.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#media-censorship&#34;&gt;&lt;em&gt;Media censorship&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#collateral-damage&#34;&gt;&lt;em&gt;Collateral damage&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#https-throttling&#34;&gt;&lt;em&gt;HTTPS throttling&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#inaccessible-urls&#34;&gt;&lt;em&gt;Inaccessible URLs&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#attempts-to-block-tor&#34;&gt;&lt;em&gt;Attempts to block Tor&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#advertisement-and-malware-injection&#34;&gt;&lt;em&gt;Advertisement and malware injection&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#third-party-tools-curl-showing-injected-content&#34;&gt;&lt;em&gt;Third party tools (curl) showing injected content&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#circumventing-censorship&#34;&gt;&lt;em&gt;Circumventing censorship&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#acknowledgements&#34;&gt;&lt;em&gt;Acknowledgements&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#appendix&#34;&gt;&lt;em&gt;Appendix&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;a-name-media-censorship-a-media-censorship&#34;&gt;&lt;a name=&#34;media-censorship&#34;&gt;&lt;/a&gt; Media censorship&lt;/h1&gt;
+
+&lt;p&gt;The New Arab website &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T230118Z_AS36935_N4hRIq4Ya5raRq0yRrW7dRu9yxeg8m7fgbyNrOd9ugt07uQGK0?input=http:%2F%2Fwww.alaraby.co.uk&#34;&gt;www.alaraby.co.uk&lt;/a&gt;
+and its mirror website &lt;code&gt;www.alarabyaljadeed.co.uk&lt;/code&gt;
+has been blocked in Egypt since 2016-01-05 according to the &lt;a href=&#34;https://www.theguardian.com/media/2016/jan/05/saudi-arabia-uae-egypt-block-access-qatari-news-website&#34;&gt;Guardian&lt;/a&gt;
+news outlet. Similarly, the domain
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T231508Z_AS36935_Cvza90GziUHIFTeK7F5rBLFVIa5nkFKi3X9i3gZ2dpNymzbn69?input=http:%2F%2Fwww.alarabyaljadeed.co.uk&#34;&gt;www.alarabyaljadeed.co.uk&lt;/a&gt;
+pointing to the same website (&lt;code&gt;www.alaraby.co.uk&lt;/code&gt;) has also been blocked. The
+ISPs have not redirected the visitors to any block page or any resource that
+explains the reason of the block. Instead, they appear to have used Deep
+Packet Inspection (DPI) equipment to censor the content of the website. When
+requesting the HTTP version of the websites &lt;code&gt;http://www.alaraby.co.uk&lt;/code&gt; and
+&lt;code&gt;http://www.alarabyaljadeed.co.uk&lt;/code&gt; a response from the middlebox is triggered
+containing a blank webpage as is shown by the following two OONI measurements
+collected on 25th of October 2016:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T220457Z_AS36935_PqOJazEa6I8BzYZ3NrFVEILGKUaVq6fQ4pM9asTMWaQ3MWzqSz?input=http:%2F%2Fwww.alaraby.co.uk&#34;&gt;Blocking of www.alaraby.co.uk via
+HTTP&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T231508Z_AS36935_Cvza90GziUHIFTeK7F5rBLFVIa5nkFKi3X9i3gZ2dpNymzbn69?input=http:%2F%2Fwww.alarabyaljadeed.co.uk&#34;&gt;Blocking of www.alarabyaljadeed.co.uk via
+HTTP&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The request for the HTTPS version of the websites (&lt;code&gt;https://www.alaraby.co.uk&lt;/code&gt;,
+&lt;code&gt;https://www.alarabyaljadeed.co.uk&lt;/code&gt;) times out and no response is received, as
+shown in the following measurement:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161025T225008Z_AS36935_3RV6eZcQFuo4GncFinLXtrb1jlMfTSXZPG8xpWOCgWCPf9DreU?input=https:%2F%2Fwww.alaraby.co.uk&#34;&gt;Timing out of requests to www.alaraby.co.uk via
+HTTPS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;a-name-collateral-damage-a-collateral-damage&#34;&gt;&lt;a name=&#34;collateral-damage&#34;&gt;&lt;/a&gt; Collateral damage&lt;/h2&gt;
+
+&lt;p&gt;In addition to the censorship of the media website The New Arab, this blocking
+has caused some collateral damage to other websites hosted on the same Content
+Delivery Network (CDN).&lt;/p&gt;
+
+&lt;p&gt;The screenshots below illustrate how these websites appeared from an Egyptian
+vantage point (right-side) and when accessed via Tor Browser (left-side):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/egypt-network-interference/viagogo-2016-10-21.png&#34; alt=&#34;http://www.viagogo.com&#34; /&gt;
+&lt;img src=&#34;https://ooni.torproject.org/post/egypt-network-interference/megapixl-2016-10-21.png&#34; alt=&#34;https://www.megapixl.com&#34; /&gt;
+&lt;img src=&#34;https://ooni.torproject.org/post/egypt-network-interference/adiglobal-2016-10-21.png&#34; alt=&#34;https://uk-eshop.adiglobal.com/Pages/default.aspx&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;a-name-https-throttling-a-https-throttling&#34;&gt;&lt;a name=&#34;https-throttling&#34;&gt;&lt;/a&gt; HTTPS throttling&lt;/h1&gt;
+
+&lt;p&gt;Throughout August 2016 we noticed that HTTPS connections to a number of
+services using DigitalOcean&amp;rsquo;s Frankfurt data centre appeared to be presenting
+network connectivity issues from two Egyptian vantage points: Noor ADSL
+(&lt;a href=&#34;https://stat.ripe.net/AS20928&#34;&gt;AS20928&lt;/a&gt;) and Vodafone Egypt (ex-RAYA
+Telecom, &lt;a href=&#34;https://stat.ripe.net/AS24835&#34;&gt;AS24835&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;As part of our research we found that one way to consistently reproduce a
+network interference is by sending HTTPS requests to the network sub-nets
+belonging to DigitalOcean&amp;rsquo;s Frankfurt data center (including, but not limited
+to &lt;code&gt;46.101.128.0/24&lt;/code&gt;, &lt;code&gt;46.101.172.0/24&lt;/code&gt;, &lt;code&gt;46.101.179.0/24&lt;/code&gt; —
+&lt;a href=&#34;https://stat.ripe.net/AS201229&#34;&gt;AS201229&lt;/a&gt;). Our experiment showed consistent
+and heavy throttling of HTTPS services located in the network: only 3% of TCP
+connection attempts succeeded.&lt;/p&gt;
+
+&lt;p&gt;Our latency analysis suggests that all the packets that the client was
+receiving were &lt;a href=&#34;https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Timeout_based_retransmission&#34;&gt;timeout-based TCP
+re-transmissions&lt;/a&gt;
+and that a network device was consistently dropping the first occurrence of
+each TCP packet.&lt;/p&gt;
+
+&lt;p&gt;Non-encrypted protocols on the other hand, like plain HTTP, which hosted
+services in the same sub-nets were not affected. This indicates that only HTTPS
+connections were throttled, while insecure HTTP connections to DigitalOcean&amp;rsquo;s
+Frankfurt data centre were successful.&lt;/p&gt;
+
+&lt;p&gt;Based on our tests, the last sample of throttling that we observed occurred on
+2016-09-01 12:30 UTC.&lt;/p&gt;
+
+&lt;p&gt;The complete and detailed technical analysis can be found
+&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-vs-digitalocean.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-inaccessible-urls-a-inaccessible-urls&#34;&gt;&lt;a name=&#34;inaccessible-urls&#34;&gt;&lt;/a&gt; Inaccessible URLs&lt;/h2&gt;
+
+&lt;p&gt;The HTTPS throttling of services hosted by DigitalOcean&amp;rsquo;s Frankfurt data centre
+led to the inaccessibility of various URLs. These include the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160829T135335Z_AS20928_j3cqNiI8kwkJxby5R3LyH2PnTPgnBJ0rZ3Qx2RClxkQWc9WmOg?input=https:%2F%2F050media.nl&#34;&gt;Blocking of
+https://050media.nl&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160829T134302Z_AS20928_I5cYSYTKoHbYLyKtnogYNPLNcdF7T5PkcmxVs4cfR46ifNiq7z?input=https:%2F%2F33-km.ru&#34;&gt;Blocking of
+https://33-km.ru&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160821T211424Z_AS8452_cZllOWSUFhF2WYmiz0KSH54J1mzkeDIqC5hrClLQ593FGGE3M1?input=https:%2F%2Flaracasts.com&#34;&gt;Blocking of
+https://laracasts.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As well as the following URLs: &lt;code&gt;https://antoniomarques.eu&lt;/code&gt;,
+&lt;code&gt;https://akombakom.net&lt;/code&gt;, &lt;code&gt;https://anadoluefessk.org&lt;/code&gt;, &lt;code&gt;https://alexmerkel.com&lt;/code&gt;,
+&lt;code&gt;https://alexmerkel.me&lt;/code&gt;, &lt;code&gt;https://alexmerkel.xyz&lt;/code&gt;. The raw JSON OONI
+measurements file (25Mb size) of these URLs can be found
+&lt;a href=&#34;https://measurements.ooni.torproject.org/2016-08-31/20160830T125839Z-EG-AS20928-web_connectivity-no_report_id-0.2.0-probe.json&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The above lists however are &lt;em&gt;not&lt;/em&gt; exhaustive and more websites may have been
+affected which are not listed here.&lt;/p&gt;
+
+&lt;h1 id=&#34;a-name-attempts-to-block-tor-a-attempts-to-block-tor&#34;&gt;&lt;a name=&#34;attempts-to-block-tor&#34;&gt;&lt;/a&gt; Attempts to block Tor&lt;/h1&gt;
+
+&lt;p&gt;Two days ago, tests were run to examine the reachability of the
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; anonymity network. The collected measurement
+data indicates that the Tor process bootstrap was
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T162218Z_AS36935_kTY80ArJx4baKS9FIss3oPEYfqpzEp0bubESO1T0aEc3Njl3QU&#34;&gt;disrupted&lt;/a&gt;
+by blocking requests to directory authorities, which are designed to help Tor
+clients learn the list of relays that make up the Tor network.&lt;/p&gt;
+
+&lt;p&gt;One of the requests that were found to be blocked is a request to download a
+&amp;ldquo;consensus&amp;rdquo; document from Tor directory authorities. That request is a plain
+HTTP request to the URL:
+&lt;code&gt;http://154.35.175.225/tor/status-vote/current/consensus.z&lt;/code&gt; from a networking
+point of view. Connections to directory authorities are intercepted and
+blocking is performed by injecting a packet that terminates the connection
+abruptly (a TCP RST packet). This happens right after the server acknowledges
+the request.&lt;/p&gt;
+
+&lt;p&gt;The injected RST packets share the same static &lt;a href=&#34;https://en.wikipedia.org/wiki/IPv4#Identification&#34;&gt;IP identification (IP ID)&lt;/a&gt; value of &lt;code&gt;0x3412&lt;/code&gt; as the
+injected RST packets used to block aforementioned websites that we have found to be
+blocked. Usage of the same IP ID implies that the blocking infrastructure used
+to censor Tor is the same (or similar) to that used to block other websites
+(see the in depth &lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-serving-malware.html&#34;&gt;technical analysis&lt;/a&gt; of
+in-band TCP content injections).&lt;/p&gt;
+
+&lt;p&gt;In our testing we found &lt;strong&gt;7 out of 9 directory authority&lt;/strong&gt; consensus file requests
+to be blocked:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T205703Z_AS36935_OyfZ1mzzY4xuh8S3abKAfvxcwWGh5JVHUCk55e8cInkOyRmw5U?input=http:%2F%2F128.31.0.39:9131%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the moria1 directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210514Z_AS36935_3tNJySRXLDwSXijucIltcrFYoKt8KzfrYc2eYdSyO2cxTBs3k5?input=http:%2F%2F171.25.193.9:443%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the maatuska directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210714Z_AS36935_w88LJ82yd0rKPiaEFJymNZt3kdusHPnMTuWHMHPWDlGxFQLPde?input=http:%2F%2F86.59.21.38:80%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the tor26 directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210218Z_AS36935_L18ktGixOxdLtxr9LYxIO0jGwkKkLjvsLDZ1YPOJ2eQL7EhDx4?input=http:%2F%2F194.109.206.212:80%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the dizum directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210811Z_AS36935_Co624cXxizzgIzXOEV1Cx44SCElOMjLHrGML838zycImudosLR?input=http:%2F%2F131.188.40.189:80%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the gabelmoo directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210434Z_AS36935_so2ZaGOjUdgGNJM7gjyALCyycGDS3v3r5SWoVgPdna7GstFit5?input=http:%2F%2F193.23.244.244:80%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the dannenberg directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210524Z_AS36935_OfwC8F4e16wN6RjbZCSl6dveF0XRL2UnsygTeXSMFlDBRwB3bw?input=http:%2F%2F154.35.175.225:80%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;Blocking of consensus document requests to the Faravahar directory
+authority&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also found access to the now discontinued Tor &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161026T210826Z_AS36935_Y1ON5xUx0alU1OMrDIMwix8FpjyFs5OUXsbPZWaK6PrCqKpMpW?input=http:%2F%2F208.83.223.34:443%2Ftor%2Fstatus-vote%2Fcurrent%2Fconsensus.z&#34;&gt;directory authority urras to
+be blocked&lt;/a&gt;
+.We did not test the accessibility of the recently added &lt;code&gt;Bitfroest&lt;/code&gt; Tor
+directory authority, nor do we have samples regarding the potential blocking of
+&lt;code&gt;longclaw&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also, it&amp;rsquo;s just the set of consensus URLs that are blocked, for example, the
+request for &lt;code&gt;/tor/status-vote/current/lack-of-consensus.z&lt;/code&gt; produces ordinary
+&lt;code&gt;404 Not found&lt;/code&gt; error. That implies that the blockage is explicitly targeting
+Tor.&lt;/p&gt;
+
+&lt;p&gt;Another type of request that is blocked is the Onion Router handshake sent to
+ORPort of the well-known Tor router. They appear to be blocked in the same way:
+the TCP connection is interrupted by terminating the connection (with a TCP RST
+packet) during the TLS handshake (after the first &lt;code&gt;Client Hello&lt;/code&gt; from the
+client).&lt;/p&gt;
+
+&lt;p&gt;The blocking appears to only be targeting Tor in a default configuration. This
+means that it&amp;rsquo;s possible to easily circumvent such censorship by using any
+&lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor Bridge&lt;/a&gt;, including non-obfuscated ones.
+Given the fact that the blocking of connections doesn&amp;rsquo;t happen all the time, a
+client should be able to bootstrap a Tor connection successfully with enough
+retries. This however can, in some cases, take up to a half an hour.
+Moreover, OR connections are only blocked to some subset of the public Tor
+network, meaning that if a client has already bootstrapped and has a cached
+version of the consensus and descriptors it is likely to work properly. The
+connection is not throttled as soon as it is established successfully.&lt;/p&gt;
+
+&lt;p&gt;This sort of Tor blockage seems to &lt;em&gt;still&lt;/em&gt; be active in the moment of the
+publication of this report.&lt;/p&gt;
+
+&lt;p&gt;But this is not the first time we noticed interference with the Tor network in
+Egypt. Earlier this month, users reported that they couldn&amp;rsquo;t connect directly
+to Tor from Egypt and had to use bridges to access it. Tor Metrics statistics
+illustrate that &lt;a href=&#34;https://metrics.torproject.org/userstats-relay-country.html?start=2016-09-19&amp;amp;end=2016-10-26&amp;amp;country=eg&amp;amp;events=points&#34;&gt;direct
+connections&lt;/a&gt;
+to Tor were reduced on 2nd and 25th October 2016, while the use of
+&lt;a href=&#34;https://metrics.torproject.org/userstats-bridge-country.html?start=2016-09-19&amp;amp;end=2016-10-26&amp;amp;country=eg&#34;&gt;bridges&lt;/a&gt;
+increased, indicating that Tor might have been blocked. It&amp;rsquo;s probably worth
+noting though that only around 30% of Tor users appear to have used bridges to
+circumvent potential censorship.&lt;/p&gt;
+
+&lt;p&gt;The following graphs below illustrate the estimated number of
+directly-connecting clients and the estimated number of clients connecting via
+bridges.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/egypt-network-interference/userstats-relay-country-eg-2016-09-19-2016-10-26-points.png&#34; alt=&#34;Directly connecting users from Egypt&#34; /&gt;
+&lt;img src=&#34;https://ooni.torproject.org/post/egypt-network-interference/userstats-bridge-country-eg-2016-09-19-2016-10-26.png&#34; alt=&#34;Bridge users from Egypt&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;a-name-advertisement-and-malware-injection-a-advertisement-and-malware-injection&#34;&gt;&lt;a name=&#34;advertisement-and-malware-injection&#34;&gt;&lt;/a&gt; Advertisement and malware injection&lt;/h1&gt;
+
+&lt;p&gt;Through our research we found false content deliberately injected by at least
+one ISP in Egypt: &lt;a href=&#34;https://en.wikipedia.org/wiki/TE_Data&#34;&gt;TE Data&lt;/a&gt;. This ISP
+accounts for 65% of the &lt;a href=&#34;https://www.igmena.org/Indicators-of-Internet-Penetration-in-Egypt&#34;&gt;market
+share&lt;/a&gt; and
+controls over 70% of the Egyptian internet bandwidth TE Data appears to be
+using DPI or similar network equipment to conduct a man-in-the-middle attack
+and transparently inject content for gaining profit (affiliate advertising) or
+malicious purposes (serving malware).&lt;/p&gt;
+
+&lt;p&gt;Our experiment showed that there was a 10% probability that mobile device users
+connected via Wi-Fi to TE Data ADSL would get redirected when visiting some
+porn websites. The redirection injected the URL
+&lt;code&gt;http://marketing-sv.com/mads.html&lt;/code&gt;, which serves at least two different static
+web-pages redirecting to &lt;code&gt;http://go.ad2upapp.com/afu.php?id=788146&lt;/code&gt; either
+directly or via static pages from &lt;code&gt;utextads.com&lt;/code&gt; subdomains. This
+PopUp/PopUnder advertisement network is known to be used by malware authors to
+gain revenue.&lt;/p&gt;
+
+&lt;p&gt;During our October 2016 investigation the injector was mostly targeting mobile
+&lt;a href=&#34;https://en.wikipedia.org/wiki/User_agent&#34;&gt;User-Agents&lt;/a&gt;. It was not limited to
+iPhone and Android platforms, but also targeted BlackBerry and Symbian devices.
+In August 2016 ooniprobe also &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20160827T153815Z_AS8452_gAU19jWom21aUc0hwieYQymbvcuTTTYULW8k1W1UXOlEYmhDPq?input=http:%2F%2Fxnxx.com&#34;&gt;captured a similar
+injection&lt;/a&gt;
+in the TE Data network. The injection was redirecting the user to
+&lt;code&gt;http://go.ad2upapp.com/afu.php?id=723454&lt;/code&gt; that further redirects to
+&lt;code&gt;http://go.deliverymodo.com/afu.php?id=723454&lt;/code&gt;, a different advertising website
+but with the same affiliate ID (723454). We also received user complains about
+similar injections in transit traffic of Vodafone 3G
+(&lt;a href=&#34;https://stat.ripe.net/AS36935&#34;&gt;AS36935&lt;/a&gt;) and Noor ADSL
+(&lt;a href=&#34;https://stat.ripe.net/AS20928&#34;&gt;AS20928&lt;/a&gt;) pointing to the
+&lt;code&gt;http://adf.ly/1cqbTY&lt;/code&gt;, &lt;code&gt;marketing-sv.com&lt;/code&gt; and &lt;code&gt;infinitiads.com&lt;/code&gt; domains.&lt;/p&gt;
+
+&lt;p&gt;We also discovered at least one &lt;a href=&#34;https://virustotal.com/en/file/988f3b1079b7badb27442bd1439f1b7b51c9f812a27fbab7e4d60a37c97f3d64/analysis/&#34;&gt;malware
+sample&lt;/a&gt;
+served by the chain of web redirects starting with the aforementioned link
+during our research. Our IP TTL and network packet latency analysis confirms
+that the injection is done in-band using a DPI or similar network equipment to
+conduct a man-in-the-middle attack. The analysis refutes the hypothesis of an
+&amp;ldquo;infected&amp;rdquo; website serving advertisements instead of content. The statistics
+suggest that the injector is located within the TE Data network (not further
+than that and not as close as end-user LAN) and transparently injects content
+for gaining profit via affiliate advertising.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Client &amp;lt;--(forged packet)-- ISP&#39;s middle box &amp;lt;--(valid packet)-- Web server&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;a-name-third-party-tools-curl-showing-injected-content-a-third-party-tools-curl-showing-injected-content&#34;&gt;&lt;a name=&#34;third-party-tools-curl-showing-injected-content&#34;&gt;&lt;/a&gt; Third party tools (curl) showing injected content&lt;/h2&gt;
+
+&lt;p&gt;The curl output excerpts below illustrate how TE Data and Noor ISP redirected
+users&amp;rsquo; connections to porn websites through the injection of ads. It&amp;rsquo;s
+important though to note that the DNS query answers of the requested domains
+are legitimate, and there appears to be no sign of DNS tampering.&lt;/p&gt;
+
+&lt;p&gt;TE Data ISP redirected the user visiting &lt;code&gt;http://xnxx.com/&lt;/code&gt; (34th most visited
+website in Egypt according to Alexa statistics) to
+&lt;code&gt;http://go.ad2upapp.com/afu.php?id=723454&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;HTTP headers curl output &lt;code&gt;http://xnxx.com/&lt;/code&gt; in Noor ISP.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Rebuilt URL to: http://xnxx.com/
+* Hostname was NOT found in DNS cache
+*   Trying 141.0.174.38...
+* Connected to xnxx.com (141.0.174.38) port 80 (#0)
+&amp;gt; HEAD / HTTP/1.1
+&amp;gt; User-Agent: curl/7.35.0
+&amp;gt; Host: xnxx.com
+&amp;gt; Accept: */*
+&amp;gt;
+&amp;lt; HTTP/1.1 307 Temporary Redirect
+&amp;lt; Location: http://go.ad2upapp.com/afu.php?id=723454
+&amp;lt; Connection: close
+&amp;lt;
+* Closing connection 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Noor ISP redirected the user visiting &lt;code&gt;http://xhamster.com/&lt;/code&gt; (53th most visited
+website in Egypt according to Alexa statistics) to &lt;code&gt;http://adf.ly/1cqbTY&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;HTTP headers curl output of &lt;code&gt;http://xhamster.com/&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;*   Trying 88.208.18.30...
+* Connected to xhamster.com (88.208.18.30) port 80 (#0)
+&amp;gt; HEAD / HTTP/1.1
+&amp;gt; Host: xhamster.com
+&amp;gt; User-Agent: curl/7.47.0
+&amp;gt; Accept: */*
+&amp;gt;
+&amp;lt; HTTP/1.1 307 Temporary Redirect
+&amp;lt; Location: http://adf.ly/1cqbTY
+&amp;lt; Connection: close
+&amp;lt;
+* Closing connection 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The complete and detailed technical analysis of the injected malware and
+advertisements in TCP connections can be found
+&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-serving-malware.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;a-name-circumventing-censorship-a-circumventing-censorship&#34;&gt;&lt;a name=&#34;circumventing-censorship&#34;&gt;&lt;/a&gt; Circumventing censorship&lt;/h1&gt;
+
+&lt;p&gt;OONI findings in Egypt revealed the censorship of a media website, blocking of
+services and malicious TCP injections of advertisements and malware content.
+ISPs in Egypt appear to be using DPI, TCP injections and network throttling to
+block resources, censor websites and serve advertisements and malware to
+internet users.&lt;/p&gt;
+
+&lt;p&gt;You can bypass such censorship through the use of
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; and the &lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34;&gt;Tor
+Browser&lt;/a&gt;. Users in
+mobile networks can use
+&lt;a href=&#34;https://www.torproject.org/docs/android.html.en&#34;&gt;Orbot&lt;/a&gt; (Tor on Android) to
+access the web or other mobile applications by using the VPN mode of Orbot
+which enables all apps on the device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor
+network&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;a-name-acknowledgements-a-acknowledgements&#34;&gt;&lt;a name=&#34;acknowledgements&#34;&gt;&lt;/a&gt; Acknowledgements&lt;/h1&gt;
+
+&lt;p&gt;OONI would like to thank anonymous contributors that reported and shared
+evidence to document these incidents including, but not limited to, the
+cypherpunk who asked to be identified by the following hashsum:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;KCB3XJW2ZVGS2A6MQKIE4NQCMJNFKIXI4KGK6CW4J2OFXFZE6RB5VB35LTLJKMM6ZQ654W57C7JLFWJBHMFH6UNO4CXIK7APUD3H33Y=
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;a-name-appendix-a-appendix&#34;&gt;&lt;a name=&#34;appendix&#34;&gt;&lt;/a&gt; Appendix&lt;/h1&gt;
+
+&lt;p&gt;Detailed technical analysis:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-vs-digitalocean.html&#34;&gt;Egypt vs DigitalOcean&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-vs-digitalocean.ipynb&#34;&gt;download ipynb
+notebook&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-serving-malware.html&#34;&gt;Egypt serving malware&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-serving-malware.ipynb&#34;&gt;download ipynb
+notebook&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
