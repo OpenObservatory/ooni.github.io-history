@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.settings &mdash; OONI: Open Observatory of Network Interference 2.0.0 documentation</title>
+  <title>ooni.settings &mdash; OONI: Open Observatory of Network Interference 2.0.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0 documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.1 documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                2.0.0
+                2.0.1
               </div>
             
           
@@ -160,6 +160,13 @@
 <span class="s">    # Where OONIProbe should be writing its log file</span>
 <span class="s">    # logfile: {logfile}</span>
 <span class="s">    # loglevel: WARNING</span>
+<span class="s">    # Will rotate logs daily when &quot;daily&quot; or based on rotate_length</span>
+<span class="s">    #  when &quot;length&quot; is set. null to disable rotation.</span>
+<span class="s">    # rotate: daily</span>
+<span class="s">    # rotate_length: 1M</span>
+<span class="s">    # Sets an upper bound on the number of rotated files, only works when</span>
+<span class="s">    #  &quot;length&quot; is the rotation mode</span>
+<span class="s">    # max_rotated_files: null</span>
 <span class="s">    # The maximum amount of data to store on disk. Once the quota is reached,</span>
 <span class="s">    # we will start deleting older reports.</span>
 <span class="s">    # measurement_quota: 1G</span>
@@ -243,6 +250,9 @@
     <span class="s">&quot;basic&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s">&quot;loglevel&quot;</span><span class="p">:</span> <span class="s">&quot;WARNING&quot;</span><span class="p">,</span>
         <span class="s">&quot;logfile&quot;</span><span class="p">:</span> <span class="s">&quot;ooniprobe.log&quot;</span><span class="p">,</span>
+        <span class="s">&quot;rotate&quot;</span><span class="p">:</span> <span class="s">&quot;daily&quot;</span><span class="p">,</span>
+        <span class="s">&quot;rotate_length&quot;</span><span class="p">:</span> <span class="s">&quot;1M&quot;</span><span class="p">,</span>
+        <span class="s">&quot;max_rotated_files&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
         <span class="s">&quot;measurement_quota&quot;</span><span class="p">:</span> <span class="s">&quot;1G&quot;</span>
     <span class="p">},</span>
     <span class="s">&quot;privacy&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -294,6 +304,9 @@
 
 <span class="c"># These are the the embedded settings</span>
 <span class="n">_SETTINGS_INI</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OONIPROBE_ROOT</span><span class="p">,</span> <span class="s">&#39;settings.ini&#39;</span><span class="p">)</span>
+<span class="c"># This can be overridden by an environment variable for end to end testing</span>
+<span class="k">if</span> <span class="s">&#39;OONIPROBE_SETTINGS&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="n">_SETTINGS_INI</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">&#39;OONIPROBE_SETTINGS&#39;</span><span class="p">]</span>
 
 <span class="n">USR_SHARE_PATH</span> <span class="o">=</span> <span class="s">&#39;/usr/share/ooni&#39;</span>
 <span class="n">VAR_LIB_PATH</span> <span class="o">=</span> <span class="s">&#39;/var/lib/ooni&#39;</span>
@@ -484,6 +497,27 @@
             <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">file_path</span>
 </div>
+<div class="viewcode-block" id="OConfig.log_info"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.log_info">[docs]</a>    <span class="k">def</span> <span class="nf">log_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;Paths&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;-----&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;inputs directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs_directory</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;scheduler directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheduler_directory</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;resources directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">resources_directory</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;decks available directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">decks_available_directory</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;decks enabled directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">decks_enabled_directory</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;measurements directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurements_directory</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;running path: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">running_path</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;config files: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="s">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_files</span><span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;ooni home: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ooni_home</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;var_lib path: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">VAR_LIB_PATH</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;etc path: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">ETC_PATH</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s">&quot;usr_share path: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">USR_SHARE_PATH</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;nettest directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">nettest_directory</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s">&quot;web ui directory: </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">web_ui_directory</span><span class="p">)</span>
+
+</div>
 <div class="viewcode-block" id="OConfig.set_paths"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.set_paths">[docs]</a>    <span class="k">def</span> <span class="nf">set_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nettest_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OONIPROBE_ROOT</span><span class="p">,</span> <span class="s">&#39;nettests&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">web_ui_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OONIPROBE_ROOT</span><span class="p">,</span> <span class="s">&#39;ui&#39;</span><span class="p">,</span> <span class="s">&#39;web&#39;</span><span class="p">,</span>
@@ -668,7 +702,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.0.0',
+            VERSION:'2.0.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
