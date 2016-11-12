@@ -41,7 +41,7 @@
   
    class="active"
   
-  >Net Tests</a>
+  >Tests</a>
 <a href="https://ooni.torproject.org//data/"
   
   >Data</a>
@@ -56,159 +56,287 @@
   </nav>
 
   <main class="col-3">
-      
-      
-      <div>
-        <a href="/nettest/dns-consistency/">
-          <h2>
-            Dns Consistency
-          </h2>
-        </a>
-        <p>
-        DNS consistency This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering. The domain name system (DNS) is what is responsible for transforming a host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst others, run DNS resolvers which map IP addresses to host names. In certain circumstances though, ISPs map the wrong IP addresses to the wrong host names.
-        <a href="/nettest/dns-consistency/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/http-header-field-manipulation/">
-          <h2>
-            Http Header Field Manipulation
-          </h2>
-        </a>
-        <p>
-        HTTP Header Field Manipulation This test tries to detect the presence of network components (“middle box”) which could be responsible for censorship and/or traffic manipulation. HTTP is a protocol which transfers or exchanges data across the internet. It does so by handling a client&rsquo;s request to connect to a server, and a server&rsquo;s response to a client&rsquo;s request. Every time you connect to a server, you (the client) send a request through the HTTP protocol to that server.
-        <a href="/nettest/http-header-field-manipulation/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/http-host/">
-          <h2>
-            Http Host
-          </h2>
-        </a>
-        <p>
-        HTTP Host This test attempts to: examine whether the domain names of websites are blocked detect the presence of “middle boxes” (software which could be used for censorship and/or traffic manipulation) in tested networks assess which censorship circumvention techniques are capable of bypassing the censorship implemented by the “middle box” HTTP is a protocol which transfers or exchanges data across the internet. It does so by handling a client&rsquo;s request to connect to a server, and a server&rsquo;s response to a client&rsquo;s request.
-        <a href="/nettest/http-host/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/http-invalid-request-line/">
-          <h2>
-            Http Invalid Request Line
-          </h2>
-        </a>
-        <p>
-        HTTP invalid request line This test tries to detect the presence of network components (“middle box”) which could be responsible for censorship and/or traffic manipulation. Instead of sending a normal HTTP request, this test sends an invalid HTTP request line - containing an invalid HTTP version number, an invalid field count and a huge request method – to an echo service listening on the standard HTTP port. An echo service is a very useful debugging and measurement tool, which simply sends back to the originating source any data it receives.
-        <a href="/nettest/http-invalid-request-line/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/http-requests/">
-          <h2>
-            Http Requests
-          </h2>
-        </a>
-        <p>
-        HTTP Requests This test tries to detect online censorship based on a comparison of HTTP requests over Tor and over the network of the user. HTTP is a protocol which allows communication between a client and a server. It does so by handling a client&rsquo;s request to connect to a server, and a server&rsquo;s response to a client&rsquo;s request. Every time you connect to a website, your browser (the client) sends a request through the HTTP protocol to the server which is hosting that website.
-        <a href="/nettest/http-requests/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/lantern/">
-          <h2>
-            Lantern
-          </h2>
-        </a>
-        <p>
-        Lantern This test provides an automated way of examining whether Lantern works in a tested network. Lantern is a centralized and peer-to-peer proxy, which is used as a circumvention tool. It detects whether websites are blocked and, if so, it allows you to access them via Lantern servers or via the network of Lantern users. This test runs Lantern and checks to see if it is working. If it&rsquo;s able to connect to a Lantern server and reach a control website over it, then we consider that Lantern can be used for censorship circumvention within the tested network.
-        <a href="/nettest/lantern/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/meek-fronted-requests/">
-          <h2>
-            Meek Fronted Requests
-          </h2>
-        </a>
-        <p>
-        Meek Fronted Requests This test examines whether the domains used by Meek (a type of Tor bridge) work in tested networks. Meek is a pluggable transport which uses non-blocked domains, such as google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com (Microsoft azure cloud infrastructure), to proxy its users over Tor to blocked websites, while hiding both the fact that they are connecting to such websites and how they are connecting to them.
-        <a href="/nettest/meek-fronted-requests/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/psiphon/">
-          <h2>
-            Psiphon
-          </h2>
-        </a>
-        <p>
-        Psiphon This test provides an automated way of examining whether Psiphon works in a tested network. Psiphon is a free and open source tool that utilises SSH, VPN and HTTP proxy technology for censorship circumvention. This test runs Psiphon and checks to see if it is working. If it&rsquo;s able to connect to a Psiphon server and reach a website over it, then we consider that Psiphon can be used for censorship circumvention within the tested network.
-        <a href="/nettest/psiphon/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/tor-bridge-reachability/">
-          <h2>
-            Tor Bridge Reachability
-          </h2>
-        </a>
-        <p>
-        Tor Bridge Reachability This test examines whether Tor bridges work in tested networks. Tor is free and open source software which enables online anonymity and censorship circumvention. It was designed to bounce communications around a distributed network of relays run by volunteers around the world, thus hiding users&rsquo; IP address and circumventing online tracking and censorship. However, Internet Service Providers (ISPs) in various countries around the world are often ordered by their governments to block users&rsquo; access to Tor.
-        <a href="/nettest/tor-bridge-reachability/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-      
-      <div>
-        <a href="/nettest/web-connectivity/">
-          <h2>
-            Web Connectivity
-          </h2>
-        </a>
-        <p>
-        Web connectivity This test examines whether websites are reachable and if they are not, it attempts to determine whether access to them is blocked through DNS tampering, TCP connection RST/IP blocking or by a transparent HTTP proxy. Specifically, this test is designed to perform the following: Resolver identification DNS lookup TCP connect HTTP GET request By default, this test performs the above (excluding the first step, which is performed only over the network of the user) both over a control server and over the network of the user.
-        <a href="/nettest/web-connectivity/">
-          Read more...
-        </a>
-        </p>
-      </div>
-      
-  </main>
+    <p class="test-intro">
+        Interested in running OONI's software tests to collect evidence of internet censorship? Below we include descriptions for all of OONI's tests. For more detailed descriptions, click below on the tests of your choice!
+    </p>
 
+    <ul class="test-overivew">
+      <a href="#websites"><li>Which websites are blocked?</li></a>
+      <a href="#im"><li>Which Instant Messaging Apps are blocked?</li></a>
+      <a href="#boxes"><li>Which censorship technologies are in my network?</li></a>
+      <a href="#tor"><li>Is Tor blocked?</li></a>
+      <a href="#proxies"><li>Are proxies blocked?</li></a>
+    </ul>
+
+    <h1 id="websites" class="test-header">Wich websites are blocked?</h1>
+    <div class="row question-container">
+      
+        
+        
+        <a href="/nettest/web-connectivity/" class="col-3">
+          <h2 class="test-header">Web Connectivity</h2>
+          <p class="test-paragraph">
+            This test examines whether access to websites is blocked through DNS tampering, TCP connection RST/IP blocking or by a transparent HTTP proxy.
+          </p>
+        </a>
+        
+      
+        
+      
+        
+        
+        <a href="/nettest/dns-consistency/" class="col-3">
+          <h2 class="test-header">Dns Consistency</h2>
+          <p class="test-paragraph">
+            This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering.
+          </p>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        <a href="/nettest/http-host/" class="col-3">
+          <h2 class="test-header">Http Host</h2>
+          <p class="test-paragraph">
+            This test examine whether the domain names of websites are blocked.
+          </p>
+        </a>
+        
+      
+        
+        
+        <a href="/nettest/http-requests/" class="col-3">
+          <h2 class="test-header">Http Requests</h2>
+          <p class="test-paragraph">
+            This test tries to detect online censorship based on a comparison of HTTP requests over Tor and over the network of the user.
+          </p>
+        </a>
+        
+      
+    </div>
+
+    <h1 id="im" class="test-header">Which Instant Messaging Apps are blocked?</h1>
+    <div class="row question-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        <a href="/nettest/facebook-messenger/" class="col-3">
+            <h2 class="test-header">Facebook Messenger</h2>
+            <p class="test-paragraph">
+              This test is designed to examine the reachability of Facebook Messenger within a tested network.
+            </p>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        <a href="/nettest/whatsapp/" class="col-3">
+            <h2 class="test-header">Whatsapp</h2>
+            <p class="test-paragraph">
+              This test is designed to examine the reachability of both WhatsApp&#39;s app and the WhatsApp web version within a tested network.
+            </p>
+        </a>
+        
+      
+        
+      
+    </div>
+
+    <h1 id="boxes" class="test-header">Which censorship technologies are in my network?</h1>
+    <div class="row question-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+        
+        <a href="/nettest/http-header-field-manipulation/" class="col-3">
+            <h2 class="test-header">Http Header Field Manipulation</h2>
+            <p class="test-paragraph">
+              This test tries to detect the presence of network components (“middle box”) which could be responsible for censorship and/or traffic manipulation.
+            </p>
+        </a>
+        
+      
+        
+        
+        <a href="/nettest/http-invalid-request-line/" class="col-3">
+            <h2 class="test-header">Http Invalid Request Line</h2>
+            <p class="test-paragraph">
+              This test tries to detect the presence of network components (“middle box”) which could be responsible for censorship and/or traffic manipulation.
+            </p>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+
+    <h1 id="tor" class="test-header">Is Tor blocked?</h1>
+    <div class="row question-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <a href="/nettest/meek-fronted-requests/" class="col-3">
+            <h2 class="test-header">Meek Fronted Requests</h2>
+            <p class="test-paragraph">
+              This test examines whether the domains used by Meek (a type of Tor bridge) work in tested networks.
+            </p>
+          </a>
+        
+      
+        
+      
+        
+          
+          <a href="/nettest/tor-bridge-reachability/" class="col-3">
+            <h2 class="test-header">Tor Bridge Reachability</h2>
+            <p class="test-paragraph">
+              This test examines whether Tor bridges work in tested networks.
+            </p>
+          </a>
+        
+      
+        
+          
+          <a href="/nettest/vanilla-tor/" class="col-3">
+            <h2 class="test-header">Vanilla Tor</h2>
+            <p class="test-paragraph">
+              This test examines the reachability of the Tor network (which is designed for online anonymity and censorship circumvention).
+            </p>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+
+    <h1 id="proxies" class="test-header">Are proxies blocked?</h1>
+    <div class="row question-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <a href="/nettest/lantern/" class="col-3">
+            <h2 class="test-header">Lantern</h2>
+            <p class="test-paragraph">
+              This test provides an automated way of examining whether Lantern works in a tested network.
+            </p>
+          </a>
+        
+      
+        
+      
+        
+          
+          <a href="/nettest/psiphon/" class="col-3">
+            <h2 class="test-header">Psiphon</h2>
+            <p class="test-paragraph">
+              This test provides an automated way of examining whether Psiphon works in a tested network.
+            </p>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </main>
 </div>
 
 <footer>

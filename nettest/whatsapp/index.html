@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
-  <title>OONI - Lantern</title>
+  <title>OONI - WhatsApp test</title>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
@@ -64,21 +64,38 @@
       <div class="col-2">
         
 
-<h1 id="lantern">Lantern</h1>
+<h1 id="whatsapp-test">WhatsApp test</h1>
 
-<p>This test provides an automated way of examining whether Lantern works in a
-tested network.</p>
+<p>This test is designed to examine the reachability of both WhatsApp&rsquo;s app and
+the WhatsApp web version within a tested network.</p>
 
-<p><a href="https://getlantern.org/">Lantern</a> is a centralized and peer-to-peer proxy,
-which is used as a circumvention tool. It detects whether websites are blocked
-and, if so, it allows you to access them via Lantern servers or via the network
-of Lantern users.</p>
+<p>OONI&rsquo;s WhatsApp test attempts to perform an HTTP GET request, TCP
+connection and DNS lookup to WhatsApp’s endpoints, registration service and web
+version over the vantage point of the user. Based on this methodology,
+WhatsApp’s <em>app</em> is likely blocked if any of the following apply:</p>
 
-<p>This test runs Lantern and checks to see if it is working. If it&rsquo;s able to
-connect to a Lantern server and reach a control website over it, then we
-consider that Lantern can be used for censorship circumvention within the tested
-network. If however the test is unable to connect to Lantern servers, then it is
-likely the case that they are blocked within the tested network.</p>
+<ul>
+<li><p>TCP connections to WhatsApp&rsquo;s endpoints fail</p></li>
+
+<li><p>TCP connection to WhatsApp&rsquo;s registration service fail</p></li>
+
+<li><p>DNS lookups resolve to IP address allocated to WhatsApp</p></li>
+
+<li><p>HTTP requests to WhatsApp&rsquo;s registration service do <em>not</em> send back a response
+to OONI&rsquo;s servers</p></li>
+</ul>
+
+<p>WhatsApp&rsquo;s <em>web interface</em> is likely blocked if any of the following apply:</p>
+
+<ul>
+<li><p>TCP connection to web.whatsapp.com fail</p></li>
+
+<li><p>DNS lookup illustrates that a different IP addresses has been allocated to
+web.whatsapp.com</p></li>
+
+<li><p>HTTP requests to web.whatsapp.com do <em>not</em> send back a consistent response to OONI&rsquo;s
+servers</p></li>
+</ul>
 
       </div>
     </div>

@@ -82,6 +82,16 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/nettest/http-requests/</loc>
+    <lastmod>0003-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
+    <lastmod>0002-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/about/data-policy/</loc>
   </url>
   
@@ -98,7 +108,15 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/nettest/ndt/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/nettest/dns-consistency/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/facebook-messenger/</loc>
   </url>
   
   <url>
@@ -106,15 +124,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/http-host/</loc>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/http-invalid-request-line/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/nettest/http-requests/</loc>
   </url>
   
   <url>
@@ -126,6 +136,10 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/get-involved/partnership-program/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
   </url>
   
@@ -134,15 +148,20 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/nettest/web-connectivity/</loc>
+    <loc>https://ooni.torproject.org/nettest/vanilla-tor/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/get-involved/partnership-program/</loc>
+    <loc>https://ooni.torproject.org/nettest/whatsapp/</loc>
   </url>
   
   <url>
     <loc>https://ooni.torproject.org/install/ooniprobe/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/web-connectivity/</loc>
+    <lastmod>0000-01-01T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>

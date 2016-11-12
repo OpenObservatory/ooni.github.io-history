@@ -6,186 +6,13 @@
     <description>Recent content in Nettests on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 0003 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/nettest/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/dns-consistency/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
-      <description>
-
-&lt;h1 id=&#34;dns-consistency&#34;&gt;DNS consistency&lt;/h1&gt;
-
-&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
-to be reliable with one that is tested for tampering.&lt;/p&gt;
-
-&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
-(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
-others, run DNS resolvers which map IP addresses to host names. In certain
-circumstances though, ISPs map the wrong IP addresses to the wrong host names.
-This is a form of tampering, which OONI can detect by running its DNS
-consistency test.&lt;/p&gt;
-
-&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
-DNS resolver (which we assume to not be tampered with) with the IP address
-mapped to that website by a provider. If the two IP addresses of the same
-website are different, then there is a sign of network interference. When ISPs
-tamper with DNS answers, users are redirected to other websites or fail to
-connect to their intended websites.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
-with IP addresses that are closest to them geographically. Often this is not
-done with the intent of network tampering, but merely for the purpose of
-providing users faster access to websites. As a result, some false positives
-might arise in OONI measurements.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/http-header-field-manipulation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
-      <description>
-
-&lt;h1 id=&#34;http-header-field-manipulation&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
-
-&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
-which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
-
-&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
-does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
-response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
-client) send a request through the HTTP protocol to that server. Such requests
-include “HTTP headers”, which transmit various types of information, including
-your device&amp;rsquo;s operating system and the type of browser that it&amp;rsquo;s using. If you
-are using Firefox on Windows, for example, the “user agent header” in your HTTP
-request will tell the server that you&amp;rsquo;re using a Firefox browser on a Windows
-operating system.&lt;/p&gt;
-
-&lt;p&gt;This test emulates an HTTP request towards a server, but sends HTTP headers that
-have variations in capitalization. In other words, this test sends HTTP requests
-which include valid, but non-canonical HTTP headers. Such requests are sent to a
-backend control server which sends back any data it receives. If we receive the
-HTTP headers exactly as we sent them, then we assume that there is no “middle
-box” in the network which could be responsible for censorship, surveillance
-and/or traffic manipulation. If, however, such software is present in the
-network that we are testing, it will likely normalize the invalid headers that
-we are sending or add extra headers.&lt;/p&gt;
-
-&lt;p&gt;Depending on whether the HTTP headers that we send and receive from a backend
-control server are the same or not, we are able to evaluate whether software –
-which could be responsible for traffic manipulation – is present in the network
-that we are testing.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
-that ISPs are using highly sophisticated software that is specifically designed
-to not interfere with HTTP headers when it receives them. Furthermore, the
-presence of a middle box is not necessarily indicative of traffic manipulation,
-as they are often used in networks for caching purposes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/http-host/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/http-host/</guid>
-      <description>
-
-&lt;h1 id=&#34;http-host&#34;&gt;HTTP Host&lt;/h1&gt;
-
-&lt;p&gt;This test attempts to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;examine whether the domain names of websites are blocked&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;detect the presence of “middle boxes” (software which could be used for
-censorship and/or traffic manipulation) in tested networks&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;assess which censorship circumvention techniques are capable of bypassing the
-censorship implemented by the “middle box”&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
-does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
-response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
-client) send a request through the HTTP protocol to that server. Such requests
-include “HTTP headers”, some of which (the “Host header”) include information
-about the specific domain that you want to connect to. When you connect to
-torproject.org, for example, the host header of your HTTP request includes
-information which communicates that you want to connect to that domain.&lt;/p&gt;
-
-&lt;p&gt;This test implements a series of techniques which help it evade getting detected
-from censors and then uses a list of domain names (such as bbc.co.uk) to connect
-to an OONI backend control server, which sends the host headers of those domain
-names back to us. If a “middle box” is detected between the network path of the
-probe and the OONI backend control server, its fingerprint might be included in
-the JSON data that we receive from the backend control server. Such data also
-informs us if the tested domain names are blocked or not, as well as how the
-censor tried to fingerprint the censorship of those domains. This can sometimes
-lead to the identification of the type of infrastructure being used to implement
-censorship.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The presence of a middle box is not necessarily indicative of
-censorship and/or traffic manipulation, as they are often used in networks for
-caching purposes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/http-invalid-request-line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
-      <description>
-
-&lt;h1 id=&#34;http-invalid-request-line&#34;&gt;HTTP invalid request line&lt;/h1&gt;
-
-&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
-which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
-
-&lt;p&gt;Instead of sending a normal HTTP request, this test sends an invalid HTTP
-request line - containing an invalid HTTP version number, an invalid field count
-and a huge request method – to an echo service listening on the standard HTTP
-port. An echo service is a very useful debugging and measurement tool, which
-simply sends back to the originating source any data it receives. If a middle
-box is not present in the network between the user and an echo service, then the
-echo service will send the invalid HTTP request line back to the user, exactly
-as it received it. In such cases, we assume that there is no visible traffic
-manipulation in the tested network.&lt;/p&gt;
-
-&lt;p&gt;If, however, a middle box is present in the tested network, the invalid HTTP
-request line will be intercepted by the middle box and this may trigger an error
-and that will subsequently be sent back to OONI. Such errors indicate that
-software for traffic manipulation is likely placed in the tested network, though
-it&amp;rsquo;s not always clear what that software is. In some cases though, we are able
-to identify censorship and/or surveillance vendors through the error messages in
-the received HTTP response.&lt;/p&gt;
-
-&lt;p&gt;So far, based on this technique we have
-&lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;detected&lt;/a&gt; the use of
-&lt;strong&gt;BlueCoat&lt;/strong&gt;, &lt;strong&gt;Squid&lt;/strong&gt; and &lt;strong&gt;Privoxy&lt;/strong&gt; in networks across 11 countries around
-the world.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
-that ISPs are using highly sophisticated censorship and/or surveillance software
-that is specifically designed to not trigger errors when receiving invalid HTTP
-request lines like the ones of this test. Furthermore, the presence of a middle
-box is not necessarily indicative of traffic manipulation, as they are often
-used in networks for caching purposes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>HTTP Requests</title>
       <link>https://ooni.torproject.org/nettest/http-requests/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 01 Jan 0003 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/http-requests/</guid>
       <description>
@@ -232,7 +59,236 @@ CAPTCHA page appears.&lt;/p&gt;
     </item>
     
     <item>
+      <title>HTTP Host</title>
+      <link>https://ooni.torproject.org/nettest/http-host/</link>
+      <pubDate>Tue, 01 Jan 0002 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/http-host/</guid>
+      <description>
+
+&lt;h1 id=&#34;http-host&#34;&gt;HTTP Host&lt;/h1&gt;
+
+&lt;p&gt;This test attempts to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;examine whether the domain names of websites are blocked&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;detect the presence of “middle boxes” (software which could be used for
+censorship and/or traffic manipulation) in tested networks&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;assess which censorship circumvention techniques are capable of bypassing the
+censorship implemented by the “middle box”&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
+does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
+response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
+client) send a request through the HTTP protocol to that server. Such requests
+include “HTTP headers”, some of which (the “Host header”) include information
+about the specific domain that you want to connect to. When you connect to
+torproject.org, for example, the host header of your HTTP request includes
+information which communicates that you want to connect to that domain.&lt;/p&gt;
+
+&lt;p&gt;This test implements a series of techniques which help it evade getting detected
+from censors and then uses a list of domain names (such as bbc.co.uk) to connect
+to an OONI backend control server, which sends the host headers of those domain
+names back to us. If a “middle box” is detected between the network path of the
+probe and the OONI backend control server, its fingerprint might be included in
+the JSON data that we receive from the backend control server. Such data also
+informs us if the tested domain names are blocked or not, as well as how the
+censor tried to fingerprint the censorship of those domains. This can sometimes
+lead to the identification of the type of infrastructure being used to implement
+censorship.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The presence of a middle box is not necessarily indicative of
+censorship and/or traffic manipulation, as they are often used in networks for
+caching purposes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title></title>
+      <link>https://ooni.torproject.org/nettest/ndt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/ndt/</guid>
+      <description>
+
+&lt;h1 id=&#34;network-diagnostic-test-ndt&#34;&gt;Network Diagnostic Test (NDT)&lt;/h1&gt;
+
+&lt;p&gt;NDT (Network Diagnostic Test) is designed to measure the &lt;em&gt;speed&lt;/em&gt; and
+&lt;em&gt;performance&lt;/em&gt; of tested networks.&lt;/p&gt;
+
+&lt;p&gt;This network performance test was originally developed by The Internet2 Project
+and is currently maintained by &lt;a href=&#34;http://www.measurementlab.net/tools/ndt/&#34;&gt;Measurement Lab (M-Lab)&lt;/a&gt;. NDT is designed to measure
+the speed and performance of networks by connecting to M-Lab servers close to the
+user, and by subsequently uploading and downloading random data. In doing so,
+NDT collects TCP/IP low level information that is useful to examining and
+characterizing the quality of the network path between the user and the mLab
+server.&lt;/p&gt;
+
+&lt;p&gt;OONI utilizes an &lt;em&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/tree/master/src/libmeasurement_kit/ndt&#34;&gt;implementation of NDT&lt;/a&gt;&lt;/em&gt; for &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt;, which is a network
+measurement library for running both desktop and mobile network measurement
+tests. This NDT implementation, for example, is included as a test that can be
+run via OONI&amp;rsquo;s mobile app. Running NDT can be useful as the type of information that it
+collects can potentially be used to examine cases of throttling.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>DNS consistency</title>
+      <link>https://ooni.torproject.org/nettest/dns-consistency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
+      <description>
+
+&lt;h1 id=&#34;dns-consistency&#34;&gt;DNS consistency&lt;/h1&gt;
+
+&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
+to be reliable with one that is tested for tampering.&lt;/p&gt;
+
+&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
+(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
+others, run DNS resolvers which map IP addresses to host names. In certain
+circumstances though, ISPs map the wrong IP addresses to the wrong host names.
+This is a form of tampering, which OONI can detect by running its DNS
+consistency test.&lt;/p&gt;
+
+&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
+DNS resolver (which we assume to not be tampered with) with the IP address
+mapped to that website by a provider. If the two IP addresses of the same
+website are different, then there is a sign of network interference. When ISPs
+tamper with DNS answers, users are redirected to other websites or fail to
+connect to their intended websites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
+with IP addresses that are closest to them geographically. Often this is not
+done with the intent of network tampering, but merely for the purpose of
+providing users faster access to websites. As a result, some false positives
+might arise in OONI measurements.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Facebook Messenger test</title>
+      <link>https://ooni.torproject.org/nettest/facebook-messenger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/facebook-messenger/</guid>
+      <description>
+
+&lt;h1 id=&#34;facebook-messenger-test&#34;&gt;Facebook Messenger test&lt;/h1&gt;
+
+&lt;p&gt;This test is designed to examine the reachability of Facebook Messenger within a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s Facebook Messenger test attempts to perform a TCP connection and DNS
+lookup to Facebook&amp;rsquo;s endpoints over the vantage point of the user. Based on this
+methodology, Facebook Messenger is likely blocked if one or both of the
+following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to Facebook&amp;rsquo;s endpoints fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DNS lookups to domains associated to Facebook do not resolve to IP addresses allocated to Facebook&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HTTP Header Field Manipulation</title>
+      <link>https://ooni.torproject.org/nettest/http-header-field-manipulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
+      <description>
+
+&lt;h1 id=&#34;http-header-field-manipulation&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
+does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
+response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
+client) send a request through the HTTP protocol to that server. Such requests
+include “HTTP headers”, which transmit various types of information, including
+your device&amp;rsquo;s operating system and the type of browser that it&amp;rsquo;s using. If you
+are using Firefox on Windows, for example, the “user agent header” in your HTTP
+request will tell the server that you&amp;rsquo;re using a Firefox browser on a Windows
+operating system.&lt;/p&gt;
+
+&lt;p&gt;This test emulates an HTTP request towards a server, but sends HTTP headers that
+have variations in capitalization. In other words, this test sends HTTP requests
+which include valid, but non-canonical HTTP headers. Such requests are sent to a
+backend control server which sends back any data it receives. If we receive the
+HTTP headers exactly as we sent them, then we assume that there is no “middle
+box” in the network which could be responsible for censorship, surveillance
+and/or traffic manipulation. If, however, such software is present in the
+network that we are testing, it will likely normalize the invalid headers that
+we are sending or add extra headers.&lt;/p&gt;
+
+&lt;p&gt;Depending on whether the HTTP headers that we send and receive from a backend
+control server are the same or not, we are able to evaluate whether software –
+which could be responsible for traffic manipulation – is present in the network
+that we are testing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
+that ISPs are using highly sophisticated software that is specifically designed
+to not interfere with HTTP headers when it receives them. Furthermore, the
+presence of a middle box is not necessarily indicative of traffic manipulation,
+as they are often used in networks for caching purposes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HTTP invalid request line</title>
+      <link>https://ooni.torproject.org/nettest/http-invalid-request-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
+      <description>
+
+&lt;h1 id=&#34;http-invalid-request-line&#34;&gt;HTTP invalid request line&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;Instead of sending a normal HTTP request, this test sends an invalid HTTP
+request line - containing an invalid HTTP version number, an invalid field count
+and a huge request method – to an echo service listening on the standard HTTP
+port. An echo service is a very useful debugging and measurement tool, which
+simply sends back to the originating source any data it receives. If a middle
+box is not present in the network between the user and an echo service, then the
+echo service will send the invalid HTTP request line back to the user, exactly
+as it received it. In such cases, we assume that there is no visible traffic
+manipulation in the tested network.&lt;/p&gt;
+
+&lt;p&gt;If, however, a middle box is present in the tested network, the invalid HTTP
+request line will be intercepted by the middle box and this may trigger an error
+and that will subsequently be sent back to OONI. Such errors indicate that
+software for traffic manipulation is likely placed in the tested network, though
+it&amp;rsquo;s not always clear what that software is. In some cases though, we are able
+to identify censorship and/or surveillance vendors through the error messages in
+the received HTTP response.&lt;/p&gt;
+
+&lt;p&gt;So far, based on this technique we have
+&lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;detected&lt;/a&gt; the use of
+&lt;strong&gt;BlueCoat&lt;/strong&gt;, &lt;strong&gt;Squid&lt;/strong&gt; and &lt;strong&gt;Privoxy&lt;/strong&gt; in networks across 11 countries around
+the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
+that ISPs are using highly sophisticated censorship and/or surveillance software
+that is specifically designed to not trigger errors when receiving invalid HTTP
+request lines like the ones of this test. Furthermore, the presence of a middle
+box is not necessarily indicative of traffic manipulation, as they are often
+used in networks for caching purposes.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lantern</title>
       <link>https://ooni.torproject.org/nettest/lantern/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -258,7 +314,7 @@ likely the case that they are blocked within the tested network.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
+      <title>Meek Fronted Requests</title>
       <link>https://ooni.torproject.org/nettest/meek-fronted-requests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -297,7 +353,7 @@ an automated way.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
+      <title>Psiphon</title>
       <link>https://ooni.torproject.org/nettest/psiphon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -321,7 +377,7 @@ case that they are blocked within the tested network.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
+      <title>Tor Bridge Reachability</title>
       <link>https://ooni.torproject.org/nettest/tor-bridge-reachability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -350,9 +406,73 @@ bridges are either offline or blocked.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/web-connectivity/</link>
+      <title>Vanilla Tor</title>
+      <link>https://ooni.torproject.org/nettest/vanilla-tor/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/vanilla-tor/</guid>
+      <description>
+
+&lt;h1 id=&#34;vanilla-tor&#34;&gt;Vanilla Tor&lt;/h1&gt;
+
+&lt;p&gt;This test examines the reachability of the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt; (which is designed for online anonymity
+and censorship circumvention).&lt;/p&gt;
+
+&lt;p&gt;The Vanilla Tor test attempts to start a connection to the Tor network. If the
+test successfully bootstraps a connection within a predefined amount of seconds (300 by default),
+then Tor is considered to be reachable from the vantage point of the user. But if the test
+does &lt;em&gt;not&lt;/em&gt; manage to establish a connection, then the Tor network is likely blocked within the
+tested network.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WhatsApp test</title>
+      <link>https://ooni.torproject.org/nettest/whatsapp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/whatsapp/</guid>
+      <description>
+
+&lt;h1 id=&#34;whatsapp-test&#34;&gt;WhatsApp test&lt;/h1&gt;
+
+&lt;p&gt;This test is designed to examine the reachability of both WhatsApp&amp;rsquo;s app and
+the WhatsApp web version within a tested network.&lt;/p&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s WhatsApp test attempts to perform an HTTP GET request, TCP
+connection and DNS lookup to WhatsApp’s endpoints, registration service and web
+version over the vantage point of the user. Based on this methodology,
+WhatsApp’s &lt;em&gt;app&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to WhatsApp&amp;rsquo;s endpoints fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;TCP connection to WhatsApp&amp;rsquo;s registration service fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DNS lookups resolve to IP address allocated to WhatsApp&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP requests to WhatsApp&amp;rsquo;s registration service do &lt;em&gt;not&lt;/em&gt; send back a response
+to OONI&amp;rsquo;s servers&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;WhatsApp&amp;rsquo;s &lt;em&gt;web interface&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connection to web.whatsapp.com fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DNS lookup illustrates that a different IP addresses has been allocated to
+web.whatsapp.com&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP requests to web.whatsapp.com do &lt;em&gt;not&lt;/em&gt; send back a consistent response to OONI&amp;rsquo;s
+servers&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Web connectivity</title>
+      <link>https://ooni.torproject.org/nettest/web-connectivity/</link>
+      <pubDate>Sat, 01 Jan 0000 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/web-connectivity/</guid>
       <description>

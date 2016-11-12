@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
-  <title>OONI - Lantern</title>
+  <title>OONI - Facebook Messenger test</title>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
@@ -64,21 +64,21 @@
       <div class="col-2">
         
 
-<h1 id="lantern">Lantern</h1>
+<h1 id="facebook-messenger-test">Facebook Messenger test</h1>
 
-<p>This test provides an automated way of examining whether Lantern works in a
+<p>This test is designed to examine the reachability of Facebook Messenger within a
 tested network.</p>
 
-<p><a href="https://getlantern.org/">Lantern</a> is a centralized and peer-to-peer proxy,
-which is used as a circumvention tool. It detects whether websites are blocked
-and, if so, it allows you to access them via Lantern servers or via the network
-of Lantern users.</p>
+<p>OONI&rsquo;s Facebook Messenger test attempts to perform a TCP connection and DNS
+lookup to Facebook&rsquo;s endpoints over the vantage point of the user. Based on this
+methodology, Facebook Messenger is likely blocked if one or both of the
+following apply:</p>
 
-<p>This test runs Lantern and checks to see if it is working. If it&rsquo;s able to
-connect to a Lantern server and reach a control website over it, then we
-consider that Lantern can be used for censorship circumvention within the tested
-network. If however the test is unable to connect to Lantern servers, then it is
-likely the case that they are blocked within the tested network.</p>
+<ul>
+<li><p>TCP connections to Facebook&rsquo;s endpoints fail</p></li>
+
+<li><p>DNS lookups to domains associated to Facebook do not resolve to IP addresses allocated to Facebook</p></li>
+</ul>
 
       </div>
     </div>
