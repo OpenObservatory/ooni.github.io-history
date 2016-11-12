@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faqs on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/faq/</link>
+    <description>Recent content in Faqs on OONI: Open Observatory of Network Interference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://ooni.torproject.org/faq/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://ooni.torproject.org/faq/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/faq/faq/</guid>
+      <description>
+
+&lt;h1 id=&#34;frequently-asked-questions&#34;&gt;Frequently Asked Questions&lt;/h1&gt;
+
+&lt;p&gt;Below we include some questions that we are quite frequently asked. Hope
+this helps!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooni&#34;&gt;&lt;em&gt;OONI&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#1-what-does-oonis-software-do&#34;&gt;&lt;em&gt;1. What does OONI&amp;rsquo;s software do?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#2-who-can-run-ooniprobe&#34;&gt;&lt;em&gt;2. Who can run ooniprobe?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#3-how-can-i-run-ooniprobe&#34;&gt;&lt;em&gt;3. How can I run ooniprobe?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#4-what-does-the-default-set-of-ooniprobe-tests-include&#34;&gt;&lt;em&gt;4. What does the default set of ooniprobe tests include?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#5-how-can-i-choose-which-ooniprobe-tests-to-run-from-the-terminal&#34;&gt;&lt;em&gt;5. How can I choose which ooniprobe tests to run from the terminal?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#6-what-are-the-risks-of-running-ooniprobe&#34;&gt;&lt;em&gt;6. What are the risks of running ooniprobe?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#7-can-ooni-protect-my-privacy&#34;&gt;&lt;em&gt;7. Can OONI protect my privacy?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#8-what-types-of-data-does-ooni-collect&#34;&gt;&lt;em&gt;8. What types of data does OONI collect?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#9-once-ooniprobe-has-run-should-i-send-the-results-to-you&#34;&gt;&lt;em&gt;9. Once ooniprobe has run, should I send the results to you?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#10-how-can-i-opt-out-from-sending-ooni-specific-types-of-data&#34;&gt;&lt;em&gt;10. How can I opt-out from sending OONI specific types of data?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#11-where-are-the-measurements-published&#34;&gt;&lt;em&gt;11. Where are the measurements published?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#12-how-can-i-opt-out-from-having-my-measurements-published-by-default&#34;&gt;&lt;em&gt;12. How can I opt-out from having my measurements published by default?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#13-why-doesnt-my-country-have-any-measurements-on-ooni-explorer&#34;&gt;&lt;em&gt;13. Why doesn&amp;rsquo;t my country have any measurements on OONI Explorer?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#lepidopter-oonis-raspberry-pi-distribution&#34;&gt;&lt;em&gt;Lepidopter: OONI&amp;rsquo;s Raspberry Pi distribution&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#1-running-the- software-seems-too-technical-complicated-how-else-can-i-contribute-to-measurements&#34;&gt;&lt;em&gt;1. Running the software seems too technical/complicated. How else can I contribute to measurements?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#2-how-often-will-ooniprobe-run-tests-through-my- raspberry-pi&#34;&gt;&lt;em&gt;2. How often will ooniprobe run tests through my Raspberry Pi?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#3-how-are-the-measurements-collected- from-the-tests-run-via-my-raspberry-pi&#34;&gt;&lt;em&gt;3. How are the measurements collected from the tests run via my Raspberry Pi?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#4-how-can-i-view-the-results-of-the-tests-run-via-my-raspberry-pi&#34;&gt;&lt;em&gt;4. How can I view the results of the tests run via my Raspberry Pi?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#5-how-much-time-does-it-take-for-my-measurements-to-get-published-on-ooni-explorer&#34;&gt;&lt;em&gt;5. How much time does it take for my measurements to get published on OONI Explorer?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#6-how-can-i-update-ooniprobe-on-my-raspberry-pi&#34;&gt;&lt;em&gt;6. How can I update ooniprobe on my Raspberry Pi?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#7-what-are-the-risks-of-running-ooniprobe-via-a- raspberry-pi&#34;&gt;&lt;em&gt;7. What are the risks of running ooniprobe via a Raspberry Pi?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#testing-urls-for-censorship&#34;&gt;&lt;em&gt;Testing URLs for censorship&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#1-what-are-test-lists&#34;&gt;&lt;em&gt;1. What are test lists?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#2-what-types-of-test-lists-does-ooni-examine&#34;&gt;&lt;em&gt;2. What types of test lists does OONI examine?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#3-which-list-of-urls-will-i-test-if-i-run-ooniprobe&#34;&gt;&lt;em&gt;3. Which list of URLs will I test if I run ooniprobe?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#4-how-can-i-choose-which-urls-to-test-for-censorship&#34;&gt;&lt;em&gt;4. How can I choose which URLs to test for censorship?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#5-how-can-i-contribute-to-test-lists&#34;&gt;&lt;em&gt;5. How can I contribute to test lists?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#6-im-not-a-github-user- but-id-still-like-to-submit-urls-for-testing-how-can-i-do-so&#34;&gt;&lt;em&gt;6. I&amp;rsquo;m not a github user, but I&amp;rsquo;d still like to submit URLs for testing. How can I do so?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ooni&#34;&gt;OONI&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-what-does-ooni-s-software-do&#34;&gt;1. What does OONI&amp;rsquo;s software do?&lt;/h3&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s software tests (called ooniprobe) are designed to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Detect the blocking of websites&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Detect the blocking of instant messaging apps&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Detect the presence of systems which could potentially be responsible for
+censorship, surveillance and traffic manipulation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Examine the reachability of Tor, proxies, VPNs, and sensitive domains&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;OONI has many software tests, each of which has different functions. You can
+learn more about what each test is designed to do
+&lt;a href=&#34;https://ooni.torproject.org/test/&#34;&gt;here&lt;/a&gt;, and you can review the code
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-who-can-run-ooniprobe&#34;&gt;2. Who can run ooniprobe?&lt;/h3&gt;
+
+&lt;p&gt;Linux and Mac OS X users can run ooniprobe.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re a Windows user interested in running ooniprobe, please consider
+running our ooniprobe distribution for Raspberry Pis. More information about this
+can be found &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;here&lt;/a&gt;. Alternatively, you can run ooniprobe via a virtual machine.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-how-can-i-run-ooniprobe&#34;&gt;3. How can I run ooniprobe?&lt;/h3&gt;
+
+&lt;p&gt;You can run ooniprobe from one of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Terminal&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Web user interface&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Raspberry Pi&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can learn how to run ooniprobe through our &lt;a href=&#34;https://ooni.torproject.org/install/ooniprobe/&#34;&gt;installation
+guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-what-does-the-default-set-of-ooniprobe-tests-include&#34;&gt;4. What does the default set of ooniprobe tests include?&lt;/h3&gt;
+
+&lt;p&gt;By running ooniprobe from the terminal, you will by default run the following tests:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web connectivity&lt;/a&gt;:
+Designed to examine whether and how websites are blocked.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt;: Designed to examine whether systems which could potentially be responsible for censorship, surveillance and traffic manipulation are present in tested networks.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt;: Similarly to the HTTP invalid request line test, it&amp;rsquo;s designed to detect the presence of systems in tested networks.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;Vanilla Tor&lt;/a&gt;: Designed to examine the reachability of the Tor network in tested networks.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you run ooniprobe from a web user interface, you can choose each test you run.&lt;/p&gt;
+
+&lt;h3 id=&#34;5-how-can-i-choose-which-tests-to-run-from-the-terminal&#34;&gt;5. How can I choose which tests to run from the terminal?&lt;/h3&gt;
+
+&lt;p&gt;If you don’t want to run OONI&amp;rsquo;s default tests or if you would prefer to run
+entirely different OONI tests, you can do so by typing &lt;code&gt;ooniprobe -s&lt;/code&gt; in your
+terminal to view which commands to run for each test. This will present you with
+the following that can be run for each test:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Web_connectivity:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/web_connectivity&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_invalid-request-line:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_invalid_request_line&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;TCP_connect:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/tcp_connect&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Traceroute:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/traceroute&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DNS_consistency:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/dns_consistency&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bridge_reachability:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/bridge_reachability&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_header_field_manipulation:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_header_field_manipulation&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Meek_fronted_requests:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/meek_fronted_requests&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_requests:&lt;/strong&gt; &lt;code&gt;ooniprobe blocking/http_requests&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Captive_portal:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/captiveportal&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;DNS_spoof:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/dns_spoof&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;OpenVPN:&lt;/strong&gt; &lt;code&gt;ooniprobe third_party/openvpn&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;HTTP_host:&lt;/strong&gt; &lt;code&gt;ooniprobe manipulation/http_host&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Lantern:&lt;/strong&gt; &lt;code&gt;ooniprobe third_party/lantern&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Psiphon:&lt;/strong&gt; &lt;code&gt;ooniprobe third_party/psiphon&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Third party applications (such as the OpenVPN, Lantern and Psiphon
+tests) require the installation of external applications to run properly. For
+example, to run the Lantern test, installing the Lantern software is a
+prerequisite.&lt;/p&gt;
+
+&lt;h3 id=&#34;6-what-are-the-risks-of-running-ooniprobe&#34;&gt;6. What are the risks of running ooniprobe?&lt;/h3&gt;
+
+&lt;p&gt;Various legal and/or extra-legal risks might potentially emerge as a result of
+running ooniprobe. Such risks depend on many factors, such as which tests you
+run, which URLs you test for censorship and the legal frameworks of the country
+you are running ooniprobe from. In any case, it&amp;rsquo;s important to know that anyone
+monitoring your internet activity (such as your local ISP, government or
+employer) will be able to see that you are running ooniprobe. We therefore
+encourage you to seek legal advice prior to running ooniprobe.&lt;/p&gt;
+
+&lt;p&gt;Learn more about potential risks &lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;7-can-ooni-protect-my-privacy&#34;&gt;7. Can OONI protect my privacy?&lt;/h3&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s software is &lt;em&gt;not&lt;/em&gt; designed to protect your privacy, as anyone monitoring
+your internet activity (such as you local ISP, government or employer) will be
+able to see that you are running ooniprobe. OONI though does &lt;em&gt;care&lt;/em&gt; about the
+right to privacy, which is why IP addresses are removed before
+publishing data.&lt;/p&gt;
+
+&lt;h3 id=&#34;8-what-types-of-data-does-ooni-collect&#34;&gt;8. What types of data does OONI collect?&lt;/h3&gt;
+
+&lt;p&gt;If you run ooniprobe, OONI will by default collect the following types of data:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Country code&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Autonomous System Number (ASN)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Date and time of measurements&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;IP addresses (though OONI makes efforts to remove such data prior to
+publishing measurements)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Network measurements (you can view the specifics by reviewing each of the
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/tree/master/test-specs&#34;&gt;tests&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn more about the above through &lt;a href=&#34;https://ooni.torproject.org/about/data-policy/&#34;&gt;OONI&amp;rsquo;s Data
+Policy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;9-once-ooniprobe-has-run-should-i-send-the-results-to-you&#34;&gt;9. Once ooniprobe has run, should I send the results to you?&lt;/h3&gt;
+
+&lt;p&gt;No need to. ooniprobe is designed to automatically send the measurements to
+OONI&amp;rsquo;s measurement collector by default.&lt;/p&gt;
+
+&lt;h3 id=&#34;10-how-can-i-opt-out-from-sending-ooni-specific-types-of-data&#34;&gt;10. How can I opt-out from sending OONI specific types of data?&lt;/h3&gt;
+
+&lt;p&gt;You can opt-out from from sending OONI specific types of data by editing the
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe&#34;&gt;ooniprobe configuration file&lt;/a&gt; inside of &lt;code&gt;~/.ooni/ooniprobe.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;11-where-are-the-measurements-published&#34;&gt;11. Where are the measurements published?&lt;/h3&gt;
+
+&lt;p&gt;Once OONI receives measurements, it automatically processes them and publishes
+them on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;: a global
+data map which provides an interface to explore the measurements.&lt;/p&gt;
+
+&lt;p&gt;OONI also publishes measurements in json files &lt;strong&gt;&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;12-how-can-i-opt-out-from-having-my-measurements-published-by-default&#34;&gt;12. How can I opt-out from having my measurements published by default?&lt;/h3&gt;
+
+&lt;p&gt;You can opt-out from from sending OONI any data at all, by running ooniprobe
+with the &lt;code&gt;-n&lt;/code&gt; command line option.&lt;/p&gt;
+
+&lt;p&gt;This option is sometimes chosen by users who prefer to not have their
+measurements published, due to potential risks that could emerge as a result of
+such publication.&lt;/p&gt;
+
+&lt;h3 id=&#34;13-why-doesn-t-my-country-have-any-measurements-on-ooni-explorer&#34;&gt;13. Why doesn&amp;rsquo;t my country have any measurements on OONI Explorer?&lt;/h3&gt;
+
+&lt;p&gt;If your country doesn&amp;rsquo;t have any measurements on OONI Explorer, that&amp;rsquo;s probably
+because ooniprobe hasn&amp;rsquo;t been run there yet.&lt;/p&gt;
+
+&lt;p&gt;You can learn how to run ooniprobe &lt;a href=&#34;https://ooni.torproject.org/install/ooniprobe/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;lepidopter-ooni-s-raspberry-pi-distribution&#34;&gt;Lepidopter: OONI&amp;rsquo;s Raspberry Pi distribution&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-running-the-software-seems-too-technical-complicated-how-else-can-i-contribute-to-measurements&#34;&gt;1. Running the software seems too technical/complicated. How else can I contribute to measurements?&lt;/h3&gt;
+
+&lt;p&gt;If you&amp;rsquo;re a Windows user or generally find running ooniprobe from the command
+line too complicated, you can try out &lt;strong&gt;Lepidopter:&lt;/strong&gt; an ooniprobe
+distribution for Raspberry Pis.&lt;/p&gt;
+
+&lt;p&gt;A Raspberry Pi is a small single-board computer. You can run ooniprobe from a
+Raspberry Pi through the following steps:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Copy the ooniprobe distribution (Lepidopter) onto an SD card&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Insert the SD card into your Raspberry Pi&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Plug your Raspberry Pi to power&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Connect your Raspberry Pi to the internet (via an Ethernet cable)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Learn how to copy the ooniprobe distribution onto an SD card through the
+guide &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-how-often-will-ooniprobe-run-tests-through-my-raspberry-pi&#34;&gt;2. How often will ooniprobe run tests through my Raspberry Pi?&lt;/h3&gt;
+
+&lt;p&gt;The ooniprobe distribution for Raspberry Pis is configured to run tests once a
+day, every day.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-how-are-the-measurements-collected-from-the-tests-run-via-my-raspberry-pi&#34;&gt;3. How are the measurements collected from the tests run via my Raspberry Pi?&lt;/h3&gt;
+
+&lt;p&gt;The ooniprobe distribution for Raspberry Pis is configured to automatically send
+all measurements to OONI by default.&lt;/p&gt;
+
+&lt;h3 id=&#34;4-how-can-i-view-the-results-of-the-tests-run-via-my-raspberry-pi&#34;&gt;4. How can I view the results of the tests run via my Raspberry Pi?&lt;/h3&gt;
+
+&lt;p&gt;You can view all measurements - including the ones collected via your Raspberry
+Pi ooniprobe distribution - through &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
+Explorer&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;5-how-much-time-does-it-take-for-my-measurements-to-get-published-on-ooni-explorer&#34;&gt;5. How much time does it take for my measurements to get published on OONI Explorer?&lt;/h3&gt;
+
+&lt;p&gt;Measurements are published on OONI Explorer around 24 hours after each set of
+tests are run.&lt;/p&gt;
+
+&lt;h3 id=&#34;6-how-can-i-update-ooniprobe-on-my-raspberry-pi&#34;&gt;6. How can I update ooniprobe on my Raspberry Pi?&lt;/h3&gt;
+
+&lt;p&gt;The ooniprobe distribution for Raspberry Pis is configured to automatically
+update to the latest ooniprobe version.&lt;/p&gt;
+
+&lt;h3 id=&#34;7-what-are-the-risks-of-running-ooniprobe-via-a-raspberry-pi&#34;&gt;7. What are the risks of running ooniprobe via a Raspberry Pi?&lt;/h3&gt;
+
+&lt;p&gt;Various legal and/or extra-legal risks might potentially emerge as a result of
+running ooniprobe. Such risks depend on many factors, such as which tests you
+run, which URLs you test for censorship and the legal frameworks of the country
+you are running ooniprobe from. In any case, it&amp;rsquo;s important to know that anyone
+monitoring your internet activity (such as your local ISP, government or
+employer) will be able to see that ooniprobe is run from your network.&lt;/p&gt;
+
+&lt;p&gt;The advantage of running ooniprobe from a Raspberry Pi, rather than from your
+personal laptop, is that this activity will &lt;em&gt;not&lt;/em&gt; be linked to your personal IP
+address.&lt;/p&gt;
+
+&lt;p&gt;We encourage you to seek legal advice prior to running ooniprobe. Please learn
+more about potential risks &lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;testing-urls-for-censorship&#34;&gt;Testing URLs for censorship&lt;/h2&gt;
+
+&lt;h3 id=&#34;1-what-are-test-lists&#34;&gt;1. What are test lists?&lt;/h3&gt;
+
+&lt;p&gt;OONI tests specific websites to see if they are blocked, and such websites are
+included in lists. These lists are called &amp;ldquo;test lists&amp;rdquo;.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-what-types-of-test-lists-does-ooni-examine&#34;&gt;2. What types of test lists does OONI examine?&lt;/h3&gt;
+
+&lt;p&gt;ooniprobe examines two types of test lists:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The global list includes a wide range of internationally relevant websites (most
+of which are in English), while each country-specific test list includes
+websites that are relevant and commonly accessed within that country (many of
+which are in local languages).&lt;/p&gt;
+
+&lt;p&gt;The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30
+categories&lt;/a&gt;&lt;/strong&gt;, ranging from news media, file sharing and
+culture, to provocative or objectionable categories, like pornography, political
+criticism and hate speech.&lt;/p&gt;
+
+&lt;p&gt;When running ooniprobe, you will connect to and download data from the websites
+included in the global test list and in the test list which is specific to the
+country that you are running ooniprobe from. We therefore encourage you to
+review all of the URLs included in these lists carefully, prior to running
+ooniprobe, as connecting to some of these websites might be legally questionable
+(or illegal) in some jurisdictions around the world.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-which-list-of-urls-will-i-test-if-i-run-ooniprobe&#34;&gt;3. Which list of URLs will I test if I run ooniprobe?&lt;/h3&gt;
+
+&lt;p&gt;By default, when you run ooniprobe you will test all of the websites included in
+the &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;global list&lt;/a&gt;&lt;/strong&gt;, regardless of which country you are running ooniprobe from.&lt;/p&gt;
+
+&lt;p&gt;If a &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;country-specific test list&lt;/a&gt;&lt;/strong&gt; also exists for the country that you are running
+ooniprobe from, the software will by default test all of the websites included
+in that country&amp;rsquo;s test list as well (in addition to those included in the global
+list).&lt;/p&gt;
+
+&lt;h3 id=&#34;4-how-can-i-choose-which-urls-to-test-for-censorship&#34;&gt;4. How can I choose which URLs to test for censorship?&lt;/h3&gt;
+
+&lt;p&gt;If you are uncertain of the potential implications of connecting to and
+downloading data from the websites listed in the test lists, you can pass your
+own test list with the following type of command line option:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ooniprobe &amp;lt;test-name&amp;gt; -f &amp;lt;your-test-list&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;5-how-can-i-contribute-to-test-lists&#34;&gt;5. How can I contribute to test lists?&lt;/h3&gt;
+
+&lt;p&gt;You can find information on how to contribute to test lists and submit URLs for
+testing &lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;6-i-m-not-a-github-user-but-i-d-still-like-to-submit-urls-for-testing-how-can-i-do-so&#34;&gt;6. I&amp;rsquo;m not a github user, but I&amp;rsquo;d still like to submit URLs for testing. How can I do so?&lt;/h3&gt;
+
+&lt;p&gt;If you’re not a github user, please send us your csv file by dropping us an
+email at &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt; (PGP Key Fingerprint: 4C15 DDA9 96C6
+C0CF 48BD 3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
