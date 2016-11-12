@@ -166,39 +166,45 @@ sudo apt-get update
 
 <p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
 
-<pre><code>echo 'deb http://deb.torproject.org/torproject.org xenial main' | sudo tee -a /etc/apt/sources.list
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org xenial main' | sudo tee -a /etc/apt/sources.list
 sudo apt-get update
 </code></pre>
 
 <p><strong>Step 2.</strong> Type the following in your terminal:</p>
 
-<pre><code>sudo apt-get install ooniprobe
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
 </code></pre>
 
 <p><strong>On Ubuntu 15.10 (wily):</strong></p>
 
 <p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
 
-<pre><code>echo 'deb http://deb.torproject.org/torproject.org wily main' | sudo tee -a /etc/apt/sources.list
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org wily main' | sudo tee -a /etc/apt/sources.list
 sudo apt-get update
 </code></pre>
 
 <p><strong>Step 2.</strong> Type the following in your terminal:</p>
 
-<pre><code>sudo apt-get install ooniprobe
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
 </code></pre>
 
 <p><strong>On Ubuntu 14.04 (trusty):</strong></p>
 
 <p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
 
-<pre><code>echo 'deb http://deb.torproject.org/torproject.org trusty main' | sudo tee -a /etc/apt/sources.list
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org trusty main' | sudo tee -a /etc/apt/sources.list
 sudo apt-get update
 </code></pre>
 
 <p><strong>Step 2.</strong> Type the following in your terminal:</p>
 
-<pre><code>sudo apt-get install ooniprobe
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
 </code></pre>
 
 <h3 id="unsupported-unix-with-pip">Unsupported UNIX (with pip)</h3>
