@@ -3,9 +3,12 @@
 
 <html lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.16" />
+	<meta name="generator" content="Hugo 0.17" />
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
+  
+  <link href="https://ooni.torproject.org/index.xml" rel="feed" type="application/rss+xml" title="OONI: Open Observatory of Network Interference" />
+  
   <title>OONI - OONI: Open Observatory of Network Interference</title>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
@@ -20,7 +23,7 @@
 <body class="homepage">
 
  <a href="https://github.com/TheTorProject/ooni-probe">
-   <img style="position: absolute; top: 0; left: 0; border: 0;" src="images/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"/>
+   <img class="fork-me" style="position: absolute; top: 0; left: 0; border: 0;" src="images/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"/>
  </a>
  <div class="container">
     <nav>
@@ -53,7 +56,9 @@
 
     <header>
       <div class="row">
-        <img class="col-1" class="logo" src="images/ooni-header-mascot.png" srcset="images/ooni-header-mascot-2x.png 2x" width="200px" height="252px"/>
+      <div class="col-1">
+        <img class="logo" src="images/ooni-header-mascot.png" srcset="images/ooni-header-mascot-2x.png 2x" height="200" width="200"/>
+      </div>
         <div class="col-2">
           <img class="wordmark" src="images/wordmark.png" srcset="images/wordmark-2x.png 2x" alt="OONI"/>
           <h2>Open Observatory of Network Interference</h2>
@@ -65,26 +70,34 @@
   </div>
 
   <main>
-    <div class="how-it-works">
+      <div class="ooni-explorer">
       <div class="container">
         <div class="row">
           <div class="col-1">
-            <h2>How OONI Works</h2>
+            <h2>OONI Explorer</h2>
+              <p class="subtext">OONI has been monitoring internet censorship around the world since 2012</p>
+              <p class="subtext"><a class="explorer-button btn" href="https://explorer.ooni.torproject.org/">Explore OONI Data</a></p>
           </div>
-          <div class="col-2"></div>
-        </div>
-        <img class="col-3" src="images/how-ooni-works.png" srcset="images/how-ooni-works-2x.png 2x" width="680" height="280" />
+          
+        <div class="col-2">
+        <img class="explorer-map" src="images/ooni-explorer-map.png" srcset="images/ooni-explorer-map-2x.png 699w"  />
       </div>
+    </div>
+    </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-1"></div>
+        <div class="col-1"><h2>What OONI does</h2></div>
         <div class="col-2 pad-below">
-          <p>OONI scans TCP, DNS, HTTP and TLS connections for tampering. Some tests
-            work by requesting data over an unencrypted connection and comparing
-            against a known good value. Others check for DNS spoofing, keyword
-            filtering, transparent proxying and website block lists.</p>
-          <p class="cta"><a href="https://github.com/TheTorProject/ooni-spec">Testing methodology</a></p>
+          <h3>OONI develops free software tests designed to examine the following:</h3>
+          <br>
+          <ul>
+          <li>Blocking of websites
+          <li>Blocking of instant messaging apps
+          <li>Blocking of Tor and other circumvention tools
+          <li>Detection of systems that could be responsible for censorship and/or surveillance
+
+          <p class="cta"><a href="/nettest/">Testing methodology</a></p>
           <p><strong>There are risks.</strong> Running a probe involves testing
             connections to websites that may be banned and using tools to attempt
             circumventing web censorship. It is not designed to protect the privacy
@@ -93,6 +106,28 @@
           <p class="cta"><a href="/about/risks">More about the risks</a></p>
         </div>
       </div>
+      </div>
+
+    <div class="how-it-works">
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <h2>How OONI Works</h2>
+            <p class="subtext">OONI scans TCP, DNS, HTTP and TLS connections for tampering. Some tests
+            work by requesting data over an unencrypted connection and comparing
+            against a known good value. Others check for DNS spoofing, keyword
+            filtering, transparent proxying and website block lists.</p>
+          </div>
+          <div class="col-2">
+                    <img src="images/how-ooni-works.png" srcset="images/how-ooni-works-2x.png 2x" width="680" height="280" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container"> 
+
 
       
 
@@ -127,51 +162,7 @@
               <p class="byline">19 Jul 2016</p>
           </a>
           
-          <a href="https://ooni.torproject.org/post/web-connectivity/">
-              <p class="title">OONI releases new Web Connectivity test for detecting online censorship</p>
-              <p class="byline">3 Jun 2016</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/uganda-social-media-blocked/">
-              <p class="title">How Uganda blocked social media, again</p>
-              <p class="byline">17 May 2016</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/brazil-whatsapp-block/">
-              <p class="title">OONI Data Reveals How WhatsApp Was Blocked (Again) in Brazil</p>
-              <p class="byline">6 May 2016</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/brazil-whatsapp-block-pt/">
-              <p class="title">WhatsApp bloqueado (outra vez) no Brasil</p>
-              <p class="byline">6 May 2016</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/eeep-greek-censorship/">
-              <p class="title">EEEP and Greek Internet censorship</p>
-              <p class="byline">10 Jun 2015</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/zambia/">
-              <p class="title">Zambia, a country under Deep Packet Inspection</p>
-              <p class="byline">15 Jul 2013</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/tab-tab-come-in/">
-              <p class="title">Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</p>
-              <p class="byline">14 May 2013</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/hadara-palestine/">
-              <p class="title">Hadara Palestine</p>
-              <p class="byline">23 Apr 2012</p>
-          </a>
-          
-          <a href="https://ooni.torproject.org/post/t-mobile-usa-web-guard/">
-              <p class="title">T-Mobile USA Web Guard</p>
-              <p class="byline">21 Mar 2012</p>
-          </a>
-          
+          <a class="read-more" href="/post/">Read More</a>
         </div>
       </div>
 
@@ -203,12 +194,10 @@
         <div class="col-2">
             <p>To contact the OONI team send an email to <strong>contact@openobservatory.org</strong>
             Encrypted emails can be sent using the following PGP key:</p>
-            <pre>
-Key ID:
-    0CB177B7
-Fingerprint:
-    4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
-            </pre>
+            <p class="fingerprint">
+            Key ID: 0CB177B7<br>
+            Fingerprint: 4C15 DDA9 96C6 C0CF 48BD 3309 6B29 43F0 0CB1 77B7
+            </p>
         </div>
       </div>
 

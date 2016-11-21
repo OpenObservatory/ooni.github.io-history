@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.0.1 documentation</title>
+  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.1 documentation" href="../index.html"/> 
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -58,7 +61,7 @@
             
             
               <div class="version">
-                2.0.1
+                2.0.3.dev0
               </div>
             
           
@@ -112,7 +115,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -165,135 +168,135 @@ Youtube, etc.</p>
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
 <p>From running:
 <cite>ooniprobe blocking/dns_consistency -T test_inputs/dns_tamper_test_resolvers.txt -f test_inputs/http_host_file.txt</cite></p>
-<div class="highlight-python"><div class="highlight"><pre>###########################################
-# OONI Probe Report for DNS tamper test
-# Thu Nov 29 12:17:19 2012
-###########################################
----
-options:
-  collector: null
-  help: 0
-  logfile: null
-  pcapfile: null
-  reportfile: null
-  resume: 0
-  subargs: [-t, 8.8.8.8, -f, test_inputs/dns_tamper_file.txt]
-  test: nettests/blocking/dns_consistency.py
-probe_asn: null
-probe_cc: null
-probe_ip: 127.0.0.1
-software_name: ooniprobe
-software_version: 0.0.7.1-alpha
-start_time: 1354184239.0
-test_name: DNS tamper
-test_version: &#39;0.4&#39;
-...
----
-input: torproject.org
-report:
-  control_resolver: &amp;id001 [8.8.8.8, 53]
-  queries:
-  - addrs: [86.59.30.40, 38.229.72.14, 38.229.72.16, 82.195.75.101]
-    answers:
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=86.59.30.40
-        ttl=91&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=38.229.72.14
-        ttl=91&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=38.229.72.16
-        ttl=91&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=82.195.75.101
-        ttl=91&gt;]
-    query: &#39;[Query(&#39;&#39;torproject.org&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: *id001
-  - addrs: [86.59.30.40, 38.229.72.14, 38.229.72.16, 82.195.75.101]
-    answers:
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=86.59.30.40
-        ttl=91&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=38.229.72.14
-        ttl=91&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=38.229.72.16
-        ttl=91&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=91s auth=False&gt;, &lt;A address=82.195.75.101
-        ttl=91&gt;]
-    query: &#39;[Query(&#39;&#39;torproject.org&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: [8.8.8.8, 53]
-  tampering: {8.8.8.8: false}
-test_name: test_a_lookup
-test_runtime: 0.0733950138092041
-test_started: 1354187839.508863
-...
----
-input: google.com
-report:
-  control_resolver: &amp;id001 [8.8.8.8, 53]
-  queries:
-  - addrs: [173.194.69.100, 173.194.69.139, 173.194.69.113, 173.194.69.101, 173.194.69.138,
-      173.194.69.102]
-    answers:
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.100
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.139
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.113
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.101
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.138
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.102
-        ttl=54&gt;]
-    query: &#39;[Query(&#39;&#39;google.com&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: *id001
-  - addrs: [173.194.69.100, 173.194.69.139, 173.194.69.113, 173.194.69.101, 173.194.69.138,
-      173.194.69.102]
-    answers:
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.100
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.139
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.113
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.101
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.138
-        ttl=54&gt;]
-    - [&lt;RR name=google.com type=A class=IN ttl=54s auth=False&gt;, &lt;A address=173.194.69.102
-        ttl=54&gt;]
-    query: &#39;[Query(&#39;&#39;google.com&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: [8.8.8.8, 53]
-  tampering: {8.8.8.8: false}
-test_name: test_a_lookup
-test_runtime: 0.08325004577636719
-test_started: 1354187839.51091
-...
----
-input: measurementlab.net
-report:
-  control_resolver: &amp;id001 [8.8.8.8, 53]
-  queries:
-  - addrs: [72.249.86.184]
-    answers:
-    - [&lt;RR name=measurementlab.net type=A class=IN ttl=600s auth=False&gt;, &lt;A address=72.249.86.184
-        ttl=600&gt;]
-    query: &#39;[Query(&#39;&#39;measurementlab.net&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: *id001
-  - addrs: [72.249.86.184]
-    answers:
-    - [&lt;RR name=measurementlab.net type=A class=IN ttl=600s auth=False&gt;, &lt;A address=72.249.86.184
-        ttl=600&gt;]
-    query: &#39;[Query(&#39;&#39;measurementlab.net&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: [8.8.8.8, 53]
-  tampering: {8.8.8.8: false}
-test_name: test_a_lookup
-test_runtime: 0.2565779685974121
-test_started: 1354187839.512434
-...
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
+<span class="c1"># OONI Probe Report for DNS tamper test</span>
+<span class="c1"># Thu Nov 29 12:17:19 2012</span>
+<span class="c1">###########################################</span>
+<span class="o">---</span>
+<span class="n">options</span><span class="p">:</span>
+  <span class="n">collector</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">help</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">logfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">pcapfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">reportfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">resume</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">subargs</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span><span class="p">,</span> <span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="n">test_inputs</span><span class="o">/</span><span class="n">dns_tamper_file</span><span class="o">.</span><span class="n">txt</span><span class="p">]</span>
+  <span class="n">test</span><span class="p">:</span> <span class="n">nettests</span><span class="o">/</span><span class="n">blocking</span><span class="o">/</span><span class="n">dns_consistency</span><span class="o">.</span><span class="n">py</span>
+<span class="n">probe_asn</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">probe_cc</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">probe_ip</span><span class="p">:</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="n">software_name</span><span class="p">:</span> <span class="n">ooniprobe</span>
+<span class="n">software_version</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">7.1</span><span class="o">-</span><span class="n">alpha</span>
+<span class="n">start_time</span><span class="p">:</span> <span class="mf">1354184239.0</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">DNS</span> <span class="n">tamper</span>
+<span class="n">test_version</span><span class="p">:</span> <span class="s1">&#39;0.4&#39;</span>
+<span class="o">...</span>
+<span class="o">---</span>
+<span class="nb">input</span><span class="p">:</span> <span class="n">torproject</span><span class="o">.</span><span class="n">org</span>
+<span class="n">report</span><span class="p">:</span>
+  <span class="n">control_resolver</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">id001</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+  <span class="n">queries</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">86.59</span><span class="o">.</span><span class="mf">30.40</span><span class="p">,</span> <span class="mf">38.229</span><span class="o">.</span><span class="mf">72.14</span><span class="p">,</span> <span class="mf">38.229</span><span class="o">.</span><span class="mf">72.16</span><span class="p">,</span> <span class="mf">82.195</span><span class="o">.</span><span class="mf">75.101</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">86.59</span><span class="o">.</span><span class="mf">30.40</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">38.229</span><span class="o">.</span><span class="mf">72.14</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">38.229</span><span class="o">.</span><span class="mf">72.16</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">82.195</span><span class="o">.</span><span class="mf">75.101</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;torproject.org&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="o">*</span><span class="n">id001</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">86.59</span><span class="o">.</span><span class="mf">30.40</span><span class="p">,</span> <span class="mf">38.229</span><span class="o">.</span><span class="mf">72.14</span><span class="p">,</span> <span class="mf">38.229</span><span class="o">.</span><span class="mf">72.16</span><span class="p">,</span> <span class="mf">82.195</span><span class="o">.</span><span class="mf">75.101</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">86.59</span><span class="o">.</span><span class="mf">30.40</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">38.229</span><span class="o">.</span><span class="mf">72.14</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">38.229</span><span class="o">.</span><span class="mf">72.16</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">82.195</span><span class="o">.</span><span class="mf">75.101</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">91</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;torproject.org&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+  <span class="n">tampering</span><span class="p">:</span> <span class="p">{</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">:</span> <span class="n">false</span><span class="p">}</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">test_a_lookup</span>
+<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">0.0733950138092041</span>
+<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354187839.508863</span>
+<span class="o">...</span>
+<span class="o">---</span>
+<span class="nb">input</span><span class="p">:</span> <span class="n">google</span><span class="o">.</span><span class="n">com</span>
+<span class="n">report</span><span class="p">:</span>
+  <span class="n">control_resolver</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">id001</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+  <span class="n">queries</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.100</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.139</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.113</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.101</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.138</span><span class="p">,</span>
+      <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.102</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.100</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.139</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.113</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.101</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.138</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.102</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;google.com&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="o">*</span><span class="n">id001</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.100</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.139</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.113</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.101</span><span class="p">,</span> <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.138</span><span class="p">,</span>
+      <span class="mf">173.194</span><span class="o">.</span><span class="mf">69.102</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.100</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.139</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.113</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.101</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.138</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">173.194</span><span class="o">.</span><span class="mf">69.102</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">54</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;google.com&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+  <span class="n">tampering</span><span class="p">:</span> <span class="p">{</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">:</span> <span class="n">false</span><span class="p">}</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">test_a_lookup</span>
+<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">0.08325004577636719</span>
+<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354187839.51091</span>
+<span class="o">...</span>
+<span class="o">---</span>
+<span class="nb">input</span><span class="p">:</span> <span class="n">measurementlab</span><span class="o">.</span><span class="n">net</span>
+<span class="n">report</span><span class="p">:</span>
+  <span class="n">control_resolver</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">id001</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+  <span class="n">queries</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">72.249</span><span class="o">.</span><span class="mf">86.184</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">measurementlab</span><span class="o">.</span><span class="n">net</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">600</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">72.249</span><span class="o">.</span><span class="mf">86.184</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">600</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;measurementlab.net&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="o">*</span><span class="n">id001</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">72.249</span><span class="o">.</span><span class="mf">86.184</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">measurementlab</span><span class="o">.</span><span class="n">net</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">600</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">72.249</span><span class="o">.</span><span class="mf">86.184</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">600</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;measurementlab.net&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+  <span class="n">tampering</span><span class="p">:</span> <span class="p">{</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">:</span> <span class="n">false</span><span class="p">}</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">test_a_lookup</span>
+<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">0.2565779685974121</span>
+<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354187839.512434</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 <p>Notes: Query is the string representation of :class:twisted.names.dns.Query</p>
@@ -331,7 +334,7 @@ test_started: 1354187839.512434
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.1',
+            VERSION:'2.0.3.dev0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
