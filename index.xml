@@ -2,12 +2,238 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/index.xml</link>
+    <link>https://ooni.torproject.org/</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Nov 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OONI-dev meeting and hackathon 2016</title>
+      <link>https://ooni.torproject.org/post/ooni-dev-and-hackathon-2016/</link>
+      <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/ooni-dev-and-hackathon-2016/</guid>
+      <description>
+
+&lt;p&gt;Oonitarians are spread out across the globe, and OONI’s core team is no
+exception. We recently met in Berlin to hack on &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI’s software&lt;/a&gt;, work on our
+roadmap, and to have all those discussions that are more fruitful to have in
+person than on IRC. We also held a &lt;a href=&#34;https://ooni.torproject.org/post/berlin-hackathon-2016/&#34;&gt;hackathon&lt;/a&gt; to engage new individuals with our project!&lt;/p&gt;
+
+&lt;p&gt;Below we document some of the things that we worked on as part of our OONI-dev
+meeting and hackathon.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooni-dev-meeting&#34;&gt;OONI-dev meeting&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooni-hackathon&#34;&gt;OONI Hackathon&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#data-analysis&#34;&gt;Data analysis&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#oonis-measurement-api&#34;&gt;OONI&amp;rsquo;s measurement API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#web-development&#34;&gt;Web development&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#measurement-kit&#34;&gt;Measurement-kit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooni-mobile&#34;&gt;OONI mobile&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#test-lists&#34;&gt;Test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#running-ooniprobe&#34;&gt;Running ooniprobe&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;ooni-dev-meeting&#34;&gt;OONI-dev meeting&lt;/h1&gt;
+
+&lt;p&gt;OONI’s internal meeting was an opportunity for the project’s core team members
+to meet in person, discuss priorities over the next months, and to adjust the
+project’s roadmap accordingly. This meeting took place between Monday, 7th
+November and Thursday, 10th November.&lt;/p&gt;
+
+&lt;p&gt;We started off by mapping all of the ideas, questions, and problems that we
+wanted to collaboratively discuss and work on as part of the meeting. We then
+proceeded with voting amongst us on the ones that we believed were of highest
+priority, and subsequently creating sessions out of them.&lt;/p&gt;
+
+&lt;p&gt;As a result, we spent the first two days of the OONI-dev meeting having
+discussions as part of the following &lt;strong&gt;&lt;a href=&#34;https://github.com/OpenObs
+ervatory/gatherings/tree/master/internal/2016-11-berlin&#34;&gt;six sessions&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session 1:&lt;/strong&gt; &lt;a href=&#34;https://github.com/OpenObservatory/gatherings/blob/master/internal/2016-11-berlin/explorer-users-stories.md&#34;&gt;OONI Explorer user stories&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session 2:&lt;/strong&gt; &lt;a href=&#34;https://github.com/OpenObservatory/gatherings/blob/master/internal/2016-11-berlin/session-ooni-orchestration.md&#34;&gt;Probe orchestration&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session 3:&lt;/strong&gt; &lt;a href=&#34;https://github.com/OpenObservatory/gatherings/blob/master/internal/2016-11-berlin/session-ip-blocking-vs-throttling.md&#34;&gt;PCAPs and throttling as a form of censorship as opposed to IP blocking&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session 4:&lt;/strong&gt; &lt;a href=&#34;https://github.com/OpenObservatory/gatherings/blob/master/internal/2016-11-berlin/session-ooni-gui.md&#34;&gt;UX design&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session 5:&lt;/strong&gt; &lt;a href=&#34;https://github.com/OpenObservatory/gatherings/blob/master/internal/2016-11-berlin/session-testing-clients.md&#34;&gt;The future of testing clients: How should we ship software to end users?&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Session 6:&lt;/strong&gt; &lt;a href=&#34;https://github.com/OpenObservatory/gatherings/blob/master/internal/2016-11-berlin/session-ooni-mobile.md&#34;&gt;OONI mobile client&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We then spent the third day working on our &lt;strong&gt;roadmap&lt;/strong&gt; for the next six months,
+adjusting it to the project’s needs and priorities based on the discussions from
+the sessions of the previous days. During the fourth (and final) day of our
+internal meeting we held smaller, ad hoc discussions based on the rest of the
+ideas/questions/problems that were mapped out in the first day, and which didn’t
+fit into any of the six core sessions of the first two days. We also spent the
+last day of the internal meeting hacking on &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; and &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt; (a
+network measurement library that ooniprobe is being integrated in).&lt;/p&gt;
+
+&lt;h1 id=&#34;ooni-hackathon&#34;&gt;OONI Hackathon&lt;/h1&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://ooni.torproject.org/post/berlin-hackathon-2016/&#34;&gt;OONI hackathon&lt;/a&gt;,
+held at Berlin’s OnionSpace on 11th and 12th November, was an opportunity for us
+to meet new people interested in engaging with our project. We were excited to
+see that individuals with diverse skills and backgrounds showed up at the
+hackathon, including data scientists, programmers, researchers, and activists
+from various countries around the world.&lt;/p&gt;
+
+&lt;p&gt;Below is a summary of the things that we worked on as part of the two-day
+hackathon.&lt;/p&gt;
+
+&lt;h2 id=&#34;data-analysis&#34;&gt;Data analysis&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/&#34;&gt;OONI Explorer&lt;/a&gt; provides a web interface
+to explore all of OONI’s network measurements. However, OONI’s data processing
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;pipeline&lt;/a&gt; still needs some
+improvement to make OONI’s data more accessible and easier to navigate. As
+such, we were thrilled to have data scientists join the hackathon and offer
+suggestions on how to improve our data analysis techniques.&lt;/p&gt;
+
+&lt;p&gt;We discussed and defined queries for data analysis that can help improve the
+next iteration of OONI’s pipeline. This included:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Defining heuristics for separating “normal” from “anomalous” measurements as
+part of OONI’s data processing;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Filtering the web connectivity “anomalous” measurements based on the types of
+anomalies (DNS, HTTP-diff, HTTP-failure, TCP/IP);&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Aggregating the sum of anomalies per measurement;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Filtering measurements based on their testing frequency.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Furthermore, we discussed and implemented techniques for identifying and
+filtering false positives that emerge in the measurements. As part of this, we
+discussed ways to filter Cloudflare false positives, as well as techniques for
+better identifying block pages within measurements. We also discussed a
+methodology for detecting URLs that fail in the same way across measurements,
+across time, and across countries, and filtering them as false positives.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooni-s-measurement-api&#34;&gt;OONI&amp;rsquo;s measurement API&lt;/h2&gt;
+
+&lt;p&gt;In addition to &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;,
+OONI’s network measurements are published in &lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;JSON format&lt;/a&gt;. One of our priorities though
+is to also build an API to the measurements that enables data analysis, allowing
+users to query the API to retrieve measurements based on certain characteristics
+(to query, for example, all anomalous measurements).&lt;/p&gt;
+
+&lt;p&gt;As part of the hackathon, we continued our work on OONI’s new measurement API
+and created a staging version of it.&lt;/p&gt;
+
+&lt;h2 id=&#34;web-development&#34;&gt;Web development&lt;/h2&gt;
+
+&lt;p&gt;Several web developers joined the hackathon and we worked with them on the
+following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Restructuring the “&lt;a href=&#34;https://ooni.torproject.org/nettest/&#34;&gt;Tests&lt;/a&gt;” section of the website.&lt;/strong&gt; OONI has developed multiple
+free software tests and this section of the website was created to not only list
+them, but to also provide descriptions explaining what each test is designed to
+do. As part of the hackathon, one of the participants &lt;a href=&#34;https://github.com/TheTorProject/ooni-web/pull/87&#34;&gt;worked&lt;/a&gt; on restructuring
+this section of the website to improve the accessibility of the test
+descriptions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Improving upon the presentation of information on OONI’s home page.&lt;/strong&gt; Another
+participant &lt;a href=&#34;https://github.com/TheTorProject/ooni-web/pull/89&#34;&gt;worked&lt;/a&gt; on fixing some bugs and restructuring the home page of OONI’s
+website to make the flow of information more accessible.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Integrating a Frequently Asked Questions (FAQ) section on the website.&lt;/strong&gt; Having a
+page on OONI’s website which addresses some of the questions that we frequently
+get asked by community members is important. As part of the hackathon, we &lt;a href=&#34;https://github.com/TheTorProject/ooni-web/pull/91&#34;&gt;worked&lt;/a&gt;
+on creating a FAQ section for OONI’s website. If any important questions are
+missing in there, please don’t hesitate to &lt;a href=&#34;https://ooni.torproject.org//about/&#34;&gt;contact&lt;/a&gt; us.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;measurement-kit&#34;&gt;Measurement-kit&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;Measurement-kit&lt;/a&gt; is a
+network measurement library that ooniprobe is gradually being integrated in. As
+part of the hackathon, we worked on improving the DNS capabilities of
+measurement-kit along the following lines:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;We &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/pull/915&#34;&gt;developed fixes&lt;/a&gt; for several issues that prevent the default, libevent-based DNS
+engine from working correctly with IPv6 in certain cases;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;We started &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/pull/918&#34;&gt;integrating a new DNS engine&lt;/a&gt; that uses the system’s DNS functionality;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;We started &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/pull/920&#34;&gt;writing a new DNS engine&lt;/a&gt; based on the c-ares DNS library.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In addition, we also started implementing &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/pull/907&#34;&gt;support for cloud-fronted collectors in measurement-kit&lt;/a&gt; to allow users to submit the result of OONI measurements to
+our servers through a cloud-based service (e.g. Amazon), thus masking the fact
+that they are communicating with OONI servers. We also committed enhancements
+and fixes to support the development of mobile applications based on
+measurement-kit.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooni-mobile&#34;&gt;OONI mobile&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Spoiler:&lt;/strong&gt; Over the next few months we will be releasing a mobile app (for Android
+and iOS) for running ooniprobe! During the hackathon, we worked on improving the
+design of &lt;a href=&#34;https://github.com/measurement-kit/ooniprobe-ios&#34;&gt;OONI’s mobile app&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s a sneak peak of OONI’s upcoming mobile app:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/berlin-hackathon/ooni-mobile.png&#34; alt=&#34;OONI mobile&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Screenshot: OONI mobile&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/berlin-hackathon/ooni-mobile-2.png&#34; alt=&#34;OONI mobile testing a site&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Screenshot: OONI mobile testing &lt;a href=&#34;http://neubot.org&#34;&gt;http://neubot.org&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;test-lists&#34;&gt;Test lists&lt;/h2&gt;
+
+&lt;p&gt;An important part of identifying censorship is determining &lt;em&gt;which&lt;/em&gt; websites to
+examine for blocking.&lt;/p&gt;
+
+&lt;p&gt;OONI bases its testing on the &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;Citizen Lab’s test list Github repository&lt;/a&gt; which includes a wide
+range of country-specific lists of URLs. These lists constantly need to be
+updated with new URLs and, in many cases, new lists need to be created for
+countries that don’t already have their own test lists.&lt;/p&gt;
+
+&lt;p&gt;We were happy to see that various participants joined the hackathon to help
+contribute to existing test lists and to learn how to create new ones. As part
+of the hackathon, participants worked on updating the &lt;a href=&#34;https://github.com/citizenlab/test-lists/pull/102&#34;&gt;Palestinian test list&lt;/a&gt; to include many new
+URLs. We also prioritized on updating test lists for countries with upcoming
+elections, such as the &lt;a href=&#34;https://github.com/citizenlab/test-lists/pull/99&#34;&gt;test list for Gambia&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;running-ooniprobe&#34;&gt;Running ooniprobe&lt;/h2&gt;
+
+&lt;p&gt;Amongst the new faces that joined us at the hackathon, we were also happy to
+meet people curious to learn about OONI and how to run ooniprobe. We discussed
+OONI’s approaches and methodologies, and taught participants how to run various
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; software tests. As an
+outcome, we hope that participants will share the skills and knowledge they
+acquired through the hackathon with others too, and help increase transparency
+on internet censorship around the world.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;The OONI team would like to send a warm &lt;strong&gt;thank you&lt;/strong&gt; to all the &lt;strong&gt;participants&lt;/strong&gt; who
+joined the hackathon, to the &lt;strong&gt;OnionSpace&lt;/strong&gt; for sharing its space with us for a
+week, and to the &lt;strong&gt;Ford Foundation&lt;/strong&gt; for covering some of the OONI team’s travel
+costs, thus making this meeting and hackathon possible.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Egypt: Media censorship, Tor interference, HTTPS throttling and ads injections?</title>
@@ -7276,253 +7502,6 @@ using a mix between squid transparent HTTP proxy censorship and other.&lt;/p&gt;
 
 &lt;p&gt;For more details on the political implications check see the &lt;a href=&#34;http://www.maannews.net/eng/ViewDetails.aspx?ID=478726&#34;&gt;article by George
 Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>T-Mobile USA Web Guard</title>
-      <link>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</link>
-      <pubDate>Wed, 21 Mar 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/t-mobile-usa-web-guard/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;country:&lt;/strong&gt; United States&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;provider:&lt;/strong&gt; T-Mobile USA&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;product:&lt;/strong&gt; Web Guard&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;product_website:&lt;/strong&gt; &lt;a href=&#34;http://support.t-mobile.com/docs/DOC-2144&#34;&gt;http://support.t-mobile.com/docs/DOC-2144&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;censorship_method:&lt;/strong&gt; Transparent HTTP proxy&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/t-mobile-scan-blockedsites-categorized.txt&#34;&gt;Categories of censored sites&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;T-Mobile USA offers a &amp;ldquo;feature&amp;rdquo; to restrict access to certain
-kinds of content. This is called Web Guard. Supposedly Web Guard
-is supposed to inhibit access to content that falls under the
-following categories: Alcohol, Mature Content, Violence,
-Drugs, Pornography,  Weapons, Gambling, Suicide, Guns, Hate,
-Tobacco, Ammunition.&lt;/p&gt;
-
-&lt;p&gt;By developing an OONI-probe test we were able to extract part of
-the list of censored content and discovered that sites that do
-not fall under these categories were also censored.
-This feature is enabled by default on all prepaid accounts and
-although it can be disabled by customers who wish to do so
-(if over 18 years of age), it is not clearly stated in the
-error page how to do so. This means that T-Mobile USA customers may
-be drawn into the Filternet without knowing how to get out.&lt;/p&gt;
-
-&lt;h3 id=&#34;how-is-the-censorship-performed&#34;&gt;How is the censorship performed?&lt;/h3&gt;
-
-&lt;p&gt;The technique being used by T-Mobile USA to restrict access to certain content
-involves deploying a transprent HTTP proxy. This proxy intercepts every HTTP
-packet going through the network and checks it&amp;rsquo;s Host header field to see if
-it on the censored list. If the site is to be blocked it injects a fake response
-warning the user of the block. What this means is that the block is only effective
-against unencrypted HTTP traffic, but does not work for encrypted HTTPs traffic.&lt;/p&gt;
-
-&lt;h3 id=&#34;some-sites-should-not-be-censored&#34;&gt;Some sites should not be censored&lt;/h3&gt;
-
-&lt;p&gt;While most of the censored sites are legitimately categorized, there are certain
-ones that do not fall under the categories of the block.
-Here is a list of sites that we found to be censored, but that we don&amp;rsquo;t believe
-belong to any of the following categories Alcohol, Mature Content, Violence,
-Drugs, Pornography, Weapons, Gambling, Suicide, Guns, Hate, Tobacco, Ammunition.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/torproject.org.png&#34; alt=&#34;The Tor Project is dedicated to proving anonymous secure communication&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://torproject.org&#34;&gt;The Tor Project is dedicated to proving anonymous secure communication&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/italian-censorship.png&#34; alt=&#34;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
-  online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://217.175.53.72/&#34;&gt;This is one of the most interestingly blocked website. Italy practices DNS based censorship for website that are related to
-  online gambling. This is the block page is displayed when the IP address in the DNS response is spoofed. This is meta censorship! &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/web.archive.org.png&#34; alt=&#34;The internet archive Way Back Machine. The Library of the Internet.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://web.archive.org/&#34;&gt;The internet archive Way Back Machine. The Library of the Internet.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/newgrounds.com.png&#34; alt=&#34;Newgrounds is an American entertainment and social media website. &#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://newgrounds.com&#34;&gt;Newgrounds is an American entertainment and social media website. &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wjunction.com.png&#34; alt=&#34;Webmaster Hangout&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wjunction.com/&#34;&gt;Webmaster Hangout&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/logicalmedia.com.png&#34; alt=&#34;Logical Media is an Affiliate Network.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://logicalmedia.com/&#34;&gt;Logical Media is an Affiliate Network.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/cosmopolitan.com.png&#34; alt=&#34;Cosmopolitan is an international magazine for women. &#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://cosmopolitan.com/&#34;&gt;Cosmopolitan is an international magazine for women. &lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nullrefer.com.png&#34; alt=&#34;Hide Refer hides the visitors HTTP refer from being seen by other websites&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://nullrefer.com/&#34;&gt;Hide Refer hides the visitors HTTP refer from being seen by other websites&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sportscn.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://sportscn.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/programme.tv.png&#34; alt=&#34;French TV guide website.&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://programme.tv/&#34;&gt;French TV guide website.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/nulled.cc.png&#34; alt=&#34;Russian programming forum&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://nulled.cc/&#34;&gt;Russian programming forum&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/ir-tci.org.png&#34; alt=&#34;Iranian Forum&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ir-tci.org/&#34;&gt;Iranian Forum&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/zonebourse.com.png&#34; alt=&#34;French economics and financial news site&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zonebourse.com/&#34;&gt;French economics and financial news site&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackbase.com.png&#34; alt=&#34;Chinese computer security website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://hackbase.com/&#34;&gt;Chinese computer security website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/whatreallyhappened.com.png&#34; alt=&#34;9/11 conspiracy theory news site&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://whatreallyhappened.com/&#34;&gt;&lt;sup&gt;9&lt;/sup&gt;&amp;frasl;&lt;sub&gt;11&lt;/sub&gt; conspiracy theory news site&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/p.tl.png&#34; alt=&#34;Japanese URL shortening service&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://p.tl/&#34;&gt;Japanese URL shortening service&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/10minutesaperdre.fr.png&#34; alt=&#34;French funny news website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://10minutesaperdre.fr/&#34;&gt;French funny news website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/statsie.com.png&#34; alt=&#34;Website statistics collection site&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://statsie.com/&#34;&gt;Website statistics collection site&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/bbcprofit.com.png&#34; alt=&#34;Financial advice website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://bbcprofit.com/&#34;&gt;Financial advice website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/el-annuaire.com.png&#34; alt=&#34;French website index&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://el-annuaire.com/&#34;&gt;French website index&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/livesports.pl.png&#34; alt=&#34;Polish sports news website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://livesports.pl/&#34;&gt;Polish sports news website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/titan007.com.png&#34; alt=&#34;Chinese sports news website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://titan007.com/&#34;&gt;Chinese sports news website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/girlpower.it.png&#34; alt=&#34;Italian women advice website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://girlpower.it/&#34;&gt;Italian women advice website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/yusukebe.com.png&#34; alt=&#34;Japanese blog&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://yusukebe.com/&#34;&gt;Japanese blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/sougouwiki.com.png&#34; alt=&#34;Japanese wiki&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://sougouwiki.com/&#34;&gt;Japanese wiki&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/wiki-live.com.png&#34; alt=&#34;Online Article directory&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://wiki-live.com/&#34;&gt;Online Article directory&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hltv.org.png&#34; alt=&#34;Sports news website&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://hltv.org/&#34;&gt;Sports news website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/elu24.ee.png&#34; alt=&#34;Estonian news portal&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://elu24.ee/&#34;&gt;Estonian news portal&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/pitsirikos.net.png&#34; alt=&#34;Greek political blog&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://pitsirikos.net/&#34;&gt;Greek political blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/kath.net.png&#34; alt=&#34;Religious news site&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://kath.net/&#34;&gt;Religious news site&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/hackforums.net.png&#34; alt=&#34;Computer security Forum&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://hackforums.net/&#34;&gt;Computer security Forum&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/t-mobile-usa-web-guard/screenshot/echartsinfrance.net.png&#34; alt=&#34;French pop music hit list&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.chartsinfrance.net/&#34;&gt;French pop music hit list&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;what-can-we-learn-from-this&#34;&gt;What can we learn from this?&lt;/h3&gt;
-
-&lt;p&gt;That if you are a Chinese sports fan or a French interested in economics under
-18 you will have a hard time going with T-Mobile in the US. There appears to be
-overall a tendency to blocking foreign sports news websites.&lt;/p&gt;
-
-&lt;p&gt;When I asked T-Mobile US about the matter this is what came out with the
-following:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; Arturo Filastò @hellais
-@TMobileHelp Under what category does http://torproject.org fall under? I don&#39;t see any reason for it being blocked. @mikavienna @ioerror
-
- T-Mobile USA @TMobileHelp
-Hi there. Here&#39;s more info about webguard. http://ow.ly/9JbxO Please let us know if we can help. ^CG
-
- Arturo Filastò @hellais
-@TMobileHelp Why is web guard blocking http://torproject.org? It does not appear to belong to the filtered categories.
-
- T-Mobile USA @TMobileHelp
-@hellais @MiKaVienna @ioerror http://torproject.org is not blocked. There must be a webguard on your line. Please contact us to resolve. ^CG
-
- Arturo Filastò  @hellais
-Wonder what keywords it picket up in @torproject that fit in these categories: http://support.t-mobile.com/docs/DOC-2144#What_categories_will_be_completely_restricted_with_the_Web_Guard_feature
-
- T-Mobile USA  @TMobileHelp
-My guess would be system picked up keywords there. Let us know if we can assist in turning webguard off. ^CG
-
- Arturo Filastò  @hellais
-Also, doesn&#39;t t-mobile buy the list of censored sites from a third party? Or does it compile it itself?
-
- T-Mobile USA @TMobileHelp
-My guess would be system picked up keywords there. Let us know if we can assist in turning webguard off. ^CG
-
- Arturo Filastò @hellais
-My questions are: why is Web Guard enabled on my account and why sites such as http://torproject.org are filtered.
-
- T-Mobile USA @TMobileHelp
-I don&#39;t have enough information to speculate further about the details. I CAN help you turn off webguard? ^CG
-
- Arturo Filastò @hellais
-@TMobileHelp what leads TMobile to believe that a customer is interested in censorship? Is Web Guard activated on all prepaid accounts?
-
- T-Mobile USA @TMobileHelp
-Must be because when your account was set up, we thought you wanted it. If you don&#39;t, please contact us: http://ow.ly/9JllQ ^CG
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;So T-Mobile is basically interfering into what should be taught by
-parents to their children. Since most of prepaid customers are
-under 18 they reserve the right to decide what is right and wrong
-for them, even bypassing their parents.&lt;/p&gt;
-
-&lt;p&gt;If I were a parent I would be mad that T-Mobile US chooses for my
-what my child should watch and should not.&lt;/p&gt;
 </description>
     </item>
     
