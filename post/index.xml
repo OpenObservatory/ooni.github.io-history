@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/post/</link>
-    <description>Recent content in Posts on OONI: Open Observatory of Network Interference</description>
+    <title>Post-rsses on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/post/index.xml</link>
+    <description>Recent content in Post-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Nov 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OONI-dev meeting and hackathon 2016</title>
       <link>https://ooni.torproject.org/post/ooni-dev-and-hackathon-2016/</link>
-      <pubDate>Mon, 21 Nov 2016 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 22 Nov 2016 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-dev-and-hackathon-2016/</guid>
       <description>
@@ -33,7 +33,7 @@ meeting and hackathon.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#data-analysis&#34;&gt;Data analysis&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#oonis-measurement-api&#34;&gt;OONI&amp;rsquo;s measurement API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooni-s-measurement-api&#34;&gt;OONI&amp;rsquo;s measurement API&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#web-development&#34;&gt;Web development&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
