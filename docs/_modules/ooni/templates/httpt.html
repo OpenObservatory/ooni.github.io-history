@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.templates.httpt &mdash; OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation</title>
+  <title>ooni.templates.httpt &mdash; OONI: Open Observatory of Network Interference 2.1.0-rc.1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../../../genindex.html"/>
         <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation" href="../../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.1.0-rc.1 documentation" href="../../../index.html"/>
         <link rel="up" title="Module code" href="../../index.html"/> 
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                2.0.3.dev0
+                2.1.0-rc.1
               </div>
             
           
@@ -207,6 +207,10 @@
     <span class="n">randomizeUA</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">followRedirects</span> <span class="o">=</span> <span class="kc">False</span>
 
+    <span class="c1"># When this is set to False we will follow redirects pointing to IPs in</span>
+    <span class="c1"># rfc1918</span>
+    <span class="n">ignorePrivateRedirects</span> <span class="o">=</span> <span class="kc">False</span>
+
     <span class="c1"># You can specify a list of tuples in the format of (CONTENT_TYPE,</span>
     <span class="c1"># DECODER)</span>
     <span class="c1"># For example to support Gzip decoding you should specify</span>
@@ -248,7 +252,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">followRedirects</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">control_agent</span> <span class="o">=</span> <span class="n">FixedRedirectAgent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">control_agent</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">FixedRedirectAgent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">FixedRedirectAgent</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">,</span>
+                    <span class="n">ignorePrivateRedirects</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ignorePrivateRedirects</span>
+                <span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;agent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redirect&#39;</span>
             <span class="k">except</span><span class="p">:</span>
                 <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Warning! You are running an old version of twisted &quot;</span>
@@ -270,7 +277,8 @@
 <div class="viewcode-block" id="HTTPTest.processInputs"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.processInputs">[docs]</a>    <span class="k">def</span> <span class="nf">processInputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="HTTPTest.addToReport"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.addToReport">[docs]</a>    <span class="k">def</span> <span class="nf">addToReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">response_body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">failure_string</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="HTTPTest.addToReport"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.addToReport">[docs]</a>    <span class="k">def</span> <span class="nf">addToReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">response_body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">failure_string</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">previous_response</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds to the report the specified request and response.</span>
 
@@ -296,19 +304,25 @@
             <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="kc">None</span>
         <span class="p">}</span>
         <span class="k">if</span> <span class="n">response</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span>
+                    <span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;absoluteURI&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;request&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">absoluteURI</span>
+
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;withoutbody&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">response_body</span> <span class="o">=</span> <span class="n">representBody</span><span class="p">(</span><span class="n">response_body</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">response_body</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+            <span class="n">response_headers</span> <span class="o">=</span> <span class="n">_representHeaders</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
             <span class="c1"># Attempt to redact the IP address of the probe from the responses</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">privacy</span><span class="o">.</span><span class="n">includeip</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">and</span> <span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span>
                     <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">response_body</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response_body</span><span class="p">,</span> <span class="n">unicode</span><span class="p">))):</span>
                 <span class="n">response_body</span> <span class="o">=</span> <span class="n">response_body</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="s2">&quot;[REDACTED]&quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span>
-                    <span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;absoluteURI&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
-                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;request&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">absoluteURI</span>
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">response_headers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">response_headers</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+                                                          <span class="s2">&quot;[REDACTED]&quot;</span><span class="p">)</span>
             <span class="n">session</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">&#39;headers&#39;</span><span class="p">:</span> <span class="n">_representHeaders</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">),</span>
+                <span class="s1">&#39;headers&#39;</span><span class="p">:</span> <span class="n">response_headers</span><span class="p">,</span>
                 <span class="s1">&#39;body&#39;</span><span class="p">:</span> <span class="n">response_body</span><span class="p">,</span>
                 <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">code</span>
             <span class="p">}</span>
@@ -317,9 +331,10 @@
             <span class="n">session</span><span class="p">[</span><span class="s1">&#39;failure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">failure_string</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;requests&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
-
         <span class="k">if</span> <span class="n">response</span> <span class="ow">and</span> <span class="n">response</span><span class="o">.</span><span class="n">previousResponse</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">previousResponse</span><span class="p">,</span>
+            <span class="n">previous_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">previousResponse</span>
+        <span class="k">if</span> <span class="n">previous_response</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">previous_response</span><span class="p">,</span>
                              <span class="n">response_body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                              <span class="n">failure_string</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
 
@@ -508,7 +523,14 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error performing HTTP request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
             <span class="n">failure_string</span> <span class="o">=</span> <span class="n">handleAllFailures</span><span class="p">(</span><span class="n">failure</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">failure_string</span><span class="o">=</span><span class="n">failure_string</span><span class="p">)</span>
+            <span class="n">previous_response</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">failure</span><span class="p">,</span> <span class="s2">&quot;previousResponse&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="n">previous_response</span>  <span class="o">=</span> <span class="n">failure</span><span class="o">.</span><span class="n">previousResponse</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">failure</span><span class="p">,</span> <span class="s2">&quot;requestLocation&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">failure</span><span class="o">.</span><span class="n">requestLocation</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">failure_string</span><span class="o">=</span><span class="n">failure_string</span><span class="p">,</span>
+                             <span class="n">previous_response</span><span class="o">=</span><span class="n">previous_response</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">failure</span>
 
         <span class="k">if</span> <span class="n">use_tor</span><span class="p">:</span>
@@ -555,7 +577,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'2.0.3.dev0',
+            VERSION:'2.1.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

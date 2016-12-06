@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/highlight-default.min.css">
   <link rel="icon" type="image/png" href="/images/favicon.png"/>
   <script src="/js/highlight.min.js"></script>
+  <script src="/js/zepto.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
@@ -63,16 +64,12 @@
 <li>
 <ul>
 <li><a href="#risks-of-running-ooniprobe">Risks of running ooniprobe</a></li>
-<li><a href="#installing-ooniprobe">Installing ooniprobe</a>
+<li><a href="#installing-ooniprobe">Installing ooniprobe</a></li>
+<li><a href="#running-ooniprobe">Running ooniprobe</a>
 <ul>
-<li><a href="#mac-os-x">Mac OS X</a></li>
-<li><a href="#linux-debian">Linux: Debian</a></li>
-<li><a href="#linux-ubuntu">Linux: Ubuntu</a></li>
-<li><a href="#unsupported-unix-with-pip">Unsupported UNIX (with pip)</a></li>
+<li><a href="#debian-ubuntu">Debian/Ubuntu</a></li>
+<li><a href="#pip-and-other-linux-versions">Pip and other Linux versions</a></li>
 </ul></li>
-<li><a href="#running-ooniprobe">Running ooniprobe</a></li>
-<li><a href="#opt-out">Opt-out</a></li>
-<li><a href="#choosing-which-ooni-tests-to-run">Choosing which OONI tests to run</a></li>
 <li><a href="#advanced-users">Advanced users</a>
 <ul>
 <li><a href="#running-ooniprobe-from-a-virtual-machine">Running ooniprobe from a virtual machine</a>
@@ -120,7 +117,32 @@ as your employer, ISP or government). Please read our relevant
 
 <p>To install ooniprobe follow the steps below:</p>
 
-<h3 id="mac-os-x">Mac OS X</h3>
+<div class="install-selector">
+
+<select id="os-selector">
+<option value="linux">Linux</option>
+<option value="macos">macOS</option>
+<option value="unix">Unix</option>
+<option value="unsupported">Windows</option>
+<option value="unsupported">Other</option>
+</select>
+
+<select id="distro-selector">
+<option value="unknown">-- what version? --</option>
+<option value="debian-stable">Debian stable (jessie)</option>
+<option value="debian-testing">Debian testing</option>
+<option value="debian-unstable">Debian unstable</option>
+
+<option value="ubuntu-yakkety">Ubuntu 16.10 (yakkety)</option>
+<option value="ubuntu-xenial">Ubuntu 16.04 (xenial)</option>
+<option value="ubuntu-trusty">Ubuntu 14.04 (trusty)</option>
+</select>
+
+</div>
+
+<div class="os-instructions os-macos">
+
+<p><strong>On macOS</strong></p>
 
 <p><strong>Step 1.</strong> Install <strong><a href="http://brew.sh">homebrew</a></strong>.</p>
 
@@ -129,39 +151,103 @@ as your employer, ISP or government). Please read our relevant
 <pre><code>brew install ooniprobe
 </code></pre>
 
-<p>If you would like to contribute measurements to OONI daily you can also add this to your crontab:</p>
 
-<pre><code>@daily ooniprobe $THE_OONI_COMMAND
-</code></pre>
 
-<p>Run this command to automatically update your crontab:</p>
+</div>
 
-<pre><code>(crontab -l 2&gt;/dev/null; echo &quot;@daily ooniprobe $THE_OONI_COMMAND&quot;) | crontab -
-</code></pre>
+<div class="os-instructions os-linux-unknown">
 
-<h3 id="linux-debian">Linux: Debian</h3>
+<p>Please choose your linux version</p>
 
-<p><strong>On Debian testing and unstable:</strong></p>
 
-<p><strong>Step 1.</strong> Type the following in your terminal:</p>
 
-<pre><code>sudo apt-get install ooniprobe
-</code></pre>
+</div>
+
+<div class="os-instructions os-linux-debian-stable">
 
 <p><strong>On Debian stable (jessie):</strong></p>
 
-<p><strong>Step 1.</strong> Configure debian backports by typing the following in your terminal:</p>
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
 
-<pre><code>echo 'deb http://ftp.debian.org/debian jessie-backports main' | sudo tee -a /etc/apt/sources.list
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org jessie main' | sudo tee /etc/apt/sources.list.d/ooniprobe.list
 sudo apt-get update
 </code></pre>
 
 <p><strong>Step 2.</strong> Type the following in your terminal:</p>
 
-<pre><code>sudo apt-get install ooniprobe
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
 </code></pre>
 
-<h3 id="linux-ubuntu">Linux: Ubuntu</h3>
+
+
+</div>
+
+<div class="os-instructions os-linux-debian-testing">
+
+<p><strong>On Debian testing:</strong></p>
+
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
+
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org testing main' | sudo tee /etc/apt/sources.list.d/ooniprobe.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
+</code></pre>
+
+
+
+</div>
+
+<div class="os-instructions os-linux-debian-unstable">
+
+<p><strong>On Debian unstable:</strong></p>
+
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
+
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org unstable main' | sudo tee /etc/apt/sources.list.d/ooniprobe.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
+</code></pre>
+
+
+
+</div>
+
+<div class="os-instructions os-linux-ubuntu-yakkety">
+
+<p><strong>On Ubuntu 16.10 (yakkety):</strong></p>
+
+<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
+
+<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+echo 'deb http://deb.torproject.org/torproject.org yakkety main' | sudo tee /etc/apt/sources.list.d/ooniprobe.list
+sudo apt-get update
+</code></pre>
+
+<p><strong>Step 2.</strong> Type the following in your terminal:</p>
+
+<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
+</code></pre>
+
+
+
+</div>
+
+<div class="os-instructions os-linux-ubuntu-xenial">
 
 <p><strong>On Ubuntu 16.04 (xenial):</strong></p>
 
@@ -169,7 +255,7 @@ sudo apt-get update
 
 <pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-echo 'deb http://deb.torproject.org/torproject.org xenial main' | sudo tee -a /etc/apt/sources.list
+echo 'deb http://deb.torproject.org/torproject.org xenial main' | sudo tee /etc/apt/sources.list.d/ooniprobe.list
 sudo apt-get update
 </code></pre>
 
@@ -178,20 +264,11 @@ sudo apt-get update
 <pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
 </code></pre>
 
-<p><strong>On Ubuntu 15.10 (wily):</strong></p>
 
-<p><strong>Step 1.</strong> Configure the torproject repository by typing the following in your terminal:</p>
 
-<pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
-gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-echo 'deb http://deb.torproject.org/torproject.org wily main' | sudo tee -a /etc/apt/sources.list
-sudo apt-get update
-</code></pre>
+</div>
 
-<p><strong>Step 2.</strong> Type the following in your terminal:</p>
-
-<pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
-</code></pre>
+<div class="os-instructions os-linux-ubuntu-trusty">
 
 <p><strong>On Ubuntu 14.04 (trusty):</strong></p>
 
@@ -199,7 +276,7 @@ sudo apt-get update
 
 <pre><code>gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-echo 'deb http://deb.torproject.org/torproject.org trusty main' | sudo tee -a /etc/apt/sources.list
+echo 'deb http://deb.torproject.org/torproject.org trusty main' | sudo tee /etc/apt/sources.list.d/ooniprobe.list
 sudo apt-get update
 </code></pre>
 
@@ -208,9 +285,15 @@ sudo apt-get update
 <pre><code>sudo apt-get install ooniprobe deb.torproject.org-keyring
 </code></pre>
 
-<h3 id="unsupported-unix-with-pip">Unsupported UNIX (with pip)</h3>
 
-<p>On other unix systems ensure that you have installed the following dependencies:</p>
+
+</div>
+
+<div class="os-instructions os-unix">
+
+<p><strong>On other unix systems</strong></p>
+
+<p>Ensure that you have installed the following dependencies:</p>
 
 <ul>
 <li><p>build-essential</p></li>
@@ -236,7 +319,7 @@ sudo apt-get update
 <li><p>virtualenv</p></li>
 </ul>
 
-<p>Then you can install ooniprobe inside a virtualenvironment with pip by typing
+<p>Then you can install ooniprobe inside a virtual environment with pip by typing
 the following in your terminal:</p>
 
 <pre><code>virtualenv env/
@@ -253,139 +336,38 @@ source env/bin/activate
 <pre><code>pip install https://github.com/TheTorProject/ooni-probe/archive/master.zip
 </code></pre>
 
-<p>If you&rsquo;re using the Debian package, you will be asked when installing
-whether you would like to run ooniprobe daily. On other platforms, if you would
-like to contribute measurements to OONI daily you can also add this to your
-crontab:</p>
 
-<pre><code>@daily ooniprobe $THE_OONI_COMMAND
-</code></pre>
 
-<p>Run this command to automatically update your crontab:</p>
+</div>
 
-<pre><code>(crontab -l 2&gt;/dev/null; echo &quot;@daily ooniprobe $THE_OONI_COMMAND&quot;) | crontab -
-</code></pre>
+<div class="os-instructions os-unsupported">
+
+<p>Your operating system is currently unsupported. You may want to try setting
+it up inside of a virtual machine.</p>
+
+
+
+</div>
 
 <h2 id="running-ooniprobe">Running ooniprobe</h2>
 
-<p>You can run ooniprobe through the following steps:</p>
+<h3 id="debian-ubuntu">Debian/Ubuntu</h3>
 
-<p><strong>Step 1.</strong> Type <code>ooniprobe</code> in your terminal to view all of your options.</p>
+<p>Access ooniprobe&rsquo;s web UI in you web&rsquo;s browser at
+<a href="http://localhost:8842">http://localhost:8842</a> and go through the setup wizard
+process to initialize and use ooniprobe.</p>
 
-<p><strong>Step 2.</strong> Type <code>oonideckgen</code> in your terminal. This will generate an OONI deck
-that includes a set of tests and a global list of URLs, as well as a country-
-specific list of URLs based on your IP address.</p>
+<h3 id="pip-and-other-linux-versions">Pip and other Linux versions</h3>
 
-<p><strong>Step 3.</strong> Type <code>ooniprobe -i /home/user/deck/default-user.deck</code> in your
-terminal, where &ldquo;user&rdquo; is your system&rsquo;s username.</p>
+<p>Type <code>ooniprobe-agent start</code> in your terminal to start ooniprobe agent. You
+should be presented with the following URL: <a href="http://127.0.0.1:8842">http://127.0.0.1:8842</a>.</p>
 
-<p>Now ooniprobe should be running on your computer.</p>
+<p>By opening this URL <a href="http://127.0.0.1:8842">http://127.0.0.1:8842</a> in your web
+browser you will be directed to ooniprobe&rsquo;s web UI setup wizard. Upon
+completion of the setup wizard process ooniprobe will be successfully
+initialized and ready to use.</p>
 
-<p><strong>What ooniprobe runs and tests by default</strong></p>
-
-<p>If you follow the steps above, then it will <em>by default</em> do the following:</p>
-
-<ol>
-<li><p>Run the <strong><a href="https://ooni.torproject.org/nettest/web-connectivity/">web_connectivity test</a></strong> which will test the following lists of websites for censorship:</p>
-
-<ul>
-<li><p><strong><a href="https://github.com/citizenlab/test-lists/blob/master/lists/global.csv">Global list of websites</a></strong></p></li>
-
-<li><p><strong><a href="https://github.com/citizenlab/test-lists/tree/master/lists">Country-specific list of websites</a></strong> (if it exists for the country that you are running ooniprobe from)</p></li>
-</ul></li>
-
-<li><p>Run the <strong><a href="https://ooni.torproject.org/nettest/http-invalid-request-line/">http-invalid-request-line test</a></strong> to
-examine whether a proxy technology (which could potentially be used for the
-purpose of censorship and surveillance) is present in the network you are
-testing.</p></li>
-
-<li><p>Run the <strong><a href="https://ooni.torproject.org/nettest/http-header-field-manipulation/">http-header-field-manipulation test</a></strong> to
-examine whether a proxy technology (which could potentially be used for the
-purpose of censorship and surveillance) is present in the network you are
-testing.</p></li>
-
-<li><p>Send the measurements to OONI&rsquo;s measurement collector.</p></li>
-
-<li><p>Publish the measurements (once they have been processed by OONI) on <strong><a href="https://explorer.ooni.torproject.org/world/">OONI
-Explorer</a></strong>.</p></li>
-</ol>
-
-<h2 id="opt-out">Opt-out</h2>
-
-<p>If you don&rsquo;t feel comfortable with the above, you have the following choices:</p>
-
-<ol>
-<li><p><strong>Specify which test(s) you want to run:</strong> You can do this by typing
-<code>ooniprobe -s</code> in your terminal to view the different commands for each test.</p></li>
-
-<li><p><strong>Specify which URLs you want to test:</strong> You can do this by creating your own
-list of URLs that you want to test, and by subsequently passing that list with
-the <code>ooniprobe -f</code> command line option. For example: <code>ooniprobe
-blocking/web_connectivity -f mylist.txt</code>.</p></li>
-
-<li><p>Opt-out from sending OONI your (a) country code and/or (b) Autonomous System
-Number (ASN) by <strong><a href="https://github.com/TheTorProject/ooni-probe#configuring-ooniprobe">editing the ooniprobe configuration
-file</a></strong>
-inside of <code>~/.ooni/ooniprobe.conf</code>. This option though is <em>not</em> recommended, as
-we would not be able to attribute measurements to a specific country or network.</p></li>
-
-<li><p>Opt-out from sending OONI any measurements at all (which will prevent them
-from being published), by running ooniprobe with the <code>-n</code> option.</p></li>
-</ol>
-
-<h2 id="choosing-which-ooni-tests-to-run">Choosing which OONI tests to run</h2>
-
-<p>ooniprobe is designed to run the following tests by default:</p>
-
-<ul>
-<li><p><strong><a href="https://ooni.torproject.org/nettest/web-connectivity/">Web-Connectivity</a></strong></p></li>
-
-<li><p><strong><a href="https://ooni.torproject.org/nettest/http-invalid-request-line/">HTTP-invalid-request-line</a></strong></p></li>
-
-<li><p><strong><a href="https://ooni.torproject.org/nettest/http-header-field-manipulation/">HTTP-header-field-manipulation</a></strong></p></li>
-</ul>
-
-<p>If you don&rsquo;t want to run all of these tests or if you would prefer to run
-entirely different OONI tests, you can do so by typing <code>ooniprobe -s</code> in your
-terminal to view which commands to run for each test. This will present you with
-the following that can be run for each test:</p>
-
-<ul>
-<li><p><strong>Web_connectivity:</strong> <code>ooniprobe blocking/web_connectivity</code></p></li>
-
-<li><p><strong>HTTP_invalid-request-line:</strong> <code>ooniprobe manipulation/http_invalid_request_line</code></p></li>
-
-<li><p><strong>TCP_connect:</strong> <code>ooniprobe blocking/tcp_connect</code></p></li>
-
-<li><p><strong>Traceroute:</strong> <code>ooniprobe manipulation/traceroute</code></p></li>
-
-<li><p><strong>DNS_consistency:</strong> <code>ooniprobe blocking/dns_consistency</code></p></li>
-
-<li><p><strong>Bridge_reachability:</strong> <code>ooniprobe blocking/bridge_reachability</code></p></li>
-
-<li><p><strong>HTTP_header_field_manipulation:</strong> <code>ooniprobe manipulation/http_header_field_manipulation</code></p></li>
-
-<li><p><strong>Meek_fronted_requests:</strong> <code>ooniprobe blocking/meek_fronted_requests</code></p></li>
-
-<li><p><strong>HTTP_requests:</strong> <code>ooniprobe blocking/http_requests</code></p></li>
-
-<li><p><strong>Captive_portal:</strong> <code>ooniprobe manipulation/captiveportal</code></p></li>
-
-<li><p><strong>DNS_spoof:</strong> <code>ooniprobe manipulation/dns_spoof</code></p></li>
-
-<li><p><strong>OpenVPN:</strong> <code>ooniprobe third_party/openvpn</code></p></li>
-
-<li><p><strong>HTTP_host:</strong> <code>ooniprobe manipulation/http_host</code></p></li>
-
-<li><p><strong>Lantern:</strong> <code>ooniprobe third_party/lantern</code></p></li>
-
-<li><p><strong>Psiphon:</strong> <code>ooniprobe third_party/psiphon</code></p></li>
-</ul>
-
-<p><strong>Note:</strong> Third party applications (such as the OpenVPN, Lantern and Psiphon
-tests) require the installation of external applications to run properly. For
-example, to run the Lantern test, installing the Lantern software is a
-prerequisite.</p>
+<p>Further documentation on how to use ooniprobe&rsquo;s web UI can be found <a href="/post/web-ui-post/">here</a>.</p>
 
 <h2 id="advanced-users">Advanced users</h2>
 
@@ -414,7 +396,6 @@ prerequisite.</p>
 <p><strong>Step 4.</strong> Run the following from your terminal:</p>
 
 <pre><code>git clone https://github.com/TheTorProject/ooni-probe.git
-git clone https://github.com/TheTorProject/ooni-backend.git
 cd ooni-probe/
 vagrant up
 </code></pre>
@@ -424,13 +405,13 @@ vagrant up
 <pre><code>vagrant ssh probe
 </code></pre>
 
-<p>ooniprobe will be installed in /data/ooni-probe.</p>
+<p><strong>Step 6.</strong> Start the ooniprobe agent:</p>
 
-<p><strong>Step 6.</strong> You can run ooniprobe with:</p>
-
-<pre><code>oonideckgen
-ooniprobe -i deck/default-user.deck
+<pre><code>ooniprobe-agent start
 </code></pre>
+
+<p><strong>Step 7.</strong> Connect to the web UI on your host machine at:
+<a href="http://localhost:8842/">http://localhost:8842/</a></p>
 
 <h4 id="setting-capabilities-on-your-virtualenv-python-binary">Setting capabilities on your virtualenv python binary</h4>
 
@@ -520,6 +501,54 @@ following in the torrc section and adjust them to your bridges:</p>
        - &quot;obfs4 154.35.22.10:41835 8FB9F4319E89E5C6223052AA525A192AFBC85D55 cert=GGGS1TX4R81m3r0HBl79wKy1OtPPNR2CZUIrHjkRg65Vc2VR8fOyo64f9kmT1UAFG7j0HQ iat-mode=0&quot;
        ClientTransportPlugin: &quot;obfs4 exec /usr/bin/obfs4proxy&quot;
 </code></pre>
+
+<style type="text/css">
+.install-selector {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.os-linux-unknown {
+    display: none;
+}
+
+</style>
+
+<script type="text/javascript">
+var OSName = "unknown";
+if (window.navigator.userAgent.indexOf("Windows NT 6.2") != -1) OSName="unsupported";
+if (window.navigator.userAgent.indexOf("Windows NT 6.1") != -1) OSName="unsupported";
+if (window.navigator.userAgent.indexOf("Windows NT 6.0") != -1) OSName="unsupported";
+if (window.navigator.userAgent.indexOf("Windows NT 5.1") != -1) OSName="unsupported";
+if (window.navigator.userAgent.indexOf("Windows NT 5.0") != -1) OSName="unsupported";
+if (window.navigator.userAgent.indexOf("Mac") != -1) OSName="macos";
+if (window.navigator.userAgent.indexOf("X11") != -1) OSName="unix";
+if (window.navigator.userAgent.indexOf("Linux") != -1) OSName="linux";
+
+var selectedOSChanged = function() {
+    var os_value = $("#os-selector").val();
+    var distro_value = $("#distro-selector").val();
+    var target_element = ".os-";
+    if (os_value == "linux") {
+        $("#distro-selector").show();
+        target_element += "linux-" + distro_value;
+    } else {
+        $("#distro-selector").hide();
+        target_element += os_value;
+    }
+    $(".os-instructions").hide();
+    $(target_element).show();
+}
+
+$(".install-selector").show();
+
+$(".os-instructions").hide();
+$("#os-selector").val(OSName);
+$("#os-selector").change(selectedOSChanged);
+$("#distro-selector").change(selectedOSChanged);
+
+selectedOSChanged();
+</script>
 
   </main>
 </div>

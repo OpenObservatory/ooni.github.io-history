@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettests blocking Package &mdash; OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation</title>
+  <title>ooni.nettests blocking Package &mdash; OONI: Open Observatory of Network Interference 2.1.0-rc.1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation" href="../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.1.0-rc.1 documentation" href="../index.html"/>
         <link rel="up" title="Implemented NetTests" href="modules.html"/>
         <link rel="next" title="ooni.nettests examples Package" href="ooni.nettests.examples.html"/>
         <link rel="prev" title="Implemented NetTests" href="modules.html"/> 
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.0.3.dev0
+                2.1.0-rc.1
               </div>
             
           
@@ -304,13 +304,6 @@ lengths match.</p>
 <code class="descname">inputFile</code><em class="property"> = ['file', 'f', None, 'File containing the IP:PORT combinations to be tested, one per line.']</em><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.inputFile" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="ooni.nettests.blocking.tcp_connect.TCPConnectTest.inputProcessor">
-<code class="descname">inputProcessor</code><span class="sig-paren">(</span><em>filename=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/blocking/tcp_connect.html#TCPConnectTest.inputProcessor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.inputProcessor" title="Permalink to this definition">¶</a></dt>
-<dd><p>This inputProcessor extracts name:port pairs from urls
-XXX: Does not support unusual port numbers</p>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="ooni.nettests.blocking.tcp_connect.TCPConnectTest.name">
 <code class="descname">name</code><em class="property"> = 'TCP Connect'</em><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.name" title="Permalink to this definition">¶</a></dt>
@@ -332,6 +325,11 @@ XXX: Does not support unusual port numbers</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="ooni.nettests.blocking.tcp_connect.TCPConnectTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/blocking/tcp_connect.html#TCPConnectTest.setUp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
 <dt id="ooni.nettests.blocking.tcp_connect.TCPConnectTest.test_connect">
 <code class="descname">test_connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/blocking/tcp_connect.html#TCPConnectTest.test_connect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.test_connect" title="Permalink to this definition">¶</a></dt>
 <dd><p>This test performs a TCP connection to the remote host on the
@@ -342,7 +340,7 @@ succeeded, or the reason for the failure if it has failed.</p>
 
 <dl class="attribute">
 <dt id="ooni.nettests.blocking.tcp_connect.TCPConnectTest.version">
-<code class="descname">version</code><em class="property"> = '0.1'</em><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.version" title="Permalink to this definition">¶</a></dt>
+<code class="descname">version</code><em class="property"> = '0.2.0'</em><a class="headerlink" href="#ooni.nettests.blocking.tcp_connect.TCPConnectTest.version" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -402,7 +400,7 @@ succeeded, or the reason for the failure if it has failed.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.3.dev0',
+            VERSION:'2.1.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

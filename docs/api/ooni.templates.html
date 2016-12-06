@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Test Templates &mdash; OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation</title>
+  <title>Test Templates &mdash; OONI: Open Observatory of Network Interference 2.1.0-rc.1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.3.dev0 documentation" href="../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.1.0-rc.1 documentation" href="../index.html"/>
         <link rel="up" title="Measurement Developer API" href="ooni.html"/>
         <link rel="next" title="Architecture" href="../architecture.html"/>
         <link rel="prev" title="Measurement Developer API" href="ooni.html"/> 
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                2.0.3.dev0
+                2.1.0-rc.1
               </div>
             
           
@@ -183,7 +183,7 @@ specify as URL &#8220;<a class="reference external" href="shttp://example.com/">
 <p>XXX all of this requires some refactoring.</p>
 <dl class="method">
 <dt id="ooni.templates.httpt.HTTPTest.addToReport">
-<code class="descname">addToReport</code><span class="sig-paren">(</span><em>request</em>, <em>response=None</em>, <em>response_body=None</em>, <em>failure_string=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/templates/httpt.html#HTTPTest.addToReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.templates.httpt.HTTPTest.addToReport" title="Permalink to this definition">¶</a></dt>
+<code class="descname">addToReport</code><span class="sig-paren">(</span><em>request</em>, <em>response=None</em>, <em>response_body=None</em>, <em>failure_string=None</em>, <em>previous_response=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/templates/httpt.html#HTTPTest.addToReport"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.templates.httpt.HTTPTest.addToReport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds to the report the specified request and response.</p>
 <dl class="docutils">
 <dt>Args:</dt>
@@ -240,6 +240,11 @@ function takes the response body as an argument.</dd>
 <dl class="attribute">
 <dt id="ooni.templates.httpt.HTTPTest.followRedirects">
 <code class="descname">followRedirects</code><em class="property"> = False</em><a class="headerlink" href="#ooni.templates.httpt.HTTPTest.followRedirects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.templates.httpt.HTTPTest.ignorePrivateRedirects">
+<code class="descname">ignorePrivateRedirects</code><em class="property"> = False</em><a class="headerlink" href="#ooni.templates.httpt.HTTPTest.ignorePrivateRedirects" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -681,7 +686,7 @@ we are to receive.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.3.dev0',
+            VERSION:'2.1.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
