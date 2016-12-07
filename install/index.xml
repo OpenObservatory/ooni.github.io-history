@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Installs on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/install/</link>
-    <description>Recent content in Installs on OONI: Open Observatory of Network Interference</description>
+    <title>Install-rsses on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/install/index.xml</link>
+    <description>Recent content in Install-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Jun 2016 00:00:00 +0000</lastBuildDate>
@@ -657,15 +657,14 @@ as your employer, ISP or government). Please read our relevant
 
 &lt;div class=&#34;install-selector&#34;&gt;
 
-&lt;select id=&#34;os-selector&#34;&gt;
+&lt;select class=&#34;os-selector&#34;&gt;
 &lt;option value=&#34;linux&#34;&gt;Linux&lt;/option&gt;
 &lt;option value=&#34;macos&#34;&gt;macOS&lt;/option&gt;
 &lt;option value=&#34;unix&#34;&gt;Unix&lt;/option&gt;
-&lt;option value=&#34;unsupported&#34;&gt;Windows&lt;/option&gt;
-&lt;option value=&#34;unsupported&#34;&gt;Other&lt;/option&gt;
+&lt;option value=&#34;unsupported&#34;&gt;Windows/Other&lt;/option&gt;
 &lt;/select&gt;
 
-&lt;select id=&#34;distro-selector&#34;&gt;
+&lt;select class=&#34;distro-selector&#34;&gt;
 &lt;option value=&#34;unknown&#34;&gt;-- what version? --&lt;/option&gt;
 &lt;option value=&#34;debian-stable&#34;&gt;Debian stable (jessie)&lt;/option&gt;
 &lt;option value=&#34;debian-testing&#34;&gt;Debian testing&lt;/option&gt;
@@ -889,13 +888,55 @@ it up inside of a virtual machine.&lt;/p&gt;
 
 &lt;h2 id=&#34;running-ooniprobe&#34;&gt;Running ooniprobe&lt;/h2&gt;
 
-&lt;h3 id=&#34;debian-ubuntu&#34;&gt;Debian/Ubuntu&lt;/h3&gt;
+&lt;div class=&#34;install-selector&#34;&gt;
+
+&lt;select class=&#34;os-selector&#34;&gt;
+&lt;option value=&#34;linux&#34;&gt;Linux&lt;/option&gt;
+&lt;option value=&#34;macos&#34;&gt;macOS&lt;/option&gt;
+&lt;option value=&#34;unix&#34;&gt;Unix&lt;/option&gt;
+&lt;option value=&#34;unsupported&#34;&gt;Windows/Other&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&#34;os-instructions os-macos&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;On macOS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;To collect measurements daily you should enable the service with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew services restart ooniprobe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You will then be able to access the web UI by opening in your web browser
+&lt;a href=&#34;http://localhost:8842&#34;&gt;http://localhost:8842&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;div class=&#34;os-instructions
+            os-linux-unknown
+            os-linux-ubuntu-trusty
+            os-linux-ubuntu-xenial
+            os-linux-ubuntu-yakkety
+            os-linux-debian-stable
+            os-linux-debian-testing
+            os-linux-debian-unstable&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;On Debian/Ubuntu:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Access ooniprobe&amp;rsquo;s web UI in you web&amp;rsquo;s browser at
 &lt;a href=&#34;http://localhost:8842&#34;&gt;http://localhost:8842&lt;/a&gt; and go through the setup wizard
 process to initialize and use ooniprobe.&lt;/p&gt;
 
-&lt;h3 id=&#34;pip-and-other-linux-versions&#34;&gt;Pip and other Linux versions&lt;/h3&gt;
+
+
+&lt;/div&gt;
+
+&lt;div class=&#34;os-instructions os-unix&#34;&gt;
+
+&lt;p&gt;&lt;strong&gt;On other unix systems&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Type &lt;code&gt;ooniprobe-agent start&lt;/code&gt; in your terminal to start ooniprobe agent. You
 should be presented with the following URL: &lt;a href=&#34;http://127.0.0.1:8842&#34;&gt;http://127.0.0.1:8842&lt;/a&gt;.&lt;/p&gt;
@@ -906,6 +947,19 @@ completion of the setup wizard process ooniprobe will be successfully
 initialized and ready to use.&lt;/p&gt;
 
 &lt;p&gt;Further documentation on how to use ooniprobe&amp;rsquo;s web UI can be found &lt;a href=&#34;https://ooni.torproject.org/post/web-ui-post/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;/div&gt;
+
+&lt;div class=&#34;os-instructions os-unsupported&#34;&gt;
+
+&lt;p&gt;Your operating system is currently unsupported. You may want to try setting
+it up inside of a virtual machine.&lt;/p&gt;
+
+
+
+&lt;/div&gt;
 
 &lt;h2 id=&#34;advanced-users&#34;&gt;Advanced users&lt;/h2&gt;
 
@@ -1064,14 +1118,20 @@ if (window.navigator.userAgent.indexOf(&#34;X11&#34;) != -1) OSName=&#34;unix&#3
 if (window.navigator.userAgent.indexOf(&#34;Linux&#34;) != -1) OSName=&#34;linux&#34;;
 
 var selectedOSChanged = function() {
-    var os_value = $(&#34;#os-selector&#34;).val();
-    var distro_value = $(&#34;#distro-selector&#34;).val();
+    var os_value;
+    if ($(this).attr(&#39;class&#39;) == &#39;os-selector&#39;) {
+        os_value = $(this).val();
+        $(&#34;.os-selector&#34;).val(os_value);
+    } else {
+        os_value = $(&#34;.os-selector&#34;).val();
+    }
+    var distro_value = $(&#34;.distro-selector&#34;).val();
     var target_element = &#34;.os-&#34;;
     if (os_value == &#34;linux&#34;) {
-        $(&#34;#distro-selector&#34;).show();
+        $(&#34;.distro-selector&#34;).show();
         target_element += &#34;linux-&#34; + distro_value;
     } else {
-        $(&#34;#distro-selector&#34;).hide();
+        $(&#34;.distro-selector&#34;).hide();
         target_element += os_value;
     }
     $(&#34;.os-instructions&#34;).hide();
@@ -1081,9 +1141,9 @@ var selectedOSChanged = function() {
 $(&#34;.install-selector&#34;).show();
 
 $(&#34;.os-instructions&#34;).hide();
-$(&#34;#os-selector&#34;).val(OSName);
-$(&#34;#os-selector&#34;).change(selectedOSChanged);
-$(&#34;#distro-selector&#34;).change(selectedOSChanged);
+$(&#34;.os-selector&#34;).val(OSName);
+$(&#34;.os-selector&#34;).change(selectedOSChanged);
+$(&#34;.distro-selector&#34;).change(selectedOSChanged);
 
 selectedOSChanged();
 &lt;/script&gt;

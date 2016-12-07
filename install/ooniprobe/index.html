@@ -65,11 +65,7 @@
 <ul>
 <li><a href="#risks-of-running-ooniprobe">Risks of running ooniprobe</a></li>
 <li><a href="#installing-ooniprobe">Installing ooniprobe</a></li>
-<li><a href="#running-ooniprobe">Running ooniprobe</a>
-<ul>
-<li><a href="#debian-ubuntu">Debian/Ubuntu</a></li>
-<li><a href="#pip-and-other-linux-versions">Pip and other Linux versions</a></li>
-</ul></li>
+<li><a href="#running-ooniprobe">Running ooniprobe</a></li>
 <li><a href="#advanced-users">Advanced users</a>
 <ul>
 <li><a href="#running-ooniprobe-from-a-virtual-machine">Running ooniprobe from a virtual machine</a>
@@ -119,15 +115,14 @@ as your employer, ISP or government). Please read our relevant
 
 <div class="install-selector">
 
-<select id="os-selector">
+<select class="os-selector">
 <option value="linux">Linux</option>
 <option value="macos">macOS</option>
 <option value="unix">Unix</option>
-<option value="unsupported">Windows</option>
-<option value="unsupported">Other</option>
+<option value="unsupported">Windows/Other</option>
 </select>
 
-<select id="distro-selector">
+<select class="distro-selector">
 <option value="unknown">-- what version? --</option>
 <option value="debian-stable">Debian stable (jessie)</option>
 <option value="debian-testing">Debian testing</option>
@@ -351,13 +346,55 @@ it up inside of a virtual machine.</p>
 
 <h2 id="running-ooniprobe">Running ooniprobe</h2>
 
-<h3 id="debian-ubuntu">Debian/Ubuntu</h3>
+<div class="install-selector">
+
+<select class="os-selector">
+<option value="linux">Linux</option>
+<option value="macos">macOS</option>
+<option value="unix">Unix</option>
+<option value="unsupported">Windows/Other</option>
+</select>
+
+</div>
+
+<div class="os-instructions os-macos">
+
+<p><strong>On macOS</strong></p>
+
+<p>To collect measurements daily you should enable the service with:</p>
+
+<pre><code>brew services restart ooniprobe
+</code></pre>
+
+<p>You will then be able to access the web UI by opening in your web browser
+<a href="http://localhost:8842">http://localhost:8842</a>.</p>
+
+
+
+</div>
+
+<div class="os-instructions
+            os-linux-unknown
+            os-linux-ubuntu-trusty
+            os-linux-ubuntu-xenial
+            os-linux-ubuntu-yakkety
+            os-linux-debian-stable
+            os-linux-debian-testing
+            os-linux-debian-unstable">
+
+<p><strong>On Debian/Ubuntu:</strong></p>
 
 <p>Access ooniprobe&rsquo;s web UI in you web&rsquo;s browser at
 <a href="http://localhost:8842">http://localhost:8842</a> and go through the setup wizard
 process to initialize and use ooniprobe.</p>
 
-<h3 id="pip-and-other-linux-versions">Pip and other Linux versions</h3>
+
+
+</div>
+
+<div class="os-instructions os-unix">
+
+<p><strong>On other unix systems</strong></p>
 
 <p>Type <code>ooniprobe-agent start</code> in your terminal to start ooniprobe agent. You
 should be presented with the following URL: <a href="http://127.0.0.1:8842">http://127.0.0.1:8842</a>.</p>
@@ -368,6 +405,19 @@ completion of the setup wizard process ooniprobe will be successfully
 initialized and ready to use.</p>
 
 <p>Further documentation on how to use ooniprobe&rsquo;s web UI can be found <a href="/post/web-ui-post/">here</a>.</p>
+
+
+
+</div>
+
+<div class="os-instructions os-unsupported">
+
+<p>Your operating system is currently unsupported. You may want to try setting
+it up inside of a virtual machine.</p>
+
+
+
+</div>
 
 <h2 id="advanced-users">Advanced users</h2>
 
@@ -526,14 +576,20 @@ if (window.navigator.userAgent.indexOf("X11") != -1) OSName="unix";
 if (window.navigator.userAgent.indexOf("Linux") != -1) OSName="linux";
 
 var selectedOSChanged = function() {
-    var os_value = $("#os-selector").val();
-    var distro_value = $("#distro-selector").val();
+    var os_value;
+    if ($(this).attr('class') == 'os-selector') {
+        os_value = $(this).val();
+        $(".os-selector").val(os_value);
+    } else {
+        os_value = $(".os-selector").val();
+    }
+    var distro_value = $(".distro-selector").val();
     var target_element = ".os-";
     if (os_value == "linux") {
-        $("#distro-selector").show();
+        $(".distro-selector").show();
         target_element += "linux-" + distro_value;
     } else {
-        $("#distro-selector").hide();
+        $(".distro-selector").hide();
         target_element += os_value;
     }
     $(".os-instructions").hide();
@@ -543,9 +599,9 @@ var selectedOSChanged = function() {
 $(".install-selector").show();
 
 $(".os-instructions").hide();
-$("#os-selector").val(OSName);
-$("#os-selector").change(selectedOSChanged);
-$("#distro-selector").change(selectedOSChanged);
+$(".os-selector").val(OSName);
+$(".os-selector").change(selectedOSChanged);
+$(".distro-selector").change(selectedOSChanged);
 
 selectedOSChanged();
 </script>
