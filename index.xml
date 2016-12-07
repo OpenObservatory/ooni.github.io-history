@@ -2,12 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/index.xml</link>
+    <link>https://ooni.torproject.org/</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OONI releases Lepidopter Raspberry Pi distribution</title>
+      <link>https://ooni.torproject.org/post/lepidopter/</link>
+      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/lepidopter/</guid>
+      <description>
+
+&lt;p&gt;The Open Observatory of Network Interference (OONI) team is happy to announce
+the beta release of ooniprobe&amp;rsquo;s distribution for Raspberry Pis, caĺled
+&lt;strong&gt;Lepidopter&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-lepidopter&#34;&gt;What is Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter is a Raspberry Pi distribution image with all the required
+dependencies and software packages in place, configured to run network
+measurement tests via the
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; software. It is
+developed and designed to require no physical attendance upon first bootstrap
+but also allows experienced users to further configure it as they wish. The
+&lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;source code&lt;/a&gt; and the building
+scripts of the Lepidopter image are free and open source software.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-use-lepidopter&#34;&gt;Why use Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Since 2012 OONI has collected millions of network measurements that show
+evidence of internet censorship and network tampering. OONI measurement data
+&lt;a href=&#34;https://ooni.torproject.org/post/&#34;&gt;shows&lt;/a&gt; how ISPs filter and censor the internet.
+This wouldn&amp;rsquo;t be possible without the help of numerous volunteers that are
+contributing by running consistent ooniprobe network measurement tests from
+different vantage points. Up to now users needed to be technically savvy to
+maintain their own probes dealing with system configuration, software and
+measurement specific updates. Lepidopter makes it easier for people that have a
+Raspberry Pi and an SD card to be part of the OONI community and help us
+reveal, publish and document possible instances of network interference
+worldwide.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-obtain-lepidopter&#34;&gt;How to obtain Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Please refer to the &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;installation instructions&lt;/a&gt; where
+you can find a detailed guide on how to download, verify and install the latest
+Lepidopter image for a Raspberry Pi.&lt;/p&gt;
+
+&lt;h2 id=&#34;keep-in-touch&#34;&gt;Keep in touch&lt;/h2&gt;
+
+&lt;p&gt;We have recently created a mailing list for future and current probe operators
+to get it touch with us and receive regular updates regarding Lepidopter and
+other probe specific operations. You can subscribe to the mailing list by
+registering
+&lt;a href=&#34;https://lists.torproject.org/cgi-bin/mailman/listinfo/ooni-operators&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Find out about our regular community meetings, other mailing lists and how you
+can get involved &lt;a href=&#34;https://ooni.torproject.org/get-involved/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>OONI-dev meeting and hackathon 2016</title>
@@ -7255,253 +7311,6 @@ used in UZ and TZ.&lt;/p&gt;
 
 &lt;p&gt;You can help us detect censorship by running ooni-probe. For more details see
 the &lt;a href=&#34;https://github.com/thetorproject/ooni-probe#ooniprobe---open-observatory-of-network-interference&#34;&gt;install guide&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hadara Palestine</title>
-      <link>https://ooni.torproject.org/post/hadara-palestine/</link>
-      <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/hadara-palestine/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;ooni_test:&lt;/strong&gt; HTTP Host&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;country:&lt;/strong&gt; Palestine&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;provider:&lt;/strong&gt; Hadara, Paltel&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;product:&lt;/strong&gt; Squid&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;product_website:&lt;/strong&gt; &lt;a href=&#34;http://www.squid-cache.org/&#34;&gt;http://www.squid-cache.org/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;censorship method:&lt;/strong&gt; Transparent HTTP proxy&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;downloads:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;Full scan result&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/censored-sites.txt&#34;&gt;List of censored sites&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is the technical report on the politically motivated censorship going on
-in Bethlehem, West Bank.&lt;/p&gt;
-
-&lt;p&gt;These are the networks in question:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;inetnum:         82.205.96.0 - 82.205.103.255
-netname:         GZ-HOME-BR1
-descr:           GAZA BSA HOME
-country:         PS
-admin-c:         WK4085-RIPE
-tech-c:          HT1472-RIPE
-status:          ASSIGNED PA
-mnt-by:          Palnet-mnt
-source:          RIPE # Filtered
-
-inetnum:         212.106.88.0 - 212.106.95.255
-netname:         RA-HM-ASR-02
-descr:           Hadara Ramallah BSA
-country:         PS
-admin-c:         WK4085-RIPE
-tech-c:          HT1472-RIPE
-status:          Assigned PA
-mnt-by:          Palnet-MNT
-source:          RIPE # Filtered
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The technique being used to restrict access to content is a transparent HTTP
-proxy. What this does is intercept every HTTP request being made and process it
-internally. If the content is cached it will serve the cached version of the
-content. If the content is to be blocked it will serve a blocked page.&lt;/p&gt;
-
-&lt;p&gt;We developed a test that opens a connection on port 80 towards a known
-unrestricted host. Keep in mind that it&amp;rsquo;s irrelevant to what destination the
-connection is opened because the transparent HTTP proxy will intercept all HTTP
-requests, meaning that all clients are in reality always only speaking to the proxy.
-Once we have a connection open we do HTTP GET requests with a changed Host header field.
-If the result is the block page then the content is restricted.&lt;/p&gt;
-
-&lt;p&gt;We have identified two different block pages that were interchanged at a
-certain point during our tests:&lt;/p&gt;
-
-&lt;h3 id=&#34;first-block-page&#34;&gt;First block page&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;HTTP/1.0 403 Forbidden
-Server: squid
-Date: Wed, 11 Apr 2012 05:47:10 GMT
-Content-Type: text/html
-Content-Length: 21
-Connection: close
-
-Sorry, Access Denied
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;second-block-page&#34;&gt;Second block page&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;HTTP/1.0 403 Forbidden
-Server: squid
-Date: Sun, 22 Apr 2012 20:55:34 GMT
-Content-Type: text/html
-Content-Length: 2205
-Connection: close
-
-&amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.01 Transitional//EN&amp;quot; &amp;quot;http://www.w3.org/TR/html4/loose.dtd&amp;quot;&amp;gt;
-&amp;lt;html&amp;gt;
-    &amp;lt;head&amp;gt;
-        &amp;lt;meta http-equiv=&amp;quot;Content-type&amp;quot; content=&amp;quot;text/html; charset=iso-8859-1&amp;quot;&amp;gt;
-        &amp;lt;title&amp;gt;ERROR: The requested URL could not be retrieved&amp;lt;/title&amp;gt;
-        &amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;
-            #logo {
-                margin: 0 auto;
-                display: block;
-            }
-            hr {
-                height: 1px;
-                border: none;
-                background: gray;
-                margin: 1em 0;
-            }
-            h1 {
-                padding: 0;
-                font-size: 1.5em;
-                margin: 0;
-            }
-            h2 {
-                padding: 0;
-                font-size: 1.2em;
-                margin: 0 0 1em 0;
-            }
-            body {
-                font-family: sans-serif;
-                padding: 1em 0;
-            }
-            #content {
-                margin: 0 auto;
-                max-width: 800px;
-                border: 1px solid gray;
-                background: #eee;
-                padding: 1em 2em;
-                -moz-border-radius: 16px;
-            }
-        &amp;lt;/style&amp;gt;
-    &amp;lt;/head&amp;gt;
-    &amp;lt;body&amp;gt;
-        &amp;lt;div id=&amp;quot;content&amp;quot;&amp;gt;
-
-        &amp;lt;h1&amp;gt;ERROR&amp;lt;/h1&amp;gt;
-        &amp;lt;h2&amp;gt;The requested URL could not be retrieved&amp;lt;/h2&amp;gt;
-        &amp;lt;hr/&amp;gt;
-
-&amp;lt;P&amp;gt;
-While trying to retrieve the URL:
-&amp;lt;A HREF=&amp;quot;http://fateh-voice.ps/&amp;quot;&amp;gt;http://fateh-voice.ps/&amp;lt;/A&amp;gt;
-&amp;lt;P&amp;gt;
-The following error was encountered:
-&amp;lt;UL&amp;gt;
-&amp;lt;LI&amp;gt;
-&amp;lt;STRONG&amp;gt;
-Access Denied.
-&amp;lt;/STRONG&amp;gt;
-&amp;lt;P&amp;gt;
-Access control configuration prevents your request from
-being allowed at this time.  Please contact your service provider if
-you feel this is incorrect.
-&amp;lt;/UL&amp;gt;
-&amp;lt;P&amp;gt;Your cache administrator is &amp;lt;A HREF=&amp;quot;mailto:webmaster&amp;quot;&amp;gt;webmaster&amp;lt;/A&amp;gt;.
-        &amp;lt;/div&amp;gt;
-    &amp;lt;!--
-  -- Unfortunately, Microsoft has added a clever new
-  -- feature to Internet Explorer.  If the text in
-  -- an errors message is too small, specifically
-  -- less than 512 bytes, Internet Explorer returns
-  -- its own error message.  Yes, you can turn that
-  -- off, but *surprise* its pretty tricky to find
-  -- buried as a switch called smart error
-  -- messages  That means, of course, that many of
-  -- Resins error messages are censored by default.
-  -- And, of course, youll be shocked to learn that
-  -- IIS always returns error messages that are long
-  -- enough to make Internet Explorer happy.  The
-  -- workaround is pretty simple: pad the error
-  -- message with a big comment to push it over the
-  -- five hundred and twelve byte minimum.  Of course,
-  -- thats exactly what youre reading right now.
-//--&amp;gt;
-&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;From the response headers of a blocked page we are able to learn that the
-software being used is Squid.&lt;/p&gt;
-
-&lt;p&gt;We scanned more than 1 million hostnames and only detected censorship on 8 of
-these.
-The full scan results are available in an unredacted from &lt;a href=&#34;https://ooni.torproject.org/post/hadara-palestine/hadara_palestine.yamlooni.tar.gz&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;At a certain point we decided to go for a high level of parallelism and not
-care about timeout errors. This is because the transparent HTTP proxy is
-intercepting our request and making them for us. This means that if a
-certain hostname is to be blocked it will reply with the block page
-instantenously without processing it. If the site is in the blocklist a
-connection attempt to it will never timeout.&lt;/p&gt;
-
-&lt;p&gt;What this means, though, is that sites blocked with some more sophisticated
-techniques would not have been detected. Though by seeing the kind of setup
-that was deployed in this case we find it unlikely that access to content
-would be restricted with some more advanced setup and that they would be
-using a mix between squid transparent HTTP proxy censorship and other.&lt;/p&gt;
-
-&lt;p&gt;The sites whose access is being restricted access to are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;pal-home.net&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;kofiapress.com&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;amad.ps&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;inlightpress.com&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;fpnp.net&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;fateh-voice.ps&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;karamapress.com&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;milad.ps&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/palhome.png&#34; alt=&#34;http://pal-home.net&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://pal-home.net&#34;&gt;http://pal-home.net&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/milad.png&#34; alt=&#34;http://milad.ps&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://milad.ps&#34;&gt;http://milad.ps&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/karamapress.png&#34; alt=&#34;http://karamapress.com&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://karamapress.com&#34;&gt;http://karamapress.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/inlightpress.png&#34; alt=&#34;http://inlightpress.com&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://inlightpress.com&#34;&gt;http://inlightpress.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fpnp.png&#34; alt=&#34;http://fpnp.net&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://fpnp.net&#34;&gt;http://fpnp.net&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/fateh-voice.png&#34; alt=&#34;http://fateh-voice.ps&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://fateh-voice.ps&#34;&gt;http://fateh-voice.ps&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/hadara-palestine/screenshot/amad.png&#34; alt=&#34;http://amad.ps&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://amad.ps&#34;&gt;http://amad.ps&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;For more details on the political implications check see the &lt;a href=&#34;http://www.maannews.net/eng/ViewDetails.aspx?ID=478726&#34;&gt;article by George
-Hale on Ma&amp;rsquo;An News&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
