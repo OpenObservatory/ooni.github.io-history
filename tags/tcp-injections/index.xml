@@ -9,6 +9,59 @@
     <atom:link href="https://ooni.torproject.org/tags/tcp-injections/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>urandom.pcap: Belarus (finally) bans Tor</title>
+      <link>https://ooni.torproject.org/post/belarus-fries-onion/</link>
+      <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/belarus-fries-onion/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Belarus&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Beltelecom (&lt;a href=&#34;https://stat.ripe.net/AS6697&#34;&gt;AS 6697&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; TCP injections&lt;/p&gt;
+
+&lt;p&gt;We have recently heard of &lt;a href=&#34;https://metrics.torproject.org/userstats-relay-country.html?start=2016-09-07&amp;amp;end=2016-12-06&amp;amp;country=by&amp;amp;events=points&#34;&gt;network anomalies in Belarus&lt;/a&gt;.
+Tor has been finally blocked in December 2016, although it had been explicitly
+declared that Tor should be blocked &lt;a href=&#34;https://meduza.io/en/news/2015/02/25/belarus-bans-tor&#34;&gt;since February 2015&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/belarus-fries-onion/userstats-relay-country-by-2016-09-07-2016-12-06-points.png&#34; alt=&#34;Directly connected users from Belarus&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;An anonymous cypherpunk has helped to gather some evidence regarding Tor
+being blocked in Belarus. It&amp;rsquo;s neither a complete study nor an in-depth
+research and it&amp;rsquo;s unclear if any other further evidence will be gathered, so we
+decided to share current knowledge as-is:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tor directory authorities are not blocked&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Public&lt;/em&gt; onion routers have their ORPort blocked by TCP RST injection&lt;/li&gt;
+&lt;li&gt;The onion routers&amp;rsquo; DirPort is &lt;strong&gt;not&lt;/strong&gt; blocked&lt;/li&gt;
+&lt;li&gt;Plain-old non-obfuscated Tor Bridges from &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;BridgeDB&lt;/a&gt; circumvent the interference&lt;/li&gt;
+&lt;li&gt;Beltelecom (or its upstream) has strange configuration of the networking gear injecting reset packets&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The strangeness in equipment is the following. The first injected RST packet does
+not have have proper SEQ/ACK numbers. These packet fields are just filled with
+zeroes. So this packet is dropped by the client&amp;rsquo;s TCP/IP stack per
+&lt;a href=&#34;https://tools.ietf.org/html/rfc5961&#34;&gt;RFC5961&lt;/a&gt; and does not actually terminate
+the client&amp;rsquo;s connection:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ tshark -Tfields -eframe.time_relative -eip.src -etcp.srcport -eip.dst -etcp.dstport \
+    -eip.ttl -etcp.flags.str -etcp.seq -etcp.ack -r urandom.pcap | sed | awk | perl
+0.000000   192.168.1.2 42555 87.118.94.227   443  64 **********S* 899897236  0
+0.029459 87.118.94.227   443   192.168.1.2 42555 125 *********R** 0          0 (sic!)
+0.096914 87.118.94.227   443   192.168.1.2 42555  52 *******A**S* 1984028404 899897237
+0.096958   192.168.1.2 42555 87.118.94.227   443  64 *******A**** 899897237  1984028405
+0.136874 87.118.94.227   443   192.168.1.2 42555 125 *********R** 1984028405 0
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;That&amp;rsquo;s all for today. Remember, fried potato is better with onion!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/belarus-fries-onion/640px-Fried_potatoes.jpg&#34; alt=&#34;The Onion&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Egypt: Media censorship, Tor interference, HTTPS throttling and ads injections?</title>
       <link>https://ooni.torproject.org/post/egypt-network-interference/</link>
       <pubDate>Thu, 27 Oct 2016 00:00:00 +0000</pubDate>
