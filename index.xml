@@ -6,8 +6,1024 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Gambia: Internet Shutdown during 2016 Presidential Election</title>
+      <link>https://ooni.torproject.org/post/gambia-internet-shutdown/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/gambia-internet-shutdown/</guid>
+      <description>
+
+&lt;p&gt;Last week we attempted to perform &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI network measurement tests&lt;/a&gt; in the Gambia
+to examine whether websites were blocked during its 2016 presidential election.
+But merely a few hours after we connected our probe to perform tests, it stopped
+working completely.&lt;/p&gt;
+
+&lt;p&gt;We suspected that this was due to an internet shutdown. To confirm this, we
+referred to third-party data to examine whether a country-wide internet blackout
+was taking place.&lt;/p&gt;
+
+&lt;p&gt;In this report, we summarize some of our key findings pertaining to the internet
+shutdown that appears to have occurred in the Gambia on the eve of its 2016
+presidential election.&lt;/p&gt;
+
+&lt;h1 id=&#34;2016-presidential-election&#34;&gt;2016 presidential election&lt;/h1&gt;
+
+&lt;p&gt;President Yahya Jammeh &lt;a href=&#34;http://www.bbc.com/news/world-africa-38183906&#34;&gt;governed&lt;/a&gt; the Gambia for 22 years, following a coup in
+1994. Since then, Jammeh won every election and reportedly &lt;a href=&#34;http://qz.com/850002/gambias-government-has-shut-down-the-internet-on-the-eve-of-elections/&#34;&gt;stated&lt;/a&gt; that he
+intended to rule for “one billion years”. The opposition, however, became
+increasingly popular and Adama Barrow of the United Democratic Party &lt;a href=&#34;http://www.bbc.com/news/world-africa-38183906&#34;&gt;won&lt;/a&gt; the
+last elections on 1st December 2016.&lt;/p&gt;
+
+&lt;p&gt;Thousands of opposition supporters &lt;a href=&#34;http://www.africanews.com/2016/11/30/no-demonstrations-after-elections-gambia-s-jammeh-orders/&#34;&gt;demonstrated&lt;/a&gt; peacefully leading up to the
+elections. Omar Amadou Jallow, an opposition leader for the People’s Progressive
+Party, &lt;a href=&#34;http://www.sfchronicle.com/news/world/article/Gambia-s-president-warns-against-protests-after-10644654.php&#34;&gt;stated&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“For 22 years we have realized that Gambia has been turned into a prison; the
+arrests, the tensions, the torture and many of our people have gone into exile
+&amp;hellip; That shows the tyranny of the regime.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;President Jammeh &lt;a href=&#34;http://www.sfchronicle.com/news/world/article/Gambia-s-president-warns-against-protests-after-10644654.php&#34;&gt;criticized&lt;/a&gt; the protests, arguing that there was no reason for
+anybody to demonstrate since the Gambia’s election system is rig-proof, and that
+“demonstrations are the loopholes that are used to destabilize African
+governments”.&lt;/p&gt;
+
+&lt;p&gt;Internet shutdowns, carried out for stifling communications amongst protesters,
+have become increasingly &lt;a href=&#34;http://qz.com/850002/gambias-government-has-shut-down-the-internet-on-the-eve-of-elections/&#34;&gt;common&lt;/a&gt; in African countries during election periods. On
+the eve of the Gambia’s election, the &lt;a href=&#34;https://www.accessnow.org/keepiton/&#34;&gt;Keep It On campaign&lt;/a&gt; published an &lt;a href=&#34;https://www.accessnow.org/keepiton-joint-letter-internet-election-gambia/&#34;&gt;open letter&lt;/a&gt; to President Jammeh, requesting that the internet is kept on to ensure
+the stability and openness of the internet during the 2016 elections. However,
+there appears to have been a country-wide internet blackout, as documented
+through data in the section below.&lt;/p&gt;
+
+&lt;h1 id=&#34;internet-shutdown&#34;&gt;Internet shutdown&lt;/h1&gt;
+
+&lt;p&gt;Through BGP announcement data aggregated by RIPE from 18 different &lt;a href=&#34;https://www.ripe.net/analyse/internet-measurements/routing-information-service-ris/faq-ris/what-is-a-remote-route-collector-rrc&#34;&gt;Remote Route Collectors (RRC)&lt;/a&gt; we can see that the first update withdrawing a prefix inside of
+Gambia dates 2016-11-30 20:04:04.&lt;/p&gt;
+
+&lt;p&gt;Below are the times at which each of the RRCs saw the first Gambian prefix
+withdrawn.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rrc_id&lt;/th&gt;
+&lt;th&gt;timestamp&lt;/th&gt;
+&lt;th&gt;prefix&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:31&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:05&lt;/td&gt;
+&lt;td&gt;212.60.64.0/19&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:05&lt;/td&gt;
+&lt;td&gt;212.60.64.0/19&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:26&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:09&lt;/td&gt;
+&lt;td&gt;212.60.64.0/19&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:31&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:05&lt;/td&gt;
+&lt;td&gt;212.60.90.0/24&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:31&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:05&lt;/td&gt;
+&lt;td&gt;212.60.64.0/19&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:04&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:05&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:31&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:35&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:31&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:52&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:05:24&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:05&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;2016-11-30 20:04:04&lt;/td&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://stat.ripe.net/data/bgp-updates/data.json&#34;&gt;https://stat.ripe.net/data/bgp-updates/data.json&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;At around this time it was confirmed from various sources that internet
+connectivity in the Gambia was being disrupted.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/gambia-shutdown/gambia-01.png&#34; alt=&#34;Twitter post&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://twitter.com/PsiphonInc/status/804089275017023488&#34;&gt;https://twitter.com/PsiphonInc/status/804089275017023488&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/gambia-shutdown/gambia-02.png&#34; alt=&#34;Twitter post&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://twitter.com/akamai_soti/status/804305892980256768&#34;&gt;https://twitter.com/akamai_soti/status/804305892980256768&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Worldwide traffic data from Google is also consistent with the above reports as
+illustrated below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/gambia-shutdown/gambia-03.png&#34; alt=&#34;Twitter post&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://www.google.com/transparencyreport/traffic/explorer/?r=GM&amp;amp;l=WEBSEARCH&amp;amp;csd=1479483000000&amp;amp;ced=1480692600000&#34;&gt;https://www.google.com/transparencyreport/traffic/explorer/?r=GM&amp;amp;l=WEBSEARCH&amp;amp;csd=1479483000000&amp;amp;ced=1480692600000&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;on-and-then-off-again&#34;&gt;On and then off again&lt;/h2&gt;
+
+&lt;p&gt;Some prefixes at 04:46:26 on 2016-12-02 appear to have been announced again,
+only to be withdrawn 20 minutes later (2016-12-02 05:06:52).&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rrc_id&lt;/th&gt;
+&lt;th&gt;timestamp&lt;/th&gt;
+&lt;th&gt;prefix&lt;/th&gt;
+&lt;th&gt;path&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[7018, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[56730, 51945, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;196.46.232.0/22&lt;/td&gt;
+&lt;td&gt;[1103, 3257, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[34781, 13030, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[13237, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:25&lt;/td&gt;
+&lt;td&gt;196.46.232.0/22&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[47872, 2914, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[12637, 3257, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[15547, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[25220, 3356, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[24482, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[6762, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[16735, 3549, 3356, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;196.49.1.0/24&lt;/td&gt;
+&lt;td&gt;[20080, 6762, 1299, 8657, 37309, 327719]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:30&lt;/td&gt;
+&lt;td&gt;196.46.236.0/22&lt;/td&gt;
+&lt;td&gt;[35699, 2914, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:46&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[3491, 3257, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[202194, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:26&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[34019, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://stat.ripe.net/data/bgp-updates/data.json&#34;&gt;https://stat.ripe.net/data/bgp-updates/data.json&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It remains unclear though if this was done intentionally, or if it was a
+mistake.&lt;/p&gt;
+
+&lt;p&gt;We can see, however, from the above &lt;a href=&#34;https://www.google.com/transparencyreport/traffic/explorer/?r=GM&amp;amp;l=WEBSEARCH&amp;amp;csd=1479483000000&amp;amp;ced=1480692600000&#34;&gt;Google traffic graph&lt;/a&gt; that some users at that
+time were accessing Google, indicating that connectivity was actually restored
+for a brief period of time and that people took advantage of it.&lt;/p&gt;
+
+&lt;p&gt;Internet connectivity though appears to have lasted for a very short amount of
+time, as the routes were unannounced at 5:06.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rrc_id&lt;/th&gt;
+&lt;th&gt;timestamp&lt;/th&gt;
+&lt;th&gt;prefix&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:52&lt;/td&gt;
+&lt;td&gt;197.242.128.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:16&lt;/td&gt;
+&lt;td&gt;197.242.140.0/23&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:12&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:53&lt;/td&gt;
+&lt;td&gt;197.242.128.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;2016-12-02 4:46:27&lt;/td&gt;
+&lt;td&gt;196.49.1.0/24&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:07:16&lt;/td&gt;
+&lt;td&gt;41.223.212.0/23&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:13&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:13&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:13&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:12&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:13&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:53&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:07:01&lt;/td&gt;
+&lt;td&gt;41.223.212.0/23&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:54&lt;/td&gt;
+&lt;td&gt;41.223.214.0/23&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:07:24&lt;/td&gt;
+&lt;td&gt;41.223.212.0/23&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:08:06&lt;/td&gt;
+&lt;td&gt;196.46.236.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:16&lt;/td&gt;
+&lt;td&gt;196.46.232.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;2016-12-02 5:06:16&lt;/td&gt;
+&lt;td&gt;196.46.232.0/22&lt;/td&gt;
+&lt;td&gt;W&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://stat.ripe.net/data/bgp-updates/data.json&#34;&gt;https://stat.ripe.net/data/bgp-updates/data.json&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;At 11:28 UTC of 2nd December the internet started being accessible again, as
+shown through the following announcements.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;rrc_id&lt;/th&gt;
+&lt;th&gt;timestamp&lt;/th&gt;
+&lt;th&gt;prefix&lt;/th&gt;
+&lt;th&gt;path&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[3333, 1103, 3257, 6453, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[56730, 51945, 1299, 6453, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[8283, 57866, 1299, 6453, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[34781, 1299, 6453, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[13237, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[6667, 3257, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[41497, 3257, 6453, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[24482, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;[29686, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[25227, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[14061, 3356, 3257, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[52720, 3549, 3356, 1299, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[20080, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:40&lt;/td&gt;
+&lt;td&gt;155.251.0.0/16&lt;/td&gt;
+&lt;td&gt;[35699, 2914, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:50&lt;/td&gt;
+&lt;td&gt;160.182.0.0/15&lt;/td&gt;
+&lt;td&gt;[3491, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;[8758, 8220, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:36&lt;/td&gt;
+&lt;td&gt;196.46.232.0/21&lt;/td&gt;
+&lt;td&gt;[24482, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://stat.ripe.net/data/bgp-updates/data.json&#34;&gt;https://stat.ripe.net/data/bgp-updates/data.json&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The time it took for each prefix to be announced again was fairly swift, leading
+us to believe that ISPs coordinated tightly with the government to roll out the
+blocking and the unblocking of the internet.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;prefix&lt;/th&gt;
+&lt;th&gt;timestamp&lt;/th&gt;
+&lt;th&gt;rrc_id&lt;/th&gt;
+&lt;th&gt;path&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;146.196.128.0/17&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.242.140.0/23&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.242.128.0/20&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;196.49.1.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309, 327719]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;196.46.236.0/22&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;41.223.212.0/22&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;196.46.232.0/21&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;160.182.0.0/15&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;155.251.0.0/16&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;196.46.232.0/22&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:28:35&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;196.223.144.0/21&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:29:21&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.64.0/19&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:29:21&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.90.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:29:21&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;41.223.214.0/23&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:30:27&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;[3333, 1257, 5511, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.242.128.0/22&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:30:27&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;[52863, 4809, 4134, 5511, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;41.223.212.0/23&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:30:27&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;[5511, 37309]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.255.192.0/20&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:30:54&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;[5511, 37323]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.76.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:31:22&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.231.204.0/22&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:32:43&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;[52863, 4809, 4134, 5511, 37552]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.148.72.0/21&lt;/td&gt;
+&lt;td&gt;2016-12-02 11:33:29&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 60171, 37524]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;41.76.12.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 12:34:41&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37503]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;41.76.8.0/21&lt;/td&gt;
+&lt;td&gt;2016-12-02 12:35:12&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 1299, 8657, 37503]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;197.231.128.0/21&lt;/td&gt;
+&lt;td&gt;2016-12-02 12:35:12&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 8657, 37503]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.74.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.71.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.77.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 1299, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.78.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.79.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 1299, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.84.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.87.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.88.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.69.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.66.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.65.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 1299, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.72.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.68.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:45:15&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 2914, 5511, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;212.60.85.0/24&lt;/td&gt;
+&lt;td&gt;2016-12-02 17:55:53&lt;/td&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;[25152, 6939, 1299, 8657, 25250]&lt;/td&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://stat.ripe.net/data/bgp-updates/data.json&#34;&gt;https://stat.ripe.net/data/bgp-updates/data.json&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Several sources, including our own researchers on the ground, confirmed that the
+internet had started working again at 12:00 UTC of 2nd December, after the
+Gambia’s 2016 presidential election had concluded.&lt;/p&gt;
+
+&lt;p&gt;This can also be confirmed through the graphs below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/gambia-shutdown/gambia-04.png&#34; alt=&#34;Twitter post&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/gambia-shutdown/gambia-05.png&#34; alt=&#34;Twitter post&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Source: &lt;a href=&#34;https://stat.ripe.net/GM#tabId=routing&#34;&gt;https://stat.ripe.net/GM#tabId=routing&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;keepiton&#34;&gt;#KeepItOn&lt;/h1&gt;
+
+&lt;p&gt;Internet shutdowns, especially when carried out during elections and other
+political events, pose restrictions to human rights because they limit the
+public&amp;rsquo;s ability to communicate, coordinate, share and access information.
+Shutdowns can also harm business interests and foreign relations, if carried out
+for extended periods of time.&lt;/p&gt;
+
+&lt;p&gt;We encourage organizations around the world to support &lt;a href=&#34;https://www.accessnow.org/keepiton/&#34;&gt;Access Now&amp;rsquo;s #KeepItOn campaign&lt;/a&gt; for a stable and open internet around the world.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>urandom.pcap: Belarus (finally) bans Tor</title>
@@ -6806,283 +7822,6 @@ of the blocked websites. Communicating with the owner company would be impossibl
 &lt;/ul&gt;
 
 &lt;!-- # References --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Zambia, a country under Deep Packet Inspection</title>
-      <link>https://ooni.torproject.org/post/zambia/</link>
-      <pubDate>Mon, 15 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/zambia/</guid>
-      <description>
-
-&lt;p&gt;&amp;ldquo;I do not have the details of the blocking of Zambianwatchdog.com, but I
-    would celebrate.&amp;rdquo;
-                          Guy Scott
-                          Zambian Vicepresident, Friday 28th June 2013&lt;/p&gt;
-
-&lt;p&gt;The following article is a guest blog post by Mr T. an independent researcher
-and provider of hosting to various grass roots organizations.&lt;/p&gt;
-
-&lt;p&gt;This article summarizes how we discovered that the grass roots online newspaper
-Zambianwatchdog.com was being blocked inside Zambia. This report provides
-technical evidence of the unlawful presence of Deep Packet Inspection in the
-country to monitor the Internet communications and stop users from browsing the
-website.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-connection-was-reset&#34;&gt;The connection was reset&lt;/h1&gt;
-
-&lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
-inside Zambia were reporting error messages.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As hosting providers of the website, we initially could not see a significant
-drop of active connections and we needed to have a close look into the access
-logs of the site. Examining the connection logs to find any pattern that could
-help us to determine the cause of the problem was not a straightforward task as
-we needed to examine several gigabytes of data. It is worth mentioning here
-that Zambian Watchdog ranks 8th overall biggest website in Zambia and probably
-the biggest site after the large portals Facebook, Google or Youtube.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Our first review of the logs revealed a clear increase of connections reporting
-status code 200 but with zero bytes were transmitted back to the client.&lt;/p&gt;
-
-&lt;p&gt;The server has large number of logs similar to this one:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;41.72.105.x - - [25/Jun/2013:05:03:58 +0000]  &amp;quot;GET / HTTP/1.1&amp;quot; 200 0 &amp;quot;-&amp;quot; &amp;quot;Mozilla/5.0 (Windows NT 6.1; rv:20.0) Gecko/20100101 Firefox/20.0&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The sample shows that IP address of this connection 41.72.105.x belongs to
-ZAMTEL, the status code of the connection is 200 and zero information was sent
-back to the client.&lt;/p&gt;
-
-&lt;p&gt;The status code 200 indicates that the client&amp;rsquo;s request was successfully
-received, understood, and accepted by the server but for some unknown reason no
-information was send back to the client.&lt;/p&gt;
-
-&lt;p&gt;In order to determine if this was a general problem of our servers we examined
-the last four weeks of connection logs to conclude that there was inexplicable
-increase of connections with status code 200 and zero bytes transmitted
-starting that day.&lt;/p&gt;
-
-&lt;p&gt;We also looked into which readers were affected by this behavior and we
-concluded that the majority of the connections reporting this problem were from
-operators inside Zambia with the exception of MTN.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
-
-&lt;h1 id=&#34;who-is-breaking-the-connections&#34;&gt;Who is breaking the connections?&lt;/h1&gt;
-
-&lt;p&gt;Four hours after we received the first reports of service outage inside Zambia
-we could narrow down the problem to what it was perceived in the server side as
-sudden termination of the connections.&lt;/p&gt;
-
-&lt;p&gt;Comparing the connection logs of different weeks we could determine that
-connections coming from at least these operators AS37146 realtime-as, AS37214
-MICROLINK, AS28698 UUNET Africa, AS37287 ZAIN-ZAMBIA and AS37154 ZAMTEL were
-suffering from some kind disruption.&lt;/p&gt;
-
-&lt;p&gt;In order to determine what kind of interference was taken place we proceed to
-capture the network traffic arriving to Zambian Watchdog&amp;rsquo;s server to look for
-any special patters that could help us to understand why most of the readers
-inside Zambia were experiencing connection drops with the exception of readers
-using MTN mobile network.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
-After reviewing dozen of different packet captures we saw a
-distinctive pattern&lt;/p&gt;
-
-&lt;p&gt;The readers seemed to be able to establish the initial connection with the
-webserver but as soon as they request any content of the website we received
-also a request to terminate such connection.&lt;/p&gt;
-
-&lt;p&gt;We proceed to examine our own generated connections from inside Zambia in real
-time and discovered that the undesired termination was taken place if the HTTP
-Header Host: www.zambianwatchdog.com was present in the request.&lt;/p&gt;
-
-&lt;p&gt;For example, we could see that a connection requesting the Breaking News
-section of the site from a Nokia phone, using Celtel 3G network was always
-quickly terminated after this request arrives to the server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;GET /category/breaking-news/ HTTP/1.1 
-Host: www.zambianwatchdog.com
-
-Accept: text/html,text/css,multipart/mixed,application/java-archive,
-application/java, application/x-java-archive, text/vnd.sun.j2me.app-descriptor,
-application/vnd.oma.drm.message, application/vnd.oma.drm.content,
-application/vnd.oma.dd+xml, application/vnd.oma.drm.rights+xml,
-application/vnd.oma.drm.rights+wbxml, application/x-nokia-widget, */* 
-
-Accept-Charset: iso-8859-1, utf-8; q=0.7, *; q=0.7 
-
-Accept-Encoding: gzip, deflate, x-gzip, identity; q=0.9 
-
-Accept-Language: en;q=1.0,fr;q=0.5,de;q=0.5,it;q=0.5 
-
-Referer: http://www.google.co.zm/search?q=wachdog+news&amp;amp;btnG=Search 
-
-User-Agent: Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE63-1/500.21.009;
-Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko)
-Safari/413 
-
-x-wap-profile: &amp;quot;http://nds1.nds.nokia.com/uaprof/NE63-1r100.xml&amp;quot; 
-
-X-Nokia-MusicShop-Version: 08.0825.9 
-
-X-Nokia-MusicShop-Bearer: GPRS/3G
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;dpi-or-not-dpi&#34;&gt;DPI or not DPI?&lt;/h1&gt;
-
-&lt;p&gt;What it was left to determine if the filtering was looking into other aspects
-of the connection. In order to find out we run a few extra tests, requesting
-access to the webpage using other headers. We tested requests using the
-following headers&lt;/p&gt;
-
-&lt;p&gt;www.zambianwatchdog.COM&lt;/p&gt;
-
-&lt;p&gt;zambianwatchdog.com&lt;/p&gt;
-
-&lt;p&gt;Zambianwatchdog.cOm&lt;/p&gt;
-
-&lt;p&gt;wWw.zambianwatchdog.com&lt;/p&gt;
-
-&lt;p&gt;To our surprise we discovered that the “reset” of the connections was only
-talking place when we used the header www.zambianwatchdog.com and not when
-using any of the other combinations. After twelve hours we could confirm that
-malicious traffic was not generated by the readers but was actively injected
-into the network when a reader was requesting content from the website
-www.zambianwatchdog.com and that this behavior could only be explained by the
-presence of deep packet inspection (DPI) equipment inside Zambia.&lt;/p&gt;
-
-&lt;p&gt;Not until we technically verified and gathered forensic evidence of the
-blocking we adviced to the website owners to inform to the general public that
-such active interference was talking place and that the blocking was clearly
-targeted against the website.&lt;/p&gt;
-
-&lt;h1 id=&#34;getting-the-website-back-online&#34;&gt;Getting the website back online&lt;/h1&gt;
-
-&lt;p&gt;To ensure the public visibility of the website inside Zambia and in order to
-look for a quick solution to put the website online, we tested the availability
-of the blocking technology to interfere with encrypted traffic. After testing
-the encypted (SSL) traffic was not suffering from such type of interference the
-decided to make the site available only via HTTPS.&lt;/p&gt;
-
-&lt;p&gt;To our surprise, several popular Word Press plugins of the website needed some
-tweaks so the full content was delivered encrypted to the readers.&lt;/p&gt;
-
-&lt;p&gt;We have also included the header&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Strict-Transport-Security &amp;quot;max-age=10886401; includeSubDomains&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to ensure that the readers that have reached the website at least once via
-HTTPS will keep doing it so without the need to specify HTTPS in their future
-requests.&lt;/p&gt;
-
-&lt;h1 id=&#34;ooni-testing&#34;&gt;OONI Testing&lt;/h1&gt;
-
-&lt;p&gt;Inspired by the work of our colleges of the Open Observatory of Network
-Interferece (OONI) we conducted another run of tests to determine if any of
-1000 top Alexa websites was blocking. The result of the testing is that we
-could not find any other website blocked with the exception of the Zambian
-Watchdog.&lt;/p&gt;
-
-&lt;h1 id=&#34;blocking-status&#34;&gt;Blocking status&lt;/h1&gt;
-
-&lt;p&gt;Three weeks after we initially detected and fingerprinted the blocking, the
-filtering is still active. Unencrypted requests to the domain
-zambianwatchdog.com remain unblocked while connections using
-www.zambianwatchdog.com trigger a reset.&lt;/p&gt;
-
-&lt;p&gt;Our test software that runs inside Zambia still reports interference when using
-www.zambianwatchdog.com&lt;/p&gt;
-
-&lt;p&gt;Recv failure: Connection reset by peer&lt;/p&gt;
-
-&lt;p&gt;While such interference is not present when dropping the www.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;HTTP/1.1 301 Moved Permanently 
-
-Server: nginx 
-
-Date: Sat, 13 Jul 2013 12:35:16 GMT 
-
-Content-Type: text/html 
-
-Content-Length: 178 
-
-Location: https://&#39;&#39;&#39;zambianwatchdog.com/&#39;&#39;&#39; 
-
-Strict-Transport-Security: max-age=10886401; includeSubDomains 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;courage-is-contagious&#34;&gt;Courage is contagious&lt;/h1&gt;
-
-&lt;p&gt;After we unveiled the blocking and network monitoring, Zambian Watchdog has
-received information from whistle blowers of the presence of such
-infrastructure.&lt;/p&gt;
-
-&lt;p&gt;The 4th of July, the Zambian website reports&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;They have also installed equipment a Lamya (1) in order to monitor people
-blogging on a site like yours and also blocking watchdog. This is also
-affecting all the other internet service providers who are using Zamtel as a
-currier and service provider. Also the CODEX (2) which interconnects all ISP is
-based at Lamya and this has given OP (3) access to all the ISP in Zambia.&amp;rdquo;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Lamya is the location of the &amp;ldquo;Zambia&amp;rdquo; Telecommunications Company&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;CODEX is the Zambian Internet exchange OP is the Office of the President&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Further information about the case:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/corruption-worsens-at-zamtel-emails-phones-being-monitored-at-lamya-house/&#34;&gt;Corruption worsens at zamtel emails phones being-monitored at lamya house&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/zicta-suing-of-mobile-companies-aimed-at-mtn-for-refusing-to-block-zwd/&#34;&gt;Zicta suing of mobile companies aimed at mtn for refusing to block zwd&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/sata-orders-op-to-block-zwd-on-mtn-as-well/&#34;&gt;Sata orders op to block zwd on mtn as well&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/sata-signs-order-for-op-to-tap-phones-emails/&#34;&gt;Sata signs order for op to tap phones emails&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/journalist-zyambo-out-of-jail-police-though-he-had-obituary-of-sata/&#34;&gt;Journalist zyambo out of jail police though he had obituary of sata&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;update-17th-july-2013-and-ssl-got-blocked&#34;&gt;Update (17th July 2013): And SSL got blocked&amp;hellip;&lt;/h1&gt;
-
-&lt;p&gt;On Tuesday 16th of July 2013 (14:43 GMT) just a few hours after this article
-was released, the government has moved forward in their determination of
-blocking the site and started to block the SSL connections.  The Deep Packet
-Inspection gear seems to be monitoring the &amp;ldquo;Server Hello&amp;rdquo; message that is part
-of the SSL negotiation. This message contains the string zambianwatchdog.com
-before the SSL negotiation is completed.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In order to find out if the government is actively making changes, we deployed
-a new mirror server of the site in the domain &lt;a href=&#34;http://zwd.cums.in&#34;&gt;http://zwd.cums.in&lt;/a&gt;. After a few
-hours the domain has also been blocked and the filtering has been extended to
-the whole /24 network. By extending the filtering the Zambian government has
-also blocked hundreds of other organizations that are hosted in the same provider.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;41.72.122.69 - - [17/Jul/2013:14:17:16 +0000]  &amp;quot;-&amp;quot; 400 0 &amp;quot;-&amp;quot; &amp;quot;-&amp;quot; &amp;quot;---&amp;quot; &amp;quot;ZM&amp;quot; &amp;quot;-x-&amp;quot; &amp;quot;41.72.122.69&amp;quot; &amp;quot;-&amp;quot;
-41.72.122.69 - - [17/Jul/2013:14:17:16 +0000]  &amp;quot;-&amp;quot; 400 0 &amp;quot;-&amp;quot; &amp;quot;-&amp;quot; &amp;quot;---&amp;quot; &amp;quot;ZM&amp;quot; &amp;quot;-x-&amp;quot; &amp;quot;41.72.122.69&amp;quot; &amp;quot;-&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is an example of the logs in the server side. We can see that the attack
-they are conducting leads to 0 bytes being transmitted and an error code 400 is
-generated (Error 400 (Bad Request) takes place when the request to a SSL is
-malformed.).&lt;/p&gt;
-
-&lt;p&gt;More information is available here
-&lt;a href=&#34;https://zambianwatchdog.com/police-abduct-another-journalists-suspected-of-links-to-zwd-govt-blocks-zwd-futher/&#34;&gt;https://zambianwatchdog.com/police-abduct-another-journalists-suspected-of-links-to-zwd-govt-blocks-zwd-futher/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
