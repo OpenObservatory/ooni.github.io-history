@@ -6,8 +6,333 @@
     <description>Recent content in Post-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OONI releases new web UI: Run censorship tests from your web browser!</title>
+      <link>https://ooni.torproject.org/post/web-ui-post/</link>
+      <pubDate>Tue, 13 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/web-ui-post/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-01.png&#34; alt=&#34;Image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Today we are excited to announce the beta release of our &lt;em&gt;new&lt;/em&gt; web-based user interface
+(WUI) that enables ooniprobe users to run censorship tests from a web browser!&lt;/p&gt;
+
+&lt;p&gt;Whether you’re running ooniprobe from your desktop or a Raspberry Pi, you can
+now easily choose which tests you want to run through OONI’s web UI and run them
+with the click of a button. These &lt;a href=&#34;https://ooni.torproject.org/nettest/&#34;&gt;tests&lt;/a&gt;
+are designed to examine the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Blocking of websites&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Reachability of the Tor network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Presence of systems that could be responsible for censorship and surveillance&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once you have run the tests of your choice, you can then view the results of
+your measurements in the web UI. The results will illustrate whether and what
+types of censorship events have occurred in your network, and you will be
+provided with tips on how to circumvent those specific types of censorship.
+OONI’s new web UI also includes an informed consent procedure and provides users
+with data &lt;em&gt;opt-out&lt;/em&gt; choices.&lt;/p&gt;
+
+&lt;p&gt;Below we provide a &lt;em&gt;guide&lt;/em&gt; on how to access OONI’s web UI and run tests from it.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#install-ooniprobe-or-copy-an-image&#34;&gt;&lt;em&gt;Install ooniprobe or copy an image&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooniprobe-desktop-version&#34;&gt;&lt;em&gt;ooniprobe desktop version (Mac OS &amp;amp; Linux users)&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#ooniprobe-distribution-for-raspberry-pis&#34;&gt;&lt;em&gt;ooniprobe distribution for Raspberry Pis&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#setup-wizard&#34;&gt;&lt;em&gt;Setup Wizard&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#risks-things-you-should-know-before-running-ooniprobe&#34;&gt;&lt;em&gt;Risks: Things you should know before running ooniprobe&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#quiz-how-well-do-you-understand-potential-risks&#34;&gt;&lt;em&gt;Quiz: How well do you understand potential risks?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#configuration-options-choose-the-decks-you-want-to-run&#34;&gt;&lt;em&gt;Configuration options: Choose the decks you want to run&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#opt-out-data-choices-you-can-make&#34;&gt;&lt;em&gt;Opt-out: Data choices you can make&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#running-ooniprobe-through-oonis-web-ui&#34;&gt;&lt;em&gt;Running ooniprobe through OONI’s web UI&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#viewing-your-measurements&#34;&gt;&lt;em&gt;Viewing your measurements&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;install-ooniprobe-or-copy-an-image&#34;&gt;Install ooniprobe or copy an image&lt;/h1&gt;
+
+&lt;p&gt;Currently &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; is designed
+for Mac OS and Linux operating systems. If you’re a Windows user eager to run
+ooniprobe, then you might be interested in running our &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;distribution for Raspberry Pis&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooniprobe-desktop-version-mac-os-linux-users&#34;&gt;ooniprobe desktop version (Mac OS &amp;amp; Linux users)&lt;/h2&gt;
+
+&lt;p&gt;Learn how to install ooniprobe, depending on your operation system,
+&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/install/ooniprobe/&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooniprobe-distribution-for-raspberry-pis&#34;&gt;ooniprobe distribution for Raspberry Pis&lt;/h2&gt;
+
+&lt;p&gt;Copy ooniprobe’s distribution for Raspberry Pis onto an SD card. You can find a
+guide on how to do so &lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Then insert your SD card (containing ooniprobe’s distribution) into a Raspberry
+Pi and connect it to power and to the internet (with an ethernet cable).&lt;/p&gt;
+
+&lt;h1 id=&#34;setup-wizard&#34;&gt;Setup Wizard&lt;/h1&gt;
+
+&lt;p&gt;If you plan on running ooniprobe’s &lt;em&gt;desktop&lt;/em&gt; version, type the following in your
+terminal:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ooniprobe-agent start 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This should present you with the following URL: &lt;strong&gt;127.0.0.1:8842&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;By clicking on it, you will be directed to OONI’s web UI Setup Wizard:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-02.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you plan on running ooniprobe from a &lt;em&gt;Raspberry Pi&lt;/em&gt;, type the following URL in
+your web browser: &lt;strong&gt;&lt;a href=&#34;http://lepidopter.local&#34;&gt;http://lepidopter.local&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Type the above URL only once your Raspberry Pi is connected to &lt;em&gt;both&lt;/em&gt; power
+and the internet, and it has started (this usually takes about a minute).&lt;/p&gt;
+
+&lt;p&gt;You should now be presented with OONI’s web UI Setup Wizard.&lt;/p&gt;
+
+&lt;p&gt;If this doesn’t work, try accessing the web UI by typing &lt;strong&gt;&lt;a href=&#34;http://lepidopter&#34;&gt;http://lepidopter&lt;/a&gt;&lt;/strong&gt; in
+your web browser. And if that also doesn’t work, please find more information
+&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Upon clicking &lt;strong&gt;Next&lt;/strong&gt; in the Setup Wizard, you will view information about
+potential risks associated with running ooniprobe.&lt;/p&gt;
+
+&lt;h2 id=&#34;risks-things-you-should-know-before-running-ooniprobe&#34;&gt;Risks: Things you should know before running ooniprobe&lt;/h2&gt;
+
+&lt;p&gt;Running ooniprobe can potentially be a risky activity. To our knowledge, no one
+has ever gotten into any trouble as a result of running ooniprobe. Nonetheless,
+we strongly encourage you to read this documentation carefully and to consult
+with a lawyer, if needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-03.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you have read and understood the potential risks associated with running
+ooniprobe, click &lt;strong&gt;Next&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-04.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;quiz-how-well-do-you-understand-potential-risks&#34;&gt;Quiz: How well do you understand potential risks?&lt;/h2&gt;
+
+&lt;p&gt;You didn’t read the somewhat long Risks documentation for nothing. To make
+things fun, you will be presented with a quiz including a set of questions that
+you need to answer correctly, demonstrating that you have a basic understanding
+of potential risks associated with the use of ooniprobe.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-05.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t worry if you don’t answer the questions correctly the first time, the
+wizard will redirect you back to the Risks documentation so that you can have
+another chance to read through the relevant information. Once you have answered
+the questions correctly, you will then be directed to the wizard’s Configuration
+page.&lt;/p&gt;
+
+&lt;h2 id=&#34;configuration-options-choose-the-decks-you-want-to-run&#34;&gt;Configuration options: Choose the decks you want to run&lt;/h2&gt;
+
+&lt;p&gt;By default, all sets of tests (called &lt;em&gt;decks&lt;/em&gt;) are enabled. This means that upon
+clicking &lt;strong&gt;Configure&lt;/strong&gt;, tests will automatically be run daily (from your computer or
+Raspberry Pi) to examine the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Reachability of the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Blocking of &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;websites&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Blocking of instant messaging (IM) apps&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Presence of systems that could be responsible for censorship or surveillance&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-06.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To prevent any of these tests from automatically being run, &lt;strong&gt;uncheck&lt;/strong&gt; their
+associated boxes. You can also re-configure your decks through OONI’s web UI
+once you have completed all the steps in the setup wizard.&lt;/p&gt;
+
+&lt;p&gt;To make further choices, click &lt;strong&gt;Show advanced options&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;opt-out-data-choices-you-can-make&#34;&gt;Opt-out: Data choices you can make&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-07.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here you have choices in terms of what types of data to disclose, whether to
+have your measurements published and if so, how to upload them to OONI’s
+measurement collector.&lt;/p&gt;
+
+&lt;p&gt;We recommend the &lt;em&gt;default&lt;/em&gt; options included in the configuration settings.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ASN and country name&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We encourage users to enable the collection of identifiers based on their
+network (ASN) and the country that they are running ooniprobe from because
+without this information, we cannot attribute specific measurements to a
+specific country and network. In other words, without this information we are
+&lt;em&gt;not&lt;/em&gt; in a position to know where the measurements are coming from, limiting the
+objectives of this research.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;IP address&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The inclusion of IP addresses is &lt;em&gt;disabled&lt;/em&gt; by default because this information
+can potentially help third parties identify ooniprobe users. However, including
+your IP address can help improve the analysis of measurements.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Uploading measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We also enable users to choose whether they would like their measurements to be
+uploaded to OONI’s measurement collector by default or not. If your measurements
+are collected by OONI, they will be processed and published on &lt;a href=&#34;https://explorer.ooni.torproject.org/&#34;&gt;OONI Explorer&lt;/a&gt; and on &lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI’s list of measurements&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;OONI publishes all network measurement data that it collects and
+processes because open data allows third parties to conduct independent studies,
+to verify OONI findings and/or to answer other research questions. If you choose
+to opt-out from sending data to OONI’s measurement collector your results will
+not be publicly available, and you will need to process them yourself. This
+option is sometimes chosen by users who prefer to not have their measurements
+published due to potential risks that could emerge as a result of such
+publication.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;How to upload measurements&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you decide to have your measurements sent for processing and publication, you
+can subsequently choose &lt;em&gt;how&lt;/em&gt; you would like to have them sent to OONI’s
+measurement collector.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-08.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here you have three choices:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tor hidden services&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTPS collectors&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cloud-fronting&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tor hidden services should be the &lt;em&gt;best option&lt;/em&gt; for most users because it prevents
+OONI from seeing your IP address and it makes it harder for a network adversary
+to fingerprint your use of ooniprobe. This however requires the installation of
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;tor&lt;/a&gt; software and you should expect connections to
+OONI’s measurement collector to be slower.&lt;/p&gt;
+
+&lt;p&gt;If you would rather &lt;em&gt;not&lt;/em&gt; use tor software but you would also like to make it
+harder for a network adversary to identify you as an ooniprobe user, you can
+choose to submit your measurements via cloud-fronting. But if you don’t care
+about your ISP knowing that you are running ooniprobe and you want better
+performance, you can choose to submit your measurements via HTTPS collectors.&lt;/p&gt;
+
+&lt;h1 id=&#34;running-ooniprobe-through-ooni-s-web-ui&#34;&gt;Running ooniprobe through OONI’s web UI&lt;/h1&gt;
+
+&lt;p&gt;Upon configuration of your settings you will be presented with OONI’s web UI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-09.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By clicking on &lt;strong&gt;decks&lt;/strong&gt; you will be able to re-configure the sets of tests that you
+want to run automatically, as explained in the previous section.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-10.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By clicking on &lt;strong&gt;nettests&lt;/strong&gt; you will be presented with OONI software tests that you
+can choose from.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-11.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The three main tests (web connectivity, HTTP header field manipulation and HTTP
+invalid request line) are included in ooniprobe’s main software suite. &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web connectivity&lt;/a&gt; allows you
+to test a &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;set of URLs&lt;/a&gt; to examine whether and how they are blocked. The &lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt; and &lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt; tests, on
+the other hand, examine whether systems that could potentially be responsible
+for censorship and surveillance are present in your network. Prior to running
+these tests, we urge you to read relevant
+&lt;a href=&#34;https://ooni.torproject.org/nettest/&#34;&gt;documentation&lt;/a&gt; carefully and to
+understand what each software test does.&lt;/p&gt;
+
+&lt;p&gt;By clicking &lt;strong&gt;Run&lt;/strong&gt; next to the test of your choice, that test will start running.
+If you have, for example, chosen to run the Web Connectivity test, add the URL
+that you want to test and/or select the “&lt;a href=&#34;https://github.com/citizenlab/test-
+lists/blob/master/lists/global.csv&#34;&gt;list of globally accessed
+websites&lt;/a&gt;” in the file drop-down menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-12.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then click &lt;strong&gt;Start Net Test&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;viewing-your-measurements&#34;&gt;Viewing your measurements&lt;/h1&gt;
+
+&lt;p&gt;Once you have started running tests, click on &lt;strong&gt;measurements&lt;/strong&gt; to view a list
+containing the results for each test that you ran.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-13.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can view the results of your measurements by clicking on &lt;strong&gt;Show measurements&lt;/strong&gt;
+next to each type of test. The Web Connectivity measurements, for example, will
+show the results pertaining to the various URLs that you tested for censorship.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-14.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To &lt;em&gt;only&lt;/em&gt; view the results for the URLs that presented network
+anomalies, click &lt;strong&gt;Hide normal&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-15.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To view the collected data illustrating how and why the testing of a specific
+URL presented network anomalies, click &lt;strong&gt;View measurements&lt;/strong&gt;. Below we illustrate an
+example where casino.com appeared to be censored.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-16.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The start of the page presents you with the key findings on whether a site was
+accessible and/or censored when it was tested. If the site was found to be
+censored, you will be presented with a concise explanation of how it was blocked
+(for example, based on a difference in HTTP responses). Further information
+about this can be found towards the end of the page in the published network
+measurement data.&lt;/p&gt;
+
+&lt;p&gt;If censorship has been detected, you will be presented with &lt;em&gt;tips&lt;/em&gt; on how to
+circumvent that specific type of censorship and access the site in question.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/wui-screenshots/wui-17.png&#34; alt=&#34;Screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s worth noting though that you might come across false positives and false
+negatives in the data due to a number of reasons. DNS resolvers (operated by
+Google or a local ISP) often provide users with IP addresses that are closest to
+them geographically. While this might appear to be a case of DNS tampering, it
+is actually done with the intention of providing users with faster access to
+websites. Similarly, you might come across false positives when tested websites
+serve different content depending on the country that the user is connecting
+from, or in the cases when websites return failures even though they are not
+tampered with. Moreover, measurements indicating HTTP or TCP/IP blocking might
+actually be due to temporary HTTP or TCP/IP failures, and might not conclusively
+be a sign of network interference.&lt;/p&gt;
+
+&lt;p&gt;Therefore it’s important to remember that the web UI provides you with access to
+measurement data that was flagged as anomalous, and that not every anomalous
+measurement is a confirmed case of censorship. Unless a measurement presents a
+block page in the HTTP response body, data should be cross-correlated across
+time to reach more accurate conclusions.&lt;/p&gt;
+
+&lt;p&gt;Feedback? &lt;a href=&#34;https://ooni.torproject.org/about/&#34;&gt;Contact&lt;/a&gt; us, we’d love to hear from you!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The Gambia: Internet Shutdown during 2016 Presidential Election</title>
@@ -7216,283 +7541,6 @@ of the blocked websites. Communicating with the owner company would be impossibl
 &lt;/ul&gt;
 
 &lt;!-- # References --&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Zambia, a country under Deep Packet Inspection</title>
-      <link>https://ooni.torproject.org/post/zambia/</link>
-      <pubDate>Mon, 15 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/zambia/</guid>
-      <description>
-
-&lt;p&gt;&amp;ldquo;I do not have the details of the blocking of Zambianwatchdog.com, but I
-    would celebrate.&amp;rdquo;
-                          Guy Scott
-                          Zambian Vicepresident, Friday 28th June 2013&lt;/p&gt;
-
-&lt;p&gt;The following article is a guest blog post by Mr T. an independent researcher
-and provider of hosting to various grass roots organizations.&lt;/p&gt;
-
-&lt;p&gt;This article summarizes how we discovered that the grass roots online newspaper
-Zambianwatchdog.com was being blocked inside Zambia. This report provides
-technical evidence of the unlawful presence of Deep Packet Inspection in the
-country to monitor the Internet communications and stop users from browsing the
-website.&lt;/p&gt;
-
-&lt;h1 id=&#34;the-connection-was-reset&#34;&gt;The connection was reset&lt;/h1&gt;
-
-&lt;p&gt;On Monday 24 June 15:30 GMT readers of the website Zambianwatchdog.com from
-inside Zambia were reporting error messages.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/connection-rst.jpg&#34; alt=&#34;Connection RST&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;As hosting providers of the website, we initially could not see a significant
-drop of active connections and we needed to have a close look into the access
-logs of the site. Examining the connection logs to find any pattern that could
-help us to determine the cause of the problem was not a straightforward task as
-we needed to examine several gigabytes of data. It is worth mentioning here
-that Zambian Watchdog ranks 8th overall biggest website in Zambia and probably
-the biggest site after the large portals Facebook, Google or Youtube.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/alexa-traffic-ranks.png&#34; alt=&#34;Alexa ranks&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Our first review of the logs revealed a clear increase of connections reporting
-status code 200 but with zero bytes were transmitted back to the client.&lt;/p&gt;
-
-&lt;p&gt;The server has large number of logs similar to this one:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;41.72.105.x - - [25/Jun/2013:05:03:58 +0000]  &amp;quot;GET / HTTP/1.1&amp;quot; 200 0 &amp;quot;-&amp;quot; &amp;quot;Mozilla/5.0 (Windows NT 6.1; rv:20.0) Gecko/20100101 Firefox/20.0&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The sample shows that IP address of this connection 41.72.105.x belongs to
-ZAMTEL, the status code of the connection is 200 and zero information was sent
-back to the client.&lt;/p&gt;
-
-&lt;p&gt;The status code 200 indicates that the client&amp;rsquo;s request was successfully
-received, understood, and accepted by the server but for some unknown reason no
-information was send back to the client.&lt;/p&gt;
-
-&lt;p&gt;In order to determine if this was a general problem of our servers we examined
-the last four weeks of connection logs to conclude that there was inexplicable
-increase of connections with status code 200 and zero bytes transmitted
-starting that day.&lt;/p&gt;
-
-&lt;p&gt;We also looked into which readers were affected by this behavior and we
-concluded that the majority of the connections reporting this problem were from
-operators inside Zambia with the exception of MTN.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/pie-chart.png&#34; alt=&#34;Pie chart&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Origin of the dropped connections to the webserver&lt;/p&gt;
-
-&lt;h1 id=&#34;who-is-breaking-the-connections&#34;&gt;Who is breaking the connections?&lt;/h1&gt;
-
-&lt;p&gt;Four hours after we received the first reports of service outage inside Zambia
-we could narrow down the problem to what it was perceived in the server side as
-sudden termination of the connections.&lt;/p&gt;
-
-&lt;p&gt;Comparing the connection logs of different weeks we could determine that
-connections coming from at least these operators AS37146 realtime-as, AS37214
-MICROLINK, AS28698 UUNET Africa, AS37287 ZAIN-ZAMBIA and AS37154 ZAMTEL were
-suffering from some kind disruption.&lt;/p&gt;
-
-&lt;p&gt;In order to determine what kind of interference was taken place we proceed to
-capture the network traffic arriving to Zambian Watchdog&amp;rsquo;s server to look for
-any special patters that could help us to understand why most of the readers
-inside Zambia were experiencing connection drops with the exception of readers
-using MTN mobile network.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/wireshark.png&#34; alt=&#34;Wireshark&#34; /&gt;
-After reviewing dozen of different packet captures we saw a
-distinctive pattern&lt;/p&gt;
-
-&lt;p&gt;The readers seemed to be able to establish the initial connection with the
-webserver but as soon as they request any content of the website we received
-also a request to terminate such connection.&lt;/p&gt;
-
-&lt;p&gt;We proceed to examine our own generated connections from inside Zambia in real
-time and discovered that the undesired termination was taken place if the HTTP
-Header Host: www.zambianwatchdog.com was present in the request.&lt;/p&gt;
-
-&lt;p&gt;For example, we could see that a connection requesting the Breaking News
-section of the site from a Nokia phone, using Celtel 3G network was always
-quickly terminated after this request arrives to the server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;GET /category/breaking-news/ HTTP/1.1 
-Host: www.zambianwatchdog.com
-
-Accept: text/html,text/css,multipart/mixed,application/java-archive,
-application/java, application/x-java-archive, text/vnd.sun.j2me.app-descriptor,
-application/vnd.oma.drm.message, application/vnd.oma.drm.content,
-application/vnd.oma.dd+xml, application/vnd.oma.drm.rights+xml,
-application/vnd.oma.drm.rights+wbxml, application/x-nokia-widget, */* 
-
-Accept-Charset: iso-8859-1, utf-8; q=0.7, *; q=0.7 
-
-Accept-Encoding: gzip, deflate, x-gzip, identity; q=0.9 
-
-Accept-Language: en;q=1.0,fr;q=0.5,de;q=0.5,it;q=0.5 
-
-Referer: http://www.google.co.zm/search?q=wachdog+news&amp;amp;btnG=Search 
-
-User-Agent: Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaE63-1/500.21.009;
-Profile/MIDP-2.0 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko)
-Safari/413 
-
-x-wap-profile: &amp;quot;http://nds1.nds.nokia.com/uaprof/NE63-1r100.xml&amp;quot; 
-
-X-Nokia-MusicShop-Version: 08.0825.9 
-
-X-Nokia-MusicShop-Bearer: GPRS/3G
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;dpi-or-not-dpi&#34;&gt;DPI or not DPI?&lt;/h1&gt;
-
-&lt;p&gt;What it was left to determine if the filtering was looking into other aspects
-of the connection. In order to find out we run a few extra tests, requesting
-access to the webpage using other headers. We tested requests using the
-following headers&lt;/p&gt;
-
-&lt;p&gt;www.zambianwatchdog.COM&lt;/p&gt;
-
-&lt;p&gt;zambianwatchdog.com&lt;/p&gt;
-
-&lt;p&gt;Zambianwatchdog.cOm&lt;/p&gt;
-
-&lt;p&gt;wWw.zambianwatchdog.com&lt;/p&gt;
-
-&lt;p&gt;To our surprise we discovered that the “reset” of the connections was only
-talking place when we used the header www.zambianwatchdog.com and not when
-using any of the other combinations. After twelve hours we could confirm that
-malicious traffic was not generated by the readers but was actively injected
-into the network when a reader was requesting content from the website
-www.zambianwatchdog.com and that this behavior could only be explained by the
-presence of deep packet inspection (DPI) equipment inside Zambia.&lt;/p&gt;
-
-&lt;p&gt;Not until we technically verified and gathered forensic evidence of the
-blocking we adviced to the website owners to inform to the general public that
-such active interference was talking place and that the blocking was clearly
-targeted against the website.&lt;/p&gt;
-
-&lt;h1 id=&#34;getting-the-website-back-online&#34;&gt;Getting the website back online&lt;/h1&gt;
-
-&lt;p&gt;To ensure the public visibility of the website inside Zambia and in order to
-look for a quick solution to put the website online, we tested the availability
-of the blocking technology to interfere with encrypted traffic. After testing
-the encypted (SSL) traffic was not suffering from such type of interference the
-decided to make the site available only via HTTPS.&lt;/p&gt;
-
-&lt;p&gt;To our surprise, several popular Word Press plugins of the website needed some
-tweaks so the full content was delivered encrypted to the readers.&lt;/p&gt;
-
-&lt;p&gt;We have also included the header&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Strict-Transport-Security &amp;quot;max-age=10886401; includeSubDomains&amp;quot;;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to ensure that the readers that have reached the website at least once via
-HTTPS will keep doing it so without the need to specify HTTPS in their future
-requests.&lt;/p&gt;
-
-&lt;h1 id=&#34;ooni-testing&#34;&gt;OONI Testing&lt;/h1&gt;
-
-&lt;p&gt;Inspired by the work of our colleges of the Open Observatory of Network
-Interferece (OONI) we conducted another run of tests to determine if any of
-1000 top Alexa websites was blocking. The result of the testing is that we
-could not find any other website blocked with the exception of the Zambian
-Watchdog.&lt;/p&gt;
-
-&lt;h1 id=&#34;blocking-status&#34;&gt;Blocking status&lt;/h1&gt;
-
-&lt;p&gt;Three weeks after we initially detected and fingerprinted the blocking, the
-filtering is still active. Unencrypted requests to the domain
-zambianwatchdog.com remain unblocked while connections using
-www.zambianwatchdog.com trigger a reset.&lt;/p&gt;
-
-&lt;p&gt;Our test software that runs inside Zambia still reports interference when using
-www.zambianwatchdog.com&lt;/p&gt;
-
-&lt;p&gt;Recv failure: Connection reset by peer&lt;/p&gt;
-
-&lt;p&gt;While such interference is not present when dropping the www.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;HTTP/1.1 301 Moved Permanently 
-
-Server: nginx 
-
-Date: Sat, 13 Jul 2013 12:35:16 GMT 
-
-Content-Type: text/html 
-
-Content-Length: 178 
-
-Location: https://&#39;&#39;&#39;zambianwatchdog.com/&#39;&#39;&#39; 
-
-Strict-Transport-Security: max-age=10886401; includeSubDomains 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;courage-is-contagious&#34;&gt;Courage is contagious&lt;/h1&gt;
-
-&lt;p&gt;After we unveiled the blocking and network monitoring, Zambian Watchdog has
-received information from whistle blowers of the presence of such
-infrastructure.&lt;/p&gt;
-
-&lt;p&gt;The 4th of July, the Zambian website reports&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;They have also installed equipment a Lamya (1) in order to monitor people
-blogging on a site like yours and also blocking watchdog. This is also
-affecting all the other internet service providers who are using Zamtel as a
-currier and service provider. Also the CODEX (2) which interconnects all ISP is
-based at Lamya and this has given OP (3) access to all the ISP in Zambia.&amp;rdquo;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Lamya is the location of the &amp;ldquo;Zambia&amp;rdquo; Telecommunications Company&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;CODEX is the Zambian Internet exchange OP is the Office of the President&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Further information about the case:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/corruption-worsens-at-zamtel-emails-phones-being-monitored-at-lamya-house/&#34;&gt;Corruption worsens at zamtel emails phones being-monitored at lamya house&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/zicta-suing-of-mobile-companies-aimed-at-mtn-for-refusing-to-block-zwd/&#34;&gt;Zicta suing of mobile companies aimed at mtn for refusing to block zwd&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/sata-orders-op-to-block-zwd-on-mtn-as-well/&#34;&gt;Sata orders op to block zwd on mtn as well&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/sata-signs-order-for-op-to-tap-phones-emails/&#34;&gt;Sata signs order for op to tap phones emails&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zambianwatchdog.com/journalist-zyambo-out-of-jail-police-though-he-had-obituary-of-sata/&#34;&gt;Journalist zyambo out of jail police though he had obituary of sata&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;update-17th-july-2013-and-ssl-got-blocked&#34;&gt;Update (17th July 2013): And SSL got blocked&amp;hellip;&lt;/h1&gt;
-
-&lt;p&gt;On Tuesday 16th of July 2013 (14:43 GMT) just a few hours after this article
-was released, the government has moved forward in their determination of
-blocking the site and started to block the SSL connections.  The Deep Packet
-Inspection gear seems to be monitoring the &amp;ldquo;Server Hello&amp;rdquo; message that is part
-of the SSL negotiation. This message contains the string zambianwatchdog.com
-before the SSL negotiation is completed.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/zambia/SSL-reset.png&#34; alt=&#34;SSL Reset&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In order to find out if the government is actively making changes, we deployed
-a new mirror server of the site in the domain &lt;a href=&#34;http://zwd.cums.in&#34;&gt;http://zwd.cums.in&lt;/a&gt;. After a few
-hours the domain has also been blocked and the filtering has been extended to
-the whole /24 network. By extending the filtering the Zambian government has
-also blocked hundreds of other organizations that are hosted in the same provider.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;41.72.122.69 - - [17/Jul/2013:14:17:16 +0000]  &amp;quot;-&amp;quot; 400 0 &amp;quot;-&amp;quot; &amp;quot;-&amp;quot; &amp;quot;---&amp;quot; &amp;quot;ZM&amp;quot; &amp;quot;-x-&amp;quot; &amp;quot;41.72.122.69&amp;quot; &amp;quot;-&amp;quot;
-41.72.122.69 - - [17/Jul/2013:14:17:16 +0000]  &amp;quot;-&amp;quot; 400 0 &amp;quot;-&amp;quot; &amp;quot;-&amp;quot; &amp;quot;---&amp;quot; &amp;quot;ZM&amp;quot; &amp;quot;-x-&amp;quot; &amp;quot;41.72.122.69&amp;quot; &amp;quot;-&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is an example of the logs in the server side. We can see that the attack
-they are conducting leads to 0 bytes being transmitted and an error code 400 is
-generated (Error 400 (Bad Request) takes place when the request to a SSL is
-malformed.).&lt;/p&gt;
-
-&lt;p&gt;More information is available here
-&lt;a href=&#34;https://zambianwatchdog.com/police-abduct-another-journalists-suspected-of-links-to-zwd-govt-blocks-zwd-futher/&#34;&gt;https://zambianwatchdog.com/police-abduct-another-journalists-suspected-of-links-to-zwd-govt-blocks-zwd-futher/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
