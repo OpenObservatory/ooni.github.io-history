@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/ethiopia/index.xml</link>
+    <link>https://ooni.torproject.org/tags/censorship/index.xml</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ooni.torproject.org/tags/ethiopia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ooni.torproject.org/tags/censorship/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ethiopia: Evidence of social media blocking and internet censorship</title>
@@ -2161,171 +2161,6 @@ censorship events with confidence, especially when block pages are not present.&
 
 &lt;p&gt;Warm thanks to Girma Walabuma who took considerable security risks to perform
 OONI network measurement tests in Ethiopia for this study, and to the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;Open Technology Fund&lt;/a&gt; for funding OONI&amp;rsquo;s work.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ethiopia: Internet Shutdown Amidst Recent Protests?</title>
-      <link>https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/</link>
-      <pubDate>Wed, 10 Aug 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/</guid>
-      <description>
-
-&lt;p&gt;Nearly 100 deaths and thousands of arrests have been
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-37015055&#34;&gt;reported&lt;/a&gt; in Ethiopia over the
-last days, as part of protests against the marginalization and persecution of
-the Oromos and Amharas, Ethiopia’s two largest ethnic groups. But the attacks
-and arrests may not have been the only forms of retribution carried out by the
-Ethiopian government in its crackdown against protesters.&lt;/p&gt;
-
-&lt;p&gt;Last weekend, the internet was
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-36940906&#34;&gt;reportedly&lt;/a&gt; shut down in the
-country.&lt;/p&gt;
-
-&lt;p&gt;In an attempt to understand whether the internet was in fact shut down, we
-looked at some public sources of data that contain information about internet
-traffic. Such data provides strong indicators that the internet was most likely
-shut down during the Ethiopian protests last weekend, though it remains unclear
-if this occurred in all regions and/or on all types of networks across the
-country.&lt;/p&gt;
-
-&lt;h2 id=&#34;ethiopian-protests&#34;&gt;Ethiopian protests&lt;/h2&gt;
-
-&lt;p&gt;Ongoing
-&lt;a href=&#34;http://africanarguments.org/2016/08/06/ethiopias-unprecedented-nationwide-oromo-protests-who-what-why/&#34;&gt;protests&lt;/a&gt;
-have been carried out by Ethiopia’s Oromo people since November 2015, marking
-one of the most significant political developments in Ethiopia in recent years.
-These protests were sparked by the introduction of the &lt;a href=&#34;https://www.bloomberg.com/news/articles/2015-12-14/ethiopia-oromo-protests-trigger-fatal-ethnic-clashes-group-says&#34;&gt;Addis Ababa City
-Integrated Master
-Plan&lt;/a&gt;,
-which aims to expand the territorial limits of the country’s capital into
-neighbouring Oromo towns, threatening to displace millions of Oromo farmers and
-bring the Oromo-dominated region under Tigray-led federal government.&lt;/p&gt;
-
-&lt;p&gt;The unprecedented wave of protests has resulted in more than 400 deaths over
-the last months, according to a recent &lt;a href=&#34;https://www.hrw.org/report/2016/06/16/such-brutal-crackdown/killings-and-arrests-response-ethiopias-oromo-protests&#34;&gt;Human Rights Watch
-report&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;More &lt;a href=&#34;http://africanarguments.org/2016/08/06/ethiopias-unprecedented-nationwide-oromo-protests-who-what-why/&#34;&gt;protests sprung up in the Amhara regional
-state&lt;/a&gt;,
-with protesters requesting for political reforms and specifically, the Welkait
-community demanding that ancestral land currently administered by the Tigray
-regional state be moved into the neighbouring Amhara region.&lt;/p&gt;
-
-&lt;p&gt;The new-found unity between the two historically antagonistic communities of
-the Oromo and Amharas against a common adversary, the TPLF-led government,
-seems to have raised the tension in the country. The security forces response
-has been extreme, with observers
-&lt;a href=&#34;http://www.sudantribune.com/spip.php?article57643&#34;&gt;comparing&lt;/a&gt; it to the 2005
-post-election violence where nearly 200 people were killed. This time though,
-at least &lt;a href=&#34;https://www.amnesty.org/en/latest/news/2016/08/ethiopia-dozens-killed-as-police-use-excessive-force-against-peaceful-protesters/?utm_source=twitter&amp;amp;utm_medium=quote&amp;amp;utm_term=The+security+forces%25u2019+response+was+heavy-handed%2c+but+unsurprising.+Ethiopian+forces+have+systematically+used+excessive+force+in+their+mistaken+attempts+to+silence+dissenting+voices&amp;amp;utm_campaign=social&#34;&gt;30 people were reportedly
-killed&lt;/a&gt;
-in the Amhara region in one day alone.&lt;/p&gt;
-
-&lt;h2 id=&#34;internet-shutdown&#34;&gt;Internet shutdown&lt;/h2&gt;
-
-&lt;p&gt;Protesters relied on the internet to plan, mobilize and coordinate with each
-other and this may have &lt;a href=&#34;http://www.bbc.com/news/world-africa-36940906&#34;&gt;prompted the Ethiopian
-government&lt;/a&gt; to pull the plug on
-the internet even before the planned protests started.&lt;/p&gt;
-
-&lt;p&gt;But this is not the first time that the Ethiopian government appears to be
-restricting access to the internet this year.&lt;/p&gt;
-
-&lt;p&gt;Last month, the government
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-36763572&#34;&gt;reportedly&lt;/a&gt; blocked social
-media sites across the country after &lt;a href=&#34;https://www.facebook.com/photo.php?fbid=10102310909934763&amp;amp;set=pb.215693.-2207520000.1470776183.&amp;amp;type=3&amp;amp;theater&#34;&gt;University entrance exams were leaked on
-Facebook&lt;/a&gt;
-by an Oromo activist, as a form of protest against the government.&lt;/p&gt;
-
-&lt;p&gt;Public data from last weekend indicates that the internet was shut down in
-Ethiopia during the heat of the protests, but it remains unclear if this
-occurred nationwide.&lt;/p&gt;
-
-&lt;p&gt;The graphs below illustrate that while internet traffic appeared to be
-originating from Ethiopia up until August 5th, such traffic was suddenly
-terminated until August 8th, indicating that the internet was probably shut
-down.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-google-traffic.png&#34; alt=&#34;Ethiopia google traffic&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-youtube-traffic.png&#34; alt=&#34;Ethiopia youtube traffic&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-gmail-traffic.png&#34; alt=&#34;Ethiopia gmail traffic&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Google products traffic for users from Ethiopia from July 22nd to August 8th&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-ndt-measurements.png&#34; alt=&#34;Ethiopia NDT Measurements&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;NDT measurements started by users from July 20th to August 8th&lt;/p&gt;
-
-&lt;p&gt;The following graph, which we created based on tweets geotagged in Ethiopia
-from 3rd-9th August, also illustrates a decrease of Twitter activity.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tweets.png&#34; alt=&#34;Ethiopia Tweets&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Similarly, &lt;a href=&#34;https://metrics.torproject.org/&#34;&gt;Tor metrics data&lt;/a&gt; below
-illustrates that there was a decrease in the usage of
-&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; last weekend, which could be viewed as an
-indicator of the internet being restricted or shut down in certain types of
-networks.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tor-metrics.png&#34; alt=&#34;Ethiopia tor metrics&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-internet-shutdown-amidst-recent-protests/ethiopia-tor-metrics-2.png&#34; alt=&#34;Ethiopia tor metrics&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tor metrics data for direct connecting users&lt;/p&gt;
-
-&lt;p&gt;The data included in the graphs above shows that while the internet was likely
-shut down in certain regions and/or types of networks, it probably wasn’t shut
-down completely across Ethiopia. It might also have been the case that access
-to certain websites was restricted in regions and/or networks where the
-internet was accessible, though we unfortunately don’t have any recent &lt;a href=&#34;https://explorer.ooni.torproject.org/country/ET&#34;&gt;OONI
-measurements&lt;/a&gt; from Ethiopia to
-verify this.&lt;/p&gt;
-
-&lt;h2 id=&#34;keepiton-campaign&#34;&gt;#KeepItOn campaign&lt;/h2&gt;
-
-&lt;p&gt;Internet shutdowns effectively pose restrictions on demonstrations and on human
-rights generally.&lt;/p&gt;
-
-&lt;p&gt;In the recent case of Ethiopia, shutting down the internet in the middle of
-intense protests likely not only had an effect on the mobilization and
-coordination of protesters, but also on the communication between families and
-friends of victims. This also likely had an effect on journalists reporting on
-the protests in real-time on the ground, if they were using networks that were
-blocked.&lt;/p&gt;
-
-&lt;p&gt;An Al Jazeera reporter in Addis Ababa cited difficulties to connect to the
-internet and restricted travel to protest zones as a cause for limited coverage
-of the protests.&lt;/p&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;It works abit differently with TV. We must verify reports we get. We however covered Addis protests on sat. &lt;a href=&#34;https://t.co/qHGw9Vdy1u&#34;&gt;https://t.co/qHGw9Vdy1u&lt;/a&gt;&lt;/p&gt;&amp;mdash; Catherine Soi (@C_SOI) &lt;a href=&#34;https://twitter.com/C_SOI/status/762388008666591232&#34;&gt;August 7, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Internet back after 48 hours of total blackout across the whole &lt;a href=&#34;https://twitter.com/hashtag/Ethiopia?src=hash&#34;&gt;#Ethiopia&lt;/a&gt;. However, it&amp;#39;s still blocked in Amhara &amp;amp; oromia region.&lt;/p&gt;&amp;mdash; Ethiopian Press (@abenezer_a) &lt;a href=&#34;https://twitter.com/abenezer_a/status/762569928205533184&#34;&gt;August 8, 2016&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;But Ethiopia is not the only country restricting access to the internet during
-political events.&lt;/p&gt;
-
-&lt;p&gt;At least &lt;a href=&#34;https://www.accessnow.org/keepiton/#resources&#34;&gt;20 cases of internet
-shutdowns&lt;/a&gt; have been documented
-worldwide over the last six months alone. In response to this, &lt;a href=&#34;https://www.accessnow.org/&#34;&gt;Access
-Now&lt;/a&gt; is leading a campaign in collaboration with
-organizations around the world called #KeepItOn.&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&#34;https://www.accessnow.org/keepiton/&#34;&gt;#KeepItOn&lt;/a&gt; campaign aims to document
-and raise awareness about internet shutdowns around the world. We support this
-campaign, and we hope you will too.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;This article was drafted as part of a collaboration between
-&lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; and the &lt;a href=&#34;https://www.cipit.org/&#34;&gt;Centre for Intellectual Property
-and Information Technology Law (CIPIT)&lt;/a&gt; department of
-Strathmore University.&lt;/p&gt;
 </description>
     </item>
     
