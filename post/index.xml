@@ -73,7 +73,7 @@ line, HTTP header field manipulation, HTTP Host&lt;/p&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#political-opposition-and-armed-groups&#34;&gt;Political opposition and armed groups&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#legbti-websites&#34;&gt;LGBTI websites&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#lgbti-websites&#34;&gt;LGBTI websites&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#human-rights-websites&#34;&gt;Human rights websites&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
@@ -1433,15 +1433,17 @@ August. While the data shows a decrease in internet traffic during October,
 there is no strong indication of an internet shutdown along the lines of that
 observed in early August.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-report/et-01.png&#34; alt=&#34;Google data&#34; /&gt;
-Google Transparency Report, Ethiopia, Google Search traffic between July and November 2016.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-report/et-01.png&#34; alt=&#34;Google data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Google Transparency Report, Ethiopia, Google Search traffic between July and November 2016.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;As Google Maps is another Google service that is commonly used via mobile
 phones, we also looked at Google Maps traffic originating from Ethiopia between
 July and November 2016.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-report/et-02.png&#34; alt=&#34;Google data&#34; /&gt;
-Google Transparency Report, Ethiopia, Google Maps traffic between July and November 2016.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ethiopia-report/et-02.png&#34; alt=&#34;Google data&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Google Transparency Report, Ethiopia, Google Maps traffic between July and November 2016.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Similar to Google Search traffic, Google Maps traffic appears to be disrupted in
 August but not in October. The above graphs indicate that if an internet
