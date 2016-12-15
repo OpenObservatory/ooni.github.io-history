@@ -275,43 +275,6 @@ integrity of the package, use our private Debian repository below.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="other-platforms-with-vagrant">
-<h2>Other platforms (with Vagrant)<a class="headerlink" href="#other-platforms-with-vagrant" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
-<li>Install Vagrant (<a class="reference external" href="https://www.vagrantup.com/downloads.html">https://www.vagrantup.com/downloads.html</a>) and Install Virtualbox (<a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>)</li>
-<li>On OSX:</li>
-</ol>
-<p>If you don&#8217;t have it install homebrew <a class="reference external" href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span>
-</pre></div>
-</div>
-<p>On debian/ubuntu:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span>
-</pre></div>
-</div>
-<ol class="arabic" start="3">
-<li><p class="first">Open a Terminal and run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="o">.</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ooni</span><span class="o">-</span><span class="n">probe</span><span class="o">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">ooni</span><span class="o">-</span><span class="n">probe</span><span class="o">/</span>
-<span class="n">vagrant</span> <span class="n">up</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Login to the box with:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vagrant</span> <span class="n">ssh</span>
-</pre></div>
-</div>
-</li>
-</ol>
-<p>ooniprobe will be installed in <code class="docutils literal"><span class="pre">/ooni</span></code>.</p>
-<ol class="arabic" start="5">
-<li><p class="first">You can run tests with:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ooniprobe</span> <span class="n">blocking</span><span class="o">/</span><span class="n">http_requests</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">ooni</span><span class="o">/</span><span class="n">example_inputs</span><span class="o">/</span><span class="n">alexa</span><span class="o">-</span><span class="n">top</span><span class="o">-</span><span class="mi">1</span><span class="n">k</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
 <div class="section" id="configuring-ooniprobe">
 <h2>Configuring ooniprobe<a class="headerlink" href="#configuring-ooniprobe" title="Permalink to this headline">¶</a></h2>
 <p>You may edit the configuration for ooniprobe by editing the configuration file
