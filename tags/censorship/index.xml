@@ -1714,8 +1714,6 @@ completely, despite having gained popularity in the country. And
 according to our testing, both sites &lt;em&gt;remain&lt;/em&gt; blocked in Malaysia to
 date.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-01.png&#34; alt=&#34;News media&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;Similarly, we also found the website of Asia Sentinel, another news
 outlet that heavily
 &lt;a href=&#34;http://www.asiasentinel.com/politics/malaysia-1mdb-default-what-were-they-thinking/&#34;&gt;&lt;em&gt;covered&lt;/em&gt;&lt;/a&gt;
@@ -1732,13 +1730,19 @@ returned a block page.&lt;/p&gt;
 the blocking of these sites on the grounds of national security under
 Section 233 of the &lt;a href=&#34;https://www.unodc.org/res/cld/document/mys/communications_and_multimedia_act_html/Malaysia_Communications_and_Multimedia_Act_1998.pdf&#34;&gt;&lt;em&gt;1998 Communications and Multimedia Act (CMA)&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Blocked news websites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.asiasentinel.com&#34;&gt;http://www.asiasentinel.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sarawakreport.org&#34;&gt;http://www.sarawakreport.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&#34;&gt;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sarawakreport.org/tag/1mdb&#34;&gt;http://www.sarawakreport.org/tag/1mdb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.themalaysianinsider.com&#34;&gt;http://www.themalaysianinsider.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;political-criticism&#34;&gt;Political Criticism&lt;/h3&gt;
 
-&lt;p&gt;Several political blogs were found to be blocked as part of our study.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-02.png&#34; alt=&#34;Political criticism&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Amongst them, a &lt;a href=&#34;http://jinggo-fotopages.blogspot.my/&#34;&gt;&lt;em&gt;satirical photo blog that specializes in Malaysian politics&lt;/em&gt;&lt;/a&gt; and which &lt;a href=&#34;https://jinggo-fotopages.blogspot.gr/2016/09/pelancaran-siri-jelajah-penerangan-1mdb.html&#34;&gt;&lt;em&gt;covered the 1MDB scandal&lt;/em&gt;&lt;/a&gt;
+&lt;p&gt;Several political blogs were found to be blocked as part of our study. Amongst them, a &lt;a href=&#34;http://jinggo-fotopages.blogspot.my/&#34;&gt;&lt;em&gt;satirical photo blog that specializes in Malaysian politics&lt;/em&gt;&lt;/a&gt; and which &lt;a href=&#34;https://jinggo-fotopages.blogspot.gr/2016/09/pelancaran-siri-jelajah-penerangan-1mdb.html&#34;&gt;&lt;em&gt;covered the 1MDB scandal&lt;/em&gt;&lt;/a&gt;
 returned block pages every time we tested it. Similarly, a
 &lt;a href=&#34;http://syedsoutsidethebox.blogspot.my/&#34;&gt;&lt;em&gt;blog&lt;/em&gt;&lt;/a&gt; that serves as a
 publishing platform for short articles, information, and thoughts that
@@ -1763,6 +1767,15 @@ criticism and according to our findings, this site remained
 &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161111T222216Z_AS4788_CdgH2h69js5DX9sP5aW5liauAsrOAwhgj5XljqrNRImLNXptqG?input=http:%2F%2Fmalaysia-chronicle.com&#34;&gt;&lt;em&gt;blocked&lt;/em&gt;&lt;/a&gt;
 throughout the testing period.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Blocked sites expressing political criticism&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jinggo-fotopages.blogspot.my/&#34;&gt;http://jinggo-fotopages.blogspot.my/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://malaysia-chronicle.com&#34;&gt;http://malaysia-chronicle.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://syedsoutsidethebox.blogspot.my/&#34;&gt;http://syedsoutsidethebox.blogspot.my/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tabunginsider.blogspot.my/&#34;&gt;http://tabunginsider.blogspot.my/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;religion&#34;&gt;Religion&lt;/h3&gt;
 
 &lt;p&gt;While Malaysia’s constitution guarantees freedom of religion, Islam is
@@ -1771,8 +1784,6 @@ the country’s state religion. As part of this study, we found a
 towards Islam to be
 &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161111T004856Z_AS4788_qVtleJJvdqT7CVk2tX0NPzcYftL4FPm6d41wzHE9blYzoswg7h?input=http:%2F%2Ftabunginsider.blogspot.my%2F&#34;&gt;&lt;em&gt;blocked&lt;/em&gt;&lt;/a&gt;
 in Malaysia.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-03.png&#34; alt=&#34;Religion&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This site keeps track of and enumerates the amount of terror attacks,
 suicide blasts, and deaths and injuries worldwide. It also publishes
@@ -1784,6 +1795,12 @@ towards Islam and its blocking can therefore be justified under the
 &lt;a href=&#34;http://www.commonlii.org/my/legis/consol_act/sa19481969183/&#34;&gt;&lt;em&gt;1948 Sedition Act&lt;/em&gt;&lt;/a&gt;,
 which prohibits the incitement of hatred towards any religion.&lt;/p&gt;
 
+&lt;p&gt;&lt;strong&gt;Blocked site criticising Islam&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.thereligionofpeace.com&#34;&gt;http://www.thereligionofpeace.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h3 id=&#34;hosting-and-blogging-platforms&#34;&gt;Hosting and Blogging platforms&lt;/h3&gt;
 
 &lt;p&gt;Once the &lt;a href=&#34;http://www.sarawakreport.org/&#34;&gt;&lt;em&gt;Sarawak Report&lt;/em&gt;&lt;/a&gt; was &lt;a href=&#34;https://www.theguardian.com/world/2015/jul/20/sarawak-report-whistleblowing-website-blocked-by-malaysia-over-pm-allegations&#34;&gt;&lt;em&gt;blocked for covering the 1MDB scandal&lt;/em&gt;&lt;/a&gt;,
@@ -1792,11 +1809,15 @@ one of the world’s most popular online publishing platforms. However,
 this resulted in the &lt;a href=&#34;http://www.sarawakreport.org/2016/01/1mdb-reporting-has-all-been-vindicated-so-how-come-the-growing-media-crackdown-in-malaysia/&#34;&gt;&lt;em&gt;blocking of medium.com&lt;/em&gt;&lt;/a&gt;
 for hosting stories by Sarawak Report.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-04.png&#34; alt=&#34;medium&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;OONI data collected as part of this study shows that medium.com was
 &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161111T222216Z_AS4788_CdgH2h69js5DX9sP5aW5liauAsrOAwhgj5XljqrNRImLNXptqG?input=https:%2F%2Fmedium.com&#34;&gt;&lt;em&gt;blocked&lt;/em&gt;&lt;/a&gt;
 throughout the testing period.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blocked blogging platform&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com&#34;&gt;https://medium.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;file-sharing&#34;&gt;File-sharing&lt;/h3&gt;
 
@@ -1808,11 +1829,18 @@ as part of our study. Similarly, two other torrenting sites were also
 found to be
 &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161110T235705Z_AS4788_hXivqWX3IUXsTX6bTcpHYkFCvM82YFJKUXUvHScbsoMTfmWa0I?input=http:%2F%2Fextratorrent.cc&#34;&gt;&lt;em&gt;blocked&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-06.png&#34; alt=&#34;torrenting&#34; /&gt;&lt;/p&gt;
-
 &lt;p&gt;These sites might be part of the thousands of websites that were
 recently &lt;a href=&#34;http://english.astroawani.com/malaysia-news/mcmc-blocks-over-5-000-websites-various-offences-jailani-125528&#34;&gt;&lt;em&gt;announced to be blocked by the MCMC&lt;/em&gt;&lt;/a&gt;
 for enabling piracy, which is viewed as an offense under &lt;a href=&#34;https://www.unodc.org/res/cld/document/mys/communications_and_multimedia_act_html/Malaysia_Communications_and_Multimedia_Act_1998.pdf&#34;&gt;&lt;em&gt;Malaysia’s 1998 Communications and Multimedia Act (CMA)&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Blocked torrenting sites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://extratorrent.cc&#34;&gt;http://extratorrent.cc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://thepiratebay.org&#34;&gt;http://thepiratebay.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://thepiratebay.se&#34;&gt;https://thepiratebay.se&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://torrentz.eu&#34;&gt;https://torrentz.eu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;online-dating&#34;&gt;Online Dating&lt;/h3&gt;
 
@@ -1823,7 +1851,11 @@ as part of this study. It remains unclear though what the motivation was
 behind the blocking of this particular site, and not other popular
 dating sites.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-07.png&#34; alt=&#34;online dating&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blocked online dating site&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://adultfriendfinder.com&#34;&gt;http://adultfriendfinder.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;pornography&#34;&gt;Pornography&lt;/h3&gt;
 
@@ -1834,7 +1866,24 @@ under the &lt;a href=&#34;https://www.unodc.org/res/cld/document/mys/communicati
 As part of this study, the following pornographic websites were found to
 be blocked.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-08.png&#34; alt=&#34;porn&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blocked porn websites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://beeg.com&#34;&gt;http://beeg.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://pornhub.com&#34;&gt;http://pornhub.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://redtube.com&#34;&gt;http://redtube.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.89.com&#34;&gt;http://www.89.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.ashemaletube.com&#34;&gt;http://www.ashemaletube.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.hustler.com&#34;&gt;http://www.hustler.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.livejasmin.com&#34;&gt;http://www.livejasmin.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sex.com&#34;&gt;http://www.sex.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.wetplace.com&#34;&gt;http://www.wetplace.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.worldsex.com&#34;&gt;http://www.worldsex.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://xvideos.com&#34;&gt;http://xvideos.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://youjizz.com&#34;&gt;http://youjizz.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://youporn.com&#34;&gt;http://youporn.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&#34;gambling&#34;&gt;Gambling&lt;/h3&gt;
 
@@ -1846,7 +1895,20 @@ sites can be justified under the &lt;a href=&#34;http://www.agc.gov.my/agcportal
 of this study, we found the following gambling sites to be blocked in
 the country.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/my-09.png&#34; alt=&#34;gambling&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blocked gambling sites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.888casino.com&#34;&gt;http://www.888casino.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.belmont.ag&#34;&gt;http://www.belmont.ag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.betfair.com&#34;&gt;http://www.betfair.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.carnivalcasino.com&#34;&gt;http://www.carnivalcasino.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.casinotropez.com&#34;&gt;http://www.casinotropez.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.clubdicecasino.com&#34;&gt;http://www.clubdicecasino.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.europacasino.com&#34;&gt;http://www.europacasino.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.goldenrivieracasino.com&#34;&gt;http://www.goldenrivieracasino.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.roxypalace.com&#34;&gt;http://www.roxypalace.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.spinpalace.com&#34;&gt;http://www.spinpalace.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;acknowledgement-of-limitations&#34;&gt;Acknowledgement of limitations&lt;/h2&gt;
 
