@@ -6,8 +6,172 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Kenya: Censorship-free internet?</title>
+      <link>https://ooni.torproject.org/post/kenya-study/</link>
+      <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/kenya-study/</guid>
+      <description>
+
+&lt;p&gt;Over the last five months we ran &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI tests&lt;/a&gt; in Kenya almost every day to examine
+whether internet censorship events were occurring in the country. Hundreds of
+thousands of &lt;a href=&#34;https://explorer.ooni.torproject.org/country/KE&#34;&gt;network measurements&lt;/a&gt; were collected and analyzed. &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;1,357 URLs&lt;/a&gt; were
+tested for censorship, including both &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;international websites&lt;/a&gt; and &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;sites that are more relevant to Kenya&lt;/a&gt; (e.g. local news outlets). Yet, after five months of
+intensive testing from four local vantage points in Kenya, we found almost no
+signs of internet censorship in the country.&lt;/p&gt;
+
+&lt;h1 id=&#34;methodology&#34;&gt;Methodology&lt;/h1&gt;
+
+&lt;p&gt;As part of our study, we started off by updating the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;Citizen Lab’s Kenyan test list&lt;/a&gt; with our local partner, Strathmore University’s &lt;a href=&#34;http://cipit.org/&#34;&gt;Centre for Intellectual Property and Information Technology Law (CIPIT)&lt;/a&gt;. The aim of this was to ensure
+that we would be testing as many URLs that are relevant to Kenya as possible and
+which the government could potentially have an incentive to block. The types of
+URLs that were added to the Kenyan list fall under &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30 categories&lt;/a&gt;, ranging from
+news media, file-sharing and culture, to provocative or objectionable
+categories, like pornography, political criticism, and hate speech.&lt;/p&gt;
+
+&lt;p&gt;All of the URLs in both the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;Kenyan list&lt;/a&gt; and the “&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;global list&lt;/a&gt;” (containing
+internationally relevant websites) were tested for censorship through &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;OONI’s Web Connectivity test&lt;/a&gt;. This test is designed to examine whether access to websites
+is blocked through DNS tampering, TCP connection RST/IP blocking, or by a
+transparent HTTP proxy.&lt;/p&gt;
+
+&lt;p&gt;But our testing wasn’t limited to the blocking of websites. We also tested the
+reachability of the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor anonymity network&lt;/a&gt; through OONI’s relevant &lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;software test&lt;/a&gt;,
+and we ran other OONI tests (&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt; and &lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt;) in an attempt to examine whether systems (“middle boxes”) that
+could be responsible for censorship and/or surveillance were present in the
+tested network.&lt;/p&gt;
+
+&lt;p&gt;OONI software tests were run from four local vantage points (AS36866, AS15399,
+AS33771, AS36914) in Kenya. The testing period started on 26th July 2016 and
+concluded on 14th December 2016. Once the testing period ended, we analyzed the
+collected data with the aim of examining whether access to sites and services
+was blocked, and whether proxy technologies were present in the tested network.&lt;/p&gt;
+
+&lt;h1 id=&#34;findings&#34;&gt;Findings&lt;/h1&gt;
+
+&lt;p&gt;Upon analysis of the &lt;a href=&#34;https://explorer.ooni.torproject.org/country/KE&#34;&gt;network measurements&lt;/a&gt; collected from Kenya, we found almost
+no signs of internet censorship.&lt;/p&gt;
+
+&lt;p&gt;Out of all the &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;URLs&lt;/a&gt; that we tested, the only site that was &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161107T075602Z_AS36914_TjQtUZ2q8AOROLbiBqVmR9IlueW8SBSg5Ng69aSWShud2mQeJb?input=http:%2F%2Fwww.sportingbet.com&#34;&gt;likely blocked&lt;/a&gt; in
+Kenya according to our testing is &lt;strong&gt;&lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt;&lt;/strong&gt;. The table below
+illustrates that most of our attempts to establish a TCP connection to this site
+failed, indicating the possibility of TCP/IP blocking.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;URL&lt;/th&gt;
+&lt;th&gt;FALSE&lt;/th&gt;
+&lt;th&gt;cloudflare&lt;/th&gt;
+&lt;th&gt;dns&lt;/th&gt;
+&lt;th&gt;http-diff&lt;/th&gt;
+&lt;th&gt;http-failure&lt;/th&gt;
+&lt;th&gt;tcp_ip&lt;/th&gt;
+&lt;th&gt;anomalies&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The inaccessibility of &lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt; was also confirmed by our
+local partner in Kenya. Given though that this site was only one of hundreds of
+gambling sites that we tested, it remains unclear why there would be motivation
+to block access to this particular site, and not others. It’s interesting to see
+though that access to the same site appears to be &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161221T000038Z_AS29032_6B7aAG70pQs8UxMERv9ffjDqbCyqzbWL2k5pVhzSynKZC5ep48?input=http:%2F%2Fwww.sportingbet.com&#34;&gt;interfered&lt;/a&gt; with in other,
+neighbouring African countries as well.&lt;/p&gt;
+
+&lt;p&gt;While other measurements presented similar anomalies, we excluded them from our
+findings as false positives because (a) the sites in question presented high
+failure rates from control vantage points, and (b) our local partner was able to
+confirm the accessibility of the sites in question through a normal browser in
+Kenya.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt; appeared to be accessible throughout the duration of our
+testing, and we did not detect any systems (“middle boxes”) that could be
+responsible for censorship and/or surveillance. However, this does not
+necessarily mean that Kenyan ISPs are not using such systems, but rather that we
+were not able to highlight their presence through the tests run in the specific
+local networks (AS36866, AS15399, AS33771, AS36914) in Kenya.&lt;/p&gt;
+
+&lt;p&gt;The findings of this study are corroborated by our Kenyan partners who argue
+that they never came across a block page or similar forms of censorship in the
+country over the last five months. Last year however, a &lt;a href=&#34;http://www.isuhuruinkenya.co.ke/&#34;&gt;site&lt;/a&gt; mocking the
+President’s frequent trips abroad was taken down due to pressure from the
+government, according to &lt;a href=&#34;http://nairobinews.nation.co.ke/news/website-mocking-tourist-president-shut-down-after-pressure-from-above/&#34;&gt;critics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;acknowledgement-of-limitations&#34;&gt;Acknowledgement of Limitations&lt;/h1&gt;
+
+&lt;p&gt;While it’s positive that almost no signs of internet censorship were detected as
+part of this study, it’s important to highlight that these findings present
+various limitations.&lt;/p&gt;
+
+&lt;p&gt;First, this study was limited to four local vantage points in Kenya (AS36866,
+AS15399, AS33771, AS36914) and therefore does not include measurements from
+other networks, where censorship events (including power cuts as indirect forms
+of censorship) might have occurred. As such, the findings of this study are not
+necessarily representative for Kenya on a countrywide level.&lt;/p&gt;
+
+&lt;p&gt;Second, the testing conducted under this study was limited to a set of URLs and
+services. While a total of 1,357 different URLs were tested for censorship as
+part of this study, not all the URLs on the internet were tested, indicating the
+possibility that other sites and services not included in test lists might have
+been blocked.&lt;/p&gt;
+
+&lt;p&gt;Third, the testing period was limited to nearly five months, starting on 26th
+July 2016 and concluding on 14th December 2016. Therefore, censorship events
+that may have occurred in the same network before and/or after the testing
+period are not taken into account as part of this study.&lt;/p&gt;
+
+&lt;p&gt;Finally, the testing was limited to software tests that are designed to examine
+very specific types of censorship (as explained in the methodology section
+above). Other types of censorship that are not examined as part of &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI’s software tests&lt;/a&gt; are not analyzed as part of this study.&lt;/p&gt;
+
+&lt;h1 id=&#34;contribute-to-this-study&#34;&gt;Contribute to this study&lt;/h1&gt;
+
+&lt;p&gt;Even when a country appears to have no censorship, it’s important to monitor
+internet censorship nonetheless across time. Laws and policies change, and
+decisions around internet censorship can change along with them.&lt;/p&gt;
+
+&lt;p&gt;OONI’s software (called &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt;) allows users around the world to
+automatically test their networks every day for signs of internet censorship.
+When and if internet censorship occurs, network data demonstrating how it’s
+implemented will be collected, analyzed and &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;published&lt;/a&gt;. This can help increase
+transparency around internet censorship.&lt;/p&gt;
+
+&lt;p&gt;In light of the limitations outlined above, we encourage individuals in Kenya to
+contribute to this study through the following ways:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you’re a Linux or macOS user, consider running ooniprobe (especially if you
+can cover different vantage points!). Learn how to do so &lt;a href=&#34;https://ooni.torproject.org/install/ooniprobe/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you’re a
+Windows user or are interested in running ooniprobe from a separate device,
+consider running ooniprobe’s distribution for Raspberry Pis. Learn how to do so
+&lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you have insights on which URLs to test for censorship, consider
+contributing to the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;Kenyan test list&lt;/a&gt;. Find information on how to do so &lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Questions? Contact us at contact@openobservatory.org.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The State of Internet Censorship in Malaysia</title>
@@ -9132,138 +9296,6 @@ by sending up patches or pull requests. Read on how you can
 &lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/&#34;&gt;Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;On Digital Signatures and Key Verification&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OONI releases new Web Connectivity test for detecting online censorship</title>
-      <link>https://ooni.torproject.org/post/web-connectivity/</link>
-      <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/web-connectivity/</guid>
-      <description>
-
-&lt;p&gt;Today the Open Observatory of Network Interference (OONI) is excited to be
-releasing a brand new test, called
-&lt;em&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity&lt;/a&gt;&lt;/em&gt;,
-which is designed to detect three different types of censorship: &lt;em&gt;DNS
-tampering&lt;/em&gt;, &lt;em&gt;TCP/IP blocking&lt;/em&gt; and &lt;em&gt;HTTP blocking&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;advantages-of-running-web-connectivity&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
-
-&lt;p&gt;This test allows us to see which websites are blocked and how, more accurately
-than ever before!&lt;/p&gt;
-
-&lt;p&gt;Previously we relied on running separate (http_request, dns_consistency and
-tcp_connect) tests with the aim of identifying various forms of censorship. We
-then had to correlate measurements across different tests to identify whether
-and how websites were blocked. This process was not only tedious, but it also
-led to more false positives.&lt;/p&gt;
-
-&lt;p&gt;Now with Web Connectivity we can test for various aspects of censorship all
-within one test! This not only enables us to identify which content is being
-blocked, but it also helps us pinpoint the exact reason of blocking. This is
-particularly useful because it makes the process of analyzing why a website is
-not reachable easier, faster and more accurate.&lt;/p&gt;
-
-&lt;p&gt;The heuristics used by Web Connectivity are also a bit more advanced. Contrary
-to previous tests, Web Connectivity allows us to clearly distinguish between
-censorship and accessibility, in the sense that we are able to determine whether
-a website is actually blocked, or if it is just (temporarily) down. Furthermore,
-collected measurements are no longer compared over Tor, because the
-discrimination of exit nodes (by CloudFlare, for example) led to many false
-positives. We now compare collected measurements over a control server which is
-less likely to be discriminated.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-web-connectivity-works&#34;&gt;How Web Connectivity works&lt;/h2&gt;
-
-&lt;p&gt;This test examines whether websites are blocked by performing the steps below
-&lt;em&gt;both&lt;/em&gt; over a control server and over the network of the user. The collected
-results are then compared with the aim of identifying whether and how tested
-websites are tampered with. If the compared results do &lt;em&gt;not&lt;/em&gt; match, then there
-is a sign of censorship.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Resolver identification&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
-(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). Internet Service
-Providers (ISPs), amongst others, run DNS resolvers which map host names to IP
-addresses. In some circumstances though, ISPs map the requested host names to
-the wrong IP addresses, which is a form of tampering.&lt;/p&gt;
-
-&lt;p&gt;As a first step, the Web Connectivity test attempts to identify which DNS
-resolver is being used by the user. It does so by performing a DNS query to
-special domains (such as whoami.akamai.com) which will disclose the IP address
-of the resolver. This is an important step because it allows us to see if the
-user&amp;rsquo;s resolver is one that is unlikely to perform censorship (such as Google
-DNS), or that of a local ISP (which is more likely to perform censorship).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. DNS lookup&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Once the Web Connectivity test has identified the DNS resolver of the user, it
-then attempts to identify which addresses are mapped to the tested host names by
-the resolver. It does so by performing a DNS lookup, which asks the resolver to
-disclose which IP addresses are mapped to the tested host names, as well as
-which other host names are linked to the tested host names under DNS queries.&lt;/p&gt;
-
-&lt;p&gt;If the DNS responses (such as the IP addresses mapped to host names) do &lt;em&gt;not&lt;/em&gt;
-match when comparing those collected over the network of the user and over a
-control server, then there is a clear sign of DNS blocking.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. TCP connect&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The Web Connectivity test will then try to connect to the tested websites by
-attempting to establish a TCP session on port 80 (or port 443 for URLs that
-begin with HTTPS) for the list of IP addresses that were identified in the
-previous step (DNS lookup).&lt;/p&gt;
-
-&lt;p&gt;If a TCP session to connect to websites was &lt;em&gt;not&lt;/em&gt; established over the network
-of the user, then those websites are probably blocked.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. HTTP GET request&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;As the Web Connectivity test connects to tested websites (through the previous
-step), it sends requests through the HTTP protocol to the servers which are
-hosting those websites. A server normally responds to an HTTP GET request with
-the content of the webpage that is requested.&lt;/p&gt;
-
-&lt;p&gt;However, the requested websites are most likely blocked if the HTTP request over
-the user&amp;rsquo;s network failed, or the HTTP status codes don&amp;rsquo;t match, or all of the
-following apply:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The body length of compared websites (over the control server and the network
-of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The HTTP headers names do not match&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;how-to-run-web-connectivity&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve ever run OONI tests before, then you&amp;rsquo;re probably familiar with
-&lt;code&gt;oonideckgen&lt;/code&gt;: OONI&amp;rsquo;s software suite which includes multiple tests. Now
-Web Connectivity has been added to oonideckgen, replacing the previous
-http_request and dns_consistency tests (which are included in Web Connectivity
-anyway).&lt;/p&gt;
-
-&lt;p&gt;You can run Web Connectivity by either running &lt;code&gt;oonideckgen&lt;/code&gt; or by simply
-running the following command with a file containing a list of URLs to test
-(this can either be 1 URL per line or a CSV from the
-&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;citizenlab test-lists repository&lt;/a&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe blocking/web_connectivity -f ~/.ooni/resources/citizenlab-test-lists/global.csv&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;or by testing your URL of choice:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe blocking/web_connectivity --url http://torproject.org/&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Learn more about how to run OONI tests (and their associated
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/informed-consent/risks.md&#34;&gt;risks&lt;/a&gt;)
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#ooni-in-5-minutes&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Happy testing!&lt;/p&gt;
 </description>
     </item>
     

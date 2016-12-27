@@ -6,8 +6,172 @@
     <description>Recent content in Post-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Kenya: Censorship-free internet?</title>
+      <link>https://ooni.torproject.org/post/kenya-study/</link>
+      <pubDate>Tue, 27 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/kenya-study/</guid>
+      <description>
+
+&lt;p&gt;Over the last five months we ran &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI tests&lt;/a&gt; in Kenya almost every day to examine
+whether internet censorship events were occurring in the country. Hundreds of
+thousands of &lt;a href=&#34;https://explorer.ooni.torproject.org/country/KE&#34;&gt;network measurements&lt;/a&gt; were collected and analyzed. &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;1,357 URLs&lt;/a&gt; were
+tested for censorship, including both &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;international websites&lt;/a&gt; and &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;sites that are more relevant to Kenya&lt;/a&gt; (e.g. local news outlets). Yet, after five months of
+intensive testing from four local vantage points in Kenya, we found almost no
+signs of internet censorship in the country.&lt;/p&gt;
+
+&lt;h1 id=&#34;methodology&#34;&gt;Methodology&lt;/h1&gt;
+
+&lt;p&gt;As part of our study, we started off by updating the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;Citizen Lab’s Kenyan test list&lt;/a&gt; with our local partner, Strathmore University’s &lt;a href=&#34;http://cipit.org/&#34;&gt;Centre for Intellectual Property and Information Technology Law (CIPIT)&lt;/a&gt;. The aim of this was to ensure
+that we would be testing as many URLs that are relevant to Kenya as possible and
+which the government could potentially have an incentive to block. The types of
+URLs that were added to the Kenyan list fall under &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30 categories&lt;/a&gt;, ranging from
+news media, file-sharing and culture, to provocative or objectionable
+categories, like pornography, political criticism, and hate speech.&lt;/p&gt;
+
+&lt;p&gt;All of the URLs in both the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;Kenyan list&lt;/a&gt; and the “&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;global list&lt;/a&gt;” (containing
+internationally relevant websites) were tested for censorship through &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;OONI’s Web Connectivity test&lt;/a&gt;. This test is designed to examine whether access to websites
+is blocked through DNS tampering, TCP connection RST/IP blocking, or by a
+transparent HTTP proxy.&lt;/p&gt;
+
+&lt;p&gt;But our testing wasn’t limited to the blocking of websites. We also tested the
+reachability of the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor anonymity network&lt;/a&gt; through OONI’s relevant &lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;software test&lt;/a&gt;,
+and we ran other OONI tests (&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt; and &lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt;) in an attempt to examine whether systems (“middle boxes”) that
+could be responsible for censorship and/or surveillance were present in the
+tested network.&lt;/p&gt;
+
+&lt;p&gt;OONI software tests were run from four local vantage points (AS36866, AS15399,
+AS33771, AS36914) in Kenya. The testing period started on 26th July 2016 and
+concluded on 14th December 2016. Once the testing period ended, we analyzed the
+collected data with the aim of examining whether access to sites and services
+was blocked, and whether proxy technologies were present in the tested network.&lt;/p&gt;
+
+&lt;h1 id=&#34;findings&#34;&gt;Findings&lt;/h1&gt;
+
+&lt;p&gt;Upon analysis of the &lt;a href=&#34;https://explorer.ooni.torproject.org/country/KE&#34;&gt;network measurements&lt;/a&gt; collected from Kenya, we found almost
+no signs of internet censorship.&lt;/p&gt;
+
+&lt;p&gt;Out of all the &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;URLs&lt;/a&gt; that we tested, the only site that was &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161107T075602Z_AS36914_TjQtUZ2q8AOROLbiBqVmR9IlueW8SBSg5Ng69aSWShud2mQeJb?input=http:%2F%2Fwww.sportingbet.com&#34;&gt;likely blocked&lt;/a&gt; in
+Kenya according to our testing is &lt;strong&gt;&lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt;&lt;/strong&gt;. The table below
+illustrates that most of our attempts to establish a TCP connection to this site
+failed, indicating the possibility of TCP/IP blocking.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;URL&lt;/th&gt;
+&lt;th&gt;FALSE&lt;/th&gt;
+&lt;th&gt;cloudflare&lt;/th&gt;
+&lt;th&gt;dns&lt;/th&gt;
+&lt;th&gt;http-diff&lt;/th&gt;
+&lt;th&gt;http-failure&lt;/th&gt;
+&lt;th&gt;tcp_ip&lt;/th&gt;
+&lt;th&gt;anomalies&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;46&lt;/td&gt;
+&lt;td&gt;48&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The inaccessibility of &lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt; was also confirmed by our
+local partner in Kenya. Given though that this site was only one of hundreds of
+gambling sites that we tested, it remains unclear why there would be motivation
+to block access to this particular site, and not others. It’s interesting to see
+though that access to the same site appears to be &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20161221T000038Z_AS29032_6B7aAG70pQs8UxMERv9ffjDqbCyqzbWL2k5pVhzSynKZC5ep48?input=http:%2F%2Fwww.sportingbet.com&#34;&gt;interfered&lt;/a&gt; with in other,
+neighbouring African countries as well.&lt;/p&gt;
+
+&lt;p&gt;While other measurements presented similar anomalies, we excluded them from our
+findings as false positives because (a) the sites in question presented high
+failure rates from control vantage points, and (b) our local partner was able to
+confirm the accessibility of the sites in question through a normal browser in
+Kenya.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt; appeared to be accessible throughout the duration of our
+testing, and we did not detect any systems (“middle boxes”) that could be
+responsible for censorship and/or surveillance. However, this does not
+necessarily mean that Kenyan ISPs are not using such systems, but rather that we
+were not able to highlight their presence through the tests run in the specific
+local networks (AS36866, AS15399, AS33771, AS36914) in Kenya.&lt;/p&gt;
+
+&lt;p&gt;The findings of this study are corroborated by our Kenyan partners who argue
+that they never came across a block page or similar forms of censorship in the
+country over the last five months. Last year however, a &lt;a href=&#34;http://www.isuhuruinkenya.co.ke/&#34;&gt;site&lt;/a&gt; mocking the
+President’s frequent trips abroad was taken down due to pressure from the
+government, according to &lt;a href=&#34;http://nairobinews.nation.co.ke/news/website-mocking-tourist-president-shut-down-after-pressure-from-above/&#34;&gt;critics&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;acknowledgement-of-limitations&#34;&gt;Acknowledgement of Limitations&lt;/h1&gt;
+
+&lt;p&gt;While it’s positive that almost no signs of internet censorship were detected as
+part of this study, it’s important to highlight that these findings present
+various limitations.&lt;/p&gt;
+
+&lt;p&gt;First, this study was limited to four local vantage points in Kenya (AS36866,
+AS15399, AS33771, AS36914) and therefore does not include measurements from
+other networks, where censorship events (including power cuts as indirect forms
+of censorship) might have occurred. As such, the findings of this study are not
+necessarily representative for Kenya on a countrywide level.&lt;/p&gt;
+
+&lt;p&gt;Second, the testing conducted under this study was limited to a set of URLs and
+services. While a total of 1,357 different URLs were tested for censorship as
+part of this study, not all the URLs on the internet were tested, indicating the
+possibility that other sites and services not included in test lists might have
+been blocked.&lt;/p&gt;
+
+&lt;p&gt;Third, the testing period was limited to nearly five months, starting on 26th
+July 2016 and concluding on 14th December 2016. Therefore, censorship events
+that may have occurred in the same network before and/or after the testing
+period are not taken into account as part of this study.&lt;/p&gt;
+
+&lt;p&gt;Finally, the testing was limited to software tests that are designed to examine
+very specific types of censorship (as explained in the methodology section
+above). Other types of censorship that are not examined as part of &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI’s software tests&lt;/a&gt; are not analyzed as part of this study.&lt;/p&gt;
+
+&lt;h1 id=&#34;contribute-to-this-study&#34;&gt;Contribute to this study&lt;/h1&gt;
+
+&lt;p&gt;Even when a country appears to have no censorship, it’s important to monitor
+internet censorship nonetheless across time. Laws and policies change, and
+decisions around internet censorship can change along with them.&lt;/p&gt;
+
+&lt;p&gt;OONI’s software (called &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt;) allows users around the world to
+automatically test their networks every day for signs of internet censorship.
+When and if internet censorship occurs, network data demonstrating how it’s
+implemented will be collected, analyzed and &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;published&lt;/a&gt;. This can help increase
+transparency around internet censorship.&lt;/p&gt;
+
+&lt;p&gt;In light of the limitations outlined above, we encourage individuals in Kenya to
+contribute to this study through the following ways:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;If you’re a Linux or macOS user, consider running ooniprobe (especially if you
+can cover different vantage points!). Learn how to do so &lt;a href=&#34;https://ooni.torproject.org/install/ooniprobe/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you’re a
+Windows user or are interested in running ooniprobe from a separate device,
+consider running ooniprobe’s distribution for Raspberry Pis. Learn how to do so
+&lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you have insights on which URLs to test for censorship, consider
+contributing to the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/ke.csv&#34;&gt;Kenyan test list&lt;/a&gt;. Find information on how to do so &lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Questions? Contact us at contact@openobservatory.org.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The State of Internet Censorship in Malaysia</title>
@@ -8658,151 +8822,6 @@ running the following command with a file containing a list of URLs to test
 &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#ooni-in-5-minutes&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Happy testing!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How Uganda blocked social media, again</title>
-      <link>https://ooni.torproject.org/post/uganda-social-media-blocked/</link>
-      <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/uganda-social-media-blocked/</guid>
-      <description>
-
-&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Uganda&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Orange (AS36991), SMILE (AS37122)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; IP blocking&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;OONI tests:&lt;/strong&gt; HTTP Requests&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Measurement period:&lt;/strong&gt; 2016-05-12&lt;/p&gt;
-
-&lt;p&gt;Last Wednesday, the Ugandan Communications Commission (UCC)
-&lt;a href=&#34;https://freedomhouse.org/article/uganda-social-media-ordered-blocked-museveni-inauguration&#34;&gt;ordered&lt;/a&gt;
-ISPs to block access to social media leading up to the (fifth) inauguration of
-President Yoweri Museveni, who has governed the country since 1986. Authorities
-argued that the blocking was ordered for “security purposes”, but the move
-directly harms political opposition, which has &lt;a href=&#34;https://advox.globalvoices.org/2016/05/11/social-media-blocked-in-uganda-ahead-of-president-musevenis-inauguration/&#34;&gt;relied
-on&lt;/a&gt;
-social media to organize a “defiance campaign” of protests.&lt;/p&gt;
-
-&lt;p&gt;This is the &lt;em&gt;second&lt;/em&gt; time that Uganda has decided to pull the plug on social
-media this year.&lt;/p&gt;
-
-&lt;p&gt;Three months ago, Ugandan ISPs were
-&lt;a href=&#34;http://www.bbc.com/news/world-africa-35601220&#34;&gt;ordered&lt;/a&gt; to block access to
-social media during the general elections. Following these reports, &lt;a href=&#34;https://github.com/TheTorProject/ooni-spec&#34;&gt;OONI
-tests&lt;/a&gt; were run in the country and
-results showed that Facebook and Twitter appeared to be blocked in specific
-networks. In similar fashion, OONI tests were run again in Uganda last
-Thursday, in an attempt to not only provide evidence of the blocking, but to
-also determine how censorship was implemented.&lt;/p&gt;
-
-&lt;p&gt;Today we are releasing &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;data&lt;/a&gt;
-which indicates that two ISPs in Uganda &amp;ndash; Smile Telecom (Uganda) and Orange &amp;ndash;
-carried out &lt;em&gt;IP blocking&lt;/em&gt; to censor access to major social media services.
-Interestingly, OONI&amp;rsquo;s findings illustrate that social media is not consistently
-blocked across networks, and that certain cases of censorship can be easily
-circumvented.&lt;/p&gt;
-
-&lt;h2 id=&#34;findings&#34;&gt;Findings&lt;/h2&gt;
-
-&lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/docs/source/tests/http_requests.rst&#34;&gt;HTTP request
-test&lt;/a&gt;,
-which is designed to examine whether websites are blocked or not based on a
-comparison of HTTP requests over &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; and over
-the network of the user, was run from two different vantage points in Uganda
-last Thursday: Smile Telecom (Uganda) and Orange. As, in some cases, ISPs only
-block the &lt;em&gt;unencrypted HTTP&lt;/em&gt; endpoints of websites, tests were also run against
-the &lt;em&gt;encrypted HTTPS&lt;/em&gt; endpoints of social media services to examine whether
-those were accessible.&lt;/p&gt;
-
-&lt;p&gt;The table below illustrates a comparison of the censorship implemented by Smile
-Telecom (Uganda) and Orange, based on &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
-measurements&lt;/a&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/uganda-social-media/table.png&#34; alt=&#34;Blocked by ISP&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It&amp;rsquo;s interesting to see that while Smile Telecom (Uganda) blocked access to
-&lt;em&gt;both&lt;/em&gt; the HTTP and HTTPS endpoints of Facebook and Twitter, Orange appears to
-have only blocked the unencrypted HTTP endpoints of those sites, enabling its
-users to access them via HTTPS. Furthermore, Smile Telecom (Uganda) appears to
-have blocked the HTTP endpoints of both WhatsApp and Viber, neither of which
-appear to have been blocked by Orange.&lt;/p&gt;
-
-&lt;p&gt;Possibly, this difference in censorship indicates that ISPs were not ordered to
-block specific services, but were only given a vague order to “block all social
-media”, leaving each provider the flexibility to choose which services to block
-and how to block them. The ISPs don&amp;rsquo;t appear to be too pleased with the UCC&amp;rsquo;s
-order to block access to social media.  This is evident through the
-&lt;a href=&#34;https://twitter.com/mtnug/status/730684160407375872&#34;&gt;tweet&lt;/a&gt; of the network
-operator MTN Uganda:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;“Dear Customer, per UCC directive all social media is temporarily blocked,
-our other services are available. We regret any inconvenience caused.”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;circumventing-censorship&#34;&gt;Circumventing censorship&lt;/h2&gt;
-
-&lt;p&gt;Social media in Uganda was censored both times this year based on &lt;em&gt;IP
-blocking&lt;/em&gt;, according to &lt;a href=&#34;https://explorer.ooni.torproject.org/country/UG&#34;&gt;OONI&amp;rsquo;s
-measurements&lt;/a&gt;. This form of
-censorship can be circumvented by accessing a blocked website over &lt;em&gt;HTTPS&lt;/em&gt;,
-rather than HTTP (if the HTTPS endpoint of a site is &lt;em&gt;not&lt;/em&gt; blocked).  If that
-doesn&amp;rsquo;t work, users can bypass censorship through the use of
-&lt;strong&gt;&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;&lt;/strong&gt;, which is designed to make its users&amp;rsquo;
-traffic appear to come from a different part of the world.&lt;/p&gt;
-
-&lt;p&gt;As for circumventing the censorship of mobile applications, like WhatsApp or
-Viber, Android users can try using the &lt;strong&gt;&lt;a href=&#34;https://www.torproject.org/docs/android.html.en&#34;&gt;VPN mode of
-Orbot&lt;/a&gt;&lt;/strong&gt; which enables all
-apps on their device to run through the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor
-network&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;ooni-explorer-report-links&#34;&gt;OONI Explorer report links&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Orange:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Twitter (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Ftwitter.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Ftwitter.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTPS Twitter (Not blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Ftwitter.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Ftwitter.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Facebook (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.facebook.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.facebook.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTPS Facebook (Not blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Fwww.facebook.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=https:%2F%2Fwww.facebook.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Whatsapp (Not blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.whatsapp.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.whatsapp.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Viber (Not blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.viber.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/BOp0pU9RHsh7qV0U1LY5wlXlLvGQAqPvyehbCppPcF6rYqHbsCMfQWL9rUrfBhCt?input=http:%2F%2Fwww.viber.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Smile Telecom (Uganda):&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTPS Twitter (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Ftwitter.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Ftwitter.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Twitter (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Ftwitter.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Ftwitter.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTPS Facebook (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.facebook.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.facebook.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Facebook (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Fwww.facebook.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=https:%2F%2Fwww.facebook.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Whatsapp (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.whatsapp.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.whatsapp.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;HTTP Viber (Blocked)
-&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.viber.com&#34;&gt;https://explorer.ooni.torproject.org/measurement/ppXcO0JBDky6if2GtBi7zrYUoTG4gnVdwiUvEDrOkcsUbWJfj2KCvaBciBEDFzkI?input=http:%2F%2Fwww.viber.com&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
