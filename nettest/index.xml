@@ -107,35 +107,6 @@ caching purposes.&lt;/p&gt;
     </item>
     
     <item>
-      <title></title>
-      <link>https://ooni.torproject.org/nettest/ndt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/ndt/</guid>
-      <description>
-
-&lt;h1 id=&#34;network-diagnostic-test-ndt&#34;&gt;Network Diagnostic Test (NDT)&lt;/h1&gt;
-
-&lt;p&gt;NDT (Network Diagnostic Test) is designed to measure the &lt;em&gt;speed&lt;/em&gt; and
-&lt;em&gt;performance&lt;/em&gt; of tested networks.&lt;/p&gt;
-
-&lt;p&gt;This network performance test was originally developed by The Internet2 Project
-and is currently maintained by &lt;a href=&#34;http://www.measurementlab.net/tools/ndt/&#34;&gt;Measurement Lab (M-Lab)&lt;/a&gt;. NDT is designed to measure
-the speed and performance of networks by connecting to M-Lab servers close to the
-user, and by subsequently uploading and downloading random data. In doing so,
-NDT collects TCP/IP low level information that is useful to examining and
-characterizing the quality of the network path between the user and the mLab
-server.&lt;/p&gt;
-
-&lt;p&gt;OONI utilizes an &lt;em&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/tree/master/src/libmeasurement_kit/ndt&#34;&gt;implementation of NDT&lt;/a&gt;&lt;/em&gt; for &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt;, which is a network
-measurement library for running both desktop and mobile network measurement
-tests. This NDT implementation, for example, is included as a test that can be
-run via OONI&amp;rsquo;s mobile app. Running NDT can be useful as the type of information that it
-collects can potentially be used to examine cases of throttling.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>DNS consistency</title>
       <link>https://ooni.torproject.org/nettest/dns-consistency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -349,6 +320,39 @@ cloud-fronted domains, such as google.com, through the following way:&lt;/p&gt;
 HTTPS and examines whether it can connect to them or not. As such, this test
 enables users to check whether Meek enables the circumvention of censorship in
 an automated way.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NDT Speed Test</title>
+      <link>https://ooni.torproject.org/nettest/ndt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/ndt/</guid>
+      <description>
+
+&lt;h1 id=&#34;ndt-speed-test&#34;&gt;NDT Speed Test&lt;/h1&gt;
+
+&lt;p&gt;NDT (Network Diagnostic Test) is designed to measure the &lt;em&gt;speed&lt;/em&gt; and
+&lt;em&gt;performance&lt;/em&gt; of tested networks.&lt;/p&gt;
+
+&lt;p&gt;This network performance test was originally developed by The Internet2 Project
+and is currently maintained by &lt;a href=&#34;http://www.measurementlab.net/tools/ndt/&#34;&gt;Measurement Lab
+(M-Lab)&lt;/a&gt;. NDT is designed to measure
+the speed and performance of networks by connecting to M-Lab servers close to
+the user, and by subsequently uploading and downloading random data. In doing
+so, NDT collects TCP/IP low level information that is useful to examining and
+characterizing the quality of the network path between the user and the mLab
+server.&lt;/p&gt;
+
+&lt;p&gt;OONI utilizes an &lt;em&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/tree/master/src/libmeasurement_kit/ndt&#34;&gt;implementation of
+NDT&lt;/a&gt;&lt;/em&gt;
+for &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt;,
+which is a network measurement library for running both desktop and mobile
+network measurement tests. This NDT implementation, for example, is included as
+a test that can be run via OONI&amp;rsquo;s mobile app. Running NDT can be useful as the
+type of information that it collects can potentially be used to examine cases
+of throttling.&lt;/p&gt;
 </description>
     </item>
     

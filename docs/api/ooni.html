@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.1.0 documentation</title>
+  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.2.0.rc1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.1.0 documentation" href="../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.0.rc1 documentation" href="../index.html"/>
         <link rel="next" title="Test Templates" href="ooni.templates.html"/>
         <link rel="prev" title="ooni.nettests third_party Package" href="../nettests/ooni.nettests.third_party.html"/> 
 
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                2.1.0
+                2.2.0.rc1
               </div>
             
           
@@ -139,7 +139,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/api/ooni.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/api/ooni.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,6 +157,21 @@
 <dt id="ooni.nettest.NetTest">
 <em class="property">class </em><code class="descclassname">ooni.nettest.</code><code class="descname">NetTest</code><span class="sig-paren">(</span><em>test_cases</em>, <em>test_details</em>, <em>report</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="ooni.nettest.NetTest.completionEta">
+<code class="descname">completionEta</code><a class="headerlink" href="#ooni.nettest.NetTest.completionEta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettest.NetTest.completionPercentage">
+<code class="descname">completionPercentage</code><a class="headerlink" href="#ooni.nettest.NetTest.completionPercentage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettest.NetTest.completionRate">
+<code class="descname">completionRate</code><a class="headerlink" href="#ooni.nettest.NetTest.completionRate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="ooni.nettest.NetTest.director">
 <code class="descname">director</code><em class="property"> = None</em><a class="headerlink" href="#ooni.nettest.NetTest.director" title="Permalink to this definition">¶</a></dt>
@@ -1084,7 +1099,7 @@ XXX fully debug this problem</p>
 
 <dl class="attribute">
 <dt id="ooni.reporter.OSafeRepresenter.yaml_representers">
-<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1246,7 +1261,7 @@ summary and the raw packet.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.1.0',
+            VERSION:'2.2.0.rc1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

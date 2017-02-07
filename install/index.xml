@@ -769,7 +769,8 @@ sudo apt-get update
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure the torproject repository by typing the following in your terminal:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://archive.ubuntu.com/ubuntu yakkety universe&#39; | sudo tee /etc/apt/sources.list.d/universe.list
+gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 echo &#39;deb http://deb.torproject.org/torproject.org yakkety main&#39; | sudo tee /etc/apt/sources.list.d/ooniprobe.list
 sudo apt-get update
@@ -790,7 +791,8 @@ sudo apt-get update
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure the torproject repository by typing the following in your terminal:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://archive.ubuntu.com/ubuntu xenial universe&#39; | sudo tee /etc/apt/sources.list.d/universe.list
+gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 echo &#39;deb http://deb.torproject.org/torproject.org xenial main&#39; | sudo tee /etc/apt/sources.list.d/ooniprobe.list
 sudo apt-get update
@@ -811,7 +813,8 @@ sudo apt-get update
 
 &lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Configure the torproject repository by typing the following in your terminal:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
+&lt;pre&gt;&lt;code&gt;echo &#39;deb http://archive.ubuntu.com/ubuntu trusty universe&#39; | sudo tee /etc/apt/sources.list.d/universe.list
+gpg --keyserver keys.gnupg.net --recv A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
 gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 echo &#39;deb http://deb.torproject.org/torproject.org trusty main&#39; | sudo tee /etc/apt/sources.list.d/ooniprobe.list
 sudo apt-get update

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.1.0 documentation</title>
+  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.2.0.rc1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.1.0 documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.0.rc1 documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                2.1.0
+                2.2.0.rc1
               </div>
             
           
@@ -141,8 +141,9 @@
   <h1>Source code for ooni.nettest</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span>
 <span class="kn">from</span> <span class="nn">twisted.python.filepath</span> <span class="k">import</span> <span class="n">FilePath</span>
@@ -285,6 +286,10 @@
             <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
             <span class="n">test_name</span>
         <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">opt_help</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="nb">map</span><span class="p">(</span><span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">opt_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="sd">&quot;&quot;&quot;</span>
@@ -548,8 +553,8 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">_accumulateInputFiles</span><span class="p">(</span><span class="n">test_class</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_checkTestClassOptions</span><span class="p">(</span><span class="n">test_class</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">usage_options</span> <span class="o">!=</span> <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="p">:</span>
-                    <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">IncoherentOptions</span><span class="p">(</span><span class="n">usage_options</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
-                                              <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">IncoherentOptions</span><span class="p">(</span><span class="n">usage_options</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
+                                              <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
                 <span class="n">test_options_exc</span> <span class="o">=</span> <span class="n">exc</span>
 
@@ -644,6 +649,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span> <span class="o">=</span> <span class="n">test_details</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span> <span class="o">=</span> <span class="n">test_cases</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">_startTime</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span> <span class="o">=</span> <span class="mi">0</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="c1"># This will fire when all the measurements have been completed and</span>
@@ -674,6 +683,27 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span><span class="p">[</span><span class="s2">&quot;report_id&quot;</span><span class="p">]:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Report ID: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span><span class="p">[</span><span class="s2">&quot;report_id&quot;</span><span class="p">])</span></div>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">completionRate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_startTime</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">completionPercentage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+        <span class="c1"># Never return 100%</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.99</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">completionEta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">remaining_inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span>
+        <span class="c1"># We adjust for negative values</span>
+        <span class="k">if</span> <span class="n">remaining_inputs</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">completionRate</span> <span class="o">*</span> <span class="n">remaining_inputs</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.5</span> <span class="c1"># fudge factor</span>
+
 <div class="viewcode-block" id="NetTest.doneReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.doneReport">[docs]</a>    <span class="k">def</span> <span class="nf">doneReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">report_results</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will get called every time a report is done and therefore a</span>
@@ -682,6 +712,14 @@
 <span class="sd">        The state for the NetTest is informed of the fact that another task has</span>
 <span class="sd">        reached the done state.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Status&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> completed </span><span class="si">%d</span><span class="s2"> remaining&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">,</span>
+                                               <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%0.1f%%</span><span class="s2"> (ETA: </span><span class="si">%d</span><span class="s2">s)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">completionPercentage</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">completionEta</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">taskDone</span><span class="p">()</span>
 
         <span class="k">return</span> <span class="n">report_results</span></div>
@@ -715,11 +753,17 @@
 
     <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
 <div class="viewcode-block" id="NetTest.initialize"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.initialize">[docs]</a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_cases</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
             <span class="c1"># Initialize Input Processor</span>
+            <span class="n">test_instance</span> <span class="o">=</span> <span class="n">test_class</span><span class="p">()</span>
             <span class="n">test_class</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">defer</span><span class="o">.</span><span class="n">maybeDeferred</span><span class="p">(</span>
-                <span class="n">test_class</span><span class="p">()</span><span class="o">.</span><span class="n">getInputProcessor</span>
+                <span class="n">test_instance</span><span class="o">.</span><span class="n">getInputProcessor</span>
             <span class="p">)</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">test_instance</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">+=</span> <span class="n">test_instance</span><span class="o">.</span><span class="n">_totalInputs</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">+=</span> <span class="mi">1</span>
 
             <span class="c1"># Run the setupClass method</span>
             <span class="k">yield</span> <span class="n">defer</span><span class="o">.</span><span class="n">maybeDeferred</span><span class="p">(</span>
@@ -734,6 +778,7 @@
 <span class="sd">        FIXME: If this generator throws exception TaskManager scheduler is</span>
 <span class="sd">        irreversibly damaged.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_startTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
         <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_methods</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
             <span class="c1"># load a singular input processor for all instances</span>
@@ -871,8 +916,10 @@
 
     <span class="n">localOptions</span> <span class="o">=</span> <span class="p">{}</span>
 
+    <span class="n">_totalInputs</span> <span class="o">=</span> <span class="kc">None</span>
+
     <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="NetTestCase.setUpClass"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestCase.setUpClass">[docs]</a>    <span class="k">def</span> <span class="nf">setUpClass</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+<div class="viewcode-block" id="NetTestCase.setUpClass"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestCase.setUpClass">[docs]</a>    <span class="k">def</span> <span class="nf">setUpClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        You can override this hook with logic that should be run once before</span>
 <span class="sd">        any test method in the NetTestCase is run.</span>
@@ -994,8 +1041,15 @@
 <span class="sd">            inputProcessor.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputFileSpecified</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">inputFilename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">inputFile</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputFilename</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputFilename</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span>
@@ -1003,7 +1057,7 @@
         <span class="k">return</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span></div>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">%s</span><span class="s2"> inputs=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">%s</span><span class="s2"> inputs=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="nettest_to_path"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.nettest_to_path">[docs]</a><span class="k">def</span> <span class="nf">nettest_to_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">allow_arbitrary_paths</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -1077,7 +1131,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.1.0',
+            VERSION:'2.2.0.rc1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

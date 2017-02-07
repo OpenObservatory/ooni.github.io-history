@@ -141,6 +141,14 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/about/inform-users-long/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/about/inform-users-short/</loc>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/about/risks/</loc>
   </url>
   
@@ -154,10 +162,6 @@
   
   <url>
     <loc>https://ooni.torproject.org/get-involved/contribute-test-lists/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/nettest/ndt/</loc>
   </url>
   
   <url>
@@ -182,6 +186,10 @@
   
   <url>
     <loc>https://ooni.torproject.org/nettest/meek-fronted-requests/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ooni.torproject.org/nettest/ndt/</loc>
   </url>
   
   <url>

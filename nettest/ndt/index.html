@@ -7,7 +7,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width"/>
   
-  <title>OONI - </title>
+  <title>OONI - NDT Speed Test</title>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
     <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
@@ -68,24 +68,28 @@
       <div class="col-2">
         
 
-<h1 id="network-diagnostic-test-ndt">Network Diagnostic Test (NDT)</h1>
+<h1 id="ndt-speed-test">NDT Speed Test</h1>
 
 <p>NDT (Network Diagnostic Test) is designed to measure the <em>speed</em> and
 <em>performance</em> of tested networks.</p>
 
 <p>This network performance test was originally developed by The Internet2 Project
-and is currently maintained by <a href="http://www.measurementlab.net/tools/ndt/">Measurement Lab (M-Lab)</a>. NDT is designed to measure
-the speed and performance of networks by connecting to M-Lab servers close to the
-user, and by subsequently uploading and downloading random data. In doing so,
-NDT collects TCP/IP low level information that is useful to examining and
+and is currently maintained by <a href="http://www.measurementlab.net/tools/ndt/">Measurement Lab
+(M-Lab)</a>. NDT is designed to measure
+the speed and performance of networks by connecting to M-Lab servers close to
+the user, and by subsequently uploading and downloading random data. In doing
+so, NDT collects TCP/IP low level information that is useful to examining and
 characterizing the quality of the network path between the user and the mLab
 server.</p>
 
-<p>OONI utilizes an <em><a href="https://github.com/measurement-kit/measurement-kit/tree/master/src/libmeasurement_kit/ndt">implementation of NDT</a></em> for <a href="https://github.com/measurement-kit/measurement-kit">measurement-kit</a>, which is a network
-measurement library for running both desktop and mobile network measurement
-tests. This NDT implementation, for example, is included as a test that can be
-run via OONI&rsquo;s mobile app. Running NDT can be useful as the type of information that it
-collects can potentially be used to examine cases of throttling.</p>
+<p>OONI utilizes an <em><a href="https://github.com/measurement-kit/measurement-kit/tree/master/src/libmeasurement_kit/ndt">implementation of
+NDT</a></em>
+for <a href="https://github.com/measurement-kit/measurement-kit">measurement-kit</a>,
+which is a network measurement library for running both desktop and mobile
+network measurement tests. This NDT implementation, for example, is included as
+a test that can be run via OONI&rsquo;s mobile app. Running NDT can be useful as the
+type of information that it collects can potentially be used to examine cases
+of throttling.</p>
 
       </div>
     </div>

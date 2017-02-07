@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.settings &mdash; OONI: Open Observatory of Network Interference 2.1.0 documentation</title>
+  <title>ooni.settings &mdash; OONI: Open Observatory of Network Interference 2.2.0.rc1 documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.1.0 documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.0.rc1 documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                2.1.0
+                2.2.0.rc1
               </div>
             
           
@@ -226,6 +226,9 @@
 <span class="s2">tor:</span>
 <span class="s2">    #socks_port: 8801</span>
 <span class="s2">    #control_port: 8802</span>
+<span class="s2">    # Alternatively set control_port to the unix domain socket. Useful for Debian based systems</span>
+<span class="s2">    #control_port: unix:/var/run/tor/control</span>
+<span class="s2">    #</span>
 <span class="s2">    # Specify the absolute path to the Tor bridges to use for testing</span>
 <span class="s2">    #bridges: bridges.list</span>
 <span class="s2">    # Specify path of the tor datadirectory.</span>
@@ -661,13 +664,23 @@
                     <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:socks_port&#39;</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">control_port_ep</span> <span class="o">=</span> <span class="n">TCP4ClientEndpoint</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span>
-                                                     <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-                                                     <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="p">)</span>
-                <span class="k">try</span><span class="p">:</span>
-                    <span class="k">yield</span> <span class="n">connectProtocol</span><span class="p">(</span><span class="n">control_port_ep</span><span class="p">,</span> <span class="n">ConnectAndCloseProtocol</span><span class="p">())</span>
-                <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-                    <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                    <span class="n">control_port_ep</span> <span class="o">=</span> <span class="n">TCP4ClientEndpoint</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span>
+                                                         <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+                                                         <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="p">)</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="k">yield</span> <span class="n">connectProtocol</span><span class="p">(</span><span class="n">control_port_ep</span><span class="p">,</span> <span class="n">ConnectAndCloseProtocol</span><span class="p">())</span>
+                    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                        <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">conf_unix_socket_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="n">conf_unix_socket_path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;unix:&quot;</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">conf_unix_socket_path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;unix:&quot;</span><span class="p">)):</span>
+                            <span class="n">unix_socket_path</span> <span class="o">=</span> <span class="n">conf_unix_socket_path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;unix:&quot;</span><span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">log_incoherences</span><span class="p">(</span><span class="n">incoherent</span><span class="p">)</span></div></div>
 
@@ -705,7 +718,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.1.0',
+            VERSION:'2.2.0.rc1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
