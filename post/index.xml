@@ -6,8 +6,103 @@
     <description>Recent content in Post-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>New ooniprobe Mobile App: Measure Internet Censorship &amp; Performance</title>
+      <link>https://ooni.torproject.org/post/ooni-mobile-app/</link>
+      <pubDate>Thu, 09 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/ooni-mobile-app/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-mobile-app/ooni-mobile-app.jpg&#34; alt=&#34;OONI mobile app&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Today the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; project is thrilled to
+announce the release of a new mobile app (“&lt;strong&gt;ooniprobe - Measure Internet
+Censorship &amp;amp; Performance&lt;/strong&gt;”) that can now be installed on &lt;strong&gt;Android&lt;/strong&gt; and &lt;strong&gt;iOS&lt;/strong&gt; for
+testing Internet censorship and network performance.&lt;/p&gt;
+
+&lt;p&gt;By running the tests included in OONI’s mobile app, you can monitor:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Blocking of websites;&lt;/li&gt;
+&lt;li&gt;Presence of systems that could be responsible for censorship or surveillance;&lt;/li&gt;
+&lt;li&gt;Speed and performance of your network.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The results of your tests will be
+&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;published&lt;/a&gt;, increasing
+transparency of internet censorship and network interference around the world.&lt;/p&gt;
+
+&lt;h1 id=&#34;collecting-evidence-of-internet-censorship&#34;&gt;Collecting evidence of internet censorship&lt;/h1&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity test&lt;/a&gt; is designed to examine whether websites are blocked
+and if so, how. This test, in particular, attempts to determine whether access
+to sites is blocked through DNS tampering, TCP/IP blocking, or by a
+transparent HTTP proxy. By knowing how access to sites is interfered with,
+you can more easily evaluate how to circumvent that specific type of
+censorship. As OONI is committed to transparency through the &lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;publication of
+all network measurement data&lt;/a&gt;, you can use it as evidence of any censorship
+events that you come across.&lt;/p&gt;
+
+&lt;h1 id=&#34;detecting-systems-responsible-for-censorship-and-surveillance&#34;&gt;Detecting systems responsible for censorship and surveillance&lt;/h1&gt;
+
+&lt;p&gt;Various types of proxy technologies are used in networks for implementing
+censorship, surveillance, and traffic manipulation. OONI&amp;rsquo;s &lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line test&lt;/a&gt; is designed to uncover the presence of such systems within tested
+networks. However, it&amp;rsquo;s important to point out that not all systems that you
+might find are necessarily responsible for censorship and/or surveillance! Many
+proxy technologies, for example, are used in networks for caching purposes.&lt;/p&gt;
+
+&lt;h1 id=&#34;measuring-the-speed-and-performance-of-your-network&#34;&gt;Measuring the speed and performance of your network&lt;/h1&gt;
+
+&lt;p&gt;Sometimes the network that we are using doesn&amp;rsquo;t work as well as we&amp;rsquo;d like it to.
+OONI&amp;rsquo;s implementation of the &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;Network Diagnostic Test (NDT)&lt;/a&gt; attempts to measure
+the speed of your network by connecting to &lt;a href=&#34;http://www.measurementlab.net/&#34;&gt;M-Lab&lt;/a&gt; servers near you and by
+subsequently uploading and downloading random data. In doing so, NDT collects
+low level TCP/IP information that can help characterize the speed and
+performance of your network. Such information can also be useful in examining
+cases of throttling.&lt;/p&gt;
+
+&lt;h1 id=&#34;open-data&#34;&gt;Open data&lt;/h1&gt;
+
+&lt;p&gt;OONI publishes all network measurement data that it collects and processes
+because open data allows third parties to conduct independent studies, to verify
+OONI findings and/or to answer other research questions. Such data also helps
+increase transparency around internet censorship and various forms of network
+interference. All data is published on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once you have run each test, you should be able to view the results of your
+tests directly in the app, as illustrated below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-mobile-app/app-results.jpg&#34; alt=&#34;Test results&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;free-software&#34;&gt;Free software&lt;/h1&gt;
+
+&lt;p&gt;All OONI tests, as well as its NDT implementation, are based on free and open
+source software (the &lt;a href=&#34;https://measurement-kit.github.io&#34;&gt;network measurement library
+MeasurementKit&lt;/a&gt;). You can find the source
+code through the following links:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooniprobe-ios&#34;&gt;https://github.com/TheTorProject/ooniprobe-ios&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooniprobe-android&#34;&gt;https://github.com/TheTorProject/ooniprobe-android&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;https://github.com/measurement-kit/measurement-kit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;next-steps&#34;&gt;Next steps&lt;/h1&gt;
+
+&lt;p&gt;More tests will be integrated into OONI’s mobile app within the next year,
+including - but not limited to - our new
+&lt;a href=&#34;https://ooni.torproject.org/nettest/whatsapp/&#34;&gt;WhatsApp&lt;/a&gt; and &lt;a href=&#34;https://ooni.torproject.org/nettest/facebook-messenger/&#34;&gt;Facebook Messenger tests&lt;/a&gt;. In
+the meanwhile, learn about &lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;potential risks&lt;/a&gt; associated to running
+ooniprobe. If you feel comfortable with them, install OONI’s mobile app and test
+every network you connect to!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Kenya: Censorship-free internet?</title>
@@ -8690,138 +8785,6 @@ Strathmore University.&lt;/p&gt;
 &lt;p&gt;The situation in Turkey is a bit special, because diametrically opposed to the practice of Internet blocking is the United Nations Human Rights Council&amp;rsquo;s &lt;a href=&#34;http://www.article19.org/data/files/Internet_Statement_Adopted.pdf&#34;&gt;resolution on the promotion, protection and enjoyment of human rights on the Internet&lt;/a&gt;, which condemns countries that intentionally disrupt citizens&amp;rsquo; Internet access. Turkey was one of the six countries that took the initiative on the resolution.&lt;/p&gt;
 
 &lt;p&gt;*This post was originally published by RIPE Atlas &lt;strong&gt;&lt;a href=&#34;https://labs.ripe.net/Members/emileaben/internet-access-disruption-in-turkey&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.*&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OONI releases new Web Connectivity test for detecting online censorship</title>
-      <link>https://ooni.torproject.org/post/web-connectivity/</link>
-      <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/web-connectivity/</guid>
-      <description>
-
-&lt;p&gt;Today the Open Observatory of Network Interference (OONI) is excited to be
-releasing a brand new test, called
-&lt;em&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity&lt;/a&gt;&lt;/em&gt;,
-which is designed to detect three different types of censorship: &lt;em&gt;DNS
-tampering&lt;/em&gt;, &lt;em&gt;TCP/IP blocking&lt;/em&gt; and &lt;em&gt;HTTP blocking&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;advantages-of-running-web-connectivity&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
-
-&lt;p&gt;This test allows us to see which websites are blocked and how, more accurately
-than ever before!&lt;/p&gt;
-
-&lt;p&gt;Previously we relied on running separate (http_request, dns_consistency and
-tcp_connect) tests with the aim of identifying various forms of censorship. We
-then had to correlate measurements across different tests to identify whether
-and how websites were blocked. This process was not only tedious, but it also
-led to more false positives.&lt;/p&gt;
-
-&lt;p&gt;Now with Web Connectivity we can test for various aspects of censorship all
-within one test! This not only enables us to identify which content is being
-blocked, but it also helps us pinpoint the exact reason of blocking. This is
-particularly useful because it makes the process of analyzing why a website is
-not reachable easier, faster and more accurate.&lt;/p&gt;
-
-&lt;p&gt;The heuristics used by Web Connectivity are also a bit more advanced. Contrary
-to previous tests, Web Connectivity allows us to clearly distinguish between
-censorship and accessibility, in the sense that we are able to determine whether
-a website is actually blocked, or if it is just (temporarily) down. Furthermore,
-collected measurements are no longer compared over Tor, because the
-discrimination of exit nodes (by CloudFlare, for example) led to many false
-positives. We now compare collected measurements over a control server which is
-less likely to be discriminated.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-web-connectivity-works&#34;&gt;How Web Connectivity works&lt;/h2&gt;
-
-&lt;p&gt;This test examines whether websites are blocked by performing the steps below
-&lt;em&gt;both&lt;/em&gt; over a control server and over the network of the user. The collected
-results are then compared with the aim of identifying whether and how tested
-websites are tampered with. If the compared results do &lt;em&gt;not&lt;/em&gt; match, then there
-is a sign of censorship.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Resolver identification&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
-(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). Internet Service
-Providers (ISPs), amongst others, run DNS resolvers which map host names to IP
-addresses. In some circumstances though, ISPs map the requested host names to
-the wrong IP addresses, which is a form of tampering.&lt;/p&gt;
-
-&lt;p&gt;As a first step, the Web Connectivity test attempts to identify which DNS
-resolver is being used by the user. It does so by performing a DNS query to
-special domains (such as whoami.akamai.com) which will disclose the IP address
-of the resolver. This is an important step because it allows us to see if the
-user&amp;rsquo;s resolver is one that is unlikely to perform censorship (such as Google
-DNS), or that of a local ISP (which is more likely to perform censorship).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. DNS lookup&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Once the Web Connectivity test has identified the DNS resolver of the user, it
-then attempts to identify which addresses are mapped to the tested host names by
-the resolver. It does so by performing a DNS lookup, which asks the resolver to
-disclose which IP addresses are mapped to the tested host names, as well as
-which other host names are linked to the tested host names under DNS queries.&lt;/p&gt;
-
-&lt;p&gt;If the DNS responses (such as the IP addresses mapped to host names) do &lt;em&gt;not&lt;/em&gt;
-match when comparing those collected over the network of the user and over a
-control server, then there is a clear sign of DNS blocking.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. TCP connect&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The Web Connectivity test will then try to connect to the tested websites by
-attempting to establish a TCP session on port 80 (or port 443 for URLs that
-begin with HTTPS) for the list of IP addresses that were identified in the
-previous step (DNS lookup).&lt;/p&gt;
-
-&lt;p&gt;If a TCP session to connect to websites was &lt;em&gt;not&lt;/em&gt; established over the network
-of the user, then those websites are probably blocked.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. HTTP GET request&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;As the Web Connectivity test connects to tested websites (through the previous
-step), it sends requests through the HTTP protocol to the servers which are
-hosting those websites. A server normally responds to an HTTP GET request with
-the content of the webpage that is requested.&lt;/p&gt;
-
-&lt;p&gt;However, the requested websites are most likely blocked if the HTTP request over
-the user&amp;rsquo;s network failed, or the HTTP status codes don&amp;rsquo;t match, or all of the
-following apply:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The body length of compared websites (over the control server and the network
-of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The HTTP headers names do not match&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;how-to-run-web-connectivity&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve ever run OONI tests before, then you&amp;rsquo;re probably familiar with
-&lt;code&gt;oonideckgen&lt;/code&gt;: OONI&amp;rsquo;s software suite which includes multiple tests. Now
-Web Connectivity has been added to oonideckgen, replacing the previous
-http_request and dns_consistency tests (which are included in Web Connectivity
-anyway).&lt;/p&gt;
-
-&lt;p&gt;You can run Web Connectivity by either running &lt;code&gt;oonideckgen&lt;/code&gt; or by simply
-running the following command with a file containing a list of URLs to test
-(this can either be 1 URL per line or a CSV from the
-&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;citizenlab test-lists repository&lt;/a&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe blocking/web_connectivity -f ~/.ooni/resources/citizenlab-test-lists/global.csv&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;or by testing your URL of choice:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe blocking/web_connectivity --url http://torproject.org/&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Learn more about how to run OONI tests (and their associated
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/informed-consent/risks.md&#34;&gt;risks&lt;/a&gt;)
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#ooni-in-5-minutes&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Happy testing!&lt;/p&gt;
 </description>
     </item>
     
