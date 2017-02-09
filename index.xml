@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/index.xml</link>
+    <link>https://ooni.torproject.org/</link>
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
