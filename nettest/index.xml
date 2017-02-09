@@ -349,10 +349,14 @@ server.&lt;/p&gt;
 NDT&lt;/a&gt;&lt;/em&gt;
 for &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt;,
 which is a network measurement library for running both desktop and mobile
-network measurement tests. This NDT implementation, for example, is included as
-a test that can be run via OONI&amp;rsquo;s mobile app. Running NDT can be useful as the
+network measurement tests. This NDT implementation is included as
+a test that can be run via &lt;strong&gt;OONI&amp;rsquo;s mobile app&lt;/strong&gt;. Running NDT can be useful as the
 type of information that it collects can potentially be used to examine cases
 of throttling.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; This is a third-party performance test based on third-party servers,
+and we cannot guarantee that your IP address will not be collected and
+published.&lt;/p&gt;
 </description>
     </item>
     
