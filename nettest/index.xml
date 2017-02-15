@@ -354,9 +354,10 @@ a test that can be run via &lt;strong&gt;OONI&amp;rsquo;s mobile app&lt;/strong&
 type of information that it collects can potentially be used to examine cases
 of throttling.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; This is a third-party performance test based on third-party servers,
-and we cannot guarantee that your IP address will not be collected and
-published.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; NDT is a general-purpose performance test conducted against third-
+party servers provided by &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab (M-Lab)&lt;/a&gt;. M-Lab&amp;rsquo;s NDT services require the
+retention and disclosure of IP addresses for research purposes. For more about
+M-Lab&amp;rsquo;s data governance, see its &lt;a href=&#34;https://www.measurementlab.net/privacy/&#34;&gt;privacy statement&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

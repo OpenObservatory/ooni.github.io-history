@@ -183,9 +183,11 @@ visualization called &lt;a href=&#34;https://explorer.ooni.torproject.org/world/
 
 &lt;h3 id=&#34;2-5-third-party-services&#34;&gt;2.5. Third-party services&lt;/h3&gt;
 
-&lt;p&gt;Our &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;Network Diagnostic Test (NDT)&lt;/a&gt; is designed to measure the speed and performance of networks by connecting to &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;M-Lab&lt;/a&gt; servers close to the user, and by collecting TCP/IP low level information that is useful to examining and characterizing the quality of the network path between the user and the M-Lab server.&lt;/p&gt;
-
-&lt;p&gt;As NDT is based on third-party servers, we cannot guarantee that your IP address will not be collected, processed, and published by third-parties.&lt;/p&gt;
+&lt;p&gt;Our &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;Network Diagnostic Test (NDT)&lt;/a&gt; is
+a general-purpose performance test conducted against third-party servers
+provided by &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab (M-Lab)&lt;/a&gt;. M-Lab&amp;rsquo;s
+NDT services require the retention and disclosure of IP addresses for research
+purposes. For more about M-Lab&amp;rsquo;s data governance, see its &lt;a href=&#34;https://www.measurementlab.net/privacy/&#34;&gt;privacy statement&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;For questions and comments on this Data Policy, please contact:
 &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt;.&lt;/p&gt;
@@ -538,9 +540,11 @@ cloud-fronting (instead of Tor hidden services).&lt;/p&gt;
 
 &lt;h3 id=&#34;third-party-services&#34;&gt;Third-party services&lt;/h3&gt;
 
-&lt;p&gt;Our &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;Network Diagnostic Test (NDT)&lt;/a&gt; is designed to measure the speed and performance of networks by connecting to &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;M-Lab&lt;/a&gt; servers close to the user, and by collecting TCP/IP low level information that is useful to examining and characterizing the quality of the network path between the user and the M-Lab server.&lt;/p&gt;
-
-&lt;p&gt;As NDT is a third-party performance test based on third-party servers, we cannot guarantee that your IP address will not be collected, processed, and published.&lt;/p&gt;
+&lt;p&gt;Our &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;Network Diagnostic Test (NDT)&lt;/a&gt; is
+a general-purpose performance test conducted against third-party servers
+provided by &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab (M-Lab)&lt;/a&gt;. M-Lab&amp;rsquo;s
+NDT services require the retention and disclosure of IP addresses for research
+purposes. For more about M-Lab&amp;rsquo;s data governance, see its &lt;a href=&#34;https://www.measurementlab.net/privacy/&#34;&gt;privacy statement&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;seeking-legal-advice&#34;&gt;Seeking legal advice&lt;/h2&gt;
 
