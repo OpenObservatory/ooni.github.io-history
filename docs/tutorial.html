@@ -160,7 +160,7 @@ and open and which ones are not.</p>
 </div>
 <div class="section" id="creating-test">
 <h2>Creating test<a class="headerlink" href="#creating-test" title="Permalink to this headline">¶</a></h2>
-<p>We base our test on the TCP subclass <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code>,
+<p>We base our test on the TCP subclass <a class="reference internal" href="api/ooni.templates.html#ooni.templates.tcpt.TCPTest" title="ooni.templates.tcpt.TCPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code></a>,
 since it the most suitable for our requirements. We then create the file
 &#8216;tcp_port_scanner.py&#8217; inside &#8216;ooni/nettests/experimental&#8217;.</p>
 <p>All tests start in the &#8216;experimental&#8217; directory, until they are tested
@@ -197,7 +197,7 @@ this by adding:</p>
 </pre></div>
 </div>
 <p>When the test is run, the file will be opened by
-<code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase.inputProcessor</span></code>. By default the
+<a class="reference internal" href="api/ooni.html#ooni.nettest.NetTestCase.inputProcessor" title="ooni.nettest.NetTestCase.inputProcessor"><code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase.inputProcessor</span></code></a>. By default the
 &#8216;inputProcessor&#8217; will read line-by-line and feed them to the test.
 However, in this test case we may want to skip over the comment lines
 that start with a &#8216;#&#8217;. We override &#8216;inputProcessor&#8217;:</p>
