@@ -454,26 +454,26 @@ version over the vantage point of the user. Based on this methodology,
 WhatsApp’s &lt;em&gt;app&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;TCP connections to WhatsApp&amp;rsquo;s endpoints fail&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to WhatsApp&amp;rsquo;s endpoints fail;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;TCP connection to WhatsApp&amp;rsquo;s registration service fail&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to WhatsApp&amp;rsquo;s registration service fail;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;DNS lookups resolve to IP address allocated to WhatsApp&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;DNS lookups resolve to IP addresses that are &lt;em&gt;not&lt;/em&gt; allocated to WhatsApp;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;HTTP requests to WhatsApp&amp;rsquo;s registration service do &lt;em&gt;not&lt;/em&gt; send back a response
-to OONI&amp;rsquo;s servers&lt;/p&gt;&lt;/li&gt;
+to OONI&amp;rsquo;s servers.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;WhatsApp&amp;rsquo;s &lt;em&gt;web interface&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;TCP connection to web.whatsapp.com fail&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to web.whatsapp.com fail;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;DNS lookup illustrates that a different IP addresses has been allocated to
-web.whatsapp.com&lt;/p&gt;&lt;/li&gt;
+web.whatsapp.com;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;HTTP requests to web.whatsapp.com do &lt;em&gt;not&lt;/em&gt; send back a consistent response to OONI&amp;rsquo;s
-servers&lt;/p&gt;&lt;/li&gt;
+servers.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

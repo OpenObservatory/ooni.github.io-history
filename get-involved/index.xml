@@ -30,7 +30,7 @@ following:&lt;/p&gt;
 &lt;p&gt;The global list includes a wide range of internationally relevant websites (most
 of which are in English), while each country-specific test list includes
 websites that are relevant and commonly accessed within that country (many of
-which are in local languages). The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;30
+which are in local languages). The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;31
 categories&lt;/a&gt;&lt;/strong&gt;, ranging from news media, file sharing and
 culture, to provocative or objectionable categories, like pornography, political
 criticism and hate speech.&lt;/p&gt;
@@ -50,11 +50,11 @@ downloading data from the websites listed in the test lists, you can pass your
 
 &lt;h2 id=&#34;contributing-to-test-lists&#34;&gt;Contributing to test lists&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt; has supported OONI in the creation,
-maintenance and development of test lists and many volunteers around the world
-have contributed to their country&amp;rsquo;s test lists over the last years. You can also
-contribute to the review or creation of your country&amp;rsquo;s test list (if it doesn&amp;rsquo;t
-already exist), as explained below.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt; has supported network measurement
+projects (like OONI) in the creation, maintenance and development of test lists
+and many volunteers around the world have contributed to their country&amp;rsquo;s test
+lists over the last years. You can also contribute to the review or creation of
+your country&amp;rsquo;s test list (if it doesn&amp;rsquo;t already exist), as explained below.&lt;/p&gt;
 
 &lt;h3 id=&#34;reviewing-test-lists&#34;&gt;Reviewing test lists&lt;/h3&gt;
 
@@ -76,18 +76,18 @@ test lists&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
-example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
+example, they touch upon sensitive issues or express political criticism);&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;For further criteria, please view the URL categories
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Please try to add URLs which fall under as many (if not all) of these categories
 as possible.&lt;/p&gt;
@@ -98,12 +98,12 @@ as possible.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
 This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
-category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
 falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
 the csv file. The category descriptions can be found
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
 &amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
@@ -120,7 +120,7 @@ column of the csv file.&lt;/p&gt;&lt;/li&gt;
 the &amp;ldquo;category_code&amp;rdquo; and &amp;ldquo;category_description&amp;rdquo; columns of the csv file) &lt;em&gt;only
 if&lt;/em&gt; you think that those URLs have been allocated to wrong category codes and
 descriptions. In this case, please replace the category codes and descriptions
-with ones (from the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;recommended categories&lt;/a&gt; that you think are more
+with ones (from the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;recommended categories&lt;/a&gt; that you think are more
 suitable. We would also appreciate a comment on
 &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;github&lt;/a&gt; or via email explaining the
 proposed changes.&lt;/p&gt;
@@ -165,18 +165,18 @@ find a reference for international standards for country codes
 &lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
-example, they touch upon sensitive issues or express political criticism)&lt;/p&gt;&lt;/li&gt;
+example, they touch upon sensitive issues or express political criticism);&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;For further criteria, please view URL categories
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
  each new URL:&lt;/p&gt;
@@ -184,12 +184,12 @@ example, they touch upon sensitive issues or express political criticism)&lt;/p&
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
 This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
-category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
 falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
 the csv file. The category descriptions can be found
-&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-proposed-category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
 &amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
