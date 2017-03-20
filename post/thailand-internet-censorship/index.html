@@ -167,7 +167,7 @@ Manipulation, Vanilla Tor, WhatsApp, Facebook Messenger.</p>
 <p>New <a href="https://measurements.ooni.torproject.org/files/by_country/TH">OONI data</a>
 reveals the blocking of <strong>13 websites</strong> in Thailand across 6 different ISPs, between
 6th November 2016 and 27th February 2017. Thai ISPs appear to primarily be
-implementing censorship through the use of middle boxes (HTTP transparent
+implementing censorship through DNS hijacking and through the use of middle boxes (HTTP transparent
 proxies) which serve block pages.</p>
 
 <p>The blocked sites include:</p>
@@ -261,13 +261,19 @@ orders and decrees individually. Currently, general elections in Thailand are
 
 <h1 id="network-landscape-and-internet-penetration">Network landscape and internet penetration</h1>
 
-<p>The Thai government has long held expansive control over the internet, largely
-facilitated by its <a href="http://www.mergermarket.com/pdf/CapitalProfileSpecialReport_ThaiFamilyPoliticalAffiliations%20(2).pdf">close relationship</a> with Internet
-Service Providers (ISPs) and telecommunication companies, where former
-politicians or members of their families <a href="http://www.mergermarket.com/pdf/CapitalProfileSpecialReport_ThaiFamilyPoliticalAffiliations%20(2).
-pdf">hold key positions</a>. <a href="http://www.ais.co.th/">Advanced Info Service (AIS)</a>, for example, is
-owned by former prime minister Thaksin Shinawatra, while True Telecom’s board
-contains individuals with <a href="http://www.mergermarket.com/pdf/CapitalProfileSpecialReport_ThaiFamilyPoliticalAffiliations%20(2).pdf">ties to the military government (see: Charoen Pokphand Group)</a>.</p>
+<p>The Thai government has long held expansive control over the internet,
+largely facilitated by its various relationships with Internet Service
+Providers (ISPs) and telecommunication companies. Amongst more than ten
+International Internet Gateways (IIGs) in the country, <a href="http://internet.nectec.or.th/webstats/internetmap.current.iir?Sec=internetmap_current">CAT and TOT,both state-owned, are still two of the largest</a>.
+Former politicians, military officers, or members of their families also
+<a href="http://www.mergermarket.com/pdf/CapitalProfileSpecialReport_ThaiFamilyPoliticalAffiliations%20(2).pdf">hold key positions</a>
+in large telecommunication companies. Under telecommunication law, all
+service providers are subjected to license suspensions or revocation if
+found not cooperating with the regulator in law enforcement, which
+also includes <a href="http://www.bangkokpost.com/news/general/1204333/dsi-cuts-off-internet-phone-communication-around-temple">network shutdowns</a>.
+More frequently, ISPs are asked
+<a href="http://tilleke.com/sites/default/files/2015_Sep_ICLG_Telecoms_Media_Internet_Thailand.pdf">“informally”</a>
+to block certain content.</p>
 
 <p>The internet and mobile service providers of Thailand are a mix of state-owned
 companies and private operators. The three fixed line operators in Thailand are
@@ -443,12 +449,13 @@ language opens up the law to abuse. Article 14(1) of the CCA has long been
 utilised against journalists, activists and internet users for content
 considered to be damaging by government sanctioned authorities.</p>
 
-<p>The <a href="https://thainetizen.org/docs/cybercrime-amendment-20160426-th-en/">2016 amendment</a> to article 14(2) of the CCA broadens the scope, incriminating those
-found guilty of uploading information that would &ldquo;cause damage to the public,
-create panic, or cause harm to public infrastructure, national security, public
-security or economic security&rdquo;, and expanding the power authorities have in
-abusing a person&rsquo;s exercise of their protected right to Yes. freedom of
-expression.</p>
+<p>The <a href="https://thainetizen.org/docs/cybercrime-act-2017/">2017 amendment</a>
+to article 14(2) of the CCA broadens the scope, incriminating those
+found guilty of uploading information that would “damage the maintenance
+of national security, public safety, national economic security or
+public infrastructure serving national’s public interest or cause panic
+in the public”, and expanding the power authorities have in abusing a
+person’s exercise of their protected right to freedom of expression.</p>
 
 <p><strong>Internal Security Act 2008</strong></p>
 
@@ -477,13 +484,14 @@ prohibited categories. Violations of provisions in this announcement could
 result in prosecution under the law, and the immediate suspension of the
 publication or program.</p>
 
-<p><strong>Article 5 of NCPO Order <sup>3</sup>&frasl;<sub>2015</sub></strong></p>
+<p><strong>Article 5 of the Head NCPO Order <sup>3</sup>&frasl;<sub>2015</sub></strong></p>
 
-<p>Under Article 5 of <a href="http://www.prachatai.com/english/node/4933">NCPO Order <sup>3</sup>&frasl;<sub>2015</sub></a>, NCPO officers are
-authorised to issue orders prohibiting the distribution of press items, or the
-sale of any publication or material that is deemed to have the potential to
-cause public alarm, or which contains false information likely to cause public
-misunderstanding, or which threatens public order or national security.</p>
+<p>Under Article 5 of the Head NCPO Order <sup>3</sup>&frasl;<sub>2015</sub>, NCPO officers are
+authorised to issue orders prohibiting the distribution of press items,
+or the sale of any publication or material that is deemed to have the
+potential to cause public alarm, or which contains false information
+likely to cause public misunderstanding, or which threatens public order
+or national security.</p>
 
 <h2 id="access-to-information">Access to information</h2>
 
@@ -520,22 +528,36 @@ case which is beneficial to the public”.</p>
 the provisions of the original constitution were suspended. There is no longer
 an explicit provision related to the right to privacy.</p>
 
+<p>While there is no comprehensive general data protection law in Thailand,
+personal data in the public sector is at some level protected by the
+Official Information Act B.E. 2540 (1997) which obligates state agencies
+to allow individuals to correct personal data that is maintained by the
+agencies. Personal information in the private sector, such as credit
+information, patient data, and telecommunication data, is regulated by
+<a href="https://www.privacyinternational.org/node/750">sectoral laws</a>, like the 2008
+Credit
+Information Business Act, the 2007 National Health Act, and the 2006
+Notification of the National Telecommunications Commission (on measures
+to protect the rights of telecommunication consumers in the areas of
+personal data, right to privacy, and freedom of communication via
+telecommunication networks).</p>
+
 <h2 id="censorship-and-surveillance">Censorship and surveillance</h2>
 
-<p><strong>2016 Computer Crime Act, Article 20</strong></p>
+<p><strong>2017 Computer Crime Act, Article 20</strong></p>
 
-<p>Under Article 20 of the <a href="https://thainetizen.org/docs/cybercrime-amendment-20160426-th-en/">2016 Computer Crime Act (CCA)</a>, the
-&ldquo;Computer Data Screening Committee&rdquo;, a 5 member panel appointed by the
-government would have the power to suppress or remove computer content that is
-found to violate a criminal law provision, contravene the CCA, or which
-threatens national security. Due to the broadness of this definition, this
-allows authorities to act as moral crusaders, giving them a wide latitude to
-suppress online content that does not violate any laws, but that they deem to be
-a breach of public morals.</p>
+<p>Under Article 20 of the <a href="https://thainetizen.org/docs/cybercrime-act-2017/">2017 Computer-related Crime Act (CCA)</a>, the
+“Computer Data Screening Committee”, a 9 member panel appointed by the
+government would have the power to suggest the court to suppress or
+remove computer data that is “deemed to be a breach to the public order
+or moral high ground of the people.” Due to the broadness of this
+definition, this allows authorities to act as moral crusaders, giving
+them a wide latitude to suppress online content that does not violate
+any laws, but that they deem to be a breach of public morals.</p>
 
-<p><strong>2016 Computer Crime Act, Article 18</strong></p>
+<p><strong>2017 Computer Crime Act, Article 18</strong></p>
 
-<p>Articles 18(2) and 18(3) of the <a href="https://thainetizen.org/docs/cybercrime-amendment-20160426-th-en/">2016 Computer Crime Act (CCA)</a> would
+<p>Articles 18(2) and 18(3) of the <a href="https://thainetizen.org/docs/cybercrime-act-2017/">2017 Computer Crime Act (CCA)</a> would
 allow user-related data and traffic data to be accessed by authorities without a
 court order under probable cause to assist with investigations related to an
 offense under the CCA or other laws.</p>
@@ -1142,7 +1164,7 @@ November 2016 to 27th February 2017.</p>
 
 <p>Upon analysis of the collected data, the
 <a href="https://measurements.ooni.torproject.org/files/by_country/TH">findings</a>
-illustrate that ISPs in Thailand are primarily implementing censorship through
+illustrate that ISPs in Thailand are primarily implementing censorship through DNS hijacking and through
 the use of middle boxes (HTTP transparent proxies) which serve block pages.
 OONI’s <a href="https://ooni.torproject.org/nettest/http-invalid-request-line/">HTTP invalid request line test</a>, in particular,
 <a href="https://measurements.ooni.torproject.org/files/by_country/TH">revealed</a> the
@@ -1508,7 +1530,7 @@ between 6th November 2016 to 27th February 2017 was analyzed.</p>
 
 <p>The key <a href="https://measurements.ooni.torproject.org/files/by_country/TH">findings</a>
 of this study show that Thai ISPs appear to primarily be implementing censorship
-through the use of middle boxes (HTTP transparent proxies) which serve block
+through DNS hijacking and through the use of middle boxes (HTTP transparent proxies) which serve block
 pages, while in fewer cases, ISPs appear to be implementing DNS-based censorship
 (in the case of the <a href="https://explorer.ooni.torproject.org/measurement/20170220T132942Z_AS23969_BwA1Bn7QQCigePMY4Fk9N7UvyyYcudRfR97uA2yBQLJMIZKqwO?input=http:%2F%2Fwww.dailymail.co.uk">blocking of dailymail.co.uk</a>, for example). It’s worth
 noting that Thai ISPs appear to be implementing censorship at their own
