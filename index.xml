@@ -19,7 +19,7 @@
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/thailand/thai-blockpage.png&#34; alt=&#34;Thailand block page&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Block page in Thailand&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Image: Block page in Thailand&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;A research study by the Open Observatory of Network Interference (OONI), Sinar
 Project, and the Thai Netizen Network.&lt;/p&gt;
@@ -271,7 +271,7 @@ DTAC, and TrueMove.&lt;/p&gt;
 
 &lt;tr&gt;
 &lt;td&gt;DTAC&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;X&lt;/td&gt;
 &lt;td&gt;X&lt;/td&gt;
 &lt;/tr&gt;
 
@@ -1513,6 +1513,8 @@ study around the necessity and proportionality of information controls.&lt;/p&gt
 &lt;a href=&#34;https://www.accessnow.org/&#34;&gt;Access Now&lt;/a&gt; for funding this research. We also
 thank all the anonymous and brave volunteers in Thailand who have run and
 continue to run ooniprobe, thus making this research possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: This report was updated on 20th March 2017, following its publication.&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
