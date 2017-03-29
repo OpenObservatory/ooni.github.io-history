@@ -1222,18 +1222,18 @@ the table below.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;The values under the “Unknown” column in the table above pertain to
-measurements where we are unable to determine whether access to those
-sites was blocked or not. It’s useful to cross-reference this
-information with whether connections to the site in question were
-confirmed to &lt;em&gt;not&lt;/em&gt; be blocked. The fact that connections to vibe.com,
-for example, were &lt;em&gt;not&lt;/em&gt; blocked twice indicates that the site is &lt;em&gt;least
-likely&lt;/em&gt; to have been tampered with, in comparison to the other sites
-included in the table above. Access to realdoll.com, on the other hand,
-which presented HTTP failures every time it was tested is more likely to
-have been blocked. Similarly, gambling site sportingbet.com which
-presented signs of TCP/IP blocking almost every time it was tested is
-also likely to have been censored.&lt;/p&gt;
+&lt;p&gt;The values under the “Control failure” column in the table above pertain to
+measurements where we are unable to determine whether access to those sites
+was blocked or not, because the control request failed. It’s useful to
+cross-reference this information with whether connections to the site in
+question were confirmed to &lt;em&gt;not&lt;/em&gt; be blocked. The fact that connections to
+vibe.com, for example, were &lt;em&gt;not&lt;/em&gt; blocked twice indicates that the site is
+&lt;em&gt;least likely&lt;/em&gt; to have been tampered with, in comparison to the other sites
+included in the table above. Access to realdoll.com, on the other hand, which
+presented HTTP failures every time it was tested is more likely to have been
+blocked. Similarly, gambling site sportingbet.com which presented signs of
+TCP/IP blocking almost every time it was tested is also likely to have been
+censored.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&#34;http://www.cidh.org/&#34;&gt;website&lt;/a&gt; of the Organization of American
 States (OAS), which is responsible for the promotion and protection of

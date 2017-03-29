@@ -28,7 +28,7 @@ whole is rendered inaccessible within a location.&lt;/p&gt;
 &lt;p&gt;Over the last months we received many reports relating to internet blackouts in
 various countries around the world. In some of these countries we had probes
 running &lt;a href=&#34;https://ooni.torproject.org//nettest/&#34;&gt;OONI tests&lt;/a&gt;, but merely
-asserting that an internet blackouts had occurred just because we stopped
+asserting that an internet blackout had occurred just because we stopped
 receiving measurements probably wouldn&amp;rsquo;t have been accurate. As such, we started
 to refer to other public data sources that could help us gain a better
 understanding of potential network disruptions in countries where internet
