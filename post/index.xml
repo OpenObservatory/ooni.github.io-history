@@ -6,8 +6,81 @@
     <description>Recent content in Post-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Mar 2017 13:31:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Apr 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OONI at the Internet Freedom Festival &amp; RightsCon 2017</title>
+      <link>https://ooni.torproject.org/post/ooni-iff-rightscon/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/ooni-iff-rightscon/</guid>
+      <description>
+
+&lt;p&gt;Last month the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; team joined the internet
+freedom community at the following events:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/vietnam-cyber-dialogue/&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/&#34;&gt;Internet Freedom Festival (IFF)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/iran-cyber-dialogue-rightscon-brussels-2017-timely-impactful/&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;RightsCon 2017&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These events provided us with the opportunity to engage with community members,
+create new friendships, learn about new projects, and to share skills and
+knowledge. We also had the opportunity to facilitate sessions that allowed us to
+collect feedback for the improvement of our
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;software&lt;/a&gt; and research
+methodologies.&lt;/p&gt;
+
+&lt;p&gt;Below we list the sessions that we (co-) facilitated as part of these events.&lt;/p&gt;
+
+&lt;h2 id=&#34;vietnam-cyber-dialogue-vcd&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;OONI skill-sharing session&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Measuring internet censorship in Vietnam&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;internet-freedom-festival-iff&#34;&gt;Internet Freedom Festival (IFF)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Investigating_internet_controls_with_OONI&#34;&gt;Investigating Internet Controls with OONI&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/documents/iff17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Building_Community_Resources_for_Censorship_Measurement_Research&#34;&gt;Building Community Resources for Censorship Measurement Research&lt;/a&gt; (co-facilitated with the &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;iran-cyber-dialogue-icd&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Measuring internet censorship in Iran&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rightscon-2017&#34;&gt;RightsCon 2017&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/keepiton-summit-rightscon-brussels-program-schedule/&#34;&gt;Advances in measuring internet shutdowns&lt;/a&gt; (panel)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;Collecting evidence of internet censorship in Southeast Asia and beyond&lt;/a&gt; (co-
+facilitated with &lt;a href=&#34;http://sinarproject.org/&#34;&gt;Sinar Project&lt;/a&gt;), (&lt;a href=&#34;https://ooni.torproject.org/documents/rightscon17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Telling Data Driven Narratives About Internet Regulation and Access (facilitated
+by the &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab&lt;/a&gt;, joined by OONI)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have any questions that we failed to adequately address in person or
+through our sessions, please don’t hesitate to
+&lt;a href=&#34;https://ooni.torproject.org/about/&#34;&gt;contact&lt;/a&gt; us.&lt;/p&gt;
+
+&lt;p&gt;Warm thanks from the OONI team to the organizers and participants of these
+events!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The State of Internet Censorship in Myanmar</title>
@@ -9688,122 +9761,6 @@ notebook&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-serving-malware.html&#34;&gt;Egypt serving malware&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/notebooks/eg-serving-malware.ipynb&#34;&gt;download ipynb
 notebook&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OONI Hackathon: Join us to explore internet censorship!</title>
-      <link>https://ooni.torproject.org/post/berlin-hackathon-2016/</link>
-      <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/berlin-hackathon-2016/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/berlin-hackathon/ooni-berlin-hackathon.png&#34; alt=&#34;HACKOONI16&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Interested in exploring (and exposing) internet censorship? Join the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; hackathon in Berlin!&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;When?&lt;/strong&gt; Friday, &lt;strong&gt;11th November&lt;/strong&gt; &amp;amp; Saturday, &lt;strong&gt;12th November&lt;/strong&gt; 2016&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Where?&lt;/strong&gt; The &lt;strong&gt;OnionSpace&lt;/strong&gt; (&lt;a href=&#34;http://www.openstreetmap.org/?mlat=52.54965&amp;amp;mlon=13.3700#map=19/52.54974/13.37001&#34;&gt;Gottschedstraße 4, 13357 Berlin, Germany&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;What time?&lt;/strong&gt; 10am onwards&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Who?&lt;/strong&gt; Software developers, data analysts, academics, journalists,
-bloggers, lawyers, activists, and all those who don’t go by any
-particular label, but are curious enough to join! We only have one rule:
-&lt;strong&gt;Be excellent to each other&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;OONI is a &lt;em&gt;free software&lt;/em&gt; project under The Tor Project which aims to uncover
-internet censorship around the world. Since 2012, OONI has &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;collected&lt;/a&gt; millions of
-network measurements across more than 100 countries, shedding light on multiple
-cases of censorship and network interference around the world.&lt;/p&gt;
-
-&lt;p&gt;But our work is far from done and we need your help! Below you can learn about
-&lt;em&gt;some&lt;/em&gt; of the ways that you can contribute to the fight against internet
-censorship through this hackathon.&lt;/p&gt;
-
-&lt;h1 id=&#34;hack-on-censorship-tests&#34;&gt;Hack on censorship tests&lt;/h1&gt;
-
-&lt;p&gt;OONI has multiple &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/tree/master/ooni/nettests&#34;&gt;free software tests&lt;/a&gt; that you can hack on! These tests are designed to examine the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Blocking of websites&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Blocking of instant messaging (IM) apps&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Blocking of Tor, Psiphon, Lantern, and OpenVPN&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Presence of systems that could be used for censorship or surveillance (such as BlueCoat)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Join us to improve OONI’s tests and/or write new ones!&lt;/p&gt;
-
-&lt;h1 id=&#34;learn-how-to-run-censorship-tests&#34;&gt;Learn how to run censorship tests&lt;/h1&gt;
-
-&lt;p&gt;Regardless of your technical skills or background, you can &lt;em&gt;still&lt;/em&gt; contribute to
-transparency around internet censorship.&lt;/p&gt;
-
-&lt;p&gt;We would be happy to teach you how to run tests from your terminal, your web
-browser, or how to set-up a &lt;a href=&#34;https://en.wikipedia.org/wiki/Raspberry_Pi&#34;&gt;Raspberry Pi&lt;/a&gt; to automatically run tests for
-you!&lt;/p&gt;
-
-&lt;h1 id=&#34;create-lists-of-urls-to-test-for-censorship&#34;&gt;Create lists of URLs to test for censorship&lt;/h1&gt;
-
-&lt;p&gt;Are you familiar with any blocked sites? Again, regardless of your technical
-skills or background, you can play an important role!&lt;/p&gt;
-
-&lt;p&gt;Our findings are probably only as interesting as the &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;websites that we test for censorship&lt;/a&gt;. Join us
-to learn about our methodology and to suggest websites that we should be
-testing!&lt;/p&gt;
-
-&lt;h1 id=&#34;data-analysis&#34;&gt;Data analysis&lt;/h1&gt;
-
-&lt;p&gt;Collecting all those network measurements is great, but we need to improve our
-data analysis capabilities to better detect and confirm censorship events.
-That’s where data analysts can play an important role! Join us to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Improve &lt;a href=&#34;https://github.com/TheTorProject/ooni-pipeline&#34;&gt;OONI’s data processing pipeline&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Analyze &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;existing measurements&lt;/a&gt;
-to potentially find hidden cases of censorship&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Share data analysis methodologies and techniques&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can dig into OONI’s data through &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt; and &lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;OONI’s list of measurements&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;research&#34;&gt;Research&lt;/h1&gt;
-
-&lt;p&gt;Studying internet controls? We are sitting on millions of network measurements
-that might be useful to your existing research, or which might help develop new
-research questions.&lt;/p&gt;
-
-&lt;p&gt;Join us to learn all about OONI and how you can use its data as part of your
-research!&lt;/p&gt;
-
-&lt;h1 id=&#34;story-telling&#34;&gt;Story-telling&lt;/h1&gt;
-
-&lt;p&gt;Journalists and bloggers, this is a place for you!&lt;/p&gt;
-
-&lt;p&gt;By collecting network measurements, OONI can provide you with &lt;em&gt;evidence&lt;/em&gt; of
-internet censorship. This can include the blocking of various websites and
-instant messaging (IM) apps (such as WhatsApp and Facebook Messenger), as well
-as the blocking of circumvention tools, such as Tor. Furthermore, OONI’s data
-can help uncover the covert presence of censorship and surveillance equipment (which we &lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;detected&lt;/a&gt; in various countries around the world in the
-past).&lt;/p&gt;
-
-&lt;p&gt;Join us to learn how to dig into OONI’s data and find evidence that you
-might need for your next story!&lt;/p&gt;
-
-&lt;p&gt;Hope to see you all soon!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Thanks to the &lt;a href=&#34;https://www.fordfound.org/&#34;&gt;Ford Foundation&lt;/a&gt; for supporting the OONI team&amp;rsquo;s travel costs.&lt;/p&gt;
 </description>
     </item>
     

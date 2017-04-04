@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/events/index.xml</link>
+    <description>Recent content on OONI: Open Observatory of Network Interference</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://ooni.torproject.org/tags/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OONI at the Internet Freedom Festival &amp; RightsCon 2017</title>
+      <link>https://ooni.torproject.org/post/ooni-iff-rightscon/</link>
+      <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/ooni-iff-rightscon/</guid>
+      <description>
+
+&lt;p&gt;Last month the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; team joined the internet
+freedom community at the following events:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/vietnam-cyber-dialogue/&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/&#34;&gt;Internet Freedom Festival (IFF)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/iran-cyber-dialogue-rightscon-brussels-2017-timely-impactful/&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;RightsCon 2017&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These events provided us with the opportunity to engage with community members,
+create new friendships, learn about new projects, and to share skills and
+knowledge. We also had the opportunity to facilitate sessions that allowed us to
+collect feedback for the improvement of our
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;software&lt;/a&gt; and research
+methodologies.&lt;/p&gt;
+
+&lt;p&gt;Below we list the sessions that we (co-) facilitated as part of these events.&lt;/p&gt;
+
+&lt;h2 id=&#34;vietnam-cyber-dialogue-vcd&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;OONI skill-sharing session&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Measuring internet censorship in Vietnam&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;internet-freedom-festival-iff&#34;&gt;Internet Freedom Festival (IFF)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Investigating_internet_controls_with_OONI&#34;&gt;Investigating Internet Controls with OONI&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/documents/iff17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Building_Community_Resources_for_Censorship_Measurement_Research&#34;&gt;Building Community Resources for Censorship Measurement Research&lt;/a&gt; (co-facilitated with the &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;iran-cyber-dialogue-icd&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Measuring internet censorship in Iran&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rightscon-2017&#34;&gt;RightsCon 2017&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/keepiton-summit-rightscon-brussels-program-schedule/&#34;&gt;Advances in measuring internet shutdowns&lt;/a&gt; (panel)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;Collecting evidence of internet censorship in Southeast Asia and beyond&lt;/a&gt; (co-
+facilitated with &lt;a href=&#34;http://sinarproject.org/&#34;&gt;Sinar Project&lt;/a&gt;), (&lt;a href=&#34;https://ooni.torproject.org/documents/rightscon17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Telling Data Driven Narratives About Internet Regulation and Access (facilitated
+by the &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab&lt;/a&gt;, joined by OONI)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have any questions that we failed to adequately address in person or
+through our sessions, please don’t hesitate to
+&lt;a href=&#34;https://ooni.torproject.org/about/&#34;&gt;contact&lt;/a&gt; us.&lt;/p&gt;
+
+&lt;p&gt;Warm thanks from the OONI team to the organizers and participants of these
+events!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
