@@ -2866,6 +2866,12 @@ testing Internet censorship and network performance.&lt;/p&gt;
 				src=&#34;/install/app-store-badge.png&#34;
 		srcset=&#34;/install/app-store-badge.png 1x, /install/app-store-badge.png 2x&#34;&gt;
 		&lt;/a&gt;
+
+		&lt;a class=&#34;badge&#34; href=&#34;https://f-droid.org/repository/browse/?fdid=org.openobservatory.ooniprobe&#34;&gt;
+			&lt;img alt=&#34;Download ooniprobe for Android (F-Droid)&#34;
+				src=&#34;/install/fdroid-badge.png&#34;
+		srcset=&#34;/install/fdroid-badge.png 1x, /install/fdroid-badge.png 2x&#34;&gt;
+		&lt;/a&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 

@@ -386,6 +386,45 @@ case that they are blocked within the tested network.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Telegram test</title>
+      <link>https://ooni.torproject.org/nettest/telegram/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/nettest/telegram/</guid>
+      <description>
+
+&lt;h1 id=&#34;telegram-test&#34;&gt;Telegram test&lt;/h1&gt;
+
+&lt;p&gt;This test is designed to examine the reachability of Telegram&amp;rsquo;s app and web
+version within a tested network.&lt;/p&gt;
+
+&lt;p&gt;More specifically, this test attempts to perform an HTTP POST request, and
+establish a TCP connection to Telegram’s access points (DCs), as well as an
+HTTP GET request to Telegram&amp;rsquo;s web version (&lt;code&gt;web.telegram.org&lt;/code&gt;) over the
+vantage point of the user. The test is triggered as blocking when connections
+to &lt;em&gt;all&lt;/em&gt; access points defined in the &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/telegram.py#L16-L22&#34;&gt;test&lt;/a&gt;
+fail.&lt;/p&gt;
+
+&lt;p&gt;Based on this methodology Telegram’s &lt;em&gt;app&lt;/em&gt; is likely blocked if any of the
+following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to all the tested Telegram access points fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP POST requests to Telegram&amp;rsquo;s access points do &lt;em&gt;not&lt;/em&gt; send back a
+response to OONI&amp;rsquo;s servers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Telegram&amp;rsquo;s &lt;em&gt;web version&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTP(S) GET requests to &lt;code&gt;web.telegram.org&lt;/code&gt; do &lt;em&gt;not&lt;/em&gt; send back a consistent
+response to OONI&amp;rsquo;s servers.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tor Bridge Reachability</title>
       <link>https://ooni.torproject.org/nettest/tor-bridge-reachability/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

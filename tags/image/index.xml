@@ -107,6 +107,27 @@ Designed to examine whether URLs are blocked or not (and if so, how)&lt;/p&gt;&l
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt;:&lt;/strong&gt; Designed to detect the presence of systems which could potentially be responsible for censorship, surveillance and traffic manipulation&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt;:&lt;/strong&gt; Similar to the previous test (HTTP invalid request line)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/meek-fronted-requests/&#34;&gt;Meek Fronted Requests&lt;/a&gt;:&lt;/strong&gt; Designed to
+examine whether the domains used by Meek (a type of Tor bridge) work in tested
+networks&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;Vanilla Tor&lt;/a&gt;:&lt;/strong&gt; Designed
+to examine the reachability of the Tor network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/tor-bridge-reachability/&#34;&gt;Tor Bridges test&lt;/a&gt;:&lt;/strong&gt; Designed to
+examine the reachability of Tor bridges in your network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/whatsapp/&#34;&gt;WhatsApp test&lt;/a&gt;:&lt;/strong&gt; Designed
+to examine the reachability of both WhatsApp and WhatsApp&amp;rsquo;s web interface
+(web.whatsapp.com) in your network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/facebook-messenger/&#34;&gt;Facebook Messenger test&lt;/a&gt;:&lt;/strong&gt; Designed to
+examine the reachability of Facebook Messenger in your network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/telegram/&#34;&gt;Telegram test&lt;/a&gt;:&lt;/strong&gt; Designed
+to examine the reachability of Telegram messenger and Telegram&amp;rsquo;s web
+version in your network&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;The main advantages of collecting measurements through Raspberry Pis include the following:&lt;/p&gt;
@@ -125,7 +146,14 @@ Designed to examine whether URLs are blocked or not (and if so, how)&lt;/p&gt;&l
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Raspberry Pi:&lt;/strong&gt; The Lepidopter Raspberry Pi image is compatible with all
-types of Raspberry Pis (tested: B+, RPi 1 model B, RPi 2 model B).&lt;/p&gt;&lt;/li&gt;
+types of Raspberry Pis (tested):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi 1 Model B&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 1 Model B+&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 2 Model B&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 3 Model B&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;SD Card:&lt;/strong&gt; We recommend a 4GB (minimum size) class 4 or higher SD card.&lt;/p&gt;&lt;/li&gt;
 
@@ -145,11 +173,13 @@ power will cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
 &lt;h2 id=&#34;download-the-lepidopter-image&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;,
+&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip.asc&#34;&gt;(lepidopter image signature download)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Consider downloading the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;
-for a significantly reduced file size compared to the zip archive.
+&lt;p&gt;Consider downloading the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;
+for a significantly reduced file size compared to the zip archive. The
+signature to the xz compressed image can be found &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.xz.asc&#34;&gt;here&lt;/a&gt;.
 Note that this will require an &lt;a href=&#34;http://tukaani.org/xz/&#34;&gt;extra program&lt;/a&gt; to be
 installed depending on your OS.&lt;/p&gt;
 
@@ -176,19 +206,72 @@ installed depending on your OS.&lt;/p&gt;
 uid   Lepidopter Team (signing key)
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;h3 id=&#34;set-the-trust-level-of-the-lepidopter-signing-key-optional&#34;&gt;Set the trust level of the Lepidopter signing key (optional)&lt;/h3&gt;
+
+&lt;p&gt;Once you have obtained the lepidopter signing key, you should verify the
+fingerprint of this key very carefully by obtaining copies of the fingerprint
+from trustworthy independent sources and comparing them to the downloaded key’s
+fingerprint to ensure they match. You could hen set the key&amp;rsquo;s trust level to
+“ultimate” (if you are satisfied with the verification process), so that you
+are not getting any warnings about untrusted signatures:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --edit-key 0xBA56AC5A53E9C7A4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;pub  4096R/0xBA56AC5A53E9C7A4  created: 2016-05-22  expires: never       usage: SC
+                               trust: unknown      validity: unknown
+
+gpg&amp;gt; fpr
+pub   4096R/0xBA56AC5A53E9C7A4 2016-05-22 Lepidopter Team (signing key)
+ Primary key fingerprint: 6255 1196 8E24 0F24 F6CF  D0B6 BA56 AC5A 53E9 C7A4
+
+gpg&amp;gt; trust
+pub  4096R/0xBA56AC5A53E9C7A4  created: 2016-05-22  expires: never       usage: SC
+                               trust: unknown      validity: unknown
+sub  4096R/0x566AA65E9738B6C8  created: 2016-05-22  expires: never       usage: E
+[unknown] (1). Lepidopter Team (signing key)
+
+Please decide how far you trust this user to correctly verify other users&#39; keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don&#39;t know or won&#39;t say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+
+Your decision? 5
+Do you really want to set this key to ultimate trust? (y/N) y
+
+pub  4096R/0xBA56AC5A53E9C7A4  created: 2016-05-22  expires: never       usage: SC
+                               trust: ultimate      validity: ultimate
+sub  4096R/0x566AA65E9738B6C8  created: 2016-05-22  expires: never       usage: E
+[ultimate] (1). Lepidopter Team (signing key)
+
+gpg&amp;gt; quit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;get-the-lepidopter-image-signature&#34;&gt;Get the Lepidopter image signature&lt;/h3&gt;
+
+&lt;p&gt;Download the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip.asc&#34;&gt;lepidopter image signature&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h3 id=&#34;verify-the-lepidopter-image&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
 
-&lt;p&gt;Verify that the compressed image &lt;code&gt;lepidopter-v0.3.5-beta-armel.img.zip&lt;/code&gt; matches its
-signature &lt;code&gt;lepidopter-v0.3.5-beta-armel.img.zip.asc&lt;/code&gt; by running:&lt;/p&gt;
+&lt;p&gt;In order to verify the lepidopter image both the image archive (&lt;code&gt;.zip&lt;/code&gt; or
+&lt;code&gt;.asc&lt;/code&gt;) and the signature file (&lt;code&gt;.asc&lt;/code&gt;) should be within the same directory.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gpg -v --verify lepidopter-v0.3.5-beta-armel.img.zip.asc
+&lt;p&gt;Verify that the compressed image &lt;code&gt;lepidopter-v1.0.0-armel.img.zip&lt;/code&gt; matches its
+signature &lt;code&gt;lepidopter-v1.0.0-armel.img.zip.asc&lt;/code&gt; by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg -v --verify lepidopter-v1.0.0-armel.img.zip.asc
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You should look for the message &lt;code&gt;Good signature from &amp;quot;Lepidopter Team (signing
 key)&amp;quot;&lt;/code&gt;:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gpg: assuming signed data in `lepidopter-v0.3.5-beta-armel.img.zip&#39;
-gpg: Signature made Mon 17 Oct 2016
+&lt;pre&gt;&lt;code&gt;gpg: assuming signed data in `lepidopter-v1.0.0-armel.img.zip&#39;
+gpg: Signature made Fri 05 May 2017
 gpg:                using RSA key 0xBA56AC5A53E9C7A4
 gpg: using PGP trust model
 gpg: Good signature from &amp;quot;Lepidopter Team (signing key)&amp;quot;
@@ -215,7 +298,7 @@ Disk Image Writer or a terminal.&lt;/p&gt;
 
 &lt;h3 id=&#34;disk-image-writer&#34;&gt;Disk Image Writer&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.zip&#34;&gt;Lepidopter
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Right-click on the downloaded Lepidopter image and select &lt;strong&gt;[Extract
@@ -279,16 +362,16 @@ hours.&lt;/p&gt;
 machine. If you specify the wrong device in the instructions below you could
 delete your primary Linux partition. Please be careful.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.zip&#34;&gt;Lepidopter
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;unzip lepidopter-v0.3.5-beta-armel.img.zip&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;unzip lepidopter-v1.0.0-armel.img.zip&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;If you have downloaded the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;If you have downloaded the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;xz --decompress --verbose --no-sparse lepidopter-v0.3.5-beta-armel.img.xz&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;xz --decompress --verbose --no-sparse lepidopter-v1.0.0-armel.img.xz&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Run &lt;code&gt;df -h&lt;/code&gt; to see which devices are currently mounted.&lt;/p&gt;
 
@@ -328,7 +411,7 @@ your computer if you get the wrong device name). Make sure the device name is
 the name of the whole SD card as described above, not just a partition of it
 (for example, sdd, not sdds1 or sddp1, or mmcblk0 not mmcblk0p1).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;dd bs=4M if=~/lepidopter-v0.3.5-beta-armel.img of=/dev/sdd
+&lt;pre&gt;&lt;code&gt;dd bs=4M if=~/lepidopter-v1.0.0-armel.img of=/dev/sdd
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Please note that block size set to 4M will work most of the time. If not, please try
@@ -355,7 +438,7 @@ Pi, and have fun!&lt;/p&gt;
 
 &lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.zip&#34;&gt;Lepidopter
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Double-click on the downloaded Lepidopter image to extract it.&lt;/p&gt;
@@ -417,12 +500,12 @@ path.&lt;/p&gt;
 
 &lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.zip&#34;&gt;Lepidopter
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image file from the downloaded .xz file, so you now
 have
-&amp;ldquo;lepidopter-v0.3.5-beta-armel.img&amp;rdquo;.&lt;/p&gt;
+&amp;ldquo;lepidopter-v1.0.0-armel.img&amp;rdquo;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download
 &lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; and
@@ -477,11 +560,11 @@ such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
 &lt;p&gt;You might not be able to choose the device in Win32DiskImager on some notebooks,
 so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v0.3.5-beta-armel.img.zip&#34;&gt;Lepidopter
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
 image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image file from the downloaded .xz file, so you now have
-&amp;ldquo;lepidopter-v0.3.5-beta-armel.img&amp;rdquo;.&lt;/p&gt;
+&amp;ldquo;lepidopter-v1.0.0-armel.img&amp;rdquo;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download &lt;a href=&#34;http://shounen.ru/soft/flashnul/index.html&#34;&gt;flashnul&lt;/a&gt;.&lt;/p&gt;
 
@@ -524,12 +607,12 @@ Make sure that you use the correct drive letter for the SD Card as that drive
 will be overwritten!&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe E: -L C:\temp\lepidopter-v0.3.5-beta-armel.img&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe E: -L C:\temp\lepidopter-v1.0.0-armel.img&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Where &lt;code&gt;C:\flashnul\flashnul.exe&lt;/code&gt; is the location of the flashnul
 program; E: is the drive you want to overwrite, and
-&lt;code&gt;C:\temp\lepidopter-v0.3.5-beta-armel.img&lt;/code&gt; is the location of the .img file.&lt;/p&gt;
+&lt;code&gt;C:\temp\lepidopter-v1.0.0-armel.img&lt;/code&gt; is the location of the .img file.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Flashnul will give you a device summary and a caution message. Check
 the information to make sure you have selected the correct device, then type
