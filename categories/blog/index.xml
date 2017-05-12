@@ -1,12 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/categories/blog/index.xml</link>
-    <description>Recent content on OONI: Open Observatory of Network Interference</description>
+    <title>Blog on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/categories/blog/</link>
+    <description>Recent content in Blog on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 12 May 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OONI at the CryptoRave 2017</title>
+      <link>https://ooni.torproject.org/post/ooni-cryptorave-2017/</link>
+      <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/ooni-cryptorave-2017/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://cryptorave.org/&#34;&gt;CryptoRave&lt;/a&gt; is a free, non-commercial and
+collectively funded 48 hour event featuring talks, workshops and activities
+related to security, privacy, anonymity, hacking and freedom of expression that
+attracts more that 2,500 people mainly from South America. The event took place
+in São Paulo, Brazil on 5th and 6th May 2017.&lt;/p&gt;
+
+&lt;p&gt;A number of people attended the OONI
+&lt;a href=&#34;https://cpa.cryptorave.org/pt-BR/CR2017/public/events/43&#34;&gt;presentation&lt;/a&gt; and
+&lt;a href=&#34;https://cpa.cryptorave.org/pt-BR/CR2017/public/events/112&#34;&gt;workshop&lt;/a&gt;
+(&amp;ldquo;Listatona&amp;rdquo;) that was co-organized with &lt;a href=&#34;https://www.codingrights.org/&#34;&gt;Coding Rights&lt;/a&gt;. During the workshop participants were able to
+better understand OONI&amp;rsquo;s testing methodology, and how ooniprobe performs
+network measurements. Participants provided useful feedback regarding
+&lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;test-lists&lt;/a&gt;
+and URLs from diverse sources from South America.&lt;/p&gt;
+
+&lt;p&gt;Below we provide the OONI presentation slides in English and Portuguese.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooni-presentation-slides&#34;&gt;OONI presentation slides&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/documents/cryptorave2017-slides/OONI-CryptoRave-2017-EN.pdf&#34;&gt;Slides in English language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/documents/cryptorave2017-slides/OONI-CryptoRave-2017-PT.pdf&#34;&gt;Slides in Portuguese language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks everyone for your attendance!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>OONI at the Internet Freedom Festival &amp; RightsCon 2017</title>

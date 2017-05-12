@@ -154,7 +154,7 @@ components part of the OONI ecosystem, how they work and what is the
 relationship between each other.</p>
 <p>The following diagram gives you an idea of how the various OONI components
 are related to each other.</p>
-<img src="_images/graphviz-9dd4a9bac8cee523515565c4c7d0cd8aef00677b.png" alt="digraph Architecture {
+digraph Architecture {
 
     subgraph cluster_0 {
         style=filled;
@@ -171,8 +171,7 @@ are related to each other.</p>
     &quot;lepidopter&quot; -&gt; &quot;ooni-probe&quot;;
     &quot;ooni-backend&quot; -&gt; &quot;ooni-pipeline&quot;;
     &quot;ooni-pipeline&quot; -&gt; &quot;ooni-explorer&quot;;
-}" />
-<p>The main software components are the following:</p>
+}<p>The main software components are the following:</p>
 <ul class="simple">
 <li><a class="reference internal" href="#ooni-probe">ooni-probe</a>: what users interested in contributing measurements will run.
 It also includes a web based user interface for running measurements and
@@ -242,7 +241,7 @@ is standard for the type of test that is being run.</p>
 tests what is generated for them by the test template, but, when using Test
 Templates, the report will always be a superset of what is provided by the test
 template.</p>
-<p>For example the a test based on the <a class="reference internal" href="api/ooni.templates.html#ooni.templates.httpt.HTTPTest" title="ooni.templates.httpt.HTTPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code></a> test
+<p>For example the a test based on the <code class="xref py py-class docutils literal"><span class="pre">ooni.templates.httpt.HTTPTest</span></code> test
 template will always have the list of HTTP requests performed and the responses
 received, but a developer may with to include inside of their report the
 checksum of the of the content as is show in the example in <a class="reference external" href="writing_tests.html">Writing Tests</a>.</p>
@@ -272,7 +271,7 @@ a configurable concurrency value that is set to default as 3.</p>
 <h2>Implementation details<a class="headerlink" href="#implementation-details" title="Permalink to this headline">¶</a></h2>
 <p>Below is a high level diagram of how the various modules of ooniprobe
 are interrelated to each other.</p>
-<img src="_images/graphviz-79d09bb89fc534a08eadce8eddb6040f7df6b254.png" alt="digraph ooniprobe_impl {
+digraph ooniprobe_impl {
 
     &quot;agent&quot; -&gt; &quot;director&quot;;
     &quot;scheduler&quot; -&gt; &quot;director&quot;;
@@ -282,8 +281,7 @@ are interrelated to each other.</p>
     &quot;deck&quot; -&gt; &quot;nettest&quot;;
     &quot;deck&quot; -&gt; &quot;backend_client&quot;;
     &quot;deck&quot; -&gt; &quot;nettests&quot;;
-}" />
-<p>ooni-probe is written in python using the <a class="reference external" href="http://twistedmatrix.org">Twisted networking framework</a>.</p>
+}<p>ooni-probe is written in python using the <a class="reference external" href="http://twistedmatrix.org">Twisted networking framework</a>.</p>
 <p>The two main concepts in ooniprobe are a decks and nettests. A nettest is a
 particular network test that is designed to identify one class of anomalies.</p>
 <p>A deck is a collection of one or more nettests and some associated inputs (such
