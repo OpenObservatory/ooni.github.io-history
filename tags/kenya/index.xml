@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kenya on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/kenya/</link>
-    <description>Recent content in Kenya on OONI: Open Observatory of Network Interference</description>
+    <title>OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/kenya/index.xml</link>
+    <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/tags/kenya/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -76,7 +75,7 @@ failed, indicating the possibility of TCP/IP blocking.&lt;/p&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.sportingbet.com&#34;&gt;http://www.sportingbet.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.sportingbet.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;
 &lt;td&gt;0&lt;/td&gt;

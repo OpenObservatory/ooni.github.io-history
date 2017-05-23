@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thailand on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/thailand/</link>
-    <description>Recent content in Thailand on OONI: Open Observatory of Network Interference</description>
+    <title>OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/thailand/index.xml</link>
+    <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/tags/thailand/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -1150,91 +1149,91 @@ across ISPs as part of our testing and data analysis.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;DTAC (AS24378)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.nypost.com&#34;&gt;http://www.nypost.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.nypost.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News media&lt;/td&gt;
 &lt;td&gt;2/23/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;DTAC (AS24378)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://xhamster.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/10/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;TOT 3BB (AS23969)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.dailymail.co.uk&#34;&gt;http://www.dailymail.co.uk&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.dailymail.co.uk&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News media&lt;/td&gt;
 &lt;td&gt;2/20/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;TOT 3BB (AS23969)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.hotspotshield.com&#34;&gt;http://www.hotspotshield.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.hotspotshield.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Anonymity and censorship circumvention&lt;/td&gt;
 &lt;td&gt;2/20/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Realmove Company Limited (AS132061)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.wikileaks.org&#34;&gt;http://www.wikileaks.org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.wikileaks.org&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News media&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Realmove Company Limited (AS132061)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://anonymouse.org&#34;&gt;http://anonymouse.org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://anonymouse.org&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Anonymity and censorship circumvention&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://ultrasurf.us&#34;&gt;http://ultrasurf.us&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://ultrasurf.us&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Anonymity and censorship circumvention&lt;/td&gt;
 &lt;td&gt;2/22/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://pridetube.com&#34;&gt;http://pridetube.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://pridetube.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.naughty.com&#34;&gt;http://www.naughty.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.naughty.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/22/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.livejasmin.com&#34;&gt;http://www.livejasmin.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.livejasmin.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/24/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;True Internet CO., LDT (AS17552)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://redtube.com&#34;&gt;http://redtube.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://redtube.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/22/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;True Internet CO., LDT (AS17552)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://xhamster.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/16/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;JasTel Network International Gateway (AS45629)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://youjizz.com&#34;&gt;http://youjizz.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://youjizz.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
@@ -1289,19 +1288,19 @@ page, dailymail.co.uk was found to be blocked based on DNS censorship.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;DTAC (AS24378)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.nypost.com&#34;&gt;http://www.nypost.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.nypost.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/23/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;TOT 3BB (AS23969)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.dailymail.co.uk&#34;&gt;http://www.dailymail.co.uk&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.dailymail.co.uk&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/20/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Realmove Company Limited (AS132061)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.wikileaks.org&#34;&gt;http://www.wikileaks.org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.wikileaks.org&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1338,19 +1337,19 @@ illustrated in the table below.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;TOT 3BB (AS23969)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.hotspotshield.com&#34;&gt;http://www.hotspotshield.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.hotspotshield.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/20/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Realmove Company Limited (AS132061)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://anonymouse.org&#34;&gt;http://anonymouse.org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://anonymouse.org&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://ultrasurf.us&#34;&gt;http://ultrasurf.us&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://ultrasurf.us&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/22/2017&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1381,43 +1380,43 @@ to be blocked in Thailand.&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://pridetube.com&#34;&gt;http://pridetube.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://pridetube.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.naughty.com&#34;&gt;http://www.naughty.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.naughty.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/22/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;Triple-T Internet Co., Ldt (AS45758)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.livejasmin.com&#34;&gt;http://www.livejasmin.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.livejasmin.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/24/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;True Internet CO., LDT (AS17552)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://redtube.com&#34;&gt;http://redtube.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://redtube.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/22/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;True Internet CO., LDT (AS17552)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://xhamster.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/16/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;JasTel Network International Gateway (AS45629)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://youjizz.com&#34;&gt;http://youjizz.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://youjizz.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/14/2017&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
 &lt;td&gt;DTAC (AS24378)&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://xhamster.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;2/10/201&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;

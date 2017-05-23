@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Malaysia on OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/malaysia/</link>
-    <description>Recent content in Malaysia on OONI: Open Observatory of Network Interference</description>
+    <title>OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/malaysia/index.xml</link>
+    <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/tags/malaysia/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -1289,7 +1288,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://adultfriendfinder.com&#34;&gt;http://adultfriendfinder.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://adultfriendfinder.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Online Dating&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:55:08&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:55:08&lt;/td&gt;
@@ -1298,7 +1297,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://beeg.com&#34;&gt;http://beeg.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://beeg.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:55:26&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:55:26&lt;/td&gt;
@@ -1307,7 +1306,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://extratorrent.cc&#34;&gt;http://extratorrent.cc&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://extratorrent.cc&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;File-sharing&lt;/td&gt;
 &lt;td&gt;2016-11-10 0:02:37&lt;/td&gt;
 &lt;td&gt;2016-11-10 0:03:42&lt;/td&gt;
@@ -1316,7 +1315,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://jinggo-fotopages.blogspot.my/&#34;&gt;http://jinggo-fotopages.blogspot.my/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://jinggo-fotopages.blogspot.my/&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Political Criticism&lt;/td&gt;
 &lt;td&gt;2016-11-10 1:11:18&lt;/td&gt;
 &lt;td&gt;2016-11-10 1:11:18&lt;/td&gt;
@@ -1325,7 +1324,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://malaysia-chronicle.com&#34;&gt;http://malaysia-chronicle.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://malaysia-chronicle.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Political Criticism&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:32:58&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:32:58&lt;/td&gt;
@@ -1334,7 +1333,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://manhub.com&#34;&gt;http://manhub.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://manhub.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:59:53&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:59:53&lt;/td&gt;
@@ -1343,7 +1342,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://pornhub.com&#34;&gt;http://pornhub.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://pornhub.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:01:41&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:01:41&lt;/td&gt;
@@ -1352,7 +1351,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://redtube.com&#34;&gt;http://redtube.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://redtube.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:02:06&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:02:06&lt;/td&gt;
@@ -1361,7 +1360,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://syedsoutsidethebox.blogspot.my/&#34;&gt;http://syedsoutsidethebox.blogspot.my/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://syedsoutsidethebox.blogspot.my/&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Political Criticism&lt;/td&gt;
 &lt;td&gt;2016-11-10 1:11:16&lt;/td&gt;
 &lt;td&gt;2016-11-10 1:11:16&lt;/td&gt;
@@ -1370,7 +1369,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://tabunginsider.blogspot.my/&#34;&gt;http://tabunginsider.blogspot.my/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://tabunginsider.blogspot.my/&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Political Criticism&lt;/td&gt;
 &lt;td&gt;2016-11-10 1:11:13&lt;/td&gt;
 &lt;td&gt;2016-11-10 1:11:13&lt;/td&gt;
@@ -1379,7 +1378,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://thepiratebay.org&#34;&gt;http://thepiratebay.org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://thepiratebay.org&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;File-sharing&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:03:00&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:03:00&lt;/td&gt;
@@ -1388,7 +1387,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.888casino.com&#34;&gt;http://www.888casino.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.888casino.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:05:18&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:05:18&lt;/td&gt;
@@ -1397,7 +1396,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.89.com&#34;&gt;http://www.89.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.89.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:05:19&lt;/td&gt;
 &lt;td&gt;2016-09-25 4:05:11&lt;/td&gt;
@@ -1406,7 +1405,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.ashemaletube.com&#34;&gt;http://www.ashemaletube.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.ashemaletube.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:07:28&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:07:28&lt;/td&gt;
@@ -1415,7 +1414,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.asiasentinel.com&#34;&gt;http://www.asiasentinel.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.asiasentinel.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News Media&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:08&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:08&lt;/td&gt;
@@ -1424,7 +1423,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.belmont.ag&#34;&gt;http://www.belmont.ag&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.belmont.ag&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:10:13&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:10:13&lt;/td&gt;
@@ -1433,7 +1432,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.betfair.com&#34;&gt;http://www.betfair.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.betfair.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:10:23&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:10:23&lt;/td&gt;
@@ -1442,7 +1441,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.carnivalcasino.com&#34;&gt;http://www.carnivalcasino.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.carnivalcasino.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:13:39&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:13:39&lt;/td&gt;
@@ -1451,7 +1450,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.casinotropez.com&#34;&gt;http://www.casinotropez.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.casinotropez.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:13:41&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:13:41&lt;/td&gt;
@@ -1460,7 +1459,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.clubdicecasino.com&#34;&gt;http://www.clubdicecasino.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.clubdicecasino.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:14:34&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:14:34&lt;/td&gt;
@@ -1469,7 +1468,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.europacasino.com&#34;&gt;http://www.europacasino.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.europacasino.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:17:45&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:17:45&lt;/td&gt;
@@ -1478,7 +1477,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.goldenrivieracasino.com&#34;&gt;http://www.goldenrivieracasino.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.goldenrivieracasino.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:20:34&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:20:34&lt;/td&gt;
@@ -1487,7 +1486,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.hustler.com&#34;&gt;http://www.hustler.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.hustler.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:21:36&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:21:36&lt;/td&gt;
@@ -1496,7 +1495,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.livejasmin.com&#34;&gt;http://www.livejasmin.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.livejasmin.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:32:04&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:32:04&lt;/td&gt;
@@ -1505,7 +1504,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.roxypalace.com&#34;&gt;http://www.roxypalace.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.roxypalace.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:41:19&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:41:19&lt;/td&gt;
@@ -1514,7 +1513,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.sarawakreport.org&#34;&gt;http://www.sarawakreport.org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.sarawakreport.org&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News Media&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:15&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:15&lt;/td&gt;
@@ -1523,7 +1522,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&#34;&gt;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News Media&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:51:03&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:51:03&lt;/td&gt;
@@ -1532,7 +1531,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.sarawakreport.org/tag/1mdb&#34;&gt;http://www.sarawakreport.org/tag/1mdb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.sarawakreport.org/tag/1mdb&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News Media&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:51:00&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:51:00&lt;/td&gt;
@@ -1541,7 +1540,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.sex.com&#34;&gt;http://www.sex.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.sex.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:42:12&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:42:12&lt;/td&gt;
@@ -1550,7 +1549,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.spinpalace.com&#34;&gt;http://www.spinpalace.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.spinpalace.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Gambling&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:43:02&lt;/td&gt;
 &lt;td&gt;2016-09-24 23:02:44&lt;/td&gt;
@@ -1559,7 +1558,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.themalaysianinsider.com&#34;&gt;http://www.themalaysianinsider.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.themalaysianinsider.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;News Media&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:47:22&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:47:22&lt;/td&gt;
@@ -1568,7 +1567,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.thereligionofpeace.com&#34;&gt;http://www.thereligionofpeace.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.thereligionofpeace.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Religion&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:29&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:29&lt;/td&gt;
@@ -1577,7 +1576,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.wetplace.com&#34;&gt;http://www.wetplace.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.wetplace.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:48:34&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:48:34&lt;/td&gt;
@@ -1586,7 +1585,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://www.worldsex.com&#34;&gt;http://www.worldsex.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://www.worldsex.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:49:57&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:49:57&lt;/td&gt;
@@ -1595,7 +1594,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://xhamster.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:50:56&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:50:56&lt;/td&gt;
@@ -1604,7 +1603,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://xvideos.com&#34;&gt;http://xvideos.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://xvideos.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:50:56&lt;/td&gt;
 &lt;td&gt;2016-09-24 23:06:57&lt;/td&gt;
@@ -1613,7 +1612,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://youjizz.com&#34;&gt;http://youjizz.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://youjizz.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:51:03&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:51:03&lt;/td&gt;
@@ -1622,7 +1621,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;http://youporn.com&#34;&gt;http://youporn.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;http://youporn.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Pornography&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:51:07&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:51:07&lt;/td&gt;
@@ -1631,7 +1630,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://medium.com&#34;&gt;https://medium.com&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://medium.com&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;Hosting and Blogging platforms&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:13&lt;/td&gt;
 &lt;td&gt;2016-09-24 3:49:13&lt;/td&gt;
@@ -1640,7 +1639,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://thepiratebay.se&#34;&gt;https://thepiratebay.se&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://thepiratebay.se&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;File-sharing&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:51:47&lt;/td&gt;
 &lt;td&gt;2016-09-24 23:07:17&lt;/td&gt;
@@ -1649,7 +1648,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://torrentz.eu&#34;&gt;https://torrentz.eu&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://torrentz.eu&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;File-sharing&lt;/td&gt;
 &lt;td&gt;2016-09-24 4:51:49&lt;/td&gt;
 &lt;td&gt;2016-09-25 6:06:53&lt;/td&gt;
@@ -1662,7 +1661,7 @@ based on DNS injections of block pages.&lt;/p&gt;
 &lt;p&gt;The chart below illustrates that porn, gambling and news websites were
 found to be blocked the most. Similarly, torrenting sites and websites
 expressing political criticism also presented relatively high
-percentages of blocking from the sites that were found to be blocked.&lt;/p&gt;
+percentages &lt;code&gt;of&lt;/code&gt; blocking from the sites that were found to be blocked.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/malaysia-report/malaysia-chart.png&#34; alt=&#34;Malaysia chart&#34; /&gt;&lt;/p&gt;
 
@@ -1734,11 +1733,11 @@ Section 233 of the &lt;a href=&#34;https://www.unodc.org/res/cld/document/mys/co
 &lt;p&gt;&lt;strong&gt;Blocked news websites&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.asiasentinel.com&#34;&gt;http://www.asiasentinel.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sarawakreport.org&#34;&gt;http://www.sarawakreport.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&#34;&gt;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sarawakreport.org/tag/1mdb&#34;&gt;http://www.sarawakreport.org/tag/1mdb&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.themalaysianinsider.com&#34;&gt;http://www.themalaysianinsider.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.asiasentinel.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.sarawakreport.org&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.sarawakreport.org/2016/04/the-simple-silver-bullet-solution-to-1mdb-malaysias-financial-woes-sack-najib/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.sarawakreport.org/tag/1mdb&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.themalaysianinsider.com&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;political-criticism&#34;&gt;Political Criticism&lt;/h3&gt;
@@ -1771,10 +1770,10 @@ throughout the testing period.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Blocked sites expressing political criticism&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://jinggo-fotopages.blogspot.my/&#34;&gt;http://jinggo-fotopages.blogspot.my/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://malaysia-chronicle.com&#34;&gt;http://malaysia-chronicle.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://syedsoutsidethebox.blogspot.my/&#34;&gt;http://syedsoutsidethebox.blogspot.my/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tabunginsider.blogspot.my/&#34;&gt;http://tabunginsider.blogspot.my/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://jinggo-fotopages.blogspot.my/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://malaysia-chronicle.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://syedsoutsidethebox.blogspot.my/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://tabunginsider.blogspot.my/&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;religion&#34;&gt;Religion&lt;/h3&gt;
@@ -1817,7 +1816,7 @@ throughout the testing period.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Blocked blogging platform&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com&#34;&gt;https://medium.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://medium.com&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;file-sharing&#34;&gt;File-sharing&lt;/h3&gt;
@@ -1837,10 +1836,10 @@ for enabling piracy, which is viewed as an offense under &lt;a href=&#34;https:/
 &lt;p&gt;&lt;strong&gt;Blocked torrenting sites&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://extratorrent.cc&#34;&gt;http://extratorrent.cc&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://thepiratebay.org&#34;&gt;http://thepiratebay.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://thepiratebay.se&#34;&gt;https://thepiratebay.se&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://torrentz.eu&#34;&gt;https://torrentz.eu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://extratorrent.cc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://thepiratebay.org&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://thepiratebay.se&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;https://torrentz.eu&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;online-dating&#34;&gt;Online Dating&lt;/h3&gt;
@@ -1870,20 +1869,20 @@ be blocked.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Blocked porn websites&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://beeg.com&#34;&gt;http://beeg.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://pornhub.com&#34;&gt;http://pornhub.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://redtube.com&#34;&gt;http://redtube.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.89.com&#34;&gt;http://www.89.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.ashemaletube.com&#34;&gt;http://www.ashemaletube.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.hustler.com&#34;&gt;http://www.hustler.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.livejasmin.com&#34;&gt;http://www.livejasmin.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.sex.com&#34;&gt;http://www.sex.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.wetplace.com&#34;&gt;http://www.wetplace.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.worldsex.com&#34;&gt;http://www.worldsex.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://xhamster.com&#34;&gt;http://xhamster.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://xvideos.com&#34;&gt;http://xvideos.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://youjizz.com&#34;&gt;http://youjizz.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://youporn.com&#34;&gt;http://youporn.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://beeg.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://pornhub.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://redtube.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.89.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.ashemaletube.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.hustler.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.livejasmin.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.sex.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.wetplace.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.worldsex.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://xhamster.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://xvideos.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://youjizz.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://youporn.com&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;gambling&#34;&gt;Gambling&lt;/h3&gt;
@@ -1899,16 +1898,16 @@ the country.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Blocked gambling sites&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.888casino.com&#34;&gt;http://www.888casino.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.belmont.ag&#34;&gt;http://www.belmont.ag&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.betfair.com&#34;&gt;http://www.betfair.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.carnivalcasino.com&#34;&gt;http://www.carnivalcasino.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.casinotropez.com&#34;&gt;http://www.casinotropez.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.clubdicecasino.com&#34;&gt;http://www.clubdicecasino.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.europacasino.com&#34;&gt;http://www.europacasino.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.goldenrivieracasino.com&#34;&gt;http://www.goldenrivieracasino.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.roxypalace.com&#34;&gt;http://www.roxypalace.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.spinpalace.com&#34;&gt;http://www.spinpalace.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.888casino.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.belmont.ag&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.betfair.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.carnivalcasino.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.casinotropez.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.clubdicecasino.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.europacasino.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.goldenrivieracasino.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.roxypalace.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;http://www.spinpalace.com&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;acknowledgement-of-limitations&#34;&gt;Acknowledgement of limitations&lt;/h2&gt;
