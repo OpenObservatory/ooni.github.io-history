@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.2.0 documentation</title>
+  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
   
@@ -33,7 +33,7 @@
         <link rel="index" title="Index"
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.0 documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                2.2.0
+                2.2.1-dev
               </div>
             
           
@@ -716,8 +716,8 @@
         <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
         <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Status&quot;</span><span class="p">)</span>
         <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> completed </span><span class="si">%d</span><span class="s2"> remaining&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">,</span>
-                                               <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/</span><span class="si">%d</span><span class="s2"> completed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">,</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">))</span>
         <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%0.1f%%</span><span class="s2"> (ETA: </span><span class="si">%d</span><span class="s2">s)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">completionPercentage</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
                                         <span class="bp">self</span><span class="o">.</span><span class="n">completionEta</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">taskDone</span><span class="p">()</span>
@@ -1131,7 +1131,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.2.0',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

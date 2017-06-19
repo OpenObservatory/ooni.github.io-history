@@ -6,8 +6,465 @@
     <description>Recent content in Post-rsses on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Jun 2017 15:30:00 +0000</lastBuildDate>
     <atom:link href="https://ooni.torproject.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>#EgyptCensors: Evidence of recent censorship events in Egypt</title>
+      <link>https://ooni.torproject.org/post/egypt-censors/</link>
+      <pubDate>Mon, 19 Jun 2017 15:30:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/egypt-censors/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/egypt-network-interference/egypt-flag.png&#34; alt=&#34;Egyptian Flag&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Egypt&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OONI tests:&lt;/strong&gt; &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity&lt;/a&gt;,
+&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP Header Field Manipulation&lt;/a&gt;,
+&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP Invalid Request Line&lt;/a&gt;,
+&lt;a href=&#34;https://ooni.torproject.org/nettest/http-host/&#34;&gt;HTTP Host&lt;/a&gt;, &lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;Vanilla Tor&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Link Egypt (AS24863), Vodafone Egypt (AS36935), Telecom
+Egypt (AS8452).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Analysis period:&lt;/strong&gt; 23rd May 2017 to 17th June 2017.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; Deep Packet Inspection (DPI) used to RESET
+connections.&lt;/p&gt;
+
+&lt;p&gt;Starting on May 24th, the Egyptian government ordered ISPs to &lt;a href=&#34;https://cpj.org/2017/05/egypt-blocks-access-to-21-news-websites.php&#34;&gt;block at least 21 news websites&lt;/a&gt;
+on the grounds of “supporting terrorism and spreading lies”. In an
+attempt to understand which sites were blocked and how, &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe network measurement software&lt;/a&gt; - designed to
+examine internet censorship - was run in three local vantage points in
+the country.&lt;/p&gt;
+
+&lt;p&gt;So far, we have been able to identify and confirm the blocking of &lt;em&gt;ten&lt;/em&gt;
+news websites, including madamasr.com, aljazeera.net, and eight others.
+It remains unclear to us though if all ten sites have been blocked under
+the Egyptian government’s recent order.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, we also found access to censorship circumvention software
+to be blocked as well. Link Egypt appears to be
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T000039Z_AS24863_4ECuBjVSis0W3jkh8NUDz2NnVyVbhFtCAU0T0E3y55azgD1ntq&#34;&gt;blocking&lt;/a&gt;
+access to the &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor network&lt;/a&gt;, though it
+appears to currently be accessible from the Telecom Egypt (TE) and
+Vodafone networks. We also found torproject.org, the &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor bridges website&lt;/a&gt;, and even &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;our own site&lt;/a&gt; (which enables users to measure
+internet censorship) to be blocked in some networks.&lt;/p&gt;
+
+&lt;p&gt;Through the collection and analysis of &lt;a href=&#34;https://measurements.ooni.torproject.org/files/by_country/EG&#34;&gt;network measurement data&lt;/a&gt; we
+were able to determine that Egyptian ISPs are using Deep Packet
+Inspection (DPI) technology to RESET connections to sites.&lt;/p&gt;
+
+&lt;h1 id=&#34;mada-masr-blocked&#34;&gt;Mada Masr blocked&lt;/h1&gt;
+
+&lt;p&gt;Mada Masr is an independent Cairo-based media organization that
+&lt;a href=&#34;https://www.madamasr.com/&#34;&gt;publishes stories&lt;/a&gt; of critical interest to
+the public. Such stories range from politics, culture and the economy,
+and even &lt;a href=&#34;https://www.madamasr.com/en/topic/activist-arrests/&#34;&gt;cover the ongoing crackdown&lt;/a&gt; of
+human rights activists. Two years ago, Mada Masr &lt;a href=&#34;https://www.madamasr.com/en/2015/10/15/news/u/mada-masr-nominated-for-raif-badawi-award-for-courageous-journalists/&#34;&gt;won an award&lt;/a&gt;
+for courageous journalism and for “trying to document facts rather than
+presenting populist arguments”.&lt;/p&gt;
+
+&lt;p&gt;Recently, Mada Masr
+&lt;a href=&#34;https://www.madamasr.com/en/2017/05/26/feature/politics/24-hours-later-what-we-know-about-the-blocking-of-mada-masrs-website/&#34;&gt;announced&lt;/a&gt;
+that its site was blocked in Egypt. &lt;a href=&#34;https://explorer.ooni.torproject.org/country/EG&#34;&gt;Network measurement data&lt;/a&gt; collected from
+&lt;a href=&#34;https://ooni.torproject.org/install/&#34;&gt;ooniprobe&lt;/a&gt; users in Egypt
+confirms the blocking of madamasr.com in three networks, as illustrated
+through the table below.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Websites&lt;/th&gt;
+&lt;th&gt;Link Egypt (AS24863)&lt;/th&gt;
+&lt;th&gt;Vodafone Egypt (AS36935)&lt;/th&gt;
+&lt;th&gt;TE (AS8452)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.madamasr.com/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170606T010719Z_AS24863_RPgEEPSee1tU0UtS99LL0KODKV57tui2Ix7UODjc4MI8V7BGoB?input=http:%2F%2Fmadamasr.com&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fwww.madamasr.com&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.madamasr.com%2Far%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;https://www.madamasr.com/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170527T022637Z_AS24863_a2cVejuvTKddBoVLe3DyDGnPfEnaoUAmP51zo3jTJNEdF6iJJT?input=https:%2F%2Fmadamasr.com&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220659Z_AS36935_KOMTdBwGsyVovBhs8tYihdTP4ucPSWA5iMH4PqXEfX5TU1ZWK3?input=https:%2F%2Fwww.madamasr.com&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170601T122343Z_AS8452_sGKIfKmvIikjYIwfZEyJ0KDA2hZ6vt3UWtwb7LfmJMuDhMw1CJ?input=https:%2F%2Fmadamasr.com&#34;&gt;ACCESSIBLE&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Interestingly enough, TE (AS8452) has only been blocking the HTTP
+version of madamasr.com, enabling users to circumvent the censorship by
+accessing the site over HTTPS. Vodafone Egypt (AS36935) and Link Egypt
+(AS24863), on the other hand, have been blocking both the HTTP and HTTPS
+versions of the site, rendering censorship harder to circumvent.&lt;/p&gt;
+
+&lt;p&gt;Based on the &lt;a href=&#34;https://explorer.ooni.torproject.org/country/EG&#34;&gt;network measurement data&lt;/a&gt; collected, we
+can confirm that Vodafone Egypt has been &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220638Z_AS36935_SveTAFTLwr1eLS6z6VntLnsSPTVa9Z1pPDxY8EQbDMPvSfeDyL?input=http:%2F%2Fwww.madamasr.com&#34;&gt;blocking access to madamasr.com from 24th May 2017&lt;/a&gt;
+(when the ban was first announced) to this date. The blocking of the
+site by Link Egypt can be &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170525T002807Z_AS24863_D0wke80vqyAftWWAj961yFc2afF0jtFbdiMFpu62DI5Sfs96b6?input=http:%2F%2Fmadamasr.com&#34;&gt;confirmed as of 25th May 2017&lt;/a&gt;,
+when ooniprobe users started testing the site in that network.&lt;/p&gt;
+
+&lt;p&gt;It’s worth noting that the HTTP version of madamasr.com was &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170530T005058Z_AS8452_cWwFLiGgXdRMrPJ24gH4CUx1K2h4ZPSO0KKW2MmXNoWXYf9bSJ?input=http:%2F%2Fmadamasr.com&#34;&gt;accessible in the TE network until 30th May 2017&lt;/a&gt;
+and that it only started getting &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170531T104508Z_AS8452_jE1XD5egqf8T5NyeHPLMd9YXtuZln6FffTsQf6JDXoqVrQHuLk?input=http:%2F%2Fwww.madamasr.com&#34;&gt;blocked on 31st May 2017&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All three ISPs are continuing to block access to madamasr.com, according
+to recent measurements.&lt;/p&gt;
+
+&lt;h1 id=&#34;aljazeera-blocked&#34;&gt;Aljazeera blocked&lt;/h1&gt;
+
+&lt;p&gt;Recent censorship events in Egypt are not limited to national news
+outlets. &lt;a href=&#34;https://explorer.ooni.torproject.org/country/EG&#34;&gt;Network measurement data&lt;/a&gt; collected from
+ooniprobe users in Egypt confirms the blocking of aljazeera.net in three
+networks, as illustrated through the table below.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Websites&lt;/th&gt;
+&lt;th&gt;Link Egypt (AS24863)&lt;/th&gt;
+&lt;th&gt;Vodafone Egypt (AS36935)&lt;/th&gt;
+&lt;th&gt;TE (AS8452)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.aljazeera.net/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T000416Z_AS24863_nrmytBw1nQBc5CKsQsuSe6r3XR7k5Mt0hFrO2Zeo3PEHIX4Jkt?input=http:%2F%2Fwww.aljazeera.net&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fwww.aljazeera.net&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.aljazeera.net%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;https://www.aljazeera.net/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220920Z_AS36935_oaDJX0uN8fMLncEu9NQ794dvX4bC3zFejdVouFgsmlHukkjCsn?input=https:%2F%2Fwww.aljazeera.net&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Based on the most recent &lt;a href=&#34;https://explorer.ooni.torproject.org/country/EG&#34;&gt;network measurement data&lt;/a&gt;, the HTTP
+version of aljazeera.net is currently blocked by Link Egypt, Vodafone
+Egypt and TE. Both &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220805Z_AS36935_Ia2wQfPniG5PpADTdVt0luN42pHLoF5d04wgOazzO6Ah4P9aeK?input=http:%2F%2Fwww.aljazeera.net&#34;&gt;Vodafone Egypt&lt;/a&gt;
+and &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T230622Z_AS24863_0N03X2oYPyCxNFjPD8NQriw1VQZMt1luVNnSkBTxeXMokS5ek8?input=http:%2F%2Fwww.aljazeera.net&#34;&gt;Link Egypt&lt;/a&gt;
+started blocking access to the site on 24th May 2017, when the ban was
+officially announced. The data we have shows that &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170605T000038Z_AS8452_22YpwwmYi2fFWXTnlZqgzQSB2X0fn0C7dDEdD5g75jT0IH9qXP?input=http:%2F%2Fwww.aljazeera.net&#34;&gt;TE blocked access to aljazeera.net as of 5th May 2017&lt;/a&gt;,
+though the block may have been implemented at an earlier date (this is
+something that we cannot corroborate, since the testing of this site in
+this network started on 5th May).&lt;/p&gt;
+
+&lt;p&gt;Similarly to the blocking of madamasr.com, Vodafone Egypt was found to
+be blocking both the
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170608T120433Z_AS36935_Cb2MTybnpnvEyLi1h2rnCL9Kpom8qxdoOFJNCLZDpQvnLzUb3G?input=http:%2F%2Fwww.aljazeera.net%2F&#34;&gt;HTTP&lt;/a&gt;
+and
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220920Z_AS36935_oaDJX0uN8fMLncEu9NQ794dvX4bC3zFejdVouFgsmlHukkjCsn?input=https:%2F%2Fwww.aljazeera.net&#34;&gt;HTTPS&lt;/a&gt;
+versions of aljazeera.net. However, as the HTTPS version of the site was
+only &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220920Z_AS36935_oaDJX0uN8fMLncEu9NQ794dvX4bC3zFejdVouFgsmlHukkjCsn?input=https:%2F%2Fwww.aljazeera.net&#34;&gt;tested in that network on 24th May 2017&lt;/a&gt;,
+it remains unclear if it is still being censored. Given the fact though
+that recent measurements show that Vodafone Egypt is still &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170608T120433Z_AS36935_Cb2MTybnpnvEyLi1h2rnCL9Kpom8qxdoOFJNCLZDpQvnLzUb3G?input=http:%2F%2Fwww.madamasr.com%2Far%2F&#34;&gt;blocking both the HTTP&lt;/a&gt;
+and
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170524T220659Z_AS36935_KOMTdBwGsyVovBhs8tYihdTP4ucPSWA5iMH4PqXEfX5TU1ZWK3?input=https:%2F%2Fwww.madamasr.com&#34;&gt;HTTPS&lt;/a&gt;
+versions of madamasr.com, it’s likely that they are continuing to block
+the HTTPS version of aljazeera.net as well.&lt;/p&gt;
+
+&lt;p&gt;As the HTTPS version of aljazeera.net has not been tested recently in
+the Link Egypt and TE networks, we do not have data that can show
+whether it is blocked or not.&lt;/p&gt;
+
+&lt;p&gt;Interestingly enough, TE temporarily &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170530T005058Z_AS8452_cWwFLiGgXdRMrPJ24gH4CUx1K2h4ZPSO0KKW2MmXNoWXYf9bSJ?input=http:%2F%2Fwww.aljazeera.net%2Fportal&#34;&gt;unblocked access to aljazeera.net/portal&lt;/a&gt;
+and to
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170531T121314Z_AS8452_TKPNRi4aRsUL2DJJBeyuZlliNrcXlH67MwCqF0pcAKp584UUmQ?input=http:%2F%2Fmidan.aljazeera.net&#34;&gt;midan.aljazeera.net&lt;/a&gt;
+on 30th and 31st May 2017, while &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170531T142614Z_AS8452_XzeOJtpw0NcNaLoAU6ffKjZFbmATnucDaGcx3KjST35uV3Q1c1?input=http:%2F%2Fwww.aljazeera.net&#34;&gt;continuing to block access to aljazeera.net&lt;/a&gt;.
+However, they &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170601T124754Z_AS8452_LiivSQN1qKbHeESfQQfZYPav1mX5bS7N9Or8m8wkpSAEJjEJw7?input=http:%2F%2Fmidan.aljazeera.net&#34;&gt;resumed the blocking&lt;/a&gt;
+on 1st June 2017.&lt;/p&gt;
+
+&lt;h1 id=&#34;more-news-websites-blocked&#34;&gt;More news websites blocked&lt;/h1&gt;
+
+&lt;p&gt;We also found the following 8 media websites to be blocked by Vodafone
+based on recent measurements. It remains unclear though if these news
+outlets were blocked under the &lt;a href=&#34;https://cpj.org/2017/05/egypt-blocks-access-to-21-news-websites.php&#34;&gt;Egyptian government’s recent order&lt;/a&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Websites&lt;/th&gt;
+&lt;th&gt;Link Egypt (AS24863)&lt;/th&gt;
+&lt;th&gt;Vodafone Egypt (AS36935)&lt;/th&gt;
+&lt;th&gt;TE (AS8452)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://horriapost.net/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170525T002712Z_AS24863_VVZHpJEjhssb4Hg3JRYTwAl6O37lu8mG8tMIYEYlK9RKdLCKS1?input=http:%2F%2Fhorriapost.net%2F&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170615T131624Z_AS36935_XbM7CT7wIvIDj338bud9oonjQNKYae4blQfuwMY4ZCrpCO5GJY?input=http:%2F%2Fhorriapost.net%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fhorriapost.net%2F&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.al-watan.com/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170615T131624Z_AS36935_XbM7CT7wIvIDj338bud9oonjQNKYae4blQfuwMY4ZCrpCO5GJY?input=http:%2F%2Fwww.al-watan.com%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.al-watan.com%2F&#34;&gt;Mostly accessible&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.gulf-times.com&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fwww.gulf-times.com&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.gulf-times.com&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.masralarabia.com/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170525T002729Z_AS24863_BuDMMzWdGoHuuEWJuWYuGJlCxxPtoEN1JnrrX6Cxn8Mh1UF1d3?input=http:%2F%2Fwww.masralarabia.com%2F&#34;&gt;ACCESSIBLE&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170615T131624Z_AS36935_XbM7CT7wIvIDj338bud9oonjQNKYae4blQfuwMY4ZCrpCO5GJY?input=http:%2F%2Fwww.masralarabia.com%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.masralarabia.com%2F&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.moheet.com/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170615T131624Z_AS36935_XbM7CT7wIvIDj338bud9oonjQNKYae4blQfuwMY4ZCrpCO5GJY?input=http:%2F%2Fwww.moheet.com%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.moheet.com%2F&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.qtv.qa/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170615T131624Z_AS36935_XbM7CT7wIvIDj338bud9oonjQNKYae4blQfuwMY4ZCrpCO5GJY?input=http:%2F%2Fwww.qtv.qa%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.qtv.qa%2F&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.raya.com/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T004202Z_AS24863_PdA4gRMl8XlnXGCZu9o7TVwcsXv0zokEr5GGpDHj2oiS9stzkv?input=http:%2F%2Fwww.raya.com%2Fportal&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170615T131624Z_AS36935_XbM7CT7wIvIDj338bud9oonjQNKYae4blQfuwMY4ZCrpCO5GJY?input=http:%2F%2Fwww.raya.com%2F&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fwww.raya.com%2F&#34;&gt;Likely blocked&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.thepeninsulaqatar.com&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fwww.thepeninsulaqatar.com&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The table above illustrates that all eight news outlets were found to
+recently be blocked by Vodafone Egypt, which appears to be using DPI
+technology to RESET connections to these sites. We are currently unable
+though to confirm whether these sites are in fact blocked in the TE and
+Link Egypt networks as well.&lt;/p&gt;
+
+&lt;h1 id=&#34;torproject-org-tor-bridges-and-ooni-s-site-blocked&#34;&gt;Torproject.org, Tor bridges, and OONI’s site blocked&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; is free software and an open
+network that provides its users with online anonymity. Tor software is
+designed to bounce communications around a distributed network of relays
+run by volunteers around the world, thus hiding users’ IP addresses and
+circumventing online tracking and internet censorship. &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor bridges&lt;/a&gt; are designed to enable users
+to access the Tor network in countries where access to it is blocked.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/country/EG&#34;&gt;Network measurement data&lt;/a&gt; collected from
+three local vantage points in Egypt show the blocking of The Tor
+Project’s website and of bridges.torproject.org, the subdomain that
+enables users to get Tor bridges to circumvent the blocking of the Tor
+network. But we also found our own site (ooni.torproject.org), which
+promotes network measurement software designed to detect internet
+censorship, to be blocked as well.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Websites&lt;/th&gt;
+&lt;th&gt;Link Egypt (AS24863)&lt;/th&gt;
+&lt;th&gt;Vodafone Egypt (AS36935)&lt;/th&gt;
+&lt;th&gt;TE (AS8452)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://www.torproject.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170527T213554Z_AS24863_dEZ5mDUS0q3wwhcJWy4JeJB8ecIwYL7Kp7CyyWKFihwwiU5aXM?input=http:%2F%2Ftorproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fwww.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Unclear&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;https://www.torproject.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T000416Z_AS24863_nrmytBw1nQBc5CKsQsuSe6r3XR7k5Mt0hFrO2Zeo3PEHIX4Jkt?input=https:%2F%2Fwww.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;Unclear&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://bridges.torproject.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170528T012045Z_AS24863_tzOtDMIclzclWroIwG4ITWj56g0u9La10h3a4IhkmpZXDmDWmZ?input=http:%2F%2Fbridges.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fbridges.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fbridges.torproject.org&#34;&gt;ACCESSIBLE&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;https://bridges.torproject.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T004202Z_AS24863_PdA4gRMl8XlnXGCZu9o7TVwcsXv0zokEr5GGpDHj2oiS9stzkv?input=https:%2F%2Fbridges.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T010538Z_AS8452_8xbPtSv86ne0xmuWkInIlHcJCDu6wm2kLqGGxE7fZ8hikeF2Xc?input=https:%2F%2Fbridges.torproject.org&#34;&gt;ACCESSIBLE&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;http://ooni.torproject.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170527T220324Z_AS24863_bXdVf9r1lBblsIZcA5X0w2yIZ36ktyOXw1uOdtgug9qaKU2WP6?input=http:%2F%2Fooni.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170617T112204Z_AS36935_mDk3o109bS27kksZ75bBcKtzKG7YXbNSJoDwif7bNLmBO6L3Zr?input=http:%2F%2Fooni.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fooni.torproject.org&#34;&gt;ACCESSIBLE&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;https://ooni.torproject.org&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170601T003359Z_AS24863_hBVFAdrydtozIg60uDcw7jsKi1wFWNXKOck4MbSUA7FP4gUqqW?input=https:%2F%2Fooni.torproject.org&#34;&gt;BLOCKED&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;td&gt;Unknown (N/A)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The table above illustrates that both the HTTP and HTTPS versions of
+torproject.org, bridges.torproject.org and ooni.torproject.org were
+found to recently be blocked by Link Egypt. Based on the collected data,
+Link Egypt appears to have started blocking these domains on 27th May
+2017 and continues to block them to date.&lt;/p&gt;
+
+&lt;p&gt;Vodafone Egypt, on the other hand, was only found to be blocking the
+HTTP versions of torproject.org, bridges.torproject.org and
+ooni.torproject.org. It remains unclear, however, if the HTTPS versions
+of these domains are blocked as well, since they have not been tested
+within this network.&lt;/p&gt;
+
+&lt;p&gt;Based on the recent collection of network measurement data, we are
+unable to reach a conclusion on the accessibility of torproject.org in
+the TE network. Some
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170528T222857Z_AS8452_GQNW87otydPexm8sKRXiyTbErQBvP7jSGHHO5rU4yDlw8tmERT?input=https:%2F%2Fwww.torproject.org&#34;&gt;measurements&lt;/a&gt;
+indicate that TE may have started blocking access to
+&lt;a href=&#34;https://www.torproject.org&#34;&gt;https://www.torproject.org&lt;/a&gt; on 28th May 2017, but only on its mobile
+network. Similarly, other
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170530T005058Z_AS8452_cWwFLiGXdRMrPJ24gH4CUx1K2h4ZPSO0KKW2MmXNoWXYf9bSJ?input=https:%2F%2Ftorproject.org&#34;&gt;measurements&lt;/a&gt;
+indicate that TE may have started blocking &lt;a href=&#34;https://torproject.org&#34;&gt;https://torproject.org&lt;/a&gt; on
+fixed networks on 30th May 2017. But on 4th June 2017, both domains
+appeared to be accessible (data
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170604T085131Z_AS8452_131O4JvC2J6TUcLu70jDQqicAHkHGMdnRrK2IxNk3uPxFzmD2w?input=https:%2F%2Ftorproject.org&#34;&gt;here&lt;/a&gt;
+and
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170604T075102Z_AS8452_zbpJ7JDsbnj7zRpzQI6cBQ8Mhe0F0vWPryWmqd29l6Ej764JW5?input=https:%2F%2Fwww.torproject.org&#34;&gt;here&lt;/a&gt;),
+indicating that if they were censored, their block was lifted.&lt;/p&gt;
+
+&lt;p&gt;However, access to &lt;code&gt;https://torproject.org&lt;/code&gt; appeared to be &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170608T020414Z_AS8452_LIot9lnBiGkPw3OYWo52W9SWlhYNSPcDW3IU0fND6WAbYiK41N?input=https:%2F%2Ftorproject.org&#34;&gt;blocked again&lt;/a&gt;
+on 8th June, while appearing to be
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170609T011311Z_AS8452_Vi1AOZpkPpEKwD8vOI41LYWOcKQQeEVMM3LBqHWOY6LX5lOzmi?input=https:%2F%2Ftorproject.org&#34;&gt;accessible&lt;/a&gt;
+the next day. Quite similarly, OONI’s network measurements indicate that
+TE blocked access to the HTTPS version of www.torproject.org on
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170606T000048Z_AS8452_4syxiMyUcjacHSLUFWoAS8RQKWZxzBHaYglwJrceUKf9dClE79?input=https:%2F%2Fwww.torproject.org&#34;&gt;6th&lt;/a&gt;
+and
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T143520Z_AS8452_buuB25v50T8fEy2PviRH0nTlq7cuLwPwuLJFV5eNXTCJORgkz6?input=https:%2F%2Fwww.torproject.org&#34;&gt;7th&lt;/a&gt;
+June, but the HTTP version of this domain appeared to be
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T153246Z_AS8452_BrJDLZ6slIndIRUGN8yonWPAlEEo4N23xg6Sv3lChLSDTWmQEk?input=http:%2F%2Fwww.torproject.org%2F&#34;&gt;accessible&lt;/a&gt;
+during the same dates within the same network. The latest measurements,
+on the other hand, show that both the
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170609T091444Z_AS8452_VS4MRLXrZIETB18HE1cBIMn1lEIx6vrukrf1XtFBEfim6ICvqH?input=http:%2F%2Fwww.torproject.org%2F&#34;&gt;HTTP&lt;/a&gt;
+and
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170609T000049Z_AS8452_VxGiZKSsPdYWwc40X34gDsWyIZQLCJO8EAZBNzCIOwuoQ5UBCn?input=https:%2F%2Fwww.torproject.org&#34;&gt;HTTPS&lt;/a&gt;
+versions of www.torproject.org were accessible in the TE network. Since
+the collected data is not conclusive, it remains unclear whether TE
+intentionally blocked access to torproject.org or whether the anomalous
+measurements are false positives.&lt;/p&gt;
+
+&lt;p&gt;It also remains unclear whether TE blocked access to
+ooni.torproject.org. Measurements from 9th June 2017 indicate that
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170609T091444Z_AS8452_VS4MRLXrZIETB18HE1cBIMn1lEIx6vrukrf1XtFBEfim6ICvqH?input=http:%2F%2Fooni.torproject.org&#34;&gt;access to our site was blocked&lt;/a&gt;,
+but measurements from &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170608T113834Z_AS8452_jHZsSvnejndKU0rga2OtkDZFQkmlyHPdDcXVSVOXAsAY4D49et?input=http:%2F%2Fooni.torproject.org&#34;&gt;previous dates&lt;/a&gt;,
+as well as &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170611T125225Z_AS8452_9881Gm998h0a9fcgmv5Y8VhsxPUGzOHwjYl8tEbY1l8pbJMyyj?input=http:%2F%2Fooni.torproject.org&#34;&gt;more recent measurements&lt;/a&gt;,
+show that it was accessible. As such, the anomalous measurements might
+have been due to transient network failures.&lt;/p&gt;
+
+&lt;p&gt;On a positive note, bridges.torproject.org was confirmed to be
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170609T091444Z_AS8452_VS4MRLXrZIETB18HE1cBIMn1lEIx6vrukrf1XtFBEfim6ICvqH?input=http:%2F%2Fbridges.torproject.org&#34;&gt;accessible&lt;/a&gt;
+in the TE network, enabling users to acquire Tor bridges.&lt;/p&gt;
+
+&lt;h1 id=&#34;tor-network-blocked-by-link-egypt&#34;&gt;Tor network blocked by Link Egypt&lt;/h1&gt;
+
+&lt;p&gt;OONI’s &lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;Vanilla Tor test&lt;/a&gt; is designed to
+examine the reachability of the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt; by attempting to successfully
+bootstrap a connection to the Tor network.
+&lt;a href=&#34;https://explorer.ooni.torproject.org/country/EG&#34;&gt;Data&lt;/a&gt; collected
+through this test indicates that the Tor network is
+&lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170607T000039Z_AS24863_4ECuBjVSis0W3jkh8NUDz2NnVyVbhFtCAU0T0E3y55azgD1ntq&#34;&gt;blocked&lt;/a&gt;
+in the Link Egypt network, but likely accessible in the TE and Vodafone
+Egypt networks.&lt;/p&gt;
+
+&lt;p&gt;Tests in the Link Egypt network were run every day between 24th to 28th
+May, and 1st to 7th June 2017. During this period, ooniprobe was never
+able to establish a connection to the Tor network, strongly indicating
+that it may have been blocked.&lt;/p&gt;
+
+&lt;p&gt;Data collected from the TE network, however, is less conclusive. While
+ooniprobe was able to bootstrap a connection to the Tor network between
+29th to 31st May, it was unable to do so on 1st and 4th June. Between
+5th to 9th June 2017, some attempts were successful, while others
+failed. Since ooniprobe was able to establish &lt;em&gt;some&lt;/em&gt; connections over
+the last weeks, it’s likely that the failed connections were caused by
+transient network failures.&lt;/p&gt;
+
+&lt;p&gt;During the last weeks, the Tor network was only tested once in the
+Vodafone Egypt network, and a connection to it was &lt;a href=&#34;https://explorer.ooni.torproject.org/measurement/20170601T150308Z_AS36935_YJmHwPxdxUkZDHeO2SZQ71dJwKdALK33dovkkBeBNCF5LlTswQ&#34;&gt;successfully established&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;contributing-to-this-study&#34;&gt;Contributing to this study&lt;/h1&gt;
+
+&lt;p&gt;This study is part of ongoing efforts to monitor internet censorship
+events in Egypt and around the world. Potentially anyone can &lt;a href=&#34;https://ooni.torproject.org/install/&#34;&gt;run ooniprobe&lt;/a&gt;, since it’s &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;free and open source software&lt;/a&gt; and
+can be run from multiple platforms (Android, iOS, macOS, Linux,
+Raspberry Pis). Over the last five years, tens of thousands of ooniprobe
+users have &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;measured networks across more than 190 countries&lt;/a&gt; with the aim of
+uncovering internet censorship events.&lt;/p&gt;
+
+&lt;p&gt;Running ooniprobe however can potentially be a
+&lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;risky&lt;/a&gt; activity. Anyone
+monitoring your internet activity (e.g. ISP, government, employer) will
+be able to know that you are running ooniprobe. And some of the sites
+that are tested by ooniprobe (such as pornography or online gambling)
+may be illegal in certain countries.&lt;/p&gt;
+
+&lt;p&gt;If you feel uncomfortable with the potential risks, there are other
+(equally important) ways that you can contribute. Ooniprobe’s censorship
+findings are only as interesting as the types of sites that are tested.
+We were likely unable to identify the &lt;a href=&#34;https://cpj.org/2017/05/egypt-blocks-access-to-21-news-websites.php&#34;&gt;blocking of all 21 news outlets&lt;/a&gt;
+if they were not included in the &lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;lists of sites&lt;/a&gt; that
+we tested for censorship. As such, reviewing and updating the lists that
+ooniprobe tests for censorship is an important task. Information on how
+to contribute to such lists can be found
+&lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you’re a data analyst, you may be interested in analyzing the
+&lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;network measurement data&lt;/a&gt;
+collected by ooniprobe. If you’re a journalist, you may be interested in
+telling stories based on the
+&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;data&lt;/a&gt;. If you’re a
+lawyer, you may be interested in examining the legality of censorship
+events based on ooniprobe network measurement data, and potentially even
+using it as evidence in court cases. And if you’re a human rights
+advocate, you may be interested in supporting &lt;a href=&#34;https://www.accessnow.org/keepiton/&#34;&gt;Access Now’s KeepItOn campaign&lt;/a&gt; for a free and open internet.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The State of Internet Censorship in Indonesia</title>
@@ -11664,62 +12121,6 @@ the client&amp;rsquo;s connection:&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s all for today. Remember, fried potato is better with onion!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/belarus-fries-onion/640px-Fried_potatoes.jpg&#34; alt=&#34;The Onion&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OONI releases Lepidopter Raspberry Pi distribution</title>
-      <link>https://ooni.torproject.org/post/lepidopter/</link>
-      <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/post/lepidopter/</guid>
-      <description>
-
-&lt;p&gt;The Open Observatory of Network Interference (OONI) team is happy to announce
-the beta release of ooniprobe&amp;rsquo;s distribution for Raspberry Pis, caĺled
-&lt;strong&gt;Lepidopter&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-lepidopter&#34;&gt;What is Lepidopter&lt;/h2&gt;
-
-&lt;p&gt;Lepidopter is a Raspberry Pi distribution image with all the required
-dependencies and software packages in place, configured to run network
-measurement tests via the
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; software. It is
-developed and designed to require no physical attendance upon first bootstrap
-but also allows experienced users to further configure it as they wish. The
-&lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;source code&lt;/a&gt; and the building
-scripts of the Lepidopter image are free and open source software.&lt;/p&gt;
-
-&lt;h2 id=&#34;why-use-lepidopter&#34;&gt;Why use Lepidopter&lt;/h2&gt;
-
-&lt;p&gt;Since 2012 OONI has collected millions of network measurements that show
-evidence of internet censorship and network tampering. OONI measurement data
-&lt;a href=&#34;https://ooni.torproject.org/post/&#34;&gt;shows&lt;/a&gt; how ISPs filter and censor the internet.
-This wouldn&amp;rsquo;t be possible without the help of numerous volunteers that are
-contributing by running consistent ooniprobe network measurement tests from
-different vantage points. Up to now users needed to be technically savvy to
-maintain their own probes dealing with system configuration, software and
-measurement specific updates. Lepidopter makes it easier for people that have a
-Raspberry Pi and an SD card to be part of the OONI community and help us
-reveal, publish and document possible instances of network interference
-worldwide.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-obtain-lepidopter&#34;&gt;How to obtain Lepidopter&lt;/h2&gt;
-
-&lt;p&gt;Please refer to the &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;installation instructions&lt;/a&gt; where
-you can find a detailed guide on how to download, verify and install the latest
-Lepidopter image for a Raspberry Pi.&lt;/p&gt;
-
-&lt;h2 id=&#34;keep-in-touch&#34;&gt;Keep in touch&lt;/h2&gt;
-
-&lt;p&gt;We have recently created a mailing list for future and current probe operators
-to get in touch with us and receive regular updates regarding Lepidopter and
-other probe specific operations. You can subscribe to the mailing list by
-registering
-&lt;a href=&#34;https://lists.torproject.org/cgi-bin/mailman/listinfo/ooni-operators&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Find out about our regular community meetings, other mailing lists and how you
-can get involved &lt;a href=&#34;https://ooni.torproject.org/get-involved/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
