@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Writing OONI tests</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#test-cases">Test Cases</a></li>
@@ -132,8 +138,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -142,23 +150,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Writing OONI tests</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Writing OONI tests</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/writing_tests.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -179,7 +204,7 @@ multiple Test Methods.</p>
 you will subclass this object.</p>
 <ul>
 <li><p class="first">inputs: can be set to a static set of inputs. All the tests (the methods
-starting with the &#8220;test&#8221; prefix) will be run once per input. At every
+starting with the “test” prefix) will be run once per input. At every
 run the _input_ attribute of the TestCase instance will be set to the
 value of the current iteration over inputs.  Any python iterable object
 can be set to inputs.</p>
@@ -284,10 +309,10 @@ this:</p>
 <dt>class UrlGeneratorWithSend(object):</dt>
 <dd><dl class="first docutils">
 <dt>def __init__(self):</dt>
-<dd><p class="first">&#8220;&#8221;&#8220;Create initial list and set generator state.&#8221;&#8220;&#8221;
-self.urls = [&#8220;<a class="reference external" href="http://www.torproject.org">http://www.torproject.org</a>&#8221;,</p>
+<dd><p class="first">“”“Create initial list and set generator state.”“”
+self.urls = [“<a class="reference external" href="http://www.torproject.org">http://www.torproject.org</a>”,</p>
 <blockquote>
-<div>&#8220;<a class="reference external" href="https://ooni.torproject.org">https://ooni.torproject.org</a>&#8220;]</div></blockquote>
+<div>“<a class="reference external" href="https://ooni.torproject.org">https://ooni.torproject.org</a>”]</div></blockquote>
 <p class="last">self.current = 0</p>
 </dd>
 <dt>def __iter__(self):</dt>
@@ -307,10 +332,10 @@ return cur</dd>
 next = __next__</p>
 <dl class="last docutils">
 <dt>def send(self, returned):</dt>
-<dd><p class="first">&#8220;&#8221;&#8220;Appends a value to self.urls when activated&#8221;&#8220;&#8221;
+<dd><p class="first">“”“Appends a value to self.urls when activated”“”
 if returned is not None:</p>
 <blockquote class="last">
-<div>print(&#8220;Value {0} sent to generator&#8221;.format(returned))
+<div>print(“Value {0} sent to generator”.format(returned))
 self.urls.append(returned)</div></blockquote>
 </dd>
 </dl>
@@ -327,15 +352,15 @@ self.urls.append(returned)</div></blockquote>
 inputs = UrlGeneratorWithSend()</p>
 <dl class="docutils">
 <dt>def postProcessor(self, measurements):</dt>
-<dd><p class="first">&#8220;&#8221;&#8220;If any HTTPS url&#8217;s are passed send back an HTTP url.&#8221;&#8220;&#8221;
-if re.match(&#8220;^https&#8221;, self.input):</p>
+<dd><p class="first">“”“If any HTTPS url’s are passed send back an HTTP url.”“”
+if re.match(“^https”, self.input):</p>
 <blockquote>
-<div>http_version = re.sub(&#8220;https&#8221;, &#8220;http&#8221;, self.input, 1)
+<div>http_version = re.sub(“https”, “http”, self.input, 1)
 self.inputs.send(http_version)</div></blockquote>
 <p class="last">return self.report</p>
 </dd>
 <dt>def test_url(self):</dt>
-<dd>self.report[&#8216;tested&#8217;] = [self.input]
+<dd>self.report[‘tested’] = [self.input]
 return defer.succeed(1)</dd>
 </dl>
 </div></blockquote>
@@ -743,15 +768,18 @@ and <a class="reference internal" href="api/ooni.templates.html#ooni.templates.d
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="writing_test_helpers.html" class="btn btn-neutral float-right" title="Writing Test Helpers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="writing_test_helpers.html" class="btn btn-neutral float-right" title="Writing Test Helpers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -785,7 +813,8 @@ and <a class="reference internal" href="api/ooni.templates.html#ooni.templates.d
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

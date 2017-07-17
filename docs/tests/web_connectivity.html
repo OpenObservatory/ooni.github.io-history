@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -42,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -105,8 +111,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -115,23 +123,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Details</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Details</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/tests/web_connectivity.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -174,7 +199,7 @@ standard HTTPS connection.</p>
 <span class="c1">###########################################</span>
 </pre></div>
 </div>
-<p>&#8212;
+<p>—
 annotations: null
 data_format_version: 0.2.0
 input_hashes: [a5da71ab5f265d396da13e2e9c2ca3ed43db010e9702d46ca7329c9d4ab33e81]
@@ -187,12 +212,12 @@ report_id: 20160712T172644Z_AS7922_obPihyuYvZu6JmCKxb7NLCJgjJu7B1Zqbs6QuFxeJK1iP
 software_name: ooniprobe
 software_version: 1.5.1
 test_helpers:
-backend: {address: &#8216;httpo://7jne2rpg5lsaqs6b.onion&#8217;, type: onion}
+backend: {address: ‘httpo://7jne2rpg5lsaqs6b.onion’, type: onion}
 test_name: web_connectivity
-test_start_time: &#8216;2016-07-12 17:27:08&#8217;
+test_start_time: ‘2016-07-12 17:27:08’
 test_version: 0.1.0
-...
-&#8212;
+…
+—
 accessible: true
 agent: redirect
 blocking: false
@@ -206,16 +231,16 @@ failure: null
 http_request:
 body_length: 44991
 failure: null
-headers: {Accept-Ranges: none, Alt-Svc: &#8216;quic=&#8221;:443&#8221;; ma=2592000; v=&#8221;36,35,34,33,32,31,30,29,28,27,26,25&#8221;&#8217;,</p>
+headers: {Accept-Ranges: none, Alt-Svc: ‘quic=”:443”; ma=2592000; v=”36,35,34,33,32,31,30,29,28,27,26,25”’,</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>Alternate-Protocol: &#8216;443:quic&#8217;, Cache-Control: &#8216;private, max-age=0&#8217;, Content-Type: text/html;</dt>
-<dd>charset=ISO-8859-7, Date: &#8216;Tue, 12 Jul 2016 17:27:12 GMT&#8217;, Expires: &#8216;-1&#8217;,</dd>
-<dt>P3P: &#8216;CP=&#8221;This is not a P3P policy! See <a class="reference external" href="https://www.google.com/support/accounts/answer/151657?hl=en">https://www.google.com/support/accounts/answer/151657?hl=en</a></dt>
-<dd>for more info.&#8221;&#8217;, Server: gws,</dd>
+<dt>Alternate-Protocol: ‘443:quic’, Cache-Control: ‘private, max-age=0’, Content-Type: text/html;</dt>
+<dd>charset=ISO-8859-7, Date: ‘Tue, 12 Jul 2016 17:27:12 GMT’, Expires: ‘-1’,</dd>
+<dt>P3P: ‘CP=”This is not a P3P policy! See <a class="reference external" href="https://www.google.com/support/accounts/answer/151657?hl=en">https://www.google.com/support/accounts/answer/151657?hl=en</a></dt>
+<dd>for more info.”’, Server: gws,</dd>
 </dl>
 <p>Vary: Accept-Encoding, X-Frame-Options: SAMEORIGIN, X-XSS-Protection: 1; mode=block,
-content-encoding: &#8216;&#8217;}</p>
+content-encoding: ‘’}</p>
 </div></blockquote>
 <p>status_code: 200
 title: Google
@@ -227,7 +252,7 @@ dns_experiment_failure: null
 headers_match: true
 http_experiment_failure: null
 input: <a class="reference external" href="https://www.google.com">https://www.google.com</a>
-measurement_start_time: &#8216;2016-07-12 17:27:09&#8217;
+measurement_start_time: ‘2016-07-12 17:27:09’
 queries:
 - answers:
 - {answer_type: A, ipv4: 216.58.193.100}
@@ -240,11 +265,11 @@ requests:
 - failure: null
 request:
 body: null
-headers: {Accept: &#8216;text/html,application/xhtml+xml,application/xml;q=0.9,*/<a href="#id1"><span class="problematic" id="id2">*</span></a>;q=0.8&#8217;,</p>
+headers: {Accept: ‘text/html,application/xhtml+xml,application/xml;q=0.9,*/<a href="#id1"><span class="problematic" id="id2">*</span></a>;q=0.8’,</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>Accept-Language: &#8216;en-US;q=0.8,en;q=0.5&#8217;, User-Agent: &#8216;Mozilla/5.0 (Windows NT</dt>
-<dd>6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36&#8217;}</dd>
+<dt>Accept-Language: ‘en-US;q=0.8,en;q=0.5’, User-Agent: ‘Mozilla/5.0 (Windows NT</dt>
+<dd>6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36’}</dd>
 </dl>
 </div></blockquote>
 <p>method: GET
@@ -255,16 +280,16 @@ body: {data: SNIP,</p>
 <blockquote>
 <div>format: base64}</div></blockquote>
 <p>code: 200
-headers: {Accept-Ranges: none, Alt-Svc: &#8216;quic=&#8221;:443&#8221;; ma=2592000; v=&#8221;36,35,34,33,32,31,30,29,28,27,26,25&#8221;&#8217;,</p>
+headers: {Accept-Ranges: none, Alt-Svc: ‘quic=”:443”; ma=2592000; v=”36,35,34,33,32,31,30,29,28,27,26,25”’,</p>
 <blockquote>
 <div><dl class="docutils">
-<dt>Alternate-Protocol: &#8216;443:quic&#8217;, Cache-Control: &#8216;private, max-age=0&#8217;, Content-Type: text/html;</dt>
-<dd>charset=ISO-8859-1, Date: &#8216;Tue, 12 Jul 2016 17:27:10 GMT&#8217;, Expires: &#8216;-1&#8217;,</dd>
-<dt>P3P: &#8216;CP=&#8221;This is not a P3P policy! See <a class="reference external" href="https://www.google.com/support/accounts/answer/151657?hl=en">https://www.google.com/support/accounts/answer/151657?hl=en</a></dt>
-<dd>for more info.&#8221;&#8217;, Server: gws,</dd>
+<dt>Alternate-Protocol: ‘443:quic’, Cache-Control: ‘private, max-age=0’, Content-Type: text/html;</dt>
+<dd>charset=ISO-8859-1, Date: ‘Tue, 12 Jul 2016 17:27:10 GMT’, Expires: ‘-1’,</dd>
+<dt>P3P: ‘CP=”This is not a P3P policy! See <a class="reference external" href="https://www.google.com/support/accounts/answer/151657?hl=en">https://www.google.com/support/accounts/answer/151657?hl=en</a></dt>
+<dd>for more info.”’, Server: gws,</dd>
 </dl>
 <p>Vary: Accept-Encoding, X-Frame-Options: SAMEORIGIN, X-XSS-Protection: 1; mode=block,
-content-encoding: &#8216;&#8217;}</p>
+content-encoding: ‘’}</p>
 </div></blockquote>
 <p>retries: 1
 socksproxy: null
@@ -275,10 +300,13 @@ port: 443
 status: {blocked: false, failure: null, success: true}
 test_runtime: 3.8490829467773438
 title_match: true
-...</p>
+…</p>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -313,7 +341,8 @@ title_match: true
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

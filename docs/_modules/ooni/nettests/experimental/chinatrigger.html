@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -43,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -106,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -120,19 +128,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.nettests.experimental.chinatrigger</li>
+        
+      <li>ooni.nettests.experimental.chinatrigger</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -170,31 +195,31 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">dst</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;dst&#39;</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;port&#39;</span><span class="p">])</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="ChinaTriggerTest.set_random_servername"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_random_servername">[docs]</a>    <span class="k">def</span> <span class="nf">set_random_servername</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
+<div class="viewcode-block" id="ChinaTriggerTest.set_random_servername"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_random_servername">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">set_random_servername</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
         <span class="n">ret</span> <span class="o">=</span> <span class="n">pkt</span><span class="p">[:</span><span class="mi">121</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
             <span class="n">ret</span> <span class="o">+=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span>
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">pkt</span><span class="p">[</span><span class="mi">121</span><span class="o">+</span><span class="mi">16</span><span class="p">:]</span>
         <span class="k">return</span> <span class="n">ret</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="ChinaTriggerTest.set_random_time"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_random_time">[docs]</a>    <span class="k">def</span> <span class="nf">set_random_time</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
+<div class="viewcode-block" id="ChinaTriggerTest.set_random_time"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_random_time">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">set_random_time</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
         <span class="n">ret</span> <span class="o">=</span> <span class="n">pkt</span><span class="p">[:</span><span class="mi">11</span><span class="p">]</span>
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;!I&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">pkt</span><span class="p">[</span><span class="mi">11</span><span class="o">+</span><span class="mi">4</span><span class="p">:]</span>
         <span class="k">return</span> <span class="n">ret</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="ChinaTriggerTest.set_random_field"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_random_field">[docs]</a>    <span class="k">def</span> <span class="nf">set_random_field</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
+<div class="viewcode-block" id="ChinaTriggerTest.set_random_field"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_random_field">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">set_random_field</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
         <span class="n">ret</span> <span class="o">=</span> <span class="n">pkt</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">28</span><span class="p">):</span>
             <span class="n">ret</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">pkt</span><span class="p">[</span><span class="mi">15</span><span class="o">+</span><span class="mi">28</span><span class="p">:]</span>
         <span class="k">return</span> <span class="n">ret</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="ChinaTriggerTest.mutate"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.mutate">[docs]</a>    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">pkt</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+<div class="viewcode-block" id="ChinaTriggerTest.mutate"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.mutate">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">pkt</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Slightly changed mutate function.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -206,8 +231,8 @@
         <span class="n">ret</span> <span class="o">+=</span> <span class="n">pkt</span><span class="p">[</span><span class="n">idx</span><span class="p">:]</span>
         <span class="k">return</span> <span class="n">ret</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="ChinaTriggerTest.set_all_random_fields"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_all_random_fields">[docs]</a>    <span class="k">def</span> <span class="nf">set_all_random_fields</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
+<div class="viewcode-block" id="ChinaTriggerTest.set_all_random_fields"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.chinatrigger.ChinaTriggerTest.set_all_random_fields">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">set_all_random_fields</span><span class="p">(</span><span class="n">pkt</span><span class="p">):</span>
         <span class="n">pkt</span> <span class="o">=</span> <span class="n">ChinaTriggerTest</span><span class="o">.</span><span class="n">set_random_servername</span><span class="p">(</span><span class="n">pkt</span><span class="p">)</span>
         <span class="n">pkt</span> <span class="o">=</span> <span class="n">ChinaTriggerTest</span><span class="o">.</span><span class="n">set_random_time</span><span class="p">(</span><span class="n">pkt</span><span class="p">)</span>
         <span class="n">pkt</span> <span class="o">=</span> <span class="n">ChinaTriggerTest</span><span class="o">.</span><span class="n">set_random_field</span><span class="p">(</span><span class="n">pkt</span><span class="p">)</span>
@@ -250,6 +275,9 @@
 </pre></div>
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -283,7 +311,8 @@
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>

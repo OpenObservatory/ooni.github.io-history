@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -117,8 +123,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -127,23 +135,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Measurement Developer API</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Measurement Developer API</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/api/ooni.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -208,7 +233,7 @@ irreversibly damaged.</p>
 <dl class="method">
 <dt id="ooni.nettest.NetTest.makeMeasurement">
 <code class="descname">makeMeasurement</code><span class="sig-paren">(</span><em>test_instance</em>, <em>test_method</em>, <em>test_input=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTest.makeMeasurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTest.makeMeasurement" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new instance of :class:ooni.tasks.Measurement and add&#8217;s it&#8217;s
+<dd><p>Creates a new instance of :class:ooni.tasks.Measurement and add’s it’s
 callbacks and errbacks.</p>
 <dl class="docutils">
 <dt>Args:</dt>
@@ -240,7 +265,7 @@ NetTestCase</dd>
 you will subclass this object.</p>
 <ul>
 <li><p class="first">inputs: can be set to a static set of inputs. All the tests (the methods
-starting with the &#8220;test&#8221; prefix) will be run once per input. At every
+starting with the “test” prefix) will be run once per input. At every
 run the _input_ attribute of the TestCase instance will be set to the
 value of the current iteration over inputs.  Any python iterable object
 can be set to inputs.</p>
@@ -322,7 +347,7 @@ summary of the test run.</p>
 <dd><p>This method must be called after all options are validated by
 _checkValidOptions and _checkRequiredOptions, which ensure that
 if the inputFile is a required option it will be present.</p>
-<p>We check to see if it&#8217;s possible to have an input file and if the user
+<p>We check to see if it’s possible to have an input file and if the user
 has specified such file.</p>
 <p>If the operations to be done here are network related or blocking, they
 should be wrapped in a deferred. That is the return value of this
@@ -554,7 +579,7 @@ scheduled.</p>
 <p>XXX this is ghetto.
 The reason for which we are calling allTasksDone inside of the
 allTasksScheduled method is called after all tasks are done, then we
-will run into a race condition. The race is that we don&#8217;t end up
+will run into a race condition. The race is that we don’t end up
 checking that all the tasks are complete because no task is to be
 scheduled.</p>
 </dd></dl>
@@ -594,11 +619,11 @@ scheduled.</p>
 <dd><p>Returns a dict containing:</p>
 <dl class="docutils">
 <dt>{</dt>
-<dd><p class="first">&#8216;id&#8217;: the test filename excluding the .py extension,
-&#8216;name&#8217;: the full name of the test,
-&#8216;description&#8217;: the description of the test,
-&#8216;version&#8217;: version number of this test,
-&#8216;arguments&#8217;: a dict containing as keys the supported arguments and as</p>
+<dd><p class="first">‘id’: the test filename excluding the .py extension,
+‘name’: the full name of the test,
+‘description’: the description of the test,
+‘version’: version number of this test,
+‘arguments’: a dict containing as keys the supported arguments and as</p>
 <blockquote class="last">
 <div>values the argument description.</div></blockquote>
 </dd>
@@ -624,10 +649,10 @@ scheduled.</p>
 <dt>a dict containing</dt>
 <dd><dl class="first docutils">
 <dt>{</dt>
-<dd>&#8216;description&#8217;: the description of the option,
-&#8216;default&#8217;: the default value of the option,
-&#8216;required&#8217;: True|False if the option is required or not,
-&#8216;type&#8217;: the type of the option (&#8216;text&#8217; or &#8216;file&#8217;)</dd>
+<dd>‘description’: the description of the option,
+‘default’: the default value of the option,
+‘required’: True|False if the option is required or not,
+‘type’: the type of the option (‘text’ or ‘file’)</dd>
 </dl>
 <p class="last">}</p>
 </dd>
@@ -1099,7 +1124,7 @@ XXX fully debug this problem</p>
 
 <dl class="attribute">
 <dt id="ooni.reporter.OSafeRepresenter.yaml_representers">
-<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1111,7 +1136,7 @@ XXX fully debug this problem</p>
 <dl class="method">
 <dt id="ooni.reporter.Report.close">
 <code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Close the report by calling it&#8217;s finish method.</p>
+<dd><p>Close the report by calling it’s finish method.</p>
 <dl class="docutils">
 <dt>Returns:</dt>
 <dd>a :class:twisted.internet.defer.DeferredList that will fire when
@@ -1222,15 +1247,18 @@ summary and the raw packet.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ooni.templates.html" class="btn btn-neutral float-right" title="Test Templates" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ooni.templates.html" class="btn btn-neutral float-right" title="Test Templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../nettests/ooni.nettests.third_party.html" class="btn btn-neutral" title="ooni.nettests third_party Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../nettests/ooni.nettests.third_party.html" class="btn btn-neutral" title="ooni.nettests third_party Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1264,7 +1292,8 @@ summary and the raw packet.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

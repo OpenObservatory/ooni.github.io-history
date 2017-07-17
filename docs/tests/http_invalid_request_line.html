@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -42,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -105,8 +111,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -115,23 +123,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Details</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Details</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/tests/http_invalid_request_line.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -157,8 +182,8 @@ valid HTTP requests.</p>
 does not match with what we have sent then we say that tampering is occurring.</p>
 <p>The idea behind this is that certain transparent HTTP proxies may not be
 properly parsing the HTTP request line.</p>
-<p>Unless elsewhere stated &#8216;Xx&#8217;*N refers to N*2 random upper or lowercase ascii
-letters or numbers (&#8216;XxXx&#8217; will be 4).</p>
+<p>Unless elsewhere stated ‘Xx’*N refers to N*2 random upper or lowercase ascii
+letters or numbers (‘XxXx’ will be 4).</p>
 <p>What we fuzz is the following:</p>
 <div class="section" id="test-random-invalid-method">
 <h2>test random invalid method<a class="headerlink" href="#test-random-invalid-method" title="Permalink to this headline">¶</a></h2>
@@ -279,6 +304,9 @@ a TCP echo server on port 80.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -312,7 +340,8 @@ a TCP echo server on port 80.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

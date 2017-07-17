@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -114,8 +120,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -124,23 +132,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Architecture</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Architecture</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/architecture.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -213,7 +238,7 @@ measurements on the to be tested network.</p>
 anomalies on their own and quickly implement new tests to check for new
 censorship conditions, the focus is now shifting more towards something
 meant to be used in an unattended manner.</p>
-<p>As such it&#8217;s evolving into being a system daemon that is always running on
+<p>As such it’s evolving into being a system daemon that is always running on
 a users machine and automatically performs the network measurements the user
 has instructed it to perform.</p>
 <div class="section" id="design-goals">
@@ -221,12 +246,12 @@ has instructed it to perform.</p>
 <p>The current design goals are:</p>
 <p><strong>Unattended measurement collection</strong></p>
 <p>It should be possible for a user of the system to install it and forget about
-it. This means that it shouldn&#8217;t be necessary to constantly interact with the tool
+it. This means that it shouldn’t be necessary to constantly interact with the tool
 itself.</p>
 <p>Previously some of the design considerations for ooni-probe used to be:</p>
 <p><strong>Test specification decoupling</strong></p>
 <p>This design goal is still largely valid, though as ooni-probe grows as mainly
-an enduser tool it&#8217;s importance will be decreasing.</p>
+an enduser tool it’s importance will be decreasing.</p>
 <p>Moreover the long-term plan for this is given the fact that tests are going to
 be run based on <a class="reference internal" href="#measurement-kit">measurement-kit</a> is to have the testing framework logic be
 implemented in the <a class="reference internal" href="#measurement-kit">measurement-kit</a> scripting language.</p>
@@ -262,7 +287,7 @@ time consuming.</p>
 </div></blockquote>
 <p>If you have an argument for which you believe Twisted is not a good idea, I
 would love to know :).</p>
-<p>Running lot&#8217;s of tests concurrently can reduce their accuracy. The ideal
+<p>Running lot’s of tests concurrently can reduce their accuracy. The ideal
 strategy for dealing with this would involve adjusting the concurrency
 based on failure rate.
 Currently this is not implemented inside of ooniprobe and instead we use
@@ -366,15 +391,18 @@ website generator.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="api/ooni.templates.html" class="btn btn-neutral" title="Test Templates" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="api/ooni.templates.html" class="btn btn-neutral" title="Test Templates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -408,7 +436,8 @@ website generator.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

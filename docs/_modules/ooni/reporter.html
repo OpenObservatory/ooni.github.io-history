@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -43,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -106,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -120,19 +128,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.reporter</li>
+        
+      <li>ooni.reporter</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -440,8 +465,8 @@
             <span class="n">content</span> <span class="o">+=</span> <span class="s1">&#39;...</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="k">return</span> <span class="n">content</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReporter.writeReportEntry"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.writeReportEntry">[docs]</a>    <span class="k">def</span> <span class="nf">writeReportEntry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReporter.writeReportEntry"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.writeReportEntry">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">writeReportEntry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
         <span class="k">if</span> <span class="s2">&quot;json&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">supportedFormats</span><span class="p">:</span>
             <span class="n">serialization_format</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span>
         <span class="k">else</span><span class="p">:</span>
@@ -458,8 +483,8 @@
             <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">OONIBReportUpdateError</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReporter.createReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.createReport">[docs]</a>    <span class="k">def</span> <span class="nf">createReport</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReporter.createReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.createReport">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">createReport</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates a report on the oonib collector.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -534,8 +559,8 @@
         <span class="n">report_log_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurement_dir</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="s2">&quot;report_log.json&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">report_log_file</span>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.get_report_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log">[docs]</a>    <span class="k">def</span> <span class="nf">get_report_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.get_report_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">get_report_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
         <span class="n">lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_for_report_log</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span>
         <span class="k">yield</span> <span class="n">lock</span><span class="o">.</span><span class="n">deferUntilLocked</span><span class="p">()</span>
 
@@ -551,8 +576,8 @@
 
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.get_report_log_entries"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log_entries">[docs]</a>    <span class="k">def</span> <span class="nf">get_report_log_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.get_report_log_entries"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log_entries">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">get_report_log_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">measurement</span> <span class="ow">in</span> <span class="n">list_measurements</span><span class="p">():</span>
             <span class="k">try</span><span class="p">:</span>
@@ -563,8 +588,8 @@
                 <span class="k">continue</span>
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.update_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.update_log">[docs]</a>    <span class="k">def</span> <span class="nf">update_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.update_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.update_log">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">update_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_for_report_log</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span>
         <span class="k">yield</span> <span class="n">lock</span><span class="o">.</span><span class="n">deferUntilLocked</span><span class="p">()</span>
 
@@ -576,8 +601,8 @@
 
         <span class="n">lock</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.remove_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.remove_log">[docs]</a>    <span class="k">def</span> <span class="nf">remove_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.remove_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.remove_log">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">remove_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
         <span class="n">lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_for_report_log</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span>
         <span class="k">yield</span> <span class="n">lock</span><span class="o">.</span><span class="n">deferUntilLocked</span><span class="p">()</span>
 
@@ -590,8 +615,8 @@
 
         <span class="n">lock</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.get_incomplete"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_incomplete">[docs]</a>    <span class="k">def</span> <span class="nf">get_incomplete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.get_incomplete"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_incomplete">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">get_incomplete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">incomplete_reports</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">all_entries</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_report_log_entries</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">all_entries</span><span class="p">[:]:</span>
@@ -609,8 +634,8 @@
                     <span class="p">)</span>
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">incomplete_reports</span><span class="p">)</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.get_in_progress"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_in_progress">[docs]</a>    <span class="k">def</span> <span class="nf">get_in_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.get_in_progress"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_in_progress">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">get_in_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">in_progress_reports</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">all_entries</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_report_log_entries</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">all_entries</span><span class="p">[:]:</span>
@@ -621,8 +646,8 @@
                     <span class="p">)</span>
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">in_progress_reports</span><span class="p">)</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OONIBReportLog.get_to_upload"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_to_upload">[docs]</a>    <span class="k">def</span> <span class="nf">get_to_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OONIBReportLog.get_to_upload"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_to_upload">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">get_to_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">to_upload_reports</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">all_entries</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_report_log_entries</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">all_entries</span><span class="p">[:]:</span>
@@ -735,8 +760,8 @@
         <span class="n">d</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="n">created</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">d</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="Report.open"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.Report.open">[docs]</a>    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Report.open"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.Report.open">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will create all the reports that need to be created and fires the</span>
 <span class="sd">        created callback of the reporter whose report got created.</span>
@@ -847,6 +872,9 @@
 </pre></div>
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -880,7 +908,8 @@
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

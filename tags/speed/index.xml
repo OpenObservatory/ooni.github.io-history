@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OONI: Open Observatory of Network Interference</title>
-    <link>https://ooni.torproject.org/tags/speed/index.xml</link>
-    <description>Recent content on OONI: Open Observatory of Network Interference</description>
+    <title>Speed on OONI: Open Observatory of Network Interference</title>
+    <link>https://ooni.torproject.org/tags/speed/</link>
+    <description>Recent content in Speed on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ooni.torproject.org/tags/speed/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Feb 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ooni.torproject.org/tags/speed/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>New ooniprobe Mobile App: Measure Internet Censorship &amp; Performance</title>
@@ -14,125 +17,9 @@
       <pubDate>Thu, 09 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-mobile-app/</guid>
-      <description>
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-mobile-app/ooni-mobile-app.jpg&#34; alt=&#34;OONI mobile app&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Today the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;Open Observatory of Network Interference (OONI)&lt;/a&gt; project is thrilled to
-announce the release of a new mobile app (“&lt;strong&gt;ooniprobe - Measure Internet
-Censorship &amp;amp; Performance&lt;/strong&gt;”) that can now be installed on &lt;strong&gt;Android&lt;/strong&gt; and &lt;strong&gt;iOS&lt;/strong&gt; for
-testing Internet censorship and network performance.&lt;/p&gt;
-
-&lt;div class=&#34;row&#34;&gt;
-	&lt;div class=&#34;store-downloads&#34;&gt;
-
-		&lt;a class=&#34;badge&#34; href=&#34;https://play.google.com/store/apps/details?id=org.openobservatory.ooniprobe&#34;&gt;
-			&lt;img alt=&#34;Download ooniprobe for Android&#34;
-				src=&#34;/install/play-store-badge.png&#34;
-		srcset=&#34;/install/play-store-badge.png 1x, /install/play-store-badge.png 2x&#34;&gt;
-		&lt;/a&gt;
-
-		&lt;a class=&#34;badge&#34; href=&#34;https://itunes.apple.com/us/app/id1199566366&#34;&gt;
-			&lt;img alt=&#34;Download ooniprobe for iOS&#34;
-				src=&#34;/install/app-store-badge.png&#34;
-		srcset=&#34;/install/app-store-badge.png 1x, /install/app-store-badge.png 2x&#34;&gt;
-		&lt;/a&gt;
-
-		&lt;a class=&#34;badge&#34; href=&#34;https://f-droid.org/repository/browse/?fdid=org.openobservatory.ooniprobe&#34;&gt;
-			&lt;img alt=&#34;Download ooniprobe for Android (F-Droid)&#34;
-				src=&#34;/install/fdroid-badge.png&#34;
-		srcset=&#34;/install/fdroid-badge.png 1x, /install/fdroid-badge.png 2x&#34;&gt;
-		&lt;/a&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;p&gt;By running the tests included in OONI’s mobile app, you can monitor:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Blocking of websites;&lt;/li&gt;
-&lt;li&gt;Presence of systems that could be responsible for censorship or surveillance;&lt;/li&gt;
-&lt;li&gt;Speed and performance of your network.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The results of your tests will be
-&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;published&lt;/a&gt;, increasing
-transparency of internet censorship and network interference around the world.&lt;/p&gt;
-
-&lt;h1 id=&#34;collecting-evidence-of-internet-censorship&#34;&gt;Collecting evidence of internet censorship&lt;/h1&gt;
-
-&lt;p&gt;OONI&amp;rsquo;s &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity test&lt;/a&gt; is designed to examine whether websites are blocked
-and if so, how. This test, in particular, attempts to determine whether access
-to sites is blocked through DNS tampering, TCP/IP blocking, or by a
-transparent HTTP proxy. By knowing how access to sites is interfered with,
-you can more easily evaluate how to circumvent that specific type of
-censorship. As OONI is committed to transparency through the &lt;a href=&#34;https://measurements.ooni.torproject.org/&#34;&gt;publication of
-all network measurement data&lt;/a&gt;, you can use it as evidence of any censorship
-events that you come across.&lt;/p&gt;
-
-&lt;h1 id=&#34;detecting-systems-responsible-for-censorship-and-surveillance&#34;&gt;Detecting systems responsible for censorship and surveillance&lt;/h1&gt;
-
-&lt;p&gt;Various types of proxy technologies are used in networks for implementing
-censorship, surveillance, and traffic manipulation. OONI&amp;rsquo;s &lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line test&lt;/a&gt; is designed to uncover the presence of such systems within tested
-networks. However, it&amp;rsquo;s important to point out that not all systems that you
-might find are necessarily responsible for censorship and/or surveillance! Many
-proxy technologies, for example, are used in networks for caching purposes.&lt;/p&gt;
-
-&lt;h1 id=&#34;measuring-the-speed-and-performance-of-your-network&#34;&gt;Measuring the speed and performance of your network&lt;/h1&gt;
-
-&lt;p&gt;Sometimes the network that we are using doesn&amp;rsquo;t work as well as we&amp;rsquo;d like it to.
-OONI&amp;rsquo;s implementation of the &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;Network Diagnostic Test (NDT)&lt;/a&gt; attempts to measure
-the speed of your network by connecting to &lt;a href=&#34;http://www.measurementlab.net/&#34;&gt;M-Lab&lt;/a&gt; servers near you and by
-subsequently uploading and downloading random data. In doing so, NDT collects
-low level TCP/IP information that can help characterize the speed and
-performance of your network. Such information can also be useful in examining
-cases of throttling.&lt;/p&gt;
-
-&lt;h1 id=&#34;open-data&#34;&gt;Open data&lt;/h1&gt;
-
-&lt;p&gt;OONI publishes all network measurement data that it collects and processes
-because open data allows third parties to conduct independent studies, to verify
-OONI findings and/or to answer other research questions. Such data also helps
-increase transparency around internet censorship and various forms of network
-interference. All data is published on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI Explorer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once you have run each test, you should be able to view the results of your
-tests directly in the app, as illustrated below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-mobile-app/app-results.jpg&#34; alt=&#34;Test results&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;free-software&#34;&gt;Free software&lt;/h1&gt;
-
-&lt;p&gt;All OONI tests, as well as its NDT implementation, are based on free and open
-source software (the &lt;a href=&#34;https://measurement-kit.github.io&#34;&gt;network measurement library
-MeasurementKit&lt;/a&gt;). You can find the source
-code through the following links:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooniprobe-ios&#34;&gt;https://github.com/TheTorProject/ooniprobe-ios&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/TheTorProject/ooniprobe-android&#34;&gt;https://github.com/TheTorProject/ooniprobe-android&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;https://github.com/measurement-kit/measurement-kit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;next-steps&#34;&gt;Next steps&lt;/h1&gt;
-
-&lt;p&gt;More tests will be integrated into OONI’s mobile app within the next year,
-including - but not limited to - our new
-&lt;a href=&#34;https://ooni.torproject.org/nettest/whatsapp/&#34;&gt;WhatsApp&lt;/a&gt; and &lt;a href=&#34;https://ooni.torproject.org/nettest/facebook-messenger/&#34;&gt;Facebook Messenger tests&lt;/a&gt;. In
-the meanwhile, learn about &lt;a href=&#34;https://ooni.torproject.org/about/risks/&#34;&gt;potential risks&lt;/a&gt; associated to running
-ooniprobe. If you feel comfortable with them, install OONI’s mobile app and test
-every network you connect to!&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;The OONI team thanks the &lt;a href=&#34;https://www.opentech.fund/&#34;&gt;Open Technology Fund&lt;/a&gt; for
-sponsoring the development of OONI&amp;rsquo;s mobile app, and
-&lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;M-Lab&lt;/a&gt; for sponsoring the development of
-&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;Measurement-Kit&lt;/a&gt; at the
-&lt;a href=&#34;https://nexa.polito.it/&#34;&gt;Nexa Center for Internet &amp;amp; Society&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Today the Open Observatory of Network Interference (OONI) project is thrilled to announce the release of a new mobile app (“ooniprobe - Measure Internet Censorship &amp;amp; Performance”) that can now be installed on Android and iOS for testing Internet censorship and network performance.
+     By running the tests included in OONI’s mobile app, you can monitor:
+ Blocking of websites; Presence of systems that could be responsible for censorship or surveillance; Speed and performance of your network.</description>
     </item>
     
   </channel>

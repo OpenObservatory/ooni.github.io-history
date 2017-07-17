@@ -15,6 +15,21 @@
   <script src="/js/highlight.min.js"></script>
   <script src="/js/zepto.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+	
+	<script type="text/javascript">
+		var _paq = _paq || [];
+		 
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="//analytics.ooni.io/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', '1']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+	</script>
+	
 </head>
 <body>
 
@@ -61,9 +76,9 @@
 
 <h1 id="ooni-data-policy">OONI Data Policy</h1>
 
-<p><strong>Last modified:</strong> February 09, 2017</p>
+<p><strong>Last modified:</strong> July 17, 2017</p>
 
-<p><strong>Version:</strong> 1.0.1</p>
+<p><strong>Version:</strong> 1.1.0</p>
 
 <p>This Data Policy discloses and explains what data the <a href="https://ooni.torproject.org/">Open Observatory of Network Interference (OONI) project</a> (&ldquo;we&rdquo;, &ldquo;us&rdquo;,
 or &ldquo;our&rdquo;) collects, processes, stores and publishes relating to users of its
@@ -82,13 +97,14 @@ discretion.</p>
 
 <h2 id="1-website-visitors">1. Website Visitors</h2>
 
-<p>We do <em>not</em> collect any information about visitors to our
-<a href="https://ooni.torproject.org/">website</a>. We do <em>not</em> use analytics, tracking
-cookies, or any other tracking technologies on our website.</p>
+<p>We collect some information about visitors to our <a href="https://ooni.torproject.org/">website</a> using
+the free and open source tool <a href="https://piwik.org">piwik</a>. We do not record the
+full IP address of users (which is &ldquo;anonymised&rdquo; to the first 3 octets, ex.
+123.45.67.0).</p>
 
-<p>Our website access logs store only the date (up to 2 weeks), but not the time,
-when you requested access to our webpages. Our website does <em>not</em> log your IP
-addresses.</p>
+<p>Our analytics site is also respectful of <a href="https://en.wikipedia.org/wiki/Do_Not_Track">&ldquo;Do not
+track&rdquo;</a> allowing you to opt out of
+analytics all-together.</p>
 
 <p>We will notify you of any future changes to our website visitor policy through
 this Data Policy.</p>

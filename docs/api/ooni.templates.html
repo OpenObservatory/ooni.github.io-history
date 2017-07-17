@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -45,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +88,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -130,8 +136,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -140,25 +148,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="ooni.html">Measurement Developer API</a> &raquo;</li>
-      
-    <li>Test Templates</li>
+        
+      <li>Test Templates</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/api/ooni.templates.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -178,8 +203,8 @@ The main functions to look at are processResponseBody and
 processResponseHeader that are invoked once the headers have been received
 and once the request body has been received.</p>
 <p>To perform requests over Tor you will have to use the special URL schema
-&#8220;shttp&#8221;. For example to request / on example.com you will have to do
-specify as URL &#8220;<a class="reference external" href="shttp://example.com/">shttp://example.com/</a>&#8221;.</p>
+“shttp”. For example to request / on example.com you will have to do
+specify as URL “<a class="reference external" href="shttp://example.com/">shttp://example.com/</a>”.</p>
 <p>XXX all of this requires some refactoring.</p>
 <dl class="method">
 <dt id="ooni.templates.httpt.HTTPTest.addToReport">
@@ -340,8 +365,8 @@ every request that is made.</p>
 <dd><dl class="first docutils">
 <dt>sent_packets: [</dt>
 <dd>{
-&#8216;raw_packet&#8217;: BASE64Encoding of packet,
-&#8216;summary&#8217;: &#8216;IP / TCP 192.168.2.66:ftp_data &gt; 8.8.8.8:http S&#8217;
+‘raw_packet’: BASE64Encoding of packet,
+‘summary’: ‘IP / TCP 192.168.2.66:ftp_data &gt; 8.8.8.8:http S’
 }</dd>
 </dl>
 <p>]</p>
@@ -427,10 +452,10 @@ at layer 3.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Hostname:</th><td class="field-body">is the hostname to perform the DNS lookup on</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Dns_type:</th><td class="field-body">type of lookup &#8216;NS&#8217;/&#8217;A&#8217;/&#8217;SOA&#8217;</td>
+<tr class="field-even field"><th class="field-name">Dns_type:</th><td class="field-body">type of lookup ‘NS’/’A’/’SOA’</td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Dns_server:</th><td class="field-body">is the dns_server that should be used for the lookup as a
-tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</td>
+tuple of ip port (ex. (“127.0.0.1”, 53))</td>
 </tr>
 </tbody>
 </table>
@@ -454,7 +479,7 @@ IP addresses in the response.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Dns_server:</th><td class="field-body"><p class="first">is the dns_server that should be used for the lookup as a
-tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</p>
+tuple of ip port (ex. (“127.0.0.1”, 53))</p>
 <p class="last">if None, system dns settings will be used</p>
 </td>
 </tr>
@@ -475,7 +500,7 @@ the response.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Dns_server:</th><td class="field-body"><p class="first">is the dns_server that should be used for the lookup as a
-tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</p>
+tuple of ip port (ex. (“127.0.0.1”, 53))</p>
 <p class="last">if None, system dns settings will be used</p>
 </td>
 </tr>
@@ -495,7 +520,7 @@ tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Dns_server:</th><td class="field-body"><p class="first">is the dns_server that should be used for the lookup as a
-tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</p>
+tuple of ip port (ex. (“127.0.0.1”, 53))</p>
 <p class="last">if None, system dns settings will be used</p>
 </td>
 </tr>
@@ -515,7 +540,7 @@ tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Dns_server:</th><td class="field-body"><p class="first">is the dns_server that should be used for the lookup as a
-tuple of ip port (ex. (&#8220;127.0.0.1&#8221;, 53))</p>
+tuple of ip port (ex. (“127.0.0.1”, 53))</p>
 <p class="last">if None, system dns settings will be used</p>
 </td>
 </tr>
@@ -647,15 +672,18 @@ we are to receive.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../architecture.html" class="btn btn-neutral float-right" title="Architecture" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../architecture.html" class="btn btn-neutral float-right" title="Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ooni.html" class="btn btn-neutral" title="Measurement Developer API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ooni.html" class="btn btn-neutral" title="Measurement Developer API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -689,7 +717,8 @@ we are to receive.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

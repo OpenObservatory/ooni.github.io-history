@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -42,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -105,8 +111,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -115,23 +123,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>oonireport</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>oonireport</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/manual/oonireport.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -158,20 +183,20 @@ reports have not been submitted to a collector and upload them.</p>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-d</span>, <span class="option">--default-collector</span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Upload the reports to the default collector that is looked up
+<tr><td>&#160;</td><td>Upload the reports to the default collector that is looked up
 with the canonical bouncer.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-f</span>, <span class="option">--configfile</span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify the configuration file to use.</td></tr>
+<tr><td>&#160;</td><td>Specify the configuration file to use.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-c</span>, <span class="option">--collector</span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify the collector to upload the result to.</td></tr>
+<tr><td>&#160;</td><td>Specify the collector to upload the result to.</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-b</span>, <span class="option">--bouncer</span></kbd></td>
 <td><p class="first">Specify the bouncer to query for a collector.</p>
-<p>&#8211;version</p>
+<p>–version</p>
 <table class="last docutils option-list" frame="void" rules="none">
 <col class="option" />
 <col class="description" />
@@ -194,8 +219,8 @@ an option (-c) or to the collector that was previously used.</p>
 <p>If a report file is specified then only that report file will be
 uploaded</p>
 <p><strong>status</strong></p>
-<p>Outputs all of the reports that are either &#8220;not uploaded&#8221;,
-&#8220;incomplete&#8221; or &#8220;pending&#8221;.</p>
+<p>Outputs all of the reports that are either “not uploaded”,
+“incomplete” or “pending”.</p>
 <p>The possible statuses are:</p>
 <p>not-created</p>
 <p>If it has not been created, because the user specified to not use a
@@ -222,6 +247,9 @@ support the specified test.</p>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -256,7 +284,8 @@ support the specified test.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

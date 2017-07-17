@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -35,7 +37,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="index.html"/>
         <link rel="next" title="Writing OONI tests" href="writing_tests.html"/>
-        <link rel="prev" title="OONI: Open Observatory of Network Interference" href="index.html"/> 
+        <link rel="prev" title="ooniprobe: a network interference detection tool" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -44,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +87,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#writing-a-tcp-port-scanner">Writing a TCP port scanner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-test">Creating test</a></li>
@@ -116,8 +122,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -126,23 +134,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Tutorial</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Tutorial</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/tutorial.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -156,16 +181,16 @@
 combinations from a file and attempts to detect which ones are reachable
 and open and which ones are not.</p>
 <p>Following this tutorial requires basic knowledge of event-driven programming
-(specifically &#8216;Twisted&#8217;)</p>
+(specifically ‘Twisted’)</p>
 </div>
 <div class="section" id="creating-test">
 <h2>Creating test<a class="headerlink" href="#creating-test" title="Permalink to this headline">¶</a></h2>
 <p>We base our test on the TCP subclass <a class="reference internal" href="api/ooni.templates.html#ooni.templates.tcpt.TCPTest" title="ooni.templates.tcpt.TCPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code></a>,
 since it the most suitable for our requirements. We then create the file
-&#8216;tcp_port_scanner.py&#8217; inside &#8216;ooni/nettests/experimental&#8217;.</p>
-<p>All tests start in the &#8216;experimental&#8217; directory, until they are tested
+‘tcp_port_scanner.py’ inside ‘ooni/nettests/experimental’.</p>
+<p>All tests start in the ‘experimental’ directory, until they are tested
 and may then be moved to the stable test folders.</p>
-<p>We start by adding our base class into &#8216;tcp_port_scanner.py&#8217;:</p>
+<p>We start by adding our base class into ‘tcp_port_scanner.py’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
 </pre></div>
 </div>
@@ -198,9 +223,9 @@ this by adding:</p>
 </div>
 <p>When the test is run, the file will be opened by
 <a class="reference internal" href="api/ooni.html#ooni.nettest.NetTestCase.inputProcessor" title="ooni.nettest.NetTestCase.inputProcessor"><code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase.inputProcessor</span></code></a>. By default the
-&#8216;inputProcessor&#8217; will read line-by-line and feed them to the test.
+‘inputProcessor’ will read line-by-line and feed them to the test.
 However, in this test case we may want to skip over the comment lines
-that start with a &#8216;#&#8217;. We override &#8216;inputProcessor&#8217;:</p>
+that start with a ‘#’. We override ‘inputProcessor’:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
    <span class="o">...</span>
    <span class="k">def</span> <span class="nf">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
@@ -213,11 +238,11 @@ that start with a &#8216;#&#8217;. We override &#8216;inputProcessor&#8217;:</p>
    <span class="o">...</span>
 </pre></div>
 </div>
-<p>Once the test is run, the input may be accessed via &#8216;self.input&#8217;.</p>
+<p>Once the test is run, the input may be accessed via ‘self.input’.</p>
 </div>
 <div class="section" id="writing-tests">
 <h2>Writing Tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h2>
-<p>Any functioned prefixed with &#8216;test&#8217; will be run by OONI for each
+<p>Any functioned prefixed with ‘test’ will be run by OONI for each
 input. We implement the TCP connection test by adding:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
     <span class="o">...</span>
@@ -255,16 +280,16 @@ by:</p>
 </pre></div>
 </div>
 <p>By default, this will cause OONI to connect to tor and upload the results
-of the test. To save time during development, consider using the &#8216;-n&#8217; flag,
-temporarily disabling upload. Additionally, the &#8216;-v&#8217; is also useful,
-as OONI by default doesn&#8217;t print the line if a runtime error occurs:</p>
+of the test. To save time during development, consider using the ‘-n’ flag,
+temporarily disabling upload. Additionally, the ‘-v’ is also useful,
+as OONI by default doesn’t print the line if a runtime error occurs:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ooniprobe</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">v</span> <span class="n">nettests</span><span class="o">/</span><span class="n">experimental</span><span class="o">/</span><span class="n">tcp_port_scanner</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">ip_list</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="reports">
 <h2>Reports<a class="headerlink" href="#reports" title="Permalink to this headline">¶</a></h2>
-<p>Once &#8216;ooniprobe&#8217; is invoked, a report will be created in the current working
+<p>Once ‘ooniprobe’ is invoked, a report will be created in the current working
 directory. This report is structed in the YAMLOO format - a format based on
 YAML.</p>
 </div>
@@ -272,15 +297,18 @@ YAML.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="writing_tests.html" class="btn btn-neutral float-right" title="Writing OONI tests" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="writing_tests.html" class="btn btn-neutral float-right" title="Writing OONI tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="OONI: Open Observatory of Network Interference" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="ooniprobe: a network interference detection tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -314,7 +342,8 @@ YAML.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

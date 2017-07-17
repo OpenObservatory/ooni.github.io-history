@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -45,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +88,10 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -125,8 +131,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -135,25 +143,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="modules.html">Implemented NetTests</a> &raquo;</li>
-      
-    <li>ooni.nettests manipulation Package</li>
+        
+      <li>ooni.nettests manipulation Package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/nettests/ooni.nettests.manipulation.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -177,7 +202,7 @@ to determine if content has been altered.</p>
 <dl class="method">
 <dt id="ooni.nettests.manipulation.captiveportal.CaptivePortal.check_0x20_to_auth_ns">
 <code class="descname">check_0x20_to_auth_ns</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/manipulation/captiveportal.html#CaptivePortal.check_0x20_to_auth_ns"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.CaptivePortal.check_0x20_to_auth_ns" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolve a 0x20 DNS request for hostname over hostname&#8217;s
+<dd><p>Resolve a 0x20 DNS request for hostname over hostname’s
 authoritative nameserver(s), and check to make sure that
 the capitalization in the 0x20 request matches that of the
 response. Also, check the serial numbers of the SOA (Start
@@ -199,7 +224,7 @@ portal and remains unauthenticated, in which case the captive
 portal may return the address of the authentication page.</p>
 <p>If the cardinality of the intersection of the set of resolved
 random hostnames and the single element control set
-([&#8216;NXDOMAIN&#8217;]) are equal to one, then DNS properly resolved.</p>
+([‘NXDOMAIN’]) are equal to one, then DNS properly resolved.</p>
 <p>Returns true if only NXDOMAINs were returned, otherwise returns
 False with the relative complement of the control set in the
 response set.</p>
@@ -243,7 +268,7 @@ returns False and experiment_address.</p>
 <dl class="method">
 <dt id="ooni.nettests.manipulation.captiveportal.CaptivePortal.get_auth_nameservers">
 <code class="descname">get_auth_nameservers</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/manipulation/captiveportal.html#CaptivePortal.get_auth_nameservers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.CaptivePortal.get_auth_nameservers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Many CPs set a nameserver to be used. Let&#8217;s query that
+<dd><p>Many CPs set a nameserver to be used. Let’s query that
 nameserver for the authoritative nameservers of hostname.</p>
 <p>The equivalent of:
 $ dig +short NS ooni.nu</p>
@@ -255,7 +280,7 @@ $ dig +short NS ooni.nu</p>
 <dd><p>Returns a random hostname with SLD of specified length. If
 length is unspecified, length=32 is used.</p>
 <p>These <em>should</em> all resolve to NXDOMAIN. If they actually
-resolve to a box that isn&#8217;t part of a captive portal that
+resolve to a box that isn’t part of a captive portal that
 would be rather interesting.</p>
 </dd></dl>
 
@@ -278,8 +303,8 @@ an alphabetic character.</p>
 <code class="descname">hostname_to_0x20</code><span class="sig-paren">(</span><em>hostname</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/manipulation/captiveportal.html#CaptivePortal.hostname_to_0x20"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.CaptivePortal.hostname_to_0x20" title="Permalink to this definition">¶</a></dt>
 <dd><p>MaKEs yOur HOsTnaME lOoK LiKE THis.</p>
 <p>For more information, see:
-D. Dagon, et. al. &#8220;Increased DNS Forgery Resistance
-Through 0x20-Bit Encoding&#8221;. Proc. CSS, 2008.</p>
+D. Dagon, et. al. “Increased DNS Forgery Resistance
+Through 0x20-Bit Encoding”. Proc. CSS, 2008.</p>
 </dd></dl>
 
 <dl class="method">
@@ -317,7 +342,7 @@ object.</p>
 <dl class="method">
 <dt id="ooni.nettests.manipulation.captiveportal.CaptivePortal.ms_dns_cp_test">
 <code class="descname">ms_dns_cp_test</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/manipulation/captiveportal.html#CaptivePortal.ms_dns_cp_test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.CaptivePortal.ms_dns_cp_test" title="Permalink to this definition">¶</a></dt>
-<dd><p>Microsoft &#8220;phones home&#8221; to a server which will always resolve
+<dd><p>Microsoft “phones home” to a server which will always resolve
 to the same address.</p>
 </dd></dl>
 
@@ -359,14 +384,14 @@ format:
 <code class="descname">test_captive_portal</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettests/manipulation/captiveportal.html#CaptivePortal.test_captive_portal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.CaptivePortal.test_captive_portal" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs the CaptivePortal(Test).</p>
 <p>CONFIG OPTIONS</p>
-<p>If &#8220;do_captive_portal_vendor_tests&#8221; is set to &#8220;true&#8221;, then vendor
+<p>If “do_captive_portal_vendor_tests” is set to “true”, then vendor
 specific captive portal HTTP-based tests will be run.</p>
-<p>If &#8220;do_captive_portal_dns_tests&#8221; is set to &#8220;true&#8221;, then vendor
+<p>If “do_captive_portal_dns_tests” is set to “true”, then vendor
 specific captive portal DNS-based tests will be run.</p>
-<p>If &#8220;check_dns_requests&#8221; is set to &#8220;true&#8221;, then Ooni-probe will
+<p>If “check_dns_requests” is set to “true”, then Ooni-probe will
 attempt to check that your DNS requests are not being tampered with
 by a captive portal.</p>
-<p>If &#8220;captive_portal&#8221; = &#8220;yourfilename.txt&#8221;, then user-specified tests
+<p>If “captive_portal” = “yourfilename.txt”, then user-specified tests
 will be run.</p>
 <p>Any combination of the above tests can be run.</p>
 </dd></dl>
@@ -390,7 +415,7 @@ will be run.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">twisted.python.usage.Options</span></code></p>
 <dl class="attribute">
 <dt id="ooni.nettests.manipulation.captiveportal.UsageOptions.optParameters">
-<code class="descname">optParameters</code><em class="property"> = [['asset', 'a', None, 'Asset file.'], ['experiment-url', 'e', 'http://google.com/', 'Experiment URL.'], ['user-agent', 'u', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6', 'User agent for HTTP requests.']]</em><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.UsageOptions.optParameters" title="Permalink to this definition">¶</a></dt>
+<code class="descname">optParameters</code><em class="property"> = [['asset', 'a', None, 'Asset file.'], ['experiment-url', 'e', 'http://google.com/', 'Experiment URL.'], ['user-agent', 'u', 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6', 'User agent for HTTP requests.']]</em><a class="headerlink" href="#ooni.nettests.manipulation.captiveportal.UsageOptions.optParameters" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -800,8 +825,8 @@ censorship and does an HTTP request of this kind to our backend.</p>
 <p>The goal of this test is to do some very basic and not very noisy fuzzing
 on the HTTP request line. We generate a series of requests that are not
 valid HTTP requests.</p>
-<p>Unless elsewhere stated &#8216;Xx&#8217;<a href="#id1"><span class="problematic" id="id2">*</span></a>N refers to N*2 random upper or lowercase
-ascii letters or numbers (&#8216;XxXx&#8217; will be 4).</p>
+<p>Unless elsewhere stated ‘Xx’<a href="#id1"><span class="problematic" id="id2">*</span></a>N refers to N*2 random upper or lowercase
+ascii letters or numbers (‘XxXx’ will be 4).</p>
 <dl class="attribute">
 <dt id="ooni.nettests.manipulation.http_invalid_request_line.HTTPInvalidRequestLine.authors">
 <code class="descname">authors</code><em class="property"> = 'Arturo Filast\xc3\xb2'</em><a class="headerlink" href="#ooni.nettests.manipulation.http_invalid_request_line.HTTPInvalidRequestLine.authors" title="Permalink to this definition">¶</a></dt>
@@ -1016,15 +1041,18 @@ Proxy-Connection: close</div></blockquote>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ooni.nettests.scanning.html" class="btn btn-neutral float-right" title="ooni.nettests scanning Package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ooni.nettests.scanning.html" class="btn btn-neutral float-right" title="ooni.nettests scanning Package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ooni.nettests.experimental.html" class="btn btn-neutral" title="ooni.nettests experimental Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ooni.nettests.experimental.html" class="btn btn-neutral" title="ooni.nettests experimental Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1058,7 +1086,8 @@ Proxy-Connection: close</div></blockquote>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

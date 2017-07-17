@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -43,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -106,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -120,19 +128,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.settings</li>
+        
+      <li>ooni.settings</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -246,9 +271,8 @@
 <span class="s2">        #HTTPSProxyAuthenticator: user:password</span>
 <span class="s2">        #UseBridges: 1</span>
 <span class="s2">        #Bridge:</span>
-<span class="s2">        #- &quot;meek_lite 0.0.2.0:1 url=https://meek-reflect.appspot.com/ front=www.google.com&quot;</span>
-<span class="s2">        #- &quot;meek_lite 0.0.2.0:2 url=https://d2zfqthxsdq309.cloudfront.net/ front=a0.awsstatic.com&quot;</span>
-<span class="s2">        #- &quot;meek_lite 0.0.2.0:3 url=https://az786092.vo.msecnd.net/ front=ajax.aspnetcdn.com&quot;</span>
+<span class="s2">        #- &quot;meek_lite 0.0.2.0:1 url=https://d2cly7j4zqgua7.cloudfront.net/ front=a0.awsstatic.com&quot;</span>
+<span class="s2">        #- &quot;meek_lite 0.0.2.0:2 url=https://meek.azureedge.net/ front=ajax.aspnetcdn.com&quot;</span>
 <span class="s2">        #ClientTransportPlugin: &quot;meek_lite exec /usr/bin/obfs4proxy&quot;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
@@ -644,8 +668,8 @@
                                                          <span class="bp">self</span><span class="o">.</span><span class="n">config_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
             <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">ConfigFileIncoherent</span></div>
 
-    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-<div class="viewcode-block" id="OConfig.check_tor"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.check_tor">[docs]</a>    <span class="k">def</span> <span class="nf">check_tor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="OConfig.check_tor"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.check_tor">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">check_tor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called only when we must start tor by director.start</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -688,6 +712,9 @@
 </pre></div>
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -721,7 +748,8 @@
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

@@ -13,6 +13,8 @@
 
   
   
+  
+  
 
   
 
@@ -42,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -82,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -105,8 +111,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -115,23 +123,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>ooniprobe</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>ooniprobe</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="../_sources/manual/ooniprobe.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -161,7 +186,7 @@ methodologies for conducting censorship related research.</p>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-n</span>, <span class="option">--no-collector</span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Disable writing to collector</td></tr>
+<tr><td>&#160;</td><td>Disable writing to collector</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-N</span>, <span class="option">--no-njson</span></kbd></td>
 <td>Disable writing to disk</td></tr>
@@ -181,45 +206,45 @@ Warning: By using this option the IP address of the user executing ooniprobe is 
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-z</span>, <span class="option">--initialize</span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Initialize ooniprobe to begin running it</td></tr>
+<tr><td>&#160;</td><td>Initialize ooniprobe to begin running it</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-o</span>, <span class="option">--reportfile <var>PATH_TO_FILE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify the report file name to write to.</td></tr>
+<tr><td>&#160;</td><td>Specify the report file name to write to.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-i</span>, <span class="option">--testdeck <var>PATH_TO_DECK</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify as input a test deck: a yaml file containing the tests to run and their arguments.</td></tr>
+<tr><td>&#160;</td><td>Specify as input a test deck: a yaml file containing the tests to run and their arguments.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-c</span>, <span class="option">--collector <var>COLLECTOR_ADDRESS</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify the address of the collector for test results. In most cases a user
+<tr><td>&#160;</td><td>Specify the address of the collector for test results. In most cases a user
 will prefer to specify a bouncer over this.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-b</span>, <span class="option">--bouncer <var>BOUNCER_ADDRESS</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify the bouncer used to obtain the address of the collector and test helpers.</td></tr>
+<tr><td>&#160;</td><td>Specify the bouncer used to obtain the address of the collector and test helpers.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-l</span>, <span class="option">--logfile <var>PATH_TO_LOGFILE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Write to this logs to this filename.</td></tr>
+<tr><td>&#160;</td><td>Write to this logs to this filename.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-O</span>, <span class="option">--pcapfile <var>PATH_TO_PCAPFILE</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Write a PCAP of the ooniprobe session to this filename.</td></tr>
+<tr><td>&#160;</td><td>Write a PCAP of the ooniprobe session to this filename.</td></tr>
 <tr><td class="option-group" colspan="2">
 <kbd><span class="option">-f</span>, <span class="option">--configfile <var>PATH_TO_CONFIG</var></span></kbd></td>
 </tr>
-<tr><td>&nbsp;</td><td>Specify a path to the ooniprobe configuration file.</td></tr>
+<tr><td>&#160;</td><td>Specify a path to the ooniprobe configuration file.</td></tr>
 <tr><td class="option-group">
 <kbd><span class="option">-d</span>, <span class="option">--datadir</span></kbd></td>
 <td>Specify a path to the ooniprobe data directory.</td></tr>
 </tbody>
 </table>
 <dl class="docutils">
-<dt>-a, &#8211;annotations key:value[,key2:value2]</dt>
+<dt>-a, –annotations key:value[,key2:value2]</dt>
 <dd>Annotate the report with a key:value[, key:value] format.</dd>
-<dt>-P, &#8211;preferred-backend onion|https|cloudfront</dt>
+<dt>-P, –preferred-backend onion|https|cloudfront</dt>
 <dd>Set the preferred backend to use when submitting results and/or
 communicating with test helpers. Can be either onion, https or cloudfront</dd>
 </dl>
@@ -289,6 +314,9 @@ have specified an input list for running the test.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -322,7 +350,8 @@ have specified an input list for running the test.</p>
             VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
