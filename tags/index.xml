@@ -111,6 +111,15 @@
     </item>
     
     <item>
+      <title>Event</title>
+      <link>https://ooni.torproject.org/tags/event/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/tags/event/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Events</title>
       <link>https://ooni.torproject.org/tags/events/</link>
       <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
@@ -233,6 +242,15 @@
       <pubDate>Mon, 23 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/tags/palestine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Partners</title>
+      <link>https://ooni.torproject.org/tags/partners/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/tags/partners/</guid>
       <description></description>
     </item>
     
