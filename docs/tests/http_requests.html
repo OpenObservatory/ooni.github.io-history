@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
+  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../index.html"/> 
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +58,7 @@
             
             
               <div class="version">
-                2.2.1-dev
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -111,10 +102,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -123,40 +112,23 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Details</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Details</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/tests/http_requests.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/tests/http_requests.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -192,203 +164,200 @@ on the location from which the request originated from.</p>
 <div class="section" id="sample-report">
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
 <p><cite>ooniprobe blocking/http_requests -f example_inputs/url_lists_file.txt</cite></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
-<span class="c1"># OONI Probe Report for HTTP Requests Test test</span>
-<span class="c1"># Thu Nov 29 13:20:06 2012</span>
-<span class="c1">###########################################</span>
-<span class="o">---</span>
-<span class="n">options</span><span class="p">:</span>
-  <span class="n">collector</span><span class="p">:</span> <span class="n">null</span>
-  <span class="n">help</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="n">logfile</span><span class="p">:</span> <span class="n">null</span>
-  <span class="n">pcapfile</span><span class="p">:</span> <span class="n">null</span>
-  <span class="n">reportfile</span><span class="p">:</span> <span class="n">null</span>
-  <span class="n">resume</span><span class="p">:</span> <span class="mi">0</span>
-  <span class="n">subargs</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="n">example_inputs</span><span class="o">/</span><span class="n">url_lists_file</span><span class="o">.</span><span class="n">txt</span><span class="p">]</span>
-  <span class="n">test</span><span class="p">:</span> <span class="n">nettests</span><span class="o">/</span><span class="n">blocking</span><span class="o">/</span><span class="n">http_requests</span><span class="o">.</span><span class="n">py</span>
-<span class="n">probe_asn</span><span class="p">:</span> <span class="n">null</span>
-<span class="n">probe_cc</span><span class="p">:</span> <span class="n">null</span>
-<span class="n">probe_ip</span><span class="p">:</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
-<span class="n">software_name</span><span class="p">:</span> <span class="n">ooniprobe</span>
-<span class="n">software_version</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">7.1</span><span class="o">-</span><span class="n">alpha</span>
-<span class="n">start_time</span><span class="p">:</span> <span class="mf">1354188006.0</span>
-<span class="n">test_name</span><span class="p">:</span> <span class="n">HTTP</span> <span class="n">Requests</span> <span class="n">Test</span>
-<span class="n">test_version</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span>
-<span class="o">...</span>
-<span class="o">---</span>
-<span class="nb">input</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ooni</span><span class="o">.</span><span class="n">nu</span><span class="o">/</span><span class="n">test</span>
-<span class="n">report</span><span class="p">:</span>
-  <span class="n">agent</span><span class="p">:</span> <span class="n">agent</span>
-  <span class="n">body_length_match</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">body_proportion</span><span class="p">:</span> <span class="mf">0.9732142857142857</span>
-  <span class="n">factor</span><span class="p">:</span> <span class="mf">0.8</span>
-  <span class="n">requests</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">request</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="n">null</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">User</span><span class="o">-</span><span class="n">Agent</span>
-        <span class="o">-</span> <span class="o">-</span> <span class="o">&amp;</span><span class="n">id001</span> <span class="p">[</span><span class="n">Mozilla</span><span class="o">/</span><span class="mf">4.0</span> <span class="p">(</span><span class="n">compatible</span><span class="p">;</span> <span class="n">MSIE</span> <span class="mf">7.0</span><span class="p">;</span> <span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.1</span><span class="p">),</span> <span class="s1">&#39;Internet</span>
-              <span class="n">Explorer</span> <span class="mi">7</span><span class="p">,</span> <span class="n">Windows</span> <span class="n">Vista</span><span class="s1">&#39;]</span>
-      <span class="n">method</span><span class="p">:</span> <span class="n">GET</span>
-      <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ooni</span><span class="o">.</span><span class="n">nu</span><span class="o">/</span><span class="n">test</span>
-    <span class="n">response</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;html&gt;</span><span class="se">\n</span><span class="s2">    &lt;head&gt;</span><span class="se">\n</span><span class="s2">        &lt;meta http-equiv=</span><span class="se">\&quot;</span><span class="s2">refresh</span><span class="se">\&quot;</span><span class="s2"> content=</span><span class="se">\&quot;\</span>
-<span class="s2">        0;URL=http://ooni.nu/test/</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">    &lt;/head&gt;</span><span class="se">\n</span><span class="s2">    &lt;body bgcolor=</span><span class="se">\&quot;</span><span class="s2">#FFFFFF</span><span class="se">\&quot;\</span>
-<span class="s2">        \ text=</span><span class="se">\&quot;</span><span class="s2">#000000</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">    &lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://ooni.nu/test/</span><span class="se">\&quot;</span><span class="s2">&gt;click here&lt;/a&gt;</span><span class="se">\n\</span>
-<span class="s2">        \    &lt;/body&gt;</span><span class="se">\n</span><span class="s2">&lt;/html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
-      <span class="n">code</span><span class="p">:</span> <span class="mi">302</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Length</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;218&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Server</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">TwistedWeb</span><span class="o">/</span><span class="mf">10.1</span><span class="o">.</span><span class="mi">0</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Connection</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">close</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Location</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;http://ooni.nu/test/&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Date</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;Thu, 29 Nov 2012 12:20:25 GMT&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">]</span>
-  <span class="o">-</span> <span class="n">request</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="n">null</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">User</span><span class="o">-</span><span class="n">Agent</span>
-        <span class="o">-</span> <span class="o">-</span> <span class="o">*</span><span class="n">id001</span>
-      <span class="n">method</span><span class="p">:</span> <span class="n">GET</span>
-      <span class="n">url</span><span class="p">:</span> <span class="n">shttp</span><span class="p">:</span><span class="o">//</span><span class="n">ooni</span><span class="o">.</span><span class="n">nu</span><span class="o">/</span><span class="n">test</span>
-    <span class="n">response</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&lt;html&gt;</span><span class="se">\n</span><span class="s2">    &lt;head&gt;</span><span class="se">\n</span><span class="s2">        &lt;meta http-equiv=</span><span class="se">\&quot;</span><span class="s2">refresh</span><span class="se">\&quot;</span><span class="s2"> content=</span><span class="se">\&quot;\</span>
-<span class="s2">        0;URL=http://ooni.nu:80/test/</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">    &lt;/head&gt;</span><span class="se">\n</span><span class="s2">    &lt;body bgcolor=</span><span class="se">\&quot;</span><span class="s2">#FFFFFF</span><span class="se">\&quot;\</span>
-<span class="s2">        \ text=</span><span class="se">\&quot;</span><span class="s2">#000000</span><span class="se">\&quot;</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">    &lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://ooni.nu:80/test/</span><span class="se">\&quot;</span><span class="s2">&gt;click here&lt;/a&gt;</span><span class="se">\n\</span>
-<span class="s2">        \    &lt;/body&gt;</span><span class="se">\n</span><span class="s2">&lt;/html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span>
-      <span class="n">code</span><span class="p">:</span> <span class="mi">302</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Length</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;224&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Server</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">TwistedWeb</span><span class="o">/</span><span class="mf">10.1</span><span class="o">.</span><span class="mi">0</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Connection</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">close</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Location</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;http://ooni.nu:80/test/&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Date</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;Thu, 29 Nov 2012 12:20:33 GMT&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">]</span>
-  <span class="n">socksproxy</span><span class="p">:</span> <span class="n">null</span>
-<span class="n">test_name</span><span class="p">:</span> <span class="n">test_get</span>
-<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">9.357746124267578</span>
-<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354191606.333243</span>
-<span class="o">...</span>
-<span class="o">---</span>
-<span class="nb">input</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
-<span class="n">report</span><span class="p">:</span>
-  <span class="n">agent</span><span class="p">:</span> <span class="n">agent</span>
-  <span class="n">body_length_match</span><span class="p">:</span> <span class="n">false</span>
-  <span class="n">body_proportion</span><span class="p">:</span> <span class="mf">1.0</span>
-  <span class="n">factor</span><span class="p">:</span> <span class="mf">0.8</span>
-  <span class="n">requests</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">request</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="n">null</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">User</span><span class="o">-</span><span class="n">Agent</span>
-        <span class="o">-</span> <span class="o">-</span> <span class="o">&amp;</span><span class="n">id001</span> <span class="p">[</span><span class="n">Mozilla</span><span class="o">/</span><span class="mf">4.0</span> <span class="p">(</span><span class="n">compatible</span><span class="p">;</span> <span class="n">MSIE</span> <span class="mf">7.0</span><span class="p">;</span> <span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.1</span><span class="p">),</span> <span class="s1">&#39;Internet</span>
-              <span class="n">Explorer</span> <span class="mi">7</span><span class="p">,</span> <span class="n">Windows</span> <span class="n">Vista</span><span class="s1">&#39;]</span>
-      <span class="n">method</span><span class="p">:</span> <span class="n">GET</span>
-      <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
-    <span class="n">response</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="s1">&#39;&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre>###########################################
+# OONI Probe Report for HTTP Requests Test test
+# Thu Nov 29 13:20:06 2012
+###########################################
+---
+options:
+  collector: null
+  help: 0
+  logfile: null
+  pcapfile: null
+  reportfile: null
+  resume: 0
+  subargs: [-f, example_inputs/url_lists_file.txt]
+  test: nettests/blocking/http_requests.py
+probe_asn: null
+probe_cc: null
+probe_ip: 127.0.0.1
+software_name: ooniprobe
+software_version: 0.0.7.1-alpha
+start_time: 1354188006.0
+test_name: HTTP Requests Test
+test_version: &#39;0.1&#39;
+...
+---
+input: http://ooni.nu/test
+report:
+  agent: agent
+  body_length_match: false
+  body_proportion: 0.9732142857142857
+  factor: 0.8
+  requests:
+  - request:
+      body: null
+      headers:
+      - - User-Agent
+        - - &amp;id001 [Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1), &#39;Internet
+              Explorer 7, Windows Vista&#39;]
+      method: GET
+      url: http://ooni.nu/test
+    response:
+      body: &quot;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;\
+        0;URL=http://ooni.nu/test/\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body bgcolor=\&quot;#FFFFFF\&quot;\
+        \ text=\&quot;#000000\&quot;&gt;\n    &lt;a href=\&quot;http://ooni.nu/test/\&quot;&gt;click here&lt;/a&gt;\n\
+        \    &lt;/body&gt;\n&lt;/html&gt;\n&quot;
+      code: 302
+      headers:
+      - - Content-Length
+        - [&#39;218&#39;]
+      - - Server
+        - [TwistedWeb/10.1.0]
+      - - Connection
+        - [close]
+      - - Location
+        - [&#39;http://ooni.nu/test/&#39;]
+      - - Date
+        - [&#39;Thu, 29 Nov 2012 12:20:25 GMT&#39;]
+      - - Content-Type
+        - [text/html]
+  - request:
+      body: null
+      headers:
+      - - User-Agent
+        - - *id001
+      method: GET
+      url: shttp://ooni.nu/test
+    response:
+      body: &quot;\n&lt;html&gt;\n    &lt;head&gt;\n        &lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;\
+        0;URL=http://ooni.nu:80/test/\&quot;&gt;\n    &lt;/head&gt;\n    &lt;body bgcolor=\&quot;#FFFFFF\&quot;\
+        \ text=\&quot;#000000\&quot;&gt;\n    &lt;a href=\&quot;http://ooni.nu:80/test/\&quot;&gt;click here&lt;/a&gt;\n\
+        \    &lt;/body&gt;\n&lt;/html&gt;\n&quot;
+      code: 302
+      headers:
+      - - Content-Length
+        - [&#39;224&#39;]
+      - - Server
+        - [TwistedWeb/10.1.0]
+      - - Connection
+        - [close]
+      - - Location
+        - [&#39;http://ooni.nu:80/test/&#39;]
+      - - Date
+        - [&#39;Thu, 29 Nov 2012 12:20:33 GMT&#39;]
+      - - Content-Type
+        - [text/html]
+  socksproxy: null
+test_name: test_get
+test_runtime: 9.357746124267578
+test_started: 1354191606.333243
+...
+---
+input: http://torproject.org/
+report:
+  agent: agent
+  body_length_match: false
+  body_proportion: 1.0
+  factor: 0.8
+  requests:
+  - request:
+      body: null
+      headers:
+      - - User-Agent
+        - - &amp;id001 [Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1), &#39;Internet
+              Explorer 7, Windows Vista&#39;]
+      method: GET
+      url: http://torproject.org/
+    response:
+      body: &#39;&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
 
-        <span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+        &lt;html&gt;&lt;head&gt;
 
-        <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="mi">302</span> <span class="n">Found</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+        &lt;title&gt;302 Found&lt;/title&gt;
 
-        <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+        &lt;/head&gt;&lt;body&gt;
 
-        <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Found</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+        &lt;h1&gt;Found&lt;/h1&gt;
 
-        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">document</span> <span class="n">has</span> <span class="n">moved</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://www.torproject.org/&quot;</span><span class="o">&gt;</span><span class="n">here</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        &lt;p&gt;The document has moved &lt;a href=&quot;https://www.torproject.org/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-        <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+        &lt;hr&gt;
 
-        <span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="n">Apache</span> <span class="n">Server</span> <span class="n">at</span> <span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="n">Port</span> <span class="mi">80</span><span class="o">&lt;/</span><span class="n">address</span><span class="o">&gt;</span>
+        &lt;address&gt;Apache Server at torproject.org Port 80&lt;/address&gt;
 
-        <span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+        &lt;/body&gt;&lt;/html&gt;
 
-        <span class="s1">&#39;</span>
-      <span class="n">code</span><span class="p">:</span> <span class="mi">302</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Length</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;275&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Vary</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Server</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">Apache</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Connection</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">close</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Location</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;https://www.torproject.org/&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Date</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;Thu, 29 Nov 2012 12:20:08 GMT&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">iso</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-  <span class="o">-</span> <span class="n">request</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="n">null</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">User</span><span class="o">-</span><span class="n">Agent</span>
-        <span class="o">-</span> <span class="o">-</span> <span class="o">*</span><span class="n">id001</span>
-      <span class="n">method</span><span class="p">:</span> <span class="n">GET</span>
-      <span class="n">url</span><span class="p">:</span> <span class="n">shttp</span><span class="p">:</span><span class="o">//</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span>
-    <span class="n">response</span><span class="p">:</span>
-      <span class="n">body</span><span class="p">:</span> <span class="s1">&#39;&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;</span>
+        &#39;
+      code: 302
+      headers:
+      - - Content-Length
+        - [&#39;275&#39;]
+      - - Vary
+        - [Accept-Encoding]
+      - - Server
+        - [Apache]
+      - - Connection
+        - [close]
+      - - Location
+        - [&#39;https://www.torproject.org/&#39;]
+      - - Date
+        - [&#39;Thu, 29 Nov 2012 12:20:08 GMT&#39;]
+      - - Content-Type
+        - [text/html; charset=iso-8859-1]
+  - request:
+      body: null
+      headers:
+      - - User-Agent
+        - - *id001
+      method: GET
+      url: shttp://torproject.org/
+    response:
+      body: &#39;&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
 
-        <span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+        &lt;html&gt;&lt;head&gt;
 
-        <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="mi">302</span> <span class="n">Found</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+        &lt;title&gt;302 Found&lt;/title&gt;
 
-        <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+        &lt;/head&gt;&lt;body&gt;
 
-        <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Found</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+        &lt;h1&gt;Found&lt;/h1&gt;
 
-        <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">document</span> <span class="n">has</span> <span class="n">moved</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;https://www.torproject.org/&quot;</span><span class="o">&gt;</span><span class="n">here</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;.&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+        &lt;p&gt;The document has moved &lt;a href=&quot;https://www.torproject.org/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-        <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+        &lt;hr&gt;
 
-        <span class="o">&lt;</span><span class="n">address</span><span class="o">&gt;</span><span class="n">Apache</span> <span class="n">Server</span> <span class="n">at</span> <span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="n">Port</span> <span class="mi">80</span><span class="o">&lt;/</span><span class="n">address</span><span class="o">&gt;</span>
+        &lt;address&gt;Apache Server at torproject.org Port 80&lt;/address&gt;
 
-        <span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
+        &lt;/body&gt;&lt;/html&gt;
 
-        <span class="s1">&#39;</span>
-      <span class="n">code</span><span class="p">:</span> <span class="mi">302</span>
-      <span class="n">headers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Length</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;275&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Vary</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">Accept</span><span class="o">-</span><span class="n">Encoding</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Server</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">Apache</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Connection</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">close</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Location</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;https://www.torproject.org/&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Date</span>
-        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;Thu, 29 Nov 2012 12:20:16 GMT&#39;</span><span class="p">]</span>
-      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span>
-        <span class="o">-</span> <span class="p">[</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">iso</span><span class="o">-</span><span class="mi">8859</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-  <span class="n">socksproxy</span><span class="p">:</span> <span class="n">null</span>
-<span class="n">test_name</span><span class="p">:</span> <span class="n">test_get</span>
-<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">8.688138008117676</span>
-<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354191607.287672</span>
-<span class="o">...</span>
+        &#39;
+      code: 302
+      headers:
+      - - Content-Length
+        - [&#39;275&#39;]
+      - - Vary
+        - [Accept-Encoding]
+      - - Server
+        - [Apache]
+      - - Connection
+        - [close]
+      - - Location
+        - [&#39;https://www.torproject.org/&#39;]
+      - - Date
+        - [&#39;Thu, 29 Nov 2012 12:20:16 GMT&#39;]
+      - - Content-Type
+        - [text/html; charset=iso-8859-1]
+  socksproxy: null
+test_name: test_get
+test_runtime: 8.688138008117676
+test_started: 1354191607.287672
+...
 </pre></div>
 </div>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -420,11 +389,10 @@ on the location from which the request originated from.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.2.1-dev',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

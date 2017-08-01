@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 May 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ooni.torproject.org/tags/events/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://ooni.torproject.org/tags/events/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OONI at the CryptoRave 2017</title>
@@ -17,8 +15,34 @@
       <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-cryptorave-2017/</guid>
-      <description>CryptoRave is a free, non-commercial and collectively funded 48 hour event featuring talks, workshops and activities related to security, privacy, anonymity, hacking and freedom of expression that attracts more that 2,500 people mainly from South America. The event took place in São Paulo, Brazil on 5th and 6th May 2017.
-A number of people attended the OONI presentation and workshop (&amp;ldquo;Listatona&amp;rdquo;) that was co-organized with Coding Rights. During the workshop participants were able to better understand OONI&amp;rsquo;s testing methodology, and how ooniprobe performs network measurements.</description>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://cryptorave.org/&#34;&gt;CryptoRave&lt;/a&gt; is a free, non-commercial and
+collectively funded 48 hour event featuring talks, workshops and activities
+related to security, privacy, anonymity, hacking and freedom of expression that
+attracts more that 2,500 people mainly from South America. The event took place
+in São Paulo, Brazil on 5th and 6th May 2017.&lt;/p&gt;
+
+&lt;p&gt;A number of people attended the OONI
+&lt;a href=&#34;https://cpa.cryptorave.org/pt-BR/CR2017/public/events/43&#34;&gt;presentation&lt;/a&gt; and
+&lt;a href=&#34;https://cpa.cryptorave.org/pt-BR/CR2017/public/events/112&#34;&gt;workshop&lt;/a&gt;
+(&amp;ldquo;Listatona&amp;rdquo;) that was co-organized with &lt;a href=&#34;https://www.codingrights.org/&#34;&gt;Coding Rights&lt;/a&gt;. During the workshop participants were able to
+better understand OONI&amp;rsquo;s testing methodology, and how ooniprobe performs
+network measurements. Participants provided useful feedback regarding
+&lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;test-lists&lt;/a&gt;
+and URLs from diverse sources from South America.&lt;/p&gt;
+
+&lt;p&gt;Below we provide the OONI presentation slides in English and Portuguese.&lt;/p&gt;
+
+&lt;h2 id=&#34;ooni-presentation-slides:344274181f612aebb6f11cf4c4db9314&#34;&gt;OONI presentation slides&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/documents/cryptorave2017-slides/OONI-CryptoRave-2017-EN.pdf&#34;&gt;Slides in English language&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/documents/cryptorave2017-slides/OONI-CryptoRave-2017-PT.pdf&#34;&gt;Slides in Portuguese language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Thanks everyone for your attendance!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,13 +51,82 @@ A number of people attended the OONI presentation and workshop (&amp;ldquo;Lista
       <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-iff-rightscon/</guid>
-      <description>Over the last month the OONI team joined the internet freedom community at the following events:
- Vietnam Cyber Dialogue (VCD)
- Internet Freedom Festival (IFF)
- Iran Cyber Dialogue (ICD)
- RightsCon 2017
- International Journalism Festival (IJF)
-  These events provided us with the opportunity to engage with community members, create new friendships, learn about new projects, and to share skills and knowledge. We also had the opportunity to facilitate sessions that allowed us to collect feedback for the improvement of our software and research methodologies.</description>
+      <description>
+
+&lt;p&gt;Over the last month the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; team joined the internet
+freedom community at the following events:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/vietnam-cyber-dialogue/&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/&#34;&gt;Internet Freedom Festival (IFF)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/iran-cyber-dialogue-rightscon-brussels-2017-timely-impactful/&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;RightsCon 2017&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.journalismfestival.com/&#34;&gt;International Journalism Festival (IJF)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These events provided us with the opportunity to engage with community members,
+create new friendships, learn about new projects, and to share skills and
+knowledge. We also had the opportunity to facilitate sessions that allowed us to
+collect feedback for the improvement of our
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;software&lt;/a&gt; and research
+methodologies.&lt;/p&gt;
+
+&lt;p&gt;Below we list the sessions that we (co-) facilitated as part of these events.&lt;/p&gt;
+
+&lt;h2 id=&#34;vietnam-cyber-dialogue-vcd:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;OONI skill-sharing session&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Measuring internet censorship in Vietnam&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;internet-freedom-festival-iff:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;Internet Freedom Festival (IFF)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Investigating_internet_controls_with_OONI&#34;&gt;Investigating Internet Controls with OONI&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/documents/iff17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Building_Community_Resources_for_Censorship_Measurement_Research&#34;&gt;Building Community Resources for Censorship Measurement Research&lt;/a&gt; (co-facilitated with the &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;iran-cyber-dialogue-icd:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Measuring internet censorship in Iran&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;rightscon-2017:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;RightsCon 2017&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/keepiton-summit-rightscon-brussels-program-schedule/&#34;&gt;Advances in measuring internet shutdowns&lt;/a&gt; (panel)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;Collecting evidence of internet censorship in Southeast Asia and beyond&lt;/a&gt; (co-
+facilitated with &lt;a href=&#34;http://sinarproject.org/&#34;&gt;Sinar Project&lt;/a&gt;), (&lt;a href=&#34;https://ooni.torproject.org/documents/rightscon17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Telling Data Driven Narratives About Internet Regulation and Access (facilitated
+by the &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab&lt;/a&gt;, joined by OONI)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;international-journalism-festival-ijf:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;International Journalism Festival (IJF)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.journalismfestival.com/programme/2017/uncovering-internet-censorship-right-around-your-corner&#34;&gt;Uncovering Internet Censorship&lt;/a&gt;(&lt;a href=&#34;https://ooni.torproject.org/documents/ijf17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you have any questions that we failed to adequately address in person or
+through our sessions, please don’t hesitate to
+&lt;a href=&#34;https://ooni.torproject.org/about/&#34;&gt;contact&lt;/a&gt; us.&lt;/p&gt;
+
+&lt;p&gt;Warm thanks from the OONI team to the organizers and participants of these
+events!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note: This post was updated on 11th April 2017 to include OONI&amp;rsquo;s presentation at
+the International Journalism Festival (IJF).&lt;/em&gt;&lt;/p&gt;
+</description>
     </item>
     
   </channel>

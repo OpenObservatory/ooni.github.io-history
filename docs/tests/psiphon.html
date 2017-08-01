@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
+  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../index.html"/> 
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +58,7 @@
             
             
               <div class="version">
-                2.2.1-dev
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -111,10 +102,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -123,40 +112,23 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Details</li>
-    
-    
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Details</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="../_sources/tests/psiphon.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/tests/psiphon.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -176,11 +148,11 @@
 <p>This test first check that the Psiphon path exists, then launches Psiphon and
 parses output to determine if it has bootstrapped. After bootstrap, it fetches
 <cite>http://www.google.com/humans.txt</cite> using Psiphons SOCKS
-proxy listening on 127.0.0.1:1080 (or otherwise specified by the –socksproxy
+proxy listening on 127.0.0.1:1080 (or otherwise specified by the &#8211;socksproxy
 argument).
-It will then check to see if the response body contains the string: “Google is built by a large”</p>
+It will then check to see if the response body contains the string: &#8220;Google is built by a large&#8221;</p>
 <p>The specific string used to determine bootstrap from Psiphon output in version
-“0.0.1” is “Press Ctrl-C to terminate.” from standard output.</p>
+&#8220;0.0.1&#8221; is &#8220;Press Ctrl-C to terminate.&#8221; from standard output.</p>
 </div>
 <div class="section" id="how-to-run-the-test">
 <h1>How to run the test<a class="headerlink" href="#how-to-run-the-test" title="Permalink to this headline">¶</a></h1>
@@ -188,8 +160,8 @@ It will then check to see if the response body contains the string: “Google is
 <p>To test Psiphon when it is installed in a different path other than the user home:</p>
 <p><cite>ooniprobe third_party/psiphon -p &lt;path to Psiphon repository&gt;</cite></p>
 <p>For advanced usages you may also configure a different URL and expected body
-for the response with the <cite>–url</cite> and <cite>–expected-body</cite> command line options.</p>
-<p><cite>ooniprobe third_party/psiphon –url http://www.github.com/humans.txt –expected-body ‘/* TEAM */’</cite></p>
+for the response with the <cite>&#8211;url</cite> and <cite>&#8211;expected-body</cite> command line options.</p>
+<p><cite>ooniprobe third_party/psiphon &#8211;url http://www.github.com/humans.txt &#8211;expected-body &#8216;/* TEAM */&#8217;</cite></p>
 </div>
 <div class="section" id="how-to-install-psiphon">
 <h1>How to install Psiphon<a class="headerlink" href="#how-to-install-psiphon" title="Permalink to this headline">¶</a></h1>
@@ -203,13 +175,13 @@ for the response with the <cite>–url</cite> and <cite>–expected-body</cite> 
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
 <p><cite>ooniprobe third_party/psiphon</cite></p>
 <blockquote>
-<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="c1">###########################################</span>
 <span class="c1"># OONI Probe Report for psiphon_test (0.0.1)</span>
 <span class="c1"># Mon Oct 12 21:40:52 2015</span>
 <span class="c1">###########################################</span>
 </pre></div>
 </div>
-<p>—
+<p>&#8212;
 input_hashes: []
 options: [-u, google.com]
 probe_asn: AS0
@@ -223,11 +195,11 @@ start_time: 1444686051.0
 test_helpers: {}
 test_name: psiphon_test
 test_version: 0.0.1
-…
-—
-/tmp/tmplKg8K3: {exit_reason: process_done, stderr: ‘’, stdout: “./ssh is not a valid</p>
+...
+&#8212;
+/tmp/tmplKg8K3: {exit_reason: process_done, stderr: &#8216;&#8217;, stdout: &#8221;./ssh is not a valid</p>
 <blockquote>
-<div>executable. Using standard ssh.rnrnYour SOCKS proxy is now running at 127.0.0.1:1080rnrnPress Ctrl-C to terminate.rnTerminating…rnConnection closedrn”}</div></blockquote>
+<div>executable. Using standard ssh.rnrnYour SOCKS proxy is now running at 127.0.0.1:1080rnrnPress Ctrl-C to terminate.rnTerminating...rnConnection closedrn&#8221;}</div></blockquote>
 <p>agent: agent
 input: null
 psiphon_installed: true
@@ -243,13 +215,13 @@ tor: {is_tor: false}
 url: <a class="reference external" href="http://google.com">http://google.com</a></div></blockquote>
 <dl class="docutils">
 <dt>response:</dt>
-<dd><p class="first">body: “Google is built by a large team of engineers, designers, researchers, robots, and others in many different sites across the globe. It is updated continuously, and built with more tools and technologies than we can shake a stick at. If you’d like to help us out, see google.com/careers.”
+<dd><p class="first">body: &#8220;Google is built by a large team of engineers, designers, researchers, robots, and others in many different sites across the globe. It is updated continuously, and built with more tools and technologies than we can shake a stick at. If you&#8217;d like to help us out, see google.com/careers.&#8221;
 code: 301
 headers:
 - - Content-Length</p>
 <blockquote>
 <div><ul class="simple">
-<li>[‘219’]</li>
+<li>[&#8216;219&#8217;]</li>
 </ul>
 </div></blockquote>
 <ul class="last simple">
@@ -260,7 +232,7 @@ headers:
 </li>
 <li><ul class="first">
 <li>Expires</li>
-<li>[‘Wed, 11 Nov 2015 21:40:58 GMT’]</li>
+<li>[&#8216;Wed, 11 Nov 2015 21:40:58 GMT&#8217;]</li>
 </ul>
 </li>
 <li><ul class="first">
@@ -275,17 +247,17 @@ headers:
 </li>
 <li><ul class="first">
 <li>Location</li>
-<li>[‘<a class="reference external" href="http://www.google.com/">http://www.google.com/</a>’]</li>
+<li>[&#8216;<a class="reference external" href="http://www.google.com/">http://www.google.com/</a>&#8216;]</li>
 </ul>
 </li>
 <li><ul class="first">
 <li>Cache-Control</li>
-<li>[‘public, max-age=2592000’]</li>
+<li>[&#8216;public, max-age=2592000&#8217;]</li>
 </ul>
 </li>
 <li><ul class="first">
 <li>Date</li>
-<li>[‘Mon, 12 Oct 2015 21:40:58 GMT’]</li>
+<li>[&#8216;Mon, 12 Oct 2015 21:40:58 GMT&#8217;]</li>
 </ul>
 </li>
 <li><ul class="first">
@@ -305,14 +277,11 @@ headers:
 <p>socksproxy: 127.0.0.1:1080
 test_runtime: 7.373162031173706
 test_start_time: 1444686052.0
-…</p>
+...</p>
 </div></blockquote>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -344,11 +313,10 @@ test_start_time: 1444686052.0
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.2.1-dev',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

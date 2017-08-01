@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width"/>
+  
+  <title>OONI - DASH Streaming Test</title>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
+  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+	
+	<script type="text/javascript">
+		var _paq = _paq || [];
+		 
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function() {
+			var u="//analytics.ooni.io/";
+			_paq.push(['setTrackerUrl', u+'piwik.php']);
+			_paq.push(['setSiteId', '1']);
+			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+			g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		})();
+	</script>
+	
+</head>
+<body>
+
+
+<body class="article">
+  <div class="container">
+
+    <nav>
+      <div class="col-1">
+        <a href="/">
+          <img class="logo" src="../../images/ooni-header-mascot.png" width="25" height="25"/>
+          <img class="wordmark" src="../../images/wordmark.png" alt="OONI" height="14" width="53"/>
+        </a>
+      </div>
+      <div class="col-2">
+        
+
+
+<a href="https://ooni.torproject.org//about/"
+  
+  >About</a>
+<a href="https://ooni.torproject.org//install/"
+  
+  >Install</a>
+<a href="https://ooni.torproject.org//nettest/"
+  
+  >Tests</a>
+<a href="https://ooni.torproject.org//data/"
+  
+  >Data</a>
+<a href="https://ooni.torproject.org//get-involved/"
+  
+  >Get Involved</a>
+<a href="https://ooni.torproject.org//post/"
+  
+   >Blog</a>
+
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-1 toc">
+          <a href="https://ooni.torproject.org//nettest/">
+            &#x2190; back to tests
+          </a>
+      </div>
+
+      <div class="col-2">
+        
+
+<h1 id="dash-streaming-test:926ede6658256c03c477c4f2606b2731">DASH Streaming Test</h1>
+
+<p>DASH is designed to measure the <em>quality</em> of tested networks by emulating a
+video streaming. This test is called DASH because it uses the DASH
+(<a href="https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP">Dynamic Adaptive Streaming over HTTP</a>) streaming technique.</p>
+
+<p>Running this test can be useful to understand the baseline streaming
+performance of a specific network connection. It measures video-related
+metrics as well as network metrics that are key to understand the reason of
+performance issues.</p>
+
+<p>When you run the test, it emulates the streaming of a thirty-second video
+from an <a href="https://www.measurementlab.net/">M-Lab</a> server. The video is divided
+in fifteen two seconds segments. When the client requests a video segment, it
+must also specify the video quality (e.g., SD, HD, Super HD). Of course,
+the higher the request quality, the bigger the returned segment. During the
+streaming, the client seeks to use the higher quality that does not load the
+network, creating queues, so that the streaming can continue smoothly.</p>
+
+<p>We say the player is simple in that it does not employ algorithms
+that real players (e.g. YouTube, Netflix) implement to keep the
+streaming quality stable and to avoid stalls. This simplicity is, however,
+key to understand the contribution of the network to streaming
+quality, which otherwise could be masked by smart players&rsquo; behavior.</p>
+
+<p>As a result, we expect real players to be generally faster than this test,
+because they implement more optimization techniques. However, if the
+<a href="https://arstechnica.com/tech-policy/2010/12/comcastlevel3/">throttling of video is caused by congestion at interconnection points</a>, this test may result faster when the network path from the client to
+the M-Lab server does not pass through the congested interconnection point.</p>
+
+<p>This network performance test was originally developed by the
+<a href="https://gitub.com/neubot">Neubot project</a> and later integrated
+into <a href="https://github.com/measurement-kit/measurement-kit">measurement-kit</a>,
+the engine used by ooniprobe-mobile.</p>
+
+<p><strong>Disclaimer:</strong> DASH is a general-purpose performance test conducted
+against third-party servers provided by <a href="https://www.measurementlab.net/">Measurement Lab
+(M-Lab)</a>. M-Lab&rsquo;s services
+require the retention and disclosure of IP addresses for research
+purposes. Learn more about M-Lab&rsquo;s data governance, see its <a href="https://www.measurementlab.net/privacy/">privacy
+statement</a>.</p>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

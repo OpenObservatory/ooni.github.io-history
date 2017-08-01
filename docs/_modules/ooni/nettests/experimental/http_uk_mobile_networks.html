@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettests.experimental.http_uk_mobile_networks &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
+  <title>ooni.nettests.experimental.http_uk_mobile_networks &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../../../genindex.html"/>
-        <link rel="search" title="Search" href="../../../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../../index.html"/>
         <link rel="up" title="Module code" href="../../../index.html"/> 
 
   
@@ -45,7 +40,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -65,7 +59,7 @@
             
             
               <div class="version">
-                2.2.1-dev
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -86,10 +80,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -112,10 +103,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -128,49 +117,32 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-        
-      <li>ooni.nettests.experimental.http_uk_mobile_networks</li>
-    
-    
+      
+    <li>ooni.nettests.experimental.http_uk_mobile_networks</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.nettests.experimental.http_uk_mobile_networks</h1><div class="highlight"><pre>
-<span></span><span class="c1"># -*- encoding: utf-8 -*-</span>
+<span class="c1"># -*- encoding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">yaml</span>
 
-<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="k">import</span> <span class="n">usage</span>
+<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span>
 
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">httpt</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">httpt</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
 
 <div class="viewcode-block" id="UsageOptions"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.http_uk_mobile_networks.UsageOptions">[docs]</a><span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -178,7 +150,7 @@
 <span class="sd">    to see how the rules file should look like.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[</span>
-                     <span class="p">[</span><span class="s1">&#39;rules&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> 
+                     <span class="p">[</span><span class="s1">&#39;rules&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> 
                     <span class="s1">&#39;Specify the redirect rules file &#39;</span><span class="p">]</span>
                     <span class="p">]</span></div>
 
@@ -191,16 +163,15 @@
 <span class="sd">    XXX port the knowledge from the trac ticket into this test docstring</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;HTTP UK mobile network redirect test&quot;</span>
-    <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.1.0&quot;</span>
 
     <span class="n">usageOptions</span> <span class="o">=</span> <span class="n">UsageOptions</span>
 
-    <span class="n">followRedirects</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">followRedirects</span> <span class="o">=</span> <span class="bp">True</span>
 
-    <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;urls&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;List of urls one per line to test for censorship&#39;</span><span class="p">]</span>
+    <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;urls&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s1">&#39;List of urls one per line to test for censorship&#39;</span><span class="p">]</span>
     <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;urls&#39;</span><span class="p">]</span>
-    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="n">requiresTor</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">requiresTor</span> <span class="o">=</span> <span class="bp">False</span>
 
 <div class="viewcode-block" id="HTTPUKMobileNetworksTest.testPattern"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.http_uk_mobile_networks.HTTPUKMobileNetworksTest.testPattern">[docs]</a>    <span class="k">def</span> <span class="nf">testPattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="nb">type</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;eq&#39;</span><span class="p">:</span>
@@ -208,14 +179,14 @@
         <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s1">&#39;re&#39;</span><span class="p">:</span>
             <span class="kn">import</span> <span class="nn">re</span>
             <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-                <span class="k">return</span> <span class="kc">True</span>
+                <span class="k">return</span> <span class="bp">True</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="k">return</span> <span class="kc">False</span>
+                <span class="k">return</span> <span class="bp">False</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">None</span></div>
+            <span class="k">return</span> <span class="bp">None</span></div>
 
 <div class="viewcode-block" id="HTTPUKMobileNetworksTest.testPatterns"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.http_uk_mobile_networks.HTTPUKMobileNetworksTest.testPatterns">[docs]</a>    <span class="k">def</span> <span class="nf">testPatterns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">patterns</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-        <span class="n">test_result</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">test_result</span> <span class="o">=</span> <span class="bp">False</span>
 
         <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">patterns</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">:</span>
@@ -226,7 +197,7 @@
 
 <div class="viewcode-block" id="HTTPUKMobileNetworksTest.testRules"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.http_uk_mobile_networks.HTTPUKMobileNetworksTest.testRules">[docs]</a>    <span class="k">def</span> <span class="nf">testRules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rules</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">blocked</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">blocked</span> <span class="o">=</span> <span class="bp">False</span>
         <span class="k">for</span> <span class="n">rule</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">rules</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">current_rule</span> <span class="o">=</span> <span class="p">{}</span>
             <span class="n">current_rule</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
@@ -238,7 +209,7 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="HTTPUKMobileNetworksTest.processRedirect"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.experimental.html#ooni.nettests.experimental.http_uk_mobile_networks.HTTPUKMobileNetworksTest.processRedirect">[docs]</a>    <span class="k">def</span> <span class="nf">processRedirect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;redirect&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;redirect&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="n">rules_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;rules&#39;</span><span class="p">]</span>
 
         <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">rules_file</span><span class="p">)</span>
@@ -250,9 +221,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;redirect&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">redirect</span></div></div>
 </pre></div>
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -284,11 +252,10 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'2.2.1-dev',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>

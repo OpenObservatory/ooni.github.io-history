@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.settings &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
+  <title>ooni.settings &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -45,7 +40,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -65,7 +59,7 @@
             
             
               <div class="version">
-                2.2.1-dev
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -86,10 +80,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -112,10 +103,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -128,56 +117,38 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="../index.html">Module code</a> &raquo;</li>
-        
-      <li>ooni.settings</li>
-    
-    
+      
+    <li>ooni.settings</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.settings</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">errno</span>
 <span class="kn">import</span> <span class="nn">getpass</span>
-<span class="kn">import</span> <span class="nn">platform</span>
-<span class="kn">from</span> <span class="nn">ConfigParser</span> <span class="k">import</span> <span class="n">SafeConfigParser</span>
+<span class="kn">from</span> <span class="nn">ConfigParser</span> <span class="kn">import</span> <span class="n">SafeConfigParser</span>
 
-<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span><span class="p">,</span> <span class="n">reactor</span>
-<span class="kn">from</span> <span class="nn">twisted.internet.endpoints</span> <span class="k">import</span> <span class="n">TCP4ClientEndpoint</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">defer</span><span class="p">,</span> <span class="n">reactor</span>
+<span class="kn">from</span> <span class="nn">twisted.internet.endpoints</span> <span class="kn">import</span> <span class="n">TCP4ClientEndpoint</span>
 
-<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="n">abspath</span><span class="p">,</span> <span class="n">expanduser</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">abspath</span><span class="p">,</span> <span class="n">expanduser</span>
 
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">Storage</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">get_ooni_root</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">Storage</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">get_ooni_root</span>
 
 <span class="n">CONFIG_FILE_TEMPLATE</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
 <span class="s2"># This is the configuration file for OONIProbe</span>
@@ -186,25 +157,18 @@
 
 <span class="s2">basic:</span>
 <span class="s2">    # Where OONIProbe should be writing its log file</span>
-<span class="s2">    # logfile: </span><span class="si">{logfile}</span><span class="s2"></span>
+<span class="s2">    # logfile: {logfile}</span>
 <span class="s2">    # loglevel: WARNING</span>
-<span class="s2">    # Will rotate logs daily when &quot;daily&quot; or based on rotate_length</span>
-<span class="s2">    #  when &quot;length&quot; is set. null to disable rotation.</span>
-<span class="s2">    # rotate: daily</span>
-<span class="s2">    # rotate_length: 1M</span>
-<span class="s2">    # Sets an upper bound on the number of rotated files, only works when</span>
-<span class="s2">    #  &quot;length&quot; is the rotation mode</span>
-<span class="s2">    # max_rotated_files: null</span>
 <span class="s2">    # The maximum amount of data to store on disk. Once the quota is reached,</span>
 <span class="s2">    # we will start deleting older reports.</span>
 <span class="s2">    # measurement_quota: 1G</span>
 <span class="s2">privacy:</span>
 <span class="s2">    # Should we include the IP address of the probe in the report?</span>
-<span class="s2">    includeip: </span><span class="si">{include_ip}</span><span class="s2"></span>
+<span class="s2">    includeip: {include_ip}</span>
 <span class="s2">    # Should we include the ASN of the probe in the report?</span>
-<span class="s2">    includeasn: </span><span class="si">{include_asn}</span><span class="s2"></span>
+<span class="s2">    includeasn: {include_asn}</span>
 <span class="s2">    # Should we include the country as reported by GeoIP in the report?</span>
-<span class="s2">    includecountry: </span><span class="si">{include_country}</span><span class="s2"></span>
+<span class="s2">    includecountry: {include_country}</span>
 <span class="s2">    # Should we collect a full packet capture on the client?</span>
 <span class="s2">    #includepcap: false</span>
 <span class="s2">reports:</span>
@@ -214,7 +178,7 @@
 <span class="s2">    #pcap: null</span>
 <span class="s2">    #collector: null</span>
 <span class="s2">    # Should we be uploading reports to the collector by default?</span>
-<span class="s2">    upload: </span><span class="si">{should_upload}</span><span class="s2"></span>
+<span class="s2">    upload: {should_upload}</span>
 <span class="s2">advanced:</span>
 <span class="s2">    #debug: false</span>
 <span class="s2">    # enable if auto detection fails</span>
@@ -242,7 +206,7 @@
 <span class="s2">    # If we should support communicating to plaintext backends (via HTTP)</span>
 <span class="s2">    # insecure_backend: false</span>
 <span class="s2">    # The preferred backend type, can be one of onion, https or cloudfront</span>
-<span class="s2">    preferred_backend: </span><span class="si">{preferred_backend}</span><span class="s2"></span>
+<span class="s2">    preferred_backend: {preferred_backend}</span>
 <span class="s2">    # The port and address for the Web UI</span>
 <span class="s2">    #webui_port: 8842</span>
 <span class="s2">    #webui_address: &quot;127.0.0.1&quot;</span>
@@ -251,9 +215,6 @@
 <span class="s2">tor:</span>
 <span class="s2">    #socks_port: 8801</span>
 <span class="s2">    #control_port: 8802</span>
-<span class="s2">    # Alternatively set control_port to the unix domain socket. Useful for Debian based systems</span>
-<span class="s2">    #control_port: unix:/var/run/tor/control</span>
-<span class="s2">    #</span>
 <span class="s2">    # Specify the absolute path to the Tor bridges to use for testing</span>
 <span class="s2">    #bridges: bridges.list</span>
 <span class="s2">    # Specify path of the tor datadirectory.</span>
@@ -271,8 +232,9 @@
 <span class="s2">        #HTTPSProxyAuthenticator: user:password</span>
 <span class="s2">        #UseBridges: 1</span>
 <span class="s2">        #Bridge:</span>
-<span class="s2">        #- &quot;meek_lite 0.0.2.0:1 url=https://d2cly7j4zqgua7.cloudfront.net/ front=a0.awsstatic.com&quot;</span>
-<span class="s2">        #- &quot;meek_lite 0.0.2.0:2 url=https://meek.azureedge.net/ front=ajax.aspnetcdn.com&quot;</span>
+<span class="s2">        #- &quot;meek_lite 0.0.2.0:1 url=https://meek-reflect.appspot.com/ front=www.google.com&quot;</span>
+<span class="s2">        #- &quot;meek_lite 0.0.2.0:2 url=https://d2zfqthxsdq309.cloudfront.net/ front=a0.awsstatic.com&quot;</span>
+<span class="s2">        #- &quot;meek_lite 0.0.2.0:3 url=https://az786092.vo.msecnd.net/ front=ajax.aspnetcdn.com&quot;</span>
 <span class="s2">        #ClientTransportPlugin: &quot;meek_lite exec /usr/bin/obfs4proxy&quot;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 
@@ -280,46 +242,43 @@
     <span class="s2">&quot;basic&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s2">&quot;loglevel&quot;</span><span class="p">:</span> <span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
         <span class="s2">&quot;logfile&quot;</span><span class="p">:</span> <span class="s2">&quot;ooniprobe.log&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;rotate&quot;</span><span class="p">:</span> <span class="s2">&quot;daily&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;rotate_length&quot;</span><span class="p">:</span> <span class="s2">&quot;1M&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;max_rotated_files&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
         <span class="s2">&quot;measurement_quota&quot;</span><span class="p">:</span> <span class="s2">&quot;1G&quot;</span>
     <span class="p">},</span>
     <span class="s2">&quot;privacy&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;includeip&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-        <span class="s2">&quot;includeasn&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;includecountry&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;includepcap&quot;</span><span class="p">:</span> <span class="kc">False</span>
+        <span class="s2">&quot;includeip&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="s2">&quot;includeasn&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s2">&quot;includecountry&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s2">&quot;includepcap&quot;</span><span class="p">:</span> <span class="bp">False</span>
     <span class="p">},</span>
     <span class="s2">&quot;reports&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;unique_id&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="s2">&quot;pcap&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s2">&quot;collector&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s2">&quot;upload&quot;</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="s2">&quot;unique_id&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+        <span class="s2">&quot;pcap&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s2">&quot;collector&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s2">&quot;upload&quot;</span><span class="p">:</span> <span class="bp">True</span>
     <span class="p">},</span>
     <span class="s2">&quot;advanced&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-        <span class="s2">&quot;tor_binary&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s2">&quot;obfsproxy_binary&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;debug&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="s2">&quot;tor_binary&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s2">&quot;obfsproxy_binary&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
         <span class="s2">&quot;interface&quot;</span><span class="p">:</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;start_tor&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;start_tor&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
         <span class="s2">&quot;measurement_timeout&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
         <span class="s2">&quot;measurement_retries&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
         <span class="s2">&quot;measurement_concurrency&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
         <span class="s2">&quot;reporting_timeout&quot;</span><span class="p">:</span> <span class="mi">360</span><span class="p">,</span>
         <span class="s2">&quot;reporting_retries&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
         <span class="s2">&quot;reporting_concurrency&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
-        <span class="s2">&quot;insecure_backend&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;insecure_backend&quot;</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
         <span class="s2">&quot;preferred_backend&quot;</span><span class="p">:</span> <span class="s2">&quot;onion&quot;</span><span class="p">,</span>
         <span class="s2">&quot;webui_port&quot;</span><span class="p">:</span> <span class="mi">8842</span><span class="p">,</span>
         <span class="s2">&quot;webui_address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;webui_disabled&quot;</span><span class="p">:</span> <span class="kc">False</span>
+        <span class="s2">&quot;webui_disabled&quot;</span><span class="p">:</span> <span class="bp">False</span>
     <span class="p">},</span>
     <span class="s2">&quot;tor&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;socks_port&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s2">&quot;control_port&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s2">&quot;bridges&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="s2">&quot;data_dir&quot;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="s2">&quot;socks_port&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s2">&quot;control_port&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s2">&quot;bridges&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
+        <span class="s2">&quot;data_dir&quot;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
         <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span>
         <span class="s2">&quot;torrc&quot;</span><span class="p">:</span> <span class="p">{}</span>
     <span class="p">}</span>
@@ -328,15 +287,12 @@
 <span class="c1"># This is the root of the ooniprobe source code tree</span>
 <span class="n">OONIPROBE_ROOT</span> <span class="o">=</span> <span class="n">get_ooni_root</span><span class="p">()</span>
 
-<span class="n">IS_VIRTUALENV</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">IS_VIRTUALENV</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">sys</span><span class="p">,</span> <span class="s1">&#39;real_prefix&#39;</span><span class="p">):</span>
-    <span class="n">IS_VIRTUALENV</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">IS_VIRTUALENV</span> <span class="o">=</span> <span class="bp">True</span>
 
 <span class="c1"># These are the the embedded settings</span>
 <span class="n">_SETTINGS_INI</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OONIPROBE_ROOT</span><span class="p">,</span> <span class="s1">&#39;settings.ini&#39;</span><span class="p">)</span>
-<span class="c1"># This can be overridden by an environment variable for end to end testing</span>
-<span class="k">if</span> <span class="s1">&#39;OONIPROBE_SETTINGS&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
-    <span class="n">_SETTINGS_INI</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;OONIPROBE_SETTINGS&#39;</span><span class="p">]</span>
 
 <span class="n">USR_SHARE_PATH</span> <span class="o">=</span> <span class="s1">&#39;/usr/share/ooni&#39;</span>
 <span class="n">VAR_LIB_PATH</span> <span class="o">=</span> <span class="s1">&#39;/var/lib/ooni&#39;</span>
@@ -362,15 +318,15 @@
         <span class="n">settings</span><span class="o">.</span><span class="n">readfp</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
 
     <span class="n">_USR_SHARE_PATH</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;directories&#39;</span><span class="p">,</span> <span class="s1">&#39;usr_share&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">_USR_SHARE_PATH</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">_USR_SHARE_PATH</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">USR_SHARE_PATH</span> <span class="o">=</span> <span class="n">_USR_SHARE_PATH</span>
 
     <span class="n">_VAR_LIB_PATH</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;directories&#39;</span><span class="p">,</span> <span class="s1">&#39;var_lib&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">_VAR_LIB_PATH</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">_VAR_LIB_PATH</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">VAR_LIB_PATH</span> <span class="o">=</span> <span class="n">_VAR_LIB_PATH</span>
 
     <span class="n">_ETC_PATH</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;directories&#39;</span><span class="p">,</span> <span class="s1">&#39;etc&#39;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">_ETC_PATH</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">_ETC_PATH</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
         <span class="n">ETC_PATH</span> <span class="o">=</span> <span class="n">_ETC_PATH</span>
 
 
@@ -394,7 +350,7 @@
         <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">config_file_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">in_file</span><span class="p">:</span>
             <span class="n">c</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">in_file</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">c</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">c</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
                 <span class="k">continue</span>
             <span class="n">config_from_files</span><span class="p">[</span><span class="n">category</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_from_files</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="p">{})</span>
             <span class="n">config_from_files</span><span class="p">[</span><span class="n">category</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="n">category</span><span class="p">])</span>
@@ -409,17 +365,17 @@
     <span class="k">return</span> <span class="n">configuration</span>
 
 <div class="viewcode-block" id="OConfig"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig">[docs]</a><span class="k">class</span> <span class="nc">OConfig</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">_custom_home</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">_custom_home</span> <span class="o">=</span> <span class="bp">None</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_user</span> <span class="o">=</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">global_options</span> <span class="o">=</span> <span class="p">{}</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">scapyFactory</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">tor_state</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scapyFactory</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tor_state</span> <span class="o">=</span> <span class="bp">None</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">logging</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logging</span> <span class="o">=</span> <span class="bp">True</span>
 
         <span class="c1"># These are the configuration options</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">basic</span> <span class="o">=</span> <span class="n">Storage</span><span class="p">()</span>
@@ -500,53 +456,11 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">home</span><span class="p">,</span> <span class="s1">&#39;.ooni&#39;</span><span class="p">)</span>
 
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">web_ui_url</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;http://</span><span class="si">{0}</span><span class="s2">:</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">advanced</span><span class="o">.</span><span class="n">webui_address</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">advanced</span><span class="o">.</span><span class="n">webui_port</span>
-        <span class="p">)</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">platform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;/etc/default/lepidopter&#39;</span><span class="p">):</span>
-            <span class="k">return</span> <span class="s1">&#39;lepidopter&#39;</span>
-        <span class="n">system</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">system</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">system</span> <span class="o">==</span> <span class="s1">&#39;Darwin&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;macos&#39;</span>
-        <span class="k">elif</span> <span class="n">system</span> <span class="o">==</span> <span class="s1">&#39;Linux&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;linux&#39;</span>
-        <span class="k">elif</span> <span class="n">system</span> <span class="o">==</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span>
-            <span class="c1"># Really?</span>
-            <span class="k">return</span> <span class="s1">&#39;windows&#39;</span>
-        <span class="k">return</span> <span class="s1">&#39;unknown&#39;</span>
-
 <div class="viewcode-block" id="OConfig.get_data_file_path"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.get_data_file_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_data_file_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">target_dir</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_directory_candidates</span><span class="p">:</span>
             <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">target_dir</span><span class="p">,</span> <span class="n">file_name</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
                 <span class="k">return</span> <span class="n">file_path</span></div>
-
-<div class="viewcode-block" id="OConfig.log_info"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.log_info">[docs]</a>    <span class="k">def</span> <span class="nf">log_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Paths&quot;</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;-----&quot;</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;inputs directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs_directory</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;scheduler directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">scheduler_directory</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;resources directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">resources_directory</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;decks available directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">decks_available_directory</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;decks enabled directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">decks_enabled_directory</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;measurements directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurements_directory</span><span class="p">)</span>
-
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;running path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">running_path</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;config files: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_files</span><span class="p">))</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;ooni home: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">ooni_home</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;var_lib path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">VAR_LIB_PATH</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;etc path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ETC_PATH</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;usr_share path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">USR_SHARE_PATH</span><span class="p">)</span>
-
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;nettest directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">nettest_directory</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;web ui directory: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">web_ui_directory</span><span class="p">)</span></div>
-
 
 <div class="viewcode-block" id="OConfig.set_paths"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.set_paths">[docs]</a>    <span class="k">def</span> <span class="nf">set_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nettest_directory</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OONIPROBE_ROOT</span><span class="p">,</span> <span class="s1">&#39;nettests&#39;</span><span class="p">)</span>
@@ -578,7 +492,7 @@
                 <span class="bp">self</span><span class="o">.</span><span class="n">basic</span><span class="o">.</span><span class="n">logfile</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">,</span> <span class="s1">&#39;~&#39;</span><span class="o">+</span><span class="bp">self</span><span class="o">.</span><span class="n">current_user</span><span class="p">)</span>
             <span class="p">)</span></div>
 
-<div class="viewcode-block" id="OConfig.initialize_ooni_home"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.initialize_ooni_home">[docs]</a>    <span class="k">def</span> <span class="nf">initialize_ooni_home</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_home</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="OConfig.initialize_ooni_home"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.initialize_ooni_home">[docs]</a>    <span class="k">def</span> <span class="nf">initialize_ooni_home</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">custom_home</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">custom_home</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_custom_home</span> <span class="o">=</span> <span class="n">custom_home</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">set_paths</span><span class="p">()</span>
@@ -605,14 +519,14 @@
                 <span class="k">if</span> <span class="n">exc</span><span class="o">.</span><span class="n">errno</span> <span class="o">!=</span> <span class="n">errno</span><span class="o">.</span><span class="n">EEXIST</span><span class="p">:</span>
                     <span class="k">raise</span></div>
 
-<div class="viewcode-block" id="OConfig.create_config_file"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.create_config_file">[docs]</a>    <span class="k">def</span> <span class="nf">create_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_ip</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">include_asn</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                           <span class="n">include_country</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">should_upload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="viewcode-block" id="OConfig.create_config_file"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.create_config_file">[docs]</a>    <span class="k">def</span> <span class="nf">create_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">include_ip</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">include_asn</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                           <span class="n">include_country</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">should_upload</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
                            <span class="n">preferred_backend</span><span class="o">=</span><span class="s2">&quot;onion&quot;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">initialize_ooni_home</span><span class="p">()</span>
         <span class="k">def</span> <span class="nf">_bool_to_yaml</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
                 <span class="k">return</span> <span class="s1">&#39;true&#39;</span>
-            <span class="k">elif</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">elif</span> <span class="n">value</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
                 <span class="k">return</span> <span class="s1">&#39;false&#39;</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="s1">&#39;null&#39;</span>
@@ -635,7 +549,7 @@
             <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">read_config_file</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="OConfig.read_config_file"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.read_config_file">[docs]</a>    <span class="k">def</span> <span class="nf">read_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">check_incoherences</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="OConfig.read_config_file"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.read_config_file">[docs]</a>    <span class="k">def</span> <span class="nf">read_config_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">check_incoherences</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
         <span class="n">configuration</span> <span class="o">=</span> <span class="n">_load_config_files_with_defaults</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">config_files</span><span class="p">,</span> <span class="n">defaults</span><span class="p">)</span>
 
@@ -651,14 +565,14 @@
         <span class="n">incoherent</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">if</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;advanced&#39;</span><span class="p">][</span><span class="s1">&#39;interface&#39;</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;auto&#39;</span><span class="p">:</span>
-            <span class="kn">from</span> <span class="nn">scapy.all</span> <span class="k">import</span> <span class="n">get_if_list</span>
+            <span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="n">get_if_list</span>
             <span class="k">if</span> <span class="n">configuration</span><span class="p">[</span><span class="s1">&#39;advanced&#39;</span><span class="p">][</span><span class="s1">&#39;interface&#39;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">get_if_list</span><span class="p">():</span>
                 <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;advanced:interface&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">log_incoherences</span><span class="p">(</span><span class="n">incoherent</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="OConfig.log_incoherences"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.log_incoherences">[docs]</a>    <span class="k">def</span> <span class="nf">log_incoherences</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">incoherences</span><span class="p">):</span>
-        <span class="kn">from</span> <span class="nn">ooni</span> <span class="k">import</span> <span class="n">errors</span>
+        <span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">errors</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">incoherences</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">incoherences</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="n">incoherent_pretty</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">incoherences</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="n">incoherences</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -668,15 +582,15 @@
                                                          <span class="bp">self</span><span class="o">.</span><span class="n">config_files</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
             <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">ConfigFileIncoherent</span></div>
 
-<div class="viewcode-block" id="OConfig.check_tor"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.check_tor">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">check_tor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OConfig.check_tor"><a class="viewcode-back" href="../../api/ooni.html#ooni.settings.OConfig.check_tor">[docs]</a>    <span class="k">def</span> <span class="nf">check_tor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Called only when we must start tor by director.start</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="k">import</span> <span class="n">ConnectAndCloseProtocol</span><span class="p">,</span> <span class="n">connectProtocol</span>
+        <span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="kn">import</span> <span class="n">ConnectAndCloseProtocol</span><span class="p">,</span> <span class="n">connectProtocol</span>
         <span class="n">incoherent</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">advanced</span><span class="o">.</span><span class="n">start_tor</span><span class="p">:</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">socks_port</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">socks_port</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
                 <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:socks_port&#39;</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">socks_port_ep</span> <span class="o">=</span> <span class="n">TCP4ClientEndpoint</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span>
@@ -687,33 +601,20 @@
                 <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
                     <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:socks_port&#39;</span><span class="p">)</span>
 
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-                    <span class="n">control_port_ep</span> <span class="o">=</span> <span class="n">TCP4ClientEndpoint</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span>
-                                                         <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-                                                         <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="p">)</span>
-                    <span class="k">try</span><span class="p">:</span>
-                        <span class="k">yield</span> <span class="n">connectProtocol</span><span class="p">(</span><span class="n">control_port_ep</span><span class="p">,</span> <span class="n">ConnectAndCloseProtocol</span><span class="p">())</span>
-                    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-                        <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="n">conf_unix_socket_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span>
-                    <span class="k">if</span> <span class="n">conf_unix_socket_path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;unix:&quot;</span><span class="p">):</span>
-                        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">conf_unix_socket_path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;unix:&quot;</span><span class="p">)):</span>
-                            <span class="n">unix_socket_path</span> <span class="o">=</span> <span class="n">conf_unix_socket_path</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;unix:&quot;</span><span class="p">)</span>
-                        <span class="k">else</span><span class="p">:</span>
-                            <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
-                    <span class="k">else</span><span class="p">:</span>
-                        <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">control_port_ep</span> <span class="o">=</span> <span class="n">TCP4ClientEndpoint</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span>
+                                                     <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+                                                     <span class="bp">self</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">control_port</span><span class="p">)</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="k">yield</span> <span class="n">connectProtocol</span><span class="p">(</span><span class="n">control_port_ep</span><span class="p">,</span> <span class="n">ConnectAndCloseProtocol</span><span class="p">())</span>
+                <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                    <span class="n">incoherent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;tor:control_port&#39;</span><span class="p">)</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">log_incoherences</span><span class="p">(</span><span class="n">incoherent</span><span class="p">)</span></div></div>
 
 <span class="n">config</span> <span class="o">=</span> <span class="n">OConfig</span><span class="p">()</span>
 </pre></div>
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -745,11 +646,10 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.2.1-dev',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

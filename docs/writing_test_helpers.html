@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Writing Test Helpers &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
+  <title>Writing Test Helpers &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="index.html"/>
         <link rel="next" title="Reports" href="reports.html"/>
         <link rel="prev" title="Writing OONI tests" href="writing_tests.html"/> 
 
@@ -46,7 +41,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -66,7 +60,7 @@
             
             
               <div class="version">
-                2.2.1-dev
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -87,13 +81,10 @@
           
             
             
-              
-            
-            
-              <ul class="current">
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing Test Helpers</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Writing Test Helpers</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#writing-a-censorship-directionality-test-helper">Writing a Censorship Directionality Test Helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-the-test-helper">Creating the test helper</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#adding-the-helper-to-the-config-file">Adding the helper to the config file</a></li>
@@ -120,10 +111,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -132,40 +121,23 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Writing Test Helpers</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Writing Test Helpers</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/writing_test_helpers.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/writing_test_helpers.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -176,15 +148,15 @@
 <p>OONI test helpers are used by OONI nettests to perform their measurements. They can be used either to establish a ground truth or to exchange information with the probe to determine if some form of network manipulation is happening in the network path between the probe and the backend.</p>
 <div class="section" id="writing-a-censorship-directionality-test-helper">
 <h2>Writing a Censorship Directionality Test Helper<a class="headerlink" href="#writing-a-censorship-directionality-test-helper" title="Permalink to this headline">¶</a></h2>
-<p>Our goal is to write an OONI test helper that helps an ooni-probe client determine the directionality of keyword censorship it has detected. To do this our helper will receive “encoded” data from an OONI-probe client, decode that data into a text string, and send the OONI-probe client a confirmation packet and a second packet containing the decoded string.</p>
+<p>Our goal is to write an OONI test helper that helps an ooni-probe client determine the directionality of keyword censorship it has detected. To do this our helper will receive &#8220;encoded&#8221; data from an OONI-probe client, decode that data into a text string, and send the OONI-probe client a confirmation packet and a second packet containing the decoded string.</p>
 <p>The ooni-backend code-base has many concise examples of test-helpers that you can build off to create your own. For this tutorial I used the <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/479a1bb154037b834292ccc4b3d593d1472b44de/oonib/testhelpers/tcp_helpers.py#L9-L18">TCP echo test-helper</a> as my guide.</p>
-<p>Following this tutorial requires basic knowledge of event-driven programming (specifically ‘Twisted’). You will be more than ready to build and implement a test-helper after reading though one or two <a class="reference external" href="http://krondo.com/?page_id=1327">tutorials online.</a></p>
+<p>Following this tutorial requires basic knowledge of event-driven programming (specifically &#8216;Twisted&#8217;). You will be more than ready to build and implement a test-helper after reading though one or two <a class="reference external" href="http://krondo.com/?page_id=1327">tutorials online.</a></p>
 </div>
 <div class="section" id="creating-the-test-helper">
 <h2>Creating the test helper<a class="headerlink" href="#creating-the-test-helper" title="Permalink to this headline">¶</a></h2>
 <p>ooni-backend keeps all the test-helpers in the <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/tree/master/oonib/testhelpers">oonib/testhelpers directory</a> Each individual test helper is a twisted service. Most of the current test-helpers consists of a twisted Factory and a twisted Protocol defined in the test helpers directory and a <a class="reference external" href="https://twistedmatrix.com/documents/current/api/twisted.application.internet.html">stock Twisted Server</a> that is defined in the backend code. We will follow this model in the tutorial.</p>
-<p>Because of how simple this example test-helper is the job of our test-helper factory is merely to deploy a single instance of our protocol each time it’s buildProtocol method is called. Because we have our factory inhered from the base <a class="reference external" href="https://twistedmatrix.com/trac/browser/tags/releases/twisted-15.5.0/twisted/internet/protocol.py#L27">Factory object</a> we merely have to define its <code class="docutils literal"><span class="pre">protocol</span></code> property to point to our protocol.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPDirectionalityTestHelper</span><span class="p">(</span><span class="n">Factory</span><span class="p">):</span>
+<p>Because of how simple this example test-helper is the job of our test-helper factory is merely to deploy a single instance of our protocol each time it&#8217;s buildProtocol method is called. Because we have our factory inhered from the base <a class="reference external" href="https://twistedmatrix.com/trac/browser/tags/releases/twisted-15.5.0/twisted/internet/protocol.py#L27">Factory object</a> we merely have to define its <code class="docutils literal"><span class="pre">protocol</span></code> property to point to our protocol.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TCPDirectionalityTestHelper</span><span class="p">(</span><span class="n">Factory</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A test helper for checking for directionality of censorship</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -192,7 +164,7 @@
 </pre></div>
 </div>
 <p>The protocol for this helper needs to do two things. First, upon receiving encoded data it needs to send the ooni-probe client back confirmation that the data has been received. Second, it needs to send the decoded data back to the OONI-probe client. Because we are extending the <a class="reference external" href="https://twistedmatrix.com/trac/browser/tags/releases/twisted-15.5.0/twisted/internet/protocol.py#L512">Protocol object</a> we can rewrite its <code class="docutils literal"><span class="pre">dataReceived</span></code> method which is called and passed data whenever it is received.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPDirectionalityTestProtocol</span><span class="p">(</span><span class="n">Protocol</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TCPDirectionalityTestProtocol</span><span class="p">(</span><span class="n">Protocol</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Takes encoded packet data, decodes it, and then sends it back.</span>
 
 <span class="sd">    This protocol sends two packets in response to an encoded packet.</span>
@@ -208,7 +180,7 @@
 </pre></div>
 </div>
 <p>In order to make this test-helper slightly more flexible we will be allowing the backend to determine the encoding within their config file. To this end we will have to retrieve the encoding from the config file.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dataReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">dataReceived</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
     <span class="c1"># send back receipt of the packet</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
@@ -230,9 +202,9 @@
 <p>ooni-backend uses a config file located at <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/master/oonib.conf.example">/etc/oonibackend.conf</a>. This file contains a <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/479a1bb154037b834292ccc4b3d593d1472b44de/oonib.conf.example#L33-L65">section where each test-helper can be configured.</a>.</p>
 <p>The test-helper will need to be given a unique identifier so that it can be called from the config file. In this example we use <code class="docutils literal"><span class="pre">tcp-directionality</span></code> as our identifier.</p>
 <p>For a helper to be used in the ooni-backend it needs to be given an identifier so that it can be called from the config file:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tcp</span><span class="o">-</span><span class="n">directionality</span><span class="p">:</span>
-  <span class="n">encoding</span><span class="p">:</span> <span class="n">rot13</span>
-  <span class="n">port</span><span class="p">:</span> <span class="mi">57009</span>
+<div class="highlight-python"><div class="highlight"><pre>tcp-directionality:
+  encoding: rot13
+  port: 57009
 </pre></div>
 </div>
 </div>
@@ -240,27 +212,27 @@
 <h2>Adding the helper to the backend<a class="headerlink" href="#adding-the-helper-to-the-backend" title="Permalink to this headline">¶</a></h2>
 <p>For a helper to be integrated into the ooni-backend it needs to be added to the initialization scripts contained within <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/master/oonib/oonibackend.py">oonibackend.py</a>.</p>
 <p>The OONI test-helper system is a collection of <a class="reference external" href="https://twistedmatrix.com/documents/current/core/howto/application.html">Twisted services</a>. For our test-helper we will need to define a service that will run our test-helper factory.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Create the service that will run our test-helpers factory.</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># Create the service that will run our test-helpers factory.</span>
 <span class="n">tcp_directionality_helper</span> <span class="o">=</span> <span class="n">internet</span><span class="o">.</span><span class="n">TCPServer</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">port</span><span class="p">),</span>
                                      <span class="n">tcp_helpers</span><span class="o">.</span><span class="n">TCPDirectionalityTestHelper</span><span class="p">())</span>
 </pre></div>
 </div>
 <p><strong>NOTE:</strong> In this example I have placed the original service in the existing tcp_helpers file. If you created your own file for your test-helper you will have to make sure that you import that file at the top of <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/master/oonib/oonibackend.py">oonibackend.py</a>.</p>
 <p>OONI uses a <a class="reference external" href="https://twistedmatrix.com/documents/current/api/twisted.application.service.MultiService.html">Multi Service</a> which allows them to combine all the OONI test-helpers and the report-collector into a singular service for easier management. The next step for creating our test-helper is to add it to the ooni-backend <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/479a1bb154037b834292ccc4b3d593d1472b44de/oonib/oonibackend.py#L33">multiService</a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Add the helper as a child of the backends multi-service test-helper</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># Add the helper as a child of the backends multi-service test-helper</span>
 <span class="n">multiService</span><span class="o">.</span><span class="n">addService</span><span class="p">(</span><span class="n">tcp_directionality_helper</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Finally, we need to start our service.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Start the test-helpers service</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># Start the test-helpers service</span>
 <span class="n">tcp_directionality_helper</span><span class="o">.</span><span class="n">startService</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>In order for our test-helper to be managed using the backend config file we will need to modify this code to check the config file for a test-helper that uses the identifier we selected earlier. For the directionality helper we check to see if our test-helper had its port specified in the config file to determine if it should be run. I also added a default encoding in case</p>
 <p>This snippet contains the final code that would be inserted into <a class="reference external" href="https://github.com/TheTorProject/ooni-backend/blob/master/oonib/oonibackend.py">oonibackend.py</a>.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Check to see if our test-helper was defined in the config</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="c1"># Check to see if our test-helper was defined in the config</span>
 <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">helpers</span><span class="p">[</span><span class="s1">&#39;tcp-directionality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">port</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="s2">&quot;Starting TCP directionality helper on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">config</span><span class="o">.</span><span class="n">helpers</span><span class="p">[</span><span class="s1">&#39;tcp-directionality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">port</span>
+    <span class="k">print</span> <span class="s2">&quot;Starting TCP directionality helper on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">config</span><span class="o">.</span><span class="n">helpers</span><span class="p">[</span><span class="s1">&#39;tcp-directionality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">port</span>
 
     <span class="c1"># Check for encoding in our config file and set default if missing</span>
     <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">helpers</span><span class="p">[</span><span class="s1">&#39;tcp-directionality&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">encoding</span><span class="p">:</span>
@@ -282,11 +254,11 @@
 <div class="section" id="requiring-the-helper-in-a-test">
 <h2>Requiring the helper in a test<a class="headerlink" href="#requiring-the-helper-in-a-test" title="Permalink to this headline">¶</a></h2>
 <p>If you are creating tests that rely on custom test-helpers you will want to make sure that you do not get inaccurate results because your test-helper being missing in the ooni-backend you are testing against. You can specify required test-helpers within a ooni-probe test by setting its <code class="docutils literal"><span class="pre">requiredTestHelpers</span></code> property. In this example we have made our test helper require the tcp-directionality test that we created above.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyDirectionalityTest</span><span class="p">(</span><span class="n">nettest</span><span class="o">.</span><span class="n">NetTestCase</span><span class="p">):</span>
-<span class="sd">&quot;&quot;&quot; An example test.&quot;&quot;&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre>class MyDirectionalityTest(nettest.NetTestCase):
+&quot;&quot;&quot; An example test.&quot;&quot;&quot;
 
-    <span class="n">requiredTestHelpers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;backend&#39;</span><span class="p">:</span> <span class="s1">&#39;tcp-directionality&#39;</span><span class="p">}</span>
-    <span class="o">...</span>
+    requiredTestHelpers = {&#39;backend&#39;: &#39;tcp-directionality&#39;}
+    ...
 </pre></div>
 </div>
 </div>
@@ -294,18 +266,15 @@
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="reports.html" class="btn btn-neutral float-right" title="Reports" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="reports.html" class="btn btn-neutral float-right" title="Reports" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="writing_tests.html" class="btn btn-neutral" title="Writing OONI tests" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="writing_tests.html" class="btn btn-neutral" title="Writing OONI tests" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -336,11 +305,10 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.2.1-dev',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 07 Dec 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ooni.torproject.org/tags/image/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://ooni.torproject.org/tags/image/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OONI releases Lepidopter Raspberry Pi distribution</title>
@@ -17,8 +15,54 @@
       <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/lepidopter/</guid>
-      <description>The Open Observatory of Network Interference (OONI) team is happy to announce the beta release of ooniprobe&amp;rsquo;s distribution for Raspberry Pis, caĺled Lepidopter.
-What is Lepidopter Lepidopter is a Raspberry Pi distribution image with all the required dependencies and software packages in place, configured to run network measurement tests via the ooniprobe software. It is developed and designed to require no physical attendance upon first bootstrap but also allows experienced users to further configure it as they wish.</description>
+      <description>
+
+&lt;p&gt;The Open Observatory of Network Interference (OONI) team is happy to announce
+the beta release of ooniprobe&amp;rsquo;s distribution for Raspberry Pis, caĺled
+&lt;strong&gt;Lepidopter&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;What is Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter is a Raspberry Pi distribution image with all the required
+dependencies and software packages in place, configured to run network
+measurement tests via the
+&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; software. It is
+developed and designed to require no physical attendance upon first bootstrap
+but also allows experienced users to further configure it as they wish. The
+&lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;source code&lt;/a&gt; and the building
+scripts of the Lepidopter image are free and open source software.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-use-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;Why use Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Since 2012 OONI has collected millions of network measurements that show
+evidence of internet censorship and network tampering. OONI measurement data
+&lt;a href=&#34;https://ooni.torproject.org/post/&#34;&gt;shows&lt;/a&gt; how ISPs filter and censor the internet.
+This wouldn&amp;rsquo;t be possible without the help of numerous volunteers that are
+contributing by running consistent ooniprobe network measurement tests from
+different vantage points. Up to now users needed to be technically savvy to
+maintain their own probes dealing with system configuration, software and
+measurement specific updates. Lepidopter makes it easier for people that have a
+Raspberry Pi and an SD card to be part of the OONI community and help us
+reveal, publish and document possible instances of network interference
+worldwide.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-to-obtain-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;How to obtain Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Please refer to the &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;installation instructions&lt;/a&gt; where
+you can find a detailed guide on how to download, verify and install the latest
+Lepidopter image for a Raspberry Pi.&lt;/p&gt;
+
+&lt;h2 id=&#34;keep-in-touch:7565a061641bd1e599d91e306fc304d1&#34;&gt;Keep in touch&lt;/h2&gt;
+
+&lt;p&gt;We have recently created a mailing list for future and current probe operators
+to get in touch with us and receive regular updates regarding Lepidopter and
+other probe specific operations. You can subscribe to the mailing list by
+registering
+&lt;a href=&#34;https://lists.torproject.org/cgi-bin/mailman/listinfo/ooni-operators&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Find out about our regular community meetings, other mailing lists and how you
+can get involved &lt;a href=&#34;https://ooni.torproject.org/get-involved/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,11 +71,686 @@ What is Lepidopter Lepidopter is a Raspberry Pi distribution image with all the 
       <pubDate>Fri, 24 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/install/lepidopter/</guid>
-      <description>Lepidopter guide This guide explains step-by-step how to run OONI tests from a Raspberry Pi.
-The code of the image as well as the build script can be found in the git repository.
-Some compact documentation on how to install, build, copy to an SD card and run Lepidopter in QEMU is described here.
-About Lepidopter Lepidopter is an ooniprobe distribution for Raspberry Pis.
-This enables users to contribute to the collection of network measurements consistently across time, without having to manually run ooniprobe from their computers and regardless of their technical skills.</description>
+      <description>
+
+&lt;h1 id=&#34;lepidopter-guide:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter guide&lt;/h1&gt;
+
+&lt;p&gt;This guide explains step-by-step how to run OONI tests from a Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;The code of the image as well as the build script can be found in the &lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;git
+repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Some compact documentation on how to install, build, copy to an SD card and run
+Lepidopter in QEMU is described
+&lt;a href=&#34;https://github.com/TheTorProject/lepidopter/blob/master/README.md&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;about-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;About Lepidopter&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter is an &lt;em&gt;ooniprobe distribution&lt;/em&gt; for Raspberry Pis.&lt;/p&gt;
+
+&lt;p&gt;This enables users to contribute to the collection of network measurements
+consistently across time, without having to manually run ooniprobe from their
+computers and regardless of their technical skills. This distribution is
+configured in such a way that, when inserted into a Raspberry Pi and connected
+to a network, it will by default run ooniprobe once a day and send collected
+measurements directly to OONI’s measurement collector. It is also designed to
+automatically get updated to the newest version of ooniprobe.&lt;/p&gt;
+
+&lt;p&gt;All measurements collected by Lepidopter are published on &lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
+Explorer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;By using Lepidopter, you will be running the following OONI software tests via your Raspberry Pi:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web connectivity&lt;/a&gt;:&lt;/strong&gt;
+Designed to examine whether URLs are blocked or not (and if so, how)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;HTTP invalid request line&lt;/a&gt;:&lt;/strong&gt; Designed to detect the presence of systems which could potentially be responsible for censorship, surveillance and traffic manipulation&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/http-header-field-manipulation/&#34;&gt;HTTP header field manipulation&lt;/a&gt;:&lt;/strong&gt; Similar to the previous test (HTTP invalid request line)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/meek-fronted-requests/&#34;&gt;Meek Fronted Requests&lt;/a&gt;:&lt;/strong&gt; Designed to
+examine whether the domains used by Meek (a type of Tor bridge) work in tested
+networks&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/vanilla-tor/&#34;&gt;Vanilla Tor&lt;/a&gt;:&lt;/strong&gt; Designed
+to examine the reachability of the Tor network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/tor-bridge-reachability/&#34;&gt;Tor Bridges test&lt;/a&gt;:&lt;/strong&gt; Designed to
+examine the reachability of Tor bridges in your network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/whatsapp/&#34;&gt;WhatsApp test&lt;/a&gt;:&lt;/strong&gt; Designed
+to examine the reachability of both WhatsApp and WhatsApp&amp;rsquo;s web interface
+(web.whatsapp.com) in your network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/facebook-messenger/&#34;&gt;Facebook Messenger test&lt;/a&gt;:&lt;/strong&gt; Designed to
+examine the reachability of Facebook Messenger in your network&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/telegram/&#34;&gt;Telegram test&lt;/a&gt;:&lt;/strong&gt; Designed
+to examine the reachability of Telegram messenger and Telegram&amp;rsquo;s web
+version in your network&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The main advantages of collecting measurements through Raspberry Pis include the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Stable and continuous daily measurements across extended periods of time&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;More types of data collection&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;More accurate measurements&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;requirements:7565a061641bd1e599d91e306fc304d1&#34;&gt;Requirements&lt;/h2&gt;
+
+&lt;p&gt;The following include a list of requirements to get started:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Raspberry Pi:&lt;/strong&gt; The Lepidopter Raspberry Pi image is compatible with all
+types of Raspberry Pis (tested):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi 1 Model B&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 1 Model B+&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 2 Model B&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 3 Model B&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;SD Card:&lt;/strong&gt; We recommend a 4GB (minimum size) class 4 or higher SD card.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Internet access:&lt;/strong&gt; A standard Ethernet cable (such as a cat 5) attached to a
+network router or switch that could provide internet connectivity. Typically the
+&amp;ldquo;device&amp;rdquo; that enables you to access the internet!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Power supply:&lt;/strong&gt; Use a 5V micro USB power supply to power your Raspberry Pi.
+Be careful that whatever power supply you use outputs at least 5V; insufficient
+power will cause your Pi to behave in strange ways.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If your laptop does not have an SD card slot, please ensure that you have an SD card reader.&lt;/p&gt;
+
+&lt;h1 id=&#34;downloading-and-verifying-the-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Downloading and verifying the Lepidopter Raspberry Pi image&lt;/h1&gt;
+
+&lt;h2 id=&#34;download-the-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Download the Lepidopter image&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter image download&lt;/a&gt;,
+&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip.asc&#34;&gt;(lepidopter image signature download)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Consider downloading the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;
+for a significantly reduced file size compared to the zip archive. The
+signature to the xz compressed image can be found &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.xz.asc&#34;&gt;here&lt;/a&gt;.
+Note that this will require an &lt;a href=&#34;http://tukaani.org/xz/&#34;&gt;extra program&lt;/a&gt; to be
+installed depending on your OS.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The default username and password of the image is&lt;/strong&gt;: &lt;code&gt;lepidopter&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;verify-lepidopter-raspberry-pi-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify Lepidopter Raspberry Pi image&lt;/h2&gt;
+
+&lt;h3 id=&#34;import-the-lepidopter-signing-key:7565a061641bd1e599d91e306fc304d1&#34;&gt;Import the Lepidopter signing key&lt;/h3&gt;
+
+&lt;p&gt;From the OONI web server:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --fetch-keys https://get.ooni.torproject.org/lepidopter/lepidopter-signing-key.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;From a keyserver:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --keyserver pool.sks-keyservers.net --recv-keys 625511968E240F24F6CFD0B6BA56AC5A53E9C7A4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lepidopter team&amp;rsquo;s fingerprint (image signing key) is published here:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pub   4096R/0xBA56AC5A53E9C7A4 2016-05-22
+      Key fingerprint = 6255 1196 8E24 0F24 F6CF  D0B6 BA56 AC5A 53E9 C7A4
+uid   Lepidopter Team (signing key)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;set-the-trust-level-of-the-lepidopter-signing-key-optional:7565a061641bd1e599d91e306fc304d1&#34;&gt;Set the trust level of the Lepidopter signing key (optional)&lt;/h3&gt;
+
+&lt;p&gt;Once you have obtained the lepidopter signing key, you should verify the
+fingerprint of this key very carefully by obtaining copies of the fingerprint
+from trustworthy independent sources and comparing them to the downloaded key’s
+fingerprint to ensure they match. You could hen set the key&amp;rsquo;s trust level to
+“ultimate” (if you are satisfied with the verification process), so that you
+are not getting any warnings about untrusted signatures:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --edit-key 0xBA56AC5A53E9C7A4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;pub  4096R/0xBA56AC5A53E9C7A4  created: 2016-05-22  expires: never       usage: SC
+                               trust: unknown      validity: unknown
+
+gpg&amp;gt; fpr
+pub   4096R/0xBA56AC5A53E9C7A4 2016-05-22 Lepidopter Team (signing key)
+ Primary key fingerprint: 6255 1196 8E24 0F24 F6CF  D0B6 BA56 AC5A 53E9 C7A4
+
+gpg&amp;gt; trust
+pub  4096R/0xBA56AC5A53E9C7A4  created: 2016-05-22  expires: never       usage: SC
+                               trust: unknown      validity: unknown
+sub  4096R/0x566AA65E9738B6C8  created: 2016-05-22  expires: never       usage: E
+[unknown] (1). Lepidopter Team (signing key)
+
+Please decide how far you trust this user to correctly verify other users&#39; keys
+(by looking at passports, checking fingerprints from different sources, etc.)
+
+  1 = I don&#39;t know or won&#39;t say
+  2 = I do NOT trust
+  3 = I trust marginally
+  4 = I trust fully
+  5 = I trust ultimately
+  m = back to the main menu
+
+Your decision? 5
+Do you really want to set this key to ultimate trust? (y/N) y
+
+pub  4096R/0xBA56AC5A53E9C7A4  created: 2016-05-22  expires: never       usage: SC
+                               trust: ultimate      validity: ultimate
+sub  4096R/0x566AA65E9738B6C8  created: 2016-05-22  expires: never       usage: E
+[ultimate] (1). Lepidopter Team (signing key)
+
+gpg&amp;gt; quit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;get-the-lepidopter-image-signature:7565a061641bd1e599d91e306fc304d1&#34;&gt;Get the Lepidopter image signature&lt;/h3&gt;
+
+&lt;p&gt;Download the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip.asc&#34;&gt;lepidopter image signature&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;verify-the-lepidopter-image:7565a061641bd1e599d91e306fc304d1&#34;&gt;Verify the Lepidopter image&lt;/h3&gt;
+
+&lt;p&gt;In order to verify the lepidopter image both the image archive (&lt;code&gt;.zip&lt;/code&gt; or
+&lt;code&gt;.asc&lt;/code&gt;) and the signature file (&lt;code&gt;.asc&lt;/code&gt;) should be within the same directory.&lt;/p&gt;
+
+&lt;p&gt;Verify that the compressed image &lt;code&gt;lepidopter-v1.0.0-armel.img.zip&lt;/code&gt; matches its
+signature &lt;code&gt;lepidopter-v1.0.0-armel.img.zip.asc&lt;/code&gt; by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg -v --verify lepidopter-v1.0.0-armel.img.zip.asc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should look for the message &lt;code&gt;Good signature from &amp;quot;Lepidopter Team (signing
+key)&amp;quot;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg: assuming signed data in `lepidopter-v1.0.0-armel.img.zip&#39;
+gpg: Signature made Fri 05 May 2017
+gpg:                using RSA key 0xBA56AC5A53E9C7A4
+gpg: using PGP trust model
+gpg: Good signature from &amp;quot;Lepidopter Team (signing key)&amp;quot;
+gpg: binary signature, digest algorithm SHA512
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want to learn more about digital signatures and key verification read
+the &lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;documentation&lt;/a&gt; from Qubes OS.&lt;/p&gt;
+
+&lt;h1 id=&#34;setting-up-your-raspberry-pi-with-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;Setting up your Raspberry Pi with Lepidopter&lt;/h1&gt;
+
+&lt;p&gt;Depending on whether you are a Windows, Linux or Mac OS X user, please refer to
+the relevant section of the guide below on how to set up your Raspberry Pi with
+Lepidopter.&lt;/p&gt;
+
+&lt;h2 id=&#34;linux-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Linux users&lt;/h2&gt;
+
+&lt;p&gt;If you are using Ubuntu and hesitate to use the terminal, you can use &lt;strong&gt;Disk
+Image Writer&lt;/strong&gt; (graphical interface) to copy the Lepidopter image to an SD card.
+Alternatively, you can do this through your terminal.&lt;/p&gt;
+
+&lt;p&gt;Below we provide steps on how to copy the Lepidopter image to an SD card via
+Disk Image Writer or a terminal.&lt;/p&gt;
+
+&lt;h3 id=&#34;disk-image-writer:7565a061641bd1e599d91e306fc304d1&#34;&gt;Disk Image Writer&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
+image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Right-click on the downloaded Lepidopter image and select &lt;strong&gt;[Extract
+here]&lt;/strong&gt; to extract the image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-001.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-002.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Install &lt;strong&gt;Disk Image Writer&lt;/strong&gt; from the Ubuntu Software Center.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert your SD card into your SD card reader, and subsequently connect
+your SD card reader to your laptop/desktop.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Right-click on the extracted Lepidopter image and open it with Disk Image Writer.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-003.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Select your SD card reader within the drop-down menu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-005.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Ensure you&amp;rsquo;re selecting your SD card reader, as (accidentally)
+selecting your hard drive could result in its corruption.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Click &lt;strong&gt;[Start Restoring&amp;hellip;]&lt;/strong&gt;. This will copy the Lepidopter image to your SD card.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-006.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Click &lt;strong&gt;[Restore]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-007.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Type in your system password to authenticate this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-008.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Wait for the Lepidopter image to get copied to your SD card&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-010.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Eject when it&amp;rsquo;s done.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/lepidopter-lin-011.png&#34; alt=&#34;Lepidopter-ubuntu&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now your SD card contains OONI&amp;rsquo;s software!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Insert your SD card into the &lt;strong&gt;[MICRO SD CARD]&lt;/strong&gt; slot of your Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 12.&lt;/strong&gt; Connect your Raspberry Pi to power and to the internet (with an Ethernet cable).&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all! From now on, your Raspberry Pi will automatically &lt;strong&gt;run ooniprobe
+every day at 6am UTC&lt;/strong&gt;. The measurements will be sent directly to OONI&amp;rsquo;s server,
+where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
+Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
+hours.&lt;/p&gt;
+
+&lt;h3 id=&#34;terminal:7565a061641bd1e599d91e306fc304d1&#34;&gt;Terminal&lt;/h3&gt;
+
+&lt;p&gt;Please note that the use of the &amp;ldquo;dd&amp;rdquo; tool can overwrite any partition of your
+machine. If you specify the wrong device in the instructions below you could
+delete your primary Linux partition. Please be careful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
+image&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;unzip lepidopter-v1.0.0-armel.img.zip&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you have downloaded the &lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.xz&#34;&gt;xz compressed image&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xz --decompress --verbose --no-sparse lepidopter-v1.0.0-armel.img.xz&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Run &lt;code&gt;df -h&lt;/code&gt; to see which devices are currently mounted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; If your computer has a slot for SD cards, insert the card. If not,
+insert the card into an SD card reader, then connect the reader to your
+computer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Run &lt;code&gt;df -h&lt;/code&gt; again.&lt;/p&gt;
+
+&lt;p&gt;The device that wasn&amp;rsquo;t there last time is your SD card. The left column gives
+the device name of your SD card. It will be listed as something like
+&amp;ldquo;/dev/mmcblk0p1&amp;rdquo; or &amp;ldquo;/dev/sdd1&amp;rdquo;. The last part (&amp;ldquo;p1&amp;rdquo; or &amp;ldquo;1&amp;rdquo; respectively) is the
+partition number, but you want to write to the whole SD card, not just one
+partition, so you need to remove that part from the name (getting for example
+&amp;ldquo;/dev/mmcblk0&amp;rdquo; or &amp;ldquo;/dev/sdd&amp;rdquo;) as the device for the whole SD card.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The SD card can show up more than once in the output of df: in fact it
+will if you have previously written a Raspberry Pi image to this SD card,
+because the Raspberry Pi SD images have more than one partition.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Now that you&amp;rsquo;ve noted what the device name is, you need to unmount
+it so that files can&amp;rsquo;t be read or written to the SD card while you are copying
+over the SD image. So run the command below, replacing &amp;ldquo;/dev/sdd1&amp;rdquo; with whatever
+your SD card&amp;rsquo;s device name is (including the partition number):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;umount /dev/sdd1     
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If your SD card shows up more than once in the output of df due to having
+multiple partitions on the SD card, you should unmount all of these partitions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; In the terminal copy the image to the card with this command,
+making sure you replace the input file if= argument with the path to your .img
+file, and the &amp;ldquo;/dev/sdd&amp;rdquo; in the output file of= argument with the right device
+name (this is very &lt;strong&gt;important:&lt;/strong&gt; you will lose all data on the hard drive on
+your computer if you get the wrong device name). Make sure the device name is
+the name of the whole SD card as described above, not just a partition of it
+(for example, sdd, not sdds1 or sddp1, or mmcblk0 not mmcblk0p1).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;dd bs=4M if=~/lepidopter-v1.0.0-armel.img of=/dev/sdd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Please note that block size set to 4M will work most of the time. If not, please try
+1M, although 1M will take considerably longer.&lt;/p&gt;
+
+&lt;p&gt;Note that if you are not logged in as root you will need to prefix this with sudo.&lt;/p&gt;
+
+&lt;p&gt;The dd command does not give any information of its progress and so may
+appear to have frozen. It could take more than five minutes to finish copying
+to the card. If your card reader has an LED it may blink during the write
+process. To see the progress of the copy operation you can run &lt;code&gt;pkill -USR1
+-n -x&lt;/code&gt; dd in another terminal (prefixed with sudo if you are not logged in as
+root). The progress will be displayed (perhaps not immediately, due to
+buffering) in the original window, not the window with the pkill command.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; As root run the command sync or if a normal user run &lt;code&gt;sudo sync&lt;/code&gt;
+(this will ensure the write cache is flushed and that it is safe to unmount
+your SD card).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Remove the SD card from your card reader, insert it in the Raspberry
+Pi, and have fun!&lt;/p&gt;
+
+&lt;h2 id=&#34;mac-os-x-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Mac OS X users&lt;/h2&gt;
+
+&lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
+image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Double-click on the downloaded Lepidopter image to extract it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download &lt;strong&gt;&lt;a href=&#34;http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/&#34;&gt;ApplePi-Baker&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/ApplePi-Baker.png&#34; alt=&#34;ApplePi-Baker window&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ApplePi-Baker is a free utility that allows you to copy an IMG file to an SD
+card with only a few simple clicks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert your SD card into your SD card reader, and subsequently connect
+your SD card reader to your laptop/desktop.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Start ApplePi-Baker.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Select the Lepidopter IMG file in the Restore Backup section.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Select your SD card reader (in the Pi-Crust section) as a location to
+copy the Lepidopter image to.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Ensure you&amp;rsquo;re selecting your SD card reader, as (accidentally)
+selecting your hard drive could result in its corruption.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Click &lt;strong&gt;[Restore Backup]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Wait for the Lepidopter image to get copied to your SD card&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Type in your system password to authenticate this.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Eject when it&amp;rsquo;s done.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Insert your SD card into the &lt;strong&gt;[MICRO SD CARD]&lt;/strong&gt; slot of your Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 12.&lt;/strong&gt; Connect your Raspberry Pi to power and to the internet (with an Ethernet cable).&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all! From now on, your Raspberry Pi will automatically &lt;strong&gt;run ooniprobe
+every day at 6am UTC&lt;/strong&gt;. The measurements will be sent directly to OONI&amp;rsquo;s server,
+where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
+Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
+hours.&lt;/p&gt;
+
+&lt;h3 id=&#34;optimization:7565a061641bd1e599d91e306fc304d1&#34;&gt;Optimization&lt;/h3&gt;
+
+&lt;p&gt;In OS X each disk may have two path references in /dev:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;/dev/disk# is a buffered device, which means any data being sent undergoes
+extra processing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;/dev/rdisk# is a raw path, which is much faster, and perfectly OK when using
+the dd program.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On a Class 4 SD card the difference was around 20 times faster using the rdisk
+path.&lt;/p&gt;
+
+&lt;h2 id=&#34;windows-users:7565a061641bd1e599d91e306fc304d1&#34;&gt;Windows users&lt;/h2&gt;
+
+&lt;p&gt;You can copy the Lepidopter image to your SD card through the following steps:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
+image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image file from the downloaded .xz file, so you now
+have
+&amp;ldquo;lepidopter-v1.0.0-armel.img&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download
+&lt;a href=&#34;http://sourceforge.net/projects/win32diskimager/&#34;&gt;Win32DiskImager&lt;/a&gt; and
+extract the file.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/lepidopter/Win32DiskImager.png&#34; alt=&#34;Win32DiskImager window&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert the SD card into your SD card reader and check what drive
+letter it was assigned. You can easily see the drive letter (for example G:)
+by looking in the left column of Windows Explorer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Run Win32DiskImager.&lt;/p&gt;
+
+&lt;p&gt;You might need to run Win32DiskImager as Administrator. In this case, right-
+click on the file, and select &amp;lsquo;Run as Administrator&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Select the Lepidopter image file that you extracted above.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Select the drive letter of the SD card in the device box.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; Ensure you&amp;rsquo;re selecting your SD card reader, as (accidentally)
+selecting your hard drive could result in its corruption.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Click &lt;strong&gt;[Write]&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Wait for the Lepidopter image to get copied to your SD card&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Exit the imager and eject the SD card.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Insert your SD card into the &lt;strong&gt;[MICRO SD CARD]&lt;/strong&gt; slot of your
+Raspberry Pi.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Connect your Raspberry Pi to power and to the internet (with an
+Ethernet cable).&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all! From now on, your Raspberry Pi will automatically &lt;strong&gt;run ooniprobe
+every day at 6am UTC&lt;/strong&gt;. The measurements will be sent directly to OONI&amp;rsquo;s
+server,
+where they will be processed and published on &lt;strong&gt;&lt;a href=&#34;https://explorer.ooni.torproject.org/world/&#34;&gt;OONI
+Explorer&lt;/a&gt;&lt;/strong&gt; (generally) within 24
+hours.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; In Windows, the SD card will appear to only have a fairly small size
+once
+written - about 55 to 75 MB. This is because most of the card has a partition
+that is formatted for the Linux operating system that the Raspberry Pi uses
+which is not visible in Windows. If you don&amp;rsquo;t see a small directory with files
+such as kernel.img then the copy may not have worked correctly.&lt;/p&gt;
+
+&lt;h3 id=&#34;using-flashnul-if-win32diskimager-isn-t-successful:7565a061641bd1e599d91e306fc304d1&#34;&gt;Using flashnul (if Win32DiskImager isn&amp;rsquo;t successful)&lt;/h3&gt;
+
+&lt;p&gt;You might not be able to choose the device in Win32DiskImager on some notebooks,
+so this is a different way to achieve the same thing on a Windows machine.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Download the &lt;strong&gt;&lt;a href=&#34;https://get.ooni.torproject.org/lepidopter/lepidopter-v1.0.0-armel.img.zip&#34;&gt;Lepidopter
+image&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Extract the image file from the downloaded .xz file, so you now have
+&amp;ldquo;lepidopter-v1.0.0-armel.img&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Download &lt;a href=&#34;http://shounen.ru/soft/flashnul/index.html&#34;&gt;flashnul&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The English translated version can be found &lt;a href=&#34;http://translate.google.com/translate?hl=en&amp;amp;sl=ru&amp;amp;tl=en&amp;amp;u=http%3A%2F%2Fshounen.ru%2Fsoft%2Fflashnul%2Findex.html&#34;&gt;here&lt;/a&gt;
+with a link to instructions (also translated).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Insert the SD card into your SD card reader and check what drive
+letter it was assigned. You can easily see the drive letter (for example G:)
+by looking in the left column of Windows Explorer.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Extract the application from the archive.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 6.&lt;/strong&gt; Click Start button &amp;gt; All Programs &amp;gt; Accessories &amp;gt; Command Prompt,
+right click on it and Run as Administrator.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 7.&lt;/strong&gt; Run flashnul with argument &amp;ldquo;-p&amp;rdquo;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe -p&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 8.&lt;/strong&gt; Flashnul will tell you something like this (it should be different, as it
+   depends on the drives on your machine):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Available physical drives:&lt;/li&gt;
+&lt;li&gt;0       size = 250059350016 (232 Gb)&lt;/li&gt;
+&lt;li&gt;1       size = 1990197248 (1898 Mb)&lt;/li&gt;
+&lt;li&gt;Available logical disks:&lt;/li&gt;
+&lt;li&gt;C:\&lt;/li&gt;
+&lt;li&gt;D:\&lt;/li&gt;
+&lt;li&gt;E:\&lt;/li&gt;
+&lt;li&gt;F:\&lt;/li&gt;
+&lt;li&gt;Press ENTER to exit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 9.&lt;/strong&gt; Use the Load option of flashnul to put the image file on the SD Card.
+Make sure that you use the correct drive letter for the SD Card as that drive
+will be overwritten!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\flashnul\flashnul.exe E: -L C:\temp\lepidopter-v1.0.0-armel.img&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 10.&lt;/strong&gt; Where &lt;code&gt;C:\flashnul\flashnul.exe&lt;/code&gt; is the location of the flashnul
+program; E: is the drive you want to overwrite, and
+&lt;code&gt;C:\temp\lepidopter-v1.0.0-armel.img&lt;/code&gt; is the location of the .img file.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 11.&lt;/strong&gt; Flashnul will give you a device summary and a caution message. Check
+the information to make sure you have selected the correct device, then type
+yes and press enter.&lt;/p&gt;
+
+&lt;p&gt;If you get an access denied error, make sure to close all explorer windows or
+folders open for the device, then try re-plugging the SD card.&lt;/p&gt;
+
+&lt;h1 id=&#34;lepidopter-services:7565a061641bd1e599d91e306fc304d1&#34;&gt;Lepidopter services&lt;/h1&gt;
+
+&lt;p&gt;Lepidopter uses a mDNS (multicast DNS Service Discovery) (Avahi) to publish the
+SSH and ooniprobe web interface services on a local network with no extra
+configuration or the need to find out the IP address of the Lepidopter host.&lt;/p&gt;
+
+&lt;h2 id=&#34;access-ooniprobe-s-web-interface:7565a061641bd1e599d91e306fc304d1&#34;&gt;Access ooniprobe&amp;rsquo;s web interface&lt;/h2&gt;
+
+&lt;p&gt;If you have the required dependencies you should be able to access
+ooniprobe web interface by entering the following URL to your web browser:
+&lt;a href=&#34;http://lepidopter.local&#34;&gt;http://lepidopter.local&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you can&amp;rsquo;t access ooniprobe&amp;rsquo;s &lt;a href=&#34;http://lepidopter.local&#34;&gt;web interface URL&lt;/a&gt; please follow the installation &lt;a href=&#34;#service-discovery-install-instructions&#34;&gt;instructions&lt;/a&gt; related to your operating system.&lt;/p&gt;
+
+&lt;h2 id=&#34;access-lepidopter-ssh-service:7565a061641bd1e599d91e306fc304d1&#34;&gt;Access lepidopter SSH service&lt;/h2&gt;
+
+&lt;p&gt;You should be able to access Lepidopter&amp;rsquo;s SSH service under the following
+hostname: &lt;code&gt;lepidopter.local&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;service-discovery-install-instructions:7565a061641bd1e599d91e306fc304d1&#34;&gt;Service discovery install instructions&lt;/h2&gt;
+
+&lt;h3 id=&#34;linux:7565a061641bd1e599d91e306fc304d1&#34;&gt;Linux&lt;/h3&gt;
+
+&lt;p&gt;Most Linux distributions (Debian, Fedora, Ubuntu, Archlinux) use the Avahi
+daemon by default. In case your system doesn&amp;rsquo;t come with the Avahi daemon
+pre-installed you should be able to install it via the package manager of
+your distribution, the name of the package is usually something similar to
+&lt;code&gt;avahi-daemon&lt;/code&gt;. You should be able to check if the service is running by using
+a command similar to:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;systemctl status avahi-daemon&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You should be able to see an &lt;code&gt;active (running)&lt;/code&gt; service status.&lt;/p&gt;
+
+&lt;p&gt;If the avahi service is not running try to start it with: &lt;code&gt;systemctl start
+avahi-daemon&lt;/code&gt; or &lt;code&gt;service avahi-daemon start&lt;/code&gt; depending on your distribution.&lt;/p&gt;
+
+&lt;h3 id=&#34;mac-osx-ios:7565a061641bd1e599d91e306fc304d1&#34;&gt;Mac OSX/iOS&lt;/h3&gt;
+
+&lt;p&gt;Mac OS X and iOS operating systems have builtin support for mDNS/DNS-SD with
+the Bonjour software.&lt;/p&gt;
+
+&lt;h3 id=&#34;windows:7565a061641bd1e599d91e306fc304d1&#34;&gt;Windows&lt;/h3&gt;
+
+&lt;p&gt;Recent Windows releases (Windows 10 and Windows 10 mobile) come with built in
+support for mDNS/DNS-SD services. However not all versions of Windows support
+these services and some third-party applications need to be installed
+(if not already installed) that come bundled with the Bonjour software; a
+service that supports automatic discovery of hosts in the local network.&lt;/p&gt;
+
+&lt;p&gt;If you have any of the following applications installed and can access
+ooniprobe&amp;rsquo;s web interface you don&amp;rsquo;t need to do anything, otherwise you
+will need to &lt;a href=&#34;https://support.apple.com/kb/dl999&#34;&gt;download&lt;/a&gt; and install
+Bonjour Print Services for Windows.&lt;/p&gt;
+
+&lt;p&gt;Applications that are bundled with the Bonjour software in Windows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bonjour Print Services for Windows&lt;/li&gt;
+&lt;li&gt;Skype&lt;/li&gt;
+&lt;li&gt;iTunes&lt;/li&gt;
+&lt;li&gt;Adobe&amp;rsquo;s Photoshop CS3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Before installing any application you should first try to access
+ooniprobe&amp;rsquo;s &lt;a href=&#34;http://lepidopter.local&#34;&gt;web interface URL&lt;/a&gt; from your web
+browser.&lt;/p&gt;
+
+&lt;h2 id=&#34;troubleshooting-service-discovery:7565a061641bd1e599d91e306fc304d1&#34;&gt;Troubleshooting service discovery&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code&gt;.local&lt;/code&gt; domain extension is an officially reversed special use domain name
+and should not be resolvable by IPSs or other global DNS.
+By default avahi service is being disabled upon detection of a unicast DNS
+server running on the network that serves the top level domain &lt;code&gt;.local&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In some cases network routers use the &lt;code&gt;.lan&lt;/code&gt; or &lt;code&gt;.home&lt;/code&gt; domain for all devices
+connected in LAN.&lt;/p&gt;
+
+&lt;p&gt;You may be able to access ooniprobe&amp;rsquo;s web interface under the following URLs:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://lepidopter.local&#34;&gt;http://lepidopter.local&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lepidopter.lan&#34;&gt;http://lepidopter.lan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lepidopter.home&#34;&gt;http://lepidopter.home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://lepidopter&#34;&gt;http://lepidopter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you are unable to access ooniprobe&amp;rsquo;s web interface in any of the URLs above
+you should try to locate the Lepidopter&amp;rsquo;s IP address in your network.&lt;/p&gt;
+
+&lt;h3 id=&#34;find-lepidopter-s-ip-address:7565a061641bd1e599d91e306fc304d1&#34;&gt;Find Lepidopter&amp;rsquo;s IP address&lt;/h3&gt;
+
+&lt;p&gt;There are a number of applications and network tools that can help in finding
+out the IP address of Lepidopter in your network. You can use Adafruit&amp;rsquo;s &lt;a href=&#34;https://github.com/adafruit/Adafruit-Pi-Finder/releases/latest&#34;&gt;Pi
+finder utility&lt;/a&gt;
+which can be installed in Linux, Mac OSX and Windows. Upon running the Pi
+finder utility you should be seeing the message &lt;code&gt;Found!&lt;/code&gt; and view the detected
+IP address of Lepidopter located in the &lt;code&gt;IP Address&lt;/code&gt; field.&lt;/p&gt;
+
+&lt;p&gt;You can now use the IP address (found in the IP address field) to access
+ooniprobe&amp;rsquo;s web interface in your web browser.&lt;/p&gt;
+
+&lt;h1 id=&#34;community-information-and-contributing:7565a061641bd1e599d91e306fc304d1&#34;&gt;Community Information and Contributing&lt;/h1&gt;
+
+&lt;h2 id=&#34;report-bugs:7565a061641bd1e599d91e306fc304d1&#34;&gt;Report bugs&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter bugs, feature requests and usability issues should be filed
+&lt;a href=&#34;https://github.com/TheTorProject/lepidopter/issues&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;participate:7565a061641bd1e599d91e306fc304d1&#34;&gt;Participate&lt;/h2&gt;
+
+&lt;p&gt;For people already running a Lepidopter probe and would like to follow up on
+operators specific discussion you are welcome to subscribe to the low volume
+&lt;a href=&#34;https://lists.torproject.org/cgi-bin/mailman/listinfo/ooni-operators&#34;&gt;ooni-operators&lt;/a&gt; mailing
+list.&lt;/p&gt;
+
+&lt;h2 id=&#34;contribute:7565a061641bd1e599d91e306fc304d1&#34;&gt;Contribute&lt;/h2&gt;
+
+&lt;p&gt;Lepidopter distribution build scripts, and code is hosted &lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;here&lt;/a&gt;. You are welcome to contribute
+by sending up patches or pull requests. Read on how you can
+&lt;a href=&#34;https://ooni.torproject.org/get-involved/&#34;&gt;get involved&lt;/a&gt; and reach out to us.&lt;/p&gt;
+
+&lt;h1 id=&#34;sources:7565a061641bd1e599d91e306fc304d1&#34;&gt;Sources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://elinux.org/RPi_Easy_SD_Card_Setup&#34;&gt;RPi Easy SD Card Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/documentation/&#34;&gt;Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.qubes-os.org/doc/verifying-signatures/&#34;&gt;On Digital Signatures and Key Verification&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

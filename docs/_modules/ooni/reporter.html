@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.reporter &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
+  <title>ooni.reporter &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -45,7 +40,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -65,7 +59,7 @@
             
             
               <div class="version">
-                2.2.1-dev
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -86,10 +80,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -112,10 +103,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -128,80 +117,63 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="../index.html">Module code</a> &raquo;</li>
-        
-      <li>ooni.reporter</li>
-    
-    
+      
+    <li>ooni.reporter</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.reporter</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
 <span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
-<span class="kn">from</span> <span class="nn">copy</span> <span class="k">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
 
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="kn">from</span> <span class="nn">yaml.representer</span> <span class="k">import</span> <span class="n">SafeRepresenter</span>
-<span class="kn">from</span> <span class="nn">yaml.emitter</span> <span class="k">import</span> <span class="n">Emitter</span>
-<span class="kn">from</span> <span class="nn">yaml.serializer</span> <span class="k">import</span> <span class="n">Serializer</span>
-<span class="kn">from</span> <span class="nn">yaml.resolver</span> <span class="k">import</span> <span class="n">Resolver</span>
+<span class="kn">from</span> <span class="nn">yaml.representer</span> <span class="kn">import</span> <span class="n">SafeRepresenter</span>
+<span class="kn">from</span> <span class="nn">yaml.emitter</span> <span class="kn">import</span> <span class="n">Emitter</span>
+<span class="kn">from</span> <span class="nn">yaml.serializer</span> <span class="kn">import</span> <span class="n">Serializer</span>
+<span class="kn">from</span> <span class="nn">yaml.resolver</span> <span class="kn">import</span> <span class="n">Resolver</span>
 
-<span class="kn">from</span> <span class="nn">twisted.python.filepath</span> <span class="k">import</span> <span class="n">FilePath</span>
-<span class="kn">from</span> <span class="nn">twisted.python.util</span> <span class="k">import</span> <span class="n">untilConcludes</span>
-<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span>
-<span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="k">import</span> <span class="ne">ConnectionRefusedError</span>
+<span class="kn">from</span> <span class="nn">twisted.python.filepath</span> <span class="kn">import</span> <span class="n">FilePath</span>
+<span class="kn">from</span> <span class="nn">twisted.python.util</span> <span class="kn">import</span> <span class="n">untilConcludes</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">defer</span>
+<span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="kn">import</span> <span class="n">ConnectionRefusedError</span>
 
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">is_process_running</span>
-<span class="kn">from</span> <span class="nn">ooni.tasks</span> <span class="k">import</span> <span class="n">Measurement</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">is_process_running</span>
+<span class="kn">from</span> <span class="nn">ooni.tasks</span> <span class="kn">import</span> <span class="n">Measurement</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">scapy.packet</span> <span class="k">import</span> <span class="n">Packet</span>
+    <span class="kn">from</span> <span class="nn">scapy.packet</span> <span class="kn">import</span> <span class="n">Packet</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Scapy is not installed.&quot;</span><span class="p">)</span>
 
     <span class="k">class</span> <span class="nc">Packet</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
         <span class="k">pass</span>
 
-<span class="kn">from</span> <span class="nn">ooni</span> <span class="k">import</span> <span class="n">errors</span>
+<span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">errors</span>
 
-<span class="kn">from</span> <span class="nn">ooni</span> <span class="k">import</span> <span class="n">otime</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">generate_filename</span>
+<span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">otime</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">generate_filename</span>
 
-<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="kn">import</span> <span class="n">config</span>
 
-<span class="kn">from</span> <span class="nn">ooni.tasks</span> <span class="k">import</span> <span class="n">ReportEntry</span>
-<span class="kn">from</span> <span class="nn">ooni.measurements</span> <span class="k">import</span> <span class="n">list_measurements</span>
+<span class="kn">from</span> <span class="nn">ooni.tasks</span> <span class="kn">import</span> <span class="n">ReportEntry</span>
+<span class="kn">from</span> <span class="nn">ooni.measurements</span> <span class="kn">import</span> <span class="n">list_measurements</span>
 
 
 <div class="viewcode-block" id="createPacketReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.createPacketReport">[docs]</a><span class="k">def</span> <span class="nf">createPacketReport</span><span class="p">(</span><span class="n">packet_list</span><span class="p">):</span>
@@ -242,14 +214,14 @@
 
 <div class="viewcode-block" id="OSafeRepresenter.represent_complex"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OSafeRepresenter.represent_complex">[docs]</a>    <span class="k">def</span> <span class="nf">represent_complex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">data</span><span class="o">.</span><span class="n">real</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="s1">u&#39;</span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">data</span><span class="o">.</span><span class="n">real</span>
         <span class="k">elif</span> <span class="n">data</span><span class="o">.</span><span class="n">real</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%r</span><span class="s1">j&#39;</span> <span class="o">%</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="s1">u&#39;</span><span class="si">%r</span><span class="s1">j&#39;</span> <span class="o">%</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span>
         <span class="k">elif</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%r</span><span class="s1">+</span><span class="si">%r</span><span class="s1">j&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="s1">u&#39;</span><span class="si">%r</span><span class="s1">+</span><span class="si">%r</span><span class="s1">j&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">data</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;</span><span class="si">%r%r</span><span class="s1">j&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">represent_scalar</span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;tag:yaml.org,2002:python/complex&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></div></div>
+            <span class="n">data</span> <span class="o">=</span> <span class="s1">u&#39;</span><span class="si">%r%r</span><span class="s1">j&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">represent_scalar</span><span class="p">(</span><span class="s1">u&#39;tag:yaml.org,2002:python/complex&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></div></div>
 
 <span class="n">OSafeRepresenter</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="nb">complex</span><span class="p">,</span>
                                  <span class="n">OSafeRepresenter</span><span class="o">.</span><span class="n">represent_complex</span><span class="p">)</span>
@@ -263,25 +235,25 @@
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span>
-                 <span class="n">default_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">default_flow_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">canonical</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">allow_unicode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">line_break</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">explicit_start</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">explicit_end</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">version</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                 <span class="n">default_style</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">default_flow_style</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">canonical</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">allow_unicode</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">line_break</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">encoding</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">explicit_start</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">explicit_end</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">version</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
 
-        <span class="n">Emitter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="n">canonical</span><span class="p">,</span>
+        <span class="n">Emitter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">canonical</span><span class="o">=</span><span class="n">canonical</span><span class="p">,</span>
                          <span class="n">indent</span><span class="o">=</span><span class="n">indent</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span>
                          <span class="n">allow_unicode</span><span class="o">=</span><span class="n">allow_unicode</span><span class="p">,</span> <span class="n">line_break</span><span class="o">=</span><span class="n">line_break</span><span class="p">)</span>
-        <span class="n">Serializer</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+        <span class="n">Serializer</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
                             <span class="n">explicit_start</span><span class="o">=</span><span class="n">explicit_start</span><span class="p">,</span>
                             <span class="n">explicit_end</span><span class="o">=</span><span class="n">explicit_end</span><span class="p">,</span>
                             <span class="n">version</span><span class="o">=</span><span class="n">version</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">tags</span><span class="p">)</span>
-        <span class="n">OSafeRepresenter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default_style</span><span class="o">=</span><span class="n">default_style</span><span class="p">,</span>
+        <span class="n">OSafeRepresenter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">default_style</span><span class="o">=</span><span class="n">default_style</span><span class="p">,</span>
                                   <span class="n">default_flow_style</span><span class="o">=</span><span class="n">default_flow_style</span><span class="p">)</span>
-        <span class="n">Resolver</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+        <span class="n">Resolver</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="safe_dump"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.safe_dump">[docs]</a><span class="k">def</span> <span class="nf">safe_dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+<div class="viewcode-block" id="safe_dump"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.safe_dump">[docs]</a><span class="k">def</span> <span class="nf">safe_dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Safely dump to a yaml file the specified data.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -321,7 +293,7 @@
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">,</span> <span class="n">report_filename</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">report_path</span> <span class="o">=</span> <span class="n">report_filename</span>
-        <span class="n">OReporter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">)</span>
+        <span class="n">OReporter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_writeln</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_write</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">line</span><span class="p">)</span>
@@ -384,7 +356,7 @@
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">,</span> <span class="n">report_filename</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">report_path</span> <span class="o">=</span> <span class="n">report_filename</span>
-        <span class="n">OReporter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">)</span>
+        <span class="n">OReporter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_writeln</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
@@ -408,11 +380,11 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Failed to serialise entry&quot;</span><span class="p">)</span>
         <span class="n">report_entry</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
             <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>
-            <span class="s1">&#39;test_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_start_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-            <span class="s1">&#39;measurement_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;measurement_start_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-            <span class="s1">&#39;test_runtime&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_runtime&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+            <span class="s1">&#39;test_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_start_time&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s1">&#39;measurement_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;measurement_start_time&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+            <span class="s1">&#39;test_runtime&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_runtime&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
             <span class="s1">&#39;test_keys&#39;</span><span class="p">:</span> <span class="n">e</span>
         <span class="p">}</span>
         <span class="n">report_entry</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span><span class="p">)</span>
@@ -430,9 +402,9 @@
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">,</span> <span class="n">collector_client</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collector_client</span> <span class="o">=</span> <span class="n">collector_client</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">reportId</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reportId</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">supportedFormats</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;yaml&quot;</span><span class="p">]</span>
-        <span class="n">OReporter</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">)</span>
+        <span class="n">OReporter</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">)</span>
 
 <div class="viewcode-block" id="OONIBReporter.serializeEntry"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.serializeEntry">[docs]</a>    <span class="k">def</span> <span class="nf">serializeEntry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">,</span> <span class="n">serialisation_format</span><span class="o">=</span><span class="s2">&quot;yaml&quot;</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">serialisation_format</span> <span class="o">==</span> <span class="s2">&quot;json&quot;</span><span class="p">:</span>
@@ -444,11 +416,11 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Failed to serialise entry&quot;</span><span class="p">)</span>
             <span class="n">report_entry</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
                 <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()),</span>
-                <span class="s1">&#39;test_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_start_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-                <span class="s1">&#39;measurement_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;measurement_start_time&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-                <span class="s1">&#39;test_runtime&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_runtime&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+                <span class="s1">&#39;test_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_start_time&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+                <span class="s1">&#39;measurement_start_time&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;measurement_start_time&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
+                <span class="s1">&#39;test_runtime&#39;</span><span class="p">:</span> <span class="n">e</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;test_runtime&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">),</span>
                 <span class="s1">&#39;test_keys&#39;</span><span class="p">:</span> <span class="n">e</span>
             <span class="p">}</span>
             <span class="n">report_entry</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span><span class="p">)</span>
@@ -465,8 +437,8 @@
             <span class="n">content</span> <span class="o">+=</span> <span class="s1">&#39;...</span><span class="se">\n</span><span class="s1">&#39;</span>
             <span class="k">return</span> <span class="n">content</span></div>
 
-<div class="viewcode-block" id="OONIBReporter.writeReportEntry"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.writeReportEntry">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">writeReportEntry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReporter.writeReportEntry"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.writeReportEntry">[docs]</a>    <span class="k">def</span> <span class="nf">writeReportEntry</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
         <span class="k">if</span> <span class="s2">&quot;json&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">supportedFormats</span><span class="p">:</span>
             <span class="n">serialization_format</span> <span class="o">=</span> <span class="s1">&#39;json&#39;</span>
         <span class="k">else</span><span class="p">:</span>
@@ -483,8 +455,8 @@
             <span class="n">log</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">OONIBReportUpdateError</span></div>
 
-<div class="viewcode-block" id="OONIBReporter.createReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.createReport">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">createReport</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReporter.createReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReporter.createReport">[docs]</a>    <span class="k">def</span> <span class="nf">createReport</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates a report on the oonib collector.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -495,7 +467,7 @@
             <span class="n">response</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">collector_client</span><span class="o">.</span><span class="n">createReport</span><span class="p">(</span>
                                             <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span>
             <span class="p">)</span>
-        <span class="k">except</span> <span class="ne">ConnectionRefusedError</span><span class="p">:</span>
+        <span class="k">except</span> <span class="n">ConnectionRefusedError</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Connection to reporting backend failed &quot;</span>
                     <span class="s2">&quot;(ConnectionRefusedError)&quot;</span><span class="p">)</span>
             <span class="k">raise</span> <span class="n">errors</span><span class="o">.</span><span class="n">OONIBReportCreationError</span>
@@ -559,8 +531,8 @@
         <span class="n">report_log_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurement_dir</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="s2">&quot;report_log.json&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">report_log_file</span>
 
-<div class="viewcode-block" id="OONIBReportLog.get_report_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">get_report_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.get_report_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log">[docs]</a>    <span class="k">def</span> <span class="nf">get_report_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
         <span class="n">lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_for_report_log</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span>
         <span class="k">yield</span> <span class="n">lock</span><span class="o">.</span><span class="n">deferUntilLocked</span><span class="p">()</span>
 
@@ -576,8 +548,8 @@
 
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="OONIBReportLog.get_report_log_entries"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log_entries">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">get_report_log_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.get_report_log_entries"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_report_log_entries">[docs]</a>    <span class="k">def</span> <span class="nf">get_report_log_entries</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">entries</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">measurement</span> <span class="ow">in</span> <span class="n">list_measurements</span><span class="p">():</span>
             <span class="k">try</span><span class="p">:</span>
@@ -588,8 +560,8 @@
                 <span class="k">continue</span>
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="OONIBReportLog.update_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.update_log">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">update_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.update_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.update_log">[docs]</a>    <span class="k">def</span> <span class="nf">update_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="n">lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_for_report_log</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span>
         <span class="k">yield</span> <span class="n">lock</span><span class="o">.</span><span class="n">deferUntilLocked</span><span class="p">()</span>
 
@@ -601,8 +573,8 @@
 
         <span class="n">lock</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="OONIBReportLog.remove_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.remove_log">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">remove_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.remove_log"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.remove_log">[docs]</a>    <span class="k">def</span> <span class="nf">remove_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">measurement_id</span><span class="p">):</span>
         <span class="n">lock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock_for_report_log</span><span class="p">(</span><span class="n">measurement_id</span><span class="p">)</span>
         <span class="k">yield</span> <span class="n">lock</span><span class="o">.</span><span class="n">deferUntilLocked</span><span class="p">()</span>
 
@@ -615,13 +587,13 @@
 
         <span class="n">lock</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="OONIBReportLog.get_incomplete"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_incomplete">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">get_incomplete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.get_incomplete"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_incomplete">[docs]</a>    <span class="k">def</span> <span class="nf">get_incomplete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">incomplete_reports</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">all_entries</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_report_log_entries</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">all_entries</span><span class="p">[:]:</span>
             <span class="c1"># This means that the measurement itself is incomplete</span>
-            <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;completed&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;completed&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">,):</span>
                 <span class="k">if</span> <span class="ow">not</span> <span class="n">is_process_running</span><span class="p">(</span><span class="n">entry</span><span class="p">[</span><span class="s1">&#39;pid&#39;</span><span class="p">]):</span>
@@ -634,8 +606,8 @@
                     <span class="p">)</span>
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">incomplete_reports</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="OONIBReportLog.get_in_progress"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_in_progress">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">get_in_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.get_in_progress"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_in_progress">[docs]</a>    <span class="k">def</span> <span class="nf">get_in_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">in_progress_reports</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">all_entries</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_report_log_entries</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">all_entries</span><span class="p">[:]:</span>
@@ -646,13 +618,13 @@
                     <span class="p">)</span>
         <span class="n">defer</span><span class="o">.</span><span class="n">returnValue</span><span class="p">(</span><span class="n">in_progress_reports</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="OONIBReportLog.get_to_upload"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_to_upload">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">get_to_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="OONIBReportLog.get_to_upload"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.OONIBReportLog.get_to_upload">[docs]</a>    <span class="k">def</span> <span class="nf">get_to_upload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">to_upload_reports</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">all_entries</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_report_log_entries</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">all_entries</span><span class="p">[:]:</span>
             <span class="c1"># This means that the measurement itself is incomplete</span>
-            <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;completed&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;completed&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
                 <span class="k">continue</span>
             <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;creation-failed&#39;</span><span class="p">,</span> <span class="s1">&#39;not-created&#39;</span><span class="p">):</span>
                 <span class="n">to_upload_reports</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
@@ -689,11 +661,11 @@
 
 
 <div class="viewcode-block" id="Report"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.Report">[docs]</a><span class="k">class</span> <span class="nc">Report</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">reportId</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">reportId</span> <span class="o">=</span> <span class="bp">None</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_details</span><span class="p">,</span> <span class="n">report_filename</span><span class="p">,</span>
-                 <span class="n">reportEntryManager</span><span class="p">,</span> <span class="n">collector_client</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">no_njson</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">measurement_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                 <span class="n">reportEntryManager</span><span class="p">,</span> <span class="n">collector_client</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                 <span class="n">no_njson</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">measurement_id</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This is an abstraction layer on top of all the configured reporters.</span>
 
@@ -719,15 +691,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">test_details</span> <span class="o">=</span> <span class="n">test_details</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">collector_client</span> <span class="o">=</span> <span class="n">collector_client</span>
 
-        <span class="k">if</span> <span class="n">report_filename</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">report_filename</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
             <span class="n">report_filename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generateReportFilename</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">report_filename</span> <span class="o">=</span> <span class="n">report_filename</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">measurement_id</span> <span class="o">=</span> <span class="n">measurement_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">report_log</span> <span class="o">=</span> <span class="n">OONIBReportLog</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">njson_reporter</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">oonib_reporter</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">njson_reporter</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">oonib_reporter</span> <span class="o">=</span> <span class="bp">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">no_njson</span> <span class="o">=</span> <span class="n">no_njson</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">done</span> <span class="o">=</span> <span class="n">defer</span><span class="o">.</span><span class="n">Deferred</span><span class="p">()</span>
@@ -742,7 +714,7 @@
 
 <div class="viewcode-block" id="Report.open_oonib_reporter"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.Report.open_oonib_reporter">[docs]</a>    <span class="k">def</span> <span class="nf">open_oonib_reporter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">creation_failed</span><span class="p">(</span><span class="n">failure</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">oonib_reporter</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">oonib_reporter</span> <span class="o">=</span> <span class="bp">None</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">measurement_id</span><span class="p">:</span>
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">report_log</span><span class="o">.</span><span class="n">creation_failed</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">measurement_id</span><span class="p">,</span>
                                                        <span class="bp">self</span><span class="o">.</span><span class="n">collector_client</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span>
@@ -760,8 +732,8 @@
         <span class="n">d</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="n">created</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">d</span></div>
 
-<div class="viewcode-block" id="Report.open"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.Report.open">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
-    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@defer.inlineCallbacks</span>
+<div class="viewcode-block" id="Report.open"><a class="viewcode-back" href="../../api/ooni.html#ooni.reporter.Report.open">[docs]</a>    <span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will create all the reports that need to be created and fires the</span>
 <span class="sd">        created callback of the reporter whose report got created.</span>
@@ -808,7 +780,7 @@
 
         <span class="k">def</span> <span class="nf">all_reports_written</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">d</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
-                <span class="n">d</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+                <span class="n">d</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">njson_reporter</span><span class="p">:</span>
             <span class="n">write_njson_report</span> <span class="o">=</span> <span class="n">ReportEntry</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">njson_reporter</span><span class="p">,</span> <span class="n">measurement</span><span class="p">)</span>
@@ -852,7 +824,7 @@
 
         <span class="k">def</span> <span class="nf">all_reports_closed</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="n">d</span><span class="o">.</span><span class="n">called</span><span class="p">:</span>
-                <span class="n">d</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+                <span class="n">d</span><span class="o">.</span><span class="n">callback</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">njson_reporter</span><span class="p">:</span>
             <span class="n">close_njson</span> <span class="o">=</span> <span class="n">defer</span><span class="o">.</span><span class="n">maybeDeferred</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">njson_reporter</span><span class="o">.</span><span class="n">finish</span><span class="p">)</span>
@@ -871,9 +843,6 @@
         <span class="k">return</span> <span class="n">d</span></div></div>
 </pre></div>
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -905,11 +874,10 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.2.1-dev',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
