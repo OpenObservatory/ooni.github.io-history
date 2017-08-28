@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Writing OONI tests &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>Writing OONI tests &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="index.html"/>
         <link rel="next" title="Writing Test Helpers" href="writing_test_helpers.html"/>
         <link rel="prev" title="Tutorial" href="tutorial.html"/> 
 
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -60,7 +66,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -81,9 +87,12 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Writing OONI tests</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Writing OONI tests</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#test-cases">Test Cases</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#inputs">Inputs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setup-and-command-line-passing">Setup and command line passing</a></li>
@@ -129,8 +138,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -139,23 +150,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Writing OONI tests</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Writing OONI tests</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/writing_tests.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/writing_tests.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -176,7 +204,7 @@ multiple Test Methods.</p>
 you will subclass this object.</p>
 <ul>
 <li><p class="first">inputs: can be set to a static set of inputs. All the tests (the methods
-starting with the &#8220;test&#8221; prefix) will be run once per input. At every
+starting with the “test” prefix) will be run once per input. At every
 run the _input_ attribute of the TestCase instance will be set to the
 value of the current iteration over inputs.  Any python iterable object
 can be set to inputs.</p>
@@ -253,7 +281,7 @@ strip newline characters. To change this behavior you must set the
 <code class="docutils literal"><span class="pre">inputProcessor</span></code> attribute to a function that takes as argument a file
 descriptor and yield the next item. The default <code class="docutils literal"><span class="pre">inputProcessor</span></code> looks like
 this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">lineByLine</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lineByLine</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fp</span><span class="o">.</span><span class="n">xreadlines</span><span class="p">():</span>
         <span class="k">yield</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -261,7 +289,7 @@ this:</p>
 </pre></div>
 </div>
 <p>For example, if you wanted to modify inputProcessor to read entries from a CSV file, you could use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvFile</span><span class="p">:</span>
         <span class="n">reader</span> <span class="o">=</span> <span class="n">DictReader</span><span class="p">(</span><span class="n">csvFile</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
@@ -281,10 +309,10 @@ this:</p>
 <dt>class UrlGeneratorWithSend(object):</dt>
 <dd><dl class="first docutils">
 <dt>def __init__(self):</dt>
-<dd><p class="first">&#8220;&#8221;&#8220;Create initial list and set generator state.&#8221;&#8220;&#8221;
-self.urls = [&#8220;<a class="reference external" href="http://www.torproject.org">http://www.torproject.org</a>&#8221;,</p>
+<dd><p class="first">“”“Create initial list and set generator state.”“”
+self.urls = [“<a class="reference external" href="http://www.torproject.org">http://www.torproject.org</a>”,</p>
 <blockquote>
-<div>&#8220;<a class="reference external" href="https://ooni.torproject.org">https://ooni.torproject.org</a>&#8220;]</div></blockquote>
+<div>“<a class="reference external" href="https://ooni.torproject.org">https://ooni.torproject.org</a>”]</div></blockquote>
 <p class="last">self.current = 0</p>
 </dd>
 <dt>def __iter__(self):</dt>
@@ -304,10 +332,10 @@ return cur</dd>
 next = __next__</p>
 <dl class="last docutils">
 <dt>def send(self, returned):</dt>
-<dd><p class="first">&#8220;&#8221;&#8220;Appends a value to self.urls when activated&#8221;&#8220;&#8221;
+<dd><p class="first">“”“Appends a value to self.urls when activated”“”
 if returned is not None:</p>
 <blockquote class="last">
-<div>print(&#8220;Value {0} sent to generator&#8221;.format(returned))
+<div>print(“Value {0} sent to generator”.format(returned))
 self.urls.append(returned)</div></blockquote>
 </dd>
 </dl>
@@ -324,15 +352,15 @@ self.urls.append(returned)</div></blockquote>
 inputs = UrlGeneratorWithSend()</p>
 <dl class="docutils">
 <dt>def postProcessor(self, measurements):</dt>
-<dd><p class="first">&#8220;&#8221;&#8220;If any HTTPS url&#8217;s are passed send back an HTTP url.&#8221;&#8220;&#8221;
-if re.match(&#8220;^https&#8221;, self.input):</p>
+<dd><p class="first">“”“If any HTTPS url’s are passed send back an HTTP url.”“”
+if re.match(“^https”, self.input):</p>
 <blockquote>
-<div>http_version = re.sub(&#8220;https&#8221;, &#8220;http&#8221;, self.input, 1)
+<div>http_version = re.sub(“https”, “http”, self.input, 1)
 self.inputs.send(http_version)</div></blockquote>
 <p class="last">return self.report</p>
 </dd>
 <dt>def test_url(self):</dt>
-<dd>self.report[&#8216;tested&#8217;] = [self.input]
+<dd>self.report[‘tested’] = [self.input]
 return defer.succeed(1)</dd>
 </dl>
 </div></blockquote>
@@ -348,7 +376,7 @@ to all your Test Methods that should be run before any testing occurs.</p>
 <code class="xref py py-class docutils literal"><span class="pre">twisted.python.usage.UsageOptions</span></code> class.</p>
 <p>You will have to subclass this and define the NetTestCase attribute
 usageOptions to point to a subclass of this.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
   <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;backend&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;http://127.0.0.1:57001&#39;</span><span class="p">,</span>
                       <span class="s1">&#39;URL of the test backend to use&#39;</span><span class="p">]</span>
                   <span class="p">]</span>
@@ -356,7 +384,7 @@ usageOptions to point to a subclass of this.</p>
 <span class="k">class</span> <span class="nc">MyTestCase</span><span class="p">(</span><span class="n">nettest</span><span class="o">.</span><span class="n">NetTestCase</span><span class="p">):</span>
   <span class="n">usageOptions</span> <span class="o">=</span> <span class="n">UsageOptions</span>
 
-  <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Some foo file&quot;</span><span class="p">]</span>
+  <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Some foo file&quot;</span><span class="p">]</span>
   <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">]</span>
 
   <span class="k">def</span> <span class="nf">test_my_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -381,14 +409,14 @@ that are relevant to your test should be all lowercase separated by
 underscore.</p>
 <p>To add data to the test report you may write directly to the report object
 like so:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">test_my_function</span><span class="p">():</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_my_function</span><span class="p">():</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">do_something</span><span class="p">()</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;something&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
 </pre></div>
 </div>
 <p>OONI will then handle the writing of the data to the final test report.</p>
 <p>To access the current input you can use the <code class="docutils literal"><span class="pre">input</span></code> attribute, for example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">test_with_input</span><span class="p">():</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">test_with_input</span><span class="p">():</span>
     <span class="n">do_something_with_input</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -415,11 +443,11 @@ src and destination IP addresses.</p>
 return a deferred.</p>
 <p>To implement a simple ICMP ping based on this function you can do like so
 (Taken from <code class="xref py py-class docutils literal"><span class="pre">nettest.examples.example_scapyt.ExampleICMPPingScapy</span></code>)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twisted.python</span> <span class="k">import</span> <span class="n">usage</span>
 
-<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">ICMP</span>
+<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="k">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">ICMP</span>
 
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">scapyt</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">scapyt</span>
 
 <span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
     <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s2">&quot;Specify the target to ping&quot;</span><span class="p">]]</span>
@@ -431,7 +459,7 @@ return a deferred.</p>
 
     <span class="k">def</span> <span class="nf">test_icmp_ping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">finished</span><span class="p">(</span><span class="n">packets</span><span class="p">):</span>
-            <span class="k">print</span> <span class="n">packets</span>
+            <span class="nb">print</span> <span class="n">packets</span>
             <span class="n">answered</span><span class="p">,</span> <span class="n">unanswered</span> <span class="o">=</span> <span class="n">packets</span>
             <span class="k">for</span> <span class="n">snd</span><span class="p">,</span> <span class="n">rcv</span> <span class="ow">in</span> <span class="n">answered</span><span class="p">:</span>
                 <span class="n">rcv</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -448,12 +476,12 @@ scapy super socket it uses our twisted driven wrapper around it.</p>
 <p>Alternatively this test can also be written using the
 <code class="xref py py-func docutils literal"><span class="pre">twisted.defer.inlineCallbacks()</span></code> decorator, that makes it look more similar to
 regular sequential code.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span>
-<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">defer</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twisted.python</span> <span class="k">import</span> <span class="n">usage</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span>
 
-<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">ICMP</span>
+<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="k">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">ICMP</span>
 
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">scapyt</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">scapyt</span>
 
 <span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
     <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="s2">&quot;Specify the target to ping&quot;</span><span class="p">]]</span>
@@ -463,7 +491,7 @@ regular sequential code.</p>
 
     <span class="n">usageOptions</span> <span class="o">=</span> <span class="n">UsageOptions</span>
 
-    <span class="nd">@defer.inlineCallbacks</span>
+    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
     <span class="k">def</span> <span class="nf">test_icmp_ping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">packets</span> <span class="o">=</span> <span class="n">IP</span><span class="p">(</span><span class="n">dst</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">ICMP</span><span class="p">()</span>
         <span class="n">answered</span><span class="p">,</span> <span class="n">unanswered</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">sr</span><span class="p">(</span><span class="n">packets</span><span class="p">)</span>
@@ -473,7 +501,7 @@ regular sequential code.</p>
 </div>
 <div class="section" id="report-format">
 <h4>Report Format<a class="headerlink" href="#report-format" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python"><div class="highlight"><pre>###########################################
+<div class="highlight-default"><div class="highlight"><pre><span></span>###########################################
 # OONI Probe Report for Example ICMP Ping Test test
 # Thu Nov 22 18:20:43 2012
 ###########################################
@@ -505,18 +533,18 @@ test_started: 1353604843.553605
 <p>TCP based tests will subclass <a class="reference internal" href="api/ooni.templates.html#ooni.templates.tcpt.TCPTest" title="ooni.templates.tcpt.TCPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code></a>.</p>
 <p>This test template facilitates the sending of TCP payloads to the wire and
 recording the response.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="kn">import</span> <span class="n">ConnectionRefusedError</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">tcpt</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="k">import</span> <span class="ne">ConnectionRefusedError</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">tcpt</span>
 
 <span class="k">class</span> <span class="nc">ExampleTCPT</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">got_response</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
-            <span class="k">print</span> <span class="s2">&quot;Got this data </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span>
+            <span class="nb">print</span> <span class="s2">&quot;Got this data </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span>
 
         <span class="k">def</span> <span class="nf">connection_failed</span><span class="p">(</span><span class="n">failure</span><span class="p">):</span>
-            <span class="n">failure</span><span class="o">.</span><span class="n">trap</span><span class="p">(</span><span class="n">ConnectionRefusedError</span><span class="p">)</span>
-            <span class="k">print</span> <span class="s2">&quot;Connection Refused&quot;</span>
+            <span class="n">failure</span><span class="o">.</span><span class="n">trap</span><span class="p">(</span><span class="ne">ConnectionRefusedError</span><span class="p">)</span>
+            <span class="nb">print</span> <span class="s2">&quot;Connection Refused&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">57002</span>
@@ -536,23 +564,23 @@ errno.ECONNREFUSED</p>
 <h4>Report format<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>The basic report of a TCP test looks like the following (this is an report
 generated by running the above example against a TCP echo server).</p>
-<div class="highlight-python"><div class="highlight"><pre>###########################################
-# OONI Probe Report for Base TCP Test test
-# Thu Nov 22 18:18:28 2012
-###########################################
----
-{probe_asn: null, probe_cc: null, probe_ip: 127.0.0.1, software_name: ooniprobe, software_version: 0.0.7.1-alpha,
-  start_time: 1353601108.0, test_name: Base TCP Test, test_version: &#39;0.1&#39;}
-...
----
-input: null
-report:
-  errors: []
-  received: [&quot;Hello World!\n\r&quot;]
-  sent: [&quot;Hello World!\n\r&quot;]
-test_name: test_hello_world
-test_started: 1353604708.705081
-...
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
+<span class="c1"># OONI Probe Report for Base TCP Test test</span>
+<span class="c1"># Thu Nov 22 18:18:28 2012</span>
+<span class="c1">###########################################</span>
+<span class="o">---</span>
+<span class="p">{</span><span class="n">probe_asn</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="n">probe_cc</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="n">probe_ip</span><span class="p">:</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">software_name</span><span class="p">:</span> <span class="n">ooniprobe</span><span class="p">,</span> <span class="n">software_version</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">7.1</span><span class="o">-</span><span class="n">alpha</span><span class="p">,</span>
+  <span class="n">start_time</span><span class="p">:</span> <span class="mf">1353601108.0</span><span class="p">,</span> <span class="n">test_name</span><span class="p">:</span> <span class="n">Base</span> <span class="n">TCP</span> <span class="n">Test</span><span class="p">,</span> <span class="n">test_version</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">}</span>
+<span class="o">...</span>
+<span class="o">---</span>
+<span class="nb">input</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">report</span><span class="p">:</span>
+  <span class="n">errors</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="n">received</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hello World!</span><span class="se">\n\r</span><span class="s2">&quot;</span><span class="p">]</span>
+  <span class="n">sent</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Hello World!</span><span class="se">\n\r</span><span class="s2">&quot;</span><span class="p">]</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">test_hello_world</span>
+<span class="n">test_started</span><span class="p">:</span> <span class="mf">1353604708.705081</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 <p>TODO finish this with more details</p>
@@ -566,16 +594,16 @@ test_started: 1353604708.705081
 response body and headers respectively.</p>
 <p>For example, to implement a HTTP test that returns the sha256 hash of the
 response body (based on <code class="xref py py-mod docutils literal"><span class="pre">nettests.examples.example_httpt</span></code>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">httpt</span>
-<span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">sha256</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">httpt</span>
+<span class="kn">from</span> <span class="nn">hashlib</span> <span class="k">import</span> <span class="n">sha256</span>
 
 <span class="k">class</span> <span class="nc">SHA256HTTPBodyTest</span><span class="p">(</span><span class="n">httpt</span><span class="o">.</span><span class="n">HTTPTest</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;ChecksumHTTPBodyTest&quot;</span>
     <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Aaron Gibson&quot;</span>
     <span class="n">version</span> <span class="o">=</span> <span class="mf">0.1</span>
 
-    <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;url file&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;url file&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
             <span class="s1">&#39;List of URLS to perform GET requests to&#39;</span><span class="p">]</span>
     <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;url file&#39;</span><span class="p">]</span>
 
@@ -593,74 +621,74 @@ response body (based on <code class="xref py py-mod docutils literal"><span clas
 </div>
 <div class="section" id="id2">
 <h4>Report format<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python"><div class="highlight"><pre>###########################################
-# OONI Probe Report for ChecksumHTTPBodyTest test
-# Thu Dec  6 17:31:57 2012
-###########################################
----
-options:
-  collector: null
-  help: 0
-  logfile: null
-  pcapfile: null
-  reportfile: null
-  resume: 0
-  subargs: [-f, hosts]
-  test: nettests/examples/example_http_checksum.py
-probe_asn: null
-probe_cc: null
-probe_ip: 127.0.0.1
-software_name: ooniprobe
-software_version: 0.0.7.1-alpha
-start_time: 1354786317.0
-test_name: ChecksumHTTPBodyTest
-test_version: 0.1
-...
----
-input: http://www.google.com
-report:
-  agent: agent
-  checksum: d630fa2efd547d3656e349e96ff7af5496889dad959e8e29212af1ff843e7aa1
-  requests:
-  - request:
-      body: null
-      headers:
-      - - User-Agent
-        - - [Opera/9.00 (Windows NT 5.1; U; en), &#39;Opera 9.0, Windows XP&#39;]
-      method: GET
-      url: http://www.google.com
-    response:
-      body: &#39;&lt;!doctype html&gt;&lt;html ... snip ...  &lt;/html&gt;&#39;
-      code: 200
-      headers:
-      - - X-XSS-Protection
-        - [1; mode=block]
-      - - Set-Cookie
-        - [&#39;PREF=ID=fada4216eb3684f9:FF=0:TM=1354800717:LM=1354800717:S=IT-2GCkNAocyXlVa;
-            expires=Sat, 06-Dec-2014 13:31:57 GMT; path=/; domain=.google.com&#39;, &#39;NID=66=KWaLbNQumuGuYf0HrWlGm54u9l-DKJwhFCMQXfhQPZM-qniRhmF6QRGXUKXb_8CIUuCOHnyoC5oAX5jWNrsfk-LLJLW530UiMp6hemTtDMh_e6GSiEB4GR3yOP_E0TCN;
-            expires=Fri, 07-Jun-2013 13:31:57 GMT; path=/; domain=.google.com; HttpOnly&#39;]
-      - - Expires
-        - [&#39;-1&#39;]
-      - - Server
-        - [gws]
-      - - Connection
-        - [close]
-      - - Cache-Control
-        - [&#39;private, max-age=0&#39;]
-      - - Date
-        - [&#39;Thu, 06 Dec 2012 13:31:57 GMT&#39;]
-      - - P3P
-        - [&#39;CP=&quot;This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;answer=151657
-            for more info.&quot;&#39;]
-      - - Content-Type
-        - [text/html; charset=UTF-8]
-      - - X-Frame-Options
-        - [SAMEORIGIN]
-  socksproxy: null
-test_name: test_http
-test_runtime: 0.08298492431640625
-test_started: 1354800717.478403
-...
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
+<span class="c1"># OONI Probe Report for ChecksumHTTPBodyTest test</span>
+<span class="c1"># Thu Dec  6 17:31:57 2012</span>
+<span class="c1">###########################################</span>
+<span class="o">---</span>
+<span class="n">options</span><span class="p">:</span>
+  <span class="n">collector</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">help</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">logfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">pcapfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">reportfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">resume</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">subargs</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="n">hosts</span><span class="p">]</span>
+  <span class="n">test</span><span class="p">:</span> <span class="n">nettests</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example_http_checksum</span><span class="o">.</span><span class="n">py</span>
+<span class="n">probe_asn</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">probe_cc</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">probe_ip</span><span class="p">:</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="n">software_name</span><span class="p">:</span> <span class="n">ooniprobe</span>
+<span class="n">software_version</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">7.1</span><span class="o">-</span><span class="n">alpha</span>
+<span class="n">start_time</span><span class="p">:</span> <span class="mf">1354786317.0</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">ChecksumHTTPBodyTest</span>
+<span class="n">test_version</span><span class="p">:</span> <span class="mf">0.1</span>
+<span class="o">...</span>
+<span class="o">---</span>
+<span class="nb">input</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span>
+<span class="n">report</span><span class="p">:</span>
+  <span class="n">agent</span><span class="p">:</span> <span class="n">agent</span>
+  <span class="n">checksum</span><span class="p">:</span> <span class="n">d630fa2efd547d3656e349e96ff7af5496889dad959e8e29212af1ff843e7aa1</span>
+  <span class="n">requests</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">request</span><span class="p">:</span>
+      <span class="n">body</span><span class="p">:</span> <span class="n">null</span>
+      <span class="n">headers</span><span class="p">:</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">User</span><span class="o">-</span><span class="n">Agent</span>
+        <span class="o">-</span> <span class="o">-</span> <span class="p">[</span><span class="n">Opera</span><span class="o">/</span><span class="mf">9.00</span> <span class="p">(</span><span class="n">Windows</span> <span class="n">NT</span> <span class="mf">5.1</span><span class="p">;</span> <span class="n">U</span><span class="p">;</span> <span class="n">en</span><span class="p">),</span> <span class="s1">&#39;Opera 9.0, Windows XP&#39;</span><span class="p">]</span>
+      <span class="n">method</span><span class="p">:</span> <span class="n">GET</span>
+      <span class="n">url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span>
+    <span class="n">response</span><span class="p">:</span>
+      <span class="n">body</span><span class="p">:</span> <span class="s1">&#39;&lt;!doctype html&gt;&lt;html ... snip ...  &lt;/html&gt;&#39;</span>
+      <span class="n">code</span><span class="p">:</span> <span class="mi">200</span>
+      <span class="n">headers</span><span class="p">:</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">X</span><span class="o">-</span><span class="n">XSS</span><span class="o">-</span><span class="n">Protection</span>
+        <span class="o">-</span> <span class="p">[</span><span class="mi">1</span><span class="p">;</span> <span class="n">mode</span><span class="o">=</span><span class="n">block</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Set</span><span class="o">-</span><span class="n">Cookie</span>
+        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;PREF=ID=fada4216eb3684f9:FF=0:TM=1354800717:LM=1354800717:S=IT-2GCkNAocyXlVa;</span>
+            <span class="n">expires</span><span class="o">=</span><span class="n">Sat</span><span class="p">,</span> <span class="mi">06</span><span class="o">-</span><span class="n">Dec</span><span class="o">-</span><span class="mi">2014</span> <span class="mi">13</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">57</span> <span class="n">GMT</span><span class="p">;</span> <span class="n">path</span><span class="o">=/</span><span class="p">;</span> <span class="n">domain</span><span class="o">=.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="s1">&#39;, &#39;</span><span class="n">NID</span><span class="o">=</span><span class="mi">66</span><span class="o">=</span><span class="n">KWaLbNQumuGuYf0HrWlGm54u9l</span><span class="o">-</span><span class="n">DKJwhFCMQXfhQPZM</span><span class="o">-</span><span class="n">qniRhmF6QRGXUKXb_8CIUuCOHnyoC5oAX5jWNrsfk</span><span class="o">-</span><span class="n">LLJLW530UiMp6hemTtDMh_e6GSiEB4GR3yOP_E0TCN</span><span class="p">;</span>
+            <span class="n">expires</span><span class="o">=</span><span class="n">Fri</span><span class="p">,</span> <span class="mi">07</span><span class="o">-</span><span class="n">Jun</span><span class="o">-</span><span class="mi">2013</span> <span class="mi">13</span><span class="p">:</span><span class="mi">31</span><span class="p">:</span><span class="mi">57</span> <span class="n">GMT</span><span class="p">;</span> <span class="n">path</span><span class="o">=/</span><span class="p">;</span> <span class="n">domain</span><span class="o">=.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="p">;</span> <span class="n">HttpOnly</span><span class="s1">&#39;]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Expires</span>
+        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;-1&#39;</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Server</span>
+        <span class="o">-</span> <span class="p">[</span><span class="n">gws</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Connection</span>
+        <span class="o">-</span> <span class="p">[</span><span class="n">close</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Cache</span><span class="o">-</span><span class="n">Control</span>
+        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;private, max-age=0&#39;</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Date</span>
+        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;Thu, 06 Dec 2012 13:31:57 GMT&#39;</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">P3P</span>
+        <span class="o">-</span> <span class="p">[</span><span class="s1">&#39;CP=&quot;This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;answer=151657</span>
+            <span class="k">for</span> <span class="n">more</span> <span class="n">info</span><span class="o">.</span><span class="s2">&quot;&#39;]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">Content</span><span class="o">-</span><span class="n">Type</span>
+        <span class="o">-</span> <span class="p">[</span><span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="p">]</span>
+      <span class="o">-</span> <span class="o">-</span> <span class="n">X</span><span class="o">-</span><span class="n">Frame</span><span class="o">-</span><span class="n">Options</span>
+        <span class="o">-</span> <span class="p">[</span><span class="n">SAMEORIGIN</span><span class="p">]</span>
+  <span class="n">socksproxy</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">test_http</span>
+<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">0.08298492431640625</span>
+<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354800717.478403</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 </div>
@@ -671,13 +699,13 @@ test_started: 1354800717.478403
 <p>It provides methods <a class="reference internal" href="api/ooni.templates.html#ooni.templates.dnst.DNSTest.performPTRLookup" title="ooni.templates.dnst.DNSTest.performPTRLookup"><code class="xref py py-func docutils literal"><span class="pre">ooni.templates.dnst.DNSTest.performPTRLookup()</span></code></a>
 and <a class="reference internal" href="api/ooni.templates.html#ooni.templates.dnst.DNSTest.performALookup" title="ooni.templates.dnst.DNSTest.performALookup"><code class="xref py py-func docutils literal"><span class="pre">ooni.templates.dnst.DNSTest.performALookup()</span></code></a></p>
 <p>For example (taken from <code class="xref py py-mod docutils literal"><span class="pre">nettests.examples.example_dnst</span></code>):</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">ooni.templates.dnst</span> <span class="kn">import</span> <span class="n">DNSTest</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ooni.templates.dnst</span> <span class="k">import</span> <span class="n">DNSTest</span>
 
 <span class="k">class</span> <span class="nc">ExampleDNSTest</span><span class="p">(</span><span class="n">DNSTest</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">test_a_lookup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">gotResult</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
             <span class="c1"># Result is an array containing all the A record lookup results</span>
-            <span class="k">print</span> <span class="n">result</span>
+            <span class="nb">print</span> <span class="n">result</span>
 
         <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">performALookup</span><span class="p">(</span><span class="s1">&#39;torproject.org&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;8.8.8.8&#39;</span><span class="p">,</span> <span class="mi">53</span><span class="p">))</span>
         <span class="n">d</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="n">gotResult</span><span class="p">)</span>
@@ -686,50 +714,50 @@ and <a class="reference internal" href="api/ooni.templates.html#ooni.templates.d
 </div>
 <div class="section" id="id3">
 <h4>Report format<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-python"><div class="highlight"><pre>###########################################
-# OONI Probe Report for Base DNS Test test
-# Thu Dec  6 17:42:51 2012
-###########################################
----
-options:
-  collector: null
-  help: 0
-  logfile: null
-  pcapfile: null
-  reportfile: null
-  resume: 0
-  subargs: []
-  test: nettests/examples/example_dnst.py
-probe_asn: null
-probe_cc: null
-probe_ip: 127.0.0.1
-software_name: ooniprobe
-software_version: 0.0.7.1-alpha
-start_time: 1354786971.0
-test_name: Base DNS Test
-test_version: 0.1
-...
----
-input: null
-report:
-  queries:
-  - addrs: [82.195.75.101, 86.59.30.40, 38.229.72.14, 38.229.72.16]
-    answers:
-    - [&lt;RR name=torproject.org type=A class=IN ttl=782s auth=False&gt;, &lt;A address=82.195.75.101
-        ttl=782&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=782s auth=False&gt;, &lt;A address=86.59.30.40
-        ttl=782&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=782s auth=False&gt;, &lt;A address=38.229.72.14
-        ttl=782&gt;]
-    - [&lt;RR name=torproject.org type=A class=IN ttl=782s auth=False&gt;, &lt;A address=38.229.72.16
-        ttl=782&gt;]
-    query: &#39;[Query(&#39;&#39;torproject.org&#39;&#39;, 1, 1)]&#39;
-    query_type: A
-    resolver: [8.8.8.8, 53]
-test_name: test_a_lookup
-test_runtime: 0.028924942016601562
-test_started: 1354801371.980114
-...
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
+<span class="c1"># OONI Probe Report for Base DNS Test test</span>
+<span class="c1"># Thu Dec  6 17:42:51 2012</span>
+<span class="c1">###########################################</span>
+<span class="o">---</span>
+<span class="n">options</span><span class="p">:</span>
+  <span class="n">collector</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">help</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">logfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">pcapfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">reportfile</span><span class="p">:</span> <span class="n">null</span>
+  <span class="n">resume</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="n">subargs</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="n">test</span><span class="p">:</span> <span class="n">nettests</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">example_dnst</span><span class="o">.</span><span class="n">py</span>
+<span class="n">probe_asn</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">probe_cc</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">probe_ip</span><span class="p">:</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="n">software_name</span><span class="p">:</span> <span class="n">ooniprobe</span>
+<span class="n">software_version</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">7.1</span><span class="o">-</span><span class="n">alpha</span>
+<span class="n">start_time</span><span class="p">:</span> <span class="mf">1354786971.0</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">Base</span> <span class="n">DNS</span> <span class="n">Test</span>
+<span class="n">test_version</span><span class="p">:</span> <span class="mf">0.1</span>
+<span class="o">...</span>
+<span class="o">---</span>
+<span class="nb">input</span><span class="p">:</span> <span class="n">null</span>
+<span class="n">report</span><span class="p">:</span>
+  <span class="n">queries</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">addrs</span><span class="p">:</span> <span class="p">[</span><span class="mf">82.195</span><span class="o">.</span><span class="mf">75.101</span><span class="p">,</span> <span class="mf">86.59</span><span class="o">.</span><span class="mf">30.40</span><span class="p">,</span> <span class="mf">38.229</span><span class="o">.</span><span class="mf">72.14</span><span class="p">,</span> <span class="mf">38.229</span><span class="o">.</span><span class="mf">72.16</span><span class="p">]</span>
+    <span class="n">answers</span><span class="p">:</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">82.195</span><span class="o">.</span><span class="mf">75.101</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">86.59</span><span class="o">.</span><span class="mf">30.40</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">38.229</span><span class="o">.</span><span class="mf">72.14</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="o">-</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">RR</span> <span class="n">name</span><span class="o">=</span><span class="n">torproject</span><span class="o">.</span><span class="n">org</span> <span class="nb">type</span><span class="o">=</span><span class="n">A</span> <span class="n">class</span><span class="o">=</span><span class="n">IN</span> <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="n">s</span> <span class="n">auth</span><span class="o">=</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">A</span> <span class="n">address</span><span class="o">=</span><span class="mf">38.229</span><span class="o">.</span><span class="mf">72.16</span>
+        <span class="n">ttl</span><span class="o">=</span><span class="mi">782</span><span class="o">&gt;</span><span class="p">]</span>
+    <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;[Query(&#39;&#39;torproject.org&#39;&#39;, 1, 1)]&#39;</span>
+    <span class="n">query_type</span><span class="p">:</span> <span class="n">A</span>
+    <span class="n">resolver</span><span class="p">:</span> <span class="p">[</span><span class="mf">8.8</span><span class="o">.</span><span class="mf">8.8</span><span class="p">,</span> <span class="mi">53</span><span class="p">]</span>
+<span class="n">test_name</span><span class="p">:</span> <span class="n">test_a_lookup</span>
+<span class="n">test_runtime</span><span class="p">:</span> <span class="mf">0.028924942016601562</span>
+<span class="n">test_started</span><span class="p">:</span> <span class="mf">1354801371.980114</span>
+<span class="o">...</span>
 </pre></div>
 </div>
 <p>For a more complex example, see: <code class="xref py py-mod docutils literal"><span class="pre">nettests.blocking.dnsconsistency</span></code></p>
@@ -740,15 +768,18 @@ test_started: 1354801371.980114
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="writing_test_helpers.html" class="btn btn-neutral float-right" title="Writing Test Helpers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="writing_test_helpers.html" class="btn btn-neutral float-right" title="Writing Test Helpers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="tutorial.html" class="btn btn-neutral" title="Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -779,10 +810,11 @@ test_started: 1354801371.980114
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

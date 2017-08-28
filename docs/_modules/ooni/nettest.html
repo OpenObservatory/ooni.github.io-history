@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>ooni.nettest &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../index.html"/>
         <link rel="up" title="Module code" href="../index.html"/> 
 
   
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -59,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -80,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -103,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -117,47 +128,65 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.nettest</li>
+        
+      <li>ooni.nettest</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.nettest</h1><div class="highlight"><pre>
-<span class="kn">import</span> <span class="nn">os</span>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
-<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">defer</span>
-<span class="kn">from</span> <span class="nn">twisted.python.filepath</span> <span class="kn">import</span> <span class="n">FilePath</span>
-<span class="kn">from</span> <span class="nn">twisted.trial.runner</span> <span class="kn">import</span> <span class="n">filenameToModule</span>
-<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">failure</span><span class="p">,</span> <span class="n">usage</span><span class="p">,</span> <span class="n">reflect</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">defer</span>
+<span class="kn">from</span> <span class="nn">twisted.python.filepath</span> <span class="k">import</span> <span class="n">FilePath</span>
+<span class="kn">from</span> <span class="nn">twisted.trial.runner</span> <span class="k">import</span> <span class="n">filenameToModule</span>
+<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="k">import</span> <span class="n">failure</span><span class="p">,</span> <span class="n">usage</span><span class="p">,</span> <span class="n">reflect</span>
 
-<span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">__version__</span> <span class="k">as</span> <span class="n">ooniprobe_version</span><span class="p">,</span> <span class="n">errors</span>
-<span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">otime</span>
-<span class="kn">from</span> <span class="nn">ooni.tasks</span> <span class="kn">import</span> <span class="n">Measurement</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">sanitize_options</span><span class="p">,</span> <span class="n">randomStr</span>
-<span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="kn">import</span> <span class="n">hasRawSocketPermission</span>
-<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="kn">import</span> <span class="n">config</span>
-<span class="kn">from</span> <span class="nn">ooni.geoip</span> <span class="kn">import</span> <span class="n">probe_ip</span>
+<span class="kn">from</span> <span class="nn">ooni</span> <span class="k">import</span> <span class="n">__version__</span> <span class="k">as</span> <span class="n">ooniprobe_version</span><span class="p">,</span> <span class="n">errors</span>
+<span class="kn">from</span> <span class="nn">ooni</span> <span class="k">import</span> <span class="n">otime</span>
+<span class="kn">from</span> <span class="nn">ooni.tasks</span> <span class="k">import</span> <span class="n">Measurement</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span><span class="p">,</span> <span class="n">sanitize_options</span><span class="p">,</span> <span class="n">randomStr</span>
+<span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="k">import</span> <span class="n">hasRawSocketPermission</span>
+<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">ooni.geoip</span> <span class="k">import</span> <span class="n">probe_ip</span>
 
-<span class="kn">from</span> <span class="nn">ooni</span> <span class="kn">import</span> <span class="n">errors</span> <span class="k">as</span> <span class="n">e</span>
+<span class="kn">from</span> <span class="nn">ooni</span> <span class="k">import</span> <span class="n">errors</span> <span class="k">as</span> <span class="n">e</span>
 
-<span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">getmembers</span>
-<span class="kn">from</span> <span class="nn">StringIO</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span> <span class="nn">inspect</span> <span class="k">import</span> <span class="n">getmembers</span>
+<span class="kn">from</span> <span class="nn">StringIO</span> <span class="k">import</span> <span class="n">StringIO</span>
 
 
 <div class="viewcode-block" id="NoTestCasesFound"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NoTestCasesFound">[docs]</a><span class="k">class</span> <span class="nc">NoTestCasesFound</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
@@ -202,9 +231,9 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">option_name</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">default</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="n">opt_parameter</span>
     <span class="k">if</span> <span class="n">option_name</span> <span class="ow">in</span> <span class="n">required_options</span><span class="p">:</span>
-        <span class="n">required</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">required</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">required</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">required</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">return</span> <span class="p">{</span>
         <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
@@ -278,16 +307,20 @@
         <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">optFlags</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="n">synopsis</span> <span class="o">=</span> <span class="s2">&quot;{} {} [options]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">synopsis</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> [options]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
             <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
             <span class="n">test_name</span>
         <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">opt_help</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="nb">map</span><span class="p">(</span><span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">))</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
         <span class="k">def</span> <span class="nf">opt_version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Display the net_test version and exit.</span>
 <span class="sd">            &quot;&quot;&quot;</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;{} version: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_name</span><span class="p">,</span> <span class="n">test_version</span><span class="p">))</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> version: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_name</span><span class="p">,</span> <span class="n">test_version</span><span class="p">))</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">UsageOptions</span></div>
@@ -297,33 +330,40 @@
         <span class="n">localOptions</span> <span class="o">=</span> <span class="n">local_options</span>
     <span class="k">return</span> <span class="n">NetTestCaseWithLocalOptions</span></div>
 
-<span class="n">ONION_INPUT_REGEXP</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;(httpo://[a-z0-9]{16}\.onion)/input/([&quot;</span>
-                                <span class="s2">&quot;a-z0-9]{64})$&quot;</span><span class="p">)</span>
+<span class="n">ONION_INPUT_REGEXP</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;(httpo://[a-z0-9]</span><span class="si">{16}</span><span class="s2">\.onion)/input/([&quot;</span>
+                                <span class="s2">&quot;a-z0-9]</span><span class="si">{64}</span><span class="s2">)$&quot;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="NetTestLoader"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestLoader">[docs]</a><span class="k">class</span> <span class="nc">NetTestLoader</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">method_prefix</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
-    <span class="n">collector</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">yamloo</span> <span class="o">=</span> <span class="bp">True</span>
-    <span class="n">requiresTor</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">collector</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">yamloo</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">requiresTor</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">test_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">test_string</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-                 <span class="n">annotations</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">test_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">test_string</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">annotations</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">options</span> <span class="o">=</span> <span class="n">options</span>
+        <span class="k">if</span> <span class="n">annotations</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">annotations</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;BUG: Annotations is not a dictionary. Resetting it.&quot;</span><span class="p">)</span>
+            <span class="n">annotations</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="n">annotations</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">annotations</span><span class="p">[</span><span class="s1">&#39;platform&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">annotations</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;platform&#39;</span><span class="p">,</span>
+                                                            <span class="n">config</span><span class="o">.</span><span class="n">platform</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">requiresTor</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">requiresTor</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">testName</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">testVersion</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reportId</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">reportId</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">testHelpers</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">missingTestHelpers</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">inputFiles</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_testCases</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">test_file</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">loadNetTestFile</span><span class="p">(</span><span class="n">test_file</span><span class="p">)</span>
@@ -375,7 +415,7 @@
         <span class="n">input_file</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="n">key</span><span class="p">,</span>
             <span class="s1">&#39;test_options&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">,</span>
-            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="bp">None</span>
+            <span class="s1">&#39;filename&#39;</span><span class="p">:</span> <span class="kc">None</span>
         <span class="p">}</span>
         <span class="n">m</span> <span class="o">=</span> <span class="n">ONION_INPUT_REGEXP</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">m</span><span class="p">:</span>
@@ -390,7 +430,7 @@
 <span class="sd">        Accumulate the optParameters and optFlags for the NetTestCase class</span>
 <span class="sd">        into the usageOptions of the NetTestLoader.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="p">,</span> <span class="s1">&#39;optParameters&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="p">,</span> <span class="s1">&#39;optParameters&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optParameters</span><span class="p">:</span>
                 <span class="c1"># XXX should look into if this is still necessary, seems like</span>
                 <span class="c1"># something left over from a bug in some nettest.</span>
@@ -399,14 +439,18 @@
                     <span class="n">parameter</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optParameters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="s1">&#39;inputFile&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="p">,</span> <span class="s1">&#39;optFlags&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optFlags</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optFlags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="s1">&#39;inputFile&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optParameters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_class</span><span class="o">.</span><span class="n">inputFile</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="s1">&#39;baseParameters&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="s1">&#39;baseParameters&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">baseParameters</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optParameters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="s1">&#39;baseFlags&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="s1">&#39;baseFlags&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">flag</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">baseFlags</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">optFlags</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
 
@@ -419,13 +463,13 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">parseOptions</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
         <span class="k">except</span> <span class="n">usage</span><span class="o">.</span><span class="n">UsageError</span><span class="p">:</span>
             <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-            <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">OONIUsageError</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="bp">None</span><span class="p">,</span> <span class="n">tb</span></div>
+            <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">OONIUsageError</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="kc">None</span><span class="p">,</span> <span class="n">tb</span></div>
 
     <span class="k">def</span> <span class="nf">_checkTestClassOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_class</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">test_class</span><span class="o">.</span><span class="n">requiresRoot</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">hasRawSocketPermission</span><span class="p">():</span>
             <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">InsufficientPrivileges</span>
         <span class="k">if</span> <span class="n">test_class</span><span class="o">.</span><span class="n">requiresTor</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">requiresTor</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">requiresTor</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_checkRequiredOptions</span><span class="p">(</span><span class="n">test_class</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_setTestHelpers</span><span class="p">(</span><span class="n">test_class</span><span class="p">)</span>
         <span class="n">test_instance</span> <span class="o">=</span> <span class="n">netTestCaseFactory</span><span class="p">(</span><span class="n">test_class</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">)()</span>
@@ -433,7 +477,7 @@
 
     <span class="k">def</span> <span class="nf">_setTestHelpers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_class</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">option</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">requiredTestHelpers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="bp">None</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">testHelpers</span><span class="p">[</span><span class="n">option</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="n">option</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">_checkRequiredOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_class</span><span class="p">):</span>
@@ -441,7 +485,7 @@
         <span class="k">for</span> <span class="n">required_option</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">requiredOptions</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Checking if </span><span class="si">%s</span><span class="s2"> is present&quot;</span> <span class="o">%</span> <span class="n">required_option</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">required_option</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span> <span class="ow">or</span> \
-                    <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="n">required_option</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="n">required_option</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">missing_options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">required_option</span><span class="p">)</span>
         <span class="n">missing_test_helpers</span> <span class="o">=</span> <span class="p">[</span><span class="n">opt</span> <span class="ow">in</span> <span class="n">test_class</span><span class="o">.</span><span class="n">requiredTestHelpers</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
                                 <span class="k">for</span> <span class="n">opt</span> <span class="ow">in</span> <span class="n">missing_options</span><span class="p">]</span>
@@ -468,7 +512,7 @@
 
         <span class="n">ns</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="n">test_cases</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">exec</span> <span class="n">net_test_file_object</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="ow">in</span> <span class="n">ns</span>
+        <span class="n">exec</span> <span class="n">net_test_file_object</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="ow">in</span> <span class="n">ns</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">ns</span><span class="o">.</span><span class="n">itervalues</span><span class="p">():</span>
             <span class="n">test_cases</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getTestMethods</span><span class="p">(</span><span class="n">item</span><span class="p">))</span>
 
@@ -519,7 +563,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">usageOptions</span> <span class="o">=</span> <span class="n">usageOptionsFactory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">testName</span><span class="p">,</span>
                                                 <span class="bp">self</span><span class="o">.</span><span class="n">testVersion</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">reports</span><span class="o">.</span><span class="n">unique_id</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">reports</span><span class="o">.</span><span class="n">unique_id</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">reportId</span> <span class="o">=</span> <span class="n">randomStr</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_methods</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_testCases</span><span class="p">:</span>
@@ -527,19 +571,19 @@
 
 <div class="viewcode-block" id="NetTestLoader.checkOptions"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestLoader.checkOptions">[docs]</a>    <span class="k">def</span> <span class="nf">checkOptions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parseLocalOptions</span><span class="p">()</span>
-        <span class="n">test_options_exc</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">test_options_exc</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">usage_options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_testCases</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">usageOptions</span>
         <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_methods</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_testCases</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_accumulateInputFiles</span><span class="p">(</span><span class="n">test_class</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">_checkTestClassOptions</span><span class="p">(</span><span class="n">test_class</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">usage_options</span> <span class="o">!=</span> <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="p">:</span>
-                    <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">IncoherentOptions</span><span class="p">(</span><span class="n">usage_options</span><span class="o">.</span><span class="n">__name__</span><span class="p">,</span>
-                                              <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+                    <span class="k">raise</span> <span class="n">e</span><span class="o">.</span><span class="n">IncoherentOptions</span><span class="p">(</span><span class="n">usage_options</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
+                                              <span class="n">test_class</span><span class="o">.</span><span class="n">usageOptions</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
             <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
                 <span class="n">test_options_exc</span> <span class="o">=</span> <span class="n">exc</span>
 
-        <span class="k">if</span> <span class="n">test_options_exc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">test_options_exc</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">test_options_exc</span></div>
 
     <span class="k">def</span> <span class="nf">_getTestMethods</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
@@ -573,7 +617,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">doneTasks</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tasks</span> <span class="o">=</span> <span class="mi">0</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">completedScheduling</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">completedScheduling</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">allTasksDone</span> <span class="o">=</span> <span class="n">allTasksDone</span>
 
 <div class="viewcode-block" id="NetTestState.taskCreated"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestState.taskCreated">[docs]</a>    <span class="k">def</span> <span class="nf">taskCreated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -609,12 +653,12 @@
 <span class="sd">        checking that all the tasks are complete because no task is to be</span>
 <span class="sd">        scheduled.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">completedScheduling</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">completedScheduling</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">checkAllTasksDone</span><span class="p">()</span></div></div>
 
 
 <div class="viewcode-block" id="NetTest"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest">[docs]</a><span class="k">class</span> <span class="nc">NetTest</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">director</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">director</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_cases</span><span class="p">,</span> <span class="n">test_details</span><span class="p">,</span> <span class="n">report</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -629,6 +673,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span> <span class="o">=</span> <span class="n">test_details</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span> <span class="o">=</span> <span class="n">test_cases</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_startTime</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span> <span class="o">=</span> <span class="mi">0</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="p">{}</span>
 
@@ -660,6 +708,27 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span><span class="p">[</span><span class="s2">&quot;report_id&quot;</span><span class="p">]:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Report ID: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">testDetails</span><span class="p">[</span><span class="s2">&quot;report_id&quot;</span><span class="p">])</span></div>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">completionRate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_startTime</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">completionPercentage</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.0</span>
+        <span class="c1"># Never return 100%</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mf">0.99</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">completionEta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">remaining_inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span>
+        <span class="c1"># We adjust for negative values</span>
+        <span class="k">if</span> <span class="n">remaining_inputs</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">completionRate</span> <span class="o">*</span> <span class="n">remaining_inputs</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1.5</span> <span class="c1"># fudge factor</span>
+
 <div class="viewcode-block" id="NetTest.doneReport"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.doneReport">[docs]</a>    <span class="k">def</span> <span class="nf">doneReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">report_results</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        This will get called every time a report is done and therefore a</span>
@@ -668,11 +737,19 @@
 <span class="sd">        The state for the NetTest is informed of the fact that another task has</span>
 <span class="sd">        reached the done state.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Status&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/</span><span class="si">%d</span><span class="s2"> completed&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_completedInputs</span><span class="p">,</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span><span class="p">))</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%0.1f%%</span><span class="s2"> (ETA: </span><span class="si">%d</span><span class="s2">s)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">completionPercentage</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">completionEta</span><span class="p">))</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">taskDone</span><span class="p">()</span>
 
         <span class="k">return</span> <span class="n">report_results</span></div>
 
-<div class="viewcode-block" id="NetTest.makeMeasurement"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.makeMeasurement">[docs]</a>    <span class="k">def</span> <span class="nf">makeMeasurement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_instance</span><span class="p">,</span> <span class="n">test_method</span><span class="p">,</span> <span class="n">test_input</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="NetTest.makeMeasurement"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.makeMeasurement">[docs]</a>    <span class="k">def</span> <span class="nf">makeMeasurement</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_instance</span><span class="p">,</span> <span class="n">test_method</span><span class="p">,</span> <span class="n">test_input</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates a new instance of :class:ooni.tasks.Measurement and add&#39;s it&#39;s</span>
 <span class="sd">        callbacks and errbacks.</span>
@@ -699,13 +776,19 @@
                                         <span class="n">measurement</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">measurement</span></div>
 
-    <span class="nd">@defer.inlineCallbacks</span>
-<div class="viewcode-block" id="NetTest.initialize"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.initialize">[docs]</a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
+<div class="viewcode-block" id="NetTest.initialize"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTest.initialize">[docs]</a>    <span class="nd">@defer</span><span class="o">.</span><span class="n">inlineCallbacks</span>
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_cases</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
             <span class="c1"># Initialize Input Processor</span>
+            <span class="n">test_instance</span> <span class="o">=</span> <span class="n">test_class</span><span class="p">()</span>
             <span class="n">test_class</span><span class="o">.</span><span class="n">inputs</span> <span class="o">=</span> <span class="k">yield</span> <span class="n">defer</span><span class="o">.</span><span class="n">maybeDeferred</span><span class="p">(</span>
-                <span class="n">test_class</span><span class="p">()</span><span class="o">.</span><span class="n">getInputProcessor</span>
+                <span class="n">test_instance</span><span class="o">.</span><span class="n">getInputProcessor</span>
             <span class="p">)</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">test_cases</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">test_instance</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">+=</span> <span class="n">test_instance</span><span class="o">.</span><span class="n">_totalInputs</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">+=</span> <span class="mi">1</span>
 
             <span class="c1"># Run the setupClass method</span>
             <span class="k">yield</span> <span class="n">defer</span><span class="o">.</span><span class="n">maybeDeferred</span><span class="p">(</span>
@@ -720,6 +803,7 @@
 <span class="sd">        FIXME: If this generator throws exception TaskManager scheduler is</span>
 <span class="sd">        irreversibly damaged.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_startTime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
         <span class="k">for</span> <span class="n">test_class</span><span class="p">,</span> <span class="n">test_methods</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">testCases</span><span class="p">:</span>
             <span class="c1"># load a singular input processor for all instances</span>
@@ -746,12 +830,17 @@
                     <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">taskCreated</span><span class="p">()</span>
                     <span class="k">yield</span> <span class="n">measurement</span>
 
+                <span class="c1"># This is to skip setting callbacks on measurements that</span>
+                <span class="c1"># cannot be run.</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">measurements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
                 <span class="c1"># When the measurement.done callbacks have all fired</span>
                 <span class="c1"># call the postProcessor before writing the report</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">:</span>
                     <span class="n">post</span> <span class="o">=</span> <span class="n">defer</span><span class="o">.</span><span class="n">DeferredList</span><span class="p">(</span><span class="n">measurements</span><span class="p">)</span>
 
-                    <span class="nd">@post.addBoth</span>
+                    <span class="nd">@post</span><span class="o">.</span><span class="n">addBoth</span>
                     <span class="k">def</span> <span class="nf">set_runtime</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
                         <span class="n">runtime</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">test_instance</span><span class="o">.</span><span class="n">_start_time</span>
                         <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
@@ -833,27 +922,29 @@
     <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.0.0&quot;</span>
     <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Sorry, this test has no description :(&quot;</span>
 
-    <span class="n">inputs</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">inputFile</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">inputFilename</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">inputFile</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">inputFilename</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="n">usageOptions</span> <span class="o">=</span> <span class="n">usage</span><span class="o">.</span><span class="n">Options</span>
 
-    <span class="n">optParameters</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">baseParameters</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">baseFlags</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">optParameters</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">baseParameters</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">baseFlags</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="n">requiredTestHelpers</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">requiresTor</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">requiresTor</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="n">simpleOptions</span> <span class="o">=</span> <span class="p">{}</span>
 
     <span class="n">localOptions</span> <span class="o">=</span> <span class="p">{}</span>
 
-    <span class="nd">@classmethod</span>
-<div class="viewcode-block" id="NetTestCase.setUpClass"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestCase.setUpClass">[docs]</a>    <span class="k">def</span> <span class="nf">setUpClass</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+    <span class="n">_totalInputs</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="NetTestCase.setUpClass"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestCase.setUpClass">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">setUpClass</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        You can override this hook with logic that should be run once before</span>
 <span class="sd">        any test method in the NetTestCase is run.</span>
@@ -948,13 +1039,13 @@
 <span class="sd">                when input is either not support or not specified</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputFile</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">False</span>
+            <span class="k">return</span> <span class="kc">False</span>
 
         <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputFile</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-            <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">return</span> <span class="kc">True</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">False</span>
+            <span class="k">return</span> <span class="kc">False</span>
 
 <div class="viewcode-block" id="NetTestCase.getInputProcessor"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.NetTestCase.getInputProcessor">[docs]</a>    <span class="k">def</span> <span class="nf">getInputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -975,19 +1066,26 @@
 <span class="sd">            inputProcessor.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputFileSpecified</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">inputFilename</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">inputFile</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputFilename</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputFilename</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_totalInputs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span>
 
-        <span class="k">return</span> <span class="p">[</span><span class="bp">None</span><span class="p">]</span></div>
+        <span class="k">return</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span></div>
 
     <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">%s</span><span class="s2"> inputs=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span></div>
+        <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">%s</span><span class="s2"> inputs=</span><span class="si">%s</span><span class="s2">&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inputs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="nettest_to_path"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.nettest_to_path">[docs]</a><span class="k">def</span> <span class="nf">nettest_to_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">allow_arbitrary_paths</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+<div class="viewcode-block" id="nettest_to_path"><a class="viewcode-back" href="../../api/ooni.html#ooni.nettest.nettest_to_path">[docs]</a><span class="k">def</span> <span class="nf">nettest_to_path</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">allow_arbitrary_paths</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Takes as input either a path or a nettest name.</span>
 
@@ -1014,11 +1112,11 @@
         <span class="s2">&quot;third_party&quot;</span>
     <span class="p">]</span>
     <span class="n">nettest_dir</span> <span class="o">=</span> <span class="n">FilePath</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">nettest_directory</span><span class="p">)</span>
-    <span class="n">found_path</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">found_path</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">test_categories</span><span class="p">:</span>
         <span class="n">p</span> <span class="o">=</span> <span class="n">nettest_dir</span><span class="o">.</span><span class="n">preauthChild</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">test_name</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.py&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-            <span class="k">if</span> <span class="n">found_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">found_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Found two tests named </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">test_name</span><span class="p">)</span>
             <span class="n">found_path</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">path</span>
 
@@ -1027,6 +1125,9 @@
     <span class="k">return</span> <span class="n">found_path</span></div>
 </pre></div>
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -1058,10 +1159,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

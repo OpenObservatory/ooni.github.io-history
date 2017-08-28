@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettests.examples.example_tcpt &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>ooni.nettests.examples.example_tcpt &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../../../index.html"/>
         <link rel="up" title="Module code" href="../../../index.html"/> 
 
   
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -59,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -80,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -103,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -117,38 +128,55 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.nettests.examples.example_tcpt</li>
+        
+      <li>ooni.nettests.examples.example_tcpt</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.nettests.examples.example_tcpt</h1><div class="highlight"><pre>
-
-<span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="kn">import</span> <span class="n">ConnectionRefusedError</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">tcpt</span>
+<span></span>
+<span class="kn">from</span> <span class="nn">twisted.internet.error</span> <span class="k">import</span> <span class="ne">ConnectionRefusedError</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">tcpt</span>
 
 <div class="viewcode-block" id="ExampleTCPT"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.examples.html#ooni.nettests.examples.example_tcpt.ExampleTCPT">[docs]</a><span class="k">class</span> <span class="nc">ExampleTCPT</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
 <div class="viewcode-block" id="ExampleTCPT.test_hello_world"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.examples.html#ooni.nettests.examples.example_tcpt.ExampleTCPT.test_hello_world">[docs]</a>    <span class="k">def</span> <span class="nf">test_hello_world</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">got_response</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
-            <span class="k">print</span> <span class="s2">&quot;Got this data </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span>
+            <span class="nb">print</span> <span class="s2">&quot;Got this data </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span>
 
         <span class="k">def</span> <span class="nf">connection_failed</span><span class="p">(</span><span class="n">failure</span><span class="p">):</span>
-            <span class="n">failure</span><span class="o">.</span><span class="n">trap</span><span class="p">(</span><span class="n">ConnectionRefusedError</span><span class="p">)</span>
-            <span class="k">print</span> <span class="s2">&quot;Connection Refused&quot;</span>
+            <span class="n">failure</span><span class="o">.</span><span class="n">trap</span><span class="p">(</span><span class="ne">ConnectionRefusedError</span><span class="p">)</span>
+            <span class="nb">print</span> <span class="s2">&quot;Connection Refused&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="s2">&quot;127.0.0.1&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">57002</span>
@@ -159,6 +187,9 @@
         <span class="k">return</span> <span class="n">d</span></div></div>
 </pre></div>
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -190,10 +221,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>

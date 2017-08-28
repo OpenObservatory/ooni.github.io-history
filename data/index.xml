@@ -6,7 +6,9 @@
     <description>Recent content in Data on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://ooni.torproject.org/data/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://ooni.torproject.org/data/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title></title>
@@ -14,18 +16,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/data/content/</guid>
-      <description>
-
-&lt;h2 id=&#34;this-url-is-old:05301946b75cb988bc2be8549079b4fa&#34;&gt;This URL is old&lt;/h2&gt;
-
-&lt;p&gt;Raw ooniprobe measurements now live at:
-&lt;a href=&#34;https://measurement.ooni.torproject.org&#34;&gt;https://measurement.ooni.torproject.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;You can also explore the collected measurements via the &lt;a href=&#34;https://explorer.ooni.torproject.org/&#34;&gt;OONI
-Explorer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;You should update your bookmarks and links accordingly.&lt;/p&gt;
-</description>
+      <description>This URL is old Raw ooniprobe measurements now live at: https://measurement.ooni.torproject.org.
+You can also explore the collected measurements via the OONI Explorer.
+You should update your bookmarks and links accordingly.</description>
     </item>
     
   </channel>

@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettests.manipulation.http_invalid_request_line &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>ooni.nettests.manipulation.http_invalid_request_line &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../../../index.html"/>
         <link rel="up" title="Module code" href="../../../index.html"/> 
 
   
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -59,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -80,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -103,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -117,36 +128,53 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.nettests.manipulation.http_invalid_request_line</li>
+        
+      <li>ooni.nettests.manipulation.http_invalid_request_line</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.nettests.manipulation.http_invalid_request_line</h1><div class="highlight"><pre>
-<span class="c1"># -*- encoding: utf-8 -*-</span>
-<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span>
+<span></span><span class="c1"># -*- encoding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="k">import</span> <span class="n">usage</span>
 
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">randomStr</span><span class="p">,</span> <span class="n">randomSTR</span>
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">tcpt</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">randomStr</span><span class="p">,</span> <span class="n">randomSTR</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">tcpt</span>
 
 
 <div class="viewcode-block" id="UsageOptions"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.manipulation.html#ooni.nettests.manipulation.http_invalid_request_line.UsageOptions">[docs]</a><span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
     <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s1">&#39;The OONI backend that runs a TCP echo server.&#39;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;The OONI backend that runs a TCP echo server.&#39;</span><span class="p">],</span>
         <span class="p">[</span><span class="s1">&#39;backendport&#39;</span><span class="p">,</span> <span class="s1">&#39;p&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span>
          <span class="s1">&#39;Specify the port that the TCP echo server is running &#39;</span>
          <span class="s1">&#39;(should only be set for debugging).&#39;</span><span class="p">]]</span></div>
@@ -163,7 +191,7 @@
 <span class="sd">    ascii letters or numbers (&#39;XxXx&#39; will be 4).</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;HTTP Invalid Request Line&quot;</span>
-    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Performs out of spec HTTP requests in the attempt to &quot;</span>\
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Performs out of spec HTTP requests in an attempt to &quot;</span>\
                   <span class="s2">&quot;trigger a proxy error message.&quot;</span>
     <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.2&quot;</span>
     <span class="n">authors</span> <span class="o">=</span> <span class="s2">&quot;Arturo Filastò&quot;</span>
@@ -172,23 +200,23 @@
 
     <span class="n">requiredTestHelpers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;backend&#39;</span><span class="p">:</span> <span class="s1">&#39;tcp-echo&#39;</span><span class="p">}</span>
     <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">]</span>
-    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">requiresTor</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">requiresTor</span> <span class="o">=</span> <span class="kc">False</span>
 
 <div class="viewcode-block" id="HTTPInvalidRequestLine.setUp"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.manipulation.html#ooni.nettests.manipulation.http_invalid_request_line.HTTPInvalidRequestLine.setUp">[docs]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;backendport&#39;</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;backend&#39;</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;tampering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;tampering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></div>
 
 <div class="viewcode-block" id="HTTPInvalidRequestLine.check_for_manipulation"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.manipulation.html#ooni.nettests.manipulation.http_invalid_request_line.HTTPInvalidRequestLine.check_for_manipulation">[docs]</a>    <span class="k">def</span> <span class="nf">check_for_manipulation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">manipulation_type</span><span class="p">):</span>
         <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Checking if </span><span class="si">%s</span><span class="s2"> == </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">payload</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">response</span> <span class="o">!=</span> <span class="n">payload</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;{0}: Detected manipulation!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">manipulation_type</span><span class="p">))</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">: Detected manipulation!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">manipulation_type</span><span class="p">))</span>
             <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;tampering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;tampering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;{0}: No manipulation detected.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">manipulation_type</span><span class="p">))</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;tampering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span></div>
+            <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">: No manipulation detected.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">manipulation_type</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;tampering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span></div>
 
 <div class="viewcode-block" id="HTTPInvalidRequestLine.test_random_invalid_method"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.manipulation.html#ooni.nettests.manipulation.http_invalid_request_line.HTTPInvalidRequestLine.test_random_invalid_method">[docs]</a>    <span class="k">def</span> <span class="nf">test_random_invalid_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -259,6 +287,9 @@
 </pre></div>
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -289,10 +320,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>

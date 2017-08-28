@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.nettests.examples.example_scapyt &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>ooni.nettests.examples.example_scapyt &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../../../../index.html"/>
         <link rel="up" title="Module code" href="../../../index.html"/> 
 
   
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -59,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -80,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -103,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -117,34 +128,51 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.nettests.examples.example_scapyt</li>
+        
+      <li>ooni.nettests.examples.example_scapyt</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.nettests.examples.example_scapyt</h1><div class="highlight"><pre>
-<span class="c1"># -*- encoding: utf-8 -*-</span>
+<span></span><span class="c1"># -*- encoding: utf-8 -*-</span>
 <span class="c1">#</span>
 <span class="c1"># :licence: see LICENSE</span>
 
-<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="kn">import</span> <span class="n">usage</span>
+<span class="kn">from</span> <span class="nn">twisted.python</span> <span class="k">import</span> <span class="n">usage</span>
 
-<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">ICMP</span>
+<span class="kn">from</span> <span class="nn">scapy.all</span> <span class="k">import</span> <span class="n">IP</span><span class="p">,</span> <span class="n">ICMP</span>
 
-<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="kn">import</span> <span class="n">scapyt</span>
+<span class="kn">from</span> <span class="nn">ooni.templates</span> <span class="k">import</span> <span class="n">scapyt</span>
 
 <div class="viewcode-block" id="UsageOptions"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.examples.html#ooni.nettests.examples.example_scapyt.UsageOptions">[docs]</a><span class="k">class</span> <span class="nc">UsageOptions</span><span class="p">(</span><span class="n">usage</span><span class="o">.</span><span class="n">Options</span><span class="p">):</span>
     <span class="n">optParameters</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;8.8.8.8&#39;</span><span class="p">,</span> <span class="s2">&quot;Specify the target to ping&quot;</span><span class="p">]]</span></div>
@@ -156,7 +184,7 @@
 
 <div class="viewcode-block" id="ExampleICMPPingScapy.test_icmp_ping"><a class="viewcode-back" href="../../../../nettests/ooni.nettests.examples.html#ooni.nettests.examples.example_scapyt.ExampleICMPPingScapy.test_icmp_ping">[docs]</a>    <span class="k">def</span> <span class="nf">test_icmp_ping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">finished</span><span class="p">(</span><span class="n">packets</span><span class="p">):</span>
-            <span class="k">print</span> <span class="n">packets</span>
+            <span class="nb">print</span> <span class="n">packets</span>
             <span class="n">answered</span><span class="p">,</span> <span class="n">unanswered</span> <span class="o">=</span> <span class="n">packets</span>
             <span class="k">for</span> <span class="n">snd</span><span class="p">,</span> <span class="n">rcv</span> <span class="ow">in</span> <span class="n">answered</span><span class="p">:</span>
                 <span class="n">rcv</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -167,6 +195,9 @@
         <span class="k">return</span> <span class="n">d</span></div></div>
 </pre></div>
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -198,10 +229,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../../_static/jquery.js"></script>

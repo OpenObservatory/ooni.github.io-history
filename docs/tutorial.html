@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>Tutorial &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,9 +32,12 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="index.html"/>
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="index.html"/>
         <link rel="next" title="Writing OONI tests" href="writing_tests.html"/>
-        <link rel="prev" title="OONI: Open Observatory of Network Interference" href="index.html"/> 
+        <link rel="prev" title="ooniprobe: a network interference detection tool" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -60,7 +66,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -81,8 +87,11 @@
           
             
             
-                <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Tutorial</a><ul>
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#writing-a-tcp-port-scanner">Writing a TCP port scanner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-test">Creating test</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setup">Setup</a></li>
@@ -113,8 +122,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -123,23 +134,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Tutorial</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Tutorial</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/tutorial.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/tutorial.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -153,17 +181,17 @@
 combinations from a file and attempts to detect which ones are reachable
 and open and which ones are not.</p>
 <p>Following this tutorial requires basic knowledge of event-driven programming
-(specifically &#8216;Twisted&#8217;)</p>
+(specifically ‘Twisted’)</p>
 </div>
 <div class="section" id="creating-test">
 <h2>Creating test<a class="headerlink" href="#creating-test" title="Permalink to this headline">¶</a></h2>
 <p>We base our test on the TCP subclass <a class="reference internal" href="api/ooni.templates.html#ooni.templates.tcpt.TCPTest" title="ooni.templates.tcpt.TCPTest"><code class="xref py py-class docutils literal"><span class="pre">ooni.templates.tcpt.TCPTest</span></code></a>,
 since it the most suitable for our requirements. We then create the file
-&#8216;tcp_port_scanner.py&#8217; inside &#8216;ooni/nettests/experimental&#8217;.</p>
-<p>All tests start in the &#8216;experimental&#8217; directory, until they are tested
+‘tcp_port_scanner.py’ inside ‘ooni/nettests/experimental’.</p>
+<p>All tests start in the ‘experimental’ directory, until they are tested
 and may then be moved to the stable test folders.</p>
-<p>We start by adding our base class into &#8216;tcp_port_scanner.py&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre>class TCPPortScan(tcpt.TCPTest):
+<p>We start by adding our base class into ‘tcp_port_scanner.py’:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
 </pre></div>
 </div>
 </div>
@@ -171,14 +199,14 @@ and may then be moved to the stable test folders.</p>
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
 <p>OONI requires some basic information from all tests before running them.
 To provide this information we add the following to our test:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;TCP_port_scan_test&#39;</span>
     <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;OONI Contributor &lt;ooni@torproject.org&gt;&#39;</span>
     <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;0.0.1&#39;</span>
 
     <span class="c1"># Some tests may require root access</span>
-    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">requiresTor</span>  <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">requiresTor</span>  <span class="o">=</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -186,19 +214,19 @@ To provide this information we add the following to our test:</p>
 <h2>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h2>
 <p>We need to provide a file to read the IP addresses from. We can do
 this by adding:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
     <span class="o">...</span>
-    <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&quot;Short file description&quot;</span><span class="p">]</span>
+    <span class="n">inputFile</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;Short file description&quot;</span><span class="p">]</span>
     <span class="n">requiredOptions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;file&#39;</span><span class="p">]</span>
     <span class="o">...</span>
 </pre></div>
 </div>
 <p>When the test is run, the file will be opened by
 <a class="reference internal" href="api/ooni.html#ooni.nettest.NetTestCase.inputProcessor" title="ooni.nettest.NetTestCase.inputProcessor"><code class="xref py py-class docutils literal"><span class="pre">ooni.nettest.NetTestCase.inputProcessor</span></code></a>. By default the
-&#8216;inputProcessor&#8217; will read line-by-line and feed them to the test.
+‘inputProcessor’ will read line-by-line and feed them to the test.
 However, in this test case we may want to skip over the comment lines
-that start with a &#8216;#&#8217;. We override &#8216;inputProcessor&#8217;:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
+that start with a ‘#’. We override ‘inputProcessor’:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
    <span class="o">...</span>
    <span class="k">def</span> <span class="nf">inputProcessor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
        <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
@@ -210,22 +238,22 @@ that start with a &#8216;#&#8217;. We override &#8216;inputProcessor&#8217;:</p>
    <span class="o">...</span>
 </pre></div>
 </div>
-<p>Once the test is run, the input may be accessed via &#8216;self.input&#8217;.</p>
+<p>Once the test is run, the input may be accessed via ‘self.input’.</p>
 </div>
 <div class="section" id="writing-tests">
 <h2>Writing Tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h2>
-<p>Any functioned prefixed with &#8216;test&#8217; will be run by OONI for each
+<p>Any functioned prefixed with ‘test’ will be run by OONI for each
 input. We implement the TCP connection test by adding:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TCPPortScan</span><span class="p">(</span><span class="n">tcpt</span><span class="o">.</span><span class="n">TCPTest</span><span class="p">):</span>
     <span class="o">...</span>
     <span class="k">def</span> <span class="nf">test_tcp_port</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">got_response</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;connection_success&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
-            <span class="k">print</span> <span class="s2">&quot;Connection Successful&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;connection_success&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="nb">print</span> <span class="s2">&quot;Connection Successful&quot;</span>
 
         <span class="k">def</span> <span class="nf">connection_failed</span><span class="p">(</span><span class="n">failure</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;connection_success&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
-            <span class="k">print</span> <span class="s2">&quot;Connection Failed&quot;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;connection_success&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="nb">print</span> <span class="s2">&quot;Connection Failed&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">address</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">port</span>    <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
@@ -240,7 +268,7 @@ input. We implement the TCP connection test by adding:</p>
 </div>
 <p>Note that all test functions <strong>must</strong> return a Deferred object.
 As shown above, information can add to the OONI report using:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;something&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;something&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
 </pre></div>
 </div>
 </div>
@@ -248,20 +276,20 @@ As shown above, information can add to the OONI report using:</p>
 <h2>Runninng Tests<a class="headerlink" href="#runninng-tests" title="Permalink to this headline">¶</a></h2>
 <p>If OONI is installed on your computer, you may run the above test
 by:</p>
-<div class="highlight-python"><div class="highlight"><pre>ooniprobe nettests/experimental/tcp_port_scanner.py -f /path/to/ip_list.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ooniprobe</span> <span class="n">nettests</span><span class="o">/</span><span class="n">experimental</span><span class="o">/</span><span class="n">tcp_port_scanner</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">ip_list</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>By default, this will cause OONI to connect to tor and upload the results
-of the test. To save time during development, consider using the &#8216;-n&#8217; flag,
-temporarily disabling upload. Additionally, the &#8216;-v&#8217; is also useful,
-as OONI by default doesn&#8217;t print the line if a runtime error occurs:</p>
-<div class="highlight-python"><div class="highlight"><pre>ooniprobe -n -v nettests/experimental/tcp_port_scanner.py -f /path/to/ip_list.txt
+of the test. To save time during development, consider using the ‘-n’ flag,
+temporarily disabling upload. Additionally, the ‘-v’ is also useful,
+as OONI by default doesn’t print the line if a runtime error occurs:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ooniprobe</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">v</span> <span class="n">nettests</span><span class="o">/</span><span class="n">experimental</span><span class="o">/</span><span class="n">tcp_port_scanner</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">ip_list</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="reports">
 <h2>Reports<a class="headerlink" href="#reports" title="Permalink to this headline">¶</a></h2>
-<p>Once &#8216;ooniprobe&#8217; is invoked, a report will be created in the current working
+<p>Once ‘ooniprobe’ is invoked, a report will be created in the current working
 directory. This report is structed in the YAMLOO format - a format based on
 YAML.</p>
 </div>
@@ -269,15 +297,18 @@ YAML.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="writing_tests.html" class="btn btn-neutral float-right" title="Writing OONI tests" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="writing_tests.html" class="btn btn-neutral float-right" title="Writing OONI tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="OONI: Open Observatory of Network Interference" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="ooniprobe: a network interference detection tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -308,10 +339,11 @@ YAML.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

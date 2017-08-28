@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - Tab-Tab, Come in! Bypassing Internet blocking to categorize DPI devices</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
+  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
 	<script type="text/javascript">
@@ -48,22 +48,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="https://ooni.torproject.org/about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="https://ooni.torproject.org/install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="https://ooni.torproject.org/nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="https://ooni.torproject.org/data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="https://ooni.torproject.org/get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="https://ooni.torproject.org/post/"
+  
+   class="active"
   
    >Blog</a>
 
@@ -79,7 +81,7 @@
 
     
 
-<h1 id="motivation:a5b4590d88b489245f39120c3b9f8a5b">Motivation</h1>
+<h1 id="motivation">Motivation</h1>
 
 <p>During the past two years, we have been following the technical developments in
 Internet filtering in Uzbekistan and Turkmenistan. Internet users were
@@ -98,7 +100,7 @@ allows to discover mechanisms to bypass it and fingerprint and ultimately
 expose the companies that provide technology and know-how to governments that
 want to surpress the free flow of information in the Net.</p>
 
-<h1 id="our-findings:a5b4590d88b489245f39120c3b9f8a5b">Our findings</h1>
+<h1 id="our-findings">Our findings</h1>
 
 <p>The general Internet blocking architecture in Turkmenistan and Uzbekistan takes
 places in two basic stages. The first stage is responsible to identify which
@@ -108,7 +110,7 @@ that is blacklisted. Once the positive matching has taken place, the blocking
 or filtering is implemented. We will refer to the first stage as &ldquo;matching&rdquo; and
 the second as &ldquo;blocking&rdquo;.</p>
 
-<h2 id="matching:a5b4590d88b489245f39120c3b9f8a5b">Matching</h2>
+<h2 id="matching">Matching</h2>
 
 <p>During our technical investigation we found out that a key element in the
 matching stage is the &ldquo;Host header&rdquo; in a HTTP session. Once the initial
@@ -140,13 +142,13 @@ sessions.</p>
 of webservers or websites to force users to use the correct domain name when
 requesting resources from the server.</p>
 
-<h2 id="filtering:a5b4590d88b489245f39120c3b9f8a5b">Filtering</h2>
+<h2 id="filtering">Filtering</h2>
 
 <p>Once the matching is positive, blocking can take place if desired. We have
 identified three basic methods used to block a session. Reset, Proxying and
 Active Redirection.</p>
 
-<h3 id="reset:a5b4590d88b489245f39120c3b9f8a5b">Reset</h3>
+<h3 id="reset">Reset</h3>
 
 <p>In the reset method, two RST packets will be send to both ends of the
 communication. By injecting these two packets between the communicating
@@ -182,7 +184,7 @@ to youtube.com will respond with a redirection to google.com. The user might
 believe that the redirection is implemented by the filtering infrastructure
 when in fact is a collateral results of the RST traffic.</p>
 
-<h3 id="proxying:a5b4590d88b489245f39120c3b9f8a5b">Proxying</h3>
+<h3 id="proxying">Proxying</h3>
 
 <p>The second mechanism to block the websites is by means of semi or fully
 transparent proxies. In both cases the HTTP proxy is placed between the users
@@ -211,7 +213,7 @@ web requests in the infrastructure.</p>
 <p>This blocking method is present in Uzbekistan and Turkmenistan where we
 could effectively identify proxy headers when requesting blocked websites.</p>
 
-<h3 id="active-redirection:a5b4590d88b489245f39120c3b9f8a5b">Active redirection</h3>
+<h3 id="active-redirection">Active redirection</h3>
 
 <p>In  the same way that a RST packets can be injected in the datastream to
 teardown a connection, we have seen another type of injected traffic towards
@@ -244,7 +246,7 @@ href='http://www.msn.com/'&gt;here&lt;/a&gt;.&lt;/h2&gt; &lt;/body&gt;&lt;/html&
 <p>This redirection method is highly scalable and users are aware that blocking
 is talking place.</p>
 
-<h2 id="how-we-manage-to-bypass-the-blocking:a5b4590d88b489245f39120c3b9f8a5b">How we manage to bypass the blocking?</h2>
+<h2 id="how-we-manage-to-bypass-the-blocking">How we manage to bypass the blocking?</h2>
 
 <p>During our investigation we discovered that it is possible to bypass the
 filtering by tampering the Host header so the matching stage is not
@@ -263,7 +265,7 @@ www.youtube.com\t\n</code>.</p>
 pre-pending a linefeed to the GET header. So instead of sending <code>GET /
 HTTP/1.1</code>, our requests look like <code>\nGET / HTTP/1.1</code>.</p>
 
-<h1 id="ooni-testing:a5b4590d88b489245f39120c3b9f8a5b">OONI Testing</h1>
+<h1 id="ooni-testing">OONI Testing</h1>
 
 <p>We ran from inside of TM and UZ a set of ooniprobe tests to collect some data
 on how the filtering was happening and confirm our hypothesis of censorship
@@ -271,7 +273,7 @@ bypassing strategies.</p>
 
 <p>Inside of Uzbekistan we ran the following tests:</p>
 
-<h3 id="http-header-field-manipulation:a5b4590d88b489245f39120c3b9f8a5b">HTTP Header Field Manipulation</h3>
+<h3 id="http-header-field-manipulation">HTTP Header Field Manipulation</h3>
 
 <p><a href="https://ooni.torproject.org/reports/0.1/TM/http_header_field_manipulation-2013-01-28T195727Z-AS20661.yamloo">https://ooni.torproject.org/reports/0.1/TM/http_header_field_manipulation-2013-01-28T195727Z-AS20661.yamloo</a></p>
 
@@ -279,7 +281,7 @@ bypassing strategies.</p>
 being appended to our outgoing requests. As we can see the response body
 contains the same headers that have been sent by the client.</p>
 
-<h3 id="http-invalid-request-line-test:a5b4590d88b489245f39120c3b9f8a5b">HTTP Invalid Request Line test</h3>
+<h3 id="http-invalid-request-line-test">HTTP Invalid Request Line test</h3>
 
 <p><a href="https://ooni.torproject.org/reports/0.1/TM/http_invalid_request_line-2013-01-30T214938Z-AS20661.yamloo">https://ooni.torproject.org/reports/0.1/TM/http_invalid_request_line-2013-01-30T214938Z-AS20661.yamloo</a></p>
 
@@ -290,7 +292,7 @@ crash on &lsquo;test_random_invalid_version_number&rsquo; and
 &lsquo;test_random_invalid_field_count&rsquo; as is shown in the measurements done in
 Myanmar (<a href="https://ooni.torproject.org/reports/0.1/MM/http_invalid_request_line-2012-12-06T162217Z-AS18399.yamloo">https://ooni.torproject.org/reports/0.1/MM/http_invalid_request_line-2012-12-06T162217Z-AS18399.yamloo</a>).</p>
 
-<h3 id="http-host-test:a5b4590d88b489245f39120c3b9f8a5b">HTTP Host test</h3>
+<h3 id="http-host-test">HTTP Host test</h3>
 
 <p><a href="https://ooni.torproject.org/reports/0.1/TM/http_host-2013-01-30T224041Z-AS20661.yamloo">https://ooni.torproject.org/reports/0.1/TM/http_host-2013-01-30T224041Z-AS20661.yamloo</a></p>
 
@@ -304,15 +306,15 @@ is due to a TCP RST.</p>
 
 <p>Inside of Turkmenistan we ran the same tests and obtained very similar results:</p>
 
-<h3 id="http-header-field-manipulation-1:a5b4590d88b489245f39120c3b9f8a5b">HTTP Header Field Manipulation</h3>
+<h3 id="http-header-field-manipulation-1">HTTP Header Field Manipulation</h3>
 
 <p><a href="https://ooni.torproject.org/reports/0.1/UZ/http_header_field_manipulation-2013-01-29T222932Z-AS31203.yamloo">https://ooni.torproject.org/reports/0.1/UZ/http_header_field_manipulation-2013-01-29T222932Z-AS31203.yamloo</a></p>
 
-<h3 id="http-invalid-request-line-test-1:a5b4590d88b489245f39120c3b9f8a5b">HTTP Invalid Request Line test</h3>
+<h3 id="http-invalid-request-line-test-1">HTTP Invalid Request Line test</h3>
 
 <p><a href="https://ooni.torproject.org/reports/0.1/UZ/http_invalid_request_line-2013-02-02T183110Z-AS31203.yamloo">https://ooni.torproject.org/reports/0.1/UZ/http_invalid_request_line-2013-02-02T183110Z-AS31203.yamloo</a></p>
 
-<h3 id="http-host-test-1:a5b4590d88b489245f39120c3b9f8a5b">HTTP Host test</h3>
+<h3 id="http-host-test-1">HTTP Host test</h3>
 
 <p><a href="https://ooni.torproject.org/reports/0.1/UZ/http_host-2013-02-02T183406Z-AS31203.yamloo">https://ooni.torproject.org/reports/0.1/UZ/http_host-2013-02-02T183406Z-AS31203.yamloo</a></p>
 
@@ -331,7 +333,7 @@ cause a bluecoat device to output an error message. The same thing happens to
 bluecoat, though with a different error message, when sending an invalid number
 of parts in the HTTP request line.</p>
 
-<h1 id="lessons-learned:a5b4590d88b489245f39120c3b9f8a5b">Lessons learned</h1>
+<h1 id="lessons-learned">Lessons learned</h1>
 
 <p>We learned that censorship software is not perfect and that sometimes it can be
 trivially bypassed. The fact that it can be bypassed is not of interest to who

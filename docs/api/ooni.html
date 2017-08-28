@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>Measurement Developer API &mdash; OONI: Open Observatory of Network Interference 2.2.1-dev documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../index.html"/>
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.2.1-dev documentation" href="../index.html"/>
         <link rel="next" title="Test Templates" href="ooni.templates.html"/>
         <link rel="prev" title="ooni.nettests third_party Package" href="../nettests/ooni.nettests.third_party.html"/> 
 
@@ -41,6 +46,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -60,7 +66,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.2.1-dev
               </div>
             
           
@@ -81,17 +87,20 @@
           
             
             
-                <ul class="current">
+              
+            
+            
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reports.html">Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reports.html#report-format-version-changelog">Report format version changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../nettests/modules.html">Implemented NetTests</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Measurement Developer API</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Measurement Developer API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-ooni.nettest"><code class="docutils literal"><span class="pre">nettest</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ooni.settings"><code class="docutils literal"><span class="pre">settings</span></code> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#oonicli-module"><code class="docutils literal"><span class="pre">oonicli</span></code> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ooni.oonicli"><code class="docutils literal"><span class="pre">oonicli</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-ooni.reporter"><code class="docutils literal"><span class="pre">reporter</span></code> Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="ooni.templates.html">Test Templates</a></li>
@@ -114,8 +123,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -124,23 +135,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Measurement Developer API</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Measurement Developer API</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/api/ooni.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/api/ooni.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -154,6 +182,21 @@
 <dt id="ooni.nettest.NetTest">
 <em class="property">class </em><code class="descclassname">ooni.nettest.</code><code class="descname">NetTest</code><span class="sig-paren">(</span><em>test_cases</em>, <em>test_details</em>, <em>report</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="ooni.nettest.NetTest.completionEta">
+<code class="descname">completionEta</code><a class="headerlink" href="#ooni.nettest.NetTest.completionEta" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettest.NetTest.completionPercentage">
+<code class="descname">completionPercentage</code><a class="headerlink" href="#ooni.nettest.NetTest.completionPercentage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.nettest.NetTest.completionRate">
+<code class="descname">completionRate</code><a class="headerlink" href="#ooni.nettest.NetTest.completionRate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="ooni.nettest.NetTest.director">
 <code class="descname">director</code><em class="property"> = None</em><a class="headerlink" href="#ooni.nettest.NetTest.director" title="Permalink to this definition">¶</a></dt>
@@ -190,7 +233,7 @@ irreversibly damaged.</p>
 <dl class="method">
 <dt id="ooni.nettest.NetTest.makeMeasurement">
 <code class="descname">makeMeasurement</code><span class="sig-paren">(</span><em>test_instance</em>, <em>test_method</em>, <em>test_input=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTest.makeMeasurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTest.makeMeasurement" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a new instance of :class:ooni.tasks.Measurement and add&#8217;s it&#8217;s
+<dd><p>Creates a new instance of :class:ooni.tasks.Measurement and add’s it’s
 callbacks and errbacks.</p>
 <dl class="docutils">
 <dt>Args:</dt>
@@ -222,7 +265,7 @@ NetTestCase</dd>
 you will subclass this object.</p>
 <ul>
 <li><p class="first">inputs: can be set to a static set of inputs. All the tests (the methods
-starting with the &#8220;test&#8221; prefix) will be run once per input. At every
+starting with the “test” prefix) will be run once per input. At every
 run the _input_ attribute of the TestCase instance will be set to the
 value of the current iteration over inputs.  Any python iterable object
 can be set to inputs.</p>
@@ -304,7 +347,7 @@ summary of the test run.</p>
 <dd><p>This method must be called after all options are validated by
 _checkValidOptions and _checkRequiredOptions, which ensure that
 if the inputFile is a required option it will be present.</p>
-<p>We check to see if it&#8217;s possible to have an input file and if the user
+<p>We check to see if it’s possible to have an input file and if the user
 has specified such file.</p>
 <p>If the operations to be done here are network related or blocking, they
 should be wrapped in a deferred. That is the return value of this
@@ -353,7 +396,7 @@ format and you want to set the input attribute of the test to something
 that you will be able to properly process.</p>
 <p>For example you may wish to have an input processor that will allow you
 to ignore comments in files. This can be easily achieved like so:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fp</span><span class="o">.</span><span class="n">xreadlines</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#&quot;</span><span class="p">):</span>
         <span class="k">continue</span>
@@ -459,7 +502,7 @@ for all the runtime of the NetTest.</p>
 
 <dl class="class">
 <dt id="ooni.nettest.NetTestLoader">
-<em class="property">class </em><code class="descclassname">ooni.nettest.</code><code class="descname">NetTestLoader</code><span class="sig-paren">(</span><em>options</em>, <em>test_file=None</em>, <em>test_string=None</em>, <em>annotations={}</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTestLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTestLoader" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ooni.nettest.</code><code class="descname">NetTestLoader</code><span class="sig-paren">(</span><em>options</em>, <em>test_file=None</em>, <em>test_string=None</em>, <em>annotations=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/nettest.html#NetTestLoader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.nettest.NetTestLoader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="ooni.nettest.NetTestLoader.checkOptions">
@@ -536,7 +579,7 @@ scheduled.</p>
 <p>XXX this is ghetto.
 The reason for which we are calling allTasksDone inside of the
 allTasksScheduled method is called after all tasks are done, then we
-will run into a race condition. The race is that we don&#8217;t end up
+will run into a race condition. The race is that we don’t end up
 checking that all the tasks are complete because no task is to be
 scheduled.</p>
 </dd></dl>
@@ -576,11 +619,11 @@ scheduled.</p>
 <dd><p>Returns a dict containing:</p>
 <dl class="docutils">
 <dt>{</dt>
-<dd><p class="first">&#8216;id&#8217;: the test filename excluding the .py extension,
-&#8216;name&#8217;: the full name of the test,
-&#8216;description&#8217;: the description of the test,
-&#8216;version&#8217;: version number of this test,
-&#8216;arguments&#8217;: a dict containing as keys the supported arguments and as</p>
+<dd><p class="first">‘id’: the test filename excluding the .py extension,
+‘name’: the full name of the test,
+‘description’: the description of the test,
+‘version’: version number of this test,
+‘arguments’: a dict containing as keys the supported arguments and as</p>
 <blockquote class="last">
 <div>values the argument description.</div></blockquote>
 </dd>
@@ -606,10 +649,10 @@ scheduled.</p>
 <dt>a dict containing</dt>
 <dd><dl class="first docutils">
 <dt>{</dt>
-<dd>&#8216;description&#8217;: the description of the option,
-&#8216;default&#8217;: the default value of the option,
-&#8216;required&#8217;: True|False if the option is required or not,
-&#8216;type&#8217;: the type of the option (&#8216;text&#8217; or &#8216;file&#8217;)</dd>
+<dd>‘description’: the description of the option,
+‘default’: the default value of the option,
+‘required’: True|False if the option is required or not,
+‘type’: the type of the option (‘text’ or ‘file’)</dd>
 </dl>
 <p class="last">}</p>
 </dd>
@@ -714,9 +757,19 @@ blocking, experimental, manipulation or third_party) or not.</p>
 <code class="descname">log_incoherences</code><span class="sig-paren">(</span><em>incoherences</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.log_incoherences"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.log_incoherences" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="method">
+<dt id="ooni.settings.OConfig.log_info">
+<code class="descname">log_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/settings.html#OConfig.log_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.settings.OConfig.log_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="ooni.settings.OConfig.ooni_home">
 <code class="descname">ooni_home</code><a class="headerlink" href="#ooni.settings.OConfig.ooni_home" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.settings.OConfig.platform">
+<code class="descname">platform</code><a class="headerlink" href="#ooni.settings.OConfig.platform" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -757,11 +810,135 @@ use the ooni_home.</p>
 <code class="descname">user_pid_path</code><a class="headerlink" href="#ooni.settings.OConfig.user_pid_path" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="attribute">
+<dt id="ooni.settings.OConfig.web_ui_url">
+<code class="descname">web_ui_url</code><a class="headerlink" href="#ooni.settings.OConfig.web_ui_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
-<div class="section" id="oonicli-module">
-<h2><code class="xref py py-mod docutils literal"><span class="pre">oonicli</span></code> Module<a class="headerlink" href="#oonicli-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ooni.oonicli">
+<span id="oonicli-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">oonicli</span></code> Module<a class="headerlink" href="#module-ooni.oonicli" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="ooni.oonicli.LifetimeExceeded">
+<em class="property">exception </em><code class="descclassname">ooni.oonicli.</code><code class="descname">LifetimeExceeded</code><a class="headerlink" href="#ooni.oonicli.LifetimeExceeded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ooni.oonicli.Options">
+<em class="property">class </em><code class="descclassname">ooni.oonicli.</code><code class="descname">Options</code><a class="headerlink" href="#ooni.oonicli.Options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">twisted.python.usage.Options</span></code></p>
+<dl class="attribute">
+<dt id="ooni.oonicli.Options.compData">
+<code class="descname">compData</code><em class="property"> = &lt;twisted.python.usage.Completions object&gt;</em><a class="headerlink" href="#ooni.oonicli.Options.compData" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.oonicli.Options.getUsage">
+<code class="descname">getUsage</code><span class="sig-paren">(</span><em>width=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.Options.getUsage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.oonicli.Options.longdesc">
+<code class="descname">longdesc</code><em class="property"> = 'ooniprobe loads and executes a suite or a set of suites of network tests. These are loaded from modules, packages and files listed on the command line.'</em><a class="headerlink" href="#ooni.oonicli.Options.longdesc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.oonicli.Options.optFlags">
+<code class="descname">optFlags</code><em class="property"> = [['help', 'h'], ['no-collector', 'n', 'Disable writing to collector'], ['no-yamloo', 'N', 'Disable writing to YAML file'], ['no-geoip', 'g', 'Disable geoip lookup on start'], ['list', 's', 'List the currently installed ooniprobe nettests'], ['printdeck', 'p', 'Print the equivalent deck for the provided command'], ['verbose', 'v', 'Show more verbose information']]</em><a class="headerlink" href="#ooni.oonicli.Options.optFlags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.oonicli.Options.optParameters">
+<code class="descname">optParameters</code><em class="property"> = [['reportfile', 'o', None, 'Specify the report file name to write to.'], ['testdeck', 'i', None, 'Specify as input a test deck: a yaml file containing the tests to run and their arguments.'], ['collector', 'c', None, 'Specify the address of the collector for test results. In most cases a user will prefer to specify a bouncer over this.'], ['bouncer', 'b', None, 'Specify the bouncer used to obtain the address of the collector and test helpers.'], ['logfile', 'l', None, 'Write to this logs to this filename.'], ['pcapfile', 'O', None, 'Write a PCAP of the ooniprobe session to this filename.'], ['configfile', 'f', None, 'Specify a path to the ooniprobe configuration file.'], ['datadir', 'd', None, 'Specify a path to the ooniprobe data directory.'], ['annotations', 'a', None, 'Annotate the report with a key:value[, key:value] format.'], ['preferred-backend', 'P', None, 'Set the preferred backend to use when submitting results and/or communicating with test helpers. Can be either onion, https or cloudfront'], ['queue', 'Q', None, 'AMQP Queue URL amqp://user:pass&#64;host:port/vhost/queue']]</em><a class="headerlink" href="#ooni.oonicli.Options.optParameters" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ooni.oonicli.Options.opt_spew">
+<code class="descname">opt_spew</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.Options.opt_spew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print an insanely verbose log of everything that happens.
+Useful when debugging freezes or locks in complex code.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.oonicli.Options.opt_version">
+<code class="descname">opt_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.Options.opt_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the ooniprobe version and exit.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ooni.oonicli.Options.parseArgs">
+<code class="descname">parseArgs</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.Options.parseArgs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.oonicli.Options.synopsis">
+<code class="descname">synopsis</code><em class="property"> = 'sphinx-build [options] [path to test].py\n    '</em><a class="headerlink" href="#ooni.oonicli.Options.synopsis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ooni.oonicli.Options.tracer">
+<code class="descname">tracer</code><em class="property"> = None</em><a class="headerlink" href="#ooni.oonicli.Options.tracer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.createDeck">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">createDeck</code><span class="sig-paren">(</span><em>global_options</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.createDeck" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.director_startup_handled_failures">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">director_startup_handled_failures</code><span class="sig-paren">(</span><em>failure</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.director_startup_handled_failures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.director_startup_other_failures">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">director_startup_other_failures</code><span class="sig-paren">(</span><em>failure</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.director_startup_other_failures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.parseOptions">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">parseOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.parseOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.runTestWithDirector">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">runTestWithDirector</code><span class="sig-paren">(</span><em>director</em>, <em>global_options</em>, <em>url=None</em>, <em>start_tor=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.runTestWithDirector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.runWithDaemonDirector">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">runWithDaemonDirector</code><span class="sig-paren">(</span><em>global_options</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.runWithDaemonDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance the director, parse command line options and start an ooniprobe
+test!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.runWithDirector">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">runWithDirector</code><span class="sig-paren">(</span><em>global_options</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.runWithDirector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instance the director, parse command line options and start an ooniprobe
+test!</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.setupAnnotations">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">setupAnnotations</code><span class="sig-paren">(</span><em>global_options</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.setupAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.setupCollector">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">setupCollector</code><span class="sig-paren">(</span><em>global_options</em>, <em>collector_client</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.setupCollector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ooni.oonicli.setupGlobalOptions">
+<code class="descclassname">ooni.oonicli.</code><code class="descname">setupGlobalOptions</code><span class="sig-paren">(</span><em>logging</em>, <em>start_tor</em>, <em>check_incoherences</em><span class="sig-paren">)</span><a class="headerlink" href="#ooni.oonicli.setupGlobalOptions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 <div class="section" id="module-ooni.reporter">
 <span id="reporter-module"></span><h2><code class="xref py py-mod docutils literal"><span class="pre">reporter</span></code> Module<a class="headerlink" href="#module-ooni.reporter" title="Permalink to this headline">¶</a></h2>
@@ -947,7 +1124,7 @@ XXX fully debug this problem</p>
 
 <dl class="attribute">
 <dt id="ooni.reporter.OSafeRepresenter.yaml_representers">
-<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">yaml_representers</code><em class="property"> = {&lt;type 'datetime.date'&gt;: &lt;unbound method SafeRepresenter.represent_date&gt;, &lt;type 'bool'&gt;: &lt;unbound method SafeRepresenter.represent_bool&gt;, &lt;type 'list'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'tuple'&gt;: &lt;unbound method SafeRepresenter.represent_list&gt;, &lt;type 'complex'&gt;: &lt;unbound method OSafeRepresenter.represent_complex&gt;, &lt;type 'set'&gt;: &lt;unbound method SafeRepresenter.represent_set&gt;, &lt;type 'str'&gt;: &lt;unbound method SafeRepresenter.represent_str&gt;, &lt;type 'int'&gt;: &lt;unbound method SafeRepresenter.represent_int&gt;, &lt;type 'long'&gt;: &lt;unbound method SafeRepresenter.represent_long&gt;, &lt;type 'datetime.datetime'&gt;: &lt;unbound method SafeRepresenter.represent_datetime&gt;, None: &lt;unbound method SafeRepresenter.represent_undefined&gt;, &lt;type 'float'&gt;: &lt;unbound method SafeRepresenter.represent_float&gt;, &lt;type 'unicode'&gt;: &lt;unbound method SafeRepresenter.represent_unicode&gt;, &lt;type 'NoneType'&gt;: &lt;unbound method SafeRepresenter.represent_none&gt;, &lt;type 'dict'&gt;: &lt;unbound method SafeRepresenter.represent_dict&gt;}</em><a class="headerlink" href="#ooni.reporter.OSafeRepresenter.yaml_representers" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -959,7 +1136,7 @@ XXX fully debug this problem</p>
 <dl class="method">
 <dt id="ooni.reporter.Report.close">
 <code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/ooni/reporter.html#Report.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#ooni.reporter.Report.close" title="Permalink to this definition">¶</a></dt>
-<dd><p>Close the report by calling it&#8217;s finish method.</p>
+<dd><p>Close the report by calling it’s finish method.</p>
 <dl class="docutils">
 <dt>Returns:</dt>
 <dd>a :class:twisted.internet.defer.DeferredList that will fire when
@@ -1070,15 +1247,18 @@ summary and the raw packet.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ooni.templates.html" class="btn btn-neutral float-right" title="Test Templates" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ooni.templates.html" class="btn btn-neutral float-right" title="Test Templates" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../nettests/ooni.nettests.third_party.html" class="btn btn-neutral" title="ooni.nettests third_party Package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../nettests/ooni.nettests.third_party.html" class="btn btn-neutral" title="ooni.nettests third_party Package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1109,10 +1289,11 @@ summary and the raw packet.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.2.1-dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
