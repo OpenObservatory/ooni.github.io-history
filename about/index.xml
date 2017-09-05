@@ -48,7 +48,8 @@ The goal of this study is to have a better understanding on how the internet wor
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/about/risks/</guid>
-      <description>Risks: Things you should know before using ooniprobe OONI&amp;rsquo;s software tests (called ooniprobe) are designed to test networks for signs of censorship, surveillance and traffic manipulation. In some countries around the world using ooniprobe may result in criminal prosecution, fines, or even imprisonment. We therefore strongly urge you to consult with a lawyer licensed to practice in your country prior to downloading, installing and running ooniprobe, and to carefully read the documentation below.</description>
+      <description>Risks: Things you should know before using ooniprobe To our knowledge, no ooniprobe user has ever faced consequences as a result of using our software. Therefore, the potential risks described below are theoretical and quite speculative. If you are running ooniprobe from a &amp;ldquo;high-risk environment&amp;rdquo;, we strongly encourage you to read all of the documentation below.
+Summary of potential risks  Anyone monitoring your internet activity (e.g. ISP, government, employer) will be able to see that you are running ooniprobe;</description>
     </item>
     
   </channel>

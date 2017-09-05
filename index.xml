@@ -568,7 +568,8 @@ The goal of this study is to have a better understanding on how the internet wor
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/about/risks/</guid>
-      <description>Risks: Things you should know before using ooniprobe OONI&amp;rsquo;s software tests (called ooniprobe) are designed to test networks for signs of censorship, surveillance and traffic manipulation. In some countries around the world using ooniprobe may result in criminal prosecution, fines, or even imprisonment. We therefore strongly urge you to consult with a lawyer licensed to practice in your country prior to downloading, installing and running ooniprobe, and to carefully read the documentation below.</description>
+      <description>Risks: Things you should know before using ooniprobe To our knowledge, no ooniprobe user has ever faced consequences as a result of using our software. Therefore, the potential risks described below are theoretical and quite speculative. If you are running ooniprobe from a &amp;ldquo;high-risk environment&amp;rdquo;, we strongly encourage you to read all of the documentation below.
+Summary of potential risks  Anyone monitoring your internet activity (e.g. ISP, government, employer) will be able to see that you are running ooniprobe;</description>
     </item>
     
     <item>
@@ -577,7 +578,7 @@ The goal of this study is to have a better understanding on how the internet wor
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/data/content/</guid>
-      <description>This URL is old Raw ooniprobe measurements now live at: https://measurement.ooni.torproject.org.
+      <description>This URL is old Raw ooniprobe measurements now live at: https://measurements.ooni.torproject.org.
 You can also explore the collected measurements via the OONI Explorer.
 You should update your bookmarks and links accordingly.</description>
     </item>
@@ -604,10 +605,15 @@ You should update your bookmarks and links accordingly.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/get-involved/contribute-test-lists/</guid>
-      <description>OONI tests specific websites to see if they are blocked, and such websites are included in what we call &amp;ldquo;test lists&amp;rdquo;. Each test list contains multiple categorized URLs which are tested for online censorship and they include the following:
- Global test list
- Country-specific test lists
-  The global list includes a wide range of internationally relevant websites (most of which are in English), while each country-specific test list includes websites that are relevant and commonly accessed within that country (many of which are in local languages).</description>
+      <description>Contributing Test Lists Censorship findings are only as interesting as the sites and services that you test.
+We encourage you to suggest sites and services to test for censorship.
+Please read the documentation below to contribute to community resources for censorship measurement research.
+ What are test lists?
+ Why contribute to test lists?
+ Contributing to test lists
+ Reviewing test lists
+ Creating new test lists
+  Important tips</description>
     </item>
     
     <item>
@@ -689,9 +695,15 @@ This network performance test was originally developed by The Internet2 Project 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/get-involved/partnership-program/</guid>
-      <description>Uncovering Evidence of Online Censorship Around the World
-Hundreds of volunteers around the world have made the OONI project possible over the last years by contributing to the collection of millions of network measurements across more than 95 countries. These measurements have discovered online censorship and traffic manipulation around the world, and have brought transparency to covert surveillance through proxies and traffic monitoring.
-Now we aim to take OONI a step further by studying network anomalies more systematically and within local context, through OONI&amp;rsquo;s Partnership Program.</description>
+      <description>What is the OONI Partnership Program?
+ What is the aim of the OONI Partnership Program?
+ What does the OONI Partnership Program entail?
+ Collecting ooniprobe network measurements
+ Reviewing community resources for censorship measurement research
+ Communicating internet censorship findings to the public
+  Who can join the OONI Partnership Program?
+ How can OONI support its partners?
+  What is the OONI Partnership Program?</description>
     </item>
     
     <item>
