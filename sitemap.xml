@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ooni.torproject.org/post/iran-internet-censorship/</loc>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/post/ooni-run/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
   </url>
@@ -257,7 +262,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/tags/censorship/</loc>
-    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -401,6 +406,12 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/tags/iran/</loc>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/tags/kenya/</loc>
     <lastmod>2016-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -466,7 +477,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -490,7 +501,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/post/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -518,7 +529,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/categories/report/</loc>
-    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

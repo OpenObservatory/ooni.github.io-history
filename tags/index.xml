@@ -41,7 +41,7 @@
     <item>
       <title>Censorship</title>
       <link>https://ooni.torproject.org/tags/censorship/</link>
-      <pubDate>Mon, 28 Aug 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/tags/censorship/</guid>
       <description></description>
@@ -197,6 +197,15 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/tags/internet-censorship/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Iran</title>
+      <link>https://ooni.torproject.org/tags/iran/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/tags/iran/</guid>
       <description></description>
     </item>
     
