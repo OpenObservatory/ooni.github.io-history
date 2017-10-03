@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ooni.torproject.org/post/internet-censorship-catalonia-independence-referendum/</loc>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/post/iran-internet-censorship/</loc>
     <lastmod>2017-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -255,6 +260,12 @@
   </url>
   
   <url>
+    <loc>https://ooni.torproject.org/tags/catalonia/</loc>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ooni.torproject.org/categories/</loc>
     <lastmod>2017-05-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -262,7 +273,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/tags/censorship/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -477,7 +488,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -501,7 +512,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/post/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -529,7 +540,7 @@
   
   <url>
     <loc>https://ooni.torproject.org/categories/report/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
