@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation</title>
+  <title>&lt;no title&gt; &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation" href="index.html"/> 
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -44,7 +39,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -64,7 +58,7 @@
             
             
               <div class="version">
-                2.3.0-rc.1
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -85,10 +79,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -111,10 +102,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -123,61 +112,41 @@
         <div class="rst-content">
           
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>&lt;no title&gt;</li>
-    
-    
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;no title&gt;</li>
       <li class="wy-breadcrumbs-aside">
         
-            
-            <a href="_sources/writing_http_tests.rst.txt" rel="nofollow"> View page source</a>
+          
+            <a href="_sources/writing_http_tests.txt" rel="nofollow"> View page source</a>
           
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HTTPRequest</span><span class="p">(</span><span class="n">httpt</span><span class="o">.</span><span class="n">HTTPTest</span><span class="p">):</span>
+  <div class="code python highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">HTTPRequest</span><span class="p">(</span><span class="n">httpt</span><span class="o">.</span><span class="n">HTTPTest</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">test_send_headers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">r</span> <span class="o">=</span> <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://ooni.nu/&quot;</span><span class="p">,</span>
                                    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Foo&#39;</span><span class="p">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">})</span>
-        <span class="nb">print</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span>
-        <span class="nb">print</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+        <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">headers</span>
+        <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
 
-        <span class="nb">print</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
-        <span class="nb">print</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span>
+        <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">print</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span>
 </pre></div>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
            </div>
           </div>
           <footer>
@@ -209,11 +178,10 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.3.0-rc.1',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

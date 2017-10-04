@@ -8,11 +8,9 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.templates.tcpt &mdash; OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation</title>
+  <title>ooni.templates.tcpt &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
   
 
-  
-  
   
   
 
@@ -32,10 +30,7 @@
   
 
   
-        <link rel="index" title="Index"
-              href="../../../genindex.html"/>
-        <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation" href="../../../index.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../index.html"/>
         <link rel="up" title="Module code" href="../../index.html"/> 
 
   
@@ -45,7 +40,6 @@
 
 <body class="wy-body-for-nav" role="document">
 
-   
   <div class="wy-grid-for-nav">
 
     
@@ -65,7 +59,7 @@
             
             
               <div class="version">
-                2.3.0-rc.1
+                2.0.0-rc.4.dev
               </div>
             
           
@@ -86,10 +80,7 @@
           
             
             
-              
-            
-            
-              <ul>
+                <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -112,10 +103,8 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">OONI: Open Observatory of Network Interference</a>
-        
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">OONI: Open Observatory of Network Interference</a>
       </nav>
 
 
@@ -128,48 +117,31 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
-
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
-        
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
           <li><a href="../../index.html">Module code</a> &raquo;</li>
-        
-      <li>ooni.templates.tcpt</li>
-    
-    
+      
+    <li>ooni.templates.tcpt</li>
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.templates.tcpt</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">defer</span><span class="p">,</span> <span class="n">reactor</span>
-<span class="kn">from</span> <span class="nn">twisted.internet.endpoints</span> <span class="k">import</span> <span class="n">TCP4ClientEndpoint</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">defer</span><span class="p">,</span> <span class="n">reactor</span>
+<span class="kn">from</span> <span class="nn">twisted.internet.endpoints</span> <span class="kn">import</span> <span class="n">TCP4ClientEndpoint</span>
 
-<span class="kn">from</span> <span class="nn">ooni.nettest</span> <span class="k">import</span> <span class="n">NetTestCase</span>
-<span class="kn">from</span> <span class="nn">ooni.errors</span> <span class="k">import</span> <span class="n">failureToString</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.nettest</span> <span class="kn">import</span> <span class="n">NetTestCase</span>
+<span class="kn">from</span> <span class="nn">ooni.errors</span> <span class="kn">import</span> <span class="n">failureToString</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
 
 <div class="viewcode-block" id="TCPSender"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.tcpt.TCPSender">[docs]</a><span class="k">class</span> <span class="nc">TCPSender</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">Protocol</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -210,7 +182,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="TCPSenderFactory"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.tcpt.TCPSenderFactory">[docs]</a><span class="k">class</span> <span class="nc">TCPSenderFactory</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">Factory</span><span class="p">):</span>
-    <span class="n">noisy</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">noisy</span> <span class="o">=</span> <span class="bp">False</span>
 <div class="viewcode-block" id="TCPSenderFactory.buildProtocol"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.tcpt.TCPSenderFactory.buildProtocol">[docs]</a>    <span class="k">def</span> <span class="nf">buildProtocol</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">addr</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">TCPSender</span><span class="p">()</span></div></div>
 
@@ -218,10 +190,10 @@
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Base TCP Test&quot;</span>
     <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.1&quot;</span>
 
-    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">requiresRoot</span> <span class="o">=</span> <span class="bp">False</span>
     <span class="n">timeout</span> <span class="o">=</span> <span class="mi">5</span>
-    <span class="n">address</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">port</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="bp">None</span>
 
     <span class="k">def</span> <span class="nf">_setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">TCPTest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_setUp</span><span class="p">()</span>
@@ -265,9 +237,6 @@
 </pre></div>
 
            </div>
-           <div class="articleComments">
-            
-           </div>
           </div>
           <footer>
   
@@ -298,11 +267,10 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'2.3.0-rc.1',
+            VERSION:'2.0.0-rc.4.dev',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
+            HAS_SOURCE:  true
         };
     </script>
       <script type="text/javascript" src="../../../_static/jquery.js"></script>

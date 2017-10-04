@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jul 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ooni.torproject.org/nettest/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://ooni.torproject.org/nettest/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>DASH Streaming Test</title>
@@ -17,8 +15,50 @@
       <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/dash/</guid>
-      <description>DASH Streaming Test DASH is designed to measure the quality of tested networks by emulating a video streaming. This test is called DASH because it uses the DASH (Dynamic Adaptive Streaming over HTTP) streaming technique.
-Running this test can be useful to understand the baseline streaming performance of a specific network connection. It measures video-related metrics as well as network metrics that are key to understand the reason of performance issues.</description>
+      <description>
+
+&lt;h1 id=&#34;dash-streaming-test:926ede6658256c03c477c4f2606b2731&#34;&gt;DASH Streaming Test&lt;/h1&gt;
+
+&lt;p&gt;DASH is designed to measure the &lt;em&gt;quality&lt;/em&gt; of tested networks by emulating a
+video streaming. This test is called DASH because it uses the DASH
+(&lt;a href=&#34;https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP&#34;&gt;Dynamic Adaptive Streaming over HTTP&lt;/a&gt;) streaming technique.&lt;/p&gt;
+
+&lt;p&gt;Running this test can be useful to understand the baseline streaming
+performance of a specific network connection. It measures video-related
+metrics as well as network metrics that are key to understand the reason of
+performance issues.&lt;/p&gt;
+
+&lt;p&gt;When you run the test, it emulates the streaming of a thirty-second video
+from an &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;M-Lab&lt;/a&gt; server. The video is divided
+in fifteen two seconds segments. When the client requests a video segment, it
+must also specify the video quality (e.g., SD, HD, Super HD). Of course,
+the higher the request quality, the bigger the returned segment. During the
+streaming, the client seeks to use the higher quality that does not load the
+network, creating queues, so that the streaming can continue smoothly.&lt;/p&gt;
+
+&lt;p&gt;We say the player is simple in that it does not employ algorithms
+that real players (e.g. YouTube, Netflix) implement to keep the
+streaming quality stable and to avoid stalls. This simplicity is, however,
+key to understand the contribution of the network to streaming
+quality, which otherwise could be masked by smart players&amp;rsquo; behavior.&lt;/p&gt;
+
+&lt;p&gt;As a result, we expect real players to be generally faster than this test,
+because they implement more optimization techniques. However, if the
+&lt;a href=&#34;https://arstechnica.com/tech-policy/2010/12/comcastlevel3/&#34;&gt;throttling of video is caused by congestion at interconnection points&lt;/a&gt;, this test may result faster when the network path from the client to
+the M-Lab server does not pass through the congested interconnection point.&lt;/p&gt;
+
+&lt;p&gt;This network performance test was originally developed by the
+&lt;a href=&#34;https://gitub.com/neubot&#34;&gt;Neubot project&lt;/a&gt; and later integrated
+into &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt;,
+the engine used by ooniprobe-mobile.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; DASH is a general-purpose performance test conducted
+against third-party servers provided by &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab
+(M-Lab)&lt;/a&gt;. M-Lab&amp;rsquo;s services
+require the retention and disclosure of IP addresses for research
+purposes. Learn more about M-Lab&amp;rsquo;s data governance, see its &lt;a href=&#34;https://www.measurementlab.net/privacy/&#34;&gt;privacy
+statement&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -27,8 +67,47 @@ Running this test can be useful to understand the baseline streaming performance
       <pubDate>Wed, 01 Jan 0003 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/http-requests/</guid>
-      <description>HTTP Requests This test tries to detect online censorship based on a comparison of HTTP requests over Tor and over the network of the user.
-HTTP is a protocol which allows communication between a client and a server. It does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s response to a client&amp;rsquo;s request. Every time you connect to a website, your browser (the client) sends a request through the HTTP protocol to the server which is hosting that website.</description>
+      <description>
+
+&lt;h1 id=&#34;http-requests:3e10bba86bba527f8a3085687d504fe5&#34;&gt;HTTP Requests&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect online censorship based on a comparison of HTTP
+requests over Tor and over the network of the user.&lt;/p&gt;
+
+&lt;p&gt;HTTP is a protocol which allows communication between a client and a server. It
+does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
+response to a client&amp;rsquo;s request. Every time you connect to a website, your
+browser (the client) sends a request through the HTTP protocol to the server
+which is hosting that website. A server normally responds with the content of
+the website it is hosting. In some cases though, Internet Service Providers
+(ISP) prevent users from accessing certain websites by blocking or interfering
+with the connection between them and the server.&lt;/p&gt;
+
+&lt;p&gt;To detect such cases of censorship, we have developed a test which performs HTTP
+requests to given websites over the network of its user, and then over the Tor
+network. As Tor software is designed to circumvent censorship by making its
+user&amp;rsquo;s traffic appear to come from a different part of the world, we have chosen
+to use the Tor network as a baseline for comparing HTTP requests to websites. If
+the two results match, then there is no clear sign of network interference; but
+if the results are different, then the website that the user is testing is
+likely censored.&lt;/p&gt;
+
+&lt;p&gt;If one of the following is present in the results, then there is a sign of
+network interference:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The length of the body of the two websites (over Tor and over the user&amp;rsquo;s
+network) differs by some percentage&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The HTTP request over the user&amp;rsquo;s network fails&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The HTTP headers do not match&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; False positives might occur when the Tor control connection is being
+discriminated by the server. This happens, for example, when a CloudFlare
+CAPTCHA page appears.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -37,11 +116,46 @@ HTTP is a protocol which allows communication between a client and a server. It 
       <pubDate>Tue, 01 Jan 0002 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/http-host/</guid>
-      <description>HTTP Host This test attempts to:
- examine whether the domain names of websites are blocked
- detect the presence of “middle boxes” (software which could be used for censorship and/or traffic manipulation) in tested networks
- assess which censorship circumvention techniques are capable of bypassing the censorship implemented by the “middle box”
-  HTTP is a protocol which transfers or exchanges data across the internet. It does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s response to a client&amp;rsquo;s request.</description>
+      <description>
+
+&lt;h1 id=&#34;http-host:5822b230373cd593e60d21f806e517c6&#34;&gt;HTTP Host&lt;/h1&gt;
+
+&lt;p&gt;This test attempts to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;examine whether the domain names of websites are blocked&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;detect the presence of “middle boxes” (software which could be used for
+censorship and/or traffic manipulation) in tested networks&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;assess which censorship circumvention techniques are capable of bypassing the
+censorship implemented by the “middle box”&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
+does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
+response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
+client) send a request through the HTTP protocol to that server. Such requests
+include “HTTP headers”, some of which (the “Host header”) include information
+about the specific domain that you want to connect to. When you connect to
+torproject.org, for example, the host header of your HTTP request includes
+information which communicates that you want to connect to that domain.&lt;/p&gt;
+
+&lt;p&gt;This test implements a series of techniques which help it evade getting detected
+from censors and then uses a list of domain names (such as bbc.co.uk) to connect
+to an OONI backend control server, which sends the host headers of those domain
+names back to us. If a “middle box” is detected between the network path of the
+probe and the OONI backend control server, its fingerprint might be included in
+the JSON data that we receive from the backend control server. Such data also
+informs us if the tested domain names are blocked or not, as well as how the
+censor tried to fingerprint the censorship of those domains. This can sometimes
+lead to the identification of the type of infrastructure being used to implement
+censorship.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The presence of a middle box is not necessarily indicative of
+censorship and/or traffic manipulation, as they are often used in networks for
+caching purposes.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -50,8 +164,33 @@ HTTP is a protocol which allows communication between a client and a server. It 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/dns-consistency/</guid>
-      <description>DNS consistency This test compares the DNS query results from a DNS resolver which is considered to be reliable with one that is tested for tampering.
-The domain name system (DNS) is what is responsible for transforming a host name (e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst others, run DNS resolvers which map IP addresses to host names. In certain circumstances though, ISPs map the wrong IP addresses to the wrong host names.</description>
+      <description>
+
+&lt;h1 id=&#34;dns-consistency:8cd092f4d968324448a1b104fce68bce&#34;&gt;DNS consistency&lt;/h1&gt;
+
+&lt;p&gt;This test compares the DNS query results from a DNS resolver which is considered
+to be reliable with one that is tested for tampering.&lt;/p&gt;
+
+&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
+(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). ISPs, amongst
+others, run DNS resolvers which map IP addresses to host names. In certain
+circumstances though, ISPs map the wrong IP addresses to the wrong host names.
+This is a form of tampering, which OONI can detect by running its DNS
+consistency test.&lt;/p&gt;
+
+&lt;p&gt;This test compares the IP address of a given host name allocated by the Google
+DNS resolver (which we assume to not be tampered with) with the IP address
+mapped to that website by a provider. If the two IP addresses of the same
+website are different, then there is a sign of network interference. When ISPs
+tamper with DNS answers, users are redirected to other websites or fail to
+connect to their intended websites.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; DNS resolvers, such as Google or your local ISP, often provide users
+with IP addresses that are closest to them geographically. Often this is not
+done with the intent of network tampering, but merely for the purpose of
+providing users faster access to websites. As a result, some false positives
+might arise in OONI measurements.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -60,10 +199,24 @@ The domain name system (DNS) is what is responsible for transforming a host name
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/facebook-messenger/</guid>
-      <description>Facebook Messenger test This test is designed to examine the reachability of Facebook Messenger within a tested network.
-OONI&amp;rsquo;s Facebook Messenger test attempts to perform a TCP connection and DNS lookup to Facebook&amp;rsquo;s endpoints over the vantage point of the user. Based on this methodology, Facebook Messenger is likely blocked if one or both of the following apply:
- TCP connections to Facebook&amp;rsquo;s endpoints fail
- DNS lookups to domains associated to Facebook do not resolve to IP addresses allocated to Facebook</description>
+      <description>
+
+&lt;h1 id=&#34;facebook-messenger-test:e2a220f951bcfcb6f5c529fcc40f4059&#34;&gt;Facebook Messenger test&lt;/h1&gt;
+
+&lt;p&gt;This test is designed to examine the reachability of Facebook Messenger within a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s Facebook Messenger test attempts to perform a TCP connection and DNS
+lookup to Facebook&amp;rsquo;s endpoints over the vantage point of the user. Based on this
+methodology, Facebook Messenger is likely blocked if one or both of the
+following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to Facebook&amp;rsquo;s endpoints fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DNS lookups to domains associated to Facebook do not resolve to IP addresses allocated to Facebook&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -72,8 +225,44 @@ OONI&amp;rsquo;s Facebook Messenger test attempts to perform a TCP connection an
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/http-header-field-manipulation/</guid>
-      <description>HTTP Header Field Manipulation This test tries to detect the presence of network components (“middle box”) which could be responsible for censorship and/or traffic manipulation.
-HTTP is a protocol which transfers or exchanges data across the internet. It does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s response to a client&amp;rsquo;s request. Every time you connect to a server, you (the client) send a request through the HTTP protocol to that server.</description>
+      <description>
+
+&lt;h1 id=&#34;http-header-field-manipulation:d461e393a173ca45569bbaa90d3ea8de&#34;&gt;HTTP Header Field Manipulation&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;HTTP is a protocol which transfers or exchanges data across the internet. It
+does so by handling a client&amp;rsquo;s request to connect to a server, and a server&amp;rsquo;s
+response to a client&amp;rsquo;s request. Every time you connect to a server, you (the
+client) send a request through the HTTP protocol to that server. Such requests
+include “HTTP headers”, which transmit various types of information, including
+your device&amp;rsquo;s operating system and the type of browser that it&amp;rsquo;s using. If you
+are using Firefox on Windows, for example, the “user agent header” in your HTTP
+request will tell the server that you&amp;rsquo;re using a Firefox browser on a Windows
+operating system.&lt;/p&gt;
+
+&lt;p&gt;This test emulates an HTTP request towards a server, but sends HTTP headers that
+have variations in capitalization. In other words, this test sends HTTP requests
+which include valid, but non-canonical HTTP headers. Such requests are sent to a
+backend control server which sends back any data it receives. If we receive the
+HTTP headers exactly as we sent them, then we assume that there is no “middle
+box” in the network which could be responsible for censorship, surveillance
+and/or traffic manipulation. If, however, such software is present in the
+network that we are testing, it will likely normalize the invalid headers that
+we are sending or add extra headers.&lt;/p&gt;
+
+&lt;p&gt;Depending on whether the HTTP headers that we send and receive from a backend
+control server are the same or not, we are able to evaluate whether software –
+which could be responsible for traffic manipulation – is present in the network
+that we are testing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
+that ISPs are using highly sophisticated software that is specifically designed
+to not interfere with HTTP headers when it receives them. Furthermore, the
+presence of a middle box is not necessarily indicative of traffic manipulation,
+as they are often used in networks for caching purposes.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -82,8 +271,43 @@ HTTP is a protocol which transfers or exchanges data across the internet. It doe
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/http-invalid-request-line/</guid>
-      <description>HTTP invalid request line This test tries to detect the presence of network components (“middle box”) which could be responsible for censorship and/or traffic manipulation.
-Instead of sending a normal HTTP request, this test sends an invalid HTTP request line - containing an invalid HTTP version number, an invalid field count and a huge request method – to an echo service listening on the standard HTTP port. An echo service is a very useful debugging and measurement tool, which simply sends back to the originating source any data it receives.</description>
+      <description>
+
+&lt;h1 id=&#34;http-invalid-request-line:14e025d5555dc3e219f17d2edbd56544&#34;&gt;HTTP invalid request line&lt;/h1&gt;
+
+&lt;p&gt;This test tries to detect the presence of network components (“middle box”)
+which could be responsible for censorship and/or traffic manipulation.&lt;/p&gt;
+
+&lt;p&gt;Instead of sending a normal HTTP request, this test sends an invalid HTTP
+request line - containing an invalid HTTP version number, an invalid field count
+and a huge request method – to an echo service listening on the standard HTTP
+port. An echo service is a very useful debugging and measurement tool, which
+simply sends back to the originating source any data it receives. If a middle
+box is not present in the network between the user and an echo service, then the
+echo service will send the invalid HTTP request line back to the user, exactly
+as it received it. In such cases, we assume that there is no visible traffic
+manipulation in the tested network.&lt;/p&gt;
+
+&lt;p&gt;If, however, a middle box is present in the tested network, the invalid HTTP
+request line will be intercepted by the middle box and this may trigger an error
+and that will subsequently be sent back to OONI. Such errors indicate that
+software for traffic manipulation is likely placed in the tested network, though
+it&amp;rsquo;s not always clear what that software is. In some cases though, we are able
+to identify censorship and/or surveillance vendors through the error messages in
+the received HTTP response.&lt;/p&gt;
+
+&lt;p&gt;So far, based on this technique we have
+&lt;a href=&#34;https://explorer.ooni.torproject.org/highlights/&#34;&gt;detected&lt;/a&gt; the use of
+&lt;strong&gt;BlueCoat&lt;/strong&gt;, &lt;strong&gt;Squid&lt;/strong&gt; and &lt;strong&gt;Privoxy&lt;/strong&gt; in networks across 11 countries around
+the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; A false negative could potentially occur in the hypothetical instance
+that ISPs are using highly sophisticated censorship and/or surveillance software
+that is specifically designed to not trigger errors when receiving invalid HTTP
+request lines like the ones of this test. Furthermore, the presence of a middle
+box is not necessarily indicative of traffic manipulation, as they are often
+used in networks for caching purposes.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -92,9 +316,24 @@ Instead of sending a normal HTTP request, this test sends an invalid HTTP reques
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/lantern/</guid>
-      <description>Lantern This test provides an automated way of examining whether Lantern works in a tested network.
-Lantern is a centralized and peer-to-peer proxy, which is used as a circumvention tool. It detects whether websites are blocked and, if so, it allows you to access them via Lantern servers or via the network of Lantern users.
-This test runs Lantern and checks to see if it is working. If it&amp;rsquo;s able to connect to a Lantern server and reach a control website over it, then we consider that Lantern can be used for censorship circumvention within the tested network.</description>
+      <description>
+
+&lt;h1 id=&#34;lantern:ec656aac078d3167be9cd7e1f567aba8&#34;&gt;Lantern&lt;/h1&gt;
+
+&lt;p&gt;This test provides an automated way of examining whether Lantern works in a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://getlantern.org/&#34;&gt;Lantern&lt;/a&gt; is a centralized and peer-to-peer proxy,
+which is used as a circumvention tool. It detects whether websites are blocked
+and, if so, it allows you to access them via Lantern servers or via the network
+of Lantern users.&lt;/p&gt;
+
+&lt;p&gt;This test runs Lantern and checks to see if it is working. If it&amp;rsquo;s able to
+connect to a Lantern server and reach a control website over it, then we
+consider that Lantern can be used for censorship circumvention within the tested
+network. If however the test is unable to connect to Lantern servers, then it is
+likely the case that they are blocked within the tested network.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -103,8 +342,37 @@ This test runs Lantern and checks to see if it is working. If it&amp;rsquo;s abl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/meek-fronted-requests/</guid>
-      <description>Meek Fronted Requests This test examines whether the domains used by Meek (a type of Tor bridge) work in tested networks.
-Meek is a pluggable transport which uses non-blocked domains, such as google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com (Microsoft azure cloud infrastructure), to proxy its users over Tor to blocked websites, while hiding both the fact that they are connecting to such websites and how they are connecting to them.</description>
+      <description>
+
+&lt;h1 id=&#34;meek-fronted-requests:a8b91c4b63cc55cc30e4036a69b34c2f&#34;&gt;Meek Fronted Requests&lt;/h1&gt;
+
+&lt;p&gt;This test examines whether the domains used by Meek (a type of &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor
+bridge&lt;/a&gt;) work in tested networks.&lt;/p&gt;
+
+&lt;p&gt;Meek is a pluggable transport which uses non-blocked domains, such as
+google.com, awsstatic.com (Amazon cloud infrastructure) and ajax.aspnetcdn.com
+(Microsoft azure cloud infrastructure), to proxy its users over
+&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; to blocked websites, while hiding both the
+fact that they are connecting to such websites and how they are connecting to
+them. As such, Meek is useful for not only connecting to websites that are
+blocked, but for also hiding which websites you are connecting to.&lt;/p&gt;
+
+&lt;p&gt;Below is a simplified explanation of how this works:&lt;/p&gt;
+
+&lt;p&gt;[user] → &lt;a href=&#34;https://www.google.com]&#34;&gt;https://www.google.com]&lt;/a&gt; → Meek hosted on the cloud] → Tor] → blocked-
+[website]&lt;/p&gt;
+
+&lt;p&gt;The user will receive a response (access to a blocked website, for example) from
+cloud-fronted domains, such as google.com, through the following way:&lt;/p&gt;
+
+&lt;p&gt;[blocked-website] → Tor] → Meek hosted on the cloud] → &lt;a href=&#34;https://www.google.com]&#34;&gt;https://www.google.com]&lt;/a&gt; →
+[user]&lt;/p&gt;
+
+&lt;p&gt;In short, this test does an encrypted connection to cloud-fronted domains over
+HTTPS and examines whether it can connect to them or not. As such, this test
+enables users to check whether Meek enables the circumvention of censorship in
+an automated way.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -113,8 +381,35 @@ Meek is a pluggable transport which uses non-blocked domains, such as google.com
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/ndt/</guid>
-      <description>NDT Speed Test NDT (Network Diagnostic Test) is designed to measure the speed and performance of tested networks.
-This network performance test was originally developed by The Internet2 Project and is currently maintained by Measurement Lab (M-Lab). NDT is designed to measure the speed and performance of networks by connecting to M-Lab servers close to the user, and by subsequently uploading and downloading random data. In doing so, NDT collects TCP/IP low level information that is useful to examining and characterizing the quality of the network path between the user and the mLab server.</description>
+      <description>
+
+&lt;h1 id=&#34;ndt-speed-test:e80223f2117376b0e10d6de6370efc91&#34;&gt;NDT Speed Test&lt;/h1&gt;
+
+&lt;p&gt;NDT (Network Diagnostic Test) is designed to measure the &lt;em&gt;speed&lt;/em&gt; and
+&lt;em&gt;performance&lt;/em&gt; of tested networks.&lt;/p&gt;
+
+&lt;p&gt;This network performance test was originally developed by The Internet2 Project
+and is currently maintained by &lt;a href=&#34;http://www.measurementlab.net/tools/ndt/&#34;&gt;Measurement Lab
+(M-Lab)&lt;/a&gt;. NDT is designed to measure
+the speed and performance of networks by connecting to M-Lab servers close to
+the user, and by subsequently uploading and downloading random data. In doing
+so, NDT collects TCP/IP low level information that is useful to examining and
+characterizing the quality of the network path between the user and the mLab
+server.&lt;/p&gt;
+
+&lt;p&gt;OONI utilizes an &lt;em&gt;&lt;a href=&#34;https://github.com/measurement-kit/measurement-kit/tree/master/src/libmeasurement_kit/ndt&#34;&gt;implementation of
+NDT&lt;/a&gt;&lt;/em&gt;
+for &lt;a href=&#34;https://github.com/measurement-kit/measurement-kit&#34;&gt;measurement-kit&lt;/a&gt;,
+which is a network measurement library for running both desktop and mobile
+network measurement tests. This NDT implementation is included as
+a test that can be run via &lt;strong&gt;OONI&amp;rsquo;s mobile app&lt;/strong&gt;. Running NDT can be useful as the
+type of information that it collects can potentially be used to examine cases
+of throttling.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; NDT is a general-purpose performance test conducted against third-party servers provided by &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab (M-Lab)&lt;/a&gt;. M-Lab&amp;rsquo;s NDT services require the
+retention and disclosure of IP addresses for research purposes. Learn more about
+M-Lab&amp;rsquo;s data governance, see its &lt;a href=&#34;https://www.measurementlab.net/privacy/&#34;&gt;privacy statement&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -123,9 +418,22 @@ This network performance test was originally developed by The Internet2 Project 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/psiphon/</guid>
-      <description>Psiphon This test provides an automated way of examining whether Psiphon works in a tested network.
-Psiphon is a free and open source tool that utilises SSH, VPN and HTTP proxy technology for censorship circumvention.
-This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s able to connect to a Psiphon server and reach a website over it, then we consider that Psiphon can be used for censorship circumvention within the tested network.</description>
+      <description>
+
+&lt;h1 id=&#34;psiphon:cdc027a63e3a5859bb651eb559ade7c4&#34;&gt;Psiphon&lt;/h1&gt;
+
+&lt;p&gt;This test provides an automated way of examining whether Psiphon works in a
+tested network.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://psiphon.ca/&#34;&gt;Psiphon&lt;/a&gt; is a free and open source tool that utilises SSH,
+VPN and HTTP proxy technology for censorship circumvention.&lt;/p&gt;
+
+&lt;p&gt;This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s able to
+connect to a Psiphon server and reach a website over it, then we consider that
+Psiphon can be used for censorship circumvention within the tested network. If
+however the test is unable to connect to Psiphon servers, then it is likely the
+case that they are blocked within the tested network.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -134,8 +442,37 @@ This test runs Psiphon and checks to see if it is working. If it&amp;rsquo;s abl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/telegram/</guid>
-      <description>Telegram test This test is designed to examine the reachability of Telegram&amp;rsquo;s app and web version within a tested network.
-More specifically, this test attempts to perform an HTTP POST request, and establish a TCP connection to Telegram’s access points (DCs), as well as an HTTP GET request to Telegram&amp;rsquo;s web version (web.telegram.org) over the vantage point of the user. The test is triggered as blocking when connections to all access points defined in the test fail.</description>
+      <description>
+
+&lt;h1 id=&#34;telegram-test:3c9fb85929557d96bd1481b387a6e519&#34;&gt;Telegram test&lt;/h1&gt;
+
+&lt;p&gt;This test is designed to examine the reachability of Telegram&amp;rsquo;s app and web
+version within a tested network.&lt;/p&gt;
+
+&lt;p&gt;More specifically, this test attempts to perform an HTTP POST request, and
+establish a TCP connection to Telegram’s access points (DCs), as well as an
+HTTP GET request to Telegram&amp;rsquo;s web version (&lt;code&gt;web.telegram.org&lt;/code&gt;) over the
+vantage point of the user. The test is triggered as blocking when connections
+to &lt;em&gt;all&lt;/em&gt; access points defined in the &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/telegram.py#L16-L22&#34;&gt;test&lt;/a&gt;
+fail.&lt;/p&gt;
+
+&lt;p&gt;Based on this methodology Telegram’s &lt;em&gt;app&lt;/em&gt; is likely blocked if any of the
+following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to all the tested Telegram access points fail&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP POST requests to Telegram&amp;rsquo;s access points do &lt;em&gt;not&lt;/em&gt; send back a
+response to OONI&amp;rsquo;s servers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Telegram&amp;rsquo;s &lt;em&gt;web version&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HTTP(S) GET requests to &lt;code&gt;web.telegram.org&lt;/code&gt; do &lt;em&gt;not&lt;/em&gt; send back a consistent
+response to OONI&amp;rsquo;s servers.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -144,8 +481,27 @@ More specifically, this test attempts to perform an HTTP POST request, and estab
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/tor-bridge-reachability/</guid>
-      <description>Tor Bridge Reachability This test examines whether Tor bridges work in tested networks.
-Tor is free and open source software which enables online anonymity and censorship circumvention. It was designed to bounce communications around a distributed network of relays run by volunteers around the world, thus hiding users&amp;rsquo; IP address and circumventing online tracking and censorship. However, Internet Service Providers (ISPs) in various countries around the world are often ordered by their governments to block users&amp;rsquo; access to Tor.</description>
+      <description>
+
+&lt;h1 id=&#34;tor-bridge-reachability:b50c859fd62eea4d38648380574073e9&#34;&gt;Tor Bridge Reachability&lt;/h1&gt;
+
+&lt;p&gt;This test examines whether &lt;strong&gt;&lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;Tor bridges&lt;/a&gt;&lt;/strong&gt;
+work in tested networks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt; is free and open source software which
+enables online anonymity and censorship circumvention. It was designed to bounce
+communications around a distributed network of relays run by volunteers around
+the world, thus hiding users&amp;rsquo; IP address and circumventing online tracking and
+censorship. However, Internet Service Providers (ISPs) in various countries
+around the world are often ordered by their governments to block users&amp;rsquo; access
+to Tor. As a result, Tor bridges were developed to enable users to connect to
+the Tor network in countries where such access is blocked.&lt;/p&gt;
+
+&lt;p&gt;This test runs Tor with a list of bridges and if it&amp;rsquo;s able to connect to them
+successfully, we consider that Tor bridges are not blocked in the tested
+network. If the test, however, is unable to bootstrap a connection, then the Tor
+bridges are either offline or blocked.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -154,8 +510,19 @@ Tor is free and open source software which enables online anonymity and censorsh
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/vanilla-tor/</guid>
-      <description>Vanilla Tor This test examines the reachability of the Tor network (which is designed for online anonymity and censorship circumvention).
-The Vanilla Tor test attempts to start a connection to the Tor network. If the test successfully bootstraps a connection within a predefined amount of seconds (300 by default), then Tor is considered to be reachable from the vantage point of the user. But if the test does not manage to establish a connection, then the Tor network is likely blocked within the tested network.</description>
+      <description>
+
+&lt;h1 id=&#34;vanilla-tor:b293a7a5836ab103f1b893e11c3e2e1f&#34;&gt;Vanilla Tor&lt;/h1&gt;
+
+&lt;p&gt;This test examines the reachability of the &lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor network&lt;/a&gt; (which is designed for online anonymity
+and censorship circumvention).&lt;/p&gt;
+
+&lt;p&gt;The Vanilla Tor test attempts to start a connection to the Tor network. If the
+test successfully bootstraps a connection within a predefined amount of seconds (300 by default),
+then Tor is considered to be reachable from the vantage point of the user. But if the test
+does &lt;em&gt;not&lt;/em&gt; manage to establish a connection, then the Tor network is likely blocked within the
+tested network.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -164,24 +531,41 @@ The Vanilla Tor test attempts to start a connection to the Tor network. If the t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/nettest/whatsapp/</guid>
-      <description>WhatsApp test This test is designed to examine the reachability of both WhatsApp&amp;rsquo;s app and the WhatsApp web version within a tested network.
-OONI&amp;rsquo;s WhatsApp test attempts to perform an HTTP GET request, TCP connection and DNS lookup to WhatsApp’s endpoints, registration service and web version over the vantage point of the user. Based on this methodology, WhatsApp’s app is likely blocked if any of the following apply:
- TCP connections to WhatsApp&amp;rsquo;s endpoints fail;</description>
-    </item>
-    
-    <item>
-      <title>Web connectivity</title>
-      <link>https://ooni.torproject.org/nettest/web-connectivity/</link>
-      <pubDate>Sat, 01 Jan 0000 00:00:00 +0000</pubDate>
-      
-      <guid>https://ooni.torproject.org/nettest/web-connectivity/</guid>
-      <description>Web connectivity This test examines whether websites are reachable and if they are not, it attempts to determine whether access to them is blocked through DNS tampering, TCP connection RST/IP blocking or by a transparent HTTP proxy.
-Specifically, this test is designed to perform the following:
- Resolver identification
- DNS lookup
- TCP connect
- HTTP GET request
-  By default, this test performs the above (excluding the first step, which is performed only over the network of the user) both over a control server and over the network of the user.</description>
+      <description>
+
+&lt;h1 id=&#34;whatsapp-test:202cfb13d32300949e09f24119a1c94e&#34;&gt;WhatsApp test&lt;/h1&gt;
+
+&lt;p&gt;This test is designed to examine the reachability of both WhatsApp&amp;rsquo;s app and
+the WhatsApp web version within a tested network.&lt;/p&gt;
+
+&lt;p&gt;OONI&amp;rsquo;s WhatsApp test attempts to perform an HTTP GET request, TCP
+connection and DNS lookup to WhatsApp’s endpoints, registration service and web
+version over the vantage point of the user. Based on this methodology,
+WhatsApp’s &lt;em&gt;app&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to WhatsApp&amp;rsquo;s endpoints fail;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;TCP connections to WhatsApp&amp;rsquo;s registration service fail;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DNS lookups resolve to IP addresses that are &lt;em&gt;not&lt;/em&gt; allocated to WhatsApp;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP requests to WhatsApp&amp;rsquo;s registration service do &lt;em&gt;not&lt;/em&gt; send back a response
+to OONI&amp;rsquo;s servers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;WhatsApp&amp;rsquo;s &lt;em&gt;web interface&lt;/em&gt; is likely blocked if any of the following apply:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;TCP connections to web.whatsapp.com fail;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DNS lookup illustrates that a different IP addresses has been allocated to
+web.whatsapp.com;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTTP requests to web.whatsapp.com do &lt;em&gt;not&lt;/em&gt; send back a consistent response to OONI&amp;rsquo;s
+servers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

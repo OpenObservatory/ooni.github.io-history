@@ -6,9 +6,7 @@
     <description>Recent content in Get-involveds on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    
-	<atom:link href="https://ooni.torproject.org/get-involved/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://ooni.torproject.org/get-involved/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
@@ -16,14 +14,256 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/get-involved/contribute-test-lists/</guid>
-      <description>Contributing to Test Lists Censorship findings are only as interesting as the sites and services that you test.
-We encourage you to suggest sites and services to test for censorship.
-Please read the documentation below to contribute to community resources for censorship measurement research.
- What are test lists?
- Why contribute to test lists?
- Contributing to test lists
- Reviewing test lists
- Creating new test lists</description>
+      <description>
+
+&lt;h1 id=&#34;contributing-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Contributing to Test Lists&lt;/h1&gt;
+
+&lt;p&gt;Censorship findings are only as interesting as the sites and services that you test.&lt;/p&gt;
+
+&lt;p&gt;We encourage you to suggest sites and services to test for censorship.&lt;/p&gt;
+
+&lt;p&gt;Please read the documentation below to contribute to community resources for censorship measurement research.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#what-are-test-lists&#34;&gt;What are test lists?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#why-contribute-to-test-lists&#34;&gt;Why contribute to test lists?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#contributing-to-test-lists&#34;&gt;Contributing to test lists&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#reviewing-test-lists&#34;&gt;Reviewing test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#creating-new-test-lists&#34;&gt;Creating new test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#important-tips&#34;&gt;Important tips&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-are-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;What are test lists?&lt;/h2&gt;
+
+&lt;p&gt;Test lists are lists that include URLs that are tested for censorship.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://citizenlab.ca/&#34;&gt;Citizen Lab&lt;/a&gt; supports OONI and other censorship measurement projects with a public resource that includes the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The global list includes a wide range of internationally relevant websites, most of which are in English.&lt;/p&gt;
+
+&lt;p&gt;Each country-specific test list includes
+websites that are relevant and commonly accessed within that country, many of
+which are in local languages.&lt;/p&gt;
+
+&lt;p&gt;The URLs included in these lists fall under &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;30
+categories&lt;/a&gt;&lt;/strong&gt;, ranging from news media, file sharing and
+culture, to provocative or objectionable categories, like pornography, political criticism and hate speech.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-contribute-to-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Why contribute to test lists?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;1. You can provide local expertise&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Examining internet censorship in a country requires local expertise, an understanding of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;which sites and services are commonly accessed;&lt;/li&gt;
+&lt;li&gt;which sites and services are more likely to be blocked;&lt;/li&gt;
+&lt;li&gt;which sites and services would be interesting to test in light of the country&amp;rsquo;s social and political environment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To ensure that test lists include a variety of different types of URLs that are updated on an ongoing basis, we need community contributions from around the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Potential risks&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When running ooniprobe, you will connect to and download data from the websites
+included in the global test list and in the test list which is specific to the
+country that you are running ooniprobe from.&lt;/p&gt;
+
+&lt;p&gt;We therefore encourage you to review all of the URLs included in these lists carefully, prior to running ooniprobe, as connecting to some of these websites might be legally questionable (or illegal) in some jurisdictions.&lt;/p&gt;
+
+&lt;p&gt;If you are uncertain of the potential implications of connecting to and
+downloading data from the websites listed in the test lists, you can pass your
+&lt;em&gt;own&lt;/em&gt; test list with the following type of command line option:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ooniprobe &amp;lt;test-name&amp;gt; -f &amp;lt;your-test-list&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;contributing-to-test-lists-1:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Contributing to test lists&lt;/h2&gt;
+
+&lt;p&gt;You can contribute to test lists in 2 ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Review &lt;em&gt;existing&lt;/em&gt; test lists;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Create &lt;em&gt;new&lt;/em&gt; test lists for countries that don&amp;rsquo;t have test lists yet.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reviewing-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Reviewing test lists&lt;/h3&gt;
+
+&lt;p&gt;All test lists that ooniprobe is designed to test for censorship are hosted in
+the &lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;Citizen Lab&amp;rsquo;s test-list repository on github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To review country-specific test lists, please follow the steps below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Find the &lt;em&gt;csv&lt;/em&gt; file which is specific to the country that you want
+to run ooniprobe from (based on that country&amp;rsquo;s code)
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;rsquo;t find a csv file for your country, that&amp;rsquo;s probably because it
+doesn&amp;rsquo;t exist yet. In this case, please refer to the next section on &lt;em&gt;&amp;ldquo;Creating new test lists&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Add &lt;em&gt;new&lt;/em&gt; URLs to the csv file under the &amp;ldquo;url&amp;rdquo; column.&lt;/p&gt;
+
+&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
+example, they touch upon sensitive issues or express political criticism);&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For further criteria, please view the URL categories
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please try to add URLs which fall under as many (if not all) of these categories as possible.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
+  each new URL:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
+This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
+category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
+falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
+the csv file. The category descriptions can be found
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
+&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
+affiliated with, in terms of contributing to the test list. This can be
+added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
+column of the csv file.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Change the category codes and descriptions for URLs (included under
+the &amp;ldquo;category_code&amp;rdquo; and &amp;ldquo;category_description&amp;rdquo; columns of the csv file) &lt;em&gt;only
+if&lt;/em&gt; you think that those URLs have been allocated to wrong category codes and
+descriptions. In this case, please replace the category codes and descriptions
+with ones (from the &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;recommended categories&lt;/a&gt; that you think are more
+suitable. We would also appreciate a comment on
+&lt;a href=&#34;https://github.com/citizenlab/test-lists&#34;&gt;github&lt;/a&gt; or via email explaining the
+proposed changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have reviewed a test list based on the above, please submit
+ your changes to us. If you&amp;rsquo;re a github user, you can do so through a pull
+ request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us a &lt;em&gt;spreadsheet&lt;/em&gt;
+ (including the same format as github csv files) by dropping us an email at
+ contact@openobservatory.org (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD
+ 3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+
+&lt;h3 id=&#34;creating-new-test-lists:fec1bdee7ae1ffe67049b3dd79aa51e3&#34;&gt;Creating new test lists&lt;/h3&gt;
+
+&lt;p&gt;If you can&amp;rsquo;t find a test list specific to your country
+&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;here&lt;/a&gt;, then it
+probably does not exist yet. Please help us create a test list for your country
+through the steps below:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Create a csv file and name it based on an ISO-3166 two-letter country
+code which is specific to the country that URLs are being added for. You can
+find a reference for international standards for country codes
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-country_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;. An example would include a csv file created for Andora, named &lt;em&gt;ad.csv&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Include the following columns in the newly created csv file:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;url&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;category_code&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;category_description&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;date_added&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;source&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;notes&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Add URLs under the &amp;ldquo;url&amp;rdquo; column of the csv file.&lt;/p&gt;
+
+&lt;p&gt;Some criteria for adding new URLs can include the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The URLs cover topics of socio-political interest within the country;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs are likely to be blocked because they include sensitive content (for
+example, they touch upon sensitive issues or express political criticism);&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The URLs have been blocked in the past;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You have faced difficulty connecting to those URLs.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For further criteria, please view URL categories
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; Every time you add a URL, please add the following in the csv file for
+ each new URL:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category code:&lt;/strong&gt; Add the code of the category that each URL falls under.
+This can be added under the &amp;ldquo;category_code&amp;rdquo; column of the csv file. The
+category codes can be found &lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Category description:&lt;/strong&gt; Add the description of the category that each URL
+falls under. This can be added under the &amp;ldquo;category_description&amp;rdquo; column of
+the csv file. The category descriptions can be found
+&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; Add the date of when you added each URL. This can be added under the
+&amp;ldquo;date_added&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Contributor:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Add the name of the organization that you are
+affiliated with, in terms of contributing to the test list. This can be
+added under the &amp;ldquo;source&amp;rdquo; column of the csv file.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Notes:&lt;/strong&gt; &lt;em&gt;Optional:&lt;/em&gt; Here you can add notes for each URL under the &amp;ldquo;notes&amp;rdquo;
+column of the csv file.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Once you have created a new test list based on the above, please
+ submit your csv file to us. If you&amp;rsquo;re a github user, you can do so through a
+ pull request. If you&amp;rsquo;re &lt;em&gt;not&lt;/em&gt; a github user, please send us your csv file by
+ dropping us an email at contact@openobservatory.org (PGP Key Fingerprint: 4C15
+ DDA9 96C6 C0CF 48BD  3309 6B29 43F0 0CB1 77B7).&lt;/p&gt;
+
+&lt;p&gt;## Important tips&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Always include the full URL, including the HTTP or HTTPS prefix, exactly as it appears when you type it into a browser.&lt;/strong&gt; If you include &lt;code&gt;example.com&lt;/code&gt; in a test list, ooniprobe won&amp;rsquo;t be able to test it. Rather, it should be included as &lt;code&gt;http://www.example.com&lt;/code&gt;, if that is what it looks like in a browser.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Always use the format described in the sections above.&lt;/strong&gt; The test lists are meant to be machine-readable, and ooniprobe will not parse test lists that don&amp;rsquo;t strictly follow the prescribed format.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Please stick to the categories included &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;here&lt;/a&gt;, and refrain from adding your own categories.&lt;/strong&gt; The categories may not be perfect, and we welcome your suggestions for additional/alternative categories. But if you don&amp;rsquo;t use the prescribed category codes, ooniprobe will not be able to test those URLs, since test lists are meant to be machine-readable.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Please do not scrape and add &amp;ldquo;the top 1,000 Alexa sites&amp;rdquo;.&lt;/strong&gt; Community contributions are more useful when they include URLs that (a) fall under these &lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/00-LEGEND-new_category_codes.csv&#34;&gt;30 diverse categories&lt;/a&gt; and (b) reflect local insight. Given that many ooniprobe users around the world have bandwidth constraints, we favour &lt;em&gt;quality&lt;/em&gt; over quantity in terms of what is tested.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thanks for contributing!&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -32,15 +272,162 @@ Please read the documentation below to contribute to community resources for cen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/get-involved/partnership-program/</guid>
-      <description>What is the OONI Partnership Program?
- What is the aim of the OONI Partnership Program?
- What does the OONI Partnership Program entail?
- Collecting ooniprobe network measurements
- Reviewing community resources for censorship measurement research
- Communicating internet censorship findings to the public
-  Who can join the OONI Partnership Program?
- How can OONI support its partners?
-  What is the OONI Partnership Program?</description>
+      <description>
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#what-is-the-ooni-partnership-program&#34;&gt;What is the OONI Partnership Program?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#what-is-the-aim-of-the-ooni-partnership-program&#34;&gt;What is the aim of the OONI Partnership Program?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#what-does-the-ooni-partnership-program-entail&#34;&gt;What does the OONI Partnership Program entail?&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#collecting-ooniprobe-network-measurements&#34;&gt;Collecting ooniprobe network measurements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#reviewing-community-resources-for-censorship-measurement-research&#34;&gt;Reviewing community resources for censorship measurement research&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#communicating-censorship-findings-to-the-public&#34;&gt;Communicating internet censorship findings to the public&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#who-can-join-the-ooni-partnership-program&#34;&gt;Who can join the OONI Partnership Program?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#how-can-ooni-support-its-partners&#34;&gt;How can OONI support its partners?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-is-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What is the OONI Partnership Program?&lt;/h2&gt;
+
+&lt;p&gt;The OONI Partnership Program is a collaboration between the Open Observatory of
+Network Interference (OONI) team and groups or
+organizations around the world on the study of internet censorship. Such groups/organizations can include NGOs, hackerspaces,
+media organizations, legal associations and research groups.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-the-aim-of-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What is the aim of the OONI Partnership Program?&lt;/h2&gt;
+
+&lt;p&gt;Through the Partnership Program, we aim to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;increase transparency and public awareness of internet censorship;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;support public debate on internet censorship;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;support research on internet censorship;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Input from partners is essential in terms of understanding:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the local network landscape and how ISPs are structured;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;which URLs and apps would be interesting to test for censorship in a particular country;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;the governmental landscape and how to publicize results effectively.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;what-does-the-ooni-partnership-program-entail:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;What does the OONI Partnership Program entail?&lt;/h2&gt;
+
+&lt;p&gt;The OONI Partnership Program was created in an attempt to examine internet
+censorship more strategically and within local
+context through collaboration with local experts. To this end, depending on the role of each partner
+organization, the partnerships can include (but are not necessarily limited to)
+the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Collecting ooniprobe network measurements;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Reviewing community resources for censorship measurement research;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Communicating internet censorship findings to the public.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;collecting-ooniprobe-network-measurements:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Collecting ooniprobe network measurements&lt;/h3&gt;
+
+&lt;p&gt;We want to work with partners who are interested in monitoring internet censorship on an ongoing basis through the collection of ooniprobe network measurements.&lt;/p&gt;
+
+&lt;p&gt;To this end, partners are encouraged to deploy ooniprobe in local vantage points for the stable and continuous collection of daily measurements. This can enable us to compare results across time and to better detect and
+evaluate cases of internet censorship.&lt;/p&gt;
+
+&lt;p&gt;Internet censorship is not always carried out countrywide, nor always
+implemented in the same way across networks. As such, running ooniprobe within
+various &lt;em&gt;different&lt;/em&gt; networks in each country is an important component of the OONI Partnership Program.&lt;/p&gt;
+
+&lt;h3 id=&#34;reviewing-community-resources-for-censorship-measurement-research:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Reviewing community resources for censorship measurement research&lt;/h3&gt;
+
+&lt;p&gt;Censorship findings are only as interesting as the types of sites and services that are tested.&lt;/p&gt;
+
+&lt;p&gt;Censorship measurement research requires local expertise, an understanding of which sites and services are more likely to be blocked, or which would be interesting to test for censorship.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://citizenlab.ca/&#34;&gt;Citizen Lab&lt;/a&gt; supports OONI and other censorship measurement projects with a public resource that contains lists of URLs to test for censorship. These lists include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;Country-specific test lists&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/citizenlab/test-lists/blob/master/lists/global.csv&#34;&gt;Global test list&lt;/a&gt;&lt;/strong&gt; (including a list of globally accessed websites)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We are always looking to collaborate with groups and organizations that can help create, update, and review the above resources that are tested for internet censorship. This collaborative process would help include more URLs
+which are relevant to the country&amp;rsquo;s local context and which are potentially
+interesting to test for censorship.&lt;/p&gt;
+
+&lt;h3 id=&#34;communicating-internet-censorship-findings-to-the-public:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Communicating internet censorship findings to the public&lt;/h3&gt;
+
+&lt;p&gt;We aim to increase transparency and public awareness of internet censorship by communicating the main findings through reports, blogs and data visualizations.&lt;/p&gt;
+
+&lt;p&gt;While we may be in a position to analyze the collected network measurement data, we are probably not best suited to explain the meaning of the findings within local context. That obviously requires local expertise (in terms of laws, policies, etc.), and that&amp;rsquo;s where we believe partners can play a crucial role.&lt;/p&gt;
+
+&lt;p&gt;We aim to collaborate with partners to examine internet censorship within legal, social, and political context, and to communicate the findings to the public. We also hope that our partners will use the findings as part of their local policy and advocacy efforts.&lt;/p&gt;
+
+&lt;h2 id=&#34;who-can-join-the-ooni-partnership-program:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;Who can join the OONI Partnership Program?&lt;/h2&gt;
+
+&lt;p&gt;Groups and organizations interested in examining internet censorship are encouraged to join the OONI Partnership Program. This can include (but not necessarily limited to):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;NGOs;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;hackerspaces;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;legal associations;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;media organizations;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;research groups.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ideally, we would like to foster collaboration between various different types
+of groups/organizations, each of which could contribute to the study of internet censorship from a different lens. This would also allow for the
+distribution of efforts amongst different groups.&lt;/p&gt;
+
+&lt;p&gt;Various hackerspaces, for example, can contribute to the data collection by
+running ooniprobe within different networks. Lawyers can examine the legality of internet censorship. Media organizations can report on the findings, NGOs can provide further analysis within the context of digital rights, and research groups can use the collected data to explore questions of their own. Through this collaborative approach between groups and organizations, we aim to improve the study of internet censorship around the world.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re interested in joining the OONI Partnership Program, please drop us an
+email at &lt;strong&gt;contact@openobservatory.org&lt;/strong&gt; (PGP Key Fingerprint: 4C15 DDA9 96C6 C0CF 48BD 3309
+6B29 43F0 0CB1 77B7).&lt;/p&gt;
+
+&lt;h2 id=&#34;how-can-ooni-support-its-partners:cc7a320d389e7e1372f97f9afc6a7f14&#34;&gt;How can OONI support its partners?&lt;/h2&gt;
+
+&lt;p&gt;OONI can support you in the following ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Technical support:&lt;/strong&gt; We can guide you through the entire process of using
+our software, whether that involves running ooniprobe from your computer
+or setting up a Raspberry Pi to run ooniprobe. Throughout the duration of the
+partnership, you can rely on us for technical support when using our software.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Creating/Reviewing lists of URLs to test for censorship:&lt;/strong&gt; We will
+support you in terms of creating and/or reviewing lists of URLs to test for internet censorship throughout the duration of the
+partnership.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Data analysis.&lt;/strong&gt; This is the main way that we will support you. Analyzing OONI&amp;rsquo;s data can be quite complicated, particularly since it requires a fair amount of specialized expertise. We prioritize on analyzing data for our partners. Such data analysis is a prerequisite to confirming censorship events with accuracy.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Communicating the findings:&lt;/strong&gt; We will support you in terms of communicating
+the main findings from ooniprobe measurements to the public. Such
+support can include the writing of reports and blogs and, in some cases, the
+creation of data visualizations.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We might also be able to support partners in other additional ways, though this
+will be evaluated on a case by case basis.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

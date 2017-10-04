@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - OONI Data Reveals How WhatsApp Was Blocked (Again) in Brazil</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
-  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
+  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
@@ -49,24 +49,22 @@
       
 
 
-<a href="https://ooni.torproject.org/about/"
+<a href="https://ooni.torproject.org//about/"
   
   >About</a>
-<a href="https://ooni.torproject.org/install/"
+<a href="https://ooni.torproject.org//install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org/nettest/"
+<a href="https://ooni.torproject.org//nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org/data/"
+<a href="https://ooni.torproject.org//data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org/get-involved/"
+<a href="https://ooni.torproject.org//get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org/post/"
-  
-   class="active"
+<a href="https://ooni.torproject.org//post/"
   
    >Blog</a>
 
@@ -138,7 +136,7 @@ ran tests locally in Brazil to detect the technical details of how censorship
 was implemented. This blog post includes a publication of our measurements,
 revealing that Brazilian ISPs blocked WhatsApp&rsquo;s website through DNS hijacking.</p>
 
-<h1 id="our-findings">Our findings</h1>
+<h1 id="our-findings:c863708e27f97e72f64548dd80c61fef">Our findings</h1>
 
 <p>Two types of <a href="https://github.com/TheTorProject/ooni-spec">OONI tests</a> were run
 in Brazil to identify whether and how WhatsApp was blocked:</p>
@@ -380,7 +378,7 @@ requests:
   response: null
 </code></pre>
 
-<h2 id="circumventing-censorship">Circumventing censorship</h2>
+<h2 id="circumventing-censorship:c863708e27f97e72f64548dd80c61fef">Circumventing censorship</h2>
 
 <p>The blocking of WhatsApp&rsquo;s website can be circumvented through the use of
 <a href="https://www.torproject.org/">Tor</a>. In cases of DNS hijacking, users might even
@@ -393,7 +391,7 @@ Brazil (and elsewhere) can try circumventing censorship by using the
 which enables all apps on their device to run through the <a href="https://www.torproject.org/">Tor network</a>. It&rsquo;s important though to note that Orbot&rsquo;s VPN
 feature should <em>not</em> be used for anonymity, but only for bypassing censorship.</p>
 
-<h2 id="limitations-to-our-study">Limitations to our study</h2>
+<h2 id="limitations-to-our-study:c863708e27f97e72f64548dd80c61fef">Limitations to our study</h2>
 
 <p>Currently <a href="https://github.com/TheTorProject/ooni-spec">OONI software tests</a> are
 <em>not</em> specifically designed to test instant messaging (IM) applications (such
@@ -413,9 +411,9 @@ through the following:</p>
 <li>Run test deck <code>ooniprobe -i whatsapp.deck</code></li>
 </ol>
 
-<h1 id="ooni-explorer-report-links">OONI Explorer report links</h1>
+<h1 id="ooni-explorer-report-links:c863708e27f97e72f64548dd80c61fef">OONI Explorer report links</h1>
 
-<h2 id="http-requests-measurements">HTTP Requests measurements</h2>
+<h2 id="http-requests-measurements:c863708e27f97e72f64548dd80c61fef">HTTP Requests measurements</h2>
 
 <ul>
 <li><a href="https://explorer.ooni.torproject.org/measurement/20160502T211641Z_AS26615_S0P6z1jAn0ToeMtK4xvjJUKlSOw9ENcipv9pUfrVd3yPmuD7ek?input=http:%2F%2Fweb.whatsapp.com">URL: http://web.whatsapp.com May 2, 2016 9:17:02 PM, AS 26615</a></li>
@@ -432,7 +430,7 @@ through the following:</p>
 <li><a href="https://explorer.ooni.torproject.org/measurement/20160503T041735Z_AS7738_N5LWvuq8MtDoAP7r93EWmqurxi6pZ9pzpBsbZhXZR8VF4R484M?input=https:%2F%2Fwww.whatsapp.com%2Fcidr.txt">URL: https://www.whatsapp.com/cidr.txt May 3, 2016 4:17:57 AM, AS 7738</a></li>
 </ul>
 
-<h2 id="dns-consistency-measurements">DNS Consistency measurements</h2>
+<h2 id="dns-consistency-measurements:c863708e27f97e72f64548dd80c61fef">DNS Consistency measurements</h2>
 
 <ul>
 <li><a href="https://explorer.ooni.torproject.org/measurement/20160502T233914Z_AS26615_MFMGaqdNJpa0ao1EZjVRVRkQIngry7DXMHE44SANRBBWMNB53e?input=web.whatsapp.com">Website: web.whatsapp.com May 2, 2016 11:39:37 PM, AS 26615</a></li>

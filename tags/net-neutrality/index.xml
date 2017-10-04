@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://ooni.torproject.org/tags/net-neutrality/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://ooni.torproject.org/tags/net-neutrality/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>OONI Run: Let&#39;s fight internet censorship together!</title>
@@ -17,13 +15,107 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-run/</guid>
-      <description>Today we released OONI Run, a website linked to an exciting new OONI Probe mobile app feature that enables you to:
- Engage your friends (and the world) to run censorship measurement tests
- Monitor the blocking of your website around the world
-  OONI Run includes a variety of OONI Probe software testsdesigned to:
- Test the blocking of websites
- Find middleboxes
- Measure the speed and performance of networks</description>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-run/ooni-run.png&#34; alt=&#34;OONI Run&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Today we released &lt;strong&gt;&lt;a href=&#34;https://run.ooni.io/&#34;&gt;OONI Run&lt;/a&gt;&lt;/strong&gt;, a website linked to an exciting new OONI Probe mobile app feature that enables you to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Engage your friends (and the world) to run censorship measurement tests&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Monitor the blocking of &lt;em&gt;your&lt;/em&gt; website around the world&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;OONI Run includes a variety of &lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;OONI Probe software tests&lt;/a&gt;designed to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Test the &lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;blocking of websites&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Find &lt;a href=&#34;https://ooni.torproject.org/nettest/http-invalid-request-line/&#34;&gt;middleboxes&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Measure the &lt;a href=&#34;https://ooni.torproject.org/nettest/ndt/&#34;&gt;speed and performance&lt;/a&gt; of networks&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Measure &lt;a href=&#34;https://ooni.torproject.org/nettest/dash/&#34;&gt;video streaming performance&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By choosing the tests that interest you and the sites you want to test, generate a link via &lt;a href=&#34;https://run.ooni.io/&#34;&gt;OONI Run&lt;/a&gt; and share it. Alternatively, embed the widget code to monitor the accessibility of your site. The global OONI Probe community can then respond!&lt;/p&gt;
+
+&lt;h1 id=&#34;engage-your-friends:82945ad4391cf5585110208297284f2d&#34;&gt;Engage your friends&lt;/h1&gt;
+
+&lt;p&gt;With &lt;a href=&#34;https://run.ooni.io/&#34;&gt;OONI Run&lt;/a&gt;, you can &lt;strong&gt;choose which websites you want to test&lt;/strong&gt; for censorship. Simply select “Web Connectivity” and add as many URLs as you like.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-run/web-connectivity.png&#34; alt=&#34;OONI Run: Web Connectivity&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then click “Generate” to generate a link that you can share with your friends.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/ooni-run/share.png&#34; alt=&#34;OONI Run: Generating a link&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If they already have OONI Probe installed, the link will open their mobile app and automatically start testing the sites of your choice! Otherwise, it will encourage them to &lt;a href=&#34;https://ooni.torproject.org/install/&#34;&gt;install OONI Probe&lt;/a&gt; first.&lt;/p&gt;
+
+&lt;h1 id=&#34;engage-the-world:82945ad4391cf5585110208297284f2d&#34;&gt;Engage the world&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;OONI Run can help build a global network for rapid response to emergent censorship events.&lt;/strong&gt; By tweeting a generated link, you can encourage the world to run the tests (and to test the sites) you’ve chosen.&lt;/p&gt;
+
+&lt;p&gt;If you suspect that a site might be censored during political events, add that site to &lt;a href=&#34;https://run.ooni.io/&#34;&gt;OONI Run&lt;/a&gt;, generate a link, and share it with people in that country. If you heard rumors of censorship, engage people in that country to collect data that can serve as evidence.&lt;/p&gt;
+
+&lt;h1 id=&#34;monitor-your-site:82945ad4391cf5585110208297284f2d&#34;&gt;Monitor your site&lt;/h1&gt;
+
+&lt;p&gt;Perhaps your site has been blocked by some governments and you&amp;rsquo;re unsure how the censorship is implemented or whether it’s blocked across all networks. Or perhaps you’re just interested in having data that can serve as evidence that your site was intentionally censored.&lt;/p&gt;
+
+&lt;p&gt;You can monitor the accessibility of your site through the following simple steps:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Select “Web Connectivity” on &lt;a href=&#34;https://run.ooni.io/&#34;&gt;OONI Run&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Add your site&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Click “Generate”&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Embed the provided widget code and encourage the global OONI Probe community to test your site!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can embed a nice widget on your website by including the widget source like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script async src=&amp;quot;https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can then add buttons to your website by adding this element:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://run.ooni.io/nettest?tn=web_connectivity&amp;amp;ta=%7B%22urls%22%3A%5B%22https%3A%2F%2Fwww.wikipedia.org%22%5D%7D&amp;amp;mv=1.2.0&amp;quot;
+  class=&amp;quot;ooni-run-button&amp;quot;&amp;gt;
+Run OONI!
+&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The button will look like this on your website:&lt;/p&gt;
+
+&lt;a href=&#34;https://run.ooni.io/nettest?tn=web_connectivity&amp;amp;ta=%7B%22urls%22%3A%5B%22https%3A%2F%2Fwww.wikipedia.org%22%5D%7D&amp;amp;mv=1.2.0&#34; class=&#34;ooni-run-button&#34;&gt;
+Run OONI!
+&lt;/a&gt;
+
+
+&lt;p&gt;Otherwise, if you would like a bigger widget, you can add (and tailor) the following element to your website:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div data-link=&amp;quot;https://run.ooni.io/nettest?tn=web_connectivity&amp;amp;ta=%7B%22urls%22%3A%5B%22https%3A%2F%2Fwikipedia.org%22%5D%7D&amp;amp;mv=1.2.0&amp;quot;
+     class=&#39;ooni-run-banner&#39;&amp;gt;
+Test Wikipedia
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It can look like this:&lt;/p&gt;
+
+&lt;div data-link=&#34;https://run.ooni.io/nettest?tn=web_connectivity&amp;amp;ta=%7B%22urls%22%3A%5B%22https%3A%2F%2Fwikipedia.org%22%5D%7D&amp;amp;mv=1.2.0&#34;
+     class=&#34;ooni-run-banner&#34;&gt;
+Test Wikipedia
+&lt;/div&gt;
+
+
+&lt;p&gt;Going forward, more &lt;a href=&#34;https://ooni.torproject.org/nettest/&#34;&gt;OONI Probe tests&lt;/a&gt; will be added to &lt;a href=&#34;https://run.ooni.io/&#34;&gt;OONI Run&lt;/a&gt;. Together, we can coordinate on fighting internet censorship around the world.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; OONI Run is now available on Android and within 24-48 hours (depending
+on Apple) it will be available on iOS too.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

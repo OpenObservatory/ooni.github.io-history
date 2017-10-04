@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://ooni.torproject.org/</loc>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
   
   <url>
     <loc>https://ooni.torproject.org/post/internet-censorship-catalonia-independence-referendum/</loc>
@@ -231,151 +236,11 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/about/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/belarus/</loc>
-    <lastmod>2016-12-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/blackout/</loc>
-    <lastmod>2017-03-28T16:39:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/categories/blog/</loc>
-    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/brazil/</loc>
-    <lastmod>2016-05-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/catalonia/</loc>
-    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/categories/</loc>
-    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/censorship/</loc>
-    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/cuba/</loc>
-    <lastmod>2017-08-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/dns-consistency/</loc>
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/data/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/distribution/</loc>
-    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/dns-hijacking/</loc>
-    <lastmod>2015-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/dpi/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/eeep/</loc>
-    <lastmod>2015-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/egypt/</loc>
-    <lastmod>2017-06-19T15:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/elections/</loc>
-    <lastmod>2016-12-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/ethiopia/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/event/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/events/</loc>
-    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/facebook/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/facebook-messenger/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/faq/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/gambia/</loc>
-    <lastmod>2016-12-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/get-involved/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/greece/</loc>
-    <lastmod>2015-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -387,61 +252,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/tags/hackathon/</loc>
-    <lastmod>2016-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/image/</loc>
-    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/indonesia/</loc>
-    <lastmod>2017-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/install/</loc>
-    <lastmod>2016-06-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/internet-censorship/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/iran/</loc>
-    <lastmod>2017-09-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/kenya/</loc>
-    <lastmod>2016-12-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/lantern/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/lepidopter/</loc>
-    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/malaysia/</loc>
-    <lastmod>2016-12-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -449,37 +260,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/tags/myanmar/</loc>
-    <lastmod>2017-03-29T13:31:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/ndt/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/net-neutrality/</loc>
-    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/nettest/</loc>
-    <lastmod>2016-06-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/nettest/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/network-throttling/</loc>
-    <lastmod>2016-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -487,91 +268,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/</loc>
-    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/palestine/</loc>
-    <lastmod>2012-04-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/partners/</loc>
-    <lastmod>2017-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/performance/</loc>
-    <lastmod>2017-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/post/</loc>
-    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/protests/</loc>
-    <lastmod>2016-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/psiphon/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/raspberry-pi/</loc>
-    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/release/</loc>
-    <lastmod>2016-12-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/categories/report/</loc>
-    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/shutdown/</loc>
-    <lastmod>2017-03-28T16:39:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/socialmedia/</loc>
-    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/speed/</loc>
-    <lastmod>2017-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/</loc>
-    <lastmod>2016-12-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/tcp-injections/</loc>
-    <lastmod>2016-12-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -579,43 +276,7 @@
   </url>
   
   <url>
-    <loc>https://ooni.torproject.org/tags/thailand/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ooni.torproject.org/nettest/tor-bridge-reachability/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/turkey/</loc>
-    <lastmod>2016-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/turkmenistan/</loc>
-    <lastmod>2013-05-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/uganda/</loc>
-    <lastmod>2016-05-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/usa/</loc>
-    <lastmod>2012-03-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/uzbekistan/</loc>
-    <lastmod>2013-05-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -624,24 +285,6 @@
   
   <url>
     <loc>https://ooni.torproject.org/nettest/whatsapp/</loc>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/whatsapp/</loc>
-    <lastmod>2016-12-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/wui/</loc>
-    <lastmod>2016-12-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ooni.torproject.org/tags/zambia/</loc>
-    <lastmod>2016-10-11T10:52:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
