@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - OONI releases new Web Connectivity test for detecting online censorship</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
+  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
@@ -49,22 +49,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="https://ooni.torproject.org/about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="https://ooni.torproject.org/install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="https://ooni.torproject.org/nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="https://ooni.torproject.org/data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="https://ooni.torproject.org/get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="https://ooni.torproject.org/post/"
+  
+   class="active"
   
    >Blog</a>
 
@@ -86,7 +88,7 @@ releasing a brand new test, called
 which is designed to detect three different types of censorship: <em>DNS
 tampering</em>, <em>TCP/IP blocking</em> and <em>HTTP blocking</em>.</p>
 
-<h2 id="advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e">Advantages of running Web Connectivity</h2>
+<h2 id="advantages-of-running-web-connectivity">Advantages of running Web Connectivity</h2>
 
 <p>This test allows us to see which websites are blocked and how, more accurately
 than ever before!</p>
@@ -112,7 +114,7 @@ discrimination of exit nodes (by CloudFlare, for example) led to many false
 positives. We now compare collected measurements over a control server which is
 less likely to be discriminated.</p>
 
-<h2 id="how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e">How Web Connectivity works</h2>
+<h2 id="how-web-connectivity-works">How Web Connectivity works</h2>
 
 <p>This test examines whether websites are blocked by performing the steps below
 <em>both</em> over a control server and over the network of the user. The collected
@@ -177,7 +179,7 @@ of the user) differs by some percentage</p></li>
 <li><p>The HTML title tags do not match</p></li>
 </ul>
 
-<h2 id="how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e">How to run Web Connectivity</h2>
+<h2 id="how-to-run-web-connectivity">How to run Web Connectivity</h2>
 
 <p>If you&rsquo;ve ever run OONI tests before, then you&rsquo;re probably familiar with
 <code>oonideckgen</code>: OONI&rsquo;s software suite which includes multiple tests. Now

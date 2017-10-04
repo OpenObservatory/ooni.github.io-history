@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - Evidence of Internet Censorship during Catalonia&#39;s Independence Referendum</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
+  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
@@ -49,22 +49,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="https://ooni.torproject.org/about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="https://ooni.torproject.org/install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="https://ooni.torproject.org/nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="https://ooni.torproject.org/data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="https://ooni.torproject.org/get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="https://ooni.torproject.org/post/"
+  
+   class="active"
   
    >Blog</a>
 
@@ -100,7 +102,7 @@ collected from three local networks. OONI data shows that these sites
 were blocked every day from (at least) 25th September 2017 (when the
 testing started) leading up to the referendum day, on 1st October 2017.</p>
 
-<h1 id="catalan-independence-referendum:9bb5f82370dbb6b324feeb0e4ab96583">Catalan Independence Referendum</h1>
+<h1 id="catalan-independence-referendum">Catalan Independence Referendum</h1>
 
 <p>Catalans have their own language and cultural identity, despite being
 part of Spain. Their president Carles Puigdemont
@@ -177,7 +179,7 @@ on the question of independence.</p>
 <a href="https://ooni.torproject.org/install/">OONI Probe</a> community members
 in Spain and Catalonia, we aim to support public debate.</p>
 
-<h1 id="blocking-of-catalan-referendum-sites:9bb5f82370dbb6b324feeb0e4ab96583">Blocking of Catalan referendum sites</h1>
+<h1 id="blocking-of-catalan-referendum-sites">Blocking of Catalan referendum sites</h1>
 
 <p>To collect evidence showing whether and how sites associated to the
 Catalan referendum were blocked, <a href="https://ooni.torproject.org/install/">OONI Probe tests</a> were run in Catalonia over
@@ -415,9 +417,9 @@ and .party).</p>
 
 <p><a href="https://explorer.ooni.torproject.org/country/ES">OONI data</a> shows
 that these mirrors were blocked by means of DNS tampering and through
-block pages served by HTTP transparent proxies. Lluís Montabes, a
+block pages served by HTTP transparent proxies. Daniel Morales, a
 freedom of expression activist who worked on the scripts to mirror the
-blocked sites, was <a href="http://www.ara.cat/politica/creador-marianorajoycat-citat-declarar-desobediencia_0_1875412620.html">called to appear in court on 23rd September</a>
+blocked sites, was called to appear in court on 22nd September
 and <a href="https://elpais.com/elpais/2017/09/28/inenglish/1506588970_026442.html">accused of being supported by Russian hackers</a>
 by El Pais, one of Spain’s largest media outlets.</p>
 
@@ -514,7 +516,7 @@ information of the organization that runs the Catalan top level domain
 .cat, Pep Oliver, was detained on 20th September and retained under
 custody for 60 hours.</p>
 
-<h1 id="conclusion:9bb5f82370dbb6b324feeb0e4ab96583">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>In summary, three main techniques have been used to censor Catalan
 referendum sites:</p>
@@ -557,11 +559,18 @@ transparency of information controls.</p>
 
 <p>Evidence is necessary for informed public debate.</p>
 
-<h1 id="updates:9bb5f82370dbb6b324feeb0e4ab96583">Updates</h1>
+<p><strong>Update (2017-01-04 16:00 UTC)</strong> Qurium / Virtual Road have published data showing the mechanisms used to block websites associated to the referendum of 1-O of Catalonia. View their findings <strong><a href="https://www.qurium.org/alerts/spain/blocking-techniques-catalunya/">here</a></strong>.</p>
 
-<ul>
-<li><strong>4th October 2017:</strong> Qurium / Virtual Road have published data showing the mechanisms used to block websites associated to the referendum of 1-O of Catalonia. View their findings <strong><a href="https://www.qurium.org/alerts/spain/blocking-techniques-catalunya/">here</a></strong>.</li>
-</ul>
+<p><strong>Update (2017-10-03 20:38 UTC):</strong>  Courtesy of our friends from <a href="https://securitywithoutborders.org/blog/2017/09/27/catalonia.html">Security Without
+Borders</a>,
+you can run <a href="https://ooni.torproject.org/install">OONI Probe</a> to test
+Catalan websites for censorship by clicking on the &ldquo;Run OONI&rdquo; button below:</p>
+
+<div data-link="https://run.ooni.io/nettest?tn=web_connectivity&amp;ta=%7B%22urls%22%3A%5B%22gateway.ipfs.io%22%2C%22cat.referendum.barcelona%22%2C%22referendum.enricpineda.cat%22%2C%22www.referendum.legal%22%2C%22www.referendum.party%22%2C%22www.referendum.ninja%22%2C%22www.referendum.love%22%2C%22www.referendum.fyi%22%2C%22www.referendum.rip%22%2C%22www.referendum.soy%22%2C%22www.referendum.lol%22%2C%22www.referendum.voto%22%2C%22www.referendum.works%22%2C%22www.referendum.observer%22%2C%22www.referendum.fun%22%2C%22alerta.cat%22%2C%22referendum.pirata.cat%22%2C%22referendum.pau.fm%22%2C%22www.referendumcat.eu%22%2C%22nigeon.github.io%22%2C%22www.ref1oct.eu%22%2C%22www.ref1oct.cat%22%2C%22ref1oct.net%22%2C%22ref1oct.org%22%2C%22referendum.zalo.nyc%22%2C%22aniol.github.io%22%2C%22referendum.cat%22%2C%22ref1oct.cat%22%2C%22www.marianorajoy.cat%22%2C%22garantiespelreferendum.com%22%2C%22referendum.clash.cat%22%2C%22marianorajoy.clash.cat%22%5D%7D&amp;mv=1.2.0"
+     class="ooni-run-banner">
+Test Catalan referendum sites
+</div>
+
 
   </main>
 </div>

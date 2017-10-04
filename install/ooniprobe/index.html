@@ -79,17 +79,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#risks-of-running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Risks of running ooniprobe</a></li>
-<li><a href="#installing-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Installing ooniprobe</a></li>
-<li><a href="#running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe</a></li>
-<li><a href="#advanced-users:5e0914a11cce8babf729f5927bda6a20">Advanced users</a>
+<li><a href="#risks-of-running-ooniprobe">Risks of running ooniprobe</a></li>
+<li><a href="#installing-ooniprobe">Installing ooniprobe</a></li>
+<li><a href="#running-ooniprobe">Running ooniprobe</a></li>
+<li><a href="#advanced-users">Advanced users</a>
 <ul>
-<li><a href="#running-ooniprobe-from-a-virtual-machine:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a virtual machine</a>
+<li><a href="#running-ooniprobe-from-a-virtual-machine">Running ooniprobe from a virtual machine</a>
 <ul>
-<li><a href="#setting-capabilities-on-your-virtualenv-python-binary:5e0914a11cce8babf729f5927bda6a20">Setting capabilities on your virtualenv python binary</a></li>
+<li><a href="#setting-capabilities-on-your-virtualenv-python-binary">Setting capabilities on your virtualenv python binary</a></li>
 </ul></li>
-<li><a href="#running-ooniprobe-from-a-development-environment:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a development environment</a></li>
-<li><a href="#running-ooniprobe-with-tor-bridges:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe with Tor bridges</a></li>
+<li><a href="#running-ooniprobe-from-a-development-environment">Running ooniprobe from a development environment</a></li>
+<li><a href="#running-ooniprobe-with-tor-bridges">Running ooniprobe with Tor bridges</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -109,7 +109,7 @@ censorship and traffic manipulation? Do you want to collect data to share with
 others, so that you and others can better understand your network? If so, please
 read this document to learn how to install and run ooniprobe.</p>
 
-<h2 id="risks-of-running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Risks of running ooniprobe</h2>
+<h2 id="risks-of-running-ooniprobe">Risks of running ooniprobe</h2>
 
 <p><strong>WARNING:</strong> Running ooniprobe carries risks.</p>
 
@@ -138,7 +138,7 @@ conract, or other causes of action.</p>
 <a href="https://ooni.torproject.org/about/risks/">documentation</a> to learn more about
 potential risks.</p>
 
-<h2 id="installing-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Installing ooniprobe</h2>
+<h2 id="installing-ooniprobe">Installing ooniprobe</h2>
 
 <p>The desktop version of ooniprobe is currently designed for <strong>Linux</strong> and <strong>Mac OS X</strong> systems.</p>
 
@@ -378,7 +378,7 @@ it up inside of a virtual machine.</p>
 
 </div>
 
-<h2 id="running-ooniprobe:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe</h2>
+<h2 id="running-ooniprobe">Running ooniprobe</h2>
 
 <div class="install-selector">
 
@@ -453,9 +453,9 @@ it up inside of a virtual machine.</p>
 
 </div>
 
-<h2 id="advanced-users:5e0914a11cce8babf729f5927bda6a20">Advanced users</h2>
+<h2 id="advanced-users">Advanced users</h2>
 
-<h3 id="running-ooniprobe-from-a-virtual-machine:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a virtual machine</h3>
+<h3 id="running-ooniprobe-from-a-virtual-machine">Running ooniprobe from a virtual machine</h3>
 
 <p>You can run ooniprobe from a virtual machine through the following steps:</p>
 
@@ -497,7 +497,7 @@ vagrant up
 <p><strong>Step 7.</strong> Connect to the web UI on your host machine at:
 <a href="http://localhost:8842/">http://localhost:8842/</a></p>
 
-<h4 id="setting-capabilities-on-your-virtualenv-python-binary:5e0914a11cce8babf729f5927bda6a20">Setting capabilities on your virtualenv python binary</h4>
+<h4 id="setting-capabilities-on-your-virtualenv-python-binary">Setting capabilities on your virtualenv python binary</h4>
 
 <p>If your distribution supports capabilities you can avoid running ooniprobe as
 root through the following:</p>
@@ -505,7 +505,7 @@ root through the following:</p>
 <pre><code>setcap cap_net_admin,cap_net_raw+eip /path/to/your/virtualenv's/python2
 </code></pre>
 
-<h3 id="running-ooniprobe-from-a-development-environment:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe from a development environment</h3>
+<h3 id="running-ooniprobe-from-a-development-environment">Running ooniprobe from a development environment</h3>
 
 <p>On Debian based systems a development environment can be setup as follows:</p>
 
@@ -553,7 +553,7 @@ python setup.py install
 ooniprobe -s # if all went well, lists available tests
 </code></pre>
 
-<h3 id="running-ooniprobe-with-tor-bridges:5e0914a11cce8babf729f5927bda6a20">Running ooniprobe with Tor bridges</h3>
+<h3 id="running-ooniprobe-with-tor-bridges">Running ooniprobe with Tor bridges</h3>
 
 <p>If Tor is blocked in the country that you are trying to run ooniprobe from, you
 can circumvent this censorship through the use of <strong><a href="https://bridges.torproject.org/">Tor

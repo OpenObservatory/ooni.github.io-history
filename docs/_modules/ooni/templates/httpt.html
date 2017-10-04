@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.templates.httpt &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>ooni.templates.httpt &mdash; OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation" href="../../../index.html"/>
         <link rel="up" title="Module code" href="../../index.html"/> 
 
   
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -59,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.3.0-rc.1
               </div>
             
           
@@ -80,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -103,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -117,47 +128,64 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.templates.httpt</li>
+        
+      <li>ooni.templates.httpt</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.templates.httpt</h1><div class="highlight"><pre>
-<span class="kn">import</span> <span class="nn">random</span>
+<span></span><span class="kn">import</span> <span class="nn">random</span>
 
-<span class="kn">from</span> <span class="nn">txtorcon.interface</span> <span class="kn">import</span> <span class="n">StreamListenerMixin</span>
+<span class="kn">from</span> <span class="nn">txtorcon.interface</span> <span class="k">import</span> <span class="n">StreamListenerMixin</span>
 
-<span class="kn">from</span> <span class="nn">twisted.web.client</span> <span class="kn">import</span> <span class="n">readBody</span><span class="p">,</span> <span class="n">PartialDownloadError</span>
-<span class="kn">from</span> <span class="nn">twisted.web.client</span> <span class="kn">import</span> <span class="n">ContentDecoderAgent</span>
+<span class="kn">from</span> <span class="nn">twisted.web.client</span> <span class="k">import</span> <span class="n">readBody</span><span class="p">,</span> <span class="n">PartialDownloadError</span>
+<span class="kn">from</span> <span class="nn">twisted.web.client</span> <span class="k">import</span> <span class="n">ContentDecoderAgent</span>
 
-<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="kn">import</span> <span class="n">reactor</span>
-<span class="kn">from</span> <span class="nn">twisted.internet.endpoints</span> <span class="kn">import</span> <span class="n">TCP4ClientEndpoint</span>
+<span class="kn">from</span> <span class="nn">twisted.internet</span> <span class="k">import</span> <span class="n">reactor</span>
+<span class="kn">from</span> <span class="nn">twisted.internet.endpoints</span> <span class="k">import</span> <span class="n">TCP4ClientEndpoint</span>
 
-<span class="kn">from</span> <span class="nn">ooni.utils.socks</span> <span class="kn">import</span> <span class="n">TrueHeadersSOCKS5Agent</span>
+<span class="kn">from</span> <span class="nn">ooni.utils.socks</span> <span class="k">import</span> <span class="n">TrueHeadersSOCKS5Agent</span>
 
-<span class="kn">from</span> <span class="nn">ooni.nettest</span> <span class="kn">import</span> <span class="n">NetTestCase</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
-<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">ooni.nettest</span> <span class="k">import</span> <span class="n">NetTestCase</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="k">import</span> <span class="n">config</span>
 
-<span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="kn">import</span> <span class="n">StringProducer</span><span class="p">,</span> <span class="n">userAgents</span>
-<span class="kn">from</span> <span class="nn">ooni.common.txextra</span> <span class="kn">import</span> <span class="n">TrueHeaders</span>
-<span class="kn">from</span> <span class="nn">ooni.common.txextra</span> <span class="kn">import</span> <span class="n">FixedRedirectAgent</span><span class="p">,</span> <span class="n">TrueHeadersAgent</span>
-<span class="kn">from</span> <span class="nn">ooni.common.http_utils</span> <span class="kn">import</span> <span class="n">representBody</span>
-<span class="kn">from</span> <span class="nn">ooni.errors</span> <span class="kn">import</span> <span class="n">handleAllFailures</span>
-<span class="kn">from</span> <span class="nn">ooni.geoip</span> <span class="kn">import</span> <span class="n">probe_ip</span>
+<span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="k">import</span> <span class="n">StringProducer</span><span class="p">,</span> <span class="n">userAgents</span>
+<span class="kn">from</span> <span class="nn">ooni.common.txextra</span> <span class="k">import</span> <span class="n">TrueHeaders</span>
+<span class="kn">from</span> <span class="nn">ooni.common.txextra</span> <span class="k">import</span> <span class="n">FixedRedirectAgent</span><span class="p">,</span> <span class="n">TrueHeadersAgent</span>
+<span class="kn">from</span> <span class="nn">ooni.common.http_utils</span> <span class="k">import</span> <span class="n">representBody</span>
+<span class="kn">from</span> <span class="nn">ooni.errors</span> <span class="k">import</span> <span class="n">handleAllFailures</span>
+<span class="kn">from</span> <span class="nn">ooni.geoip</span> <span class="k">import</span> <span class="n">probe_ip</span>
 
 <div class="viewcode-block" id="InvalidSocksProxyOption"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.InvalidSocksProxyOption">[docs]</a><span class="k">class</span> <span class="nc">InvalidSocksProxyOption</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="k">pass</span></div>
@@ -170,7 +198,7 @@
 <div class="viewcode-block" id="StreamListener.stream_succeeded"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.StreamListener.stream_succeeded">[docs]</a>    <span class="k">def</span> <span class="nf">stream_succeeded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">):</span>
         <span class="n">host</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
         <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">stream</span><span class="o">.</span><span class="n">target_host</span> <span class="o">==</span> <span class="n">host</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;exit_ip&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">stream</span><span class="o">.</span><span class="n">target_host</span> <span class="o">==</span> <span class="n">host</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;exit_ip&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;exit_ip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">circuit</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">ip</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;exit_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">circuit</span><span class="o">.</span><span class="n">path</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
                 <span class="n">config</span><span class="o">.</span><span class="n">tor_state</span><span class="o">.</span><span class="n">stream_listeners</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
@@ -181,7 +209,7 @@
 <span class="k">def</span> <span class="nf">_representHeaders</span><span class="p">(</span><span class="n">headers</span><span class="p">):</span>
     <span class="n">represented_headers</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">headers</span><span class="o">.</span><span class="n">getAllRawHeaders</span><span class="p">():</span>
-        <span class="n">represented_headers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">unicode</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+        <span class="n">represented_headers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">unicode</span><span class="p">(</span><span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">represented_headers</span>
 
 <div class="viewcode-block" id="HTTPTest"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest">[docs]</a><span class="k">class</span> <span class="nc">HTTPTest</span><span class="p">(</span><span class="n">NetTestCase</span><span class="p">):</span>
@@ -201,8 +229,12 @@
     <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;HTTP Test&quot;</span>
     <span class="n">version</span> <span class="o">=</span> <span class="s2">&quot;0.1.1&quot;</span>
 
-    <span class="n">randomizeUA</span> <span class="o">=</span> <span class="bp">False</span>
-    <span class="n">followRedirects</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">randomizeUA</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">followRedirects</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="c1"># When this is set to False we will follow redirects pointing to IPs in</span>
+    <span class="c1"># rfc1918</span>
+    <span class="n">ignorePrivateRedirects</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="c1"># You can specify a list of tuples in the format of (CONTENT_TYPE,</span>
     <span class="c1"># DECODER)</span>
@@ -210,7 +242,7 @@
     <span class="c1"># contentDecoders = [(&#39;gzip&#39;, GzipDecoder)]</span>
     <span class="n">contentDecoders</span> <span class="o">=</span> <span class="p">[]</span>
 
-    <span class="n">baseParameters</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;socksproxy&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span>
+    <span class="n">baseParameters</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;socksproxy&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span>
         <span class="s1">&#39;Specify a socks proxy to use for requests (ip:port)&#39;</span><span class="p">]]</span>
 
     <span class="k">def</span> <span class="nf">_setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -226,7 +258,7 @@
                 <span class="n">proxyEndpoint</span><span class="o">=</span><span class="n">TCP4ClientEndpoint</span><span class="p">(</span><span class="n">reactor</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
                     <span class="n">config</span><span class="o">.</span><span class="n">tor</span><span class="o">.</span><span class="n">socks_port</span><span class="p">))</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;socksproxy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;socksproxy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;socksproxy&#39;</span><span class="p">]:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">sockshost</span><span class="p">,</span> <span class="n">socksport</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="p">[</span><span class="s1">&#39;socksproxy&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
@@ -245,7 +277,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">followRedirects</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">control_agent</span> <span class="o">=</span> <span class="n">FixedRedirectAgent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">control_agent</span><span class="p">)</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">FixedRedirectAgent</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">agent</span> <span class="o">=</span> <span class="n">FixedRedirectAgent</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">agent</span><span class="p">,</span>
+                    <span class="n">ignorePrivateRedirects</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ignorePrivateRedirects</span>
+                <span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;agent&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;redirect&#39;</span>
             <span class="k">except</span><span class="p">:</span>
                 <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Warning! You are running an old version of twisted &quot;</span>
@@ -267,7 +302,8 @@
 <div class="viewcode-block" id="HTTPTest.processInputs"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.processInputs">[docs]</a>    <span class="k">def</span> <span class="nf">processInputs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">pass</span></div>
 
-<div class="viewcode-block" id="HTTPTest.addToReport"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.addToReport">[docs]</a>    <span class="k">def</span> <span class="nf">addToReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">response_body</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">failure_string</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="HTTPTest.addToReport"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.addToReport">[docs]</a>    <span class="k">def</span> <span class="nf">addToReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">response_body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                    <span class="n">failure_string</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">previous_response</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds to the report the specified request and response.</span>
 
@@ -290,35 +326,50 @@
                 <span class="s1">&#39;method&#39;</span><span class="p">:</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;method&#39;</span><span class="p">],</span>
                 <span class="s1">&#39;tor&#39;</span><span class="p">:</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">]</span>
             <span class="p">},</span>
-            <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="bp">None</span>
+            <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="kc">None</span>
         <span class="p">}</span>
         <span class="k">if</span> <span class="n">response</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span>
+                    <span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;absoluteURI&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;request&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">absoluteURI</span>
+
+            <span class="n">response_headers</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">getAllRawHeaders</span><span class="p">():</span>
+                <span class="n">response_headers</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+            <span class="c1"># Attempt to redact the IP address of the probe from the responses</span>
+            <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">privacy</span><span class="o">.</span><span class="n">includeip</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">and</span> \
+                            <span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response_body</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">unicode</span><span class="p">)):</span>
+                    <span class="n">response_body</span> <span class="o">=</span> <span class="n">response_body</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="s2">&quot;[REDACTED]&quot;</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">response_headers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="n">response_headers</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span>
+                                                          <span class="s2">&quot;[REDACTED]&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">response_headers</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="n">response_headers</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">representBody</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">localOptions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;withoutbody&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">is</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">response_body</span> <span class="o">=</span> <span class="n">representBody</span><span class="p">(</span><span class="n">response_body</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">response_body</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-            <span class="c1"># Attempt to redact the IP address of the probe from the responses</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">privacy</span><span class="o">.</span><span class="n">includeip</span> <span class="ow">is</span> <span class="bp">False</span> <span class="ow">and</span> <span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span>
-                    <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">response_body</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">response_body</span><span class="p">,</span> <span class="nb">unicode</span><span class="p">))):</span>
-                <span class="n">response_body</span> <span class="o">=</span> <span class="n">response_body</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">probe_ip</span><span class="o">.</span><span class="n">address</span><span class="p">,</span> <span class="s2">&quot;[REDACTED]&quot;</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;request&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">and</span>
-                    <span class="nb">getattr</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;absoluteURI&#39;</span><span class="p">,</span> <span class="bp">None</span><span class="p">)):</span>
-                <span class="n">session</span><span class="p">[</span><span class="s1">&#39;request&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">absoluteURI</span>
+
             <span class="n">session</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-                <span class="s1">&#39;headers&#39;</span><span class="p">:</span> <span class="n">_representHeaders</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">),</span>
+                <span class="s1">&#39;headers&#39;</span><span class="p">:</span> <span class="n">response_headers</span><span class="p">,</span>
                 <span class="s1">&#39;body&#39;</span><span class="p">:</span> <span class="n">response_body</span><span class="p">,</span>
                 <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">code</span>
             <span class="p">}</span>
-        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;failure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="n">session</span><span class="p">[</span><span class="s1">&#39;failure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="k">if</span> <span class="n">failure_string</span><span class="p">:</span>
             <span class="n">session</span><span class="p">[</span><span class="s1">&#39;failure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">failure_string</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;requests&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
-
         <span class="k">if</span> <span class="n">response</span> <span class="ow">and</span> <span class="n">response</span><span class="o">.</span><span class="n">previousResponse</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">previousResponse</span><span class="p">,</span>
-                             <span class="n">response_body</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-                             <span class="n">failure_string</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span></div>
+            <span class="n">previous_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">previousResponse</span>
+        <span class="k">if</span> <span class="n">previous_response</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">previous_response</span><span class="p">,</span>
+                             <span class="n">response_body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                             <span class="n">failure_string</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
 
 
     <span class="k">def</span> <span class="nf">_processResponseBody</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response_body</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">body_processor</span><span class="p">):</span>
@@ -405,7 +456,9 @@
             <span class="n">HTTPTest</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
             <span class="k">return</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Got response </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span><span class="p">)</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Got response&quot;</span><span class="p">)</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;code: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span><span class="o">.</span><span class="n">code</span><span class="p">)</span>
+            <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;headers: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">getAllRawHeaders</span><span class="p">())</span>
 
         <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">code</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">processRedirect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">getRawHeaders</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
@@ -426,8 +479,8 @@
         <span class="k">return</span> <span class="n">finished</span>
 
 <div class="viewcode-block" id="HTTPTest.doRequest"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.httpt.HTTPTest.doRequest">[docs]</a>    <span class="k">def</span> <span class="nf">doRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
-                  <span class="n">headers</span><span class="o">=</span><span class="p">{},</span> <span class="n">body</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">headers_processor</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-                  <span class="n">body_processor</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">use_tor</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+                  <span class="n">headers</span><span class="o">=</span><span class="p">{},</span> <span class="n">body</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">headers_processor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                  <span class="n">body_processor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">use_tor</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Perform an HTTP request with the specified method and headers.</span>
 
@@ -476,13 +529,13 @@
         <span class="n">request</span><span class="p">[</span><span class="s1">&#39;headers&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">headers</span>
         <span class="n">request</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">body</span>
         <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s1">&#39;exit_ip&#39;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-            <span class="s1">&#39;exit_name&#39;</span><span class="p">:</span> <span class="bp">None</span>
+            <span class="s1">&#39;exit_ip&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="s1">&#39;exit_name&#39;</span><span class="p">:</span> <span class="kc">None</span>
         <span class="p">}</span>
         <span class="k">if</span> <span class="n">use_tor</span><span class="p">:</span>
-            <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;is_tor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;is_tor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;is_tor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;is_tor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">randomizeUA</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Randomizing user agent&quot;</span><span class="p">)</span>
@@ -495,17 +548,24 @@
         <span class="k">if</span> <span class="n">body</span><span class="p">:</span>
             <span class="n">body_producer</span> <span class="o">=</span> <span class="n">StringProducer</span><span class="p">(</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">body_producer</span> <span class="o">=</span> <span class="bp">None</span>
+            <span class="n">body_producer</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="n">headers</span> <span class="o">=</span> <span class="n">TrueHeaders</span><span class="p">(</span><span class="n">request</span><span class="p">[</span><span class="s1">&#39;headers&#39;</span><span class="p">])</span>
 
         <span class="k">def</span> <span class="nf">errback</span><span class="p">(</span><span class="n">failure</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;tor&#39;</span><span class="p">][</span><span class="s1">&#39;is_tor&#39;</span><span class="p">]:</span>
-                <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error performing torified HTTP request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Error performing torified HTTP request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
             <span class="k">else</span><span class="p">:</span>
-                <span class="n">log</span><span class="o">.</span><span class="n">err</span><span class="p">(</span><span class="s2">&quot;Error performing HTTP request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
+                <span class="n">log</span><span class="o">.</span><span class="n">msg</span><span class="p">(</span><span class="s2">&quot;Error performing HTTP request: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">])</span>
             <span class="n">failure_string</span> <span class="o">=</span> <span class="n">handleAllFailures</span><span class="p">(</span><span class="n">failure</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">failure_string</span><span class="o">=</span><span class="n">failure_string</span><span class="p">)</span>
+            <span class="n">previous_response</span> <span class="o">=</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">failure</span><span class="p">,</span> <span class="s2">&quot;previousResponse&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="n">previous_response</span>  <span class="o">=</span> <span class="n">failure</span><span class="o">.</span><span class="n">previousResponse</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">failure</span><span class="p">,</span> <span class="s2">&quot;requestLocation&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+                <span class="n">request</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">failure</span><span class="o">.</span><span class="n">requestLocation</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">addToReport</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">failure_string</span><span class="o">=</span><span class="n">failure_string</span><span class="p">,</span>
+                             <span class="n">previous_response</span><span class="o">=</span><span class="n">previous_response</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">failure</span>
 
         <span class="k">if</span> <span class="n">use_tor</span><span class="p">:</span>
@@ -521,6 +581,9 @@
         <span class="k">return</span> <span class="n">d</span></div></div>
 </pre></div>
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -552,10 +615,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.3.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../_static/jquery.js"></script>

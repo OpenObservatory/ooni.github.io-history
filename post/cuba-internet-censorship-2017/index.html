@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - Measuring Internet Censorship in Cuba&#39;s ParkNets</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
+  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
@@ -49,22 +49,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="https://ooni.torproject.org/about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="https://ooni.torproject.org/install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="https://ooni.torproject.org/nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="https://ooni.torproject.org/data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="https://ooni.torproject.org/get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="https://ooni.torproject.org/post/"
+  
+   class="active"
   
    >Blog</a>
 
@@ -179,7 +181,7 @@
 <p><strong>Censorship method:</strong> Deep Packet Inspection (DPI) technology serving
 blockpages and RST Injection</p>
 
-<h1 id="key-findings:0ec5204de5c574c3083c622e27b6c7ef">Key Findings</h1>
+<h1 id="key-findings">Key Findings</h1>
 
 <p><a href="https://explorer.ooni.torproject.org/country/CU">OONI network measurement data</a>, collected from
 eight vantage points across three Cuban cities between 29th May 2017 to
@@ -246,7 +248,7 @@ is actually being used to implement internet censorship in the country.</p>
 and the <a href="http://www.etecsa.cu/internet_conectividad/areas_wifi/">limited availability of wifi hotspots</a>
 across Cuba remain the main barriers to accessing the internet.</p>
 
-<h1 id="introduction:0ec5204de5c574c3083c622e27b6c7ef">Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 
 <p>Last May, the <a href="https://ooni.torproject.org/">OONI</a> team visited Cuba.
 We ran a variety of network measurement tests across eight vantage
@@ -267,7 +269,7 @@ in Cuba based on <a href="https://explorer.ooni.torproject.org/country/CU">empir
 network landscape and internet penetration levels. The remainder of the
 report documents the methodology and findings of this research study.</p>
 
-<h1 id="background:0ec5204de5c574c3083c622e27b6c7ef">Background</h1>
+<h1 id="background">Background</h1>
 
 <div>
   <img src="/post/cuba-internet-censorship-2017/cu-02.jpg" title="Image by Arturo Filastò (CC-BY-SA-3.0)" srcset="/post/cuba-internet-censorship-2017/cu-02@2x.jpg 2x" alt="Image by Arturo Filastò (CC-BY-SA-3.0)">
@@ -321,7 +323,7 @@ the two governments reached a deal in July 2015 to reopen embassies in
 their respective capitals and to <a href="http://edition.cnn.com/2015/07/01/politics/obama-note-to-castro-reestablish-ties/index.html">re-establish diplomatic relations</a>.
 President Trump though has recently <a href="https://www.nytimes.com/2017/06/16/us/politics/cuba-trump-engagement-restrictions.html">reversed some actions taken by the Obama administration</a>.</p>
 
-<h1 id="network-landscape-and-internet-penetration:0ec5204de5c574c3083c622e27b6c7ef">Network landscape and internet penetration</h1>
+<h1 id="network-landscape-and-internet-penetration">Network landscape and internet penetration</h1>
 
 <p>Cuba is one of the countries in the world with the most <a href="https://freedomhouse.org/report/freedom-world/2017/cuba">restricted internet</a>.</p>
 
@@ -346,7 +348,7 @@ to initiate discussions. In April 2017, Google became the <a href="http://www.cu
 Cuba’s population has access to the internet. The sections below provide
 an overview of Cuba’s unique internet landscape.</p>
 
-<h2 id="etecsa:0ec5204de5c574c3083c622e27b6c7ef">ETECSA</h2>
+<h2 id="etecsa">ETECSA</h2>
 
 <div>
   <img src="/post/cuba-internet-censorship-2017/cu-03.jpg" title="Image by Arturo Filastò (CC-BY-SA-3.0)" srcset="/post/cuba-internet-censorship-2017/cu-03@2x.jpg 2x" alt="Image by Arturo Filastò (CC-BY-SA-3.0)">
@@ -443,7 +445,7 @@ government opened the <a href="http://www.bbc.com/news/technology-31905794">firs
 ETECSA offices, Joven Clubs, post offices, hotels, airports, and at the
 public wifi hotspots.</p>
 
-<h2 id="parknets:0ec5204de5c574c3083c622e27b6c7ef">ParkNets</h2>
+<h2 id="parknets">ParkNets</h2>
 
 <div>
   <img src="/post/cuba-internet-censorship-2017/cu-07.jpg" title="Image by Arturo Filastò (CC-BY-SA-3.0)" srcset="/post/cuba-internet-censorship-2017/cu-07@2x.jpg 2x" alt="Image by Arturo Filastò (CC-BY-SA-3.0)">
@@ -493,7 +495,7 @@ Cubans were using the internet for purposes that expanded beyond
 communications, like listening to music or watching viral videos on
 YouTube.</p>
 
-<h2 id="joven-club:0ec5204de5c574c3083c622e27b6c7ef">Joven Club</h2>
+<h2 id="joven-club">Joven Club</h2>
 
 <p>Cuba has computer centres across the country which provide internet
 access, computer classes, and even programming courses to the youth.
@@ -590,7 +592,7 @@ students are authorised to acquire such accounts. Since their online
 activity is directly linked to their personal accounts, they likely
 self-censor the types of sites that they access.</p>
 
-<h2 id="streetnets:0ec5204de5c574c3083c622e27b6c7ef">StreetNets</h2>
+<h2 id="streetnets">StreetNets</h2>
 
 <p>Cuba’s restrictive internet landscape appears to be fostering
 <em>alternative</em> means of accessing the internet, particularly amongst the
@@ -611,7 +613,7 @@ of wifi equipment requires a license from the Ministry of Communications,
 users <a href="https://www.polygon.com/features/2017/5/15/15625950/cuba-secret-gaming-network">refrain from discussing politics and/or sharing prohibited materials</a>. They even enforce this rule themselves. Self-censorship <em>might</em>
 be the most effective form of censorship in Cuba, even within StreetNets.</p>
 
-<h2 id="el-paquete:0ec5204de5c574c3083c622e27b6c7ef">El Paquete</h2>
+<h2 id="el-paquete">El Paquete</h2>
 
 <div>
   <img src="/post/cuba-internet-censorship-2017/cu-12.jpg" title="Image by Arturo Filastò (CC-BY-SA-3.0)" srcset="/post/cuba-internet-censorship-2017/cu-12@2x.jpg 2x" alt="Image by Arturo Filastò (CC-BY-SA-3.0)">
@@ -641,7 +643,7 @@ internet, serving as Cuba’s “<a href="https://www.theguardian.com/world/2014
 It enables Cubans to gain access to online content, without being
 online.</p>
 
-<h2 id="summary:0ec5204de5c574c3083c622e27b6c7ef">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>Cuba’s internet landscape is quite unique for a number of reasons. For
 starters, it only has <a href="https://www.etecsa.cu/">one telecom company</a>,
@@ -669,7 +671,7 @@ Cuba, we performed network measurement tests across eight vantage points
 in three cities across Cuba. The following sections explain our
 methodology and key findings.</p>
 
-<h1 id="measuring-internet-censorship-in-cuba:0ec5204de5c574c3083c622e27b6c7ef">Measuring internet censorship in Cuba</h1>
+<h1 id="measuring-internet-censorship-in-cuba">Measuring internet censorship in Cuba</h1>
 
 <p>We performed a variety of network measurement tests in Cuba in an
 attempt to understand whether and to what extent information controls
@@ -677,7 +679,7 @@ are implemented.</p>
 
 <p>The sections below document the methodology and findings of this study.</p>
 
-<h2 id="methodology:0ec5204de5c574c3083c622e27b6c7ef">Methodology</h2>
+<h2 id="methodology">Methodology</h2>
 
 <p>The methodology of this study included the following:</p>
 
@@ -695,7 +697,7 @@ ParkNets.</p>
 <p>The analysis period started on 29th May 2017 and concluded on 10th June
 2017.</p>
 
-<h3 id="collection-and-analysis-of-ooniprobe-network-measurements:0ec5204de5c574c3083c622e27b6c7ef">Collection and analysis of ooniprobe network measurements</h3>
+<h3 id="collection-and-analysis-of-ooniprobe-network-measurements">Collection and analysis of ooniprobe network measurements</h3>
 
 <p>Since 2011, OONI has developed multiple <a href="https://github.com/TheTorProject/ooni-probe">free and open source software tests</a>, called ooniprobe,
 designed to measure the following:</p>
@@ -1302,7 +1304,7 @@ caching purposes.</p>
 <p>OONI continues to develop its data analysis heuristics to identify
 internet censorship events faster and more accurately.</p>
 
-<h3 id="custom-tests:0ec5204de5c574c3083c622e27b6c7ef">Custom tests</h3>
+<h3 id="custom-tests">Custom tests</h3>
 
 <p>As part of our testing in Cuba, we also wrote and ran various custom
 network measurement tests, in addition to running
@@ -1321,7 +1323,7 @@ however, the latency when connecting to blocked sites is high, then the
 censorship equipment is more likely located in a further geographical
 location.</p>
 
-<h2 id="findings:0ec5204de5c574c3083c622e27b6c7ef">Findings</h2>
+<h2 id="findings">Findings</h2>
 
 <p>Upon analysis of the collected <a href="https://explorer.ooni.torproject.org/country/CU">network measurements</a>, we can
 confirm the <strong>blocking of 41 websites</strong> in Cuba. Deep Packet Inspection
@@ -1349,7 +1351,7 @@ to be blocking access to Google App Engine from Cuba.</p>
 <p>The sections below provide more information pertaining to the censorship
 events that we found in Cuba as part of this study.</p>
 
-<h3 id="blocked-websites:0ec5204de5c574c3083c622e27b6c7ef">Blocked websites</h3>
+<h3 id="blocked-websites">Blocked websites</h3>
 
 <p>News outlets and sites expressing political criticism towards Cuba’s
 government were predominantly found to be blocked as part of this study.
@@ -1644,7 +1646,7 @@ Havana, Santa Clara, and Santiago de Cuba.</p>
 <p>The following sections provide further information pertaining to the
 blocking of sites, as found through this study.</p>
 
-<h4 id="news-media:0ec5204de5c574c3083c622e27b6c7ef">News Media</h4>
+<h4 id="news-media">News Media</h4>
 
 <p>Fourteen news websites were confirmed to be blocked in Cuba during the
 testing period, as illustrated through the table below.</p>
@@ -1810,7 +1812,7 @@ despite the site no longer being operational.</p>
 blocked. Out of all of them, only <a href="https://www.cubaencuentro.com/">Cuba Encuentro</a> and <a href="https://www.voanews.com/">Voice of America (VOA)</a> currently support HTTPS, enabling
 their readers to circumvent the censorship.</p>
 
-<h4 id="political-criticism:0ec5204de5c574c3083c622e27b6c7ef">Political Criticism</h4>
+<h4 id="political-criticism">Political Criticism</h4>
 
 <p>Eleven other sites expressing political criticism towards Cuba’s
 government were <a href="https://explorer.ooni.torproject.org/country/CU">found to be blocked</a>, as
@@ -1937,7 +1939,7 @@ longer operational. Yet, they were amongst the sites that we found to be
 <a href="https://explorer.ooni.torproject.org/country/CU">blocked</a> in Cuba
 during the testing period of this study.</p>
 
-<h4 id="human-rights-issues:0ec5204de5c574c3083c622e27b6c7ef">Human Rights Issues</h4>
+<h4 id="human-rights-issues">Human Rights Issues</h4>
 
 <p>Six sites covering human rights issues in Cuba were found to be
 <a href="https://explorer.ooni.torproject.org/country/CU">blocked</a> during the
@@ -2069,7 +2071,7 @@ because the Cuban government <a href="http://survey.ituc-csi.org/Cuba.html?lang=
 <a href="https://explorer.ooni.torproject.org/measurement/20170603T183359Z_AS27725_AdrXzhQiFf9ULtvkQPpLGtBu2Lx4xR8LNT6bi6HugbDwegFELV?input=http:%2F%2Fwww.sigloxxi.org">blocked</a>
 as well during the testing period.</p>
 
-<h4 id="anonymity-and-circumvention-tools:0ec5204de5c574c3083c622e27b6c7ef">Anonymity and Circumvention Tools</h4>
+<h4 id="anonymity-and-circumvention-tools">Anonymity and Circumvention Tools</h4>
 
 <p>The <a href="https://www.torproject.org/">Tor network</a> was found to be
 <a href="https://explorer.ooni.torproject.org/measurement/20170607T175300Z_AS27725_XXfB14TYx5szrWoFiokwjWdQZIJQIuEtGWpkfaojBEPdiNsc3u">accessible</a>
@@ -2118,7 +2120,7 @@ through a web SSL VPN service. Both were found to be
 <a href="https://explorer.ooni.torproject.org/country/CU">blocked</a> in Cuba
 during the testing period of this study, along with <a href="http://www.inetprivacy.com/">iNetPrivacy software</a>.</p>
 
-<h4 id="communication-tools:0ec5204de5c574c3083c622e27b6c7ef">Communication Tools</h4>
+<h4 id="communication-tools">Communication Tools</h4>
 
 <p>Facebook Messenger is really
 <a href="https://www.economist.com/news/americas/21716099-ingenious-answer-digital-deprivation-cuba-app-stores-pay-rent">popular</a>
@@ -2151,7 +2153,7 @@ even though they are no longer operational.</p>
 </tbody>
 </table>
 
-<h4 id="culture:0ec5204de5c574c3083c622e27b6c7ef">Culture</h4>
+<h4 id="culture">Culture</h4>
 
 <p>As part of this study, we also found two cultural sites to be
 <a href="https://explorer.ooni.torproject.org/country/CU">blocked</a>.</p>
@@ -2184,7 +2186,7 @@ the Diocese of Pinar del Rio, which aims to provide a platform for
 of Swedes, who describe their experiences from living in Cuba (but also
 share stories from life in Sweden).</p>
 
-<h4 id="religion:0ec5204de5c574c3083c622e27b6c7ef">Religion</h4>
+<h4 id="religion">Religion</h4>
 
 <p><a href="http://www.idealpress.com/">IDEAL magazine</a> is a religious site that
 <a href="http://www.idealpress.com/sobreideal#&amp;panel1-3">aims</a> to “promote
@@ -2210,7 +2212,7 @@ found it to be
 </tbody>
 </table>
 
-<h4 id="militant:0ec5204de5c574c3083c622e27b6c7ef">Militant</h4>
+<h4 id="militant">Militant</h4>
 
 <p>Alpha 66 (named after its 66 original members) is an anti-Castro
 paramilitary group, based in Miami. Along with <a href="http://hermanos.org/">Brothers to the Rescue</a> and other anti-castro groups led by
@@ -2238,7 +2240,7 @@ ETECSA continues to
 <a href="https://explorer.ooni.torproject.org/measurement/20170601T235618Z_AS27725_SpZcfWCu3e17GPv8jpXSOIQucnRNNPolNnG2OODcGQC8H70cbe?input=http:%2F%2Fwww.alpha66.org">block</a>
 access to its domain.</p>
 
-<h3 id="skype-blocked:0ec5204de5c574c3083c622e27b6c7ef">Skype blocked</h3>
+<h3 id="skype-blocked">Skype blocked</h3>
 
 <p>We found Skype to be blocked in Cuba by means of RST injection. We were
 able to confirm that the RST packet was injected from Cuba because the
@@ -2262,7 +2264,7 @@ in the RST packet was not consistent with the TTL of previously received
 legitimate packets. This is also a sign that the RST packet was most
 likely injected.</p>
 
-<h3 id="deep-packet-inspection-technology:0ec5204de5c574c3083c622e27b6c7ef">Deep Packet Inspection technology</h3>
+<h3 id="deep-packet-inspection-technology">Deep Packet Inspection technology</h3>
 
 <p>Once we detected the blocking of sites and services based on ooniprobe
 tests, we subsequently wrote a new network measurement test (called
@@ -2308,7 +2310,7 @@ domain is included in any HTTP header, since the string triggering
 blocking does not check whether the blocked domain is part of an HTTP
 message and inside of the “Host” header.</p>
 
-<h3 id="huawei-equipment-in-cuba:0ec5204de5c574c3083c622e27b6c7ef">Huawei equipment in Cuba</h3>
+<h3 id="huawei-equipment-in-cuba">Huawei equipment in Cuba</h3>
 
 <p><a href="http://www.huawei.com/en/">Huawei</a>, a Chinese multinational
 networking and telecommunications equipment and services company,
@@ -2337,7 +2339,7 @@ following server header: <strong>OpenAS</strong>. This too is <a href="https://a
 unclear to us whether and to what extent Huawei equipment is actually
 being used to implement internet censorship in the country.</p>
 
-<h3 id="google-app-engine-blocked-by-google:0ec5204de5c574c3083c622e27b6c7ef">Google App Engine blocked by Google</h3>
+<h3 id="google-app-engine-blocked-by-google">Google App Engine blocked by Google</h3>
 
 <p>To measure the speed and performance of networks in Cuba, we attempted
 to run <a href="https://ooni.torproject.org/nettest/ndt/">OONI’s Network Diagnostic Test (NDT)</a>. This test is designed
@@ -2360,7 +2362,7 @@ servers connected to by NDT. This allowed us to avoid using M-Lab
 services which rely on Google App Engine (which was blocked), and to
 directly connect to test servers instead.</p>
 
-<h2 id="acknowledgement-of-limitations:0ec5204de5c574c3083c622e27b6c7ef">Acknowledgement of limitations</h2>
+<h2 id="acknowledgement-of-limitations">Acknowledgement of limitations</h2>
 
 <p>The findings of this study present various limitations.</p>
 
@@ -2388,7 +2390,7 @@ every vantage point possible in the country. Therefore, the findings of
 this study are limited to the vantage points from which network
 measurement tests were run.</p>
 
-<h1 id="conclusion:0ec5204de5c574c3083c622e27b6c7ef">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p><a href="https://explorer.ooni.torproject.org/country/CU">OONI data</a> collected
 from Cuba confirms the <strong>blocking of 41 websites</strong>. Most of these sites
@@ -2465,11 +2467,11 @@ It is therefore important to continue to measure networks. Software like
 <a href="https://ooni.torproject.org/install/">ooniprobe</a> allows users in Cuba
 and beyond to collect data that sheds light on information controls.</p>
 
-<p><div>
+<div>
   <img src="/post/cuba-internet-censorship-2017/cu-20.jpg" title="Image by Arturo Filastò (CC-BY-SA-3.0)" srcset="/post/cuba-internet-censorship-2017/cu-20@2x.jpg 2x" alt="Image by Arturo Filastò (CC-BY-SA-3.0)">
   <span style="display: inline-block;font-style: italic;padding-bottom: 20px">Image by Arturo Filastò (CC-BY-SA-3.0)</span>
 </div>
-</p>
+
 
   </main>
 </div>

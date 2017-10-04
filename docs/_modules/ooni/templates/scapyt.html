@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ooni.templates.scapyt &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>ooni.templates.scapyt &mdash; OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../../../index.html"/>
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation" href="../../../index.html"/>
         <link rel="up" title="Module code" href="../../index.html"/> 
 
   
@@ -40,6 +45,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -59,7 +65,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.3.0-rc.1
               </div>
             
           
@@ -80,7 +86,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -103,8 +112,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -117,32 +128,49 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../../index.html">Module code</a> &raquo;</li>
-      
-    <li>ooni.templates.scapyt</li>
+        
+      <li>ooni.templates.scapyt</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <h1>Source code for ooni.templates.scapyt</h1><div class="highlight"><pre>
-<span class="kn">from</span> <span class="nn">base64</span> <span class="kn">import</span> <span class="n">b64encode</span>
-<span class="kn">from</span> <span class="nn">ooni.nettest</span> <span class="kn">import</span> <span class="n">NetTestCase</span>
-<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="kn">import</span> <span class="n">log</span>
-<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="kn">import</span> <span class="n">config</span>
-<span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="kn">import</span> <span class="n">hasRawSocketPermission</span>
+<span></span><span class="kn">from</span> <span class="nn">base64</span> <span class="k">import</span> <span class="n">b64encode</span>
+<span class="kn">from</span> <span class="nn">ooni.nettest</span> <span class="k">import</span> <span class="n">NetTestCase</span>
+<span class="kn">from</span> <span class="nn">ooni.utils</span> <span class="k">import</span> <span class="n">log</span>
+<span class="kn">from</span> <span class="nn">ooni.settings</span> <span class="k">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">ooni.utils.net</span> <span class="k">import</span> <span class="n">hasRawSocketPermission</span>
 
-<span class="kn">from</span> <span class="nn">ooni.utils.txscapy</span> <span class="kn">import</span> <span class="n">ScapySender</span><span class="p">,</span> <span class="n">ScapyFactory</span>
+<span class="kn">from</span> <span class="nn">ooni.utils.txscapy</span> <span class="k">import</span> <span class="n">ScapySender</span><span class="p">,</span> <span class="n">ScapyFactory</span>
 
 
 <div class="viewcode-block" id="representPacket"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.scapyt.representPacket">[docs]</a><span class="k">def</span> <span class="nf">representPacket</span><span class="p">(</span><span class="n">packet</span><span class="p">):</span>
@@ -186,7 +214,7 @@
     <span class="k">def</span> <span class="nf">_setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">BaseScapyTest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">_setUp</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">scapyFactory</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">config</span><span class="o">.</span><span class="n">scapyFactory</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Scapy factory not set, registering it.&quot;</span><span class="p">)</span>
             <span class="n">config</span><span class="o">.</span><span class="n">scapyFactory</span> <span class="o">=</span> <span class="n">ScapyFactory</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">advanced</span><span class="o">.</span><span class="n">interface</span><span class="p">)</span>
 
@@ -240,7 +268,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;answered_packets&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">representPacket</span><span class="p">(</span><span class="n">received_packet</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">packets</span></div>
 
-<div class="viewcode-block" id="BaseScapyTest.sr"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.scapyt.BaseScapyTest.sr">[docs]</a>    <span class="k">def</span> <span class="nf">sr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packets</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseScapyTest.sr"><a class="viewcode-back" href="../../../api/ooni.templates.html#ooni.templates.scapyt.BaseScapyTest.sr">[docs]</a>    <span class="k">def</span> <span class="nf">sr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packets</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Wrapper around scapy.sendrecv.sr for sending and receiving of packets</span>
 <span class="sd">        at layer 3.</span>
@@ -248,7 +276,7 @@
         <span class="n">scapySender</span> <span class="o">=</span> <span class="n">ScapySender</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
 
         <span class="n">config</span><span class="o">.</span><span class="n">scapyFactory</span><span class="o">.</span><span class="n">registerProtocol</span><span class="p">(</span><span class="n">scapySender</span><span class="p">)</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Using sending with hash </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">scapySender</span><span class="o">.</span><span class="n">__hash__</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Using sending with hash </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">scapySender</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">)</span>
 
         <span class="n">d</span> <span class="o">=</span> <span class="n">scapySender</span><span class="o">.</span><span class="n">startSending</span><span class="p">(</span><span class="n">packets</span><span class="p">)</span>
         <span class="n">d</span><span class="o">.</span><span class="n">addCallback</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">finishedSendReceive</span><span class="p">)</span>
@@ -297,6 +325,9 @@
 </pre></div>
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -327,10 +358,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.3.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../../_static/jquery.js"></script>

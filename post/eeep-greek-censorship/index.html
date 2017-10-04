@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - EEEP and Greek Internet censorship</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
+  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
@@ -49,22 +49,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="https://ooni.torproject.org/about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="https://ooni.torproject.org/install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="https://ooni.torproject.org/nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="https://ooni.torproject.org/data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="https://ooni.torproject.org/get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="https://ooni.torproject.org/post/"
+  
+   class="active"
   
    >Blog</a>
 
@@ -113,7 +115,7 @@ the reports took place during June and July 2014.</p>
 
 <p>The main test specifications used to probe the blacklist are:</p>
 
-<h2 id="http-requests-test:d0c495f4479395eff703b25df5d2e963"><a href="https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/http_requests.py">HTTP Requests test</a></h2>
+<h2 id="http-requests-test"><a href="https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/http_requests.py">HTTP Requests test</a></h2>
 
 <p>This test performs an HTTP GET request from a specified URL list of potential blocked
 websites over the test network (censored network) and over Tor. It then compares
@@ -146,7 +148,7 @@ the control request and the experiment request.</p>
 Browser?&rdquo;</a> paper as the
 browser user agents with largest anonymity set.</p>
 
-<h2 id="dns-consistency-test:d0c495f4479395eff703b25df5d2e963"><a href="https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/dns_consistency.py">DNS consistency test</a></h2>
+<h2 id="dns-consistency-test"><a href="https://gitweb.torproject.org/ooni-probe.git/tree/ooni/nettests/blocking/dns_consistency.py">DNS consistency test</a></h2>
 
 <p>This test performs an A DNS query (via UDP) to the control resolver. The answer
 to such query is called the control answer. For each DNS resolver to be tested
@@ -163,7 +165,7 @@ hostname), then censorship is probably not happening (tampering:
 
 <p>In any other case the result is marked as: <code>tampering: True</code>.</p>
 
-<h1 id="probed-isps:d0c495f4479395eff703b25df5d2e963">Probed ISPs</h1>
+<h1 id="probed-isps">Probed ISPs</h1>
 
 <p>Probed ISPs: <code>Forthnet (AS 1241), Ote (AS 6799), Cyta (AS 6866), Wind (AS
 25472), Vodafone (AS 12361), Cosmote (AS 29247), Wind mobile (AS 15617)</code></p>
@@ -171,11 +173,11 @@ hostname), then censorship is probably not happening (tampering:
 <p>All of the tested ISPs employed <a href="https://en.wikipedia.org/wiki/DNS_hijacking">DNS hijacking</a> with the exception of Vodafone
 that uses also <a href="https://en.wikipedia.org/wiki/Deep_packet_inspection">Deep Packet Inspection</a> to block the resources of the blacklist.</p>
 
-<h2 id="per-isp-analysis:d0c495f4479395eff703b25df5d2e963">Per ISP analysis</h2>
+<h2 id="per-isp-analysis">Per ISP analysis</h2>
 
 <p><img src="/post/eeep-greek-censorship/eeep_blocking_per_isp.png" alt="Blocking per ISP" /></p>
 
-<h3 id="forthnet:d0c495f4479395eff703b25df5d2e963">Forthnet</h3>
+<h3 id="forthnet">Forthnet</h3>
 
 <p>This ISP has blocked 96 entries (21.91%) of the published <a href="http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf">blacklist</a>.</p>
 
@@ -256,7 +258,7 @@ test_resolvers: [192.168.122.1]
 
 <p><img src="/post/eeep-greek-censorship/eeep_forthnetgroup_gr.png" alt="Forthnet EEEP Blocked website screenshot" title="Forthnet EEEP Blocked website screenshot" /></p>
 
-<h3 id="ote:d0c495f4479395eff703b25df5d2e963">Ote</h3>
+<h3 id="ote">Ote</h3>
 
 <p>Excerpt from HTTP request test:</p>
 
@@ -477,7 +479,7 @@ test_resolvers: [192.168.1.1]
 
 <p><img src="/post/eeep-greek-censorship/eeep_otenet_gr.png" alt="Ote EEEP Blocked website screenshot" title="Ote EEEP Blocked website screenshot" /></p>
 
-<h2 id="cyta:d0c495f4479395eff703b25df5d2e963">Cyta</h2>
+<h2 id="cyta">Cyta</h2>
 
 <p>Excerpt from HTTP request test:</p>
 
@@ -704,7 +706,7 @@ webpage</a>. It is worth mentioning that
 Cyta uses a different user agent (UA) tag for user tracking purposes than on
 their <a href="http://www.cyta.gr">main website</a>.</p>
 
-<h3 id="wind:d0c495f4479395eff703b25df5d2e963">Wind</h3>
+<h3 id="wind">Wind</h3>
 
 <p>Excerpt from HTTP request test:</p>
 
@@ -915,7 +917,7 @@ request.&lt;/p&gt;
 
 <p>This ISP uses Etag for tracking users which try to visit the blocked content.</p>
 
-<h3 id="hol:d0c495f4479395eff703b25df5d2e963">HOL</h3>
+<h3 id="hol">HOL</h3>
 
 <p>This ISP has blocked 438 entries (100%) of the published <a href="http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf">blacklist</a>.</p>
 
@@ -983,7 +985,7 @@ test_resolvers: [192.168.122.1]
 
 <p><img src="/post/eeep-greek-censorship/eeepnotice_hol_gr.png" alt="HOL EEEP Blocked website screenshot" title="HOL EEEP Blocked website screenshot" /></p>
 
-<h3 id="cosmote:d0c495f4479395eff703b25df5d2e963">Cosmote</h3>
+<h3 id="cosmote">Cosmote</h3>
 
 <p>Excerpt from HTTP request test:</p>
 
@@ -1128,7 +1130,7 @@ href=\&quot;http://www.gamingcommission.gov.gr/index.php/el/\&quot;&gt;http://ww
 
 <p><img src="/post/eeep-greek-censorship/eeep_cosmote_gr.png" alt="Cosmote EEEP Blocked website screenshot" title="Cosmote EEEP Blocked website screenshot" /></p>
 
-<h3 id="vodafone:d0c495f4479395eff703b25df5d2e963">Vodafone</h3>
+<h3 id="vodafone">Vodafone</h3>
 
 <p>This ISP has blocked 425 entries (97.03%) of the published <a href="http://www.gamingcommission.gov.gr/images/Anakoinoseis/BlackList_EEEP_%2021022014.pdf">blacklist</a>.</p>
 
@@ -1235,7 +1237,7 @@ Location: http://1.2.3.50/ups/no_access_gambling.htm
 Connection: keep-alive
 </code></pre>
 
-<h3 id="wind-mobile:d0c495f4479395eff703b25df5d2e963">Wind mobile</h3>
+<h3 id="wind-mobile">Wind mobile</h3>
 
 <p>Excerpt from HTTP request test:</p>
 
@@ -1940,7 +1942,7 @@ width=\&quot;9%\&quot;&gt;&amp;nbsp;&lt;/td&gt;\r\
 
 <p>This ISP uses Etag for tracking users which try to visit the blocked content.</p>
 
-<h2 id="failure-on-mail-delivery:d0c495f4479395eff703b25df5d2e963">Failure on mail delivery</h2>
+<h2 id="failure-on-mail-delivery">Failure on mail delivery</h2>
 
 <p>Most ISPs have hijacked the DNS mail
 exchanger record(s) of the domain name of the EEEP blacklist. A MX record
@@ -1962,7 +1964,7 @@ restricting fair markets and business regulations, i.e a user trying to
 communicate with any business (all of the censored websites are businesses)
 would find himself not being able to perform an email delivery.</p>
 
-<h3 id="dns-mx-records-responses:d0c495f4479395eff703b25df5d2e963">DNS MX records responses:</h3>
+<h3 id="dns-mx-records-responses">DNS MX records responses:</h3>
 
 <p>The correct MX records of the censored domain names in example:</p>
 
@@ -1999,7 +2001,7 @@ would find himself not being able to perform an email delivery.</p>
 
 <p>The spoofed MX record responses of the ISPs.</p>
 
-<h4 id="forthnet-1:d0c495f4479395eff703b25df5d2e963">Forthnet</h4>
+<h4 id="forthnet-1">Forthnet</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; 770.com
 ;; Got answer:
@@ -2010,7 +2012,7 @@ would find himself not being able to perform an email delivery.</p>
 ;770.com.                       IN      MX
 </code></pre>
 
-<h4 id="ote-1:d0c495f4479395eff703b25df5d2e963">Ote</h4>
+<h4 id="ote-1">Ote</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; 770.com
 ;; Got answer:
@@ -2025,7 +2027,7 @@ would find himself not being able to perform an email delivery.</p>
 hostmaster.localhost. 2014030701 10800 3600 1814400 86400
 </code></pre>
 
-<h4 id="vodafone-1:d0c495f4479395eff703b25df5d2e963">Vodafone</h4>
+<h4 id="vodafone-1">Vodafone</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.9.5-4-Debian &lt;&lt;&gt;&gt; 888.com
 ;; Got answer:
@@ -2042,7 +2044,7 @@ hostmaster.localhost. 2014030701 10800 3600 1814400 86400
 root.iapetos.panafonet.gr. 2014180301 28800 7200 1209600 600
 </code></pre>
 
-<h4 id="cosmote-1:d0c495f4479395eff703b25df5d2e963">Cosmote</h4>
+<h4 id="cosmote-1">Cosmote</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.9.5-4-Debian &lt;&lt;&gt;&gt; 770.com
 ;; Got answer:
@@ -2059,7 +2061,7 @@ root.iapetos.panafonet.gr. 2014180301 28800 7200 1209600 600
 please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 </code></pre>
 
-<h4 id="cyta-1:d0c495f4479395eff703b25df5d2e963">Cyta</h4>
+<h4 id="cyta-1">Cyta</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.9.5-4-Debian &lt;&lt;&gt;&gt; 770.com
 ;; Got answer:
@@ -2076,7 +2078,7 @@ please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 900 604800 86400
 </code></pre>
 
-<h4 id="wind-mobile-1:d0c495f4479395eff703b25df5d2e963">Wind mobile</h4>
+<h4 id="wind-mobile-1">Wind mobile</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; 770.com
 ;; Got answer:
@@ -2091,7 +2093,7 @@ please_set_email.absolutely.nowhere. 4 10800 3600 2419200 900
 2013091901 14400 7200 604800 86400
 </code></pre>
 
-<h3 id="dns-a-records-resposnes:d0c495f4479395eff703b25df5d2e963">DNS A records resposnes</h3>
+<h3 id="dns-a-records-resposnes">DNS A records resposnes</h3>
 
 <p>The correct A records of the censored domain names in example:</p>
 
@@ -2136,7 +2138,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 
 <p>The spoofed A records entries of the ISPs:</p>
 
-<h4 id="forthnet-2:d0c495f4479395eff703b25df5d2e963">Forthnet</h4>
+<h4 id="forthnet-2">Forthnet</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; A 770.com
 ;; global options: +cmd
@@ -2151,7 +2153,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 770.com.                3600    IN      A       62.1.46.55
 </code></pre>
 
-<h4 id="ote-2:d0c495f4479395eff703b25df5d2e963">Ote</h4>
+<h4 id="ote-2">Ote</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; A box24casino.com
 ;; global options: +cmd
@@ -2166,7 +2168,7 @@ acelivecasino.com.  1799    IN  A   198.135.249.123
 box24casino.com.        86191   IN      A       83.235.64.20
 </code></pre>
 
-<h4 id="cyta-2:d0c495f4479395eff703b25df5d2e963">Cyta</h4>
+<h4 id="cyta-2">Cyta</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.9.5-4-Debian &lt;&lt;&gt;&gt; 770.com
 ;; global options: +cmd
@@ -2184,7 +2186,7 @@ box24casino.com.        86191   IN      A       83.235.64.20
 770.com.                86400   IN      A       78.87.2.91
 </code></pre>
 
-<h4 id="wind-1:d0c495f4479395eff703b25df5d2e963">Wind</h4>
+<h4 id="wind-1">Wind</h4>
 
 <pre><code>; &lt;&lt;&gt;&gt; DiG 9.8.4-rpz2+rl005.12-P1 &lt;&lt;&gt;&gt; A acelivecasino.com
 ;; global options: +cmd
@@ -2199,7 +2201,7 @@ box24casino.com.        86191   IN      A       83.235.64.20
 acelivecasino.com.      85963   IN      A       62.169.194.8
 </code></pre>
 
-<h1 id="corollary:d0c495f4479395eff703b25df5d2e963">Corollary</h1>
+<h1 id="corollary">Corollary</h1>
 
 <p>Throughout our technical report we highlighted flaws in the implementation of
 betting websites&rsquo; censorship. Nevertheless, we do not seek for a properly
@@ -2219,7 +2221,7 @@ a blocking-at-will strategy. Internet destinations may be accessible or not,
 while users have no reasoning about it. That would lead to deliberate abuse of
 citizens&rsquo; accessibility and view of the internet.</p>
 
-<h2 id="censorship-as-a-social-control-method:d0c495f4479395eff703b25df5d2e963">Censorship as a social control method.</h2>
+<h2 id="censorship-as-a-social-control-method">Censorship as a social control method.</h2>
 
 <p>Censorship is introduced as a top-down method to solve pathogenic social
 behaviours or phenomena. For example a state that censors a blog containing
@@ -2254,7 +2256,7 @@ globalized market of the internet.</p>
 users&rsquo; choices, manipulation of the market and suggests corruption is part of the
 public governance.</p>
 
-<h2 id="censorship-as-status-quo:d0c495f4479395eff703b25df5d2e963">Censorship as status quo</h2>
+<h2 id="censorship-as-status-quo">Censorship as status quo</h2>
 
 <p>If online censorship is widespread and accepted with little opposition as a way
 to implement a broad range of public policy issues, it becomes far harder to
@@ -2276,7 +2278,7 @@ societies and are a point of conflict in many countries worldwide.</p>
 to censorship tends to grow. More and more censorship will be used as a method to
 resolve problems or rather to enforce a certain type of approach to the problem.</p>
 
-<h2 id="censorship-s-side-effects:d0c495f4479395eff703b25df5d2e963">Censorship&rsquo;s side-effects</h2>
+<h2 id="censorship-s-side-effects">Censorship&rsquo;s side-effects</h2>
 
 <p>Censorship of some betting sites in Greece was implemented as a way to forbid
 residents of Greece to bet on websites that do not intend to pay taxes i.e. the
@@ -2292,9 +2294,9 @@ user&rsquo;s experience and communication.</p>
 or economic impact. Suppose a Greek resident would like to work as web developer to one
 of the blocked websites. Communicating with the owner company would be impossible.</p>
 
-<h1 id="ooni-data-per-isp:d0c495f4479395eff703b25df5d2e963">OONI data per ISP</h1>
+<h1 id="ooni-data-per-isp">OONI data per ISP</h1>
 
-<h2 id="raw-measurement-data-per-isp:d0c495f4479395eff703b25df5d2e963">Raw measurement data per ISP</h2>
+<h2 id="raw-measurement-data-per-isp">Raw measurement data per ISP</h2>
 
 <ul>
 <li>Forthnet:

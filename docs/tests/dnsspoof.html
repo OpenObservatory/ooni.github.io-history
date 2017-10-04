@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../index.html"/> 
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -39,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -58,7 +64,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.3.0-rc.1
               </div>
             
           
@@ -79,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -102,8 +111,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -112,23 +123,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Details</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Details</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/tests/dnsspoof.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/tests/dnsspoof.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -152,16 +180,16 @@
 <p><cite>ooniprobe nettests/manipulation/dns_spoof.py [-s] [-k] [-i] -r &lt;test resolver&gt; -h &lt;hostname&gt; -b IP:PORT</cite></p>
 <p><em>test resolver</em> is a single test resolver (IP address).
 <em>hostname</em> is the hostname to query.
-<em>IP:PORT</em> is the address of the known good &#8220;control&#8221; resolver.
-<em>-s, &#8211;ipsrc</em> Do <em>not</em> check if IP src and ICMP IP citation match
-<em>-k, &#8211;seqack</em> Check if TCP sequence number and ACK match in the ICMP citation
-<em>-i, &#8211;ipid</em> Check if the IPID matches when processing answers</p>
+<em>IP:PORT</em> is the address of the known good “control” resolver.
+<em>-s, –ipsrc</em> Do <em>not</em> check if IP src and ICMP IP citation match
+<em>-k, –seqack</em> Check if TCP sequence number and ACK match in the ICMP citation
+<em>-i, –ipid</em> Check if the IPID matches when processing answers</p>
 </div>
 <div class="section" id="sample-report">
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
 <p>From running:
 <cite>ooniprobe nettests/manipulation/dns_spoof.py -h torproject.org -r 4.2.2.2:53</cite></p>
-<div class="highlight-python"><div class="highlight"><pre>###########################################
+<div class="highlight-default"><div class="highlight"><pre><span></span>###########################################
 # OONI Probe Report for DNS Spoof test
 # Thu Dec  6 11:10:38 2012
 ###########################################
@@ -237,6 +265,9 @@ test_started: 1354810238.8703561
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -267,10 +298,11 @@ test_started: 1354810238.8703561
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.3.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

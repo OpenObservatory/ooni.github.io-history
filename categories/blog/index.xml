@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 May 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://ooni.torproject.org/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://ooni.torproject.org/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>OONI at the CryptoRave 2017</title>
@@ -15,34 +17,8 @@
       <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-cryptorave-2017/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://cryptorave.org/&#34;&gt;CryptoRave&lt;/a&gt; is a free, non-commercial and
-collectively funded 48 hour event featuring talks, workshops and activities
-related to security, privacy, anonymity, hacking and freedom of expression that
-attracts more that 2,500 people mainly from South America. The event took place
-in São Paulo, Brazil on 5th and 6th May 2017.&lt;/p&gt;
-
-&lt;p&gt;A number of people attended the OONI
-&lt;a href=&#34;https://cpa.cryptorave.org/pt-BR/CR2017/public/events/43&#34;&gt;presentation&lt;/a&gt; and
-&lt;a href=&#34;https://cpa.cryptorave.org/pt-BR/CR2017/public/events/112&#34;&gt;workshop&lt;/a&gt;
-(&amp;ldquo;Listatona&amp;rdquo;) that was co-organized with &lt;a href=&#34;https://www.codingrights.org/&#34;&gt;Coding Rights&lt;/a&gt;. During the workshop participants were able to
-better understand OONI&amp;rsquo;s testing methodology, and how ooniprobe performs
-network measurements. Participants provided useful feedback regarding
-&lt;a href=&#34;https://ooni.torproject.org/get-involved/contribute-test-lists/&#34;&gt;test-lists&lt;/a&gt;
-and URLs from diverse sources from South America.&lt;/p&gt;
-
-&lt;p&gt;Below we provide the OONI presentation slides in English and Portuguese.&lt;/p&gt;
-
-&lt;h2 id=&#34;ooni-presentation-slides:344274181f612aebb6f11cf4c4db9314&#34;&gt;OONI presentation slides&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/documents/cryptorave2017-slides/OONI-CryptoRave-2017-EN.pdf&#34;&gt;Slides in English language&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ooni.torproject.org/documents/cryptorave2017-slides/OONI-CryptoRave-2017-PT.pdf&#34;&gt;Slides in Portuguese language&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Thanks everyone for your attendance!&lt;/p&gt;
-</description>
+      <description>CryptoRave is a free, non-commercial and collectively funded 48 hour event featuring talks, workshops and activities related to security, privacy, anonymity, hacking and freedom of expression that attracts more that 2,500 people mainly from South America. The event took place in São Paulo, Brazil on 5th and 6th May 2017.
+A number of people attended the OONI presentation and workshop (&amp;ldquo;Listatona&amp;rdquo;) that was co-organized with Coding Rights. During the workshop participants were able to better understand OONI&amp;rsquo;s testing methodology, and how ooniprobe performs network measurements.</description>
     </item>
     
     <item>
@@ -51,82 +27,13 @@ and URLs from diverse sources from South America.&lt;/p&gt;
       <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/ooni-iff-rightscon/</guid>
-      <description>
-
-&lt;p&gt;Over the last month the &lt;a href=&#34;https://ooni.torproject.org/&#34;&gt;OONI&lt;/a&gt; team joined the internet
-freedom community at the following events:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/vietnam-cyber-dialogue/&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/&#34;&gt;Internet Freedom Festival (IFF)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/iran-cyber-dialogue-rightscon-brussels-2017-timely-impactful/&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;RightsCon 2017&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.journalismfestival.com/&#34;&gt;International Journalism Festival (IJF)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;These events provided us with the opportunity to engage with community members,
-create new friendships, learn about new projects, and to share skills and
-knowledge. We also had the opportunity to facilitate sessions that allowed us to
-collect feedback for the improvement of our
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;software&lt;/a&gt; and research
-methodologies.&lt;/p&gt;
-
-&lt;p&gt;Below we list the sessions that we (co-) facilitated as part of these events.&lt;/p&gt;
-
-&lt;h2 id=&#34;vietnam-cyber-dialogue-vcd:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;Vietnam Cyber Dialogue (VCD)&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;OONI skill-sharing session&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Measuring internet censorship in Vietnam&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;internet-freedom-festival-iff:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;Internet Freedom Festival (IFF)&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Investigating_internet_controls_with_OONI&#34;&gt;Investigating Internet Controls with OONI&lt;/a&gt; (&lt;a href=&#34;https://ooni.torproject.org/documents/iff17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://internetfreedomfestival.org/wiki/index.php/Building_Community_Resources_for_Censorship_Measurement_Research&#34;&gt;Building Community Resources for Censorship Measurement Research&lt;/a&gt; (co-facilitated with the &lt;a href=&#34;https://citizenlab.org/&#34;&gt;Citizen Lab&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;iran-cyber-dialogue-icd:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;Iran Cyber Dialogue (ICD)&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Measuring internet censorship in Iran&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;rightscon-2017:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;RightsCon 2017&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.accessnow.org/keepiton-summit-rightscon-brussels-program-schedule/&#34;&gt;Advances in measuring internet shutdowns&lt;/a&gt; (panel)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rightscon.org/&#34;&gt;Collecting evidence of internet censorship in Southeast Asia and beyond&lt;/a&gt; (co-
-facilitated with &lt;a href=&#34;http://sinarproject.org/&#34;&gt;Sinar Project&lt;/a&gt;), (&lt;a href=&#34;https://ooni.torproject.org/documents/rightscon17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Telling Data Driven Narratives About Internet Regulation and Access (facilitated
-by the &lt;a href=&#34;https://www.measurementlab.net/&#34;&gt;Measurement Lab&lt;/a&gt;, joined by OONI)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;international-journalism-festival-ijf:779d3e9425b5ce34ca742eee249d0a30&#34;&gt;International Journalism Festival (IJF)&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.journalismfestival.com/programme/2017/uncovering-internet-censorship-right-around-your-corner&#34;&gt;Uncovering Internet Censorship&lt;/a&gt;(&lt;a href=&#34;https://ooni.torproject.org/documents/ijf17-presentation.pdf&#34;&gt;slides&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you have any questions that we failed to adequately address in person or
-through our sessions, please don’t hesitate to
-&lt;a href=&#34;https://ooni.torproject.org/about/&#34;&gt;contact&lt;/a&gt; us.&lt;/p&gt;
-
-&lt;p&gt;Warm thanks from the OONI team to the organizers and participants of these
-events!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note: This post was updated on 11th April 2017 to include OONI&amp;rsquo;s presentation at
-the International Journalism Festival (IJF).&lt;/em&gt;&lt;/p&gt;
-</description>
+      <description>Over the last month the OONI team joined the internet freedom community at the following events:
+ Vietnam Cyber Dialogue (VCD)
+ Internet Freedom Festival (IFF)
+ Iran Cyber Dialogue (ICD)
+ RightsCon 2017
+ International Journalism Festival (IJF)
+  These events provided us with the opportunity to engage with community members, create new friendships, learn about new projects, and to share skills and knowledge. We also had the opportunity to facilitate sessions that allowed us to collect feedback for the improvement of our software and research methodologies.</description>
     </item>
     
     <item>
@@ -135,51 +42,11 @@ the International Journalism Festival (IJF).&lt;/em&gt;&lt;/p&gt;
       <pubDate>Thu, 08 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/belarus-fries-onion/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Country:&lt;/strong&gt; Belarus&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Probed ISPs:&lt;/strong&gt; Beltelecom (&lt;a href=&#34;https://stat.ripe.net/AS6697&#34;&gt;AS 6697&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Censorship method:&lt;/strong&gt; TCP injections&lt;/p&gt;
-
-&lt;p&gt;We have recently heard of &lt;a href=&#34;https://metrics.torproject.org/userstats-relay-country.html?start=2016-09-07&amp;amp;end=2016-12-06&amp;amp;country=by&amp;amp;events=points&#34;&gt;network anomalies in Belarus&lt;/a&gt;.
-Tor has been finally blocked in December 2016, although it had been explicitly
-declared that Tor should be blocked &lt;a href=&#34;https://meduza.io/en/news/2015/02/25/belarus-bans-tor&#34;&gt;since February 2015&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/belarus-fries-onion/userstats-relay-country-by-2016-09-07-2016-12-06-points.png&#34; alt=&#34;Directly connected users from Belarus&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;An anonymous cypherpunk has helped to gather some evidence regarding Tor
-being blocked in Belarus. It&amp;rsquo;s neither a complete study nor an in-depth
-research and it&amp;rsquo;s unclear if any other further evidence will be gathered, so we
-decided to share current knowledge as-is:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Tor directory authorities are not blocked&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Public&lt;/em&gt; onion routers have their ORPort blocked by TCP RST injection&lt;/li&gt;
-&lt;li&gt;The onion routers&amp;rsquo; DirPort is &lt;strong&gt;not&lt;/strong&gt; blocked&lt;/li&gt;
-&lt;li&gt;Plain-old non-obfuscated Tor Bridges from &lt;a href=&#34;https://bridges.torproject.org/&#34;&gt;BridgeDB&lt;/a&gt; circumvent the interference&lt;/li&gt;
-&lt;li&gt;Beltelecom (or its upstream) has strange configuration of the networking gear injecting reset packets&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;The strangeness in equipment is the following. The first injected RST packet does
-not have have proper SEQ/ACK numbers. These packet fields are just filled with
-zeroes. So this packet is dropped by the client&amp;rsquo;s TCP/IP stack per
-&lt;a href=&#34;https://tools.ietf.org/html/rfc5961&#34;&gt;RFC5961&lt;/a&gt; and does not actually terminate
-the client&amp;rsquo;s connection:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ tshark -Tfields -eframe.time_relative -eip.src -etcp.srcport -eip.dst -etcp.dstport \
-    -eip.ttl -etcp.flags.str -etcp.seq -etcp.ack -r urandom.pcap | sed | awk | perl
-0.000000   192.168.1.2 42555 87.118.94.227   443  64 **********S* 899897236  0
-0.029459 87.118.94.227   443   192.168.1.2 42555 125 *********R** 0          0 (sic!)
-0.096914 87.118.94.227   443   192.168.1.2 42555  52 *******A**S* 1984028404 899897237
-0.096958   192.168.1.2 42555 87.118.94.227   443  64 *******A**** 899897237  1984028405
-0.136874 87.118.94.227   443   192.168.1.2 42555 125 *********R** 1984028405 0
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That&amp;rsquo;s all for today. Remember, fried potato is better with onion!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://ooni.torproject.org/post/belarus-fries-onion/640px-Fried_potatoes.jpg&#34; alt=&#34;The Onion&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>Country: Belarus
+Probed ISPs: Beltelecom (AS 6697)
+Censorship method: TCP injections
+We have recently heard of network anomalies in Belarus. Tor has been finally blocked in December 2016, although it had been explicitly declared that Tor should be blocked since February 2015.
+An anonymous cypherpunk has helped to gather some evidence regarding Tor being blocked in Belarus. It&amp;rsquo;s neither a complete study nor an in-depth research and it&amp;rsquo;s unclear if any other further evidence will be gathered, so we decided to share current knowledge as-is:</description>
     </item>
     
     <item>
@@ -188,54 +55,8 @@ the client&amp;rsquo;s connection:&lt;/p&gt;
       <pubDate>Wed, 07 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/lepidopter/</guid>
-      <description>
-
-&lt;p&gt;The Open Observatory of Network Interference (OONI) team is happy to announce
-the beta release of ooniprobe&amp;rsquo;s distribution for Raspberry Pis, caĺled
-&lt;strong&gt;Lepidopter&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;What is Lepidopter&lt;/h2&gt;
-
-&lt;p&gt;Lepidopter is a Raspberry Pi distribution image with all the required
-dependencies and software packages in place, configured to run network
-measurement tests via the
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe&#34;&gt;ooniprobe&lt;/a&gt; software. It is
-developed and designed to require no physical attendance upon first bootstrap
-but also allows experienced users to further configure it as they wish. The
-&lt;a href=&#34;https://github.com/TheTorProject/lepidopter&#34;&gt;source code&lt;/a&gt; and the building
-scripts of the Lepidopter image are free and open source software.&lt;/p&gt;
-
-&lt;h2 id=&#34;why-use-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;Why use Lepidopter&lt;/h2&gt;
-
-&lt;p&gt;Since 2012 OONI has collected millions of network measurements that show
-evidence of internet censorship and network tampering. OONI measurement data
-&lt;a href=&#34;https://ooni.torproject.org/post/&#34;&gt;shows&lt;/a&gt; how ISPs filter and censor the internet.
-This wouldn&amp;rsquo;t be possible without the help of numerous volunteers that are
-contributing by running consistent ooniprobe network measurement tests from
-different vantage points. Up to now users needed to be technically savvy to
-maintain their own probes dealing with system configuration, software and
-measurement specific updates. Lepidopter makes it easier for people that have a
-Raspberry Pi and an SD card to be part of the OONI community and help us
-reveal, publish and document possible instances of network interference
-worldwide.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-to-obtain-lepidopter:7565a061641bd1e599d91e306fc304d1&#34;&gt;How to obtain Lepidopter&lt;/h2&gt;
-
-&lt;p&gt;Please refer to the &lt;a href=&#34;https://ooni.torproject.org/install/lepidopter/&#34;&gt;installation instructions&lt;/a&gt; where
-you can find a detailed guide on how to download, verify and install the latest
-Lepidopter image for a Raspberry Pi.&lt;/p&gt;
-
-&lt;h2 id=&#34;keep-in-touch:7565a061641bd1e599d91e306fc304d1&#34;&gt;Keep in touch&lt;/h2&gt;
-
-&lt;p&gt;We have recently created a mailing list for future and current probe operators
-to get in touch with us and receive regular updates regarding Lepidopter and
-other probe specific operations. You can subscribe to the mailing list by
-registering
-&lt;a href=&#34;https://lists.torproject.org/cgi-bin/mailman/listinfo/ooni-operators&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Find out about our regular community meetings, other mailing lists and how you
-can get involved &lt;a href=&#34;https://ooni.torproject.org/get-involved/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>The Open Observatory of Network Interference (OONI) team is happy to announce the beta release of ooniprobe&amp;rsquo;s distribution for Raspberry Pis, caĺled Lepidopter.
+What is Lepidopter Lepidopter is a Raspberry Pi distribution image with all the required dependencies and software packages in place, configured to run network measurement tests via the ooniprobe software. It is developed and designed to require no physical attendance upon first bootstrap but also allows experienced users to further configure it as they wish.</description>
     </item>
     
     <item>
@@ -244,130 +65,9 @@ can get involved &lt;a href=&#34;https://ooni.torproject.org/get-involved/&#34;&
       <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://ooni.torproject.org/post/web-connectivity/</guid>
-      <description>
-
-&lt;p&gt;Today the Open Observatory of Network Interference (OONI) is excited to be
-releasing a brand new test, called
-&lt;em&gt;&lt;a href=&#34;https://ooni.torproject.org/nettest/web-connectivity/&#34;&gt;Web Connectivity&lt;/a&gt;&lt;/em&gt;,
-which is designed to detect three different types of censorship: &lt;em&gt;DNS
-tampering&lt;/em&gt;, &lt;em&gt;TCP/IP blocking&lt;/em&gt; and &lt;em&gt;HTTP blocking&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;advantages-of-running-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;Advantages of running Web Connectivity&lt;/h2&gt;
-
-&lt;p&gt;This test allows us to see which websites are blocked and how, more accurately
-than ever before!&lt;/p&gt;
-
-&lt;p&gt;Previously we relied on running separate (http_request, dns_consistency and
-tcp_connect) tests with the aim of identifying various forms of censorship. We
-then had to correlate measurements across different tests to identify whether
-and how websites were blocked. This process was not only tedious, but it also
-led to more false positives.&lt;/p&gt;
-
-&lt;p&gt;Now with Web Connectivity we can test for various aspects of censorship all
-within one test! This not only enables us to identify which content is being
-blocked, but it also helps us pinpoint the exact reason of blocking. This is
-particularly useful because it makes the process of analyzing why a website is
-not reachable easier, faster and more accurate.&lt;/p&gt;
-
-&lt;p&gt;The heuristics used by Web Connectivity are also a bit more advanced. Contrary
-to previous tests, Web Connectivity allows us to clearly distinguish between
-censorship and accessibility, in the sense that we are able to determine whether
-a website is actually blocked, or if it is just (temporarily) down. Furthermore,
-collected measurements are no longer compared over Tor, because the
-discrimination of exit nodes (by CloudFlare, for example) led to many false
-positives. We now compare collected measurements over a control server which is
-less likely to be discriminated.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-web-connectivity-works:a4c2e0725252eec2345cb2757944668e&#34;&gt;How Web Connectivity works&lt;/h2&gt;
-
-&lt;p&gt;This test examines whether websites are blocked by performing the steps below
-&lt;em&gt;both&lt;/em&gt; over a control server and over the network of the user. The collected
-results are then compared with the aim of identifying whether and how tested
-websites are tampered with. If the compared results do &lt;em&gt;not&lt;/em&gt; match, then there
-is a sign of censorship.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;1. Resolver identification&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The domain name system (DNS) is what is responsible for transforming a host name
-(e.g. torproject.org) into an IP address (e.g. 38.229.72.16). Internet Service
-Providers (ISPs), amongst others, run DNS resolvers which map host names to IP
-addresses. In some circumstances though, ISPs map the requested host names to
-the wrong IP addresses, which is a form of tampering.&lt;/p&gt;
-
-&lt;p&gt;As a first step, the Web Connectivity test attempts to identify which DNS
-resolver is being used by the user. It does so by performing a DNS query to
-special domains (such as whoami.akamai.com) which will disclose the IP address
-of the resolver. This is an important step because it allows us to see if the
-user&amp;rsquo;s resolver is one that is unlikely to perform censorship (such as Google
-DNS), or that of a local ISP (which is more likely to perform censorship).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;2. DNS lookup&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Once the Web Connectivity test has identified the DNS resolver of the user, it
-then attempts to identify which addresses are mapped to the tested host names by
-the resolver. It does so by performing a DNS lookup, which asks the resolver to
-disclose which IP addresses are mapped to the tested host names, as well as
-which other host names are linked to the tested host names under DNS queries.&lt;/p&gt;
-
-&lt;p&gt;If the DNS responses (such as the IP addresses mapped to host names) do &lt;em&gt;not&lt;/em&gt;
-match when comparing those collected over the network of the user and over a
-control server, then there is a clear sign of DNS blocking.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;3. TCP connect&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The Web Connectivity test will then try to connect to the tested websites by
-attempting to establish a TCP session on port 80 (or port 443 for URLs that
-begin with HTTPS) for the list of IP addresses that were identified in the
-previous step (DNS lookup).&lt;/p&gt;
-
-&lt;p&gt;If a TCP session to connect to websites was &lt;em&gt;not&lt;/em&gt; established over the network
-of the user, then those websites are probably blocked.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;4. HTTP GET request&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;As the Web Connectivity test connects to tested websites (through the previous
-step), it sends requests through the HTTP protocol to the servers which are
-hosting those websites. A server normally responds to an HTTP GET request with
-the content of the webpage that is requested.&lt;/p&gt;
-
-&lt;p&gt;However, the requested websites are most likely blocked if the HTTP request over
-the user&amp;rsquo;s network failed, or the HTTP status codes don&amp;rsquo;t match, or all of the
-following apply:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The body length of compared websites (over the control server and the network
-of the user) differs by some percentage&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The HTTP headers names do not match&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;The HTML title tags do not match&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;how-to-run-web-connectivity:a4c2e0725252eec2345cb2757944668e&#34;&gt;How to run Web Connectivity&lt;/h2&gt;
-
-&lt;p&gt;If you&amp;rsquo;ve ever run OONI tests before, then you&amp;rsquo;re probably familiar with
-&lt;code&gt;oonideckgen&lt;/code&gt;: OONI&amp;rsquo;s software suite which includes multiple tests. Now
-Web Connectivity has been added to oonideckgen, replacing the previous
-http_request and dns_consistency tests (which are included in Web Connectivity
-anyway).&lt;/p&gt;
-
-&lt;p&gt;You can run Web Connectivity by either running &lt;code&gt;oonideckgen&lt;/code&gt; or by simply
-running the following command with a file containing a list of URLs to test
-(this can either be 1 URL per line or a CSV from the
-&lt;a href=&#34;https://github.com/citizenlab/test-lists/tree/master/lists&#34;&gt;citizenlab test-lists repository&lt;/a&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe blocking/web_connectivity -f ~/.ooni/resources/citizenlab-test-lists/global.csv&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;or by testing your URL of choice:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;ooniprobe blocking/web_connectivity --url http://torproject.org/&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Learn more about how to run OONI tests (and their associated
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-spec/blob/master/informed-consent/risks.md&#34;&gt;risks&lt;/a&gt;)
-&lt;a href=&#34;https://github.com/TheTorProject/ooni-probe#ooni-in-5-minutes&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Happy testing!&lt;/p&gt;
-</description>
+      <description>Today the Open Observatory of Network Interference (OONI) is excited to be releasing a brand new test, called Web Connectivity, which is designed to detect three different types of censorship: DNS tampering, TCP/IP blocking and HTTP blocking.
+Advantages of running Web Connectivity This test allows us to see which websites are blocked and how, more accurately than ever before!
+Previously we relied on running separate (http_request, dns_consistency and tcp_connect) tests with the aim of identifying various forms of censorship.</description>
     </item>
     
   </channel>

@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width"/>
   
   <title>OONI - Internet Censorship in Iran: Network Measurement Findings from 2014-2017</title>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/master.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/event.css"/>
-    <link rel="stylesheet" href="https://ooni.torproject.org//css/fonts.css"/>
-  <link rel="stylesheet" href="https://ooni.torproject.org//css/highlight-default.min.css">
-  <link rel="icon" type="image/png" href="https://ooni.torproject.org//images/favicon.png"/>
-  <script src="https://ooni.torproject.org//js/highlight.min.js"></script>
-  <script src="https://ooni.torproject.org//js/zepto.min.js"></script>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/master.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/event.css"/>
+    <link rel="stylesheet" href="https://ooni.torproject.org/css/fonts.css"/>
+  <link rel="stylesheet" href="https://ooni.torproject.org/css/highlight-default.min.css">
+  <link rel="icon" type="image/png" href="https://ooni.torproject.org/images/favicon.png"/>
+  <script src="https://ooni.torproject.org/js/highlight.min.js"></script>
+  <script src="https://ooni.torproject.org/js/zepto.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/ooni-run/dist/widgets.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 	
@@ -49,22 +49,24 @@
       
 
 
-<a href="https://ooni.torproject.org//about/"
+<a href="https://ooni.torproject.org/about/"
   
   >About</a>
-<a href="https://ooni.torproject.org//install/"
+<a href="https://ooni.torproject.org/install/"
   
   >Install</a>
-<a href="https://ooni.torproject.org//nettest/"
+<a href="https://ooni.torproject.org/nettest/"
   
   >Tests</a>
-<a href="https://ooni.torproject.org//data/"
+<a href="https://ooni.torproject.org/data/"
   
   >Data</a>
-<a href="https://ooni.torproject.org//get-involved/"
+<a href="https://ooni.torproject.org/get-involved/"
   
   >Get Involved</a>
-<a href="https://ooni.torproject.org//post/"
+<a href="https://ooni.torproject.org/post/"
+  
+   class="active"
   
    >Blog</a>
 
@@ -189,7 +191,7 @@ AS59587, AS59628, AS60054, AS61173, AS61248, AS8571 (60 ISPs in total)</p>
 <p><strong>Censorship method:</strong> DNS injection of blockpages, HTTP transparent
 proxies serving blockpages</p>
 
-<h1 id="key-findings:f1218fe3ac20f18e57db6cd0e1062b10">Key Findings</h1>
+<h1 id="key-findings">Key Findings</h1>
 
 <p>Thousands of <a href="https://measurements.ooni.torproject.org/files/by_country/IR">ooniprobe network measurements</a>
 collected from 60 local networks across Iran over the last three years
@@ -264,7 +266,7 @@ IP addresses originating from Iran, in compliance with <a href="https://dns.nort
 which uses Google App Engine (GAE), was likewise <a href="https://explorer.ooni.torproject.org/measurement/20170612T031742Z_AS16322_Gg0hUk9p5DTeHdBDj0jy7vywseo6RK4JgfPt4CtRgHEgZvKsHl?input=https:%2F%2Fwww.virustotal.com">inaccessible</a>
 because Google blocks access to GAE from Iran.</p>
 
-<h1 id="introduction:f1218fe3ac20f18e57db6cd0e1062b10">Introduction</h1>
+<h1 id="introduction">Introduction</h1>
 
 <p>This study is part of an ongoing effort to monitor internet censorship
 in Iran and in <a href="https://explorer.ooni.torproject.org/world/">more than 200 other countries</a> around the
@@ -285,9 +287,9 @@ to freedom of expression, as well as about cases of censorship that have
 previously been reported in the country. The remainder of the report
 documents the methodology and key findings of this study.</p>
 
-<h1 id="background:f1218fe3ac20f18e57db6cd0e1062b10">Background</h1>
+<h1 id="background">Background</h1>
 
-<h2 id="network-landscape:f1218fe3ac20f18e57db6cd0e1062b10">Network landscape</h2>
+<h2 id="network-landscape">Network landscape</h2>
 
 <p>Iran’s internet landscape is characterised by an infrastructure of
 control (see page 8-10 of the Open Net Initiative’s (ONI) <a href="https://opennet.net/sites/opennet.net/files/iranreport.pdf">After the Green Movement</a>
@@ -455,7 +457,7 @@ hidden network only reachable within Iran. Moreover, the research found
 that records such as DNS entries suggest that servers are assigned both
 domestic IP addresses and global ones.</p>
 
-<h2 id="internet-use:f1218fe3ac20f18e57db6cd0e1062b10">Internet use</h2>
+<h2 id="internet-use">Internet use</h2>
 
 <p>According to recent statistics
 <a href="http://www.isna.ir/news/96062816523/%D8%AC%D8%AF%DB%8C%D8%AF%D8%AA%D8%B1%DB%8C%D9%86-%D8%A2%D9%85%D8%A7%D8%B1-%D8%A7%D8%B2-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86-%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D9%87%D9%85%D8%B1%D8%A7%D9%87-%D8%AF%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86">published</a>
@@ -490,7 +492,7 @@ participants reported that they use Telegram the most (80%), while
 Instagram is used more than 40%, Facebook over 10% and Twitter more than
 5% as frequently.</p>
 
-<h2 id="legal-environment:f1218fe3ac20f18e57db6cd0e1062b10">Legal environment</h2>
+<h2 id="legal-environment">Legal environment</h2>
 
 <p>This section explores the Iranian laws pertaining to freedom of
 expression and the press, via an analysis of three key legal documents:
@@ -683,7 +685,7 @@ penal code, and the press laws aim to restrict these values based on
 vague and often arbitrary principles meant to shield ‘Islam’ or
 ‘national security’, with very little regard to proportionality.</p>
 
-<h2 id="reported-cases-of-internet-censorship:f1218fe3ac20f18e57db6cd0e1062b10">Reported cases of internet censorship</h2>
+<h2 id="reported-cases-of-internet-censorship">Reported cases of internet censorship</h2>
 
 <p>Iran’s censorship system is one of the most sophisticated in the world.
 Over the years, since the introduction of the internet in Iran, the
@@ -767,7 +769,7 @@ gave a year to applications such as Telegram to either comply with
 authorities, and bring all data for Iranian users into the country (with
 possibly government oversight) or face censorship.</p>
 
-<h1 id="methodology-measuring-internet-censorship-in-iran:f1218fe3ac20f18e57db6cd0e1062b10">Methodology: Measuring internet censorship in Iran</h1>
+<h1 id="methodology-measuring-internet-censorship-in-iran">Methodology: Measuring internet censorship in Iran</h1>
 
 <p>The results of this study are based on a three phase process:</p>
 
@@ -794,7 +796,7 @@ internet censorship and traffic manipulation.</p>
 <p>This study analyzes network measurement data collected from Iran between
 22nd September 2014 to 4th September 2017.</p>
 
-<h2 id="review-of-the-citizen-lab-s-test-list-for-iran:f1218fe3ac20f18e57db6cd0e1062b10">Review of the Citizen Lab’s test list for Iran</h2>
+<h2 id="review-of-the-citizen-lab-s-test-list-for-iran">Review of the Citizen Lab’s test list for Iran</h2>
 
 <p>An important part of identifying censorship is determining <em>which</em>
 websites to examine for blocking.</p>
@@ -837,7 +839,7 @@ limited to the websites that were tested, and do not provide a complete
 view of other censorship events that may have occurred during the
 testing period.</p>
 
-<h2 id="ooni-network-measurement-testing:f1218fe3ac20f18e57db6cd0e1062b10">OONI network measurement testing</h2>
+<h2 id="ooni-network-measurement-testing">OONI network measurement testing</h2>
 
 <p>Since 2012, OONI has developed multiple <a href="https://github.com/TheTorProject/ooni-probe">free and open source software tests</a> designed to
 measure the following:</p>
@@ -887,7 +889,7 @@ tested networks.</p>
 <p>The sections below document how each of these tests measure internet
 censorship and traffic manipulation.</p>
 
-<h3 id="web-connectivity-test:f1218fe3ac20f18e57db6cd0e1062b10">Web Connectivity test</h3>
+<h3 id="web-connectivity-test">Web Connectivity test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/web_connectivity.py">test</a>
@@ -991,7 +993,7 @@ tested websites serve different content depending on the country that
 the user is connecting from, or in the cases when websites return
 failures even though they are not tampered with.</p>
 
-<h3 id="http-invalid-request-line-test:f1218fe3ac20f18e57db6cd0e1062b10">HTTP Invalid Request Line test</h3>
+<h3 id="http-invalid-request-line-test">HTTP Invalid Request Line test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/manipulation/http_invalid_request_line.py">test</a>
@@ -1029,7 +1031,7 @@ request lines like the ones of this test. Furthermore, the presence of a
 middle box is not necessarily indicative of traffic manipulation, as
 they are often used in networks for caching purposes.</p>
 
-<h3 id="http-header-field-manipulation-test:f1218fe3ac20f18e57db6cd0e1062b10">HTTP Header Field Manipulation test</h3>
+<h3 id="http-header-field-manipulation-test">HTTP Header Field Manipulation test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/manipulation/http_header_field_manipulation.py">test</a>
@@ -1070,7 +1072,7 @@ receives them. Furthermore, the presence of a middle box is not
 necessarily indicative of traffic manipulation, as they are often used
 in networks for caching purposes.</p>
 
-<h3 id="vanilla-tor-test:f1218fe3ac20f18e57db6cd0e1062b10">Vanilla Tor test</h3>
+<h3 id="vanilla-tor-test">Vanilla Tor test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/vanilla_tor.py">test</a>
@@ -1085,7 +1087,7 @@ reachable from the vantage point of the user. But if the test does not
 manage to establish a connection, then the Tor network is likely blocked
 within the tested network.</p>
 
-<h3 id="whatsapp-test:f1218fe3ac20f18e57db6cd0e1062b10">WhatsApp test</h3>
+<h3 id="whatsapp-test">WhatsApp test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/whatsapp.py">test</a>
@@ -1123,7 +1125,7 @@ allocated to web.whatsapp.com;</p></li>
 response to OONI’s servers.</p></li>
 </ul>
 
-<h3 id="facebook-messenger-test:f1218fe3ac20f18e57db6cd0e1062b10">Facebook Messenger test</h3>
+<h3 id="facebook-messenger-test">Facebook Messenger test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/facebook_messenger.py">test</a>
@@ -1142,7 +1144,7 @@ or both of the following apply:</p>
 addresses allocated to Facebook.</p></li>
 </ul>
 
-<h3 id="telegram-test:f1218fe3ac20f18e57db6cd0e1062b10">Telegram test</h3>
+<h3 id="telegram-test">Telegram test</h3>
 
 <p>This
 <a href="https://github.com/TheTorProject/ooni-probe/blob/master/ooni/nettests/blocking/telegram.py">test</a>
@@ -1175,7 +1177,7 @@ apply:</p>
 consistent response to OONI’s servers.</li>
 </ul>
 
-<h2 id="data-analysis:f1218fe3ac20f18e57db6cd0e1062b10">Data analysis</h2>
+<h2 id="data-analysis">Data analysis</h2>
 
 <p>The OONI <a href="https://github.com/TheTorProject/ooni-pipeline">data pipeline</a> processes
 measurements, including the following types of data:</p>
@@ -1311,7 +1313,7 @@ networks for caching purposes.</p>
 its data analysis heuristics, based on which it attempts to accurately
 identify censorship events.</p>
 
-<h1 id="findings:f1218fe3ac20f18e57db6cd0e1062b10">Findings</h1>
+<h1 id="findings">Findings</h1>
 
 <p>Thousands of network measurements
 <a href="https://measurements.ooni.torproject.org/files/by_country/IR">collected</a>
@@ -1392,7 +1394,7 @@ study. We encourage researchers to explore the <a href="https://measurements.oon
 additional analysis on interesting findings that we have not highlighted
 in the following sections.</p>
 
-<h2 id="blocked-domains-and-tools:f1218fe3ac20f18e57db6cd0e1062b10">Blocked domains and tools</h2>
+<h2 id="blocked-domains-and-tools">Blocked domains and tools</h2>
 
 <p>The levels of internet censorship in Iran are pervasive since a variety
 of different types of sites were <a href="/post/iran/ir-blocked-urls.csv">found to be blocked</a>, expanding beyond
@@ -1449,7 +1451,7 @@ down, or because the domains are squatted.</p>
 and tools. Many more types of domains have also been blocked, all of
 which can be found <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="news-websites:f1218fe3ac20f18e57db6cd0e1062b10">News websites</h3>
+<h3 id="news-websites">News websites</h3>
 
 <p>As part of this study, we found <strong>121 news outlets</strong> to be blocked
 across Iran over the last three years. These include internationally
@@ -1542,7 +1544,7 @@ against the government.</p>
 
 <p>All news outlets found to be blocked in Iran can be found <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="political-criticism:f1218fe3ac20f18e57db6cd0e1062b10">Political criticism</h3>
+<h3 id="political-criticism">Political criticism</h3>
 
 <p>Opposition sites, pro-democracy sites and blogs expressing political
 criticism were found to be blocked in Iran over the last three years.</p>
@@ -1668,7 +1670,7 @@ a means of hiding government responsibility.</p>
 <p>All sites expressing political criticism that were found to be blocked
 in Iran can be found <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="human-rights-issues:f1218fe3ac20f18e57db6cd0e1062b10">Human rights issues</h3>
+<h3 id="human-rights-issues">Human rights issues</h3>
 
 <p>Numerous sites that discuss human rights violations and defend human
 rights were found to be blocked in Iran. These include sites specific to
@@ -1915,7 +1917,7 @@ and
 
 <p>All human rights sites found to be blocked in Iran can be viewed <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="communication-tools:f1218fe3ac20f18e57db6cd0e1062b10">Communication Tools</h3>
+<h3 id="communication-tools">Communication Tools</h3>
 
 <p>Facebook Messenger was found to be <a href="https://explorer.ooni.torproject.org/measurement/20170904T004807Z_AS44244_hTmlTpcncdzFBKkjI00ChqyuDLbFTz4GtokG7GBvQtcT9VYfhY">blocked in Iran by means of DNS tampering</a>.
 This was revealed by <a href="https://ooni.torproject.org/nettest/facebook-messenger/">OONI’s Facebook Messenger test</a>, which
@@ -1944,7 +1946,7 @@ were found to be accessible in Iran throughout the testing period.</p>
 <p>All communication tool sites (excluding apps) found to be blocked in
 Iran can be viewed <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="social-networks:f1218fe3ac20f18e57db6cd0e1062b10">Social Networks</h3>
+<h3 id="social-networks">Social Networks</h3>
 
 <p>Multiple social networking sites were found to be blocked in Iran over
 the last three years. Some of the most popular social networks
@@ -1973,7 +1975,7 @@ disputed since the providers served blockpages.</p>
 <p>All social networking sites found to be blocked in Iran can be viewed
 <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="media-sharing-platforms:f1218fe3ac20f18e57db6cd0e1062b10">Media sharing platforms</h3>
+<h3 id="media-sharing-platforms">Media sharing platforms</h3>
 
 <p>Internet censorship in Iran also targets online platforms that share
 videos and images, amongst other forms of media. Some internationally
@@ -2008,7 +2010,7 @@ hosted on HTTPS).</p>
 
 <p>All media sharing sites found to be blocked in Iran can be viewed <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h3 id="anonymity-and-circumvention-tools:f1218fe3ac20f18e57db6cd0e1062b10">Anonymity and circumvention tools</h3>
+<h3 id="anonymity-and-circumvention-tools">Anonymity and circumvention tools</h3>
 
 <p>Circumventing internet censorship in Iran can be quite challenging,
 particularly since we found numerous circumvention tools to be blocked.</p>
@@ -2110,7 +2112,7 @@ likely explaining the motivation behind their blocking.</p>
 <p>All anonymity and circumvention tool sites found to be blocked in Iran
 can be viewed <a href="/post/iran/ir-blocked-domains.csv">here</a>.</p>
 
-<h2 id="block-me-block-me-not-block-me:f1218fe3ac20f18e57db6cd0e1062b10">Block Me, Block Me Not, Block Me</h2>
+<h2 id="block-me-block-me-not-block-me">Block Me, Block Me Not, Block Me</h2>
 
 <p>Internet censorship in Iran appears to be <strong>non-deterministic</strong>. In
 multiple occasions, we found Iranian ISPs to be blocking sites, lifting
@@ -2537,7 +2539,7 @@ to be accessible.</p>
 to be flipping between blocking and unblocking sites and services.
 The full database of such cases can be found <a href="/post/iran/ir-blocked-not-blocked-urls.csv">here</a>.</p>
 
-<h2 id="non-governmental-forms-of-internet-censorship:f1218fe3ac20f18e57db6cd0e1062b10">Non-governmental forms of internet censorship</h2>
+<h2 id="non-governmental-forms-of-internet-censorship">Non-governmental forms of internet censorship</h2>
 
 <p>The government is not the only source of internet censorship in Iran.</p>
 
@@ -2594,7 +2596,7 @@ country. This has been <a href="https://groups.google.com/forum/#!topic/google-a
 and, similarly to Norton and GraphicRiver, Google blocks access to GAE
 from Iran in compliance with U.S. export laws.</p>
 
-<h2 id="acknowledgement-of-limitations:f1218fe3ac20f18e57db6cd0e1062b10">Acknowledgement of limitations</h2>
+<h2 id="acknowledgement-of-limitations">Acknowledgement of limitations</h2>
 
 <p>The findings of this study present various limitations.</p>
 
@@ -2626,7 +2628,7 @@ from certain vantage points throughout the testing period, but less
 stable measurements were also collected from a number of other vantage
 points.</p>
 
-<h1 id="conclusion:f1218fe3ac20f18e57db6cd0e1062b10">Conclusion</h1>
+<h1 id="conclusion">Conclusion</h1>
 
 <p>This study reveals and confirms censorship events in Iran through the
 analysis of <a href="https://measurements.ooni.torproject.org/files/by_country/IR">thousands of network measurements</a>
@@ -2655,7 +2657,7 @@ controls</strong> in Iran.</p>
 <li><p><strong>Internet censorship in Iran appears to reinforce geopolitical dynamics of power.</strong> Over the last century, there has been an ongoing <a href="https://web.archive.org/web/20120615011857/http://government.arts.cornell.edu/assets/psac/sp09/Smith_Kurdish_Separatism_Feb09_PSAC.pdf">separatist dispute</a> between the Kurdish opposition in western Iran and the Iranian government. According to <a href="https://www.amnesty.org/en/press-releases/2008/07/iran-end-discrimination-against-kurdish-minority-20080730/">Amnesty International</a>, many Kurdish human rights defenders, community activists and journalists have faced arbitrary arrests and prosecution. The blocking of numerous Kurdish sites, including <a href="https://explorer.ooni.torproject.org/measurement/20170904T034357Z_AS44244_tzAvg8gW5NamMwMUsVje7zudbDz1AkyFzCe3A4evLHXoYMFztM?input=http:%2F%2Fkurdistanpress.com">news outlets</a> and <a href="https://explorer.ooni.torproject.org/measurement/20170829T230553Z_AS16322_FzDNrDAXLoliG9WJQdIRlSWUvWRSH7hErmPzUgGaNKTqqQ8YLa?input=http:%2F%2Fwww.khrp.org">human rights sites</a>, appears to be a politically motivated decision.</p></li>
 </ol>
 
-<h1 id="acknowledgements:f1218fe3ac20f18e57db6cd0e1062b10">Acknowledgements</h1>
+<h1 id="acknowledgements">Acknowledgements</h1>
 
 <p>We thank all the anonymous volunteers in Iran who have run and continue
 to run ooniprobe, thus making this research possible.</p>

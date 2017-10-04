@@ -8,9 +8,11 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation</title>
+  <title>Details &mdash; OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation</title>
   
 
+  
+  
   
   
 
@@ -30,7 +32,10 @@
   
 
   
-    <link rel="top" title="OONI: Open Observatory of Network Interference 2.0.0-rc.4.dev documentation" href="../index.html"/> 
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="OONI: Open Observatory of Network Interference 2.3.0-rc.1 documentation" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -39,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -58,7 +64,7 @@
             
             
               <div class="version">
-                2.0.0-rc.4.dev
+                2.3.0-rc.1
               </div>
             
           
@@ -79,7 +85,10 @@
           
             
             
-                <ul>
+              
+            
+            
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_tests.html">Writing OONI tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../writing_test_helpers.html">Writing Test Helpers</a></li>
@@ -102,8 +111,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OONI: Open Observatory of Network Interference</a>
+        
       </nav>
 
 
@@ -112,23 +123,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Details</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Details</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/tests/meek_fronted_requests.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/tests/meek_fronted_requests.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -146,8 +174,8 @@
 <div class="section" id="description">
 <h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
 <p>Performs a HTTP GET request to a list of fronted domains with the Host
-Header of the &#8220;inside&#8221; meek-server. The meek-server handles a GET request and
-response with: &#8220;I’m just a happy little web server.n&#8221;.</p>
+Header of the “inside” meek-server. The meek-server handles a GET request and
+response with: “I’m just a happy little web server.n”.</p>
 <p>It tests if the fronted request/response to the meek server is successful.</p>
 </div>
 <div class="section" id="how-to-run-the-test">
@@ -160,21 +188,21 @@ response with: &#8220;I’m just a happy little web server.n&#8221;.</p>
 </div>
 <div class="section" id="optional-test-options">
 <h1>Optional test options<a class="headerlink" href="#optional-test-options" title="Permalink to this headline">¶</a></h1>
-<p><em>-B</em> Expected body content from GET response (meek server default: &#8216;I’m just a
-happy little web server.n&#8217;)
+<p><em>-B</em> Expected body content from GET response (meek server default: ‘I’m just a
+happy little web server.n’)
 <em>-D</em> Specify a single fronted domainName to test.
-<em>-H</em> Specify &#8220;inside&#8221; Host Header to test.</p>
+<em>-H</em> Specify “inside” Host Header to test.</p>
 </div>
 <div class="section" id="sample-report">
 <h1>Sample report<a class="headerlink" href="#sample-report" title="Permalink to this headline">¶</a></h1>
 <p><cite>ooniprobe blocking/meek_fronted_requests</cite></p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c1">###########################################</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">###########################################</span>
 <span class="c1"># OONI Probe Report for meek_fronted_requests_test (0.0.1)</span>
 <span class="c1"># Thu Oct 15 22:01:32 2015</span>
 <span class="c1">###########################################</span>
 </pre></div>
 </div>
-<p>&#8212;
+<p>—
 input_hashes: []
 options: []
 probe_asn: AS20676
@@ -188,8 +216,8 @@ start_time: 1444932091.0
 test_helpers: {}
 test_name: meek_fronted_requests_test
 test_version: 0.0.1
-...
-&#8212;
+…
+—
 agent: agent
 input: [a0.awsstatic.com, d2zfqthxsdq309.cloudfront.net]
 requests:
@@ -210,13 +238,13 @@ url: <a class="reference external" href="https://a0.awsstatic.com">https://a0.aw
 </div></blockquote>
 <dl class="docutils">
 <dt>response:</dt>
-<dd><p class="first">body: &#8220;Iu2019m just a happy little web server.n&#8221;
+<dd><p class="first">body: “Iu2019m just a happy little web server.n”
 code: 200
 headers:
 - - Content-Length</p>
 <blockquote>
 <div><ul class="simple">
-<li>[&#8216;38&#8217;]</li>
+<li>[‘38’]</li>
 </ul>
 </div></blockquote>
 <ul class="last simple">
@@ -232,7 +260,7 @@ headers:
 </li>
 <li><ul class="first">
 <li>Age</li>
-<li>[&#8216;530&#8217;]</li>
+<li>[‘530’]</li>
 </ul>
 </li>
 <li><ul class="first">
@@ -247,7 +275,7 @@ headers:
 </li>
 <li><ul class="first">
 <li>Date</li>
-<li>[&#8216;Thu, 15 Oct 2015 19:52:47 GMT&#8217;]</li>
+<li>[‘Thu, 15 Oct 2015 19:52:47 GMT’]</li>
 </ul>
 </li>
 <li><ul class="first">
@@ -263,8 +291,8 @@ headers:
 success: true
 test_runtime: 0.3198120594024658
 test_start_time: 1444932097.0
-...
-&#8212;
+…
+—
 agent: agent
 input: [ajax.aspnetcdn.com, az668014.vo.msecnd.net]
 requests:
@@ -285,19 +313,19 @@ url: <a class="reference external" href="https://ajax.aspnetcdn.com">https://aja
 </div></blockquote>
 <dl class="docutils">
 <dt>response:</dt>
-<dd><p class="first">body: &#8220;Iu2019m just a happy little web server.n&#8221;
+<dd><p class="first">body: “Iu2019m just a happy little web server.n”
 code: 200
 headers:
 - - Date</p>
 <blockquote>
 <div><ul class="simple">
-<li>[&#8216;Thu, 15 Oct 2015 20:01:37 GMT&#8217;]</li>
+<li>[‘Thu, 15 Oct 2015 20:01:37 GMT’]</li>
 </ul>
 </div></blockquote>
 <ul class="last simple">
 <li><ul class="first">
 <li>Content-Length</li>
-<li>[&#8216;38&#8217;]</li>
+<li>[‘38’]</li>
 </ul>
 </li>
 <li><ul class="first">
@@ -323,10 +351,13 @@ headers:
 success: true
 test_runtime: 0.4580512046813965
 test_start_time: 1444932097.0
-...</p>
+…</p>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -358,10 +389,11 @@ test_start_time: 1444932097.0
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'2.0.0-rc.4.dev',
+            VERSION:'2.3.0-rc.1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
