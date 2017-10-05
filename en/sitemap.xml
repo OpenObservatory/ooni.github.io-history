@@ -12,6 +12,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/post/internet-censorship-catalonia-independence-referendum/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="en"
                 href="https://ooni.torproject.org/post/internet-censorship-catalonia-independence-referendum/"
                 />
@@ -290,6 +295,11 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/tags/catalonia/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/tags/catalonia/"
                 />
@@ -306,13 +316,18 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
-                href="https://ooni.torproject.org/pt/categories/"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ooni.torproject.org/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -325,6 +340,11 @@
     <loc>https://ooni.torproject.org/tags/censorship/</loc>
     <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/tags/censorship/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -552,13 +572,18 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
-                href="https://ooni.torproject.org/pt/"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ooni.torproject.org/pt/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -591,13 +616,18 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
-                href="https://ooni.torproject.org/pt/post/"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/post/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ooni.torproject.org/pt/post/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -634,13 +664,18 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
-                href="https://ooni.torproject.org/pt/categories/report/"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/categories/report/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/categories/report/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ooni.torproject.org/pt/categories/report/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -673,13 +708,18 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
-                hreflang="pt"
-                href="https://ooni.torproject.org/pt/tags/"
+                hreflang="es"
+                href="https://ooni.torproject.org/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="https://ooni.torproject.org/pt/tags/"
                 />
     <xhtml:link
                 rel="alternate"
