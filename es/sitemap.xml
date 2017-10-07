@@ -33,6 +33,11 @@
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/tags/catalonia/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="fr"
                 href="https://ooni.torproject.org/fr/tags/catalonia/"
                 />
@@ -40,11 +45,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ooni.torproject.org/tags/catalonia/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/tags/catalonia/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -56,6 +56,11 @@
   <url>
     <loc>https://ooni.torproject.org/es/categories/</loc>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/categories/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -73,11 +78,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="es"
                 href="https://ooni.torproject.org/es/categories/"
                 />
@@ -87,6 +87,11 @@
     <loc>https://ooni.torproject.org/es/tags/censorship/</loc>
     <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/tags/censorship/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -99,11 +104,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/tags/censorship/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="es"
                 href="https://ooni.torproject.org/es/tags/censorship/"
                 />
@@ -113,6 +113,11 @@
     <loc>https://ooni.torproject.org/es/</loc>
     <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -130,11 +135,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="es"
                 href="https://ooni.torproject.org/es/"
                 />
@@ -144,6 +144,11 @@
     <loc>https://ooni.torproject.org/es/post/</loc>
     <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/post/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -161,11 +166,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/post/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="es"
                 href="https://ooni.torproject.org/es/post/"
                 />
@@ -175,6 +175,11 @@
     <loc>https://ooni.torproject.org/es/categories/report/</loc>
     <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/categories/report/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -192,11 +197,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/categories/report/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="es"
                 href="https://ooni.torproject.org/es/categories/report/"
                 />
@@ -206,6 +206,11 @@
     <loc>https://ooni.torproject.org/es/tags/</loc>
     <lastmod>2017-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ca"
+                href="https://ooni.torproject.org/ca/tags/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -220,11 +225,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://ooni.torproject.org/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ca"
-                href="https://ooni.torproject.org/ca/tags/"
                 />
     <xhtml:link
                 rel="alternate"
