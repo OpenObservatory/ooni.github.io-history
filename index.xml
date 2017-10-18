@@ -6,10 +6,32 @@
     <description>Recent content on OONI: Open Observatory of Network Interference</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ooni.torproject.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Internet Censorship in Pakistan: Findings from 2014-2017</title>
+      <link>https://ooni.torproject.org/post/pakistan-internet-censorship/</link>
+      <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://ooni.torproject.org/post/pakistan-internet-censorship/</guid>
+      <description>Islamabad: Political dissent in Pakistan under threat, government censors online content - PC: Haroon Baloch
+A research study by the Open Observatory of Network Interference (OONI) and Bytes for All Pakistan.
+Table of contents
+ Key Findings
+ Introduction
+ Background
+ Network landscape and internet penetration
+ Legal environment
+ Freedom of expression
+ Press freedom
+ Access to information
+ Privacy and digital surveillance
+ Censorship
+  Reported cases of internet censorship and surveillance</description>
+    </item>
     
     <item>
       <title>Evidence of Internet Censorship during Catalonia&#39;s Independence Referendum</title>
